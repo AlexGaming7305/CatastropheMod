@@ -23103,7 +23103,82 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Projectiles",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": [
+          {
+            "name": "Accessories",
+            "children": []
+          },
+          {
+            "name": "Ammunition",
+            "children": []
+          },
+          {
+            "name": "Armor",
+            "children": []
+          },
+          {
+            "name": "Blocks",
+            "children": []
+          },
+          {
+            "name": "Miscellaneous",
+            "children": []
+          },
+          {
+            "name": "Tools",
+            "children": []
+          },
+          {
+            "name": "Weapons",
+            "children": [
+              {
+                "name": "Melee Weapons",
+                "children": []
+              },
+              {
+                "name": "Ranged Weapons",
+                "children": []
+              },
+              {
+                "name": "Magic Weapons",
+                "children": []
+              },
+              {
+                "name": "Summoner Weapons",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Entities",
+        "children": []
+      },
+      {
+        "name": "Biomes",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
+        "children": []
+      },
+      {
+        "name": "Minions",
+        "children": []
+      },
+      {
+        "name": "Misc",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "catastrophe_mod",
