@@ -20296,6 +20296,90 @@
           }
         ]
       }
+    },
+    {
+      "name": "MeleeDamage",
+      "type": "attribute",
+      "sortid": 2774,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_damage",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "MeleeDamageProcedure",
+      "type": "procedure",
+      "sortid": 2775,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/MeleeDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "SwordDamage",
+      "type": "attribute",
+      "sortid": 2776,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_damage",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "SwordDamageProcedure",
+      "type": "procedure",
+      "sortid": 2777,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SwordDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "AxeDamage",
+      "type": "attribute",
+      "sortid": 2778,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "axe_damage",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -21951,6 +22035,7 @@
       "item.alexs_mod.toast_demoman_spawn_egg": "Toast Demoman Spawn Egg",
       "block.alexs_mod.laboratory_lights": "Laboratory Lights",
       "item.catastrophe_mod.hunter_chestplate": "Hunter\u0027s Chestplate",
+      "attribute.catastrophe_mod.sword_damage": "Sword Damage",
       "entity.alexs_mod.abyssal_slime": "Abyssal Slime",
       "subtitles.crystal_laser_beam": "Crystal Laser Beam",
       "item.catastrophe_mod.hellbane": "§6Hellbane",
@@ -21978,6 +22063,7 @@
       "effect.alexs_mod.intelligence": "Intelligence",
       "item.alexs_mod.shroomium_leggings": "Shroomium Leggings",
       "block.alexs_mod.overgrown_fence_gate": "Overgrown Fence Gate",
+      "attribute.catastrophe_mod.melee_damage": "Melee Damage",
       "painting.catastrophe_mod.alexs_mod_logo.title": "Catastrophe Mod Logo",
       "item.alexs_mod.nautilus_leggings": "Nautilus Leggings",
       "advancements.natures_blessing_advancement.title": "Nature\u0027s Blessing",
@@ -22067,6 +22153,7 @@
       "gui.alexs_mod.quest_book_gui.label_6_obtain_a_blink_tech": "6. Obtain a Blink Tech.",
       "item.alexs_mod.salt": "Salt",
       "item.alexs_mod.bone_pickaxe": "Bone Pickaxe",
+      "attribute.catastrophe_mod.axe_damage": "Axe Damage",
       "itemGroup.tabdark_magic": "Summoner",
       "item.alexs_mod.toast_mercanary_spawn_egg": "Toast Mercanary Spawn Egg",
       "block.alexs_mod.placeable_bottle": "Placeable Bottle",
