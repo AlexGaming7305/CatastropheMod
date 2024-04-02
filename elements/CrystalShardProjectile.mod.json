@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.ARROW"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 0,
+    "entityModel": "Modelcrystal_shard",
+    "customModelTexture": "crystal_shard.png",
+    "onHitsBlock": {
+      "name": "CrystalShardProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "CrystalShardProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "CrystalShardWhileProjectileFlyingTick"
+    }
+  }
+}

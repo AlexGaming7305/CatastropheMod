@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "music_disc_spark_of_a_shadow",
+    "description": "Freddy Frostbear - Spark of a Shadow",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:spark_of_a_shadow"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

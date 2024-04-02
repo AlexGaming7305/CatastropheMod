@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "kyolden_greatsword_texture"
+      },
+      "name": "default"
+    }
+  }
+}

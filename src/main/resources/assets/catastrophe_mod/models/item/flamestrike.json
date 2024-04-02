@@ -1,0 +1,6 @@
+{
+  "parent": "catastrophe_mod:displaysettings/flamestrike.item",
+  "textures": {
+    "layer0": "catastrophe_mod:item/flamestrike"
+  }
+}

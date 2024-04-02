@@ -1,0 +1,174 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.shadowflame_spears",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, -0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "shadowflame_spears",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "shadowflame_spear1",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear2",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear3",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear4",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear5",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear6",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear7",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear8",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear9",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear10",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear11",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear12",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear13",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear14",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear15",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear16",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shadowflame_spear17",
+					"parent": "shadowflame_spears",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]},
+						{"origin": [-8, 0, 0], "size": [16, 32, 0], "pivot": [0, 0, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

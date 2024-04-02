@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:KnifeOfProficiency"
+      },
+      {
+        "value": "CUSTOM:EarthShatterer"
+      },
+      {
+        "value": "CUSTOM:VeinStriker"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "throwing_knives",
+    "namespace": "mod"
+  }
+}

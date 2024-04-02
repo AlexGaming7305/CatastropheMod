@@ -1,0 +1,152 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sepulcher",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "sepulcher",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "except_book",
+					"parent": "sepulcher",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "except_book",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [7, 26, 3], "size": [3, 8, 3], "pivot": [5.5, 32, 5.5], "rotation": [-45, 67.5, 0], "uv": [37, 5]},
+						{"origin": [7, 25.5, 3.5], "size": [3, 4, 3], "pivot": [5.5, 32, 5.5], "rotation": [-135, 67.5, 0], "uv": [49, 5]},
+						{"origin": [-10, 26, 3], "size": [3, 8, 3], "pivot": [-5.5, 32, 5.5], "rotation": [-45, -67.5, 0], "uv": [37, 5], "mirror": true},
+						{"origin": [-10, 25.5, 3.5], "size": [3, 4, 3], "pivot": [-5.5, 32, 5.5], "rotation": [-135, -67.5, 0], "uv": [49, 5], "mirror": true}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "except_book",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [24, 16]},
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "inflate": 0.25, "uv": [0, 16]},
+						{"origin": [4, 6, -2], "size": [0, 6, 4], "pivot": [4, 12, 0], "rotation": [0, 0, -12.5], "uv": [16, 28]},
+						{"origin": [-4, 6, -2], "size": [0, 6, 4], "pivot": [-4, 12, 0], "rotation": [0, 0, 12.5], "uv": [16, 28]},
+						{"origin": [-4, 6, -2], "size": [8, 6, 0], "pivot": [0, 12, -2], "rotation": [-12.5, 0, 0], "uv": [0, 32], "mirror": true},
+						{"origin": [-4, 6, 2], "size": [8, 6, 0], "pivot": [0, 12, 2], "rotation": [12.5, 0, 0], "uv": [0, 32], "mirror": true}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "except_book",
+					"pivot": [5, 22, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [4, 12, -1], "size": [2, 12, 2], "uv": [56, 18], "mirror": false},
+						{"origin": [4, 12, -1], "size": [2, 12, 2], "inflate": 0.25, "uv": [48, 18], "mirror": false}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "except_book",
+					"pivot": [-5, 22, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-6, 12, -1], "size": [2, 12, 2], "uv": [56, 18]},
+						{"origin": [-6, 12, -1], "size": [2, 12, 2], "inflate": 0.25, "uv": [48, 18]}
+					]
+				},
+				{
+					"name": "left_leg",
+					"parent": "except_book",
+					"pivot": [2, 12, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [1, 0, -1], "size": [2, 12, 2], "uv": [56, 18], "mirror": false},
+						{"origin": [-1, 0, -1], "size": [4, 12, 2], "inflate": 0.25, "uv": [0, 38]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "except_book",
+					"pivot": [-2, 12, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-3, 0, -1], "size": [2, 12, 2], "uv": [56, 18]},
+						{"origin": [-3, 0, -1], "size": [4, 12, 2], "inflate": 0.25, "uv": [0, 38], "mirror": false}
+					]
+				},
+				{
+					"name": "book_spin",
+					"parent": "sepulcher",
+					"pivot": [0, 5, 0]
+				},
+				{
+					"name": "book",
+					"parent": "book_spin",
+					"pivot": [0, 5, -12],
+					"cubes": [
+						{"origin": [-1, 0, -12], "size": [2, 10, 0], "uv": [36, 32], "mirror": true}
+					]
+				},
+				{
+					"name": "cover_left",
+					"parent": "book",
+					"pivot": [-1, 5, -12],
+					"cubes": [
+						{"origin": [-7, 0, -12], "size": [6, 10, 0], "uv": [40, 32]}
+					]
+				},
+				{
+					"name": "cover_right",
+					"parent": "book",
+					"pivot": [1, 5, -12],
+					"cubes": [
+						{"origin": [1, 0, -12], "size": [6, 10, 0], "uv": [24, 32]}
+					]
+				},
+				{
+					"name": "pages_left",
+					"parent": "book",
+					"pivot": [0, 5, -13],
+					"cubes": [
+						{"origin": [-5, 1, -13], "size": [5, 8, 1], "uv": [36, 42]}
+					]
+				},
+				{
+					"name": "pages_right",
+					"parent": "book",
+					"pivot": [0, 5, -13],
+					"cubes": [
+						{"origin": [0, 1, -13], "size": [5, 8, 1], "uv": [24, 42]}
+					]
+				},
+				{
+					"name": "flipping_page_left",
+					"parent": "book",
+					"pivot": [0, 5, -13],
+					"cubes": [
+						{"origin": [-5, 1, -13], "size": [5, 8, 0], "uv": [48, 42]}
+					]
+				},
+				{
+					"name": "flipping_page_right",
+					"parent": "book",
+					"pivot": [0, 5, -13],
+					"cubes": [
+						{"origin": [0, 1, -13], "size": [5, 8, 0], "uv": [48, 50]}
+					]
+				}
+			]
+		}
+	]
+}

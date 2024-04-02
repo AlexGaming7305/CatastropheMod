@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "overgrown_grove",
+    "description": "Freddy Frostbear - Overgrown Grove",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:overgrown_grove"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

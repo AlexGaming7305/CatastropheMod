@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "catastrophe_mod:block/charred_tiles",
+    "top": "catastrophe_mod:block/charred_tiles",
+    "side": "catastrophe_mod:block/charred_tiles"
+  },
+  "render_type": "solid"
+}

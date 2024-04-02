@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RosxiteIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RosxiteIngot"
+      },
+      {
+        "value": "CUSTOM:RosxiteIngot"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RosxiteIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:NaturesBlessing.boots"
+    },
+    "name": "natures_blessing_boots_recipe",
+    "namespace": "mod"
+  }
+}

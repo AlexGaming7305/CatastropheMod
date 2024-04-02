@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:nautilus_shell"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:nautilus_boots",
+    "count": 1
+  }
+}

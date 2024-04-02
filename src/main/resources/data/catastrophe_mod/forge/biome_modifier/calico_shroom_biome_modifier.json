@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "catastrophe_mod:calico_mushroom_fields",
+  "features": "catastrophe_mod:calico_shroom",
+  "step": "vegetal_decoration"
+}

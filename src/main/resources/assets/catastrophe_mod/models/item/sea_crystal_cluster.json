@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "catastrophe_mod:item/sea_crystal_cluster"
+  },
+  "render_type": "translucent"
+}

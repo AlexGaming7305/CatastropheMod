@@ -1,0 +1,39 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "naturite_sword",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§aNaturite Sword",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Grants you §9Regeneration §7on hit"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 2,
+    "efficiency": 5.0,
+    "attackSpeed": 1.6,
+    "enchantability": 11,
+    "damageVsEntity": 3.5,
+    "usageCount": 183,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "NatureiteSwordLivingEntityIsHitWithTool"
+    }
+  }
+}

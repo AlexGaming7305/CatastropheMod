@@ -1,0 +1,51 @@
+{
+  "_fv": 57,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mana1",
+          "text": {
+            "fixedValue": "Mana:"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 207,
+          "y": 201
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mana_bar_value",
+          "text": {
+            "fixedValue": "",
+            "name": "ManaBarValue"
+          },
+          "color": {
+            "value": -16711681,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 234,
+          "y": 201
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

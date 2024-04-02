@@ -1,0 +1,55 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:SpellOfFlames"
+      },
+      {
+        "value": "CUSTOM:SpellofLightning"
+      },
+      {
+        "value": "CUSTOM:SpellofPoison"
+      },
+      {
+        "value": "CUSTOM:SpellOfPhantoms"
+      },
+      {
+        "value": "CUSTOM:Riptide"
+      },
+      {
+        "value": "CUSTOM:CrimsonRay"
+      },
+      {
+        "value": "CUSTOM:SporeStaff"
+      },
+      {
+        "value": "CUSTOM:ShadowflameScepter"
+      },
+      {
+        "value": "CUSTOM:BookofBlades"
+      },
+      {
+        "value": "CUSTOM:EarthboundStaff"
+      },
+      {
+        "value": "CUSTOM:BlossomFlora"
+      },
+      {
+        "value": "CUSTOM:Blizzard"
+      },
+      {
+        "value": "CUSTOM:AccursedTome"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "magic_weapons",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "a b",
+    " ab"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:natureite_ingot"
+    },
+    "b": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:naturite_bow",
+    "count": 1
+  }
+}

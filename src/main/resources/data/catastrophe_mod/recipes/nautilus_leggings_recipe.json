@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "b b",
+    "b b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "b": {
+      "item": "minecraft:dried_kelp_block"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:nautilus_leggings",
+    "count": 1
+  }
+}

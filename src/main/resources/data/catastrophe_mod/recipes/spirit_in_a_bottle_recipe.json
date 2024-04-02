@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcd",
+    " e "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gunpowder"
+    },
+    "b": {
+      "item": "minecraft:spider_eye"
+    },
+    "c": {
+      "item": "minecraft:glass_bottle"
+    },
+    "d": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "e": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:spirit_in_a_bottle",
+    "count": 1
+  }
+}

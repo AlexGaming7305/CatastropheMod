@@ -1,0 +1,46 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:FuriousWind"
+      },
+      {
+        "value": "CUSTOM:PileOfMoss"
+      },
+      {
+        "value": "CUSTOM:FreezingCore"
+      },
+      {
+        "value": "CUSTOM:LightningBlade"
+      },
+      {
+        "value": "CUSTOM:BabyCalicoStagBeetle"
+      },
+      {
+        "value": "CUSTOM:HermitCrabMinion"
+      },
+      {
+        "value": "CUSTOM:NatureBlessedSpirit"
+      },
+      {
+        "value": "CUSTOM:DescendingMisery"
+      },
+      {
+        "value": "CUSTOM:NettleMinion"
+      },
+      {
+        "value": "CUSTOM:EarthboundFist"
+      }
+    ],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "summons",
+    "namespace": "mod"
+  }
+}

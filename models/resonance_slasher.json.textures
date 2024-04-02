@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "resonance_slasher_texture"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_fv": 57,
+  "_type": "feature",
+  "definition": {
+    "generationStep": "SURFACE_STRUCTURES",
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:WitheringWastes"
+      }
+    ],
+    "featurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"feature_container\" x=\"40\" y=\"40\"><value name=\"feature\"><block type=\"feature_block_column_simple\"><value name=\"height\"><block type=\"int_provider_uniform\"><field name=\"min\">2</field><field name=\"max\">6</field></block></value><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:DecayingSpine</field></block></value></block></value><next><block type=\"placement_count\"><comment h=\"80\" pinned=\"false\" w=\"160\">Each chunk has 0 to 5 patches of fire</comment><value name=\"count\"><block type=\"int_provider_uniform\"><field name=\"min\">0</field><field name=\"max\">2</field></block></value><next><block type=\"placement_count_on_every_layer\"><value name=\"count\"><block type=\"int_provider_constant\"><field name=\"value\">3</field></block></value><next><block type=\"placement_biome_filter\"><comment h=\"80\" pinned=\"false\" w=\"160\">We add a biome filter, so that the patches don't generate outside of the current biome</comment></block></next></block></next></block></next></block></xml>"
+  }
+}

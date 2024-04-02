@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/dried_rosxite_ore",
+    "up": "catastrophe_mod:block/dried_rosxite_ore",
+    "north": "catastrophe_mod:block/dried_rosxite_ore",
+    "east": "catastrophe_mod:block/dried_rosxite_ore",
+    "south": "catastrophe_mod:block/dried_rosxite_ore",
+    "west": "catastrophe_mod:block/dried_rosxite_ore",
+    "particle": "catastrophe_mod:block/dried_rosxite_ore"
+  },
+  "render_type": "solid"
+}

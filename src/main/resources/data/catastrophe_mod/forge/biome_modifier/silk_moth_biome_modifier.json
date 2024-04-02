@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "plains",
+    "forest",
+    "meadow"
+  ],
+  "spawners": {
+    "type": "catastrophe_mod:silk_moth",
+    "weight": 50,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.ARROW"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 0,
+    "entityModel": "Modeliron_round",
+    "customModelTexture": "fiery_round_texture.png",
+    "onHitsBlock": {
+      "name": "FieryRoundProjectileHitsLivingEntity"
+    },
+    "onHitsEntity": {
+      "name": "FieryRoundProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "FieryRoundWhileProjectileFlyingTick"
+    }
+  }
+}

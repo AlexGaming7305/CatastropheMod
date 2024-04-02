@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      },
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      },
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      },
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      },
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      },
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      },
+      {
+        "value": "CUSTOM:WitherSkullFragment"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Blocks.SKULL#1"
+    },
+    "name": "wither_skull_recipe",
+    "namespace": "mod"
+  }
+}

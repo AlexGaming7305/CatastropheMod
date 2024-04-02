@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "catastrophe_mod:block/mana_rose_texture",
+    "particle": "catastrophe_mod:block/mana_rose_texture"
+  },
+  "render_type": "cutout"
+}

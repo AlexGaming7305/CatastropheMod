@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "catastrophe_mod:item/thorn_infested_armor_loot_bundle"
+  }
+}

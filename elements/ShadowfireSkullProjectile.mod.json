@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.ARROW"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 0,
+    "entityModel": "Modelshadowfire_skull",
+    "customModelTexture": "shadowfire_skull.png",
+    "onHitsBlock": {
+      "name": "ShadowfireSkullProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "ShadowfireSkullProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "ShadowFireballWhileProjectileFlyingTick"
+    }
+  }
+}

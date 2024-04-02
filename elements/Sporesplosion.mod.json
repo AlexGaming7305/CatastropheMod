@@ -1,0 +1,39 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "sporesplosion",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Sporesplosion",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Attacking will occasionally release amatoxin gas"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.6,
+    "enchantability": 11,
+    "damageVsEntity": 3.9999999999999996,
+    "usageCount": 951,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShroomiumIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "SporesplosionLivingEntityIsHitWithTool"
+    }
+  }
+}

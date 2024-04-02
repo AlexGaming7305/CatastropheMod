@@ -1,0 +1,524 @@
+{
+  "mineral_wraith_whispers": {
+    "subtitle": "subtitles.mineral_wraith_whispers",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mineral_wraith_whispers",
+        "stream": false
+      }
+    ]
+  },
+  "something_uses_shadow_magic": {
+    "subtitle": "subtitles.something_uses_shadow_magic",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:soul_transformation",
+        "stream": false
+      }
+    ]
+  },
+  "something_finishes_using_shadow_magic": {
+    "subtitle": "subtitles.something_finishes_using_shadow_magic",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:exit_transformation",
+        "stream": false
+      }
+    ]
+  },
+  "axe_swings": {
+    "subtitle": "subtitles.axe_swings",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:axe_swing",
+        "stream": false
+      }
+    ]
+  },
+  "mineral_wraith_claps": {
+    "subtitle": "subtitles.mineral_wraith_claps",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:wraith_claps",
+        "stream": false
+      }
+    ]
+  },
+  "thorns_snap": {
+    "subtitle": "subtitles.thorns_snap",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:thorns_snap",
+        "stream": false
+      }
+    ]
+  },
+  "fire_magic_explodes": {
+    "subtitle": "subtitles.fire_magic_explodes",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:fire_magic_explodes",
+        "stream": false
+      }
+    ]
+  },
+  "fire_magic_is_used": {
+    "subtitle": "subtitles.fire_magic_is_used",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:fire_magic_used",
+        "stream": false
+      }
+    ]
+  },
+  "knife_is_thrown": {
+    "subtitle": "subtitles.knife_is_thrown",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:knife_is_thrown",
+        "stream": false
+      }
+    ]
+  },
+  "overgrown_grove": {
+    "subtitle": "subtitles.overgrown_grove",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:overgrown_grove",
+        "stream": true
+      }
+    ]
+  },
+  "proliferating_mushrooms": {
+    "subtitle": "subtitles.proliferating_mushrooms",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:proliferating_mushrooms",
+        "stream": true
+      }
+    ]
+  },
+  "nethers_fury": {
+    "subtitle": "subtitles.nethers_fury",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:nethers_fury",
+        "stream": true
+      }
+    ]
+  },
+  "orbital_barrage": {
+    "subtitle": "subtitles.orbital_barrage",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:orbital_barrage",
+        "stream": true
+      }
+    ]
+  },
+  "outside_of_the_atmosphere": {
+    "subtitle": "subtitles.outside_of_the_atmosphere",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:outside_of_the_atmosphere",
+        "stream": true
+      }
+    ]
+  },
+  "strike_you_down": {
+    "subtitle": "subtitles.strike_you_down",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:strike_you_down",
+        "stream": true
+      }
+    ]
+  },
+  "something_is_indicated": {
+    "subtitle": "subtitles.something_is_indicated",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:484344__inspectorj__bike-bell-ding-single-01-01",
+        "stream": false
+      }
+    ]
+  },
+  "six_shooter_is_shot": {
+    "subtitle": "subtitles.six_shooter_is_shot",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:six_shooter_is_shot_fix",
+        "stream": false
+      }
+    ]
+  },
+  "enlightened_starlight": {
+    "subtitle": "subtitles.enlightened_starlight",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:enlightened_starlight",
+        "stream": true
+      }
+    ]
+  },
+  "fiery_swing": {
+    "subtitle": "subtitles.fiery_swing",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:fireslash",
+        "stream": false
+      }
+    ]
+  },
+  "amatoxin_gas": {
+    "subtitle": "subtitles.amatoxin_gas",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:amatoxin_cloud_releases",
+        "stream": false
+      }
+    ]
+  },
+  "thorn_infested_armor_dashes": {
+    "subtitle": "subtitles.thorn_infested_armor_dashes",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:weapon_dash",
+        "stream": false
+      }
+    ]
+  },
+  "earthbound_wraith_slams": {
+    "subtitle": "subtitles.earthbound_wraith_slams",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:earthbound_wraith_slams_fixed",
+        "stream": false
+      }
+    ]
+  },
+  "earthbound_wraith_groundpounds": {
+    "subtitle": "subtitles.earthbound_wraith_groundpounds",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:earthbound_wraith_groundpounds",
+        "stream": false
+      }
+    ]
+  },
+  "something_punches": {
+    "subtitle": "subtitles.something_punches",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:something_punches",
+        "stream": false
+      }
+    ]
+  },
+  "crystal_laser_beam": {
+    "subtitle": "subtitles.crystal_laser_beam",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:laser_beam",
+        "stream": false
+      }
+    ]
+  },
+  "shadow_teleport": {
+    "subtitle": "subtitles.shadow_teleport",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:shadow_teleport",
+        "stream": false
+      }
+    ]
+  },
+  "eldritch_blast": {
+    "subtitle": "subtitles.eldritch_blast",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:soul_blast",
+        "stream": false
+      }
+    ]
+  },
+  "electrical_surge": {
+    "subtitle": "subtitles.electrical_surge",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electric_surge",
+        "stream": false
+      }
+    ]
+  },
+  "charred_mantis_roars": {
+    "subtitle": "subtitles.charred_mantis_roars",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:charred_mantis_roars",
+        "stream": false
+      }
+    ]
+  },
+  "charred_mantis_dashes": {
+    "subtitle": "subtitles.charred_mantis_dashes",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:charred_mantis_dashes",
+        "stream": false
+      }
+    ]
+  },
+  "fiery_explosion": {
+    "subtitle": "subtitles.fiery_explosion",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:firebomb_explodes",
+        "stream": false
+      }
+    ]
+  },
+  "flamestrike_shoots": {
+    "subtitle": "subtitles.flamestrike_shoots",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:flamestrike_shoots_better",
+        "stream": false
+      }
+    ]
+  },
+  "hunter_critical_hit": {
+    "subtitle": "subtitles.hunter_critical_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:hunter_critical_hit_fixed",
+        "stream": false
+      }
+    ]
+  },
+  "blade_swing": {
+    "subtitle": "subtitles.blade_swing",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:blade_swing_fixed",
+        "stream": false
+      }
+    ]
+  },
+  "vines_of_venom": {
+    "subtitle": "subtitles.vines_of_venom",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:vines_of_venom_new",
+        "stream": true
+      }
+    ]
+  },
+  "battle_of_stone": {
+    "subtitle": "subtitles.battle_of_stone",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:battle_of_stone",
+        "stream": true
+      }
+    ]
+  },
+  "spark_of_a_shadow": {
+    "subtitle": "subtitles.spark_of_a_shadow",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:spark_of_a_shadow",
+        "stream": true
+      }
+    ]
+  },
+  "copper_sword_is_hit": {
+    "subtitle": "subtitles.copper_sword_is_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:spinbladehit",
+        "stream": false
+      }
+    ]
+  },
+  "metal_hit": {
+    "subtitle": "subtitles.metal_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:strong_metal_is_hit",
+        "stream": false
+      }
+    ]
+  },
+  "strong_metal_hit": {
+    "subtitle": "subtitles.strong_metal_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:strong_metal_hit_fixed",
+        "stream": false
+      }
+    ]
+  },
+  "axe_slash": {
+    "subtitle": "subtitles.axe_slash",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:axe_slash",
+        "stream": false
+      }
+    ]
+  },
+  "axe_hits": {
+    "subtitle": "subtitles.axe_hits",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:axe_hits",
+        "stream": false
+      }
+    ]
+  },
+  "knife_hit": {
+    "subtitle": "subtitles.knife_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:knife_hit",
+        "stream": false
+      }
+    ]
+  },
+  "knife_slash": {
+    "subtitle": "subtitles.knife_slash",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:knife_slash",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_phase": {
+    "subtitle": "subtitles.cursed_phase",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:cursed_phase",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_dash": {
+    "subtitle": "subtitles.cursed_dash",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:cursed_dash",
+        "stream": false
+      }
+    ]
+  },
+  "blizzard_loop": {
+    "subtitle": "subtitles.blizzard_loop",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:blizzard_loop",
+        "stream": false
+      }
+    ]
+  },
+  "frozen_shield_activate": {
+    "subtitle": "subtitles.frozen_shield_activate",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:frozen_shield_activate",
+        "stream": false
+      }
+    ]
+  },
+  "ice_magic": {
+    "subtitle": "subtitles.ice_magic",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:ice_magic_casts",
+        "stream": false
+      }
+    ]
+  },
+  "frost_blast": {
+    "subtitle": "subtitles.frost_blast",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:frost_blast",
+        "stream": false
+      }
+    ]
+  },
+  "axe_throw": {
+    "subtitle": "subtitles.axe_throw",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:axe_throw",
+        "stream": false
+      }
+    ]
+  },
+  "ripsaw_shoot": {
+    "subtitle": "subtitles.ripsaw_shoot",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:ripsaw_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "ice_bow_shoots": {
+    "subtitle": "subtitles.ice_bow_shoots",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:ice_bow_shoots",
+        "stream": false
+      }
+    ]
+  },
+  "electric_shock": {
+    "subtitle": "subtitles.electric_shock",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electric_shock",
+        "stream": false
+      }
+    ]
+  },
+  "crystal_shatter": {
+    "subtitle": "subtitles.crystal_shatter",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:crystal_shatter",
+        "stream": false
+      }
+    ]
+  },
+  "spear_pin_point": {
+    "subtitle": "subtitles.spear_pin_point",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:spear_pin_point",
+        "stream": false
+      }
+    ]
+  },
+  "axe_rend": {
+    "subtitle": "subtitles.axe_rend",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:axe_rend",
+        "stream": false
+      }
+    ]
+  },
+  "knife_flying": {
+    "subtitle": "subtitles.knife_flying",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:knife_flying",
+        "stream": false
+      }
+    ]
+  }
+}

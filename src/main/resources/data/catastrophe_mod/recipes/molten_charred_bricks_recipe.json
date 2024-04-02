@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "ba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:lava_bucket"
+    },
+    "b": {
+      "item": "catastrophe_mod:charred_bricks"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:molten_charred_bricks",
+    "count": 4
+  }
+}

@@ -1,0 +1,98 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nightfalls_demise.idle": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"nightfalls_demise": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, -360, 0]
+						}
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				},
+				"slash1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [360, 0, 0]
+						}
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				},
+				"slash2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [360, 0, 0]
+						}
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				},
+				"spark1": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": [0, -6, -6]
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 0.3, 1.4]
+						},
+						"0.25": {
+							"vector": [1, 0.3, 0.6]
+						},
+						"0.5": {
+							"vector": [1, 0.3, 1.4]
+						}
+					}
+				},
+				"spark2": {
+					"rotation": {
+						"vector": [-90, 0, 0]
+					},
+					"position": {
+						"vector": [0, -6, -6]
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 0.3, 1]
+						},
+						"0.25": {
+							"vector": [1, 0.3, 0.2]
+						},
+						"0.5": {
+							"vector": [1, 0.3, 1]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

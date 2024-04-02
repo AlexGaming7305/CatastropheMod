@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:decaying_grass"
+    },
+    "title": {
+      "translate": "advancements.we_belong_in_the_same_dark_shadow.title"
+    },
+    "description": {
+      "translate": "advancements.we_belong_in_the_same_dark_shadow.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "we_belong_in_the_same_dark_shadow": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "catastrophe_mod:withering_wastes"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "catastrophe_mod:alexs_mod"
+}

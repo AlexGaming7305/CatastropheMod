@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "catastrophe_mod:withering_wastes",
+  "spawners": {
+    "type": "catastrophe_mod:shade",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

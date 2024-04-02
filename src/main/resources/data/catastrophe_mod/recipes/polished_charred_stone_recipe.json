@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:charred_stone"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:polished_charred_stone",
+    "count": 4
+  }
+}

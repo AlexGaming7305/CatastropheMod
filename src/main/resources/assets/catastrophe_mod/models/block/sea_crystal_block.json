@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/sea_crystal_block",
+    "up": "catastrophe_mod:block/sea_crystal_block",
+    "north": "catastrophe_mod:block/sea_crystal_block",
+    "east": "catastrophe_mod:block/sea_crystal_block",
+    "south": "catastrophe_mod:block/sea_crystal_block",
+    "west": "catastrophe_mod:block/sea_crystal_block",
+    "particle": "catastrophe_mod:block/sea_crystal_block"
+  },
+  "render_type": "solid"
+}

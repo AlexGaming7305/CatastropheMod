@@ -1,0 +1,15 @@
+{
+  "type": "catastrophe_mod:structure_feature",
+  "config": {
+    "structure": "catastrophe_mod:largecalicomushroomfix",
+    "ignored_blocks": [
+      "minecraft:structure_block",
+      "minecraft:air"
+    ],
+    "offset": [
+      -6,
+      0,
+      -6
+    ]
+  }
+}

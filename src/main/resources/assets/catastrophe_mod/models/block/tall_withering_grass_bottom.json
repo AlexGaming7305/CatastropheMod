@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "catastrophe_mod:block/tall_withering_grass_bottom",
+    "particle": "catastrophe_mod:block/tall_withering_grass_bottom"
+  },
+  "render_type": "cutout"
+}

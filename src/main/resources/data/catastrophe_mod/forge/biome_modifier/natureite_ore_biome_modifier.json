@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_overworld",
+  "features": "catastrophe_mod:natureite_ore",
+  "step": "underground_ores"
+}

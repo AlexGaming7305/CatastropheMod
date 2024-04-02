@@ -1,0 +1,54 @@
+{
+  "has_precipitation": true,
+  "temperature": 2,
+  "downfall": 0.5,
+  "effects": {
+    "particle": {
+      "options": {
+        "type": "smoke"
+      },
+      "probability": 0.005
+    },
+    "foliage_color": 10387789,
+    "grass_color": 9470285,
+    "sky_color": -13816520,
+    "fog_color": -13816520,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "catastrophe_mod:shade",
+        "weight": 100,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:forest_flowers",
+      "minecraft:patch_grass_forest"
+    ],
+    []
+  ]
+}

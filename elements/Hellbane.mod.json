@@ -1,0 +1,45 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "hellbane",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§6Hellbane",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Fires a Fiery Slash"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 3,
+    "efficiency": 8.0,
+    "attackSpeed": 1.1,
+    "enchantability": 12,
+    "damageVsEntity": 7.0,
+    "usageCount": 1755,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:InfernalFragment"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "HellbaneLivingEntityIsHitWithTool"
+    },
+    "onEntitySwing": {
+      "name": "HellbaneRightclicked"
+    }
+  }
+}

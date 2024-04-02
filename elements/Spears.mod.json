@@ -1,0 +1,55 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:WoodenSpear"
+      },
+      {
+        "value": "CUSTOM:StoneSpear"
+      },
+      {
+        "value": "CUSTOM:IronSpear"
+      },
+      {
+        "value": "CUSTOM:GoldenSpear"
+      },
+      {
+        "value": "CUSTOM:DiamondSpear"
+      },
+      {
+        "value": "CUSTOM:NetheriteSpear"
+      },
+      {
+        "value": "CUSTOM:NaturiteSpear"
+      },
+      {
+        "value": "CUSTOM:SpearOfNature"
+      },
+      {
+        "value": "CUSTOM:ElectrifiedSpear"
+      },
+      {
+        "value": "CUSTOM:SeaSpear"
+      },
+      {
+        "value": "CUSTOM:IceSpear"
+      },
+      {
+        "value": "CUSTOM:CrystalSpear"
+      },
+      {
+        "value": "CUSTOM:Hellbane"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "spears",
+    "namespace": "mod"
+  }
+}

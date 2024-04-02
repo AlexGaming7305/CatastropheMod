@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"bigslash": {
+			"animation_length": 1,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 90]
+						},
+						"0.0833": {
+							"vector": [0, 87.5, 90]
+						},
+						"0.1667": {
+							"vector": [-180, 0, -90]
+						},
+						"0.4583": {
+							"vector": [-6.98385, 1.5216, -90.02635]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [-1, -1, 0]
+						},
+						"0.0833": {
+							"vector": [-1, 0, -1]
+						},
+						"0.1667": {
+							"vector": [-1, 1, 0]
+						},
+						"0.4583": {
+							"vector": [2, 1, -4]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

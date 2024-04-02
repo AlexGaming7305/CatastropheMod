@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "enlightened_starlight",
+    "description": "Freddy Frostbear - Enlightened Starlight",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:enlightened_starlight"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

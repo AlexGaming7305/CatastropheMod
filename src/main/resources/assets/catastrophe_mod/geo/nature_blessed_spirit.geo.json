@@ -1,0 +1,131 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.nature_blessed_spirit",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "nature_blessed_spirit",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "nature_blessed_spirit",
+					"pivot": [0, 5, 0],
+					"cubes": [
+						{"origin": [-2.5, 5, -2.5], "size": [5, 5, 5], "uv": [0, 0]},
+						{"origin": [-2.5, 10.001, -2.5], "size": [5, 0, 5], "pivot": [0, 10, 0], "rotation": [0, -135, 0], "uv": [15, 0]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "nature_blessed_spirit",
+					"pivot": [0, 5, 0],
+					"cubes": [
+						{"origin": [-1.5, 1, -1], "size": [3, 4, 2], "uv": [0, 10]},
+						{"origin": [-1.5, 0, -1], "size": [3, 5, 2], "inflate": -0.2, "uv": [10, 10]}
+					]
+				},
+				{
+					"name": "left_wing",
+					"parent": "body",
+					"pivot": [0.5, 5, 1],
+					"cubes": [
+						{
+							"origin": [0.5, 0, 1],
+							"size": [0, 5, 4],
+							"uv": {
+								"north": {"uv": [8, 17], "uv_size": [0, 5]},
+								"east": {"uv": [4, 17], "uv_size": [4, 5]},
+								"south": {"uv": [12, 17], "uv_size": [0, 5]},
+								"west": {"uv": [4, 22], "uv_size": [4, 5]},
+								"up": {"uv": [8, 13], "uv_size": [0, 4]},
+								"down": {"uv": [8, 17], "uv_size": [0, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "left_wing_part",
+					"parent": "left_wing",
+					"pivot": [0.5, 2.5, 5],
+					"cubes": [
+						{
+							"origin": [0.5, 0, 5],
+							"size": [0, 5, 4],
+							"uv": {
+								"north": {"uv": [4, 17], "uv_size": [0, 5]},
+								"east": {"uv": [0, 17], "uv_size": [4, 5]},
+								"south": {"uv": [8, 17], "uv_size": [0, 5]},
+								"west": {"uv": [0, 22], "uv_size": [4, 5]},
+								"up": {"uv": [4, 13], "uv_size": [0, 4]},
+								"down": {"uv": [4, 17], "uv_size": [0, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "right_wing",
+					"parent": "body",
+					"pivot": [-0.5, 5, 1],
+					"cubes": [
+						{
+							"origin": [-0.5, 0, 1],
+							"size": [0, 5, 4],
+							"uv": {
+								"north": {"uv": [8, 17], "uv_size": [0, 5]},
+								"east": {"uv": [4, 17], "uv_size": [4, 5]},
+								"south": {"uv": [12, 17], "uv_size": [0, 5]},
+								"west": {"uv": [4, 22], "uv_size": [4, 5]},
+								"up": {"uv": [8, 13], "uv_size": [0, 4]},
+								"down": {"uv": [8, 17], "uv_size": [0, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "right_wing_part",
+					"parent": "right_wing",
+					"pivot": [-0.5, 2.5, 5],
+					"cubes": [
+						{
+							"origin": [-0.5, 0, 5],
+							"size": [0, 5, 4],
+							"uv": {
+								"north": {"uv": [4, 17], "uv_size": [0, 5]},
+								"east": {"uv": [0, 17], "uv_size": [4, 5]},
+								"south": {"uv": [8, 17], "uv_size": [0, 5]},
+								"west": {"uv": [0, 22], "uv_size": [4, 5]},
+								"up": {"uv": [4, 13], "uv_size": [0, 4]},
+								"down": {"uv": [4, 17], "uv_size": [0, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "nature_blessed_spirit",
+					"pivot": [1.5, 5, 0],
+					"cubes": [
+						{"origin": [1.5, 1, -1], "size": [1, 4, 2], "uv": [20, 10]}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "nature_blessed_spirit",
+					"pivot": [-1.5, 5, 0],
+					"cubes": [
+						{"origin": [-2.5, 1, -1], "size": [1, 4, 2], "uv": [20, 10]}
+					]
+				}
+			]
+		}
+	]
+}

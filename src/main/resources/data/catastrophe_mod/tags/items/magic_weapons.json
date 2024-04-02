@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "catastrophe_mod:spell_of_flames",
+    "catastrophe_mod:spellof_lightning",
+    "catastrophe_mod:spellof_poison",
+    "catastrophe_mod:spell_of_phantoms",
+    "catastrophe_mod:riptide",
+    "catastrophe_mod:crimson_ray",
+    "catastrophe_mod:spore_staff",
+    "catastrophe_mod:shadowflame_scepter",
+    "catastrophe_mod:bookof_blades",
+    "catastrophe_mod:earthbound_staff",
+    "catastrophe_mod:blossom_flora",
+    "catastrophe_mod:blizzard",
+    "catastrophe_mod:accursed_tome"
+  ]
+}

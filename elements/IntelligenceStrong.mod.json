@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Intelligence",
+    "splashName": "Splash Potion of Intelligence",
+    "lingeringName": "Lingering Potion of Intelligence",
+    "arrowName": "Arrow of Intelligence",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Intelligence"
+        },
+        "duration": 1800,
+        "amplifier": 1,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.wuflar_spider",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "wuflar_spider",
+					"pivot": [0, 7, 0]
+				},
+				{
+					"name": "body",
+					"parent": "wuflar_spider",
+					"pivot": [0, 7, 0],
+					"cubes": [
+						{"origin": [-4, 3, -4], "size": [8, 8, 8], "uv": [12, 2]}
+					]
+				},
+				{
+					"name": "leg1",
+					"parent": "wuflar_spider",
+					"pivot": [4, 4, -4],
+					"rotation": [-45, -45, 0]
+				},
+				{
+					"name": "part1",
+					"parent": "leg1",
+					"pivot": [4, 4, -4],
+					"cubes": [
+						{"origin": [3, 3, -11], "size": [2, 2, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "part2",
+					"parent": "leg1",
+					"pivot": [4, 2, -11],
+					"cubes": [
+						{
+							"origin": [4, -9, -15],
+							"size": [0, 12, 12],
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [0, 12]},
+								"east": {"uv": [0, 10], "uv_size": [12, 12]},
+								"south": {"uv": [12, 10], "uv_size": [0, 12]},
+								"west": {"uv": [0, 22], "uv_size": [12, 12]},
+								"up": {"uv": [12, 10], "uv_size": [0, 12]},
+								"down": {"uv": [12, 22], "uv_size": [0, -12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leg2",
+					"parent": "wuflar_spider",
+					"pivot": [-4, 4, -4],
+					"rotation": [-45, 45, 0]
+				},
+				{
+					"name": "part3",
+					"parent": "leg2",
+					"pivot": [-4, 4, -4],
+					"cubes": [
+						{"origin": [-5, 3, -11], "size": [2, 2, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "part4",
+					"parent": "leg2",
+					"pivot": [-4, 2, -11],
+					"cubes": [
+						{
+							"origin": [-4, -9, -15],
+							"size": [0, 12, 12],
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [0, 12]},
+								"east": {"uv": [0, 10], "uv_size": [12, 12]},
+								"south": {"uv": [12, 10], "uv_size": [0, 12]},
+								"west": {"uv": [0, 22], "uv_size": [12, 12]},
+								"up": {"uv": [12, 10], "uv_size": [0, 12]},
+								"down": {"uv": [12, 22], "uv_size": [0, -12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leg3",
+					"parent": "wuflar_spider",
+					"pivot": [-4, 4, 4],
+					"rotation": [-45, 135, 0]
+				},
+				{
+					"name": "part5",
+					"parent": "leg3",
+					"pivot": [-4, 4, 4],
+					"cubes": [
+						{"origin": [-5, 3, -3], "size": [2, 2, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "part6",
+					"parent": "leg3",
+					"pivot": [-4, 2, -3],
+					"cubes": [
+						{
+							"origin": [-4, -9, -7],
+							"size": [0, 12, 12],
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [0, 12]},
+								"east": {"uv": [0, 10], "uv_size": [12, 12]},
+								"south": {"uv": [12, 10], "uv_size": [0, 12]},
+								"west": {"uv": [0, 22], "uv_size": [12, 12]},
+								"up": {"uv": [12, 10], "uv_size": [0, 12]},
+								"down": {"uv": [12, 22], "uv_size": [0, -12]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leg4",
+					"parent": "wuflar_spider",
+					"pivot": [4, 4, 4],
+					"rotation": [-45, -135, 0]
+				},
+				{
+					"name": "part7",
+					"parent": "leg4",
+					"pivot": [4, 4, 4],
+					"cubes": [
+						{"origin": [3, 3, -3], "size": [2, 2, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "part8",
+					"parent": "leg4",
+					"pivot": [4, 2, -3],
+					"cubes": [
+						{
+							"origin": [4, -9, -7],
+							"size": [0, 12, 12],
+							"uv": {
+								"north": {"uv": [12, 10], "uv_size": [0, 12]},
+								"east": {"uv": [0, 10], "uv_size": [12, 12]},
+								"south": {"uv": [12, 10], "uv_size": [0, 12]},
+								"west": {"uv": [0, 22], "uv_size": [12, 12]},
+								"up": {"uv": [12, 10], "uv_size": [0, 12]},
+								"down": {"uv": [12, 22], "uv_size": [0, -12]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

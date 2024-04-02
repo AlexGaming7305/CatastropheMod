@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.ARROW"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 2.0,
+    "knockback": 0,
+    "entityModel": "Modelfireball",
+    "customModelTexture": "fireball.png",
+    "onHitsEntity": {
+      "name": "FlameProjectileProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "FlameProjectileWhileProjectileFlyingTick"
+    }
+  }
+}

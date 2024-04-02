@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:copper_shard"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "catastrophe_mod:bullet_shell"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:electrified_round",
+    "count": 8
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "catastrophe_mod:block/charred_stone",
+    "top": "catastrophe_mod:block/charred_stone",
+    "side": "catastrophe_mod:block/charred_stone"
+  },
+  "render_type": "solid"
+}

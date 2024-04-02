@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "catastrophe_mod:block/tall_withering_grass"
+    },
+    "half=lower": {
+      "model": "catastrophe_mod:block/tall_withering_grass_bottom"
+    }
+  }
+}

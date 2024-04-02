@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:axe_mastery_crest"
+    },
+    "title": {
+      "translate": "advancements.i_shall_rend_you_apart.title"
+    },
+    "description": {
+      "translate": "advancements.i_shall_rend_you_apart.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "i_shall_rend_you_apart": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:alexs_mod"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "b  "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:calico_mushroom"
+    },
+    "b": {
+      "item": "catastrophe_mod:shroomium_ingot"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:beetle_caller",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bcb",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:end_stone"
+    },
+    "b": {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    "c": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:pacifying_sight",
+    "count": 1
+  }
+}

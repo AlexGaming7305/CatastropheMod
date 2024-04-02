@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/charred_stone",
+    "up": "catastrophe_mod:block/charred_stone",
+    "north": "catastrophe_mod:block/charred_stone",
+    "east": "catastrophe_mod:block/charred_stone",
+    "south": "catastrophe_mod:block/charred_stone",
+    "west": "catastrophe_mod:block/charred_stone",
+    "particle": "catastrophe_mod:block/charred_stone"
+  },
+  "render_type": "solid"
+}

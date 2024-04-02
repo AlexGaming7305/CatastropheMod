@@ -1,0 +1,35 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "earth_breaker",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§7Earth Breaker",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Attacking will occasionally perform a Shockwave"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 8,
+    "damageVsEntity": 5.0,
+    "usageCount": 655,
+    "blocksAffected": [],
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "EarthBreakerLivingEntityIsHitWithTool"
+    }
+  }
+}

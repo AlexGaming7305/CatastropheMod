@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "c b",
+    " ab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "b": {
+      "item": "minecraft:string"
+    },
+    "c": {
+      "item": "catastrophe_mod:sea_crystal_shard"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:sea_bow",
+    "count": 1
+  }
+}

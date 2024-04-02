@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/molten_charred_bricks",
+    "up": "catastrophe_mod:block/molten_charred_bricks",
+    "north": "catastrophe_mod:block/molten_charred_bricks",
+    "east": "catastrophe_mod:block/molten_charred_bricks",
+    "south": "catastrophe_mod:block/molten_charred_bricks",
+    "west": "catastrophe_mod:block/molten_charred_bricks",
+    "particle": "catastrophe_mod:block/molten_charred_bricks"
+  },
+  "render_type": "solid"
+}

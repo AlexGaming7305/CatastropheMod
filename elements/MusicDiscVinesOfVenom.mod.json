@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "vines_of_venom",
+    "description": "Freddy Frostbear - Vines of Venom",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:vines_of_venom"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

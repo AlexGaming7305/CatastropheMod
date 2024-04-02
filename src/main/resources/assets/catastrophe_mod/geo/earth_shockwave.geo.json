@@ -1,0 +1,61 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.earth_shockwave",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "earth_shockwave",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "shockwave",
+					"parent": "earth_shockwave",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-16, 0, -16], "size": [32, 0, 32], "uv": [-32, 0]}
+					]
+				},
+				{
+					"name": "rock1",
+					"parent": "earth_shockwave",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{"origin": [-2, 0, -2], "size": [4, 4, 4], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "rock2",
+					"parent": "earth_shockwave",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{"origin": [-2, 0, -2], "size": [4, 4, 4], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "rock3",
+					"parent": "earth_shockwave",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{"origin": [-2, 0, -2], "size": [4, 4, 4], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "rock4",
+					"parent": "earth_shockwave",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{"origin": [-2, 0, -2], "size": [4, 4, 4], "uv": [0, 32]}
+					]
+				}
+			]
+		}
+	]
+}

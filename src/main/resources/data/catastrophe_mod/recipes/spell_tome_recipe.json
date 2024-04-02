@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "bc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:lapis_block"
+    },
+    "b": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "c": {
+      "item": "minecraft:book"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:spell_tome",
+    "count": 1
+  }
+}

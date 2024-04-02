@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:rosxite_ingot"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:natures_blessing_leggings",
+    "count": 1
+  }
+}

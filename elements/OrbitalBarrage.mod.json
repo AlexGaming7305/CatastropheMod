@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "conos_music_disc",
+    "description": "Freddy Frostbear - Orbital Barrage",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:orbital_barrage"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

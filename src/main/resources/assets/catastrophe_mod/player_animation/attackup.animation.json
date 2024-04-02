@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"attackup": {
+			"animation_length": 0.5,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [22.5, 0, 0]
+						},
+						"0.125": {
+							"vector": [-31.01004, -26.32776, 14.92735]
+						},
+						"0.25": {
+							"vector": [-199.65731, -31.20235, 1.78241]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

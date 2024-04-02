@@ -1,0 +1,15 @@
+{
+  "parent": "catastrophe_mod:custom/naturite_shield",
+  "textures": {
+    "0": "catastrophe_mod:block/naturite_shield",
+    "particle": "catastrophe_mod:item/naturite_ingot"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "catastrophe_mod:item/naturite_shield_0"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "catastrophe_mod:block/molten_charred_bricks",
+    "top": "catastrophe_mod:block/molten_charred_bricks",
+    "side": "catastrophe_mod:block/molten_charred_bricks"
+  },
+  "render_type": "solid"
+}

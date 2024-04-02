@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "outside_of_the_atmosphere",
+    "description": "Freddy Frostbear - Outside of the Atmosphere",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:outside_of_the_atmosphere"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

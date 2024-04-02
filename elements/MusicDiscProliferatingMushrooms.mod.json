@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "proliferating_mushrooms",
+    "description": "Freddy Frostbear - Proliferating Mushrooms",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:proliferating_mushrooms"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

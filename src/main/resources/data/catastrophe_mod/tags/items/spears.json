@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "catastrophe_mod:wooden_spear",
+    "catastrophe_mod:stone_spear",
+    "catastrophe_mod:iron_spear",
+    "catastrophe_mod:golden_spear",
+    "catastrophe_mod:diamond_spear",
+    "catastrophe_mod:netherite_spear",
+    "catastrophe_mod:naturite_spear",
+    "catastrophe_mod:spear_of_nature",
+    "catastrophe_mod:electrified_spear",
+    "catastrophe_mod:sea_spear",
+    "catastrophe_mod:ice_spear",
+    "catastrophe_mod:crystal_spear",
+    "catastrophe_mod:hellbane"
+  ]
+}

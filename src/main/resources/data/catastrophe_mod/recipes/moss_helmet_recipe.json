@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "c c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:moss_block"
+    },
+    "b": {
+      "item": "minecraft:flowering_azalea"
+    },
+    "c": {
+      "item": "minecraft:azalea"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:moss_helmet",
+    "count": 1
+  }
+}

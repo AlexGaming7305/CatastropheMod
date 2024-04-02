@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      },
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      },
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      },
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      },
+      {
+        "value": "Items.APPLE"
+      },
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      },
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      },
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      },
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:NatureiteApple"
+    },
+    "name": "natureite_apple_recipe",
+    "namespace": "mod"
+  }
+}

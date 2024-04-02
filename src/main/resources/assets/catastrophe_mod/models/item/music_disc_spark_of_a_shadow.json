@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "catastrophe_mod:item/music_disc_spark_of_a_shadow"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "_fv": 57,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "shroomium_hat",
+    "enableBody": true,
+    "textureBody": "shroomium_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "shroomium_leggings",
+    "enableBoots": true,
+    "textureBoots": "shroomium_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Mage"
+    },
+    "armorTextureFile": "shroomium_armor_",
+    "helmetName": "Shroomium Hat",
+    "bodyName": "Shroomium Chestplate",
+    "leggingsName": "Shroomium Leggings",
+    "bootsName": "Shroomium Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to release amatoxin gas",
+        "§a+80 Max Mana §7and increased §aMagic Damage §7by §a15%",
+        "§aMagic Attacks §7inflict §cAmatoxin"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to release amatoxin gas",
+        "§a+80 Max Mana §7and increased §aMagic Damage §7by §a15%",
+        "§aMagic Attacks §7inflict §cAmatoxin"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to release amatoxin gas",
+        "§a+80 Max Mana §7and increased §aMagic Damage §7by §a15%",
+        "§aMagic Attacks §7inflict §cAmatoxin"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to release amatoxin gas",
+        "§a+80 Max Mana §7and increased §aMagic Damage §7by §a15%",
+        "§aMagic Attacks §7inflict §cAmatoxin"
+      ]
+    },
+    "helmetModelName": "Modelshroomium_hat",
+    "helmetModelPart": "head",
+    "helmetModelTexture": "shroomium_hat_texture.png",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 17,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 2,
+    "enchantability": 11,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_iron"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShroomiumIngot"
+      }
+    ]
+  }
+}

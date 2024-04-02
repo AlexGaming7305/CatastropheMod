@@ -1,0 +1,93 @@
+{
+  "_fv": 57,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "hunters_hat",
+    "enableBody": true,
+    "textureBody": "hunter_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "hunter_leggings",
+    "enableBoots": true,
+    "textureBoots": "hunter_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Bullets"
+    },
+    "armorTextureFile": "hunter_armor_",
+    "helmetName": "Hunter's Hat",
+    "bodyName": "Hunter's Chestplate",
+    "leggingsName": "Hunter's Leggings",
+    "bootsName": "Hunter's Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
+        "§7Increased §aRanged Damage §7by §a10%"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
+        "§7Increased §aRanged Damage §7by §a10%"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
+        "§7Increased §aRanged Damage §7by §a10%"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
+        "§7Increased §aRanged Damage §7by §a10%"
+      ]
+    },
+    "helmetModelName": "Modelhunters_hat",
+    "helmetModelPart": "head",
+    "helmetModelTexture": "hunters_hat_texture.png",
+    "bodyModelName": "Modelhunter_chestplate",
+    "bodyModelPart": "body",
+    "armsModelPartL": "left_arm",
+    "armsModelPartR": "right_arm",
+    "bodyModelTexture": "hunter_chestplate_texture.png",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 10,
+    "damageValueHelmet": 2,
+    "damageValueBody": 4,
+    "damageValueLeggings": 3,
+    "damageValueBoots": 2,
+    "enchantability": 15,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_leather"
+    },
+    "repairItems": [
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ]
+  }
+}

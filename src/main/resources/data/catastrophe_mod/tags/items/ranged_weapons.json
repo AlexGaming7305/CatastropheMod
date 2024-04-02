@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "catastrophe_mod:storm_bow",
+    "catastrophe_mod:thorn_bow",
+    "catastrophe_mod:naturite_bow",
+    "catastrophe_mod:sea_bow",
+    "minecraft:bow",
+    "minecraft:crossbow",
+    "catastrophe_mod:knife_of_proficiency",
+    "catastrophe_mod:ice_bow",
+    "catastrophe_mod:shroom_bow",
+    "catastrophe_mod:shadowflame_whisper",
+    "catastrophe_mod:crystal_bow",
+    "catastrophe_mod:earth_shatterer",
+    "catastrophe_mod:lifepiercer",
+    "catastrophe_mod:vein_striker",
+    "catastrophe_mod:flamestrike",
+    "catastrophe_mod:ripsaw"
+  ]
+}

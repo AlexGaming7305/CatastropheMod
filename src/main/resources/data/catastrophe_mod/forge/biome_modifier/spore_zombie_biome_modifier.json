@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "catastrophe_mod:calico_mushroom_fields",
+  "spawners": {
+    "type": "catastrophe_mod:spore_zombie",
+    "weight": 100,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

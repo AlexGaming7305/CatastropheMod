@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:cursed_cloth"
+    },
+    "b": {
+      "item": "catastrophe_mod:spell_tome"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:accursed_tome",
+    "count": 1
+  }
+}

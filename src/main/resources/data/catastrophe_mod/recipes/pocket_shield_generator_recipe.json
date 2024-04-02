@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:gold_ingot"
+    },
+    "b": {
+      "item": "minecraft:gold_block"
+    },
+    "c": {
+      "item": "catastrophe_mod:reinforced_plates"
+    },
+    "d": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:pocket_shield_generator",
+    "count": 1
+  }
+}

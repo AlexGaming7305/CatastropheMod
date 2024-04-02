@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "minecraft:iron_chestplate"
+  },
+  "addition": {
+    "item": "catastrophe_mod:reinforced_plates"
+  },
+  "result": {
+    "item": "catastrophe_mod:reinforced_iron_armor_chestplate"
+  }
+}

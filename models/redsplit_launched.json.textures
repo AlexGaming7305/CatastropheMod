@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "redsplit_launched_texture"
+      },
+      "name": "default"
+    }
+  }
+}

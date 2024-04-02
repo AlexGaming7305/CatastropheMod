@@ -1,0 +1,40 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Spade",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "grave_digger",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Grave Digger",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Mines out other blocks around if they are soft enough",
+        "§7Deals §a50% §7more damage to undead enemies"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 2,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 14,
+    "damageVsEntity": 5.0,
+    "usageCount": 300,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "GraveDiggerBlockDestroyedWithTool"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Axe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "nightfalls_demise",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§5Nightfall's Demise",
+    "specialInformation": {
+      "fixedValue": [
+        "§aRight-click: §7Throws the axe"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 2,
+    "efficiency": 6.0,
+    "attackSpeed": 1.0,
+    "enchantability": 12,
+    "damageVsEntity": 8.0,
+    "usageCount": 450,
+    "blocksAffected": [],
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "NightfallsDemiseRightclicked"
+    }
+  }
+}

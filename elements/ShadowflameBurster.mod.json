@@ -1,0 +1,43 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "shadowflame_burster",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§8Shadowflame Burster",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Inflicts §cWither",
+        "§7Fires a spread of Shadowfire Skulls"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.6,
+    "enchantability": 12,
+    "damageVsEntity": 5.0,
+    "usageCount": 1161,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:ShadowflameFragment"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "ShadowflameBursterLivingEntityIsHitWithTool"
+    },
+    "onEntitySwing": {
+      "name": "ShadowflameBursterRightclicked"
+    }
+  }
+}

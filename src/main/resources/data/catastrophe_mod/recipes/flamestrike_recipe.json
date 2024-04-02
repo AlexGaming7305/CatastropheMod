@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    "bab",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blackstone"
+    },
+    "b": {
+      "item": "catastrophe_mod:infernal_fragment"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:flamestrike",
+    "count": 1
+  }
+}

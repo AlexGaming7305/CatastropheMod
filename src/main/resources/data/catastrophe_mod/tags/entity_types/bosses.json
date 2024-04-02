@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "catastrophe_mod:mineral_wraith",
+    "catastrophe_mod:earthbound_wraith",
+    "catastrophe_mod:thorn_infested_armor",
+    "catastrophe_mod:sepulcher",
+    "catastrophe_mod:nettle",
+    "catastrophe_mod:swordspin",
+    "catastrophe_mod:charred_mantis"
+  ]
+}

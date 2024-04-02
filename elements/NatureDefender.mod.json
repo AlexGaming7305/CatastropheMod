@@ -1,0 +1,39 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "nature_defender",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§2Nature Defender",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Grants you §9Regeneration II §7on hit"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 3,
+    "efficiency": 4.0,
+    "attackSpeed": 1.6,
+    "enchantability": 20,
+    "damageVsEntity": 5.0,
+    "usageCount": 855,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "CUSTOM:RosxiteIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "SpearOfNatureLivingEntityIsHitWithTool"
+    }
+  }
+}

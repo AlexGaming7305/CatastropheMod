@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.ARROW"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelknife_of_proficiency",
+    "customModelTexture": "knife_of_proficiency.png",
+    "onHitsEntity": {
+      "name": "KnifeOfProficiencyProjectileProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "KnifeOfProficiencyProjectileWhileProjectileFlyingTick"
+    }
+  }
+}

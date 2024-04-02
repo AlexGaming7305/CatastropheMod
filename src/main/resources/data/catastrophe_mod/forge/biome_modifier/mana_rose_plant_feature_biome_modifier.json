@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_overworld",
+  "features": "catastrophe_mod:mana_rose_plant_feature",
+  "step": "vegetal_decoration"
+}

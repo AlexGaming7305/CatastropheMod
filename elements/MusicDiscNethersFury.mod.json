@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "nethers_fury",
+    "description": "Freddy Frostbear - Nether's Fury",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:nethers_fury"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

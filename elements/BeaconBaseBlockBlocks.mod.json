@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:BartosaAlloyBlock"
+      },
+      {
+        "value": "CUSTOM:NatureiteBlock"
+      },
+      {
+        "value": "CUSTOM:KylodenBlock"
+      },
+      {
+        "value": "CUSTOM:BlockOfShadow"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "beacon_base_blocks",
+    "namespace": "minecraft"
+  }
+}

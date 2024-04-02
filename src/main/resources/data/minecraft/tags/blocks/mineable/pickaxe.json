@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "catastrophe_mod:natureite_ore",
+    "catastrophe_mod:natureite_block",
+    "catastrophe_mod:dried_rosxite_ore",
+    "catastrophe_mod:rosxite_ore",
+    "catastrophe_mod:shroomium_ore",
+    "catastrophe_mod:chiseled_charred_bricks",
+    "catastrophe_mod:charred_bricks",
+    "catastrophe_mod:cracked_charred_bricks",
+    "catastrophe_mod:polished_charred_stone",
+    "catastrophe_mod:charred_tiles",
+    "catastrophe_mod:charred_stone",
+    "catastrophe_mod:charred_stone_slab",
+    "catastrophe_mod:charred_stone_stairs",
+    "catastrophe_mod:charred_bricks_slab",
+    "catastrophe_mod:charred_bricks_stairs",
+    "catastrophe_mod:charred_tiles_slab",
+    "catastrophe_mod:charred_tiles_stairs",
+    "catastrophe_mod:decaying_grass",
+    "catastrophe_mod:decaying_shale",
+    "catastrophe_mod:decaying_spine",
+    "catastrophe_mod:molten_charred_bricks",
+    "catastrophe_mod:polished_charred_stone_stairs",
+    "catastrophe_mod:polished_charred_stone_slab",
+    "catastrophe_mod:molten_charred_bricks_stairs",
+    "catastrophe_mod:molten_charred_bricks_slab",
+    "catastrophe_mod:crimstone_ore",
+    "catastrophe_mod:sea_crystal_block",
+    "catastrophe_mod:sea_crystal_cluster"
+  ]
+}

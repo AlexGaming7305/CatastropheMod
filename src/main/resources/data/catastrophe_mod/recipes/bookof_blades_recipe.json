@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "bc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_sword"
+    },
+    "b": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "c": {
+      "item": "catastrophe_mod:spell_tome"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:bookof_blades",
+    "count": 1
+  }
+}

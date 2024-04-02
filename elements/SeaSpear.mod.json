@@ -1,0 +1,43 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "sea_spear",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Sea Spear",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Deals §a50% §7more damage while submerged",
+        "§aWhile Submerged + Right-click: §7Performs a dash which can damage enemies"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 2,
+    "efficiency": 6.0,
+    "attackSpeed": 1.1,
+    "enchantability": 10,
+    "damageVsEntity": 5.0,
+    "usageCount": 285,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:SeaCrystalShard"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "SeaSpearRightclicked"
+    }
+  }
+}

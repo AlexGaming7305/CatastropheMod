@@ -1,0 +1,46 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "thorn_blade",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§2Thorn Sword",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Inflicts §cPoison",
+        "§aRight-click: §7Summons a Thorn Tentacle to impale your enemies."
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.6,
+    "enchantability": 12,
+    "damageVsEntity": 4.0,
+    "usageCount": 584,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:PoisonedVines"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "ThornSwordRightclicked"
+    },
+    "onEntityHitWith": {
+      "name": "ThornSwordLivingEntityIsHitWithTool"
+    }
+  }
+}

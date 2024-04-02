@@ -1,0 +1,52 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "wooden_katana",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Wooden Katana",
+    "specialInformation": {
+      "fixedValue": [
+        "§7\"Not very practical, but still better than nothing\"",
+        "§aRight-click: §7Leap and slash at nearby targets"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 0,
+    "efficiency": 2.0,
+    "attackSpeed": 1.7999999999999998,
+    "enchantability": 15,
+    "damageVsEntity": 1.0,
+    "usageCount": 59,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "Blocks.PLANKS#0"
+      },
+      {
+        "value": "Blocks.PLANKS#1"
+      },
+      {
+        "value": "Blocks.PLANKS#3"
+      },
+      {
+        "value": "Blocks.PLANKS#4"
+      },
+      {
+        "value": "Blocks.PLANKS#5"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "WoodenKatanaRightclicked"
+    }
+  }
+}

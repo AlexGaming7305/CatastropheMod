@@ -1,0 +1,98 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.anglerfish",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "anglerfish",
+					"pivot": [0, 6, 0],
+					"cubes": [
+						{"origin": [-4, 3, -8], "size": [8, 7, 5], "uv": [32, 0]},
+						{"origin": [-4, 2, -3], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [0, 10, -5], "size": [0, 4, 10], "uv": [0, 26]}
+					]
+				},
+				{
+					"name": "lower_jaw",
+					"parent": "anglerfish",
+					"pivot": [0, 5, -3],
+					"cubes": [
+						{"origin": [-4, 0, -10], "size": [8, 5, 9], "uv": [30, 12]}
+					]
+				},
+				{
+					"name": "lure1",
+					"parent": "anglerfish",
+					"pivot": [0, 10, -6],
+					"cubes": [
+						{"origin": [-0.5, 10, -6], "size": [1, 4, 0], "uv": [58, 0]}
+					]
+				},
+				{
+					"name": "lure2",
+					"parent": "lure1",
+					"pivot": [0, 14, -6],
+					"cubes": [
+						{"origin": [-0.5, 14, -6], "size": [1, 4, 0], "uv": [58, 4]}
+					]
+				},
+				{
+					"name": "lure3",
+					"parent": "lure2",
+					"pivot": [0, 18, -6],
+					"cubes": [
+						{"origin": [-0.5, 18, -6], "size": [1, 4, 0], "uv": [58, 8]}
+					]
+				},
+				{
+					"name": "lure4",
+					"parent": "lure3",
+					"pivot": [0, 22, -6],
+					"cubes": [
+						{"origin": [-1, 22, -7], "size": [2, 2, 2], "uv": [56, 12]}
+					]
+				},
+				{
+					"name": "fin1",
+					"parent": "anglerfish",
+					"pivot": [4, 4, 1],
+					"cubes": [
+						{"origin": [4, 0, 1], "size": [8, 8, 0], "uv": [0, 28]}
+					]
+				},
+				{
+					"name": "fin2",
+					"parent": "anglerfish",
+					"pivot": [-4, 4, 1],
+					"cubes": [
+						{"origin": [-12, 0, 1], "size": [8, 8, 0], "uv": [0, 28], "mirror": true}
+					]
+				},
+				{
+					"name": "tail1",
+					"parent": "anglerfish",
+					"pivot": [0, 7, 5],
+					"cubes": [
+						{"origin": [0, 1, 5], "size": [0, 12, 7], "uv": [0, 9]}
+					]
+				},
+				{
+					"name": "tail2",
+					"parent": "tail1",
+					"pivot": [0, 7, 12],
+					"cubes": [
+						{"origin": [0, 1, 12], "size": [0, 12, 7], "uv": [14, 9]}
+					]
+				}
+			]
+		}
+	]
+}

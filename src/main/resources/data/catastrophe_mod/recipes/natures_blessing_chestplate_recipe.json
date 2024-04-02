@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:rosxite_ingot"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:natures_blessing_chestplate",
+    "count": 1
+  }
+}

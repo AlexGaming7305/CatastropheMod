@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "bc"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:sea_crystal_shard"
+    },
+    "b": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "c": {
+      "item": "catastrophe_mod:spell_tome"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:riptide",
+    "count": 1
+  }
+}

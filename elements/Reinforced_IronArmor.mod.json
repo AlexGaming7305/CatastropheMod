@@ -1,0 +1,86 @@
+{
+  "_fv": 57,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "reinforced_helmet",
+    "enableBody": true,
+    "textureBody": "reinforced_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "reinforced_leggings",
+    "enableBoots": true,
+    "textureBoots": "reinforced_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "armorTextureFile": "reinforced_armor_",
+    "helmetName": "§7Reinforced Helmet",
+    "bodyName": "§7Reinforced Chestplate",
+    "leggingsName": "§7Reinforced Leggings",
+    "bootsName": "§7Reinforced Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Increased §aAttack Damage §7by §a15% §7and Melee Attacks inflict §cBleeding"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Increased §aAttack Damage §7by §a15% §7and Melee Attacks inflict §cBleeding"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Increased §aAttack Damage §7by §a15% §7and Melee Attacks inflict §cBleeding"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §7Increased §aAttack Damage §7by §a15% §7and Melee Attacks inflict §cBleeding"
+      ]
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 30,
+    "damageValueHelmet": 3,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 3,
+    "enchantability": 9,
+    "toughness": 1.0,
+    "knockbackResistance": 0.05,
+    "equipSound": {
+      "value": "item.armor.equip_iron"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:ReinforcedPlates"
+      }
+    ]
+  }
+}

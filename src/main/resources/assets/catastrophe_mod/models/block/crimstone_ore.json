@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/crimstone_ore",
+    "up": "catastrophe_mod:block/crimstone_ore",
+    "north": "catastrophe_mod:block/crimstone_ore",
+    "east": "catastrophe_mod:block/crimstone_ore",
+    "south": "catastrophe_mod:block/crimstone_ore",
+    "west": "catastrophe_mod:block/crimstone_ore",
+    "particle": "catastrophe_mod:block/crimstone_ore"
+  },
+  "render_type": "solid"
+}

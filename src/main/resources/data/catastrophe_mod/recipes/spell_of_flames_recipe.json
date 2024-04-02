@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "bc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:blackstone"
+    },
+    "b": {
+      "item": "catastrophe_mod:infernal_fragment"
+    },
+    "c": {
+      "item": "catastrophe_mod:spell_tome"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:spell_of_flames",
+    "count": 1
+  }
+}

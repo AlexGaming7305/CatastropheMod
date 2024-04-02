@@ -1,0 +1,54 @@
+{
+  "_fv": 57,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "book_of_blades",
+    "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
+    "name": "Book of Blades",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:Mage"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§aRight-click: §7Casts 2 enchanted swords that home into enemies §b(Costs 10 mana)",
+        "§aSneak + Right-Click: §7Summons an orbit of enchanted swords around you that damage nearby enemies §b(Costs 25 mana)",
+        "§7Your mana drains while the swords are active and they dissapear if you run out of mana"
+      ]
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "BookofBladesRightClickedInAir"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "eat"
+  }
+}

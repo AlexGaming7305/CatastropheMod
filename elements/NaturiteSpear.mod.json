@@ -1,0 +1,42 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "naturite_spear",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§aNaturite Spear",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Grants you §9Regeneration §7on hit"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 2,
+    "efficiency": 5.0,
+    "attackSpeed": 1.1,
+    "enchantability": 11,
+    "damageVsEntity": 5.5,
+    "usageCount": 183,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:NatureiteIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "NatureiteSwordLivingEntityIsHitWithTool"
+    }
+  }
+}

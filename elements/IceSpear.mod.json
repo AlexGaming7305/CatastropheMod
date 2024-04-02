@@ -1,0 +1,42 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "ice_spear",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§bIce Spear",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Freezes the target"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.1,
+    "enchantability": 13,
+    "damageVsEntity": 5.0,
+    "usageCount": 150,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Blocks.ICE"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "IceSwordLivingEntityIsHitWithTool"
+    }
+  }
+}

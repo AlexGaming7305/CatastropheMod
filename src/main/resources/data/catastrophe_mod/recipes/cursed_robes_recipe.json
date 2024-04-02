@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aba",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "catastrophe_mod:cursed_cloth"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:cursed_armor_chestplate",
+    "count": 1
+  }
+}

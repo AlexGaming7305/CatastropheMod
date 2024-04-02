@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/shroomium_ore",
+    "up": "catastrophe_mod:block/shroomium_ore",
+    "north": "catastrophe_mod:block/shroomium_ore",
+    "east": "catastrophe_mod:block/shroomium_ore",
+    "south": "catastrophe_mod:block/shroomium_ore",
+    "west": "catastrophe_mod:block/shroomium_ore",
+    "particle": "catastrophe_mod:block/shroomium_ore"
+  },
+  "render_type": "solid"
+}

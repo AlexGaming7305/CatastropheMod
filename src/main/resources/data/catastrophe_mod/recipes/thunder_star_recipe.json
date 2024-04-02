@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:copper_shard"
+    },
+    "b": {
+      "item": "minecraft:copper_block"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:thunder_star",
+    "count": 1
+  }
+}

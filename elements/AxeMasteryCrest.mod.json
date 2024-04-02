@@ -1,0 +1,60 @@
+{
+  "_fv": 57,
+  "_type": "curiosbauble",
+  "definition": {
+    "renderType": 0,
+    "texture": "axe_mastery_crest",
+    "customModelName": "Normal",
+    "name": "§9Axe Mastery Crest",
+    "rarity": "COMMON",
+    "slotType": "AccessorySlot",
+    "baubleModel": "Default",
+    "baubleModelTexture": "",
+    "creativeTab": {
+      "value": "CUSTOM:Accessories"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "addSlot": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§7Grants axes the ability to §4Rend Targets Apart",
+        "§7Inflicts §cArmor Shred §7which can stack 5 times",
+        "§9+10% Axe Damage"
+      ]
+    },
+    "hasGlow": false,
+    "customProperties": {},
+    "states": [],
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "slotAmount": 1,
+    "isFood": false,
+    "friendlyPigs": false,
+    "enderMask": false,
+    "rotateModel": false,
+    "translateModel": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "hasModel": false,
+    "animation": "none"
+  }
+}

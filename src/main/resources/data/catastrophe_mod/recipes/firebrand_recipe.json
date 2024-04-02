@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "ab ",
+    "b  "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:infernal_fragment"
+    },
+    "b": {
+      "item": "minecraft:basalt"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:firebrand",
+    "count": 1
+  }
+}

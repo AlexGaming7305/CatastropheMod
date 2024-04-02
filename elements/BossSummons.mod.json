@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Boss Summons",
+    "icon": {
+      "value": "CUSTOM:CopperToken"
+    },
+    "showSearch": true
+  }
+}

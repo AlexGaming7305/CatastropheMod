@@ -1,0 +1,23 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Armor Shred",
+    "icon": "armor_shred.png",
+    "color": {
+      "value": -3943208,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "ArmorShredEffectStartedapplied"
+    },
+    "onExpired": {
+      "name": "ArmorShredEffectExpires"
+    }
+  }
+}

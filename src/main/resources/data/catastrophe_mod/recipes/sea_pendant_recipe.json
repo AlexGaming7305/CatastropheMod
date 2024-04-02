@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "a a",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:sea_crystal_shard"
+    },
+    "b": {
+      "item": "minecraft:heart_of_the_sea"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:sea_pendant",
+    "count": 1
+  }
+}

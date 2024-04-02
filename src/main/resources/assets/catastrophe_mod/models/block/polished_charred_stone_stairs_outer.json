@@ -1,0 +1,9 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "catastrophe_mod:block/polished_charred_stone",
+    "top": "catastrophe_mod:block/polished_charred_stone",
+    "side": "catastrophe_mod:block/polished_charred_stone"
+  },
+  "render_type": "solid"
+}

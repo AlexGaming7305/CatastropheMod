@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "blaze_ammo_texture"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "ark_needle_texture"
+      },
+      "name": "default"
+    }
+  }
+}

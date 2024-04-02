@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:InfernalFragment"
+      },
+      {
+        "value": "CUSTOM:InfernalFragment"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RunningBoots"
+      },
+      {
+        "value": "Items.NETHERITE_INGOT"
+      },
+      {
+        "value": "Items.BLAZE_POWDER"
+      },
+      {
+        "value": "Items.BLAZE_POWDER"
+      },
+      {
+        "value": "Items.BLAZE_POWDER"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:NetherTreads"
+    },
+    "name": "nether_treads_recipe",
+    "namespace": "mod"
+  }
+}

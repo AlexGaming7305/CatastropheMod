@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "catastrophe_mod:block/decaying_spine"
+    },
+    "facing=east": {
+      "model": "catastrophe_mod:block/decaying_spine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "catastrophe_mod:block/decaying_spine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "catastrophe_mod:block/decaying_spine",
+      "y": 270
+    }
+  }
+}

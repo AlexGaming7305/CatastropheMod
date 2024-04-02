@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "b b",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:rosxite_ingot"
+    },
+    "b": {
+      "item": "catastrophe_mod:poisoned_vines"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:thorn_leggings",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " aa",
+    " ab",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:sea_crystal_shard"
+    },
+    "b": {
+      "item": "minecraft:feather"
+    },
+    "c": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:aero_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " bb",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:infernal_fragment"
+    },
+    "b": {
+      "item": "minecraft:blackstone"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:hellbane",
+    "count": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.ARROW"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 0,
+    "entityModel": "Modelfiery_slash",
+    "customModelTexture": "fiery_slash.png",
+    "onHitsEntity": {
+      "name": "FierySlashProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "FierySlashWhileProjectileFlyingTick"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "_fv": 57,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "natures_blessing_helmet",
+    "enableBody": true,
+    "textureBody": "natures_blessing_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "natures_blessing_leggings",
+    "enableBoots": true,
+    "textureBoots": "natures_blessing_boots",
+    "creativeTab": {
+      "value": "CUSTOM:ClasslessItems"
+    },
+    "armorTextureFile": "natures_blessing_armor_",
+    "helmetName": "§2Nature's Blessing Helmet",
+    "bodyName": "§2Nature's Blessing Chestplate",
+    "leggingsName": "§2Nature's Blessing Leggings",
+    "bootsName": "§2Nature's Blessing Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §a+6 Max Health §7and grants you §9Regeneration"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §a+6 Max Health §7and grants you §9Regeneration"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §a+6 Max Health §7and grants you §9Regeneration"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "§6Full Set Bonus: §a+6 Max Health §7and grants you §9Regeneration"
+      ]
+    },
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 29,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 2,
+    "enchantability": 20,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_iron"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:RosxiteIngot"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "excalibur_in_the_stone"
+      },
+      "name": "default"
+    }
+  }
+}

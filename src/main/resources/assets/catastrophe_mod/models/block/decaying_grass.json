@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/decaying_shale",
+    "up": "catastrophe_mod:block/decaying_grass",
+    "north": "catastrophe_mod:block/decaying_grass_side",
+    "east": "catastrophe_mod:block/decaying_grass_side",
+    "south": "catastrophe_mod:block/decaying_grass_side",
+    "west": "catastrophe_mod:block/decaying_grass_side",
+    "particle": "catastrophe_mod:block/decaying_shale"
+  },
+  "render_type": "solid"
+}

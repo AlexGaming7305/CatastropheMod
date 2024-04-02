@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "c"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:sea_crystal_shard"
+    },
+    "b": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:sea_shovel",
+    "count": 1
+  }
+}

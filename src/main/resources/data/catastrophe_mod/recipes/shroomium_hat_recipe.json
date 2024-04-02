@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:shroomium_ingot"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:shroomium_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "alexs_mod:blocks/razed_door_knob",
+    "top": "alexs_mod:blocks/razed_door"
+  }
+}

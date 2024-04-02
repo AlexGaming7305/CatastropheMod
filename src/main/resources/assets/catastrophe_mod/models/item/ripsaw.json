@@ -1,0 +1,6 @@
+{
+  "parent": "catastrophe_mod:displaysettings/ripsaw.item",
+  "textures": {
+    "layer0": "catastrophe_mod:item/ripsaw_texture"
+  }
+}

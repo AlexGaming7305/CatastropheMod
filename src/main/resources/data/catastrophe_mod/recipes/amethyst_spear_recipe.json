@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "b": {
+      "item": "minecraft:amethyst_block"
+    },
+    "c": {
+      "item": "minecraft:smooth_basalt"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:crystal_spear",
+    "count": 1
+  }
+}

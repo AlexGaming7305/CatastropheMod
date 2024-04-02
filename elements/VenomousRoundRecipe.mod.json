@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 8,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PoisonedVines"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PoisonedVines"
+      },
+      {
+        "value": "CUSTOM:BulletShell"
+      },
+      {
+        "value": "CUSTOM:PoisonedVines"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:PoisonedVines"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:VenomousRound"
+    },
+    "name": "venomous_round_recipe",
+    "namespace": "mod"
+  }
+}

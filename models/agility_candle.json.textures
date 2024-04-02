@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "agility_candle"
+      },
+      "name": "default"
+    }
+  }
+}

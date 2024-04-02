@@ -1,0 +1,42 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Axe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "reinforced_axe",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§7Reinforced Axe",
+    "specialInformation": {
+      "fixedValue": [
+        "§aRight-click: §7Performs an Area of Effect Swing."
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 3,
+    "efficiency": 7.0,
+    "attackSpeed": 1.0,
+    "enchantability": 12,
+    "damageVsEntity": 9.0,
+    "usageCount": 750,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:ReinforcedPlates"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "NoblesDoubleHeadedAxeRightclicked"
+    }
+  }
+}

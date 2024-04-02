@@ -1,0 +1,95 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.earthbound_fist",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "earthbound_fist",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0]
+				},
+				{
+					"name": "palm",
+					"parent": "earthbound_fist",
+					"pivot": [0, 6, 0],
+					"cubes": [
+						{"origin": [-3, 0, -2], "size": [6, 6, 4], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "thumb",
+					"parent": "earthbound_fist",
+					"pivot": [-3, 5, -1],
+					"rotation": [180, 0, 90],
+					"cubes": [
+						{"origin": [-4, 5, -2], "size": [2, 3, 2], "uv": [8, 10]}
+					]
+				},
+				{
+					"name": "thumb_part1",
+					"parent": "thumb",
+					"pivot": [-3, 8, -1],
+					"cubes": [
+						{"origin": [-4, 8, -2], "size": [2, 3, 2], "uv": [0, 10]}
+					]
+				},
+				{
+					"name": "finger1",
+					"parent": "earthbound_fist",
+					"pivot": [2, 6, -1],
+					"cubes": [
+						{"origin": [1, 6, -2], "size": [2, 4, 2], "uv": [8, 10]}
+					]
+				},
+				{
+					"name": "finger_part1",
+					"parent": "finger1",
+					"pivot": [2, 10, -1],
+					"cubes": [
+						{"origin": [1, 10, -2], "size": [2, 4, 2], "uv": [0, 10]}
+					]
+				},
+				{
+					"name": "finger2",
+					"parent": "earthbound_fist",
+					"pivot": [0, 6, -1],
+					"cubes": [
+						{"origin": [-1, 6, -2], "size": [2, 4, 2], "uv": [8, 10]}
+					]
+				},
+				{
+					"name": "finger_part2",
+					"parent": "finger2",
+					"pivot": [0, 10, -1],
+					"cubes": [
+						{"origin": [-1, 10, -2], "size": [2, 4, 2], "uv": [0, 10]}
+					]
+				},
+				{
+					"name": "finger3",
+					"parent": "earthbound_fist",
+					"pivot": [-2, 6, -1],
+					"cubes": [
+						{"origin": [-3, 6, -2], "size": [2, 4, 2], "uv": [8, 10], "mirror": true}
+					]
+				},
+				{
+					"name": "finger_part3",
+					"parent": "finger3",
+					"pivot": [-2, 10, -1],
+					"cubes": [
+						{"origin": [-3, 10, -2], "size": [2, 4, 2], "uv": [0, 10], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

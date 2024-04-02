@@ -1,0 +1,9 @@
+{
+  "parent": "catastrophe_mod:custom/decaying_spine",
+  "textures": {
+    "all": "catastrophe_mod:block/decaying_spine",
+    "particle": "catastrophe_mod:block/decaying_spine",
+    "0": "catastrophe_mod:block/decaying_spine"
+  },
+  "render_type": "cutout"
+}

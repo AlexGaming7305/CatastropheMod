@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SeaCrystalShard"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SeaCrystalShard"
+      },
+      {
+        "value": "Items.WATER_BUCKET"
+      },
+      {
+        "value": "CUSTOM:SeaCrystalShard"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SeaCrystalShard"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TearOfTheSea"
+    },
+    "name": "tear_of_the_sea_recipe",
+    "namespace": "mod"
+  }
+}

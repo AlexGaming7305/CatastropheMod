@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:sea_crystal_shard"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:sea_crystal_block",
+    "count": 1
+  }
+}

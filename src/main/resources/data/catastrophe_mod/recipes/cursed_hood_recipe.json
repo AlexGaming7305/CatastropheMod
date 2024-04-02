@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:cursed_cloth"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:cursed_armor_helmet",
+    "count": 1
+  }
+}

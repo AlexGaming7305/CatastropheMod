@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " aa",
+    " ba",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:shroomium_ingot"
+    },
+    "b": {
+      "item": "minecraft:stick"
+    },
+    "c": {
+      "item": "catastrophe_mod:calico_shroom"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:spore_staff",
+    "count": 1
+  }
+}

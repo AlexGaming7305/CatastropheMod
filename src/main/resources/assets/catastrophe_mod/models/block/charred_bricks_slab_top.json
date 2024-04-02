@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "catastrophe_mod:block/charred_bricks",
+    "top": "catastrophe_mod:block/charred_bricks",
+    "side": "catastrophe_mod:block/charred_bricks"
+  },
+  "render_type": "solid"
+}

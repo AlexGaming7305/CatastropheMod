@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:IronRound"
+      },
+      {
+        "value": "CUSTOM:CrystalRound"
+      },
+      {
+        "value": "CUSTOM:ElectrifiedRound"
+      },
+      {
+        "value": "CUSTOM:VenomousRound"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "bulletstag",
+    "namespace": "mod"
+  }
+}

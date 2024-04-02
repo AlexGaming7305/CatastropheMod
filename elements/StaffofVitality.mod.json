@@ -1,0 +1,55 @@
+{
+  "_fv": 57,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "staff_of_vitality",
+    "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
+    "name": "§2Staff of Vitality",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§aRight-click: §7Casts a healing orb §b(Costs 20 Mana)",
+        "§aSneak + Right-click: §7Casts an healing aura that heals players and passive mobs §b(Costs 40 Mana)",
+        "§7While the aura is active your mana is being drained and the aura will disappear if your mana runs out",
+        "§aSneak + Right-click §7again to despawn the aura"
+      ]
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "StaffofVitalityRightclicked"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bcb",
+    "bab"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:azalea"
+    },
+    "b": {
+      "item": "minecraft:moss_block"
+    },
+    "c": {
+      "item": "minecraft:spore_blossom"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:moss_chestplate",
+    "count": 1
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "_fv": 57,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "cursed_hood",
+    "enableBody": true,
+    "textureBody": "cursed_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "cursed_leggings",
+    "enableBoots": true,
+    "textureBoots": "cursed_boots",
+    "creativeTab": {
+      "value": "CUSTOM:Mage"
+    },
+    "armorTextureFile": "cursed_armor_layer_1",
+    "helmetName": "§5Cursed Hood",
+    "bodyName": "§5Cursed Robes",
+    "leggingsName": "§5Cursed Leggings",
+    "bootsName": "§5Cursed Boots",
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "§6Set Bonus: §7Press §aY §7to enter phase mode which allows you to dash into a nearby enemy and regain mana",
+        "§9+10 Max Mana"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "§6Set Bonus: §7Press §aY §7to enter phase mode which allows you to dash into a nearby enemy and regain mana",
+        "§9+20 Max Mana",
+        "§9+5% Magic Damage"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "§6Set Bonus: §7Press §aY §7to enter phase mode which allows you to dash into a nearby enemy and regain mana",
+        "§9+20 Max Mana"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "§6Set Bonus: §7Press §aY §7to enter phase mode which allows you to dash into a nearby enemy and regain mana",
+        "§9+10 Max Mana"
+      ]
+    },
+    "helmetModelName": "Modelcursed_armor",
+    "helmetModelPart": "head",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Modelcursed_armor",
+    "bodyModelPart": "body",
+    "armsModelPartL": "left_arm",
+    "armsModelPartR": "right_arm",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Modelcursed_armor",
+    "leggingsModelPartL": "left_leg",
+    "leggingsModelPartR": "right_leg",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Modelcursed_armor",
+    "bootsModelPartL": "left_shoe",
+    "bootsModelPartR": "right_shoe",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 15,
+    "damageValueHelmet": 2,
+    "damageValueBody": 5,
+    "damageValueLeggings": 4,
+    "damageValueBoots": 2,
+    "enchantability": 10,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "item.armor.equip_leather"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:CursedCloth"
+      }
+    ]
+  }
+}

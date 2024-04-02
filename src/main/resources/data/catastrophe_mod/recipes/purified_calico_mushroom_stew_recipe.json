@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "catastrophe_mod:calico_mushroom_stew"
+    }
+  ],
+  "result": {
+    "item": "catastrophe_mod:purified_calico_mushroom_stew",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:shadowflame_fragment"
+    },
+    "title": {
+      "translate": "advancements.spark_of_a_shadow.title"
+    },
+    "description": {
+      "translate": "advancements.spark_of_a_shadow.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "spark_of_a_shadow": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:poisonous_heart"
+}

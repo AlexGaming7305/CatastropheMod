@@ -1,0 +1,64 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:StormBow"
+      },
+      {
+        "value": "CUSTOM:ThornBow"
+      },
+      {
+        "value": "CUSTOM:NaturiteBow"
+      },
+      {
+        "value": "CUSTOM:SeaBow"
+      },
+      {
+        "value": "Items.BOW"
+      },
+      {
+        "value": "Items.CROSSBOW"
+      },
+      {
+        "value": "CUSTOM:KnifeOfProficiency"
+      },
+      {
+        "value": "CUSTOM:IceBow"
+      },
+      {
+        "value": "CUSTOM:ShroomBow"
+      },
+      {
+        "value": "CUSTOM:ShadowflameWhisper"
+      },
+      {
+        "value": "CUSTOM:CrystalBow"
+      },
+      {
+        "value": "CUSTOM:EarthShatterer"
+      },
+      {
+        "value": "CUSTOM:Lifepiercer"
+      },
+      {
+        "value": "CUSTOM:VeinStriker"
+      },
+      {
+        "value": "CUSTOM:Flamestrike"
+      },
+      {
+        "value": "CUSTOM:Ripsaw"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "ranged_weapons",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:copper_shard"
+    },
+    "title": {
+      "translate": "advancements.metal_madness.title"
+    },
+    "description": {
+      "translate": "advancements.metal_madness.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "metal_madness": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:alexs_mod"
+}

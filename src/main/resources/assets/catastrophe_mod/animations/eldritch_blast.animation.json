@@ -1,0 +1,52 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.eldritch_blast.idle": {
+			"animation_length": 0.5,
+			"bones": {
+				"eldritch_blast": {
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 0]
+						},
+						"0.25": {
+							"vector": [1, 1, 1]
+						}
+					}
+				},
+				"eldritch_blast_smoke": {
+					"position": {
+						"vector": [0, -13, 0]
+					},
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 0]
+						},
+						"0.3333": {
+							"vector": [1, 1, 1.1]
+						}
+					}
+				},
+				"eldritch_blast_ring": {
+					"position": {
+						"0.0": {
+							"vector": [0, 7, 0]
+						},
+						"0.25": {
+							"vector": [0, 2, 0]
+						}
+					},
+					"scale": {
+						"0.0": {
+							"vector": [0.1, 0.1, 1]
+						},
+						"0.25": {
+							"vector": [0.8, 0.9, 1]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

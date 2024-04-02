@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Bullseye",
+    "splashName": "Splash Potion of Bullseye",
+    "lingeringName": "Lingering Potion of Bullseye",
+    "arrowName": "Arrow of Bullseye",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Bullseye"
+        },
+        "duration": 9600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

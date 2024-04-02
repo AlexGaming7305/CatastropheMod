@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "bartosa_laser_texture"
+      },
+      "name": "default"
+    }
+  }
+}

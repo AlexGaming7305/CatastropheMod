@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " aa",
+    " bc",
+    "ddd"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:infernal_fragment"
+    },
+    "b": {
+      "item": "catastrophe_mod:running_boots"
+    },
+    "c": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "d": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:nether_treads",
+    "count": 1
+  }
+}

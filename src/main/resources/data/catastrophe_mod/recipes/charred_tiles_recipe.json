@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:charred_bricks"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:charred_tiles",
+    "count": 4
+  }
+}

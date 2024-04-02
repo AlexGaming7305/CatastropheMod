@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "music_disc_battle_of_stone",
+    "description": "Freddy Frostbear - Battle of Stone",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:battle_of_stone"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

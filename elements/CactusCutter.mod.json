@@ -1,0 +1,40 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "cactus_cutter",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§2Cactus Cutter",
+    "specialInformation": {
+      "fixedValue": [
+        "§7\"I can totally defeat any boss with this\"",
+        "§7Hit enemies will take damage randomly over time"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 0,
+    "efficiency": 2.0,
+    "attackSpeed": 1.6,
+    "enchantability": 15,
+    "damageVsEntity": 2.0,
+    "usageCount": 118,
+    "blocksAffected": [],
+    "repairItems": [
+      {
+        "value": "Blocks.CACTUS"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "CactusCutterLivingEntityIsHitWithTool"
+    }
+  }
+}

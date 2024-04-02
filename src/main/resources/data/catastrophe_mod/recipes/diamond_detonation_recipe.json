@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "cba",
+    "dc "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:tnt"
+    },
+    "b": {
+      "item": "minecraft:diamond"
+    },
+    "c": {
+      "item": "minecraft:gunpowder"
+    },
+    "d": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:diamond_detonation",
+    "count": 1
+  }
+}

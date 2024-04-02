@@ -1,0 +1,42 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Special",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "spear_of_nature",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§2Spear of Nature",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Grants you §9Regeneration II §7on hit"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 3,
+    "efficiency": 8.0,
+    "attackSpeed": 1.1,
+    "enchantability": 20,
+    "damageVsEntity": 7.0,
+    "usageCount": 855,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:RosxiteIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "SpearOfNatureLivingEntityIsHitWithTool"
+    }
+  }
+}

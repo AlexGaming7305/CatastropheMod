@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/calico_mushroom",
+    "up": "catastrophe_mod:block/calico_mushroom",
+    "north": "catastrophe_mod:block/calico_mushroom",
+    "east": "catastrophe_mod:block/calico_mushroom",
+    "south": "catastrophe_mod:block/calico_mushroom",
+    "west": "catastrophe_mod:block/calico_mushroom",
+    "particle": "catastrophe_mod:block/calico_mushroom"
+  },
+  "render_type": "solid"
+}

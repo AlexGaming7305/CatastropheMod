@@ -1,0 +1,37 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:MineralWraith"
+      },
+      {
+        "value": "CUSTOM:EarthboundWraith"
+      },
+      {
+        "value": "CUSTOM:ThornInfestedArmor"
+      },
+      {
+        "value": "CUSTOM:Sepulcher"
+      },
+      {
+        "value": "CUSTOM:Nettle"
+      },
+      {
+        "value": "CUSTOM:Swordspin"
+      },
+      {
+        "value": "CUSTOM:CharredMantis"
+      }
+    ],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "bosses",
+    "namespace": "mod"
+  }
+}

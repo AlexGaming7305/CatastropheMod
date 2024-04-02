@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "catastrophe_mod:calico_shroom"
+    },
+    {
+      "item": "catastrophe_mod:tall_calico_shroom"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "catastrophe_mod:calico_mushroom_stew",
+    "count": 1
+  }
+}

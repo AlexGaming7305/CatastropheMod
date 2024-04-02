@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "catastrophe_mod:withering_wastes",
+  "features": "catastrophe_mod:tall_withering_grass",
+  "step": "vegetal_decoration"
+}

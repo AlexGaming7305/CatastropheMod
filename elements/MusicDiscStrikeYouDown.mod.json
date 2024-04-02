@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "music_disc_strike_you_down",
+    "description": "Freddy Frostbear - Strike You Down!",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "music": {
+      "value": "CUSTOM:strike_you_down"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

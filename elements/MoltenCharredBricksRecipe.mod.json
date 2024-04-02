@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 4,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.LAVA_BUCKET"
+      },
+      {
+        "value": "CUSTOM:CharredBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:CharredBricks"
+      },
+      {
+        "value": "Items.LAVA_BUCKET"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:MoltenCharredBricks"
+    },
+    "name": "molten_charred_bricks_recipe",
+    "namespace": "mod"
+  }
+}

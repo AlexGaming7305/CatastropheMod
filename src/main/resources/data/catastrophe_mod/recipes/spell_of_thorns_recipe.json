@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "bc"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:rosxite_ingot"
+    },
+    "b": {
+      "item": "catastrophe_mod:poisoned_vines"
+    },
+    "c": {
+      "item": "catastrophe_mod:spell_tome"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:spellof_poison",
+    "count": 1
+  }
+}
