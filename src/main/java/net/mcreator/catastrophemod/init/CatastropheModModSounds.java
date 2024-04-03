@@ -72,7 +72,7 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> ICE_BOW_SHOOTS = REGISTRY.register("ice_bow_shoots", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "ice_bow_shoots")));
 	public static final RegistryObject<SoundEvent> ELECTRIC_SHOCK = REGISTRY.register("electric_shock", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electric_shock")));
 	public static final RegistryObject<SoundEvent> CRYSTAL_SHATTER = REGISTRY.register("crystal_shatter", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "crystal_shatter")));
-	public static final RegistryObject<SoundEvent> SPEAR_PIN_POINT = REGISTRY.register("spear_pin_point", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "spear_pin_point")));
 	public static final RegistryObject<SoundEvent> AXE_REND = REGISTRY.register("axe_rend", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "axe_rend")));
 	public static final RegistryObject<SoundEvent> KNIFE_FLYING = REGISTRY.register("knife_flying", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "knife_flying")));
+	public static final RegistryObject<SoundEvent> SPEAR_PUNCTURE = REGISTRY.register("spear_puncture", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "spear_puncture")));
 }

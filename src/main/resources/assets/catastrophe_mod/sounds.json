@@ -494,15 +494,6 @@
       }
     ]
   },
-  "spear_pin_point": {
-    "subtitle": "subtitles.spear_pin_point",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:spear_pin_point",
-        "stream": false
-      }
-    ]
-  },
   "axe_rend": {
     "subtitle": "subtitles.axe_rend",
     "sounds": [
@@ -517,6 +508,15 @@
     "sounds": [
       {
         "name": "catastrophe_mod:knife_flying",
+        "stream": false
+      }
+    ]
+  },
+  "spear_puncture": {
+    "subtitle": "subtitles.spear_puncture",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:spear_puncture",
         "stream": false
       }
     ]
