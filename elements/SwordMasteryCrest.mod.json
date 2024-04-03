@@ -3,9 +3,9 @@
   "_type": "curiosbauble",
   "definition": {
     "renderType": 0,
-    "texture": "axe_mastery_crest",
+    "texture": "sword_mastery_crest",
     "customModelName": "Normal",
-    "name": "§9Axe Mastery Crest",
+    "name": "§9Sword Mastery Crest",
     "rarity": "COMMON",
     "slotType": "AccessorySlot",
     "baubleModel": "Default",
@@ -30,9 +30,9 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7Grants axes the ability to §4Rend Targets Apart",
-        "§7Inflicts §cArmor Shred §7which can stack 5 times",
-        "§9+5% Axe Damage"
+        "§7Grants swords the ability to §4Gash Targets",
+        "§7Inflicts §cBleeding §7if the armor of the target is less than 6",
+        "§9+5% Sword Damage §7to bleeding targets"
       ]
     },
     "hasGlow": false,
@@ -42,12 +42,6 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "slotAmount": 1,
-    "onEquip": {
-      "name": "AxeMasteryCrestBaubleIsEquipped"
-    },
-    "onUnequip": {
-      "name": "AxeMasteryCrestBaubleIsUnequipped"
-    },
     "isFood": false,
     "friendlyPigs": false,
     "enderMask": false,

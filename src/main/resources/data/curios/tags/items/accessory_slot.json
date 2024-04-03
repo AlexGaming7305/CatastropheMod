@@ -3,6 +3,8 @@
   "values": [
     "minecraft:air",
     "catastrophe_mod:mana_rose",
-    "catastrophe_mod:axe_mastery_crest"
+    "catastrophe_mod:axe_mastery_crest",
+    "catastrophe_mod:sword_mastery_crest",
+    "catastrophe_mod:spear_mastery_crest"
   ]
 }

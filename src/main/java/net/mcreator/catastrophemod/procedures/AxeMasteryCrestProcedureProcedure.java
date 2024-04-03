@@ -28,25 +28,21 @@ import javax.annotation.Nullable;
 public class AxeMasteryCrestProcedureProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity(), event.getAmount());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, double amount) {
-		execute(null, world, x, y, z, entity, sourceentity, amount);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		execute(null, world, x, y, z, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, double amount) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
 		double damage = 0;
 		if (sourceentity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(CatastropheModModItems.AXE_MASTERY_CREST.get(), lv).isPresent() : false) {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
-				LivingHurtEvent event2 = (LivingHurtEvent) event;
-				damage = amount + (amount * 10) / 100;
-				event2.setAmount((float) damage);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:axe_rend")), SoundSource.PLAYERS, 1, 1);

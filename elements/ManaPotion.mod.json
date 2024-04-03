@@ -10,7 +10,7 @@
     "name": "Mana Potion",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "BREWING"
+      "value": "FOOD"
     },
     "stackSize": 16,
     "enchantability": 0,

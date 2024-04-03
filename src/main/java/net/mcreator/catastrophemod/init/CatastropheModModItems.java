@@ -36,6 +36,7 @@ import net.mcreator.catastrophemod.item.ThornItem;
 import net.mcreator.catastrophemod.item.ThornInfestedArmorLootBundleItem;
 import net.mcreator.catastrophemod.item.ThornBowItem;
 import net.mcreator.catastrophemod.item.TearOfTheSeaItem;
+import net.mcreator.catastrophemod.item.SwordMasteryCrestItem;
 import net.mcreator.catastrophemod.item.StormShieldItem;
 import net.mcreator.catastrophemod.item.StormCatalystItem;
 import net.mcreator.catastrophemod.item.StormBowItem;
@@ -54,6 +55,7 @@ import net.mcreator.catastrophemod.item.SpellOfPhantomsItem;
 import net.mcreator.catastrophemod.item.SpellOfFlamesItem;
 import net.mcreator.catastrophemod.item.SpeartheGungnirItem;
 import net.mcreator.catastrophemod.item.SpearOfNatureItem;
+import net.mcreator.catastrophemod.item.SpearMasteryCrestItem;
 import net.mcreator.catastrophemod.item.ShroomiumItem;
 import net.mcreator.catastrophemod.item.ShroomiumIngotItem;
 import net.mcreator.catastrophemod.item.ShroomBowItem;
@@ -485,6 +487,8 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> NATURITE_SHIELD = REGISTRY.register("naturite_shield", () -> new NaturiteShieldItem());
 	public static final RegistryObject<Item> AXE_MASTERY_CREST = REGISTRY.register("axe_mastery_crest", () -> new AxeMasteryCrestItem());
 	public static final RegistryObject<Item> ACCURSED_TOME = REGISTRY.register("accursed_tome", () -> new AccursedTomeItem());
+	public static final RegistryObject<Item> SWORD_MASTERY_CREST = REGISTRY.register("sword_mastery_crest", () -> new SwordMasteryCrestItem());
+	public static final RegistryObject<Item> SPEAR_MASTERY_CREST = REGISTRY.register("spear_mastery_crest", () -> new SpearMasteryCrestItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

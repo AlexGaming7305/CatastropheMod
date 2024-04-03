@@ -131,6 +131,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.RING_OF_RESILIENCE.get());
 				tabData.accept(CatastropheModModItems.ROTTEN_HEART.get());
 				tabData.accept(CatastropheModModItems.AXE_MASTERY_CREST.get());
+				tabData.accept(CatastropheModModItems.SWORD_MASTERY_CREST.get());
+				tabData.accept(CatastropheModModItems.SPEAR_MASTERY_CREST.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> BOSS_SUMMONS = REGISTRY.register("boss_summons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.boss_summons")).icon(() -> new ItemStack(CatastropheModModItems.COPPER_TOKEN.get())).displayItems((parameters, tabData) -> {
@@ -260,11 +262,6 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.ANGLERFISH_SPAWN_EGG.get());
 		}
 
-		if (tabData.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
-			tabData.accept(CatastropheModModItems.LESSER_MANA_POTION.get());
-			tabData.accept(CatastropheModModItems.MANA_POTION.get());
-		}
-
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(CatastropheModModItems.NATUREITE_PICKAXE.get());
 			tabData.accept(CatastropheModModItems.NATUREITE_AXE.get());
@@ -280,6 +277,8 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.NATUREITE_APPLE.get());
 			tabData.accept(CatastropheModModItems.CALICO_MUSHROOM_STEW.get());
 			tabData.accept(CatastropheModModItems.PURIFIED_CALICO_MUSHROOM_STEW.get());
+			tabData.accept(CatastropheModModItems.LESSER_MANA_POTION.get());
+			tabData.accept(CatastropheModModItems.MANA_POTION.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

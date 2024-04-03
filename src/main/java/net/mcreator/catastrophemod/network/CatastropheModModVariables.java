@@ -194,6 +194,8 @@ public class CatastropheModModVariables {
 				clone.mana_regen_cooldown = original.mana_regen_cooldown;
 				clone.Resilience_Enchantment = original.Resilience_Enchantment;
 				clone.Resilience_Level = original.Resilience_Level;
+				clone.axe_mastery_crest = original.axe_mastery_crest;
+				clone.spear_mastery_crest = original.spear_mastery_crest;
 			}
 		}
 
@@ -498,6 +500,8 @@ public class CatastropheModModVariables {
 		public double mana_regen_cooldown = 0;
 		public boolean Resilience_Enchantment = false;
 		public double Resilience_Level = 0;
+		public double axe_mastery_crest = 0;
+		public double spear_mastery_crest = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -627,6 +631,8 @@ public class CatastropheModModVariables {
 			nbt.putDouble("mana_regen_cooldown", mana_regen_cooldown);
 			nbt.putBoolean("Resilience_Enchantment", Resilience_Enchantment);
 			nbt.putDouble("Resilience_Level", Resilience_Level);
+			nbt.putDouble("axe_mastery_crest", axe_mastery_crest);
+			nbt.putDouble("spear_mastery_crest", spear_mastery_crest);
 			return nbt;
 		}
 
@@ -753,6 +759,8 @@ public class CatastropheModModVariables {
 			mana_regen_cooldown = nbt.getDouble("mana_regen_cooldown");
 			Resilience_Enchantment = nbt.getBoolean("Resilience_Enchantment");
 			Resilience_Level = nbt.getDouble("Resilience_Level");
+			axe_mastery_crest = nbt.getDouble("axe_mastery_crest");
+			spear_mastery_crest = nbt.getDouble("spear_mastery_crest");
 		}
 	}
 
@@ -898,6 +906,8 @@ public class CatastropheModModVariables {
 					variables.mana_regen_cooldown = message.data.mana_regen_cooldown;
 					variables.Resilience_Enchantment = message.data.Resilience_Enchantment;
 					variables.Resilience_Level = message.data.Resilience_Level;
+					variables.axe_mastery_crest = message.data.axe_mastery_crest;
+					variables.spear_mastery_crest = message.data.spear_mastery_crest;
 				}
 			});
 			context.setPacketHandled(true);
