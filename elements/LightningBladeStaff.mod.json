@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "lightning_blade_staff",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "§bLightning Blade Staff",

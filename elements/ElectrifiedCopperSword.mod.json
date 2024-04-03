@@ -24,6 +24,9 @@
     "damageVsEntity": 3.0,
     "usageCount": 230,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:CopperShard"

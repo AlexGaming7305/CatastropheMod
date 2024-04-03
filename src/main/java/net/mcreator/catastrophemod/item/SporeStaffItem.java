@@ -23,7 +23,7 @@ public class SporeStaffItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Fires spores. \u00A7b(Costs 10 Mana)"));
+		list.add(Component.literal("\u00A77Casts spores. \u00A7b(Costs 10 Mana)"));
 	}
 
 	@Override

@@ -112,6 +112,11 @@ public abstract class HunterItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "catastrophe_mod:textures/entities/hunters_hat_texture.png";
 		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
+		}
 	}
 
 	public static class Chestplate extends HunterItem {
@@ -149,6 +154,11 @@ public abstract class HunterItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "catastrophe_mod:textures/entities/hunter_chestplate_texture.png";
 		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
+		}
 	}
 
 	public static class Leggings extends HunterItem {
@@ -168,6 +178,11 @@ public abstract class HunterItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "catastrophe_mod:textures/models/armor/hunter_armor__layer_2.png";
 		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
+		}
 	}
 
 	public static class Boots extends HunterItem {
@@ -186,6 +201,11 @@ public abstract class HunterItem extends ArmorItem {
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "catastrophe_mod:textures/models/armor/hunter_armor__layer_1.png";
+		}
+
+		@Override
+		public boolean makesPiglinsNeutral(ItemStack itemstack, LivingEntity entity) {
+			return false;
 		}
 	}
 }

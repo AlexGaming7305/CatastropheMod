@@ -3,7 +3,7 @@
   "_type": "curiosslot",
   "definition": {
     "texture": "accessory_slot_icon.png",
-    "name": "Accessory Slot",
+    "name": "Accessory",
     "amount": 5
   }
 }

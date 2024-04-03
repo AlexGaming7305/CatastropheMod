@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "vein_striker",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "§4Vein Striker",

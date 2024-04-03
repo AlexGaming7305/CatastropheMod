@@ -28,6 +28,9 @@
     "enableMeleeDamage": false,
     "addSlot": false,
     "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hasGlow": false,
     "customProperties": {},
     "states": [],

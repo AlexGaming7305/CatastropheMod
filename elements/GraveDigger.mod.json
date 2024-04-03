@@ -25,6 +25,9 @@
     "damageVsEntity": 5.0,
     "usageCount": 300,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "Items.IRON_INGOT"

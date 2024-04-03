@@ -25,6 +25,9 @@
     "damageVsEntity": 5.0,
     "usageCount": 1161,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:ShadowflameFragment"

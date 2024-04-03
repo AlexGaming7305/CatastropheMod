@@ -24,6 +24,9 @@
     "damageVsEntity": 3.9999999999999996,
     "usageCount": 951,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:ShroomiumIngot"

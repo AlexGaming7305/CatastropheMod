@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "spore_staff",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "Spore Staff",
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7Fires spores. §b(Costs 10 Mana)"
+        "§7Casts spores. §b(Costs 10 Mana)"
       ]
     },
     "glowCondition": {

@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "blossom_flora",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "§aBlossom Flora",

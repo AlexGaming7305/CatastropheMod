@@ -24,6 +24,9 @@
     "damageVsEntity": 3.5,
     "usageCount": 183,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:NatureiteIngot"

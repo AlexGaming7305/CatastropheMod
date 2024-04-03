@@ -31,11 +31,17 @@
         "§7Inflicts §cBleeding and §7has a §a25% chance §7to shoot out a Homing Lifedrain arrow on hit that heals you for half a heart."
       ]
     },
+    "glowCondition": {
+      "fixedValue": false
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,
+    "projectile": {
+      "value": "CUSTOM:FlameProjectileProjectile"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
