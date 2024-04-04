@@ -11,10 +11,6 @@ public class SilkMothOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		double spawn = 0;
-		double yaw = 0;
-		double pitch = 0;
-		boolean nospinning = false;
 		if (entity.getPersistentData().getBoolean("sleeping") == false) {
 			if (entity.getPersistentData().getBoolean("cecropia_moth") == true) {
 				if (entity instanceof SilkMothEntity animatable)

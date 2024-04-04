@@ -16,7 +16,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -25,8 +24,6 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
@@ -97,14 +94,6 @@ public class MineralWrathEntityDiesProcedure {
 						ItemStack _setstack = new ItemStack(CatastropheModModItems.MINERAL_WRAITH_LOOT_BUNDLE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
-					if (entityiterator instanceof ServerPlayer _player) {
-						Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:metal_madness"));
-						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-						if (!_ap.isDone()) {
-							for (String criteria : _ap.getRemainingCriteria())
-								_player.getAdvancements().award(_adv, criteria);
-						}
 					}
 					if (entityiterator instanceof Player) {
 						{

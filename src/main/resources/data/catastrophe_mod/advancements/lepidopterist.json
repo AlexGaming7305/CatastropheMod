@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "catastrophe_mod:alexs_mod"
+  "parent": "catastrophe_mod:catastrophe"
 }

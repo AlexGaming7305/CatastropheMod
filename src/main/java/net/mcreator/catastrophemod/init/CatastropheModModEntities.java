@@ -207,7 +207,7 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<FirebrandSlashEntity>> FIREBRAND_SLASH = register("firebrand_slash", EntityType.Builder.<FirebrandSlashEntity>of(FirebrandSlashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FirebrandSlashEntity::new).fireImmune().sized(0.3f, 0.3f));
 	public static final RegistryObject<EntityType<SilkMothEntity>> SILK_MOTH = register("silk_moth",
-			EntityType.Builder.<SilkMothEntity>of(SilkMothEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilkMothEntity::new)
+			EntityType.Builder.<SilkMothEntity>of(SilkMothEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilkMothEntity::new)
 
 					.sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AtlanticSeaNettleEntity>> ATLANTIC_SEA_NETTLE = register("atlantic_sea_nettle",

@@ -29,14 +29,16 @@ public class ArmorPenetrationProcedureProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double damage = 0;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) > ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.ARMORPENETRATION.get()).getBaseValue()) {
-			LivingHurtEvent event2 = (LivingHurtEvent) event;
-			damage = amount + ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.ARMORPENETRATION.get()).getBaseValue() / 2;
-			event2.setAmount((float) damage);
-		} else {
-			LivingHurtEvent event2 = (LivingHurtEvent) event;
-			damage = amount + (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) / 2;
-			event2.setAmount((float) damage);
+		if (entity instanceof LivingEntity && ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.ARMORPENETRATION.get()) != null) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) > ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.ARMORPENETRATION.get()).getBaseValue()) {
+				LivingHurtEvent event2 = (LivingHurtEvent) event;
+				damage = amount + ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.ARMORPENETRATION.get()).getBaseValue() / 2;
+				event2.setAmount((float) damage);
+			} else {
+				LivingHurtEvent event2 = (LivingHurtEvent) event;
+				damage = amount + (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) / 2;
+				event2.setAmount((float) damage);
+			}
 		}
 	}
 }

@@ -36,7 +36,7 @@ public class PlayerNameProcedureProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((entity.getDisplayName().getString()).equals("AlexGaming7305") && (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) < 1) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 0));
 		} else if ((sourceentity.getDisplayName().getString()).equals("AlexGaming7305") && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

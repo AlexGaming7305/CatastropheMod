@@ -38,7 +38,7 @@ public class ManaStarRightclickedProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 30);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 20);
 		}
 	}
 }

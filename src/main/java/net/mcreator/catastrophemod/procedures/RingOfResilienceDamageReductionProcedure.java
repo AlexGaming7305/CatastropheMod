@@ -18,9 +18,8 @@ import javax.annotation.Nullable;
 public class RingOfResilienceDamageReductionProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity, event.getAmount());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity(), event.getAmount());
 		}
 	}
 
@@ -34,7 +33,7 @@ public class RingOfResilienceDamageReductionProcedure {
 		double damage = 0;
 		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(CatastropheModModItems.RING_OF_RESILIENCE.get(), lv).isPresent() : false) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
-			damage = amount - (amount * 5) / 100;
+			damage = amount - (amount * 90) / 100;
 			event2.setAmount((float) damage);
 		}
 	}

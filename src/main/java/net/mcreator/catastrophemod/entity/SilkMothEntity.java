@@ -50,6 +50,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.util.RandomSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -118,8 +119,28 @@ public class SilkMothEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RestrictSunGoal(this));
-		this.goalSelector.addGoal(2, new MoveBackToVillageGoal(this, 0.6, false));
+		this.goalSelector.addGoal(1, new RestrictSunGoal(this) {
+			@Override
+			public boolean canUse() {
+				double x = SilkMothEntity.this.getX();
+				double y = SilkMothEntity.this.getY();
+				double z = SilkMothEntity.this.getZ();
+				Entity entity = SilkMothEntity.this;
+				Level world = SilkMothEntity.this.level();
+				return super.canUse() && SilkMothSleepConditionProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(2, new MoveBackToVillageGoal(this, 0.6, false) {
+			@Override
+			public boolean canUse() {
+				double x = SilkMothEntity.this.getX();
+				double y = SilkMothEntity.this.getY();
+				double z = SilkMothEntity.this.getZ();
+				Entity entity = SilkMothEntity.this;
+				Level world = SilkMothEntity.this.level();
+				return super.canUse() && SilkMothSleepConditionProcedure.execute(entity);
+			}
+		});
 		this.goalSelector.addGoal(3, new TemptGoal(this, 3, Ingredient.of(Blocks.LANTERN.asItem()), false) {
 			@Override
 			public boolean canUse() {
@@ -179,7 +200,7 @@ public class SilkMothEntity extends PathfinderMob implements GeoEntity {
 
 	@Override
 	public MobType getMobType() {
-		return MobType.UNDEFINED;
+		return MobType.ARTHROPOD;
 	}
 
 	@Override
@@ -261,7 +282,8 @@ public class SilkMothEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CatastropheModModEntities.SILK_MOTH.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
+		SpawnPlacements.register(CatastropheModModEntities.SILK_MOTH.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).is(BlockTags.ANIMALS_SPAWNABLE_ON) && world.getRawBrightness(pos, 0) > 8));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
