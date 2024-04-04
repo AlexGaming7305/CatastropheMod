@@ -2,8 +2,8 @@
   "_fv": 57,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Catastrophe Mod",
-    "achievementDescription": "Thank you for downloading my mod!",
+    "achievementName": "Catastrophe",
+    "achievementDescription": "A scarred world left to burn in it's own flames",
     "achievementIcon": {
       "value": "CUSTOM:CatastropheModIcon"
     },

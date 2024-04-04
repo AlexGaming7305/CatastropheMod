@@ -5,10 +5,10 @@
       "item": "catastrophe_mod:catastrophe_mod_icon"
     },
     "title": {
-      "translate": "advancements.alexs_mod.title"
+      "translate": "advancements.catastrophe.title"
     },
     "description": {
-      "translate": "advancements.alexs_mod.descr"
+      "translate": "advancements.catastrophe.descr"
     },
     "frame": "task",
     "show_toast": false,
@@ -16,7 +16,7 @@
     "hidden": false
   },
   "criteria": {
-    "alexs_mod": {
+    "catastrophe": {
       "trigger": "minecraft:impossible"
     }
   }
