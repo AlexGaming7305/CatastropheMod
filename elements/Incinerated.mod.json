@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "when_caused_by_living_non_player",
+    "effects": "hurt",
+    "normalDeathMessage": "%1$s was incinerated",
+    "itemDeathMessage": "%1$s was incinerated",
+    "playerDeathMessage": "%1$s was reduced to ashes whilst trying to escape %2$s"
+  }
+}

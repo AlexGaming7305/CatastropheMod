@@ -30,7 +30,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9+1 Mana/s"
+        "§9+1 Mana Regeneration"
       ]
     },
     "hasGlow": false,

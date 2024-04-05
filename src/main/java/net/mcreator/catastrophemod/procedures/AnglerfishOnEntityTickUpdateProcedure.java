@@ -24,6 +24,8 @@ public class AnglerfishOnEntityTickUpdateProcedure {
 		double yvel = 0;
 		double radius = 0;
 		double xvel = 0;
-		((LivingEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(3);
+		if (((LivingEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).getBaseValue() != 3) {
+			((LivingEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue(3);
+		}
 	}
 }

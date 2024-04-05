@@ -1,8 +1,6 @@
 {
   "type": "forge:add_spawns",
   "biomes": [
-    "beach",
-    "stony_shore",
     "cold_ocean",
     "deep_cold_ocean",
     "deep_frozen_ocean",
@@ -14,9 +12,9 @@
     "warm_ocean"
   ],
   "spawners": {
-    "type": "catastrophe_mod:hermit_crab",
-    "weight": 450,
+    "type": "catastrophe_mod:anglerfish",
+    "weight": 15,
     "minCount": 1,
-    "maxCount": 4
+    "maxCount": 3
   }
 }

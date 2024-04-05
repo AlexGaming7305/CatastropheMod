@@ -249,7 +249,7 @@ public class SilkMothEntity extends PathfinderMob implements GeoEntity {
 		Entity entity = this;
 		Level world = this.level();
 
-		SilkMothRightClickedOnEntityProcedure.execute(world, x, y, z);
+		SilkMothRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 

@@ -29,7 +29,9 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§9+5% Damage Reduction"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},
@@ -38,6 +40,12 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "slotAmount": 1,
+    "onEquip": {
+      "name": "RingOfResilienceBaubleIsEquipped"
+    },
+    "onUnequip": {
+      "name": "RingOfResilienceBaubleIsUnequipped"
+    },
     "isFood": false,
     "friendlyPigs": false,
     "enderMask": false,

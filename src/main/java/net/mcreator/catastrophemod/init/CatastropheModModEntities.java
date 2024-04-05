@@ -144,7 +144,7 @@ public class CatastropheModModEntities {
 
 					.sized(0f, 0f));
 	public static final RegistryObject<EntityType<HermitCrabEntity>> HERMIT_CRAB = register("hermit_crab",
-			EntityType.Builder.<HermitCrabEntity>of(HermitCrabEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HermitCrabEntity::new)
+			EntityType.Builder.<HermitCrabEntity>of(HermitCrabEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HermitCrabEntity::new)
 
 					.sized(0.7f, 0.5f));
 	public static final RegistryObject<EntityType<LightningBladeEntity>> LIGHTNING_BLADE = register("lightning_blade", EntityType.Builder.<LightningBladeEntity>of(LightningBladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
@@ -336,7 +336,7 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<BlizzardProjectileEntity>> BLIZZARD_PROJECTILE = register("projectile_blizzard_projectile", EntityType.Builder.<BlizzardProjectileEntity>of(BlizzardProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(BlizzardProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AnglerfishEntity>> ANGLERFISH = register("anglerfish",
-			EntityType.Builder.<AnglerfishEntity>of(AnglerfishEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerfishEntity::new)
+			EntityType.Builder.<AnglerfishEntity>of(AnglerfishEntity::new, MobCategory.UNDERGROUND_WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerfishEntity::new)
 
 					.sized(0.8f, 0.6f));
 	public static final RegistryObject<EntityType<AccursedDaggerEntity>> ACCURSED_DAGGER = register("projectile_accursed_dagger",

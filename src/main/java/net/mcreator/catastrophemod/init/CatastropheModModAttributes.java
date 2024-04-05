@@ -10,8 +10,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLConstructModEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EntityType;
@@ -31,6 +33,7 @@ public class CatastropheModModAttributes {
 	public static final RegistryObject<Attribute> SUMMONERDAMAGE = ATTRIBUTES.register("summoner_damage", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".summoner_damage", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> ARMORPENETRATION = ATTRIBUTES.register("armor_penetration", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".armor_penetration", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> DAMAGEREDUCTION = ATTRIBUTES.register("damage_reduction", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".damage_reduction", 0, 0, 0)).setSyncable(true));
+	public static final RegistryObject<Attribute> MAXMANA = ATTRIBUTES.register("max_mana", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".max_mana", 20, 20, 1000)).setSyncable(true));
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
@@ -51,5 +54,16 @@ public class CatastropheModModAttributes {
 		event.add(EntityType.PLAYER, SUMMONERDAMAGE.get());
 		event.add(EntityType.PLAYER, ARMORPENETRATION.get());
 		event.add(EntityType.PLAYER, DAMAGEREDUCTION.get());
+		event.add(EntityType.PLAYER, MAXMANA.get());
+	}
+
+	@Mod.EventBusSubscriber
+	private class Utils {
+		@SubscribeEvent
+		public static void persistAttributes(PlayerEvent.Clone event) {
+			Player oldP = event.getOriginal();
+			Player newP = (Player) event.getEntity();
+			newP.getAttribute(MAXMANA.get()).setBaseValue(oldP.getAttribute(MAXMANA.get()).getBaseValue());
+		}
 	}
 }
