@@ -108,11 +108,11 @@
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">4</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">12</field><field name=\"condition\">null,null</field><next><block type=\"try_and_find_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntitySalmon</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityCod</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityTropicalFish</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "anglerfish.geo.json",
     "groupName": "anglerfish",
-    "animation1": "animation.anglerfish.idle_land",
+    "animation1": "animation.anglerfish.idle",
     "animation2": "",
     "animation3": "",
     "animation4": "animation.anglerfish.attack",
-    "animation5": "animation.anglerfish.idle",
+    "animation5": "",
     "animation6": "",
     "animation7": "",
     "animation8": "",
@@ -143,7 +143,7 @@
     "height": 1.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 15,
+    "spawningProbability": 16,
     "mobSpawningType": "undergroundWaterCreature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 3,
@@ -174,6 +174,12 @@
       },
       {
         "value": "warm_ocean"
+      },
+      {
+        "value": "stone_beach"
+      },
+      {
+        "value": "beaches"
       }
     ],
     "spawnInDungeons": false

@@ -7,9 +7,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
@@ -57,7 +55,7 @@ public class AtlanticSeaNettleOnEntityTickUpdateProcedure {
 			if (entity.getPersistentData().getDouble("bobbing") == 40) {
 				entity.getPersistentData().putBoolean("activate", true);
 				entity.getPersistentData().putDouble("bobbing", 0);
-				entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y() + Mth.nextDouble(RandomSource.create(), 0.2, 0.3)), (entity.getDeltaMovement().z())));
+				entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y() + Mth.nextDouble(RandomSource.create(), 0.2, 0.5)), (entity.getDeltaMovement().z())));
 			} else {
 				entity.getPersistentData().putDouble("bobbing", (entity.getPersistentData().getDouble("bobbing") + 1));
 			}
@@ -78,15 +76,12 @@ public class AtlanticSeaNettleOnEntityTickUpdateProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator instanceof AtlanticSeaNettleEntity)) {
-							if (!(entityiterator instanceof ItemEntity && entityiterator instanceof ExperienceOrb)) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electrocuted")))),
-										12);
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 60, 0));
-								entityiterator.setDeltaMovement(
-										new Vec3(((entity.getX() - entityiterator.getX()) * (-0.4)), ((entity.getY() - (entityiterator.getY() + entity.getBbHeight() - 0.4)) * (-0.4)), ((entity.getZ() - entityiterator.getZ()) * (-0.4))));
-							}
+						if (entityiterator instanceof Player) {
+							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electrocuted")))), 12);
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 60, 0));
+							entityiterator.setDeltaMovement(
+									new Vec3(((entity.getX() - entityiterator.getX()) * (-0.4)), ((entity.getY() - (entityiterator.getY() + entity.getBbHeight() - 0.4)) * (-0.4)), ((entity.getZ() - entityiterator.getZ()) * (-0.4))));
 						}
 					}
 				}

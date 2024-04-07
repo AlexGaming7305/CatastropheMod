@@ -14,9 +14,9 @@
     "beach"
   ],
   "spawners": {
-    "type": "catastrophe_mod:anglerfish",
-    "weight": 16,
+    "type": "catastrophe_mod:atlantic_sea_nettle",
+    "weight": 70,
     "minCount": 1,
-    "maxCount": 3
+    "maxCount": 5
   }
 }

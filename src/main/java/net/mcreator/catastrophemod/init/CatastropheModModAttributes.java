@@ -33,7 +33,8 @@ public class CatastropheModModAttributes {
 	public static final RegistryObject<Attribute> SUMMONERDAMAGE = ATTRIBUTES.register("summoner_damage", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".summoner_damage", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> ARMORPENETRATION = ATTRIBUTES.register("armor_penetration", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".armor_penetration", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> DAMAGEREDUCTION = ATTRIBUTES.register("damage_reduction", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".damage_reduction", 0, 0, 0)).setSyncable(true));
-	public static final RegistryObject<Attribute> MAXMANA = ATTRIBUTES.register("max_mana", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".max_mana", 20, 20, 1000)).setSyncable(true));
+	public static final RegistryObject<Attribute> MAXMANA = ATTRIBUTES.register("max_mana", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".max_mana", 0, 0, 0)).setSyncable(true));
+	public static final RegistryObject<Attribute> MANAREGENERATION = ATTRIBUTES.register("mana_regeneration", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".mana_regeneration", 0, 0, 0)).setSyncable(true));
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
@@ -55,6 +56,7 @@ public class CatastropheModModAttributes {
 		event.add(EntityType.PLAYER, ARMORPENETRATION.get());
 		event.add(EntityType.PLAYER, DAMAGEREDUCTION.get());
 		event.add(EntityType.PLAYER, MAXMANA.get());
+		event.add(EntityType.PLAYER, MANAREGENERATION.get());
 	}
 
 	@Mod.EventBusSubscriber
@@ -64,6 +66,7 @@ public class CatastropheModModAttributes {
 			Player oldP = event.getOriginal();
 			Player newP = (Player) event.getEntity();
 			newP.getAttribute(MAXMANA.get()).setBaseValue(oldP.getAttribute(MAXMANA.get()).getBaseValue());
+			newP.getAttribute(MANAREGENERATION.get()).setBaseValue(oldP.getAttribute(MANAREGENERATION.get()).getBaseValue());
 		}
 	}
 }

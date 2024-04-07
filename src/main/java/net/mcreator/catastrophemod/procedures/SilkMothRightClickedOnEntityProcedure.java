@@ -63,6 +63,16 @@ public class SilkMothRightClickedOnEntityProcedure {
 					});
 				}
 			}
+		} else if (entity.getPersistentData().getBoolean("rosy_maple_moth")) {
+			if ((sourceentity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).rosy_maple_moth_pet == false) {
+				{
+					boolean _setval = true;
+					sourceentity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.rosy_maple_moth_pet = _setval;
+						capability.syncPlayerVariables(sourceentity);
+					});
+				}
+			}
 		}
 	}
 }

@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "attribute",
   "definition": {
-    "description": "Max Mana",
+    "description": "Mana Regeneration",
     "minValue": 0.0,
     "maxValue": 0.0,
     "defaultValue": 0.0,

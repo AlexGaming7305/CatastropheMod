@@ -27,7 +27,9 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§aRight-click: §7Casts two daggers that curve towards your crosshair §b(Costs 6 mana)"
+      ]
     },
     "glowCondition": {
       "fixedValue": false

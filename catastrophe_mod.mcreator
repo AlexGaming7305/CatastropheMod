@@ -549,7 +549,12 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ManaStartProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Misc"
     },
@@ -3914,13 +3919,20 @@
       "type": "procedure",
       "sortid": 1681,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "bullseye_procedure",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/BullseyeProcedureProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
           }
         ]
       },
@@ -4739,17 +4751,13 @@
       "type": "procedure",
       "sortid": 1757,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "intelligence_procedure",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/IntelligenceProcedureProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
           {
             "name": "sourceentity",
             "type": "entity"
@@ -17549,7 +17557,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ManaSicknessProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Potion Effects"
     },
@@ -19353,10 +19370,11 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/layer/AtlanticSeaNettleLayer.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/atlantic_sea_nettle_spawn_egg.json",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/atlantic_sea_nettle_biome_modifier.json",
           "src/main/java/net/mcreator/catastrophemod/entity/AtlanticSeaNettleEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/AtlanticSeaNettleModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AtlanticSeaNettleRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AtlanticSeaNettleRenderer.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/atlantic_sea_nettle_spawn_egg.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/AtlanticSeaNettleModel.java"
         ]
       },
       "path": "~/Entities"
@@ -21830,8 +21848,7 @@
       "registry_name": "max_mana",
       "metadata": {
         "files": []
-      },
-      "path": "~/Misc"
+      }
     },
     {
       "name": "ThisICommand",
@@ -21880,6 +21897,153 @@
           {
             "name": "world",
             "type": "world"
+          }
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "UltraInstinct",
+      "type": "achievement",
+      "sortid": 2826,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultra_instinct",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/advancements/ultra_instinct.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "UltraInstinctProcedure1",
+      "type": "procedure",
+      "sortid": 2827,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultra_instinct_procedure_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/UltraInstinctProcedure1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "UltraInstinctProcedure2",
+      "type": "procedure",
+      "sortid": 2828,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultra_instinct_procedure_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/UltraInstinctProcedure2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Guns",
+      "type": "tag",
+      "sortid": 2829,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guns",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/tags/items/guns.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ManaRegeneration",
+      "type": "attribute",
+      "sortid": 2830,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_regeneration",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "MaxManaProcedure",
+      "type": "procedure",
+      "sortid": 2831,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_mana_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/MaxManaProcedureProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Arcane",
+      "type": "achievement",
+      "sortid": 2832,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/advancements/arcane.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ArcaneProcedure",
+      "type": "procedure",
+      "sortid": 2833,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ArcaneProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -22086,24 +22250,6 @@
       "value": "false"
     },
     {
-      "name": "shake",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "isshaking",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "Sepulcher_Is_Alive",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
       "name": "firebrand",
       "type": "number",
       "scope": "player_lifetime",
@@ -22132,12 +22278,6 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
-    },
-    {
-      "name": "charredskeletonguardisblocking",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "bookofblades",
@@ -22552,6 +22692,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "rosy_maple_moth_pet",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "is_hit_during_bossfight",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "silk_moth_pet_counter",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -23883,6 +24041,7 @@
       "entity.alexs_mod.sword_dash": "Sword Dash",
       "item.alexs_mod.kyles_blade": "§e§lKyle\u0027s Blade",
       "item.alexs_mod.bartosa_metal_scrap": "Bartosa Metal Scrap",
+      "attribute.catastrophe_mod.mana_regeneration": "Mana Regeneration",
       "item.alexs_mod.golden_spear": "Golden Spear",
       "item.alexs_mod.bartosa_bazooka_ammunition": "Bartosa Bazooka Ammunition",
       "item.alexs_mod.marksmans_crest": "Marksman\u0027s Crest",
@@ -24022,6 +24181,7 @@
       "item.alexs_mod.paxs_six_shooter": "Pax\u0027s Six Shooter",
       "item.alexs_mod.masters_katana": "Shade Master\u0027s Katana",
       "block.alexs_mod.dungeon_bricks": "Dungeon Bricks",
+      "advancements.ultra_instinct.descr": "Defeat any boss without taking any damage",
       "block.catastrophe_mod.sea_crystal_block": "Sea Crystal Block",
       "item.alexs_mod.ender_pearl": "Ender Pearl",
       "gui.alexs_mod.aegex_4_gui.label_they_started_taking_fire_and_i_h": "They started taking fire and I had",
@@ -24117,6 +24277,7 @@
       "item.catastrophe_mod.naturite_spear": "§aNaturite Spear",
       "gui.alexs_mod.quest_book_gui.label_5_the_thorn_infested_armor_is_s": "5. The Thorn Infested Armor is summoned using a",
       "death.attack.impaled.player": "%1$s was impaled whilst trying to escape %2$s",
+      "advancements.ultra_instinct.title": "Ultra Instinct",
       "item.catastrophe_mod.earthbound_wraith_spawn_egg": "Earthbound Wraith Spawn Egg",
       "item.alexs_mod.bouncy_shroom": "§fBouncy Shroom",
       "item.alexs_mod.shadow_armor_chestplate": "§8Shadow Robe",
@@ -24551,6 +24712,7 @@
       "entity.alexs_mod.flamenado": "Flamenado",
       "item.alexs_mod.redsplit_launched": "Redsplit Launched",
       "block.alexs_mod.electric_wire": "Electric Wire",
+      "advancements.arcane.descr": "Reach 200 Max Mana",
       "entity.alexs_mod.kyle": "Kyle",
       "item.alexs_mod.flamenado_spawn_egg": "Flamenado Spawn Egg",
       "gui.alexs_mod.aegex_1_gui.label_damn_there_actually_pretty_cute": "Damn, there actually pretty cute!",
@@ -24574,6 +24736,7 @@
       "item.catastrophe_mod.shadowflame_whisper": "§8Shadowflame Whisper",
       "item.alexs_mod.alloy_minigun": "Alloy Minigun",
       "death.attack.bleed": "%s bled to death",
+      "advancements.arcane.title": "Arcane",
       "effect.alexs_mod.blink_cool_down": "Shadow Teleport Cooldown",
       "item.alexs_mod.prismal_boots": "§bPrismal Boots",
       "effect.alexs_mod.double_jump_cooldown": "Brazil.",

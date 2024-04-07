@@ -16,7 +16,7 @@ import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class ManaSicknessProcedureProcedure {
+public class BullseyeProcedureProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
 		if (event != null && event.getEntity() != null) {
@@ -32,14 +32,11 @@ public class ManaSicknessProcedureProcedure {
 		if (sourceentity == null)
 			return;
 		double damage = 0;
-		Entity projectile = null;
-		if (sourceentity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CatastropheModModMobEffects.MANA_SICKNESS.get())) {
-			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))
-					|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))) {
+		if (sourceentity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CatastropheModModMobEffects.BULLSEYE.get())) {
+			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:ranged_weapons")))
+					|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:ranged_weapons")))) {
 				LivingHurtEvent event2 = (LivingHurtEvent) event;
-				damage = amount
-						- (amount * ((sourceentity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CatastropheModModMobEffects.MANA_SICKNESS.get()) ? _livEnt.getEffect(CatastropheModModMobEffects.MANA_SICKNESS.get()).getDuration() : 0) / 4))
-								/ 100;
+				damage = amount + 3 * ((sourceentity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CatastropheModModMobEffects.BULLSEYE.get()) ? _livEnt.getEffect(CatastropheModModMobEffects.BULLSEYE.get()).getAmplifier() : 0) + 1);
 				event2.setAmount((float) damage);
 			}
 		}
