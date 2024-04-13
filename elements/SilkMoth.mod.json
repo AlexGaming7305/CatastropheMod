@@ -51,11 +51,11 @@
       "value": ""
     },
     "mobBehaviourType": "Creature",
-    "mobCreatureType": "UNDEFINED",
+    "mobCreatureType": "ARTHROPOD",
     "attackStrength": 0,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.15,
+    "movementSpeed": 0.15000000000000002,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
@@ -111,9 +111,9 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"restrict_sun\"><field name=\"condition\">null,null</field><next><block type=\"move_indoors\"><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">3</field><field name=\"scared\">FALSE</field><field name=\"condition\">SilkMothSleepCondition,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Blocks.LANTERN</field></block></value><next><block type=\"fly\"><field name=\"speed\">2</field><field name=\"condition\">SilkMothSleepCondition,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">4</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">SilkMothSleepCondition,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">SilkMothSleepCondition,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"restrict_sun\"><field name=\"condition\">SilkMothSleepCondition,null</field><next><block type=\"move_indoors\"><field name=\"condition\">SilkMothSleepCondition,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">3</field><field name=\"scared\">FALSE</field><field name=\"condition\">SilkMothSleepCondition,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Blocks.LANTERN</field></block></value><next><block type=\"fly\"><field name=\"speed\">2</field><field name=\"condition\">SilkMothSleepCondition,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">4</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">SilkMothSleepCondition,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">SilkMothSleepCondition,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "silk_moth.geo.json",
-    "groupName": "",
+    "groupName": "head",
     "animation1": "animation.silk_moth.idle",
     "animation2": "",
     "animation3": "",
@@ -136,7 +136,7 @@
     "breedable": false,
     "tameable": false,
     "disableDeathRotation": false,
-    "headMovement": false,
+    "headMovement": true,
     "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": false,
@@ -150,15 +150,27 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 50,
-    "mobSpawningType": "ambient",
+    "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 3,
     "restrictionBiomes": [
       {
+        "value": "forest"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "mutated_birch_forest"
+      },
+      {
         "value": "plains"
       },
       {
-        "value": "forest"
+        "value": "mutated_plains"
       },
       {
         "value": "meadow"

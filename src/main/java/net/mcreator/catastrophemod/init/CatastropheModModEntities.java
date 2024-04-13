@@ -144,7 +144,7 @@ public class CatastropheModModEntities {
 
 					.sized(0f, 0f));
 	public static final RegistryObject<EntityType<HermitCrabEntity>> HERMIT_CRAB = register("hermit_crab",
-			EntityType.Builder.<HermitCrabEntity>of(HermitCrabEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HermitCrabEntity::new)
+			EntityType.Builder.<HermitCrabEntity>of(HermitCrabEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HermitCrabEntity::new)
 
 					.sized(0.7f, 0.5f));
 	public static final RegistryObject<EntityType<LightningBladeEntity>> LIGHTNING_BLADE = register("lightning_blade", EntityType.Builder.<LightningBladeEntity>of(LightningBladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
@@ -207,7 +207,7 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<FirebrandSlashEntity>> FIREBRAND_SLASH = register("firebrand_slash", EntityType.Builder.<FirebrandSlashEntity>of(FirebrandSlashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FirebrandSlashEntity::new).fireImmune().sized(0.3f, 0.3f));
 	public static final RegistryObject<EntityType<SilkMothEntity>> SILK_MOTH = register("silk_moth",
-			EntityType.Builder.<SilkMothEntity>of(SilkMothEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilkMothEntity::new)
+			EntityType.Builder.<SilkMothEntity>of(SilkMothEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilkMothEntity::new)
 
 					.sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AtlanticSeaNettleEntity>> ATLANTIC_SEA_NETTLE = register("atlantic_sea_nettle",
@@ -336,7 +336,7 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<BlizzardProjectileEntity>> BLIZZARD_PROJECTILE = register("projectile_blizzard_projectile", EntityType.Builder.<BlizzardProjectileEntity>of(BlizzardProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(BlizzardProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<AnglerfishEntity>> ANGLERFISH = register("anglerfish",
-			EntityType.Builder.<AnglerfishEntity>of(AnglerfishEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerfishEntity::new)
+			EntityType.Builder.<AnglerfishEntity>of(AnglerfishEntity::new, MobCategory.UNDERGROUND_WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AnglerfishEntity::new)
 
 					.sized(0.8f, 0.6f));
 	public static final RegistryObject<EntityType<AccursedDaggerEntity>> ACCURSED_DAGGER = register("projectile_accursed_dagger",

@@ -9,7 +9,7 @@
     "rarity": "COMMON",
     "slotType": "CURIO",
     "baubleModel": "Modelrunning_boot",
-    "baubleModelTexture": "running_boots_texture.png",
+    "baubleModelTexture": "",
     "creativeTab": {
       "value": "CUSTOM:Accessories"
     },
@@ -28,6 +28,9 @@
     "enableMeleeDamage": false,
     "addSlot": false,
     "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hasGlow": false,
     "customProperties": {},
     "states": [],

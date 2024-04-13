@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:blossom_flora"
+    },
+    "title": {
+      "translate": "advancements.we_love_casting_spells.title"
+    },
+    "description": {
+      "translate": "advancements.we_love_casting_spells.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "we_love_casting_spells": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:deleted_mod_element"
+}

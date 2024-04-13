@@ -13,19 +13,25 @@ import software.bernie.geckolib.animatable.GeoItem;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.catastrophemod.procedures.FlamestrikeRightclickedProcedure;
 import net.mcreator.catastrophemod.item.renderer.FlamestrikeItemRenderer;
 
 import java.util.function.Consumer;
+import java.util.List;
 
 public class FlamestrikeItem extends Item implements GeoItem {
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
@@ -45,6 +51,26 @@ public class FlamestrikeItem extends Item implements GeoItem {
 			@Override
 			public BlockEntityWithoutLevelRenderer getCustomRenderer() {
 				return renderer;
+			}
+
+			private static final HumanoidModel.ArmPose FlamestrikePose = HumanoidModel.ArmPose.create("Flamestrike", false, (model, entity, arm) -> {
+				if (arm == HumanoidArm.LEFT) {
+					model.leftArm.xRot = 5F + model.head.xRot;
+					model.leftArm.yRot = 0.25F + model.head.yRot;
+				} else {
+					model.rightArm.xRot = 5F + model.head.xRot;
+					model.rightArm.yRot = 0.25F + model.head.yRot;
+				}
+			});
+
+			@Override
+			public HumanoidModel.ArmPose getArmPose(LivingEntity entityLiving, InteractionHand hand, ItemStack itemStack) {
+				if (!itemStack.isEmpty()) {
+					if (entityLiving.getUsedItemHand() == hand) {
+						return FlamestrikePose;
+					}
+				}
+				return HumanoidModel.ArmPose.EMPTY;
 			}
 		});
 	}
@@ -89,6 +115,11 @@ public class FlamestrikeItem extends Item implements GeoItem {
 	@Override
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
 	}
 
 	@Override

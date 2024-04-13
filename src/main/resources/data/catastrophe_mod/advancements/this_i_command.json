@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:living_moss"
+    },
+    "title": {
+      "translate": "advancements.this_i_command.title"
+    },
+    "description": {
+      "translate": "advancements.this_i_command.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "this_i_command": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:deleted_mod_element"
+}

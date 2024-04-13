@@ -32,7 +32,7 @@
       "fixedValue": [
         "§7Grants axes the ability to §4Rend Targets Apart",
         "§7Inflicts §cArmor Shred §7which can stack 5 times",
-        "§9+10% Axe Damage"
+        "§9+5% Axe Damage"
       ]
     },
     "hasGlow": false,
@@ -42,6 +42,12 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "slotAmount": 1,
+    "onEquip": {
+      "name": "AxeMasteryCrestBaubleIsEquipped"
+    },
+    "onUnequip": {
+      "name": "AxeMasteryCrestBaubleIsUnequipped"
+    },
     "isFood": false,
     "friendlyPigs": false,
     "enderMask": false,

@@ -16,6 +16,9 @@
     "smithingInputAdditionStack": {
       "value": "CUSTOM:ReinforcedPlates"
     },
+    "smithingInputTemplateStack": {
+      "value": ""
+    },
     "smithingReturnStack": {
       "value": "CUSTOM:Reinforced_IronArmor.boots"
     },

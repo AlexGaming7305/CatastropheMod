@@ -26,10 +26,13 @@
     "destroyAnyBlock": false,
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
-    "enableArmPose": false,
+    "enableArmPose": true,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -47,6 +50,39 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "normal": "flamestrike.geo.json",
-    "armPoseList": []
+    "armPoseList": [
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": 5.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": 5.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "Y",
+        "rotation": 0.25,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.25,
+        "swings": false,
+        "followsHead": true
+      }
+    ]
   }
 }

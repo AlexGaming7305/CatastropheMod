@@ -73,40 +73,26 @@ public class CatastropheModModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Mana = original.Mana;
-			clone.ManaMultiplier = original.ManaMultiplier;
 			clone.ManaStart = original.ManaStart;
 			clone.Maxmana = original.Maxmana;
-			clone.Immunity = original.Immunity;
 			clone.SoulPower = original.SoulPower;
-			clone.SoulPowerMultiplier = original.SoulPowerMultiplier;
 			clone.SoulPowerStart = original.SoulPowerStart;
 			clone.MaxSoulPower = original.MaxSoulPower;
-			clone.dahingcooldown = original.dahingcooldown;
-			clone.shadowscreen = original.shadowscreen;
-			clone.blademode_upgrade = original.blademode_upgrade;
-			clone.losthope_upgrade = original.losthope_upgrade;
 			clone.double_jump_condition = original.double_jump_condition;
-			clone.shake = original.shake;
-			clone.charredskeletonguardisblocking = original.charredskeletonguardisblocking;
 			clone.thunder_star = original.thunder_star;
 			clone.mana_star_uses = original.mana_star_uses;
+			clone.polyphemus_moth_pet = original.polyphemus_moth_pet;
+			clone.mulberry_silk_moth_pet = original.mulberry_silk_moth_pet;
+			clone.luna_moth_pet = original.luna_moth_pet;
+			clone.rosy_maple_moth_pet = original.rosy_maple_moth_pet;
+			clone.silk_moth_pet_counter = original.silk_moth_pet_counter;
+			clone.cecropia_moth_pet = original.cecropia_moth_pet;
+			clone.comet_moth_pet = original.comet_moth_pet;
 			if (!event.isWasDeath()) {
-				clone.rocketflight = original.rocketflight;
 				clone.crimsondagger = original.crimsondagger;
 				clone.pocketshield = original.pocketshield;
-				clone.blinktech = original.blinktech;
-				clone.crystalofblood = original.crystalofblood;
-				clone.speedingclock = original.speedingclock;
-				clone.twoshots = original.twoshots;
 				clone.acidtarantula = original.acidtarantula;
-				clone.withergauntlet = original.withergauntlet;
-				clone.landmine = original.landmine;
 				clone.stormshield = original.stormshield;
-				clone.greedycrown = original.greedycrown;
-				clone.rottenhoneycomb = original.rottenhoneycomb;
-				clone.cryocrystal = original.cryocrystal;
-				clone.soulbottle = original.soulbottle;
-				clone.prismal_set_bonus = original.prismal_set_bonus;
 				clone.woodenSpear = original.woodenSpear;
 				clone.stoneSpear = original.stoneSpear;
 				clone.ironSpear = original.ironSpear;
@@ -128,7 +114,6 @@ public class CatastropheModModVariables {
 				clone.natures_blessing_armor = original.natures_blessing_armor;
 				clone.amulet_of_vitality = original.amulet_of_vitality;
 				clone.sandstorm_surge_cooldown = original.sandstorm_surge_cooldown;
-				clone.isshaking = original.isshaking;
 				clone.firebrand = original.firebrand;
 				clone.BaseManaRegenCooldown = original.BaseManaRegenCooldown;
 				clone.thorn_armor = original.thorn_armor;
@@ -194,6 +179,9 @@ public class CatastropheModModVariables {
 				clone.mana_regen_cooldown = original.mana_regen_cooldown;
 				clone.Resilience_Enchantment = original.Resilience_Enchantment;
 				clone.Resilience_Level = original.Resilience_Level;
+				clone.spear_mastery_crest = original.spear_mastery_crest;
+				clone.axe_mastery_crest = original.axe_mastery_crest;
+				clone.is_hit_during_bossfight = original.is_hit_during_bossfight;
 			}
 		}
 
@@ -221,7 +209,6 @@ public class CatastropheModModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "catastrophe_mod_worldvars";
-		public boolean dreadmoon = false;
 		public boolean Tia_Killed = false;
 
 		public static WorldVariables load(CompoundTag tag) {
@@ -231,13 +218,11 @@ public class CatastropheModModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
-			dreadmoon = nbt.getBoolean("dreadmoon");
 			Tia_Killed = nbt.getBoolean("Tia_Killed");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
-			nbt.putBoolean("dreadmoon", dreadmoon);
 			nbt.putBoolean("Tia_Killed", Tia_Killed);
 			return nbt;
 		}
@@ -261,10 +246,6 @@ public class CatastropheModModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "catastrophe_mod_mapvars";
-		public boolean Cataclysm_Mode = false;
-		public boolean Mob_With_Over_100_HP = false;
-		public boolean Hardmode = false;
-		public boolean Sepulcher_Is_Alive = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -273,18 +254,10 @@ public class CatastropheModModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
-			Cataclysm_Mode = nbt.getBoolean("Cataclysm_Mode");
-			Mob_With_Over_100_HP = nbt.getBoolean("Mob_With_Over_100_HP");
-			Hardmode = nbt.getBoolean("Hardmode");
-			Sepulcher_Is_Alive = nbt.getBoolean("Sepulcher_Is_Alive");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
-			nbt.putBoolean("Cataclysm_Mode", Cataclysm_Mode);
-			nbt.putBoolean("Mob_With_Over_100_HP", Mob_With_Over_100_HP);
-			nbt.putBoolean("Hardmode", Hardmode);
-			nbt.putBoolean("Sepulcher_Is_Alive", Sepulcher_Is_Alive);
 			return nbt;
 		}
 
@@ -378,34 +351,15 @@ public class CatastropheModModVariables {
 
 	public static class PlayerVariables {
 		public double Mana = 20.0;
-		public double ManaMultiplier = 0.0;
 		public boolean ManaStart = false;
 		public double Maxmana = 20.0;
-		public double Immunity = 0;
 		public double SoulPower = 0.0;
-		public double SoulPowerMultiplier = 0.0;
 		public boolean SoulPowerStart = false;
 		public double MaxSoulPower = 1.0;
-		public boolean dahingcooldown = false;
-		public double shadowscreen = 0;
-		public boolean rocketflight = false;
 		public boolean crimsondagger = false;
 		public boolean pocketshield = false;
-		public boolean blinktech = false;
-		public boolean crystalofblood = false;
-		public boolean speedingclock = false;
-		public boolean twoshots = false;
 		public boolean acidtarantula = false;
-		public boolean withergauntlet = false;
-		public boolean landmine = false;
 		public boolean stormshield = false;
-		public boolean greedycrown = false;
-		public boolean rottenhoneycomb = false;
-		public boolean cryocrystal = false;
-		public boolean blademode_upgrade = false;
-		public boolean losthope_upgrade = false;
-		public boolean soulbottle = false;
-		public boolean prismal_set_bonus = false;
 		public boolean double_jump_condition = false;
 		public boolean woodenSpear = false;
 		public boolean stoneSpear = false;
@@ -428,14 +382,11 @@ public class CatastropheModModVariables {
 		public boolean natures_blessing_armor = false;
 		public boolean amulet_of_vitality = false;
 		public boolean sandstorm_surge_cooldown = false;
-		public double shake = 0;
-		public boolean isshaking = false;
 		public double firebrand = 0;
 		public boolean BaseManaRegenCooldown = false;
 		public boolean thorn_armor = false;
 		public boolean iceSpear = false;
 		public double sporesplosion = 0;
-		public boolean charredskeletonguardisblocking = false;
 		public boolean bookofblades = false;
 		public boolean bookofbladesmanadrain = false;
 		public boolean crystalarklaser = false;
@@ -498,6 +449,16 @@ public class CatastropheModModVariables {
 		public double mana_regen_cooldown = 0;
 		public boolean Resilience_Enchantment = false;
 		public double Resilience_Level = 0;
+		public boolean polyphemus_moth_pet = false;
+		public boolean mulberry_silk_moth_pet = false;
+		public boolean luna_moth_pet = false;
+		public double spear_mastery_crest = 0;
+		public double axe_mastery_crest = 0;
+		public boolean is_hit_during_bossfight = false;
+		public boolean rosy_maple_moth_pet = false;
+		public double silk_moth_pet_counter = 0;
+		public boolean cecropia_moth_pet = false;
+		public boolean comet_moth_pet = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -507,34 +468,15 @@ public class CatastropheModModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("Mana", Mana);
-			nbt.putDouble("ManaMultiplier", ManaMultiplier);
 			nbt.putBoolean("ManaStart", ManaStart);
 			nbt.putDouble("Maxmana", Maxmana);
-			nbt.putDouble("Immunity", Immunity);
 			nbt.putDouble("SoulPower", SoulPower);
-			nbt.putDouble("SoulPowerMultiplier", SoulPowerMultiplier);
 			nbt.putBoolean("SoulPowerStart", SoulPowerStart);
 			nbt.putDouble("MaxSoulPower", MaxSoulPower);
-			nbt.putBoolean("dahingcooldown", dahingcooldown);
-			nbt.putDouble("shadowscreen", shadowscreen);
-			nbt.putBoolean("rocketflight", rocketflight);
 			nbt.putBoolean("crimsondagger", crimsondagger);
 			nbt.putBoolean("pocketshield", pocketshield);
-			nbt.putBoolean("blinktech", blinktech);
-			nbt.putBoolean("crystalofblood", crystalofblood);
-			nbt.putBoolean("speedingclock", speedingclock);
-			nbt.putBoolean("twoshots", twoshots);
 			nbt.putBoolean("acidtarantula", acidtarantula);
-			nbt.putBoolean("withergauntlet", withergauntlet);
-			nbt.putBoolean("landmine", landmine);
 			nbt.putBoolean("stormshield", stormshield);
-			nbt.putBoolean("greedycrown", greedycrown);
-			nbt.putBoolean("rottenhoneycomb", rottenhoneycomb);
-			nbt.putBoolean("cryocrystal", cryocrystal);
-			nbt.putBoolean("blademode_upgrade", blademode_upgrade);
-			nbt.putBoolean("losthope_upgrade", losthope_upgrade);
-			nbt.putBoolean("soulbottle", soulbottle);
-			nbt.putBoolean("prismal_set_bonus", prismal_set_bonus);
 			nbt.putBoolean("double_jump_condition", double_jump_condition);
 			nbt.putBoolean("woodenSpear", woodenSpear);
 			nbt.putBoolean("stoneSpear", stoneSpear);
@@ -557,14 +499,11 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("natures_blessing_armor", natures_blessing_armor);
 			nbt.putBoolean("amulet_of_vitality", amulet_of_vitality);
 			nbt.putBoolean("sandstorm_surge_cooldown", sandstorm_surge_cooldown);
-			nbt.putDouble("shake", shake);
-			nbt.putBoolean("isshaking", isshaking);
 			nbt.putDouble("firebrand", firebrand);
 			nbt.putBoolean("BaseManaRegenCooldown", BaseManaRegenCooldown);
 			nbt.putBoolean("thorn_armor", thorn_armor);
 			nbt.putBoolean("iceSpear", iceSpear);
 			nbt.putDouble("sporesplosion", sporesplosion);
-			nbt.putBoolean("charredskeletonguardisblocking", charredskeletonguardisblocking);
 			nbt.putBoolean("bookofblades", bookofblades);
 			nbt.putBoolean("bookofbladesmanadrain", bookofbladesmanadrain);
 			nbt.putBoolean("crystalarklaser", crystalarklaser);
@@ -627,40 +566,31 @@ public class CatastropheModModVariables {
 			nbt.putDouble("mana_regen_cooldown", mana_regen_cooldown);
 			nbt.putBoolean("Resilience_Enchantment", Resilience_Enchantment);
 			nbt.putDouble("Resilience_Level", Resilience_Level);
+			nbt.putBoolean("polyphemus_moth_pet", polyphemus_moth_pet);
+			nbt.putBoolean("mulberry_silk_moth_pet", mulberry_silk_moth_pet);
+			nbt.putBoolean("luna_moth_pet", luna_moth_pet);
+			nbt.putDouble("spear_mastery_crest", spear_mastery_crest);
+			nbt.putDouble("axe_mastery_crest", axe_mastery_crest);
+			nbt.putBoolean("is_hit_during_bossfight", is_hit_during_bossfight);
+			nbt.putBoolean("rosy_maple_moth_pet", rosy_maple_moth_pet);
+			nbt.putDouble("silk_moth_pet_counter", silk_moth_pet_counter);
+			nbt.putBoolean("cecropia_moth_pet", cecropia_moth_pet);
+			nbt.putBoolean("comet_moth_pet", comet_moth_pet);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			Mana = nbt.getDouble("Mana");
-			ManaMultiplier = nbt.getDouble("ManaMultiplier");
 			ManaStart = nbt.getBoolean("ManaStart");
 			Maxmana = nbt.getDouble("Maxmana");
-			Immunity = nbt.getDouble("Immunity");
 			SoulPower = nbt.getDouble("SoulPower");
-			SoulPowerMultiplier = nbt.getDouble("SoulPowerMultiplier");
 			SoulPowerStart = nbt.getBoolean("SoulPowerStart");
 			MaxSoulPower = nbt.getDouble("MaxSoulPower");
-			dahingcooldown = nbt.getBoolean("dahingcooldown");
-			shadowscreen = nbt.getDouble("shadowscreen");
-			rocketflight = nbt.getBoolean("rocketflight");
 			crimsondagger = nbt.getBoolean("crimsondagger");
 			pocketshield = nbt.getBoolean("pocketshield");
-			blinktech = nbt.getBoolean("blinktech");
-			crystalofblood = nbt.getBoolean("crystalofblood");
-			speedingclock = nbt.getBoolean("speedingclock");
-			twoshots = nbt.getBoolean("twoshots");
 			acidtarantula = nbt.getBoolean("acidtarantula");
-			withergauntlet = nbt.getBoolean("withergauntlet");
-			landmine = nbt.getBoolean("landmine");
 			stormshield = nbt.getBoolean("stormshield");
-			greedycrown = nbt.getBoolean("greedycrown");
-			rottenhoneycomb = nbt.getBoolean("rottenhoneycomb");
-			cryocrystal = nbt.getBoolean("cryocrystal");
-			blademode_upgrade = nbt.getBoolean("blademode_upgrade");
-			losthope_upgrade = nbt.getBoolean("losthope_upgrade");
-			soulbottle = nbt.getBoolean("soulbottle");
-			prismal_set_bonus = nbt.getBoolean("prismal_set_bonus");
 			double_jump_condition = nbt.getBoolean("double_jump_condition");
 			woodenSpear = nbt.getBoolean("woodenSpear");
 			stoneSpear = nbt.getBoolean("stoneSpear");
@@ -683,14 +613,11 @@ public class CatastropheModModVariables {
 			natures_blessing_armor = nbt.getBoolean("natures_blessing_armor");
 			amulet_of_vitality = nbt.getBoolean("amulet_of_vitality");
 			sandstorm_surge_cooldown = nbt.getBoolean("sandstorm_surge_cooldown");
-			shake = nbt.getDouble("shake");
-			isshaking = nbt.getBoolean("isshaking");
 			firebrand = nbt.getDouble("firebrand");
 			BaseManaRegenCooldown = nbt.getBoolean("BaseManaRegenCooldown");
 			thorn_armor = nbt.getBoolean("thorn_armor");
 			iceSpear = nbt.getBoolean("iceSpear");
 			sporesplosion = nbt.getDouble("sporesplosion");
-			charredskeletonguardisblocking = nbt.getBoolean("charredskeletonguardisblocking");
 			bookofblades = nbt.getBoolean("bookofblades");
 			bookofbladesmanadrain = nbt.getBoolean("bookofbladesmanadrain");
 			crystalarklaser = nbt.getBoolean("crystalarklaser");
@@ -753,6 +680,16 @@ public class CatastropheModModVariables {
 			mana_regen_cooldown = nbt.getDouble("mana_regen_cooldown");
 			Resilience_Enchantment = nbt.getBoolean("Resilience_Enchantment");
 			Resilience_Level = nbt.getDouble("Resilience_Level");
+			polyphemus_moth_pet = nbt.getBoolean("polyphemus_moth_pet");
+			mulberry_silk_moth_pet = nbt.getBoolean("mulberry_silk_moth_pet");
+			luna_moth_pet = nbt.getBoolean("luna_moth_pet");
+			spear_mastery_crest = nbt.getDouble("spear_mastery_crest");
+			axe_mastery_crest = nbt.getDouble("axe_mastery_crest");
+			is_hit_during_bossfight = nbt.getBoolean("is_hit_during_bossfight");
+			rosy_maple_moth_pet = nbt.getBoolean("rosy_maple_moth_pet");
+			silk_moth_pet_counter = nbt.getDouble("silk_moth_pet_counter");
+			cecropia_moth_pet = nbt.getBoolean("cecropia_moth_pet");
+			comet_moth_pet = nbt.getBoolean("comet_moth_pet");
 		}
 	}
 
@@ -778,34 +715,15 @@ public class CatastropheModModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Mana = message.data.Mana;
-					variables.ManaMultiplier = message.data.ManaMultiplier;
 					variables.ManaStart = message.data.ManaStart;
 					variables.Maxmana = message.data.Maxmana;
-					variables.Immunity = message.data.Immunity;
 					variables.SoulPower = message.data.SoulPower;
-					variables.SoulPowerMultiplier = message.data.SoulPowerMultiplier;
 					variables.SoulPowerStart = message.data.SoulPowerStart;
 					variables.MaxSoulPower = message.data.MaxSoulPower;
-					variables.dahingcooldown = message.data.dahingcooldown;
-					variables.shadowscreen = message.data.shadowscreen;
-					variables.rocketflight = message.data.rocketflight;
 					variables.crimsondagger = message.data.crimsondagger;
 					variables.pocketshield = message.data.pocketshield;
-					variables.blinktech = message.data.blinktech;
-					variables.crystalofblood = message.data.crystalofblood;
-					variables.speedingclock = message.data.speedingclock;
-					variables.twoshots = message.data.twoshots;
 					variables.acidtarantula = message.data.acidtarantula;
-					variables.withergauntlet = message.data.withergauntlet;
-					variables.landmine = message.data.landmine;
 					variables.stormshield = message.data.stormshield;
-					variables.greedycrown = message.data.greedycrown;
-					variables.rottenhoneycomb = message.data.rottenhoneycomb;
-					variables.cryocrystal = message.data.cryocrystal;
-					variables.blademode_upgrade = message.data.blademode_upgrade;
-					variables.losthope_upgrade = message.data.losthope_upgrade;
-					variables.soulbottle = message.data.soulbottle;
-					variables.prismal_set_bonus = message.data.prismal_set_bonus;
 					variables.double_jump_condition = message.data.double_jump_condition;
 					variables.woodenSpear = message.data.woodenSpear;
 					variables.stoneSpear = message.data.stoneSpear;
@@ -828,14 +746,11 @@ public class CatastropheModModVariables {
 					variables.natures_blessing_armor = message.data.natures_blessing_armor;
 					variables.amulet_of_vitality = message.data.amulet_of_vitality;
 					variables.sandstorm_surge_cooldown = message.data.sandstorm_surge_cooldown;
-					variables.shake = message.data.shake;
-					variables.isshaking = message.data.isshaking;
 					variables.firebrand = message.data.firebrand;
 					variables.BaseManaRegenCooldown = message.data.BaseManaRegenCooldown;
 					variables.thorn_armor = message.data.thorn_armor;
 					variables.iceSpear = message.data.iceSpear;
 					variables.sporesplosion = message.data.sporesplosion;
-					variables.charredskeletonguardisblocking = message.data.charredskeletonguardisblocking;
 					variables.bookofblades = message.data.bookofblades;
 					variables.bookofbladesmanadrain = message.data.bookofbladesmanadrain;
 					variables.crystalarklaser = message.data.crystalarklaser;
@@ -898,6 +813,16 @@ public class CatastropheModModVariables {
 					variables.mana_regen_cooldown = message.data.mana_regen_cooldown;
 					variables.Resilience_Enchantment = message.data.Resilience_Enchantment;
 					variables.Resilience_Level = message.data.Resilience_Level;
+					variables.polyphemus_moth_pet = message.data.polyphemus_moth_pet;
+					variables.mulberry_silk_moth_pet = message.data.mulberry_silk_moth_pet;
+					variables.luna_moth_pet = message.data.luna_moth_pet;
+					variables.spear_mastery_crest = message.data.spear_mastery_crest;
+					variables.axe_mastery_crest = message.data.axe_mastery_crest;
+					variables.is_hit_during_bossfight = message.data.is_hit_during_bossfight;
+					variables.rosy_maple_moth_pet = message.data.rosy_maple_moth_pet;
+					variables.silk_moth_pet_counter = message.data.silk_moth_pet_counter;
+					variables.cecropia_moth_pet = message.data.cecropia_moth_pet;
+					variables.comet_moth_pet = message.data.comet_moth_pet;
 				}
 			});
 			context.setPacketHandled(true);

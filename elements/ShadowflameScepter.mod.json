@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "shadowflame_scepter",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "§8Shadowflame Scepter",

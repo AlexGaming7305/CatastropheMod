@@ -24,6 +24,9 @@
     "damageVsEntity": 3.0,
     "usageCount": 150,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "Blocks.ICE"

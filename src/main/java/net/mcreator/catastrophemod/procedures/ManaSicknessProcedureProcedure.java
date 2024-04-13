@@ -5,7 +5,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -13,18 +19,29 @@ import javax.annotation.Nullable;
 public class ManaSicknessProcedureProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event);
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getSource().getEntity(), event.getAmount());
 		}
 	}
 
-	public static void execute() {
-		execute(null);
+	public static void execute(Entity sourceentity, double amount) {
+		execute(null, sourceentity, amount);
 	}
 
-	private static void execute(@Nullable Event event) {
+	private static void execute(@Nullable Event event, Entity sourceentity, double amount) {
+		if (sourceentity == null)
+			return;
 		double damage = 0;
 		Entity projectile = null;
+		if (sourceentity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CatastropheModModMobEffects.MANA_SICKNESS.get())) {
+			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))
+					|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))) {
+				LivingHurtEvent event2 = (LivingHurtEvent) event;
+				damage = amount
+						- (amount * ((sourceentity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CatastropheModModMobEffects.MANA_SICKNESS.get()) ? _livEnt.getEffect(CatastropheModModMobEffects.MANA_SICKNESS.get()).getDuration() : 0) / 4))
+								/ 100;
+				event2.setAmount((float) damage);
+			}
+		}
 	}
 }

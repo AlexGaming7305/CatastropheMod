@@ -24,6 +24,9 @@
     "damageVsEntity": 3.0,
     "usageCount": 285,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "CUSTOM:SeaCrystalShard"

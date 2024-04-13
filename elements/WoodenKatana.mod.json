@@ -25,6 +25,9 @@
     "damageVsEntity": 1.0,
     "usageCount": 59,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [
       {
         "value": "Blocks.PLANKS#0"

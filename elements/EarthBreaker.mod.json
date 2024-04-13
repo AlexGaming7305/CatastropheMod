@@ -24,6 +24,9 @@
     "damageVsEntity": 5.0,
     "usageCount": 655,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "earthbound_staff",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "§7Earthbound Staff",

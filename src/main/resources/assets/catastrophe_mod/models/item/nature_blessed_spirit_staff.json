@@ -1,5 +1,5 @@
 {
-  "parent": "item/handheld",
+  "parent": "item/generated",
   "textures": {
     "layer0": "catastrophe_mod:item/nature_blessed_spirit_staff"
   }

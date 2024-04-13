@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "knife_of_proficiency",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "§9Knife of Proficiency",
@@ -29,8 +29,8 @@
     "specialInformation": {
       "fixedValue": [
         "§7\"There's no way they'd come back to life, right? You know, as a hungry ghost....\"",
-        "§aRight-click: §7Throws one knife.",
-        "§aSneak + Right-click: §7Throws a spread of three knives."
+        "§aRight-click: §7Throws one knife",
+        "§aSneak + Right-click: §7Throws a spread of three knives"
       ]
     },
     "glowCondition": {

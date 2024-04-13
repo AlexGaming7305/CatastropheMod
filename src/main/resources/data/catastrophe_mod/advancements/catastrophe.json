@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "catastrophe_mod:textures/screens/catastrophic_night_sky.png",
+    "icon": {
+      "item": "catastrophe_mod:catastrophe_mod_icon"
+    },
+    "title": {
+      "translate": "advancements.catastrophe.title"
+    },
+    "description": {
+      "translate": "advancements.catastrophe.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "catastrophe": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
