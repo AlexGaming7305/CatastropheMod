@@ -8,8 +8,7 @@ import javax.annotation.Nullable;
 public class SeaToolsExtraDamageProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
+		if (event != null && event.getEntity() != null) {
 			execute(event, event.getSource().getEntity(), event.getAmount());
 		}
 	}

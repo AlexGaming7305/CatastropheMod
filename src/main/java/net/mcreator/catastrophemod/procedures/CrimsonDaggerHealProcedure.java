@@ -8,9 +8,8 @@ import javax.annotation.Nullable;
 public class CrimsonDaggerHealProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.level(), entity, event.getSource().getEntity());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 

@@ -8,9 +8,8 @@ import javax.annotation.Nullable;
 public class StealthLossByHitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity);
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity());
 		}
 	}
 

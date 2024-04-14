@@ -1,16 +1,43 @@
 package net.mcreator.catastrophemod.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModEnchantments;
+import net.mcreator.catastrophemod.CatastropheModMod;
 
 import javax.annotation.Nullable;
+
+import java.util.List;
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class SpearPunctureProcedureProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.level(), entity.getX(), entity.getY(), entity.getZ(), event.getSource().getEntity(), event.getAmount());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getSource().getEntity(), event.getAmount());
 		}
 	}
 

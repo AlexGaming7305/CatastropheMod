@@ -8,9 +8,8 @@ import javax.annotation.Nullable;
 public class FrostbiteEnchantmentProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity, event.getSource().getEntity());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity(), event.getSource().getEntity());
 		}
 	}
 

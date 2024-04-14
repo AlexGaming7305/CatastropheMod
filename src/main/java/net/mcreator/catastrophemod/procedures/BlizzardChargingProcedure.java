@@ -117,62 +117,6 @@ public class BlizzardChargingProcedure {
 									for (Entity entityiterator : _entfound) {
 										if (entityiterator instanceof LivingEntity) {
 											if (!(entity == entityiterator)) {
-												{
-													DamageSource _damageSource = (new DamageSource(((Level) world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FREEZE), entity) {
-														@Override
-														public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-															Component _attackerName = null;
-															Component _entityName = _livingEntity.getDisplayName();
-															Component _itemName = null;
-															Entity _attacker = this.getEntity();
-															ItemStack _itemStack = ItemStack.EMPTY;
-															if (_attacker != null) {
-																_attackerName = _attacker.getDisplayName();
-															}
-															if (_attacker instanceof LivingEntity _livingAttacker) {
-																_itemStack = _livingAttacker.getMainHandItem();
-															}
-															if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-																_itemName = _itemStack.getDisplayName();
-															}
-															if (_attacker != null && _itemName != null) {
-																return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName, _itemName);
-															} else if (_attacker != null) {
-																return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName);
-															} else {
-																return Component.translatable("death.attack." + "freeze", _entityName);
-															}
-														}
-													});
-													if (_damageSource != null) {
-														entityiterator.hurt((new DamageSource(((Level) world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FREEZE), entity) {
-															@Override
-															public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-																Component _attackerName = null;
-																Component _entityName = _livingEntity.getDisplayName();
-																Component _itemName = null;
-																Entity _attacker = this.getEntity();
-																ItemStack _itemStack = ItemStack.EMPTY;
-																if (_attacker != null) {
-																	_attackerName = _attacker.getDisplayName();
-																}
-																if (_attacker instanceof LivingEntity _livingAttacker) {
-																	_itemStack = _livingAttacker.getMainHandItem();
-																}
-																if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-																	_itemName = _itemStack.getDisplayName();
-																}
-																if (_attacker != null && _itemName != null) {
-																	return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName, _itemName);
-																} else if (_attacker != null) {
-																	return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName);
-																} else {
-																	return Component.translatable("death.attack." + "freeze", _entityName);
-																}
-															}
-														}), 2);
-													}
-												}
 											}
 										}
 									}

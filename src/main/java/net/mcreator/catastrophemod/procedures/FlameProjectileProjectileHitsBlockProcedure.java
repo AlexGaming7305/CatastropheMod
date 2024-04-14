@@ -13,62 +13,6 @@ public class FlameProjectileProjectileHitsBlockProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				{
-					DamageSource _damageSource = (new DamageSource(((Level) world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ON_FIRE), sourceentity) {
-						@Override
-						public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-							Component _attackerName = null;
-							Component _entityName = _livingEntity.getDisplayName();
-							Component _itemName = null;
-							Entity _attacker = this.getEntity();
-							ItemStack _itemStack = ItemStack.EMPTY;
-							if (_attacker != null) {
-								_attackerName = _attacker.getDisplayName();
-							}
-							if (_attacker instanceof LivingEntity _livingAttacker) {
-								_itemStack = _livingAttacker.getMainHandItem();
-							}
-							if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-								_itemName = _itemStack.getDisplayName();
-							}
-							if (_attacker != null && _itemName != null) {
-								return Component.translatable("death.attack." + "onFire.player", _entityName, _attackerName, _itemName);
-							} else if (_attacker != null) {
-								return Component.translatable("death.attack." + "onFire.player", _entityName, _attackerName);
-							} else {
-								return Component.translatable("death.attack." + "onFire", _entityName);
-							}
-						}
-					});
-					if (_damageSource != null) {
-						entityiterator.hurt((new DamageSource(((Level) world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.ON_FIRE), sourceentity) {
-							@Override
-							public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-								Component _attackerName = null;
-								Component _entityName = _livingEntity.getDisplayName();
-								Component _itemName = null;
-								Entity _attacker = this.getEntity();
-								ItemStack _itemStack = ItemStack.EMPTY;
-								if (_attacker != null) {
-									_attackerName = _attacker.getDisplayName();
-								}
-								if (_attacker instanceof LivingEntity _livingAttacker) {
-									_itemStack = _livingAttacker.getMainHandItem();
-								}
-								if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-									_itemName = _itemStack.getDisplayName();
-								}
-								if (_attacker != null && _itemName != null) {
-									return Component.translatable("death.attack." + "onFire.player", _entityName, _attackerName, _itemName);
-								} else if (_attacker != null) {
-									return Component.translatable("death.attack." + "onFire.player", _entityName, _attackerName);
-								} else {
-									return Component.translatable("death.attack." + "onFire", _entityName);
-								}
-							}
-						}), 8);
-					}
-				}
 				entityiterator.setSecondsOnFire(10);
 			}
 		}
