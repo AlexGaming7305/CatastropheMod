@@ -22,5 +22,5 @@
   "rewards": {
     "experience": 500
   },
-  "parent": "catastrophe_mod:deleted_mod_element"
+  "parent": "catastrophe_mod:catastrophe"
 }

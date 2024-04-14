@@ -1,32 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ExperienceOrb;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
-import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.CatastropheModMod;
-
-import java.util.List;
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class FirebrandLivingEntityIsHitWithToolProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
@@ -58,80 +34,6 @@ public class FirebrandLivingEntityIsHitWithToolProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(sourceentity == entityiterator)) {
 							if (!(entityiterator instanceof ItemEntity && entityiterator instanceof ExperienceOrb)) {
-								{
-									DamageSource _damageSource = ((new Object() {
-										public DamageSource get(LevelAccessor _world, final String _msgID, Entity _directSource) {
-											return new DamageSource(((Level) _world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.CACTUS), _directSource) {
-												@Override
-												public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-													Component _attackerName = null;
-													Component _entityName = _livingEntity.getDisplayName();
-													Component _itemName = null;
-													Entity _attacker = this.getEntity();
-													ItemStack _itemStack = ItemStack.EMPTY;
-													if (_attacker != null) {
-														_attackerName = _attacker.getDisplayName();
-													}
-													if (_attacker instanceof LivingEntity _livingAttacker) {
-														_itemStack = _livingAttacker.getMainHandItem();
-													}
-													if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-														_itemName = _itemStack.getDisplayName();
-													}
-													if (_attacker != null && _itemName != null) {
-														return Component.translatable("death.attack." + _msgID + ".player.item", _entityName, _attackerName, _itemName);
-													} else if (_attacker != null) {
-														return Component.translatable("death.attack." + _msgID + ".player", _entityName, _attackerName);
-													} else {
-														return Component.translatable("death.attack." + _msgID, _entityName);
-													}
-												}
-
-												@Override
-												public String getMsgId() {
-													return _msgID;
-												}
-											};
-										}
-									}).get(world, "sliced", sourceentity));
-									if (_damageSource != null) {
-										entityiterator.hurt(((new Object() {
-											public DamageSource get(LevelAccessor _world, final String _msgID, Entity _directSource) {
-												return new DamageSource(((Level) _world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.CACTUS), _directSource) {
-													@Override
-													public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-														Component _attackerName = null;
-														Component _entityName = _livingEntity.getDisplayName();
-														Component _itemName = null;
-														Entity _attacker = this.getEntity();
-														ItemStack _itemStack = ItemStack.EMPTY;
-														if (_attacker != null) {
-															_attackerName = _attacker.getDisplayName();
-														}
-														if (_attacker instanceof LivingEntity _livingAttacker) {
-															_itemStack = _livingAttacker.getMainHandItem();
-														}
-														if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-															_itemName = _itemStack.getDisplayName();
-														}
-														if (_attacker != null && _itemName != null) {
-															return Component.translatable("death.attack." + _msgID + ".player.item", _entityName, _attackerName, _itemName);
-														} else if (_attacker != null) {
-															return Component.translatable("death.attack." + _msgID + ".player", _entityName, _attackerName);
-														} else {
-															return Component.translatable("death.attack." + _msgID, _entityName);
-														}
-													}
-
-													@Override
-													public String getMsgId() {
-														return _msgID;
-													}
-												};
-											}
-										}).get(world, "sliced", sourceentity)), 5);
-									}
-								}
 								entityiterator.setSecondsOnFire(5);
 							}
 						}
@@ -170,80 +72,6 @@ public class FirebrandLivingEntityIsHitWithToolProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(sourceentity == entityiterator)) {
 							if (!(entityiterator instanceof ItemEntity && entityiterator instanceof ExperienceOrb)) {
-								{
-									DamageSource _damageSource = ((new Object() {
-										public DamageSource get(LevelAccessor _world, final String _msgID, Entity _directSource) {
-											return new DamageSource(((Level) _world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.CACTUS), _directSource) {
-												@Override
-												public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-													Component _attackerName = null;
-													Component _entityName = _livingEntity.getDisplayName();
-													Component _itemName = null;
-													Entity _attacker = this.getEntity();
-													ItemStack _itemStack = ItemStack.EMPTY;
-													if (_attacker != null) {
-														_attackerName = _attacker.getDisplayName();
-													}
-													if (_attacker instanceof LivingEntity _livingAttacker) {
-														_itemStack = _livingAttacker.getMainHandItem();
-													}
-													if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-														_itemName = _itemStack.getDisplayName();
-													}
-													if (_attacker != null && _itemName != null) {
-														return Component.translatable("death.attack." + _msgID + ".player.item", _entityName, _attackerName, _itemName);
-													} else if (_attacker != null) {
-														return Component.translatable("death.attack." + _msgID + ".player", _entityName, _attackerName);
-													} else {
-														return Component.translatable("death.attack." + _msgID, _entityName);
-													}
-												}
-
-												@Override
-												public String getMsgId() {
-													return _msgID;
-												}
-											};
-										}
-									}).get(world, "sliced", sourceentity));
-									if (_damageSource != null) {
-										entityiterator.hurt(((new Object() {
-											public DamageSource get(LevelAccessor _world, final String _msgID, Entity _directSource) {
-												return new DamageSource(((Level) _world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.CACTUS), _directSource) {
-													@Override
-													public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-														Component _attackerName = null;
-														Component _entityName = _livingEntity.getDisplayName();
-														Component _itemName = null;
-														Entity _attacker = this.getEntity();
-														ItemStack _itemStack = ItemStack.EMPTY;
-														if (_attacker != null) {
-															_attackerName = _attacker.getDisplayName();
-														}
-														if (_attacker instanceof LivingEntity _livingAttacker) {
-															_itemStack = _livingAttacker.getMainHandItem();
-														}
-														if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-															_itemName = _itemStack.getDisplayName();
-														}
-														if (_attacker != null && _itemName != null) {
-															return Component.translatable("death.attack." + _msgID + ".player.item", _entityName, _attackerName, _itemName);
-														} else if (_attacker != null) {
-															return Component.translatable("death.attack." + _msgID + ".player", _entityName, _attackerName);
-														} else {
-															return Component.translatable("death.attack." + _msgID, _entityName);
-														}
-													}
-
-													@Override
-													public String getMsgId() {
-														return _msgID;
-													}
-												};
-											}
-										}).get(world, "sliced", sourceentity)), 5);
-									}
-								}
 								entityiterator.setSecondsOnFire(5);
 							}
 						}

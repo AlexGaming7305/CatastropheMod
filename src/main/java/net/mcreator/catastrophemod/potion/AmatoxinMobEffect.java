@@ -1,12 +1,6 @@
 
 package net.mcreator.catastrophemod.potion;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
-import net.mcreator.catastrophemod.procedures.AmatoxinOnEffectActiveTickProcedure;
-
 public class AmatoxinMobEffect extends MobEffect {
 	public AmatoxinMobEffect() {
 		super(MobEffectCategory.HARMFUL, -16737997);

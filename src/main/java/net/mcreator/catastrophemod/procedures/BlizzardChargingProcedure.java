@@ -1,39 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
-
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
-import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
-import net.mcreator.catastrophemod.init.CatastropheModModItems;
-import net.mcreator.catastrophemod.CatastropheModMod;
 
 import javax.annotation.Nullable;
-
-import java.util.List;
-import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class BlizzardChargingProcedure {
@@ -148,62 +117,6 @@ public class BlizzardChargingProcedure {
 									for (Entity entityiterator : _entfound) {
 										if (entityiterator instanceof LivingEntity) {
 											if (!(entity == entityiterator)) {
-												{
-													DamageSource _damageSource = (new DamageSource(((Level) world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FREEZE), entity) {
-														@Override
-														public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-															Component _attackerName = null;
-															Component _entityName = _livingEntity.getDisplayName();
-															Component _itemName = null;
-															Entity _attacker = this.getEntity();
-															ItemStack _itemStack = ItemStack.EMPTY;
-															if (_attacker != null) {
-																_attackerName = _attacker.getDisplayName();
-															}
-															if (_attacker instanceof LivingEntity _livingAttacker) {
-																_itemStack = _livingAttacker.getMainHandItem();
-															}
-															if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-																_itemName = _itemStack.getDisplayName();
-															}
-															if (_attacker != null && _itemName != null) {
-																return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName, _itemName);
-															} else if (_attacker != null) {
-																return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName);
-															} else {
-																return Component.translatable("death.attack." + "freeze", _entityName);
-															}
-														}
-													});
-													if (_damageSource != null) {
-														entityiterator.hurt((new DamageSource(((Level) world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FREEZE), entity) {
-															@Override
-															public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-																Component _attackerName = null;
-																Component _entityName = _livingEntity.getDisplayName();
-																Component _itemName = null;
-																Entity _attacker = this.getEntity();
-																ItemStack _itemStack = ItemStack.EMPTY;
-																if (_attacker != null) {
-																	_attackerName = _attacker.getDisplayName();
-																}
-																if (_attacker instanceof LivingEntity _livingAttacker) {
-																	_itemStack = _livingAttacker.getMainHandItem();
-																}
-																if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-																	_itemName = _itemStack.getDisplayName();
-																}
-																if (_attacker != null && _itemName != null) {
-																	return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName, _itemName);
-																} else if (_attacker != null) {
-																	return Component.translatable("death.attack." + "freeze.player", _entityName, _attackerName);
-																} else {
-																	return Component.translatable("death.attack." + "freeze", _entityName);
-																}
-															}
-														}), 2);
-													}
-												}
 											}
 										}
 									}

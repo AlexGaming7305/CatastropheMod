@@ -1,17 +1,6 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.SimpleParticleType;
-
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
-import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
 
 import javax.annotation.Nullable;
 
@@ -19,9 +8,8 @@ import javax.annotation.Nullable;
 public class RipsawEffectsProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.level(), entity.getX(), entity.getZ(), entity, event.getSource().getEntity());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 

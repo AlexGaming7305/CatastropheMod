@@ -1,15 +1,6 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 
 import javax.annotation.Nullable;
 
@@ -17,9 +8,8 @@ import javax.annotation.Nullable;
 public class NoBouncingProjectilesProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity, event.getSource().getDirectEntity());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity(), event.getSource().getDirectEntity());
 		}
 	}
 

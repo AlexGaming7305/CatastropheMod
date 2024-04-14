@@ -123,6 +123,40 @@
       "path": "~/Items/Miscellaneous"
     },
     {
+      "name": "Flight",
+      "type": "potioneffect",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/potion/FlightMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "FlightEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flight_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FlightEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
       "name": "EarthSigilEntitySwingsItem",
       "type": "procedure",
       "sortid": 366,
@@ -20421,6 +20455,46 @@
       "path": "~/Particles"
     },
     {
+      "name": "SpearPinPointStrike",
+      "type": "procedure",
+      "sortid": 2753,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_pin_point_strike",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SpearPinPointStrikeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
       "name": "AxeMasteryCrest",
       "type": "curiosbauble",
       "sortid": 2754,
@@ -21607,8 +21681,53 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Items/Weapons/Melee Weapons"
+      }
+    },
+    {
+      "name": "DamageDisplay",
+      "type": "procedure",
+      "sortid": 2813,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_display",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/DamageDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AttributeDisplay",
+      "type": "procedure",
+      "sortid": 2814,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attribute_display",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/AttributeDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
     },
     {
       "name": "Crushed",
@@ -24613,6 +24732,7 @@
       "subtitles.alexs_mod_ost_enlightened_starlight": "Alex\u0027s Mod OST: Enlightened Starlight",
       "enchantment.catastrophe_mod.resilience": "Resilience",
       "item.alexs_mod.copper_token": "Copper Token",
+      "effect.catastrophe_mod.flight": "Flight",
       "item.catastrophe_mod.shadowflame_whisper": "§8Shadowflame Whisper",
       "item.alexs_mod.alloy_minigun": "Alloy Minigun",
       "death.attack.bleed": "%s bled to death",
@@ -24654,23 +24774,19 @@
     "name": "~",
     "children": [
       {
-        "name": "Misc",
-        "children": []
-      },
-      {
         "name": "Advancements",
         "children": []
       },
       {
-        "name": "Key Binds",
-        "children": []
-      },
-      {
-        "name": "Potion Effects",
-        "children": []
-      },
-      {
         "name": "Biomes",
+        "children": []
+      },
+      {
+        "name": "Enchantments",
+        "children": []
+      },
+      {
+        "name": "Entities",
         "children": []
       },
       {
@@ -24681,23 +24797,7 @@
             "children": []
           },
           {
-            "name": "Tools",
-            "children": []
-          },
-          {
             "name": "Ammunition",
-            "children": []
-          },
-          {
-            "name": "Blocks",
-            "children": []
-          },
-          {
-            "name": "Miscellaneous",
-            "children": []
-          },
-          {
-            "name": "Food",
             "children": []
           },
           {
@@ -24705,22 +24805,38 @@
             "children": []
           },
           {
+            "name": "Blocks",
+            "children": []
+          },
+          {
+            "name": "Food",
+            "children": []
+          },
+          {
+            "name": "Miscellaneous",
+            "children": []
+          },
+          {
+            "name": "Tools",
+            "children": []
+          },
+          {
             "name": "Weapons",
             "children": [
-              {
-                "name": "Ranged Weapons",
-                "children": []
-              },
-              {
-                "name": "Summoner Weapons",
-                "children": []
-              },
               {
                 "name": "Melee Weapons",
                 "children": []
               },
               {
+                "name": "Ranged Weapons",
+                "children": []
+              },
+              {
                 "name": "Magic Weapons",
+                "children": []
+              },
+              {
+                "name": "Summoner Weapons",
                 "children": []
               }
             ]
@@ -24728,19 +24844,7 @@
         ]
       },
       {
-        "name": "Projectiles",
-        "children": []
-      },
-      {
-        "name": "Particles",
-        "children": []
-      },
-      {
-        "name": "Entities",
-        "children": []
-      },
-      {
-        "name": "Structures",
+        "name": "Key Binds",
         "children": []
       },
       {
@@ -24748,7 +24852,23 @@
         "children": []
       },
       {
-        "name": "Enchantments",
+        "name": "Misc",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
+        "children": []
+      },
+      {
+        "name": "Projectiles",
+        "children": []
+      },
+      {
+        "name": "Structures",
         "children": []
       }
     ]

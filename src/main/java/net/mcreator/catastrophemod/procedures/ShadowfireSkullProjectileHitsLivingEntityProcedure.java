@@ -1,12 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
 
 public class ShadowfireSkullProjectileHitsLivingEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

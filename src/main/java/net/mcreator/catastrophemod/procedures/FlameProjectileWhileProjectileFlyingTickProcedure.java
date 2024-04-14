@@ -1,11 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.CatastropheModMod;
+import javax.annotation.Nullable;
 
 public class FlameProjectileWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {

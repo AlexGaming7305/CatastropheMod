@@ -1,21 +1,6 @@
 
 package net.mcreator.catastrophemod.client.renderer;
 
-import software.bernie.geckolib.renderer.GeoEntityRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import net.mcreator.catastrophemod.entity.model.AtlanticSeaNettleModel;
-import net.mcreator.catastrophemod.entity.layer.AtlanticSeaNettleLayer;
-import net.mcreator.catastrophemod.entity.AtlanticSeaNettleEntity;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class AtlanticSeaNettleRenderer extends GeoEntityRenderer<AtlanticSeaNettleEntity> {
 	public AtlanticSeaNettleRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new AtlanticSeaNettleModel());

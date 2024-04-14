@@ -1,10 +1,6 @@
 package net.mcreator.catastrophemod.entity.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
+import software.bernie.geckolib.core.animation.AnimationState;
 
 public class EarthShockwaveModel extends GeoModel<EarthShockwaveEntity> {
 	@Override

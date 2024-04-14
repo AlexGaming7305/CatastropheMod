@@ -1,9 +1,6 @@
 
 package net.mcreator.catastrophemod.potion;
 
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
 public class PhaseDashCooldownMobEffect extends MobEffect {
 	public PhaseDashCooldownMobEffect() {
 		super(MobEffectCategory.HARMFUL, -5947956);

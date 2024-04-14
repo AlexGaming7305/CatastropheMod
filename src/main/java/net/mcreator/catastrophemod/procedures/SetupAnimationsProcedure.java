@@ -1,18 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.player.AbstractClientPlayer;
-
 import javax.annotation.Nullable;
-
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationFactory;
-import dev.kosmx.playerAnim.api.layered.ModifierLayer;
-import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 @Mod.EventBusSubscriber(modid = "catastrophe_mod", bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SetupAnimationsProcedure {

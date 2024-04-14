@@ -1,18 +1,11 @@
 
 package net.mcreator.catastrophemod.item;
 
-import top.theillusivec4.curios.api.type.capability.ICurioItem;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.network.chat.Component;
-
-import java.util.List;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class SwordMasteryCrestItem extends Item implements ICurioItem {
+
 	public SwordMasteryCrestItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
@@ -24,4 +17,5 @@ public class SwordMasteryCrestItem extends Item implements ICurioItem {
 		list.add(Component.literal("\u00A77Inflicts \u00A7cBleeding \u00A77if the armor of the target is less than 6"));
 		list.add(Component.literal("\u00A79+5% Sword Damage \u00A77to bleeding targets"));
 	}
+
 }

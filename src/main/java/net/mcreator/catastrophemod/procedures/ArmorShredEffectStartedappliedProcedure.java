@@ -1,12 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
-import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
-import net.mcreator.catastrophemod.CatastropheModMod;
+import javax.annotation.Nullable;
 
 public class ArmorShredEffectStartedappliedProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
