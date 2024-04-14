@@ -1,12 +1,6 @@
 
 package net.mcreator.catastrophemod.potion;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
-import net.mcreator.catastrophemod.procedures.ElectrifiedOnEffectActiveTickProcedure;
-
 public class ElectrifiedMobEffect extends MobEffect {
 	public ElectrifiedMobEffect() {
 		super(MobEffectCategory.HARMFUL, -10027009);

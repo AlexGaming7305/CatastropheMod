@@ -1,9 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.common.ForgeMod;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import javax.annotation.Nullable;
 
 public class SeaPendantBaubleIsUnequippedProcedure {
 	public static void execute(Entity entity) {

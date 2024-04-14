@@ -1,18 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
-import net.mcreator.catastrophemod.entity.NatureBlessedSpiritEntity;
-import net.mcreator.catastrophemod.CatastropheModMod;
-
-import java.util.List;
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class HealingOrbWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {

@@ -1,13 +1,6 @@
 
 package net.mcreator.catastrophemod.world.features;
 
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
-import net.minecraft.world.level.levelgen.feature.RandomPatchFeature;
-import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.WorldGenLevel;
-
-import net.mcreator.catastrophemod.procedures.ManaRosePlantAdditionalGenerationConditionProcedure;
-
 public class ManaRosePlantFeatureFeature extends RandomPatchFeature {
 	public ManaRosePlantFeatureFeature() {
 		super(RandomPatchConfiguration.CODEC);

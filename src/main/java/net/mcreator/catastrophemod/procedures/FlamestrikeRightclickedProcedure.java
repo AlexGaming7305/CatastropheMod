@@ -1,26 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.catastrophemod.item.FlamestrikeItem;
-import net.mcreator.catastrophemod.init.CatastropheModModItems;
-import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.VenomousBulletProjectileProjectileEntity;
-import net.mcreator.catastrophemod.entity.FieryRoundProjectileEntity;
-import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
-import net.mcreator.catastrophemod.entity.CrystalRoundProjectileProjectileEntity;
+import javax.annotation.Nullable;
 
 public class FlamestrikeRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {

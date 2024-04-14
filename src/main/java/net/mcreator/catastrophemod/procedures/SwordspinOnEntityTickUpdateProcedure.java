@@ -1,22 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
-import net.mcreator.catastrophemod.entity.SwordSpinDashEntity;
-import net.mcreator.catastrophemod.entity.MineralWraithEntity;
-
-import java.util.List;
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class SwordspinOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

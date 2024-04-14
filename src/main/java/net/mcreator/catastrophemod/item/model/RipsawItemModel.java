@@ -1,11 +1,5 @@
 package net.mcreator.catastrophemod.item.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.mcreator.catastrophemod.item.RipsawItem;
-
 public class RipsawItemModel extends GeoModel<RipsawItem> {
 	@Override
 	public ResourceLocation getAnimationResource(RipsawItem animatable) {

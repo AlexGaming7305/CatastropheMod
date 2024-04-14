@@ -17,7 +17,6 @@ import net.mcreator.catastrophemod.potion.MarkedForDeathMobEffect;
 import net.mcreator.catastrophemod.potion.ManaSicknessMobEffect;
 import net.mcreator.catastrophemod.potion.IntelligenceMobEffect;
 import net.mcreator.catastrophemod.potion.IncinerationMobEffect;
-import net.mcreator.catastrophemod.potion.FlightMobEffect;
 import net.mcreator.catastrophemod.potion.FallDamageImmunityMobEffect;
 import net.mcreator.catastrophemod.potion.ElectrifiedMobEffect;
 import net.mcreator.catastrophemod.potion.DashCooldownMobEffect;
@@ -30,7 +29,6 @@ import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class CatastropheModModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, CatastropheModMod.MODID);
-	public static final RegistryObject<MobEffect> FLIGHT = REGISTRY.register("flight", () -> new FlightMobEffect());
 	public static final RegistryObject<MobEffect> DASH_COOLDOWN = REGISTRY.register("dash_cooldown", () -> new DashCooldownMobEffect());
 	public static final RegistryObject<MobEffect> FALL_DAMAGE_IMMUNITY = REGISTRY.register("fall_damage_immunity", () -> new FallDamageImmunityMobEffect());
 	public static final RegistryObject<MobEffect> BOSS_DASH = REGISTRY.register("boss_dash", () -> new BossDashMobEffect());

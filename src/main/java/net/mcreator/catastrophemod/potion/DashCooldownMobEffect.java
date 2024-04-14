@@ -1,14 +1,6 @@
 
 package net.mcreator.catastrophemod.potion;
 
-import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
-
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
-import net.minecraft.client.gui.GuiGraphics;
-
 public class DashCooldownMobEffect extends MobEffect {
 	public DashCooldownMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);

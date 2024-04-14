@@ -1,11 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.entity.SilkMothEntity;
+import javax.annotation.Nullable;
 
 public class SilkMothOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

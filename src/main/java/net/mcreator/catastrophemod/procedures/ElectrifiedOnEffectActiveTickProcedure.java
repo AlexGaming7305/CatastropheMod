@@ -1,15 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
+import javax.annotation.Nullable;
 
 public class ElectrifiedOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, double amplifier) {
