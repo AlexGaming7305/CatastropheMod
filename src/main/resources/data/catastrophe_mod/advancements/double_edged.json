@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "catastrophe_mod:catastrophe"
+  "parent": "catastrophe_mod:deleted_mod_element"
 }

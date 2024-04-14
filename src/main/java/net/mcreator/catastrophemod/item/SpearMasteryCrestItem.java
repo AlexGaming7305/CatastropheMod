@@ -1,22 +1,11 @@
 
 package net.mcreator.catastrophemod.item;
 
-import top.theillusivec4.curios.api.type.capability.ICurioItem;
-import top.theillusivec4.curios.api.SlotContext;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.network.chat.Component;
-
-import net.mcreator.catastrophemod.procedures.SpearMasteryCrestBaubleIsUnequippedProcedure;
-import net.mcreator.catastrophemod.procedures.SpearMasteryCrestBaubleIsEquippedProcedure;
-
-import java.util.List;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class SpearMasteryCrestItem extends Item implements ICurioItem {
+
 	public SpearMasteryCrestItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
@@ -31,11 +20,12 @@ public class SpearMasteryCrestItem extends Item implements ICurioItem {
 
 	@Override
 	public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
-		SpearMasteryCrestBaubleIsEquippedProcedure.execute(slotContext.entity());
+		SpearMasteryCrestBaubleIsEquippedProcedure.execute();
 	}
 
 	@Override
 	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
 		SpearMasteryCrestBaubleIsUnequippedProcedure.execute(slotContext.entity());
 	}
+
 }

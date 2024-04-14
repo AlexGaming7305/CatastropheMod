@@ -1,25 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
 
 import javax.annotation.Nullable;
-
-import java.util.concurrent.atomic.AtomicReference;
 
 @Mod.EventBusSubscriber
 public class TargetAcquiredProcedureProcedure {

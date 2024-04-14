@@ -1,9 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
+import javax.annotation.Nullable;
 
 public class SpearMasteryCrestBaubleIsEquippedProcedure {
 	public static void execute(Entity entity) {

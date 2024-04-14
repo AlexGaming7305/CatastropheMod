@@ -24774,19 +24774,23 @@
     "name": "~",
     "children": [
       {
+        "name": "Misc",
+        "children": []
+      },
+      {
         "name": "Advancements",
         "children": []
       },
       {
+        "name": "Key Binds",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
+        "children": []
+      },
+      {
         "name": "Biomes",
-        "children": []
-      },
-      {
-        "name": "Enchantments",
-        "children": []
-      },
-      {
-        "name": "Entities",
         "children": []
       },
       {
@@ -24797,11 +24801,11 @@
             "children": []
           },
           {
-            "name": "Ammunition",
+            "name": "Tools",
             "children": []
           },
           {
-            "name": "Armor",
+            "name": "Ammunition",
             "children": []
           },
           {
@@ -24809,34 +24813,34 @@
             "children": []
           },
           {
-            "name": "Food",
-            "children": []
-          },
-          {
             "name": "Miscellaneous",
             "children": []
           },
           {
-            "name": "Tools",
+            "name": "Food",
+            "children": []
+          },
+          {
+            "name": "Armor",
             "children": []
           },
           {
             "name": "Weapons",
             "children": [
               {
-                "name": "Melee Weapons",
-                "children": []
-              },
-              {
                 "name": "Ranged Weapons",
                 "children": []
               },
               {
-                "name": "Magic Weapons",
+                "name": "Summoner Weapons",
                 "children": []
               },
               {
-                "name": "Summoner Weapons",
+                "name": "Melee Weapons",
+                "children": []
+              },
+              {
+                "name": "Magic Weapons",
                 "children": []
               }
             ]
@@ -24844,15 +24848,7 @@
         ]
       },
       {
-        "name": "Key Binds",
-        "children": []
-      },
-      {
-        "name": "Minions",
-        "children": []
-      },
-      {
-        "name": "Misc",
+        "name": "Projectiles",
         "children": []
       },
       {
@@ -24860,15 +24856,19 @@
         "children": []
       },
       {
-        "name": "Potion Effects",
-        "children": []
-      },
-      {
-        "name": "Projectiles",
+        "name": "Entities",
         "children": []
       },
       {
         "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Minions",
+        "children": []
+      },
+      {
+        "name": "Enchantments",
         "children": []
       }
     ]
