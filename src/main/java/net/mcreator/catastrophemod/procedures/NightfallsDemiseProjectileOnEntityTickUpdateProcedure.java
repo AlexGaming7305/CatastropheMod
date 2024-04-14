@@ -3,17 +3,15 @@ package net.mcreator.catastrophemod.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -79,80 +77,7 @@ public class NightfallsDemiseProjectileOnEntityTickUpdateProcedure {
 						if (!(entityiterator == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
 							if (!(entityiterator instanceof NightfallsDemiseProjectileEntity)) {
 								if (entityiterator.isAlive()) {
-									{
-										DamageSource _damageSource = ((new Object() {
-											public DamageSource get(LevelAccessor _world, final String _msgID, Entity _directSource) {
-												return new DamageSource(((Level) _world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.CACTUS), _directSource) {
-													@Override
-													public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-														Component _attackerName = null;
-														Component _entityName = _livingEntity.getDisplayName();
-														Component _itemName = null;
-														Entity _attacker = this.getEntity();
-														ItemStack _itemStack = ItemStack.EMPTY;
-														if (_attacker != null) {
-															_attackerName = _attacker.getDisplayName();
-														}
-														if (_attacker instanceof LivingEntity _livingAttacker) {
-															_itemStack = _livingAttacker.getMainHandItem();
-														}
-														if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-															_itemName = _itemStack.getDisplayName();
-														}
-														if (_attacker != null && _itemName != null) {
-															return Component.translatable("death.attack." + _msgID + ".player.item", _entityName, _attackerName, _itemName);
-														} else if (_attacker != null) {
-															return Component.translatable("death.attack." + _msgID + ".player", _entityName, _attackerName);
-														} else {
-															return Component.translatable("death.attack." + _msgID, _entityName);
-														}
-													}
-
-													@Override
-													public String getMsgId() {
-														return _msgID;
-													}
-												};
-											}
-										}).get(world, "sliced", (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)));
-										if (_damageSource != null) {
-											entityiterator.hurt(((new Object() {
-												public DamageSource get(LevelAccessor _world, final String _msgID, Entity _directSource) {
-													return new DamageSource(((Level) _world).registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.CACTUS), _directSource) {
-														@Override
-														public Component getLocalizedDeathMessage(LivingEntity _livingEntity) {
-															Component _attackerName = null;
-															Component _entityName = _livingEntity.getDisplayName();
-															Component _itemName = null;
-															Entity _attacker = this.getEntity();
-															ItemStack _itemStack = ItemStack.EMPTY;
-															if (_attacker != null) {
-																_attackerName = _attacker.getDisplayName();
-															}
-															if (_attacker instanceof LivingEntity _livingAttacker) {
-																_itemStack = _livingAttacker.getMainHandItem();
-															}
-															if (!_itemStack.isEmpty() && _itemStack.hasCustomHoverName()) {
-																_itemName = _itemStack.getDisplayName();
-															}
-															if (_attacker != null && _itemName != null) {
-																return Component.translatable("death.attack." + _msgID + ".player.item", _entityName, _attackerName, _itemName);
-															} else if (_attacker != null) {
-																return Component.translatable("death.attack." + _msgID + ".player", _entityName, _attackerName);
-															} else {
-																return Component.translatable("death.attack." + _msgID, _entityName);
-															}
-														}
-
-														@Override
-														public String getMsgId() {
-															return _msgID;
-														}
-													};
-												}
-											}).get(world, "sliced", (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))), 6);
-										}
-									}
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced")))), 6);
 									entity.setDeltaMovement(new Vec3((((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getX() - entity.getX()) * 0.1), 0.6,
 											(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getZ() - entity.getZ()) * 0.1)));
 									entity.setNoGravity(false);
