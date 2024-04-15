@@ -1,8 +1,28 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.item.FlamestrikeItem;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+import net.mcreator.catastrophemod.entity.VenomousBulletProjectileProjectileEntity;
+import net.mcreator.catastrophemod.entity.FieryRoundProjectileEntity;
+import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
+import net.mcreator.catastrophemod.entity.CrystalRoundProjectileProjectileEntity;
+import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class FlamestrikeRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -13,6 +33,29 @@ public class FlamestrikeRightclickedProcedure {
 				ItemStack _stktoremove = new ItemStack(CatastropheModModItems.VENOMOUS_ROUND.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
+			{
+				double _setval = 3;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.intensity_timer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = true;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.screenshake = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			CatastropheModMod.queueServerWork(5, () -> {
+				{
+					boolean _setval = false;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.screenshake = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			});
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
@@ -94,6 +137,29 @@ public class FlamestrikeRightclickedProcedure {
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 			{
+				double _setval = 3;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.intensity_timer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = true;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.screenshake = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			CatastropheModMod.queueServerWork(5, () -> {
+				{
+					boolean _setval = false;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.screenshake = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			});
+			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
 				if (!projectileLevel.isClientSide()) {
@@ -173,6 +239,29 @@ public class FlamestrikeRightclickedProcedure {
 				ItemStack _stktoremove = new ItemStack(CatastropheModModItems.CRYSTAL_ROUND.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
+			{
+				double _setval = 3;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.intensity_timer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = true;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.screenshake = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			CatastropheModMod.queueServerWork(5, () -> {
+				{
+					boolean _setval = false;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.screenshake = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			});
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
@@ -256,6 +345,29 @@ public class FlamestrikeRightclickedProcedure {
 				ItemStack _stktoremove = new ItemStack(CatastropheModModItems.IRON_ROUND.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
+			{
+				double _setval = 3;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.intensity_timer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				boolean _setval = true;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.screenshake = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			CatastropheModMod.queueServerWork(5, () -> {
+				{
+					boolean _setval = false;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.screenshake = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			});
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
