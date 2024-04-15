@@ -9644,7 +9644,7 @@
       "name": "CharredBricks",
       "type": "block",
       "sortid": 2084,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "charred_bricks",
       "metadata": {
@@ -9695,7 +9695,7 @@
       "name": "CharredTiles",
       "type": "block",
       "sortid": 2087,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "charred_tiles",
       "metadata": {
@@ -9712,7 +9712,7 @@
       "name": "CharredStone",
       "type": "block",
       "sortid": 2088,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "charred_stone",
       "metadata": {
@@ -9785,7 +9785,7 @@
       "name": "CharredStoneSlab",
       "type": "block",
       "sortid": 2093,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "charred_stone_slab",
       "metadata": {
@@ -9804,7 +9804,7 @@
       "name": "CharredStoneStairs",
       "type": "block",
       "sortid": 2094,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "charred_stone_stairs",
       "metadata": {
@@ -9931,7 +9931,7 @@
       "name": "CharredTilesSlab",
       "type": "block",
       "sortid": 2102,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "charred_tiles_slab",
       "metadata": {
