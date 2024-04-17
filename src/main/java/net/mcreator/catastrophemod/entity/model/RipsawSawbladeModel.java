@@ -1,6 +1,10 @@
 package net.mcreator.catastrophemod.entity.model;
 
-import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
 
 public class RipsawSawbladeModel extends GeoModel<RipsawSawbladeEntity> {
 	@Override

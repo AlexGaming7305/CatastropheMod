@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "rod_of_teleportation",
-    "customModelName": "Normal",
+    "customModelName": "Tool",
     "customProperties": {},
     "states": [],
     "name": "§5Rod of Teleportation",

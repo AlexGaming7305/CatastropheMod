@@ -1,8 +1,12 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
+import net.mcreator.catastrophemod.entity.SepulcherEntity;
 
 public class ShadowfireSoulProjectileHitsLivingEntityProcedure {
 	public static void execute(Entity entity) {

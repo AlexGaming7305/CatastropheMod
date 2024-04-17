@@ -1,8 +1,10 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
 
 public class GraveDiggerBlockDestroyedWithToolProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {

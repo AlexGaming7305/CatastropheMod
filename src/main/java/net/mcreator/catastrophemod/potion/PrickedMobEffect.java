@@ -1,6 +1,12 @@
 
 package net.mcreator.catastrophemod.potion;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
+import net.mcreator.catastrophemod.procedures.PrickedOnEffectActiveTickProcedure;
+
 public class PrickedMobEffect extends MobEffect {
 	public PrickedMobEffect() {
 		super(MobEffectCategory.HARMFUL, -12425698);

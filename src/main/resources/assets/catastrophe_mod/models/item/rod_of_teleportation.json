@@ -1,5 +1,5 @@
 {
-  "parent": "item/generated",
+  "parent": "item/handheld",
   "textures": {
     "layer0": "catastrophe_mod:item/rod_of_teleportation"
   }

@@ -1,8 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.entity.SilkMothEntity;
 
 public class SilkMothOnInitialEntitySpawnProcedure {
 	public static void execute(Entity entity) {

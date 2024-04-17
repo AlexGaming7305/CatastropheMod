@@ -1,8 +1,11 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
 
 public class CrimsonRayRightclickedProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

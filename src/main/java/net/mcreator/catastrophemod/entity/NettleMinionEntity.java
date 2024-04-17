@@ -1,24 +1,80 @@
 
 package net.mcreator.catastrophemod.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoEntity;
+
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.FollowParentGoal;
+import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.nbt.Tag;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.catastrophemod.procedures.NettleMinionOnInitialEntitySpawnProcedure;
+import net.mcreator.catastrophemod.procedures.NettleMinionOnEntityTickUpdateProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 
 import javax.annotation.Nullable;
 
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationState;
+import java.util.List;
 
 public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(NettleMinionEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(NettleMinionEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(NettleMinionEntity.class, EntityDataSerializers.STRING);
-
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -33,7 +89,6 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-
 	}
 
 	@Override
@@ -60,25 +115,21 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
 		this.goalSelector.addGoal(2, new FollowParentGoal(this, 0.8));
 		this.targetSelector.addGoal(3, new OwnerHurtTargetGoal(this));
 		this.goalSelector.addGoal(4, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Monster.class, false, false));
 		this.goalSelector.addGoal(6, new MeleeAttackGoal(this, 1.2, false) {
-
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
-
 		});
 		this.goalSelector.addGoal(7, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Monster.class, (float) 15));
 		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(10, new FloatGoal(this));
-
 	}
 
 	@Override
@@ -158,7 +209,6 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
-
 		Item item = itemstack.getItem();
 		if (itemstack.getItem() instanceof SpawnEggItem) {
 			retval = super.mobInteract(sourceentity, hand);
@@ -187,7 +237,6 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 				} else {
 					this.level().broadcastEntityEvent(this, (byte) 6);
 				}
-
 				this.setPersistenceRequired();
 				retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 			} else {
@@ -196,7 +245,6 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 					this.setPersistenceRequired();
 			}
 		}
-
 		return retval;
 	}
 
@@ -231,7 +279,6 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 	}
 
 	public static void init() {
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -241,7 +288,6 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-
 		return builder;
 	}
 
@@ -276,7 +322,6 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 		if (this.deathTime == 20) {
 			this.remove(NettleMinionEntity.RemovalReason.KILLED);
 			this.dropExperience();
-
 		}
 	}
 
@@ -298,5 +343,4 @@ public class NettleMinionEntity extends TamableAnimal implements GeoEntity {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
-
 }

@@ -1,8 +1,29 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.items.ItemHandlerHelper;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.entity.ThornInfestedArmorEntity;
+import net.mcreator.catastrophemod.CatastropheModMod;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class ThornInfestedArmorEntityDiesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

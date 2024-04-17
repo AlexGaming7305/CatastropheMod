@@ -1,8 +1,15 @@
 
 package net.mcreator.catastrophemod.enchantment;
 
-public class ImpalementEnchantment extends Enchantment {
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
 
+public class ImpalementEnchantment extends Enchantment {
 	public ImpalementEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, slots);
 	}
@@ -16,5 +23,4 @@ public class ImpalementEnchantment extends Enchantment {
 	public boolean canApplyAtEnchantingTable(ItemStack itemstack) {
 		return Ingredient.of(ItemTags.create(new ResourceLocation("catastrophe_mod:spears"))).test(itemstack);
 	}
-
 }

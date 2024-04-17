@@ -1,6 +1,13 @@
 package net.mcreator.catastrophemod.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
 import javax.annotation.Nullable;
 
@@ -33,7 +40,6 @@ public class ManaStartProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).setBaseValue(20);
 			{
 				boolean _setval = true;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

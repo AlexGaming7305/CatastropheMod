@@ -1,9 +1,22 @@
 
 package net.mcreator.catastrophemod.recipes.brewing;
 
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.common.brewing.IBrewingRecipe;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+
+import net.mcreator.catastrophemod.init.CatastropheModModPotions;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class BullseyePotionLongRecipeBrewingRecipe implements IBrewingRecipe {
-
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> BrewingRecipeRegistry.addRecipe(new BullseyePotionLongRecipeBrewingRecipe()));
@@ -27,5 +40,4 @@ public class BullseyePotionLongRecipeBrewingRecipe implements IBrewingRecipe {
 		}
 		return ItemStack.EMPTY;
 	}
-
 }

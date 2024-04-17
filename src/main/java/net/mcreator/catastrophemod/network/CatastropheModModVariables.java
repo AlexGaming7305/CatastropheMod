@@ -76,7 +76,6 @@ public class CatastropheModModVariables {
 			clone.ManaStart = original.ManaStart;
 			clone.Maxmana = original.Maxmana;
 			clone.SoulPower = original.SoulPower;
-			clone.SoulPowerStart = original.SoulPowerStart;
 			clone.MaxSoulPower = original.MaxSoulPower;
 			clone.double_jump_condition = original.double_jump_condition;
 			clone.thunder_star = original.thunder_star;
@@ -88,6 +87,7 @@ public class CatastropheModModVariables {
 			clone.comet_moth_pet = original.comet_moth_pet;
 			clone.rosy_maple_moth_pet = original.rosy_maple_moth_pet;
 			clone.silk_moth_pet_counter = original.silk_moth_pet_counter;
+			clone.mana_cost_accursed_tome = original.mana_cost_accursed_tome;
 			if (!event.isWasDeath()) {
 				clone.crimsondagger = original.crimsondagger;
 				clone.pocketshield = original.pocketshield;
@@ -174,7 +174,6 @@ public class CatastropheModModVariables {
 				clone.ice_bow_load = original.ice_bow_load;
 				clone.ice_bow_ready = original.ice_bow_ready;
 				clone.spear_pin_point_strike_cooldown = original.spear_pin_point_strike_cooldown;
-				clone.parry_effect = original.parry_effect;
 				clone.armor_shred_level = original.armor_shred_level;
 				clone.mana_regen_cooldown = original.mana_regen_cooldown;
 				clone.Resilience_Enchantment = original.Resilience_Enchantment;
@@ -354,7 +353,6 @@ public class CatastropheModModVariables {
 		public boolean ManaStart = false;
 		public double Maxmana = 20.0;
 		public double SoulPower = 0.0;
-		public boolean SoulPowerStart = false;
 		public double MaxSoulPower = 1.0;
 		public boolean crimsondagger = false;
 		public boolean pocketshield = false;
@@ -444,7 +442,6 @@ public class CatastropheModModVariables {
 		public boolean ice_bow_load = false;
 		public boolean ice_bow_ready = false;
 		public boolean spear_pin_point_strike_cooldown = false;
-		public boolean parry_effect = false;
 		public double armor_shred_level = 0;
 		public double mana_regen_cooldown = 0;
 		public boolean Resilience_Enchantment = false;
@@ -458,7 +455,8 @@ public class CatastropheModModVariables {
 		public boolean comet_moth_pet = false;
 		public boolean rosy_maple_moth_pet = false;
 		public boolean is_hit_during_bossfight = false;
-		public double silk_moth_pet_counter = 0;
+		public boolean silk_moth_pet_counter = false;
+		public double mana_cost_accursed_tome = 6.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -471,7 +469,6 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("ManaStart", ManaStart);
 			nbt.putDouble("Maxmana", Maxmana);
 			nbt.putDouble("SoulPower", SoulPower);
-			nbt.putBoolean("SoulPowerStart", SoulPowerStart);
 			nbt.putDouble("MaxSoulPower", MaxSoulPower);
 			nbt.putBoolean("crimsondagger", crimsondagger);
 			nbt.putBoolean("pocketshield", pocketshield);
@@ -561,7 +558,6 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("ice_bow_load", ice_bow_load);
 			nbt.putBoolean("ice_bow_ready", ice_bow_ready);
 			nbt.putBoolean("spear_pin_point_strike_cooldown", spear_pin_point_strike_cooldown);
-			nbt.putBoolean("parry_effect", parry_effect);
 			nbt.putDouble("armor_shred_level", armor_shred_level);
 			nbt.putDouble("mana_regen_cooldown", mana_regen_cooldown);
 			nbt.putBoolean("Resilience_Enchantment", Resilience_Enchantment);
@@ -575,7 +571,8 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("comet_moth_pet", comet_moth_pet);
 			nbt.putBoolean("rosy_maple_moth_pet", rosy_maple_moth_pet);
 			nbt.putBoolean("is_hit_during_bossfight", is_hit_during_bossfight);
-			nbt.putDouble("silk_moth_pet_counter", silk_moth_pet_counter);
+			nbt.putBoolean("silk_moth_pet_counter", silk_moth_pet_counter);
+			nbt.putDouble("mana_cost_accursed_tome", mana_cost_accursed_tome);
 			return nbt;
 		}
 
@@ -585,7 +582,6 @@ public class CatastropheModModVariables {
 			ManaStart = nbt.getBoolean("ManaStart");
 			Maxmana = nbt.getDouble("Maxmana");
 			SoulPower = nbt.getDouble("SoulPower");
-			SoulPowerStart = nbt.getBoolean("SoulPowerStart");
 			MaxSoulPower = nbt.getDouble("MaxSoulPower");
 			crimsondagger = nbt.getBoolean("crimsondagger");
 			pocketshield = nbt.getBoolean("pocketshield");
@@ -675,7 +671,6 @@ public class CatastropheModModVariables {
 			ice_bow_load = nbt.getBoolean("ice_bow_load");
 			ice_bow_ready = nbt.getBoolean("ice_bow_ready");
 			spear_pin_point_strike_cooldown = nbt.getBoolean("spear_pin_point_strike_cooldown");
-			parry_effect = nbt.getBoolean("parry_effect");
 			armor_shred_level = nbt.getDouble("armor_shred_level");
 			mana_regen_cooldown = nbt.getDouble("mana_regen_cooldown");
 			Resilience_Enchantment = nbt.getBoolean("Resilience_Enchantment");
@@ -689,7 +684,8 @@ public class CatastropheModModVariables {
 			comet_moth_pet = nbt.getBoolean("comet_moth_pet");
 			rosy_maple_moth_pet = nbt.getBoolean("rosy_maple_moth_pet");
 			is_hit_during_bossfight = nbt.getBoolean("is_hit_during_bossfight");
-			silk_moth_pet_counter = nbt.getDouble("silk_moth_pet_counter");
+			silk_moth_pet_counter = nbt.getBoolean("silk_moth_pet_counter");
+			mana_cost_accursed_tome = nbt.getDouble("mana_cost_accursed_tome");
 		}
 	}
 
@@ -718,7 +714,6 @@ public class CatastropheModModVariables {
 					variables.ManaStart = message.data.ManaStart;
 					variables.Maxmana = message.data.Maxmana;
 					variables.SoulPower = message.data.SoulPower;
-					variables.SoulPowerStart = message.data.SoulPowerStart;
 					variables.MaxSoulPower = message.data.MaxSoulPower;
 					variables.crimsondagger = message.data.crimsondagger;
 					variables.pocketshield = message.data.pocketshield;
@@ -808,7 +803,6 @@ public class CatastropheModModVariables {
 					variables.ice_bow_load = message.data.ice_bow_load;
 					variables.ice_bow_ready = message.data.ice_bow_ready;
 					variables.spear_pin_point_strike_cooldown = message.data.spear_pin_point_strike_cooldown;
-					variables.parry_effect = message.data.parry_effect;
 					variables.armor_shred_level = message.data.armor_shred_level;
 					variables.mana_regen_cooldown = message.data.mana_regen_cooldown;
 					variables.Resilience_Enchantment = message.data.Resilience_Enchantment;
@@ -823,6 +817,7 @@ public class CatastropheModModVariables {
 					variables.rosy_maple_moth_pet = message.data.rosy_maple_moth_pet;
 					variables.is_hit_during_bossfight = message.data.is_hit_during_bossfight;
 					variables.silk_moth_pet_counter = message.data.silk_moth_pet_counter;
+					variables.mana_cost_accursed_tome = message.data.mana_cost_accursed_tome;
 				}
 			});
 			context.setPacketHandled(true);

@@ -1,8 +1,16 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
+import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class EarthShockwaveOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

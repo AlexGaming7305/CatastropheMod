@@ -1,9 +1,27 @@
 package net.mcreator.catastrophemod.client.renderer;
 
+import top.theillusivec4.curios.api.client.ICurioRenderer;
+import top.theillusivec4.curios.api.SlotContext;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.renderer.entity.RenderLayerParent;
+import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.catastrophemod.init.CatastropheModModLayerDefinitions;
+import net.mcreator.catastrophemod.client.model.Modelgolden_necklace;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class GoldenBraceletRenderer implements ICurioRenderer {
-
 	private static final ResourceLocation TEXTURE = new ResourceLocation("catastrophe_mod", "textures/entities/golden_necklace_texture.png");
-
 	private final Modelgolden_necklace model;
 
 	public GoldenBraceletRenderer() {
@@ -21,5 +39,4 @@ public class GoldenBraceletRenderer implements ICurioRenderer {
 		VertexConsumer vertexconsumer = ItemRenderer.getArmorFoilBuffer(renderTypeBuffer, RenderType.armorCutoutNoCull(TEXTURE), false, stack.hasFoil());
 		this.model.renderToBuffer(matrixStack, vertexconsumer, light, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
 	}
-
 }

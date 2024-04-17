@@ -1,6 +1,21 @@
 
 package net.mcreator.catastrophemod.client.renderer;
 
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import net.mcreator.catastrophemod.entity.model.AnglerfishModel;
+import net.mcreator.catastrophemod.entity.layer.AnglerfishLayer;
+import net.mcreator.catastrophemod.entity.AnglerfishEntity;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class AnglerfishRenderer extends GeoEntityRenderer<AnglerfishEntity> {
 	public AnglerfishRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new AnglerfishModel());
@@ -21,5 +36,4 @@ public class AnglerfishRenderer extends GeoEntityRenderer<AnglerfishEntity> {
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
 	}
-
 }

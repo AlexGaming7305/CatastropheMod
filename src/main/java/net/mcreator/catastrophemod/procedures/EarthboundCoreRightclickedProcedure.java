@@ -1,8 +1,16 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 
 public class EarthboundCoreRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

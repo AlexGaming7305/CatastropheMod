@@ -11,9 +11,6 @@
     "compatibleEnchantments": [
       {
         "value": "FIRE_ASPECT"
-      },
-      {
-        "value": "CUSTOM:FrostAspect"
       }
     ],
     "excludeEnchantments": true,

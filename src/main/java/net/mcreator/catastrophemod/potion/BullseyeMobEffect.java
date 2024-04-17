@@ -1,6 +1,9 @@
 
 package net.mcreator.catastrophemod.potion;
 
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
 public class BullseyeMobEffect extends MobEffect {
 	public BullseyeMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -6750208);

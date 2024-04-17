@@ -1,8 +1,32 @@
 package net.mcreator.catastrophemod.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ExperienceOrb;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
 import javax.annotation.Nullable;
+
+import java.util.List;
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class SeaSpearDashDamageProcedure {

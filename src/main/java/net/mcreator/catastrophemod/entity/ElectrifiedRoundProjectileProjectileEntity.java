@@ -1,6 +1,27 @@
 
 package net.mcreator.catastrophemod.entity;
 
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+
+import net.mcreator.catastrophemod.procedures.IronRoundProjectileWhileProjectileFlyingTickProcedure;
+import net.mcreator.catastrophemod.procedures.ElectrifiedRoundProjectileProjectileHitsLivingEntityProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ElectrifiedRoundProjectileProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Items.ARROW);

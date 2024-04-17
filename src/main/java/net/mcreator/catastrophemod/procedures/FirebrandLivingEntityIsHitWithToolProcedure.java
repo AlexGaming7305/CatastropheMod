@@ -1,8 +1,29 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.ExperienceOrb;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+import net.mcreator.catastrophemod.CatastropheModMod;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class FirebrandLivingEntityIsHitWithToolProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
@@ -34,6 +55,8 @@ public class FirebrandLivingEntityIsHitWithToolProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(sourceentity == entityiterator)) {
 							if (!(entityiterator instanceof ItemEntity && entityiterator instanceof ExperienceOrb)) {
+								entityiterator.hurt(
+										new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), sourceentity), 5);
 								entityiterator.setSecondsOnFire(5);
 							}
 						}
@@ -72,6 +95,8 @@ public class FirebrandLivingEntityIsHitWithToolProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(sourceentity == entityiterator)) {
 							if (!(entityiterator instanceof ItemEntity && entityiterator instanceof ExperienceOrb)) {
+								entityiterator.hurt(
+										new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), sourceentity), 5);
 								entityiterator.setSecondsOnFire(5);
 							}
 						}

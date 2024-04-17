@@ -1,6 +1,18 @@
 package net.mcreator.catastrophemod.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
+
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.monster.Phantom;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
 
 import javax.annotation.Nullable;
 

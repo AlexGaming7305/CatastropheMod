@@ -30,6 +30,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

@@ -1,11 +1,22 @@
 
 package net.mcreator.catastrophemod.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
+import top.theillusivec4.curios.api.SlotContext;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.catastrophemod.procedures.ReinforcedShieldBaubleIsUnequippedProcedure;
+import net.mcreator.catastrophemod.procedures.ReinforcedShieldBaubleIsEquippedProcedure;
+
+import java.util.List;
 
 public class ReinforcedShieldItem extends Item implements ICurioItem {
-
 	public ReinforcedShieldItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
@@ -24,5 +35,4 @@ public class ReinforcedShieldItem extends Item implements ICurioItem {
 	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
 		ReinforcedShieldBaubleIsUnequippedProcedure.execute(slotContext.entity());
 	}
-
 }

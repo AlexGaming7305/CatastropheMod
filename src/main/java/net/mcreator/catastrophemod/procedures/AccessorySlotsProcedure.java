@@ -1,6 +1,16 @@
 package net.mcreator.catastrophemod.procedures;
 
+import top.theillusivec4.curios.api.event.CurioChangeEvent;
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
 
 import javax.annotation.Nullable;
 

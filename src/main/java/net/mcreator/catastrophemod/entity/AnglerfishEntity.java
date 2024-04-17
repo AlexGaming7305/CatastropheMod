@@ -1,24 +1,66 @@
 
 package net.mcreator.catastrophemod.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.nbt.Tag;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
-
-import javax.annotation.Nullable;
-
-import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoEntity;
+
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.common.ForgeMod;
+
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.animal.TropicalFish;
+import net.minecraft.world.entity.animal.Salmon;
+import net.minecraft.world.entity.animal.Cod;
+import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.TryFindWaterGoal;
+import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.control.MoveControl;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.Mth;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+
+import net.mcreator.catastrophemod.procedures.AnglerfishOnEntityTickUpdateProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 
 public class AnglerfishEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(AnglerfishEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(AnglerfishEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(AnglerfishEntity.class, EntityDataSerializers.STRING);
-
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -33,34 +75,27 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
-
 		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
 				if (AnglerfishEntity.this.isInWater())
 					AnglerfishEntity.this.setDeltaMovement(AnglerfishEntity.this.getDeltaMovement().add(0, 0.005, 0));
-
 				if (this.operation == MoveControl.Operation.MOVE_TO && !AnglerfishEntity.this.getNavigation().isDone()) {
 					double dx = this.wantedX - AnglerfishEntity.this.getX();
 					double dy = this.wantedY - AnglerfishEntity.this.getY();
 					double dz = this.wantedZ - AnglerfishEntity.this.getZ();
-
 					float f = (float) (Mth.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
 					float f1 = (float) (this.speedModifier * AnglerfishEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
-
 					AnglerfishEntity.this.setYRot(this.rotlerp(AnglerfishEntity.this.getYRot(), f, 10));
 					AnglerfishEntity.this.yBodyRot = AnglerfishEntity.this.getYRot();
 					AnglerfishEntity.this.yHeadRot = AnglerfishEntity.this.getYRot();
-
 					if (AnglerfishEntity.this.isInWater()) {
 						AnglerfishEntity.this.setSpeed((float) AnglerfishEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
-
 						float f2 = -(float) (Mth.atan2(dy, (float) Math.sqrt(dx * dx + dz * dz)) * (180 / Math.PI));
 						f2 = Mth.clamp(Mth.wrapDegrees(f2), -85, 85);
 						AnglerfishEntity.this.setXRot(this.rotlerp(AnglerfishEntity.this.getXRot(), f2, 5));
 						float f3 = Mth.cos(AnglerfishEntity.this.getXRot() * (float) (Math.PI / 180.0));
-
 						AnglerfishEntity.this.setZza(f3 * f1);
 						AnglerfishEntity.this.setYya((float) (f1 * dy));
 					} else {
@@ -104,14 +139,11 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 4, false) {
-
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
-
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 12, 40));
@@ -120,7 +152,6 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Salmon.class, false, true));
 		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Cod.class, false, true));
 		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, TropicalFish.class, false, true));
-
 	}
 
 	@Override
@@ -187,7 +218,6 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 		SpawnPlacements.register(CatastropheModModEntities.ANGLERFISH.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			return world.getFluidState(pos.below()).is(FluidTags.WATER) && world.getBlockState(pos.above()).is(Blocks.WATER) && pos.getY() >= (world.getSeaLevel() - 13) && pos.getY() <= world.getSeaLevel();
 		});
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -197,9 +227,7 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-
 		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 2);
-
 		return builder;
 	}
 
@@ -250,7 +278,6 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 		if (this.deathTime == 20) {
 			this.remove(AnglerfishEntity.RemovalReason.KILLED);
 			this.dropExperience();
-
 		}
 	}
 
@@ -273,5 +300,4 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
-
 }

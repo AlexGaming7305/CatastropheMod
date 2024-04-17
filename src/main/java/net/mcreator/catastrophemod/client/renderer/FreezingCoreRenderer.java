@@ -1,6 +1,20 @@
 
 package net.mcreator.catastrophemod.client.renderer;
 
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import net.mcreator.catastrophemod.entity.model.FreezingCoreModel;
+import net.mcreator.catastrophemod.entity.FreezingCoreEntity;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class FreezingCoreRenderer extends GeoEntityRenderer<FreezingCoreEntity> {
 	public FreezingCoreRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new FreezingCoreModel());
@@ -20,5 +34,4 @@ public class FreezingCoreRenderer extends GeoEntityRenderer<FreezingCoreEntity> 
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
 	}
-
 }

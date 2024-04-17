@@ -35,6 +35,7 @@ public class CatastropheModModAttributes {
 	public static final RegistryObject<Attribute> DAMAGEREDUCTION = ATTRIBUTES.register("damage_reduction", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".damage_reduction", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> MAXMANA = ATTRIBUTES.register("max_mana", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".max_mana", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> MANAREGENERATION = ATTRIBUTES.register("mana_regeneration", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".mana_regeneration", 0, 0, 0)).setSyncable(true));
+	public static final RegistryObject<Attribute> MANAUSAGEREDUCTION = ATTRIBUTES.register("mana_usage_reduction", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".mana_usage_reduction", 0, 0, 0)).setSyncable(true));
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
@@ -57,6 +58,7 @@ public class CatastropheModModAttributes {
 		event.add(EntityType.PLAYER, DAMAGEREDUCTION.get());
 		event.add(EntityType.PLAYER, MAXMANA.get());
 		event.add(EntityType.PLAYER, MANAREGENERATION.get());
+		event.add(EntityType.PLAYER, MANAUSAGEREDUCTION.get());
 	}
 
 	@Mod.EventBusSubscriber
@@ -67,6 +69,7 @@ public class CatastropheModModAttributes {
 			Player newP = (Player) event.getEntity();
 			newP.getAttribute(MAXMANA.get()).setBaseValue(oldP.getAttribute(MAXMANA.get()).getBaseValue());
 			newP.getAttribute(MANAREGENERATION.get()).setBaseValue(oldP.getAttribute(MANAREGENERATION.get()).getBaseValue());
+			newP.getAttribute(MANAUSAGEREDUCTION.get()).setBaseValue(oldP.getAttribute(MANAUSAGEREDUCTION.get()).getBaseValue());
 		}
 	}
 }

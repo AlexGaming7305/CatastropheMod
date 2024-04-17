@@ -1,5 +1,31 @@
 package net.mcreator.catastrophemod.item.renderer;
 
+import software.bernie.geckolib.util.RenderUtils;
+import software.bernie.geckolib.renderer.GeoItemRenderer;
+import software.bernie.geckolib.cache.object.GeoBone;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.client.model.PlayerModel;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.catastrophemod.utils.AnimUtils;
+import net.mcreator.catastrophemod.item.model.FlamestrikeItemModel;
+import net.mcreator.catastrophemod.item.FlamestrikeItem;
+
+import java.util.Set;
+import java.util.HashSet;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class FlamestrikeItemRenderer extends GeoItemRenderer<FlamestrikeItem> {
 	public FlamestrikeItemRenderer() {
 		super(new FlamestrikeItemModel());
@@ -84,5 +110,4 @@ public class FlamestrikeItemRenderer extends GeoItemRenderer<FlamestrikeItem> {
 	public ResourceLocation getTextureLocation(FlamestrikeItem instance) {
 		return super.getTextureLocation(instance);
 	}
-
 }

@@ -1,8 +1,30 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ExperienceOrb;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
+import net.mcreator.catastrophemod.CatastropheModMod;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class FirebrandSlashOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -155,7 +177,8 @@ public class FirebrandSlashOnInitialEntitySpawnProcedure {
 						if (!((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == entityiterator)) {
 							if (!(entity == entityiterator)) {
 								if (!(entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced")))), 5);
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))),
+											(entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)), 5);
 									entityiterator.setSecondsOnFire(5);
 								}
 							}
@@ -171,7 +194,9 @@ public class FirebrandSlashOnInitialEntitySpawnProcedure {
 						if (!((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == entityiterator)) {
 							if (!(entity == entityiterator)) {
 								if (!(entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced")))), 5);
+									entityiterator
+											.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:split_in_two"))),
+													(entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)), 5);
 									entityiterator.setSecondsOnFire(5);
 								}
 							}

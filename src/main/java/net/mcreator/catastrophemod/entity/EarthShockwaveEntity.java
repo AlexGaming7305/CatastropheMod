@@ -1,24 +1,48 @@
 
 package net.mcreator.catastrophemod.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.nbt.Tag;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
-
-import javax.annotation.Nullable;
-
-import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.util.GeckoLibUtil;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.core.animation.AnimationController;
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.GeoEntity;
+
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+
+import net.mcreator.catastrophemod.procedures.EarthShockwaveOnEntityTickUpdateProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 
 public class EarthShockwaveEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(EarthShockwaveEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(EarthShockwaveEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(EarthShockwaveEntity.class, EntityDataSerializers.STRING);
-
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -33,7 +57,6 @@ public class EarthShockwaveEntity extends PathfinderMob implements GeoEntity {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-
 	}
 
 	@Override
@@ -146,7 +169,6 @@ public class EarthShockwaveEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	public static void init() {
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -156,7 +178,6 @@ public class EarthShockwaveEntity extends PathfinderMob implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-
 		return builder;
 	}
 
@@ -186,7 +207,6 @@ public class EarthShockwaveEntity extends PathfinderMob implements GeoEntity {
 		if (this.deathTime == 20) {
 			this.remove(EarthShockwaveEntity.RemovalReason.KILLED);
 			this.dropExperience();
-
 		}
 	}
 
@@ -208,5 +228,4 @@ public class EarthShockwaveEntity extends PathfinderMob implements GeoEntity {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
-
 }

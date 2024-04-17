@@ -1,8 +1,16 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.entity.MineralWraithEntity;
+import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class MineralWraithOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double z, Entity entity) {
