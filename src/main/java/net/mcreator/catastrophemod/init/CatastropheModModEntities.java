@@ -53,7 +53,6 @@ import net.mcreator.catastrophemod.entity.NohomingHealingOrbProjectileEntity;
 import net.mcreator.catastrophemod.entity.NightfallsDemiseProjectileEntity;
 import net.mcreator.catastrophemod.entity.NettleMinionEntity;
 import net.mcreator.catastrophemod.entity.NettleEntity;
-import net.mcreator.catastrophemod.entity.NaturiteShieldProjectileEntity;
 import net.mcreator.catastrophemod.entity.NatureBlessedSpiritEntity;
 import net.mcreator.catastrophemod.entity.NatureBlastProjectileEntity;
 import net.mcreator.catastrophemod.entity.MineralWraithEntity;
@@ -301,9 +300,6 @@ public class CatastropheModModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BlazingFeatherProjectileEntity>> BLAZING_FEATHER_PROJECTILE = register("projectile_blazing_feather_projectile",
 			EntityType.Builder.<BlazingFeatherProjectileEntity>of(BlazingFeatherProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BlazingFeatherProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<NaturiteShieldProjectileEntity>> NATURITE_SHIELD_PROJECTILE = register("projectile_naturite_shield_projectile",
-			EntityType.Builder.<NaturiteShieldProjectileEntity>of(NaturiteShieldProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(NaturiteShieldProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HealingBlossomProjectileEntity>> HEALING_BLOSSOM_PROJECTILE = register("projectile_healing_blossom_projectile",
 			EntityType.Builder.<HealingBlossomProjectileEntity>of(HealingBlossomProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(HealingBlossomProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)

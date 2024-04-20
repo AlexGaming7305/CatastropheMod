@@ -5,7 +5,7 @@
     "toolType": "Shield",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "naturite_ingot",
+    "texture": "naturite_shield",
     "customModelName": "naturite_shield:default",
     "blockingModelName": "Normal blocking",
     "name": "§aNaturite Shield",

@@ -77,7 +77,8 @@ public class NightfallsDemiseProjectileOnEntityTickUpdateProcedure {
 						if (!(entityiterator == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
 							if (!(entityiterator instanceof NightfallsDemiseProjectileEntity)) {
 								if (entityiterator.isAlive()) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced")))), 6);
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))),
+											(entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)), 6);
 									entity.setDeltaMovement(new Vec3((((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getX() - entity.getX()) * 0.1), 0.6,
 											(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getZ() - entity.getZ()) * 0.1)));
 									entity.setNoGravity(false);

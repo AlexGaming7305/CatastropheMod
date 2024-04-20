@@ -17,7 +17,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 
-import net.mcreator.catastrophemod.procedures.NaturiteShieldCanUseRangedItemProcedure;
 import net.mcreator.catastrophemod.entity.BlizzardProjectileEntity;
 
 import java.util.List;
@@ -58,38 +57,33 @@ public class BlizzardItem extends Item {
 	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
 		if (!world.isClientSide() && entity instanceof ServerPlayer player) {
-			double x = entity.getX();
-			double y = entity.getY();
-			double z = entity.getZ();
-			if (NaturiteShieldCanUseRangedItemProcedure.execute()) {
-				ItemStack stack = ProjectileWeaponItem.getHeldProjectile(entity, e -> e.getItem() == BlizzardProjectileEntity.PROJECTILE_ITEM.getItem());
-				if (stack == ItemStack.EMPTY) {
-					for (int i = 0; i < player.getInventory().items.size(); i++) {
-						ItemStack teststack = player.getInventory().items.get(i);
-						if (teststack != null && teststack.getItem() == BlizzardProjectileEntity.PROJECTILE_ITEM.getItem()) {
-							stack = teststack;
-							break;
-						}
+			ItemStack stack = ProjectileWeaponItem.getHeldProjectile(entity, e -> e.getItem() == BlizzardProjectileEntity.PROJECTILE_ITEM.getItem());
+			if (stack == ItemStack.EMPTY) {
+				for (int i = 0; i < player.getInventory().items.size(); i++) {
+					ItemStack teststack = player.getInventory().items.get(i);
+					if (teststack != null && teststack.getItem() == BlizzardProjectileEntity.PROJECTILE_ITEM.getItem()) {
+						stack = teststack;
+						break;
 					}
 				}
-				if (player.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					BlizzardProjectileEntity projectile = BlizzardProjectileEntity.shoot(world, entity, world.getRandom());
-					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
-					if (player.getAbilities().instabuild) {
-						projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
-					} else {
-						if (stack.isDamageableItem()) {
-							if (stack.hurt(1, world.getRandom(), player)) {
-								stack.shrink(1);
-								stack.setDamageValue(0);
-								if (stack.isEmpty())
-									player.getInventory().removeItem(stack);
-							}
-						} else {
+			}
+			if (player.getAbilities().instabuild || stack != ItemStack.EMPTY) {
+				BlizzardProjectileEntity projectile = BlizzardProjectileEntity.shoot(world, entity, world.getRandom());
+				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
+				if (player.getAbilities().instabuild) {
+					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
+				} else {
+					if (stack.isDamageableItem()) {
+						if (stack.hurt(1, world.getRandom(), player)) {
 							stack.shrink(1);
+							stack.setDamageValue(0);
 							if (stack.isEmpty())
 								player.getInventory().removeItem(stack);
 						}
+					} else {
+						stack.shrink(1);
+						if (stack.isEmpty())
+							player.getInventory().removeItem(stack);
 					}
 				}
 			}

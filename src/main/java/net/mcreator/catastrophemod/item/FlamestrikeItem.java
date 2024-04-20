@@ -55,11 +55,10 @@ public class FlamestrikeItem extends Item implements GeoItem {
 
 			private static final HumanoidModel.ArmPose FlamestrikePose = HumanoidModel.ArmPose.create("Flamestrike", false, (model, entity, arm) -> {
 				if (arm == HumanoidArm.LEFT) {
-					model.leftArm.xRot = 5F + model.head.xRot;
-					model.leftArm.yRot = 0.25F + model.head.yRot;
+					model.leftArm.xRot = 1F + model.head.xRot;
+					model.leftArm.yRot = 1F + model.head.yRot;
+					model.leftArm.zRot = 1F + model.head.zRot;
 				} else {
-					model.rightArm.xRot = 5F + model.head.xRot;
-					model.rightArm.yRot = 0.25F + model.head.yRot;
 				}
 			});
 

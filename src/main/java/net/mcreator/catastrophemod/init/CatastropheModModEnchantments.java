@@ -10,6 +10,8 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.item.enchantment.Enchantment;
 
+import net.mcreator.catastrophemod.enchantment.WizardryEnchantment;
+import net.mcreator.catastrophemod.enchantment.SpellcastingEnchantment;
 import net.mcreator.catastrophemod.enchantment.ResilienceEnchantment;
 import net.mcreator.catastrophemod.enchantment.MagnetismEnchantment;
 import net.mcreator.catastrophemod.enchantment.ImpalementEnchantment;
@@ -24,4 +26,6 @@ public class CatastropheModModEnchantments {
 	public static final RegistryObject<Enchantment> FROSTBITE = REGISTRY.register("frostbite", () -> new FrostbiteEnchantment());
 	public static final RegistryObject<Enchantment> RESILIENCE = REGISTRY.register("resilience", () -> new ResilienceEnchantment());
 	public static final RegistryObject<Enchantment> IMPALEMENT = REGISTRY.register("impalement", () -> new ImpalementEnchantment());
+	public static final RegistryObject<Enchantment> SPELLCASTING = REGISTRY.register("spellcasting", () -> new SpellcastingEnchantment());
+	public static final RegistryObject<Enchantment> WIZARDRY = REGISTRY.register("wizardry", () -> new WizardryEnchantment());
 }

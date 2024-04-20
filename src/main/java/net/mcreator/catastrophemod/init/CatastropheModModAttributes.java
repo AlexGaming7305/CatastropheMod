@@ -10,10 +10,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLConstructModEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EntityType;
@@ -36,6 +34,7 @@ public class CatastropheModModAttributes {
 	public static final RegistryObject<Attribute> MAXMANA = ATTRIBUTES.register("max_mana", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".max_mana", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> MANAREGENERATION = ATTRIBUTES.register("mana_regeneration", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".mana_regeneration", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> MANAUSAGEREDUCTION = ATTRIBUTES.register("mana_usage_reduction", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".mana_usage_reduction", 0, 0, 0)).setSyncable(true));
+	public static final RegistryObject<Attribute> MINIONSLOTS = ATTRIBUTES.register("minion_slots", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".minion_slots", 0, 0, 0)).setSyncable(true));
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
@@ -59,17 +58,6 @@ public class CatastropheModModAttributes {
 		event.add(EntityType.PLAYER, MAXMANA.get());
 		event.add(EntityType.PLAYER, MANAREGENERATION.get());
 		event.add(EntityType.PLAYER, MANAUSAGEREDUCTION.get());
-	}
-
-	@Mod.EventBusSubscriber
-	private class Utils {
-		@SubscribeEvent
-		public static void persistAttributes(PlayerEvent.Clone event) {
-			Player oldP = event.getOriginal();
-			Player newP = (Player) event.getEntity();
-			newP.getAttribute(MAXMANA.get()).setBaseValue(oldP.getAttribute(MAXMANA.get()).getBaseValue());
-			newP.getAttribute(MANAREGENERATION.get()).setBaseValue(oldP.getAttribute(MANAREGENERATION.get()).getBaseValue());
-			newP.getAttribute(MANAUSAGEREDUCTION.get()).setBaseValue(oldP.getAttribute(MANAUSAGEREDUCTION.get()).getBaseValue());
-		}
+		event.add(EntityType.PLAYER, MINIONSLOTS.get());
 	}
 }

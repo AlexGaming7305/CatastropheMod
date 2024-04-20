@@ -30,8 +30,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7Grants swords the ability to §4Gash Targets",
-        "§7Inflicts §cBleeding §7if the armor of the target is less than 6",
+        "§7Grants swords the ability to Gash Targets",
+        "§7Inflicts §cBleeding §7if armor of the target is less than 6",
         "§9+5% Sword Damage §7to bleeding targets"
       ]
     },

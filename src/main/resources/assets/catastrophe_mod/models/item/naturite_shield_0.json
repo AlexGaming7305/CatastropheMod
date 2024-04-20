@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "catastrophe_mod:item/naturite_ingot"
+    "layer0": "catastrophe_mod:item/naturite_shield"
   },
   "display": {
     "thirdperson_righthand": {

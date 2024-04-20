@@ -175,7 +175,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.FIERY_SLASH_PROJECTILE.get(), FierySlashProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.CRYSTAL_SHARD_PROJECTILE.get(), CrystalShardProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.BLAZING_FEATHER_PROJECTILE.get(), BlazingFeatherProjectileRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.NATURITE_SHIELD_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.HEALING_BLOSSOM_PROJECTILE.get(), HealingBlossomProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.EARTHBOUND_ROCK_PROJECTILE.get(), EarthboundRockProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.EARTH_SHATTERER_PROJECTILE_PROJECTILE.get(), EarthShattererProjectileProjectileRenderer::new);

@@ -2,7 +2,7 @@
   "parent": "catastrophe_mod:custom/naturite_shield",
   "textures": {
     "0": "catastrophe_mod:block/naturite_shield",
-    "particle": "catastrophe_mod:item/naturite_ingot"
+    "particle": "catastrophe_mod:item/naturite_shield"
   },
   "overrides": [
     {

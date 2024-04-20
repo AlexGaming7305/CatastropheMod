@@ -30,6 +30,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.catastrophemod.enchantment.WizardryEnchantment;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 import java.util.function.Supplier;
@@ -178,9 +179,9 @@ public class CatastropheModModVariables {
 				clone.mana_regen_cooldown = original.mana_regen_cooldown;
 				clone.Resilience_Enchantment = original.Resilience_Enchantment;
 				clone.Resilience_Level = original.Resilience_Level;
-				clone.axe_mastery_crest = original.axe_mastery_crest;
-				clone.spear_mastery_crest = original.spear_mastery_crest;
 				clone.is_hit_during_bossfight = original.is_hit_during_bossfight;
+				clone.WizardryEnchantment = original.WizardryEnchantment;
+				clone.WizardryLevel = original.WizardryLevel;
 			}
 		}
 
@@ -446,8 +447,6 @@ public class CatastropheModModVariables {
 		public double mana_regen_cooldown = 0;
 		public boolean Resilience_Enchantment = false;
 		public double Resilience_Level = 0;
-		public double axe_mastery_crest = 0;
-		public double spear_mastery_crest = 0;
 		public boolean mulberry_silk_moth_pet = false;
 		public boolean luna_moth_pet = false;
 		public boolean cecropia_moth_pet = false;
@@ -457,6 +456,8 @@ public class CatastropheModModVariables {
 		public boolean is_hit_during_bossfight = false;
 		public boolean silk_moth_pet_counter = false;
 		public double mana_cost_accursed_tome = 6.0;
+		public boolean WizardryEnchantment = false;
+		public double WizardryLevel = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -562,8 +563,6 @@ public class CatastropheModModVariables {
 			nbt.putDouble("mana_regen_cooldown", mana_regen_cooldown);
 			nbt.putBoolean("Resilience_Enchantment", Resilience_Enchantment);
 			nbt.putDouble("Resilience_Level", Resilience_Level);
-			nbt.putDouble("axe_mastery_crest", axe_mastery_crest);
-			nbt.putDouble("spear_mastery_crest", spear_mastery_crest);
 			nbt.putBoolean("mulberry_silk_moth_pet", mulberry_silk_moth_pet);
 			nbt.putBoolean("luna_moth_pet", luna_moth_pet);
 			nbt.putBoolean("cecropia_moth_pet", cecropia_moth_pet);
@@ -573,6 +572,8 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("is_hit_during_bossfight", is_hit_during_bossfight);
 			nbt.putBoolean("silk_moth_pet_counter", silk_moth_pet_counter);
 			nbt.putDouble("mana_cost_accursed_tome", mana_cost_accursed_tome);
+			nbt.putBoolean("WizardryEnchantment", WizardryEnchantment);
+			nbt.putDouble("WizardryLevel", WizardryLevel);
 			return nbt;
 		}
 
@@ -675,8 +676,6 @@ public class CatastropheModModVariables {
 			mana_regen_cooldown = nbt.getDouble("mana_regen_cooldown");
 			Resilience_Enchantment = nbt.getBoolean("Resilience_Enchantment");
 			Resilience_Level = nbt.getDouble("Resilience_Level");
-			axe_mastery_crest = nbt.getDouble("axe_mastery_crest");
-			spear_mastery_crest = nbt.getDouble("spear_mastery_crest");
 			mulberry_silk_moth_pet = nbt.getBoolean("mulberry_silk_moth_pet");
 			luna_moth_pet = nbt.getBoolean("luna_moth_pet");
 			cecropia_moth_pet = nbt.getBoolean("cecropia_moth_pet");
@@ -686,6 +685,8 @@ public class CatastropheModModVariables {
 			is_hit_during_bossfight = nbt.getBoolean("is_hit_during_bossfight");
 			silk_moth_pet_counter = nbt.getBoolean("silk_moth_pet_counter");
 			mana_cost_accursed_tome = nbt.getDouble("mana_cost_accursed_tome");
+			WizardryEnchantment = nbt.getBoolean("WizardryEnchantment");
+			WizardryLevel = nbt.getDouble("WizardryLevel");
 		}
 	}
 
@@ -807,8 +808,6 @@ public class CatastropheModModVariables {
 					variables.mana_regen_cooldown = message.data.mana_regen_cooldown;
 					variables.Resilience_Enchantment = message.data.Resilience_Enchantment;
 					variables.Resilience_Level = message.data.Resilience_Level;
-					variables.axe_mastery_crest = message.data.axe_mastery_crest;
-					variables.spear_mastery_crest = message.data.spear_mastery_crest;
 					variables.mulberry_silk_moth_pet = message.data.mulberry_silk_moth_pet;
 					variables.luna_moth_pet = message.data.luna_moth_pet;
 					variables.cecropia_moth_pet = message.data.cecropia_moth_pet;
@@ -818,6 +817,8 @@ public class CatastropheModModVariables {
 					variables.is_hit_during_bossfight = message.data.is_hit_during_bossfight;
 					variables.silk_moth_pet_counter = message.data.silk_moth_pet_counter;
 					variables.mana_cost_accursed_tome = message.data.mana_cost_accursed_tome;
+					variables.WizardryEnchantment = message.data.WizardryEnchantment;
+					variables.WizardryLevel = message.data.WizardryLevel;
 				}
 			});
 			context.setPacketHandled(true);

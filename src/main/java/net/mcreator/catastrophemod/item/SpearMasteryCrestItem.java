@@ -24,8 +24,8 @@ public class SpearMasteryCrestItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Grants spears the ability to \u00A74Puncture Targets"));
-		list.add(Component.literal("\u00A77Consecutive Puncture Strikes will increase armor penetration by 1, up to a max of 5"));
+		list.add(Component.literal("\u00A77Grants spears the ability to Lacerate Targets"));
+		list.add(Component.literal("\u00A77Consecutive Puncture Strikes increase armor penetration by 1 with a max of 5"));
 		list.add(Component.literal("\u00A79+5% Spear Damage"));
 	}
 

@@ -94,17 +94,15 @@ public class SpearPunctureProcedureProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (entityiterator instanceof LivingEntity) {
 									if (!(sourceentity == entityiterator)) {
-										LivingHurtEvent event2 = (LivingHurtEvent) event;
-										damage = amount;
-										event2.setAmount((float) damage);
 										if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.IMPALEMENT.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
 											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:impaled")))),
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:impaled"))),
+															sourceentity),
 													(float) (amount + (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.IMPALEMENT.get()) / 2 + 0.5));
 										} else {
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:impaled")))),
-													(float) amount);
+											entityiterator
+													.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:impaled"))),
+															sourceentity), (float) amount);
 										}
 									}
 								}
