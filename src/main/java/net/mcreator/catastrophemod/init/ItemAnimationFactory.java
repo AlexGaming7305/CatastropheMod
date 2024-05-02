@@ -10,6 +10,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.catastrophemod.item.RustgunItem;
 import net.mcreator.catastrophemod.item.RipsawItem;
 import net.mcreator.catastrophemod.item.FlamestrikeItem;
 
@@ -46,6 +47,11 @@ public class ItemAnimationFactory {
 						animatable.animationprocedure = animation;
 						disableUseAnim();
 					}
+				if (event.player.getMainHandItem().getItem() instanceof RustgunItem animatable)
+					if (event.player.level().isClientSide()) {
+						animatable.animationprocedure = animation;
+						disableUseAnim();
+					}
 			}
 			if (!event.player.getOffhandItem().getOrCreateTag().getString("geckoAnim").equals("") && !(event.player.getOffhandItem().getItem() instanceof ArmorItem)) {
 				animation = event.player.getOffhandItem().getOrCreateTag().getString("geckoAnim");
@@ -56,6 +62,11 @@ public class ItemAnimationFactory {
 						disableUseAnim();
 					}
 				if (event.player.getOffhandItem().getItem() instanceof RipsawItem animatable)
+					if (event.player.level().isClientSide()) {
+						animatable.animationprocedure = animation;
+						disableUseAnim();
+					}
+				if (event.player.getOffhandItem().getItem() instanceof RustgunItem animatable)
 					if (event.player.level().isClientSide()) {
 						animatable.animationprocedure = animation;
 						disableUseAnim();

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    "bac",
+    "b  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "catastrophe_mod:rusty_cogwheel"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:rustgun",
+    "count": 1
+  }
+}

@@ -86,6 +86,8 @@ import net.mcreator.catastrophemod.item.SeaBow0Item;
 import net.mcreator.catastrophemod.item.SeaAxeItem;
 import net.mcreator.catastrophemod.item.ScreenshakeTestItemItem;
 import net.mcreator.catastrophemod.item.SandstormSurgeItem;
+import net.mcreator.catastrophemod.item.RustyCogwheelItem;
+import net.mcreator.catastrophemod.item.RustgunItem;
 import net.mcreator.catastrophemod.item.RunningBootsItem;
 import net.mcreator.catastrophemod.item.RottenHeartItem;
 import net.mcreator.catastrophemod.item.RosxiteIngotItem;
@@ -489,6 +491,8 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> ACCURSED_TOME = REGISTRY.register("accursed_tome", () -> new AccursedTomeItem());
 	public static final RegistryObject<Item> SWORD_MASTERY_CREST = REGISTRY.register("sword_mastery_crest", () -> new SwordMasteryCrestItem());
 	public static final RegistryObject<Item> SPEAR_MASTERY_CREST = REGISTRY.register("spear_mastery_crest", () -> new SpearMasteryCrestItem());
+	public static final RegistryObject<Item> RUSTGUN = REGISTRY.register("rustgun", () -> new RustgunItem());
+	public static final RegistryObject<Item> RUSTY_COGWHEEL = REGISTRY.register("rusty_cogwheel", () -> new RustyCogwheelItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

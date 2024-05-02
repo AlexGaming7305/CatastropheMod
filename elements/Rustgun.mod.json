@@ -1,0 +1,90 @@
+{
+  "_fv": 57,
+  "_type": "animateditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "rustgun_texture",
+    "name": "Rustgun",
+    "idle": "0",
+    "rarity": "COMMON",
+    "displaySettings": "rustgun.item.json",
+    "leftArm": "left",
+    "rightArm": "right",
+    "perspective": "All Perspectives",
+    "creativeTab": {
+      "value": "CUSTOM:Bullets"
+    },
+    "firstPersonArms": true,
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 200,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "enableArmPose": true,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§7Iron Rounds break into shards of Rusty Scrap"
+      ]
+    },
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "RustgunRightclicked"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none",
+    "normal": "rustgun.geo.json",
+    "armPoseList": [
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": 80.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": 80.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "Y",
+        "rotation": 0.01,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.01,
+        "swings": false,
+        "followsHead": true
+      }
+    ]
+  }
+}

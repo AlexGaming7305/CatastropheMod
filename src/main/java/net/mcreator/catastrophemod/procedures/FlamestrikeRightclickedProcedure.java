@@ -71,7 +71,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 3, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -90,7 +90,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 3, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -109,7 +109,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 3, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -174,7 +174,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, (float) 2.5, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -193,7 +193,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, (float) 2.5, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -212,7 +212,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, (float) 2.5, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -278,7 +278,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 2, 0, (byte) 1);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -298,7 +298,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 2, 0, (byte) 1);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -318,7 +318,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 2, 0, (byte) 1);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -383,7 +383,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 2, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -402,7 +402,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 2, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -421,7 +421,7 @@ public class FlamestrikeRightclickedProcedure {
 						}
 					}.getArrow(projectileLevel, entity, 2, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 3);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}

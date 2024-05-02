@@ -520,5 +520,23 @@
         "stream": false
       }
     ]
+  },
+  "fiery_blast": {
+    "subtitle": "subtitles.fiery_blast",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:fiery_explosion",
+        "stream": false
+      }
+    ]
+  },
+  "rustgun_shoots": {
+    "subtitle": "subtitles.rustgun_shoots",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:rustgun_shoots",
+        "stream": false
+      }
+    ]
   }
 }
