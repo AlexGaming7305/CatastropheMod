@@ -13808,30 +13808,6 @@
       "path": "~/Items/Weapons/Magic Weapons"
     },
     {
-      "name": "CrystalArkLaserProcedure",
-      "type": "procedure",
-      "sortid": 2354,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystal_ark_laser_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/CrystalArkLaserProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Weapons/Melee Weapons"
-    },
-    {
       "name": "NetheriteShieldDamageReduction",
       "type": "procedure",
       "sortid": 2355,
@@ -14873,7 +14849,7 @@
         ],
         "dependencies": [
           {
-            "name": "sourceentity",
+            "name": "entity",
             "type": "entity"
           },
           {
@@ -21779,75 +21755,6 @@
       "path": "~/Enchantments"
     },
     {
-      "name": "YouJustDontBelieveMe",
-      "type": "achievement",
-      "sortid": 2847,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "you_just_dont_believe_me",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/advancements/you_just_dont_believe_me.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "YouJustDontBelieveMeProcedure",
-      "type": "procedure",
-      "sortid": 2848,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "you_just_dont_believe_me_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/YouJustDontBelieveMeProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "SurfaceCryptFeature",
-      "type": "feature",
-      "sortid": 2849,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "surface_crypt_feature",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/surface_crypt_feature.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/surface_crypt_feature_biome_modifier.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/surface_crypt_feature.json"
-        ],
-        "has_nbt_structure": true
-      },
-      "path": "~/Structures"
-    },
-    {
-      "name": "Parry",
-      "type": "keybind",
-      "sortid": 2850,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/network/ParryMessage.java"
-        ]
-      },
-      "path": "~/Key Binds"
-    },
-    {
       "name": "ParryOnKeyPressed",
       "type": "procedure",
       "sortid": 2851,
@@ -21904,32 +21811,59 @@
       "path": "~/Key Binds"
     },
     {
-      "name": "ImNotGonnaSugarcoatIt",
-      "type": "achievement",
-      "sortid": 2853,
+      "name": "SurfaceCryptFeature",
+      "type": "feature",
+      "sortid": 2849,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "im_not_gonna_sugarcoat_it",
+      "registry_name": "surface_crypt_feature",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/advancements/im_not_gonna_sugarcoat_it.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/surface_crypt_feature.json",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/surface_crypt_feature_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/surface_crypt_feature.json"
+        ],
+        "has_nbt_structure": true
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "YouJustDontBelieveMeProcedure",
+      "type": "procedure",
+      "sortid": 2848,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "you_just_dont_believe_me_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/YouJustDontBelieveMeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/Advancements"
     },
     {
-      "name": "ParryScreenFlash",
-      "type": "overlay",
-      "sortid": 2854,
+      "name": "YouJustDontBelieveMe",
+      "type": "achievement",
+      "sortid": 2847,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "parry_screen_flash",
+      "registry_name": "you_just_dont_believe_me",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/screens/ParryScreenFlashOverlay.java"
+          "src/main/resources/data/catastrophe_mod/advancements/you_just_dont_believe_me.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Advancements"
     },
     {
       "name": "ParryScreenFlashDisplayOverlayIngame",
@@ -21951,6 +21885,194 @@
         ]
       },
       "path": "~/Misc"
+    },
+    {
+      "name": "ParryScreenFlash",
+      "type": "overlay",
+      "sortid": 2854,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_screen_flash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/client/screens/ParryScreenFlashOverlay.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "Parry",
+      "type": "keybind",
+      "sortid": 2850,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/network/ParryMessage.java"
+        ]
+      },
+      "path": "~/Key Binds"
+    },
+    {
+      "name": "ImNotGonnaSugarcoatIt",
+      "type": "achievement",
+      "sortid": 2853,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "im_not_gonna_sugarcoat_it",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/advancements/im_not_gonna_sugarcoat_it.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "PhotonProjectileTrails",
+      "type": "procedure",
+      "sortid": 2852,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "photon_projectile_trails",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/PhotonProjectileTrailsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FieryExplosion",
+      "type": "particle",
+      "sortid": 2847,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiery_explosion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/client/particle/FieryExplosionParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/fiery_explosion.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "StarryNightEffects",
+      "type": "procedure",
+      "sortid": 2853,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starry_night_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/StarryNightEffectsProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Rustgun",
+      "type": "animateditem",
+      "sortid": 2848,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rustgun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/item/model/RustgunItemModel.java",
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/RustgunItemRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/item/RustgunItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/rustgun.json"
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "RustyCogwheel",
+      "type": "item",
+      "sortid": 2850,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rusty_cogwheel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/rusty_cogwheel.json",
+          "src/main/java/net/mcreator/catastrophemod/item/RustyCogwheelItem.java"
+        ]
+      },
+      "path": "~/Items/Miscellaneous"
+    },
+    {
+      "name": "RustgunRecipe",
+      "type": "recipe",
+      "sortid": 2851,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rustgun_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/recipes/rustgun_recipe.json"
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "RustgunRightclicked",
+      "type": "procedure",
+      "sortid": 2849,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rustgun_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/RustgunRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
     }
   ],
   "variable_elements": [
@@ -22609,16 +22731,16 @@
       "value": "0"
     },
     {
-      "name": "parry_cooldown",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
       "name": "parry_screen_flash",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "parry_cooldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
     }
   ],
   "sound_elements": [
@@ -23093,6 +23215,22 @@
       ],
       "category": "hostile",
       "subtitle": "Sinister whisper"
+    },
+    {
+      "name": "rustgun_shoots",
+      "files": [
+        "rustgun_shoots"
+      ],
+      "category": "player",
+      "subtitle": "Rustgun shoots"
+    },
+    {
+      "name": "fiery_blast",
+      "files": [
+        "fiery_explosion"
+      ],
+      "category": "player",
+      "subtitle": "Fiery blast"
     }
   ],
   "language_map": {
@@ -23101,9 +23239,9 @@
       "item.alexs_mod.ark_needle": "Ark Needle",
       "item.alexs_mod.storm_bow_2": "Storm Bow 2",
       "item.catastrophe_mod.reinforced_iron_armor_boots": "§7Reinforced Boots",
-      "item.alexs_mod.storm_bow_0": "Storm Bow 0",
-      "gui.alexs_mod.quest_book_gui.label_3_collect_1_wuflar": "3. Collect 1 Wuflar",
       "item.catastrophe_mod.nature_defender": "§2Nature Defender",
+      "gui.alexs_mod.quest_book_gui.label_3_collect_1_wuflar": "3. Collect 1 Wuflar",
+      "item.alexs_mod.storm_bow_0": "Storm Bow 0",
       "item.alexs_mod.storm_bow_1": "Storm Bow 1",
       "entity.alexs_mod.abyssal_skater": "Abyssal Skater",
       "entity.alexs_mod.kolden_energy": "Kyolden Energy",
@@ -23116,6 +23254,7 @@
       "block.catastrophe_mod.charred_tiles_stairs": "Charred Tiles Stairs",
       "item.alexs_mod.flaming_glow": "Flaming Glow",
       "item.catastrophe_mod.music_disc_nethers_fury": "Music Disc",
+      "subtitles.fiery_blast": "Fiery blast",
       "entity.alexs_mod.firefly": "Firefly",
       "item.alexs_mod.galaxy_striker": "Galaxy Striker",
       "block.alexs_mod.laboratory_column_block": "Laboratory Column Block",
@@ -23169,6 +23308,7 @@
       "effect.alexs_mod.bullseye": "Bullseye",
       "item.catastrophe_mod.venomous_bow_0": "Venomous Bow 0",
       "item.catastrophe_mod.venomous_bow_1": "Venomous Bow 1",
+      "subtitles.rustgun_shoots": "Rustgun shoots",
       "item.catastrophe_mod.venomous_bow_2": "Venomous Bow 2",
       "block.alexs_mod.natureite_ore": "§aNaturite Ore",
       "item.alexs_mod.ancient_armor_leggings": "Ancient Leggings",
@@ -23220,7 +23360,7 @@
       "item.alexs_mod.hunter_leggings": "Hunter Leggings",
       "item_group.catastrophe_mod.accessories": "Accessories",
       "gui.alexs_mod.aegex_2_gui.label_been_dropping_recently": "been dropping recently",
-      "advancements.catastrophe.descr": "A scarred world left to burn in it\u0027s own flames",
+      "advancements.catastrophe.descr": "A scarred world left to burn in its own flames",
       "effect.catastrophe_mod.electrified": "Electrified",
       "item.catastrophe_mod.naturite_bow": "§aNaturite Bow",
       "block.alexs_mod.overgrown_trapdoor": "Overgrown Trapdoor",
@@ -23968,6 +24108,7 @@
       "item.alexs_mod.kyles_blade": "§e§lKyle\u0027s Blade",
       "item.alexs_mod.bartosa_metal_scrap": "Bartosa Metal Scrap",
       "attribute.catastrophe_mod.mana_regeneration": "Mana Regeneration",
+      "item.catastrophe_mod.rusty_cogwheel": "Rusty Cogwheel",
       "item.alexs_mod.golden_spear": "Golden Spear",
       "item.alexs_mod.bartosa_bazooka_ammunition": "Bartosa Bazooka Ammunition",
       "item.alexs_mod.marksmans_crest": "Marksman\u0027s Crest",
@@ -24506,6 +24647,7 @@
       "effect.alexs_mod.heavy_recoil_gun_condition": "Heavy Recoil Gun Condition",
       "entity.alexs_mod.alex_missile": "Creativity Missile",
       "item.alexs_mod.rod_of_teleportation": "§5Rod of Teleportation",
+      "item.catastrophe_mod.rustgun": "Rustgun",
       "item.catastrophe_mod.spearthe_gungnir": "§4Spear the Gungnir",
       "subtitles.explode": "Explode",
       "entity.alexs_mod.toast_mercanary": "Toast Mercanary",
@@ -24698,19 +24840,23 @@
     "name": "~",
     "children": [
       {
+        "name": "Misc",
+        "children": []
+      },
+      {
         "name": "Advancements",
         "children": []
       },
       {
+        "name": "Key Binds",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
+        "children": []
+      },
+      {
         "name": "Biomes",
-        "children": []
-      },
-      {
-        "name": "Enchantments",
-        "children": []
-      },
-      {
-        "name": "Entities",
         "children": []
       },
       {
@@ -24721,11 +24867,11 @@
             "children": []
           },
           {
-            "name": "Ammunition",
+            "name": "Tools",
             "children": []
           },
           {
-            "name": "Armor",
+            "name": "Ammunition",
             "children": []
           },
           {
@@ -24733,34 +24879,34 @@
             "children": []
           },
           {
-            "name": "Food",
-            "children": []
-          },
-          {
             "name": "Miscellaneous",
             "children": []
           },
           {
-            "name": "Tools",
+            "name": "Food",
+            "children": []
+          },
+          {
+            "name": "Armor",
             "children": []
           },
           {
             "name": "Weapons",
             "children": [
               {
-                "name": "Melee Weapons",
-                "children": []
-              },
-              {
                 "name": "Ranged Weapons",
                 "children": []
               },
               {
-                "name": "Magic Weapons",
+                "name": "Summoner Weapons",
                 "children": []
               },
               {
-                "name": "Summoner Weapons",
+                "name": "Melee Weapons",
+                "children": []
+              },
+              {
+                "name": "Magic Weapons",
                 "children": []
               }
             ]
@@ -24768,15 +24914,7 @@
         ]
       },
       {
-        "name": "Key Binds",
-        "children": []
-      },
-      {
-        "name": "Minions",
-        "children": []
-      },
-      {
-        "name": "Misc",
+        "name": "Projectiles",
         "children": []
       },
       {
@@ -24784,15 +24922,19 @@
         "children": []
       },
       {
-        "name": "Potion Effects",
-        "children": []
-      },
-      {
-        "name": "Projectiles",
+        "name": "Entities",
         "children": []
       },
       {
         "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Minions",
+        "children": []
+      },
+      {
+        "name": "Enchantments",
         "children": []
       }
     ]
@@ -24811,7 +24953,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
       "curios_api",
       "geckolib",
       "playeranimator"

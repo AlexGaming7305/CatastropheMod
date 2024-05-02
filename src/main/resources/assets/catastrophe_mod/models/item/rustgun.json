@@ -1,0 +1,6 @@
+{
+  "parent": "catastrophe_mod:displaysettings/rustgun.item",
+  "textures": {
+    "layer0": "catastrophe_mod:item/rustgun_texture"
+  }
+}

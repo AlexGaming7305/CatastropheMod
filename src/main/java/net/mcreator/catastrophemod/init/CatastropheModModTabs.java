@@ -176,6 +176,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.FLAMESTRIKE.get());
 				tabData.accept(CatastropheModModItems.RIPSAW.get());
 				tabData.accept(CatastropheModModItems.STORM_ARROW.get());
+				tabData.accept(CatastropheModModItems.RUSTGUN.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
@@ -259,6 +260,10 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.SILK_MOTH_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ANGLERFISH_SPAWN_EGG.get());
+		}
+
+		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+			tabData.accept(CatastropheModModItems.RUSTY_COGWHEEL.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

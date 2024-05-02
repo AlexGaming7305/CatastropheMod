@@ -19,6 +19,7 @@ import net.mcreator.catastrophemod.client.particle.PhantomBlastGlowParticle;
 import net.mcreator.catastrophemod.client.particle.HealingSparkParticle;
 import net.mcreator.catastrophemod.client.particle.GreenCursedSparkParticle;
 import net.mcreator.catastrophemod.client.particle.FlameExplosionParticle;
+import net.mcreator.catastrophemod.client.particle.FieryExplosionParticle;
 import net.mcreator.catastrophemod.client.particle.ElectrifiedTrailParticle;
 import net.mcreator.catastrophemod.client.particle.ElectrifiedSparkParticle;
 import net.mcreator.catastrophemod.client.particle.DashIndicatorParticle;
@@ -52,5 +53,6 @@ public class CatastropheModModParticles {
 		event.registerSpriteSet(CatastropheModModParticleTypes.SPARK.get(), SparkParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.CRYSTAL_BLAST.get(), CrystalBlastParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.ACCURSED_SHIMMER.get(), AccursedShimmerParticle::provider);
+		event.registerSpriteSet(CatastropheModModParticleTypes.FIERY_EXPLOSION.get(), FieryExplosionParticle::provider);
 	}
 }

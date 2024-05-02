@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Catastrophe",
-    "achievementDescription": "A scarred world left to burn in it's own flames",
+    "achievementDescription": "A scarred world left to burn in its own flames",
     "achievementIcon": {
       "value": "CUSTOM:CatastropheModIcon"
     },

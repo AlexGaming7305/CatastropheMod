@@ -76,4 +76,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> KNIFE_FLYING = REGISTRY.register("knife_flying", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "knife_flying")));
 	public static final RegistryObject<SoundEvent> SPEAR_PUNCTURE = REGISTRY.register("spear_puncture", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "spear_puncture")));
 	public static final RegistryObject<SoundEvent> SOMETHING_WICKED = REGISTRY.register("something_wicked", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "something_wicked")));
+	public static final RegistryObject<SoundEvent> RUSTGUN_SHOOTS = REGISTRY.register("rustgun_shoots", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "rustgun_shoots")));
+	public static final RegistryObject<SoundEvent> FIERY_BLAST = REGISTRY.register("fiery_blast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "fiery_blast")));
 }

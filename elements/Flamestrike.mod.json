@@ -55,7 +55,15 @@
         "armHeld": "LEFT",
         "arm": "LEFT",
         "angle": "X",
-        "rotation": 1.0,
+        "rotation": 80.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": 80.0,
         "swings": false,
         "followsHead": true
       },
@@ -63,15 +71,15 @@
         "armHeld": "LEFT",
         "arm": "LEFT",
         "angle": "Y",
-        "rotation": 1.0,
+        "rotation": 0.01,
         "swings": false,
         "followsHead": true
       },
       {
-        "armHeld": "LEFT",
-        "arm": "LEFT",
-        "angle": "Z",
-        "rotation": 1.0,
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.01,
         "swings": false,
         "followsHead": true
       }
