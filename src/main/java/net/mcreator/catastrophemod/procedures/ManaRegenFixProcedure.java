@@ -137,5 +137,12 @@ public class ManaRegenFixProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.is_hit_during_bossfight = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

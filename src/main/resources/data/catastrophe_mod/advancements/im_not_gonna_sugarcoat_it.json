@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:earth_gauntlet"
+    },
+    "title": {
+      "translate": "advancements.im_not_gonna_sugarcoat_it.title"
+    },
+    "description": {
+      "translate": "advancements.im_not_gonna_sugarcoat_it.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "im_not_gonna_sugarcoat_it": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:catastrophe"
+}

@@ -378,61 +378,6 @@
       "path": "~/Items/Weapons/Melee Weapons"
     },
     {
-      "name": "BookofBlades",
-      "type": "item",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bookof_blades",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/bookof_blades.json",
-          "src/main/java/net/mcreator/catastrophemod/item/BookofBladesItem.java"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "BookofBladesRightClickedInAir",
-      "type": "procedure",
-      "sortid": 448,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bookof_blades_right_clicked_in_air",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/BookofBladesRightClickedInAirProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "AlexsModLogo",
       "type": "painting",
       "sortid": 507,
@@ -557,20 +502,6 @@
         ]
       },
       "path": "~/Items/Miscellaneous"
-    },
-    {
-      "name": "BookofBladesRecipe",
-      "type": "recipe",
-      "sortid": 541,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bookof_blades_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/bookof_blades_recipe.json"
-        ]
-      },
-      "path": "~/Items"
     },
     {
       "name": "Mage",
@@ -12355,42 +12286,6 @@
       "path": "~/Items/Armor"
     },
     {
-      "name": "EnchantedSwordWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 2253,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enchanted_sword_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/EnchantedSwordWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
       "name": "IceRecipe",
       "type": "recipe",
       "sortid": 2255,
@@ -13557,118 +13452,6 @@
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
-    },
-    {
-      "name": "EnchantedSwordOrbit",
-      "type": "animatedentity",
-      "sortid": 2327,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enchanted_sword_orbit",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/EnchantedSwordOrbitModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/EnchantedSwordOrbitEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/EnchantedSwordOrbitRenderer.java"
-        ]
-      },
-      "path": "~/Entities"
-    },
-    {
-      "name": "EnchantedSwordOrbitOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 2328,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enchanted_sword_orbit_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/EnchantedSwordOrbitOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Entities"
-    },
-    {
-      "name": "BookOfBladesProcedure",
-      "type": "procedure",
-      "sortid": 2329,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "book_of_blades_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/BookOfBladesProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "BookOfBladesManaDrain",
-      "type": "procedure",
-      "sortid": 2330,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "book_of_blades_mana_drain",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/BookOfBladesManaDrainProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items"
     },
     {
       "name": "IceShardProjectileHitsLivingEntity",
@@ -18138,23 +17921,6 @@
       "path": "~/Items/Blocks"
     },
     {
-      "name": "CursedArmorSetBonus2",
-      "type": "procedure",
-      "sortid": 2585,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "cursed_armor_set_bonus_2",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Armor"
-    },
-    {
       "name": "SeaCrystalCluster",
       "type": "block",
       "sortid": 2586,
@@ -19714,21 +19480,6 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/ShadowFireSoulFriendlyProjectileEntity.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadowFireSoulFriendlyProjectileRenderer.java"
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "EnchantedSwordProjectile",
-      "type": "projectile",
-      "sortid": 2716,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enchanted_sword_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/EnchantedSwordProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/EnchantedSwordProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -22026,6 +21777,180 @@
         ]
       },
       "path": "~/Enchantments"
+    },
+    {
+      "name": "YouJustDontBelieveMe",
+      "type": "achievement",
+      "sortid": 2847,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "you_just_dont_believe_me",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/advancements/you_just_dont_believe_me.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "YouJustDontBelieveMeProcedure",
+      "type": "procedure",
+      "sortid": 2848,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "you_just_dont_believe_me_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/YouJustDontBelieveMeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "SurfaceCryptFeature",
+      "type": "feature",
+      "sortid": 2849,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "surface_crypt_feature",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/surface_crypt_feature.json",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/surface_crypt_feature_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/surface_crypt_feature.json"
+        ],
+        "has_nbt_structure": true
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "Parry",
+      "type": "keybind",
+      "sortid": 2850,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/network/ParryMessage.java"
+        ]
+      },
+      "path": "~/Key Binds"
+    },
+    {
+      "name": "ParryOnKeyPressed",
+      "type": "procedure",
+      "sortid": 2851,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ParryOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Key Binds"
+    },
+    {
+      "name": "ParryCooldown",
+      "type": "procedure",
+      "sortid": 2852,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ParryCooldownProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Key Binds"
+    },
+    {
+      "name": "ImNotGonnaSugarcoatIt",
+      "type": "achievement",
+      "sortid": 2853,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "im_not_gonna_sugarcoat_it",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/advancements/im_not_gonna_sugarcoat_it.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ParryScreenFlash",
+      "type": "overlay",
+      "sortid": 2854,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_screen_flash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/client/screens/ParryScreenFlashOverlay.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ParryScreenFlashDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 2855,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_screen_flash_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ParryScreenFlashDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -22682,6 +22607,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "parry_cooldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "parry_screen_flash",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -23148,6 +23085,14 @@
       ],
       "category": "player",
       "subtitle": "Spear puncture"
+    },
+    {
+      "name": "something_wicked",
+      "files": [
+        "somethingevil"
+      ],
+      "category": "hostile",
+      "subtitle": "Sinister whisper"
     }
   ],
   "language_map": {
@@ -23327,6 +23272,7 @@
       "item.catastrophe_mod.music_disc_outside_of_the_atmosphere": "Music Disc",
       "item.alexs_mod.credits_music_disc": "Music Disc",
       "item.alexs_mod.blink_tech_device": "Blink Tech Device",
+      "advancements.im_not_gonna_sugarcoat_it.descr": "Successfully perform a parry",
       "entity.alexs_mod.thorn_infested_armor": "Thorn Infested Armor",
       "item.alexs_mod.alex_loot_bundle": "Alex Loot Bundle",
       "block.alexs_mod.calico_mushroom": "Calico Mushroom Block",
@@ -23392,7 +23338,6 @@
       "death.attack.bleed.item": "%1$s bled out to death",
       "entity.alexs_mod.wuflar_hoverbot": "Wuflar Hoverbot",
       "item.catastrophe_mod.thorn_boots": "§2Thorn Boots",
-      "item.catastrophe_mod.enchanted_sword_orbit_spawn_egg": "Enchanted Sword Orbit Spawn Egg",
       "item.catastrophe_mod.spell_of_ice": "§bSpell of Ice",
       "item.alexs_mod.murky_slime": "Murky Slime",
       "subtitles.laser_gun": "Laser Gun",
@@ -23407,6 +23352,7 @@
       "item.catastrophe_mod.music_disc_overgrown_grove.desc": "Freddy Frostbear - Overgrown Grove",
       "item.alexs_mod.worm_body_spawn_egg": "Destroyer Body Spawn Egg",
       "item.catastrophe_mod.golden_bracelet": "Golden Necklace",
+      "advancements.you_just_dont_believe_me.title": "You Just Don\u0027t Believe Me",
       "subtitles.strike_you_down": "Strike You Down!",
       "gui.alexs_mod.quest_book_gui.label_3_wuflar_metal_scraps_are_a_dro": "3. Wuflar Metal Scraps are a drop from wuflar",
       "effect.alexs_mod.alexs_shield_effect": "Shield Effect",
@@ -23421,7 +23367,6 @@
       "block.alexs_mod.star_block": "Star Block",
       "gui.alexs_mod.aegex_5_gui.label_we_will_meet_someday": "We will meet someday,",
       "effect.alexs_mod.cooldown_effect": "cooldown",
-      "options.difficulty.hard": "Yes",
       "block.alexs_mod.natureite_block": "§aBlock of Naturite",
       "item.catastrophe_mod.mineral_wraith_spawn_egg": "Mineral Wraith Spawn Egg",
       "item.alexs_mod.prismal_helmet": "§bPrismal Helmet",
@@ -23669,11 +23614,13 @@
       "item.alexs_mod.natures_blessing_helmet": "§2Nature\u0027s Blessing Helmet",
       "effect.catastrophe_mod.marked_for_death": "Marked For Death",
       "item.catastrophe_mod.mana_rose": "Mana Rose",
+      "advancements.im_not_gonna_sugarcoat_it.title": "I\u0027m Not Gonna Sugarcoat It",
       "item.minecraft.potion.effect.bullseye_potion_long": "Potion of Bullseye",
       "item.catastrophe_mod.thorn_infested_armor_loot_bundle": "Thorn Infested Armor Loot Bundle",
       "subtitles.thorn_infested_armor_dashes": "Something dashes",
       "item.alexs_mod.fly_minion_spawn_egg": "Fly Minion Spawn Egg",
       "entity.catastrophe_mod.hermit_crab_minion": "Hermit Crab Minion",
+      "subtitles.something_wicked": "Sinister whisper",
       "block.alexs_mod.overgrown_planks": "Overgrown Planks",
       "item.catastrophe_mod.spore_zombie_spawn_egg": "Spore Zombie Spawn Egg",
       "gui.alexs_mod.aegex_2_gui.label_i_could_create": "I could create!",
@@ -23988,7 +23935,6 @@
       "block.alexs_mod.emberstone": "Emberstone",
       "item.catastrophe_mod.cactus_cutter": "§2Cactus Cutter",
       "item.catastrophe_mod.spellof_lightning": "§bSpell of Lightning",
-      "item.catastrophe_mod.bookof_blades": "Book of Blades",
       "block.catastrophe_mod.polished_charred_stone": "Polished Charred Stone",
       "effect.alexs_mod.dash_ready": "Dash Ready!",
       "item.alexs_mod.sigilof_sacrific": "Sigil of Sacrific",
@@ -24342,6 +24288,7 @@
       "subtitles.sharp_and_fiery_weapon_is_swung": "Sharp And Fiery Weapon Is Swung",
       "item.minecraft.lingering_potion.effect.intelligence_strong": "Lingering Potion of Intelligence",
       "item.catastrophe_mod.spell_tome": "Spell Tome",
+      "advancements.you_just_dont_believe_me.descr": "I told you it\u0027s nothing",
       "item.catastrophe_mod.moss_leggings": "§2Mossy Leggings",
       "item.alexs_mod.healing_vial": "Healing Vial",
       "item.alexs_mod.crystal_firework": "Crystal Firework",
@@ -24671,7 +24618,6 @@
       "block.alexs_mod.mana_rose_plant": "Mana Rose",
       "item.catastrophe_mod.shadowflame_skull": "§8Shadowflame Skull",
       "block.alexs_mod.laboratory_panel_stairs": "Laboratory Panel Stairs",
-      "entity.catastrophe_mod.enchanted_sword_orbit": "Enchanted Sword Orbit",
       "item.alexs_mod.bartosa_boots": "Bartosa Rocket Boots",
       "item.alexs_mod.blaze_wand": "Blaze Wand",
       "gui.alexs_mod.quest_book_gui.label_4_kill_the_mineral": "4. Kill The Mineral",
@@ -24699,6 +24645,7 @@
       "item.catastrophe_mod.rosxite_ingot": "§2Rosxite Ingot",
       "effect.alexs_mod.alex_phase_2": "Alex Phase 2",
       "effect.alexs_mod.alex_phase_3": "Alex Phase 3",
+      "key.catastrophe_mod.parry": "Parry",
       "entity.catastrophe_mod.spore_zombie": "Spore Zombie",
       "item.catastrophe_mod.purified_calico_mushroom_stew": "Purified Calico Mushroom Stew",
       "entity.alexs_mod.kaylas_briliance": "§kHellion",
@@ -24864,6 +24811,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "curios_api",
       "geckolib",
       "playeranimator"

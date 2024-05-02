@@ -21,6 +21,11 @@ public class BlossomFloraItem extends Item {
 	}
 
 	@Override
+	public int getEnchantmentValue() {
+		return 8;
+	}
+
+	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(Component.literal("\u00A7aRight-click: \u00A77Casts a Healing Blossom which grants \u00A79Regeneration \u00A7b(Costs 10 Mana)"));

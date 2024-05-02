@@ -520,5 +520,14 @@
         "stream": false
       }
     ]
+  },
+  "something_wicked": {
+    "subtitle": "subtitles.something_wicked",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:somethingevil",
+        "stream": false
+      }
+    ]
   }
 }

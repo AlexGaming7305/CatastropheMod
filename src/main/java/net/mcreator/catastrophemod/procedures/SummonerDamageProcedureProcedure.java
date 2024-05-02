@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -33,11 +34,13 @@ public class SummonerDamageProcedureProcedure {
 		if (sourceentity == null)
 			return;
 		double damage = 0;
-		if (sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:summons")))
-				|| sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:accessory_summons")))) {
-			LivingHurtEvent event2 = (LivingHurtEvent) event;
-			damage = amount + (amount * ((LivingEntity) (sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)).getAttribute(CatastropheModModAttributes.SUMMONERDAMAGE.get()).getBaseValue()) / 100;
-			event2.setAmount((float) damage);
+		if (sourceentity instanceof Player) {
+			if (sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:summons")))
+					|| sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:accessory_summons")))) {
+				LivingHurtEvent event2 = (LivingHurtEvent) event;
+				damage = amount + (amount * ((LivingEntity) (sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)).getAttribute(CatastropheModModAttributes.SUMMONERDAMAGE.get()).getBaseValue()) / 100;
+				event2.setAmount((float) damage);
+			}
 		}
 	}
 }

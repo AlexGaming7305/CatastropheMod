@@ -182,6 +182,8 @@ public class CatastropheModModVariables {
 				clone.is_hit_during_bossfight = original.is_hit_during_bossfight;
 				clone.WizardryEnchantment = original.WizardryEnchantment;
 				clone.WizardryLevel = original.WizardryLevel;
+				clone.parry_cooldown = original.parry_cooldown;
+				clone.parry_screen_flash = original.parry_screen_flash;
 			}
 		}
 
@@ -458,6 +460,8 @@ public class CatastropheModModVariables {
 		public double mana_cost_accursed_tome = 6.0;
 		public boolean WizardryEnchantment = false;
 		public double WizardryLevel = 0;
+		public double parry_cooldown = 0.0;
+		public boolean parry_screen_flash = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -574,6 +578,8 @@ public class CatastropheModModVariables {
 			nbt.putDouble("mana_cost_accursed_tome", mana_cost_accursed_tome);
 			nbt.putBoolean("WizardryEnchantment", WizardryEnchantment);
 			nbt.putDouble("WizardryLevel", WizardryLevel);
+			nbt.putDouble("parry_cooldown", parry_cooldown);
+			nbt.putBoolean("parry_screen_flash", parry_screen_flash);
 			return nbt;
 		}
 
@@ -687,6 +693,8 @@ public class CatastropheModModVariables {
 			mana_cost_accursed_tome = nbt.getDouble("mana_cost_accursed_tome");
 			WizardryEnchantment = nbt.getBoolean("WizardryEnchantment");
 			WizardryLevel = nbt.getDouble("WizardryLevel");
+			parry_cooldown = nbt.getDouble("parry_cooldown");
+			parry_screen_flash = nbt.getBoolean("parry_screen_flash");
 		}
 	}
 
@@ -819,6 +827,8 @@ public class CatastropheModModVariables {
 					variables.mana_cost_accursed_tome = message.data.mana_cost_accursed_tome;
 					variables.WizardryEnchantment = message.data.WizardryEnchantment;
 					variables.WizardryLevel = message.data.WizardryLevel;
+					variables.parry_cooldown = message.data.parry_cooldown;
+					variables.parry_screen_flash = message.data.parry_screen_flash;
 				}
 			});
 			context.setPacketHandled(true);

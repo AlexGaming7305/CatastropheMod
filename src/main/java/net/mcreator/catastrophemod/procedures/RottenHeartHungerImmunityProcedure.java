@@ -32,8 +32,10 @@ public class RottenHeartHungerImmunityProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(CatastropheModModItems.ROTTEN_HEART.get(), lv).isPresent() : false) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(MobEffects.HUNGER);
+			if (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.HUNGER)) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.HUNGER);
+			}
 		}
 	}
 }

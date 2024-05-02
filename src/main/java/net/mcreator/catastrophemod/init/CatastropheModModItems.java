@@ -204,7 +204,6 @@ import net.mcreator.catastrophemod.item.CatastropheModIconItem;
 import net.mcreator.catastrophemod.item.CalicoMushroomStewItem;
 import net.mcreator.catastrophemod.item.CactusCutterItem;
 import net.mcreator.catastrophemod.item.BulletShellItem;
-import net.mcreator.catastrophemod.item.BookofBladesItem;
 import net.mcreator.catastrophemod.item.BlossomFloraItem;
 import net.mcreator.catastrophemod.item.BlizzardItem;
 import net.mcreator.catastrophemod.item.BeetleCallerItem;
@@ -227,7 +226,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> REINFORCED_IRON_ARMOR_LEGGINGS = REGISTRY.register("reinforced_iron_armor_leggings", () -> new Reinforced_IronArmorItem.Leggings());
 	public static final RegistryObject<Item> REINFORCED_IRON_ARMOR_BOOTS = REGISTRY.register("reinforced_iron_armor_boots", () -> new Reinforced_IronArmorItem.Boots());
 	public static final RegistryObject<Item> ICE_SWORD = REGISTRY.register("ice_sword", () -> new IceSwordItem());
-	public static final RegistryObject<Item> BOOKOF_BLADES = REGISTRY.register("bookof_blades", () -> new BookofBladesItem());
 	public static final RegistryObject<Item> CALICO_MUSHROOM = block(CatastropheModModBlocks.CALICO_MUSHROOM);
 	public static final RegistryObject<Item> COPPER_SHARD = REGISTRY.register("copper_shard", () -> new CopperShardItem());
 	public static final RegistryObject<Item> POISONED_IRON_HEART = REGISTRY.register("poisoned_iron_heart", () -> new PoisonedIronHeartItem());

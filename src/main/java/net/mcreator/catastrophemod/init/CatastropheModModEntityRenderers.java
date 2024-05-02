@@ -71,8 +71,6 @@ import net.mcreator.catastrophemod.client.renderer.FlameProjectileProjectileRend
 import net.mcreator.catastrophemod.client.renderer.FirebrandSlashRenderer;
 import net.mcreator.catastrophemod.client.renderer.FierySlashProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.FieryRoundProjectileRenderer;
-import net.mcreator.catastrophemod.client.renderer.EnchantedSwordProjectileRenderer;
-import net.mcreator.catastrophemod.client.renderer.EnchantedSwordOrbitRenderer;
 import net.mcreator.catastrophemod.client.renderer.ElectrifiedRoundProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.EarthboundWraithRenderer;
 import net.mcreator.catastrophemod.client.renderer.EarthboundRockShardProjectileRenderer;
@@ -128,7 +126,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.SHADOWFLAME_SPEARS.get(), ShadowflameSpearsRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.DESCENDING_MISERY.get(), DescendingMiseryRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.CHARRED_SKELETON_GUARD.get(), CharredSkeletonGuardRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.ENCHANTED_SWORD_ORBIT.get(), EnchantedSwordOrbitRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.NETTLE.get(), NettleRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.NETTLE_MINION.get(), NettleMinionRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.BLAZING_PHOENIX.get(), BlazingPhoenixRenderer::new);
@@ -164,7 +161,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.NATURE_BLAST_PROJECTILE.get(), NatureBlastProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SHADOWFIRE_SOUL_PROJECTILE.get(), ShadowfireSoulProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SHADOW_FIRE_SOUL_FRIENDLY_PROJECTILE.get(), ShadowFireSoulFriendlyProjectileRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.ENCHANTED_SWORD_PROJECTILE.get(), EnchantedSwordProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SHADOWFIRE_SKULL_PROJECTILE.get(), ShadowfireSkullProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SPORE_PROJECTILE.get(), SporeProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.VULNERABILITY_SKULL_PROJECTILE.get(), VulnerabilitySkullProjectileRenderer::new);

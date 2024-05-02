@@ -77,8 +77,6 @@ import net.mcreator.catastrophemod.entity.FlameProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
 import net.mcreator.catastrophemod.entity.FierySlashProjectileEntity;
 import net.mcreator.catastrophemod.entity.FieryRoundProjectileEntity;
-import net.mcreator.catastrophemod.entity.EnchantedSwordProjectileEntity;
-import net.mcreator.catastrophemod.entity.EnchantedSwordOrbitEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
 import net.mcreator.catastrophemod.entity.EarthboundRockShardProjectileEntity;
@@ -174,8 +172,6 @@ public class CatastropheModModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DescendingMiseryEntity::new).fireImmune().sized(0.2f, 1.3f));
 	public static final RegistryObject<EntityType<CharredSkeletonGuardEntity>> CHARRED_SKELETON_GUARD = register("charred_skeleton_guard", EntityType.Builder.<CharredSkeletonGuardEntity>of(CharredSkeletonGuardEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CharredSkeletonGuardEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<EnchantedSwordOrbitEntity>> ENCHANTED_SWORD_ORBIT = register("enchanted_sword_orbit", EntityType.Builder.<EnchantedSwordOrbitEntity>of(EnchantedSwordOrbitEntity::new, MobCategory.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EnchantedSwordOrbitEntity::new).fireImmune().sized(0.1f, 0.1f));
 	public static final RegistryObject<EntityType<NettleEntity>> NETTLE = register("nettle",
 			EntityType.Builder.<NettleEntity>of(NettleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NettleEntity::new)
 
@@ -271,9 +267,6 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<ShadowFireSoulFriendlyProjectileEntity>> SHADOW_FIRE_SOUL_FRIENDLY_PROJECTILE = register("projectile_shadow_fire_soul_friendly_projectile",
 			EntityType.Builder.<ShadowFireSoulFriendlyProjectileEntity>of(ShadowFireSoulFriendlyProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(ShadowFireSoulFriendlyProjectileEntity::new).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<EnchantedSwordProjectileEntity>> ENCHANTED_SWORD_PROJECTILE = register("projectile_enchanted_sword_projectile",
-			EntityType.Builder.<EnchantedSwordProjectileEntity>of(EnchantedSwordProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(EnchantedSwordProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ShadowfireSkullProjectileEntity>> SHADOWFIRE_SKULL_PROJECTILE = register("projectile_shadowfire_skull_projectile",
 			EntityType.Builder.<ShadowfireSkullProjectileEntity>of(ShadowfireSkullProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(ShadowfireSkullProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -372,7 +365,6 @@ public class CatastropheModModEntities {
 			ShadowflameSpearsEntity.init();
 			DescendingMiseryEntity.init();
 			CharredSkeletonGuardEntity.init();
-			EnchantedSwordOrbitEntity.init();
 			NettleEntity.init();
 			NettleMinionEntity.init();
 			BlazingPhoenixEntity.init();
@@ -420,7 +412,6 @@ public class CatastropheModModEntities {
 		event.put(SHADOWFLAME_SPEARS.get(), ShadowflameSpearsEntity.createAttributes().build());
 		event.put(DESCENDING_MISERY.get(), DescendingMiseryEntity.createAttributes().build());
 		event.put(CHARRED_SKELETON_GUARD.get(), CharredSkeletonGuardEntity.createAttributes().build());
-		event.put(ENCHANTED_SWORD_ORBIT.get(), EnchantedSwordOrbitEntity.createAttributes().build());
 		event.put(NETTLE.get(), NettleEntity.createAttributes().build());
 		event.put(NETTLE_MINION.get(), NettleMinionEntity.createAttributes().build());
 		event.put(BLAZING_PHOENIX.get(), BlazingPhoenixEntity.createAttributes().build());

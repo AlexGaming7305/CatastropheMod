@@ -27,7 +27,6 @@ import net.mcreator.catastrophemod.entity.HermitCrabEntity;
 import net.mcreator.catastrophemod.entity.FuriousWindEntity;
 import net.mcreator.catastrophemod.entity.FreezingCoreEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
-import net.mcreator.catastrophemod.entity.EnchantedSwordOrbitEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
 import net.mcreator.catastrophemod.entity.EarthboundFistEntity;
 import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
@@ -196,13 +195,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof CharredSkeletonGuardEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof EnchantedSwordOrbitEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

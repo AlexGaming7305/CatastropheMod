@@ -23,7 +23,6 @@ public class CatastropheModModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CatastropheModMod.MODID);
 	public static final RegistryObject<CreativeModeTab> MAGE = REGISTRY.register("mage",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.mage")).icon(() -> new ItemStack(CatastropheModModItems.BLIZZARD.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CatastropheModModItems.BOOKOF_BLADES.get());
 				tabData.accept(CatastropheModModItems.SPELL_OF_FLAMES.get());
 				tabData.accept(CatastropheModModItems.SPELLOF_LIGHTNING.get());
 				tabData.accept(CatastropheModModItems.SPELLOF_POISON.get());
