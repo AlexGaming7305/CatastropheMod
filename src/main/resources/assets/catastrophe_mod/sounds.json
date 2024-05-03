@@ -547,5 +547,32 @@
         "stream": false
       }
     ]
+  },
+  "punch": {
+    "subtitle": "subtitles.punch",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:punch",
+        "stream": false
+      }
+    ]
+  },
+  "punch_hit": {
+    "subtitle": "subtitles.punch_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:punch_hit",
+        "stream": false
+      }
+    ]
+  },
+  "parry_projectile": {
+    "subtitle": "subtitles.parry_projectile",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:parry_projectile",
+        "stream": false
+      }
+    ]
   }
 }

@@ -78,4 +78,7 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> SOMETHING_WICKED = REGISTRY.register("something_wicked", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "something_wicked")));
 	public static final RegistryObject<SoundEvent> RUSTGUN_SHOOTS = REGISTRY.register("rustgun_shoots", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "rustgun_shoots")));
 	public static final RegistryObject<SoundEvent> FIERY_BLAST = REGISTRY.register("fiery_blast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "fiery_blast")));
+	public static final RegistryObject<SoundEvent> PUNCH = REGISTRY.register("punch", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "punch")));
+	public static final RegistryObject<SoundEvent> PUNCH_HIT = REGISTRY.register("punch_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "punch_hit")));
+	public static final RegistryObject<SoundEvent> PARRY_PROJECTILE = REGISTRY.register("parry_projectile", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "parry_projectile")));
 }
