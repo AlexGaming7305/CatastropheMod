@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 4,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DepthstoneBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DepthstoneBricks"
+      },
+      {
+        "value": "CUSTOM:DepthstoneBricks"
+      },
+      {
+        "value": "CUSTOM:DepthstoneBricks"
+      },
+      {
+        "value": "CUSTOM:DepthstoneBricks"
+      },
+      {
+        "value": "CUSTOM:DepthstoneBricks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DepthstoneBricksStairs"
+    },
+    "name": "depthstone_bricks_stairs_recipe",
+    "namespace": "mod"
+  }
+}

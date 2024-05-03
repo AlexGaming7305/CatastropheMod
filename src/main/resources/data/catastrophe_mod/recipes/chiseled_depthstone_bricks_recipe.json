@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:depthstone_slab"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:chiseled_depthstone_bricks",
+    "count": 1
+  }
+}

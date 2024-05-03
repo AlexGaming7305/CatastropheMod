@@ -16,7 +16,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 import net.mcreator.catastrophemod.CatastropheModMod;
@@ -31,13 +30,7 @@ public class NightfallsDemiseRightclickedProcedure {
 		axe = ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).copy());
 		axe = ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).copy());
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.NIGHTFALLS_DEMISE.get()) {
-			{
-				boolean _setval = true;
-				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.nightfalls_demise_effects = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+			entity.getPersistentData().putBoolean("NightfallsDemiseEffects", true);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = CatastropheModModEntities.NIGHTFALLS_DEMISE_PROJECTILE.get().spawn(_level, BlockPos.containing(x, y + 1.5, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
@@ -61,13 +54,7 @@ public class NightfallsDemiseRightclickedProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()) {
 				CatastropheModMod.queueServerWork(30, () -> {
-					{
-						boolean _setval = false;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.nightfalls_demise_effects = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+					entity.getPersistentData().putBoolean("NightfallsDemiseEffects", false);
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = itemstack;
 						_setstack.setCount(1);
@@ -76,13 +63,7 @@ public class NightfallsDemiseRightclickedProcedure {
 				});
 			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.NIGHTFALLS_DEMISE.get()) {
-			{
-				boolean _setval = true;
-				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.nightfalls_demise_effects = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+			entity.getPersistentData().putBoolean("NightfallsDemiseEffects", true);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = CatastropheModModEntities.NIGHTFALLS_DEMISE_PROJECTILE.get().spawn(_level, BlockPos.containing(x, y + 1.5, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
@@ -106,13 +87,7 @@ public class NightfallsDemiseRightclickedProcedure {
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()) {
 				CatastropheModMod.queueServerWork(30, () -> {
-					{
-						boolean _setval = false;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.nightfalls_demise_effects = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+					entity.getPersistentData().putBoolean("NightfallsDemiseEffects", false);
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = itemstack;
 						_setstack.setCount(1);

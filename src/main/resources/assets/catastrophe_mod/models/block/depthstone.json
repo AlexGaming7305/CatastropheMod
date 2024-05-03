@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/depthstone",
+    "up": "catastrophe_mod:block/depthstone",
+    "north": "catastrophe_mod:block/depthstone",
+    "east": "catastrophe_mod:block/depthstone",
+    "south": "catastrophe_mod:block/depthstone",
+    "west": "catastrophe_mod:block/depthstone",
+    "particle": "catastrophe_mod:block/depthstone"
+  },
+  "render_type": "solid"
+}

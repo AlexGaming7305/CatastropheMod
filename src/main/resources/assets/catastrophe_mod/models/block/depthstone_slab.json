@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "catastrophe_mod:block/depthstone",
+    "top": "catastrophe_mod:block/depthstone",
+    "side": "catastrophe_mod:block/depthstone"
+  },
+  "render_type": "solid"
+}

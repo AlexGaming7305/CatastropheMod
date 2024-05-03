@@ -147,7 +147,7 @@ public class AssassinSkeletonEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		AssassinSkeletonOnEntityTickUpdateProcedure.execute(this.level(), this);
+		AssassinSkeletonOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

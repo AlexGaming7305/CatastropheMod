@@ -13,16 +13,15 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
-
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class NightfallsDemiseEffectsProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.level(), entity, event.getSource().getEntity());
 		}
 	}
 
@@ -34,7 +33,7 @@ public class NightfallsDemiseEffectsProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double lifetime = 0;
-		if ((sourceentity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).nightfalls_demise_effects == true) {
+		if (sourceentity.getPersistentData().getBoolean("NightfallsDemiseOwner") == true) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:axe_hits")), SoundSource.PLAYERS, 1, 1);

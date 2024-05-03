@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:depthstone"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:depthstone_bricks",
+    "count": 4
+  }
+}
