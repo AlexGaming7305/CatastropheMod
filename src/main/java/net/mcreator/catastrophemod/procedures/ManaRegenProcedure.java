@@ -6,9 +6,11 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 import javax.annotation.Nullable;
@@ -49,7 +51,7 @@ public class ManaRegenProcedure {
 					});
 				}
 				CatastropheModMod.queueServerWork((int) (20 / (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana / 50
-						+ (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).mana_regen)
+						+ ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAREGENERATION.get()).getBaseValue())
 						* (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana
 								/ (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana) * 0.8 + 0.2)
 						* 1.15)), () -> {

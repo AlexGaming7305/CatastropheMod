@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Rotten Heart",
     "rarity": "COMMON",
-    "slotType": "CURIO",
+    "slotType": "AccessorySlot",
     "baubleModel": "Default",
     "baubleModelTexture": "",
     "creativeTab": {
@@ -29,7 +29,10 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Immunity to §cHunger",
+        "§7Eating Rotten Flesh will grant you §9Regeneration"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},

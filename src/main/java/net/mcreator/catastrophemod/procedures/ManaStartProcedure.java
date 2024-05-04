@@ -5,9 +5,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 
 import javax.annotation.Nullable;
 
@@ -40,6 +42,9 @@ public class ManaStartProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).setBaseValue(20);
+			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAREGENERATION.get()).setBaseValue(1);
+			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MINIONSLOTS.get()).setBaseValue(1);
 			{
 				boolean _setval = true;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

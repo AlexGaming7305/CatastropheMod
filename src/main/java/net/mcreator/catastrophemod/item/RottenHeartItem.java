@@ -20,5 +20,7 @@ public class RottenHeartItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("\u00A77Immunity to \u00A7cHunger"));
+		list.add(Component.literal("\u00A77Eating Rotten Flesh will grant you \u00A79Regeneration"));
 	}
 }

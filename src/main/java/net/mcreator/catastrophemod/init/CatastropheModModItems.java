@@ -491,6 +491,14 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> SPEAR_MASTERY_CREST = REGISTRY.register("spear_mastery_crest", () -> new SpearMasteryCrestItem());
 	public static final RegistryObject<Item> RUSTGUN = REGISTRY.register("rustgun", () -> new RustgunItem());
 	public static final RegistryObject<Item> RUSTY_COGWHEEL = REGISTRY.register("rusty_cogwheel", () -> new RustyCogwheelItem());
+	public static final RegistryObject<Item> DEPTHSTONE = block(CatastropheModModBlocks.DEPTHSTONE);
+	public static final RegistryObject<Item> DEPTHSTONE_BRICKS = block(CatastropheModModBlocks.DEPTHSTONE_BRICKS);
+	public static final RegistryObject<Item> CRACKED_DEPTHSTONE_BRICKS = block(CatastropheModModBlocks.CRACKED_DEPTHSTONE_BRICKS);
+	public static final RegistryObject<Item> CHISELED_DEPTHSTONE_BRICKS = block(CatastropheModModBlocks.CHISELED_DEPTHSTONE_BRICKS);
+	public static final RegistryObject<Item> DEPTHSTONE_SLAB = block(CatastropheModModBlocks.DEPTHSTONE_SLAB);
+	public static final RegistryObject<Item> DEPTHSTONE_STAIRS = block(CatastropheModModBlocks.DEPTHSTONE_STAIRS);
+	public static final RegistryObject<Item> DEPTHSTONE_BRICKS_SLAB = block(CatastropheModModBlocks.DEPTHSTONE_BRICKS_SLAB);
+	public static final RegistryObject<Item> DEPTHSTONE_BRICKS_STAIRS = block(CatastropheModModBlocks.DEPTHSTONE_BRICKS_STAIRS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -165,7 +165,6 @@ public class CatastropheModModVariables {
 				clone.cursed_armor_greaves = original.cursed_armor_greaves;
 				clone.cursed_armor_boots = original.cursed_armor_boots;
 				clone.cursed_armor_cooldown = original.cursed_armor_cooldown;
-				clone.mana_regen = original.mana_regen;
 				clone.blizzard_load = original.blizzard_load;
 				clone.blizzard_loop_cooldown = original.blizzard_loop_cooldown;
 				clone.blizzard_mana_drain = original.blizzard_mana_drain;
@@ -184,6 +183,7 @@ public class CatastropheModModVariables {
 				clone.WizardryLevel = original.WizardryLevel;
 				clone.parry_screen_flash = original.parry_screen_flash;
 				clone.parry_cooldown = original.parry_cooldown;
+				clone.parry_mode = original.parry_mode;
 			}
 		}
 
@@ -435,7 +435,6 @@ public class CatastropheModModVariables {
 		public boolean cursed_armor_greaves = false;
 		public boolean cursed_armor_boots = false;
 		public boolean cursed_armor_cooldown = false;
-		public double mana_regen = 1.0;
 		public boolean blizzard_load = false;
 		public boolean blizzard_loop_cooldown = false;
 		public boolean blizzard_mana_drain = false;
@@ -462,6 +461,7 @@ public class CatastropheModModVariables {
 		public double WizardryLevel = 0;
 		public boolean parry_screen_flash = false;
 		public double parry_cooldown = 0.0;
+		public boolean parry_mode = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -553,7 +553,6 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("cursed_armor_greaves", cursed_armor_greaves);
 			nbt.putBoolean("cursed_armor_boots", cursed_armor_boots);
 			nbt.putBoolean("cursed_armor_cooldown", cursed_armor_cooldown);
-			nbt.putDouble("mana_regen", mana_regen);
 			nbt.putBoolean("blizzard_load", blizzard_load);
 			nbt.putBoolean("blizzard_loop_cooldown", blizzard_loop_cooldown);
 			nbt.putBoolean("blizzard_mana_drain", blizzard_mana_drain);
@@ -580,6 +579,7 @@ public class CatastropheModModVariables {
 			nbt.putDouble("WizardryLevel", WizardryLevel);
 			nbt.putBoolean("parry_screen_flash", parry_screen_flash);
 			nbt.putDouble("parry_cooldown", parry_cooldown);
+			nbt.putBoolean("parry_mode", parry_mode);
 			return nbt;
 		}
 
@@ -668,7 +668,6 @@ public class CatastropheModModVariables {
 			cursed_armor_greaves = nbt.getBoolean("cursed_armor_greaves");
 			cursed_armor_boots = nbt.getBoolean("cursed_armor_boots");
 			cursed_armor_cooldown = nbt.getBoolean("cursed_armor_cooldown");
-			mana_regen = nbt.getDouble("mana_regen");
 			blizzard_load = nbt.getBoolean("blizzard_load");
 			blizzard_loop_cooldown = nbt.getBoolean("blizzard_loop_cooldown");
 			blizzard_mana_drain = nbt.getBoolean("blizzard_mana_drain");
@@ -695,6 +694,7 @@ public class CatastropheModModVariables {
 			WizardryLevel = nbt.getDouble("WizardryLevel");
 			parry_screen_flash = nbt.getBoolean("parry_screen_flash");
 			parry_cooldown = nbt.getDouble("parry_cooldown");
+			parry_mode = nbt.getBoolean("parry_mode");
 		}
 	}
 
@@ -802,7 +802,6 @@ public class CatastropheModModVariables {
 					variables.cursed_armor_greaves = message.data.cursed_armor_greaves;
 					variables.cursed_armor_boots = message.data.cursed_armor_boots;
 					variables.cursed_armor_cooldown = message.data.cursed_armor_cooldown;
-					variables.mana_regen = message.data.mana_regen;
 					variables.blizzard_load = message.data.blizzard_load;
 					variables.blizzard_loop_cooldown = message.data.blizzard_loop_cooldown;
 					variables.blizzard_mana_drain = message.data.blizzard_mana_drain;
@@ -829,6 +828,7 @@ public class CatastropheModModVariables {
 					variables.WizardryLevel = message.data.WizardryLevel;
 					variables.parry_screen_flash = message.data.parry_screen_flash;
 					variables.parry_cooldown = message.data.parry_cooldown;
+					variables.parry_mode = message.data.parry_mode;
 				}
 			});
 			context.setPacketHandled(true);

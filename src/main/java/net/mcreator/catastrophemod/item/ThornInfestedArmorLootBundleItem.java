@@ -35,7 +35,7 @@ public class ThornInfestedArmorLootBundleItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		ThornInfestedArmorLootBundleEntitySwingsItemProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		ThornInfestedArmorLootBundleEntitySwingsItemProcedure.execute(entity);
 		return ar;
 	}
 }

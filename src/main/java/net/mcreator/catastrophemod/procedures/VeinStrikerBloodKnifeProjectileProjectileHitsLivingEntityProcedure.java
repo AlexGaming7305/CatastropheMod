@@ -31,60 +31,64 @@ public class VeinStrikerBloodKnifeProjectileProjectileHitsLivingEntityProcedure 
 		}
 		if (world instanceof ServerLevel projectileLevel) {
 			Projectile _entityToSpawn = new Object() {
-				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 					AbstractArrow entityToSpawn = new BloodKnifeProjectileEntity(CatastropheModModEntities.BLOOD_KNIFE_PROJECTILE.get(), level);
 					entityToSpawn.setOwner(shooter);
 					entityToSpawn.setBaseDamage(damage);
 					entityToSpawn.setKnockback(knockback);
 					entityToSpawn.setSilent(true);
+					entityToSpawn.setPierceLevel(piercing);
 					return entityToSpawn;
 				}
-			}.getArrow(projectileLevel, sourceentity, 3, 0);
+			}.getArrow(projectileLevel, sourceentity, 3, 0, (byte) 2);
 			_entityToSpawn.setPos((entity.getX() + 4), y, (entity.getZ() + 4));
 			_entityToSpawn.shoot((-4), 0, (-4), 1, 0);
 			projectileLevel.addFreshEntity(_entityToSpawn);
 		}
 		if (world instanceof ServerLevel projectileLevel) {
 			Projectile _entityToSpawn = new Object() {
-				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 					AbstractArrow entityToSpawn = new BloodKnifeProjectileEntity(CatastropheModModEntities.BLOOD_KNIFE_PROJECTILE.get(), level);
 					entityToSpawn.setOwner(shooter);
 					entityToSpawn.setBaseDamage(damage);
 					entityToSpawn.setKnockback(knockback);
 					entityToSpawn.setSilent(true);
+					entityToSpawn.setPierceLevel(piercing);
 					return entityToSpawn;
 				}
-			}.getArrow(projectileLevel, sourceentity, 3, 0);
+			}.getArrow(projectileLevel, sourceentity, 3, 0, (byte) 2);
 			_entityToSpawn.setPos((entity.getX() + -4), y, (entity.getZ() + -4));
 			_entityToSpawn.shoot(4, 0, 4, 1, 0);
 			projectileLevel.addFreshEntity(_entityToSpawn);
 		}
 		if (world instanceof ServerLevel projectileLevel) {
 			Projectile _entityToSpawn = new Object() {
-				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 					AbstractArrow entityToSpawn = new BloodKnifeProjectileEntity(CatastropheModModEntities.BLOOD_KNIFE_PROJECTILE.get(), level);
 					entityToSpawn.setOwner(shooter);
 					entityToSpawn.setBaseDamage(damage);
 					entityToSpawn.setKnockback(knockback);
 					entityToSpawn.setSilent(true);
+					entityToSpawn.setPierceLevel(piercing);
 					return entityToSpawn;
 				}
-			}.getArrow(projectileLevel, sourceentity, 3, 0);
+			}.getArrow(projectileLevel, sourceentity, 3, 0, (byte) 2);
 			_entityToSpawn.setPos((entity.getX() + -4), y, (entity.getZ() + 4));
 			_entityToSpawn.shoot(4, 0, (-4), 1, 0);
 			projectileLevel.addFreshEntity(_entityToSpawn);
 		}
 		if (world instanceof ServerLevel projectileLevel) {
 			Projectile _entityToSpawn = new Object() {
-				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+				public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 					AbstractArrow entityToSpawn = new BloodKnifeProjectileEntity(CatastropheModModEntities.BLOOD_KNIFE_PROJECTILE.get(), level);
 					entityToSpawn.setOwner(shooter);
 					entityToSpawn.setBaseDamage(damage);
 					entityToSpawn.setKnockback(knockback);
 					entityToSpawn.setSilent(true);
+					entityToSpawn.setPierceLevel(piercing);
 					return entityToSpawn;
 				}
-			}.getArrow(projectileLevel, sourceentity, 3, 0);
+			}.getArrow(projectileLevel, sourceentity, 3, 0, (byte) 2);
 			_entityToSpawn.setPos((entity.getX() + 4), y, (entity.getZ() + -4));
 			_entityToSpawn.shoot((-4), 0, 4, 1, 0);
 			projectileLevel.addFreshEntity(_entityToSpawn);

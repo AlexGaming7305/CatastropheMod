@@ -211,6 +211,14 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModBlocks.MOLTEN_CHARRED_BRICKS_SLAB.get().asItem());
 			tabData.accept(CatastropheModModBlocks.SEA_CRYSTAL_BLOCK.get().asItem());
 			tabData.accept(CatastropheModModBlocks.SEA_CRYSTAL_CLUSTER.get().asItem());
+			tabData.accept(CatastropheModModBlocks.DEPTHSTONE.get().asItem());
+			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CRACKED_DEPTHSTONE_BRICKS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CHISELED_DEPTHSTONE_BRICKS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_SLAB.get().asItem());
+			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_STAIRS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_SLAB.get().asItem());
+			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_STAIRS.get().asItem());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
