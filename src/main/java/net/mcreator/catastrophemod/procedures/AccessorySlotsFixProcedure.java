@@ -15,7 +15,7 @@ import net.mcreator.catastrophemod.init.CatastropheModModItems;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class AccessorySlotsProcedure {
+public class AccessorySlotsFixProcedure {
 	@SubscribeEvent
 	public static void onCurioEquipserver(CurioChangeEvent event) {
 		execute(event, event.getEntity(), event.getTo());

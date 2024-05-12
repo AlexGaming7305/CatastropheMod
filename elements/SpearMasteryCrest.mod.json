@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "§9Spear Mastery Crest",
     "rarity": "COMMON",
-    "slotType": "AccessorySlot",
+    "slotType": "Accessory",
     "baubleModel": "Default",
     "baubleModelTexture": "",
     "creativeTab": {
@@ -31,7 +31,7 @@
     "specialInformation": {
       "fixedValue": [
         "§7Grants spears the ability to Lacerate Targets",
-        "§7Consecutive Puncture Strikes increase armor penetration by 1 with a max of 5",
+        "§7Puncture Strikes increase armor penetration by 1 with a max of 5",
         "§9+5% Spear Damage"
       ]
     },

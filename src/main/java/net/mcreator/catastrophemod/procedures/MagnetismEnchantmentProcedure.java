@@ -3,7 +3,7 @@ package net.mcreator.catastrophemod.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -24,8 +24,10 @@ import java.util.Comparator;
 @Mod.EventBusSubscriber
 public class MagnetismEnchantmentProcedure {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
-		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
+	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		if (event.phase == TickEvent.Phase.END) {
+			execute(event, event.player.level(), event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
+		}
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -35,22 +37,8 @@ public class MagnetismEnchantmentProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		boolean flag = false;
-		double yort = 0;
-		double xort = 0;
-		double lifetime = 0;
-		double sum = 0;
-		double turn = 0;
-		double zdir = 0;
-		double ydir = 0;
-		double xdir = 0;
-		double speed = 0;
-		double zort = 0;
-		double zvel = 0;
-		double yvel = 0;
-		double radius = 0;
-		double xvel = 0;
-		if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.MAGNETISM.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+		if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.MAGNETISM.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0
+				|| EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.MAGNETISM.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
 			{
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(6 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

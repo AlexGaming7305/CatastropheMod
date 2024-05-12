@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Totem Cooldown",
+    "description": "Time during which a totem will not work",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 6000
+  }
+}

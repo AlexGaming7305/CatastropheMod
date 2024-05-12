@@ -51,8 +51,7 @@ public class WizardryProcedureProcedure {
 				((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).getBaseValue()
 						+ 5 * (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get())));
 			}
-		}
-		if (!(EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0)) {
+		} else if (!(EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0)) {
 			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).WizardryEnchantment == true) {
 				{
 					boolean _setval = false;
@@ -71,44 +70,44 @@ public class WizardryProcedureProcedure {
 					});
 				}
 			}
-		}
-		if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
-			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).WizardryEnchantment == false) {
-				{
-					boolean _setval = true;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WizardryEnchantment = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+		} else {
+			if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
+				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).WizardryEnchantment == false) {
+					{
+						boolean _setval = true;
+						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.WizardryEnchantment = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						double _setval = 5 * (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get());
+						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.WizardryLevel = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).getBaseValue()
+							+ 5 * (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get())));
 				}
-				{
-					double _setval = 5 * (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get());
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WizardryLevel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).getBaseValue()
-						+ 5 * (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get())));
-			}
-		}
-		if (!(EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0)) {
-			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).WizardryEnchantment == true) {
-				{
-					boolean _setval = false;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WizardryEnchantment = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).getBaseValue()
-						- (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).WizardryLevel));
-				{
-					double _setval = 0;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.WizardryLevel = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+			} else if (!(EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.WIZARDRY.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0)) {
+				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).WizardryEnchantment == true) {
+					{
+						boolean _setval = false;
+						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.WizardryEnchantment = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAUSAGEREDUCTION.get()).getBaseValue()
+							- (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).WizardryLevel));
+					{
+						double _setval = 0;
+						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.WizardryLevel = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			}
 		}

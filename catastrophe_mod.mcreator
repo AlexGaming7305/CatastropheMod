@@ -1765,30 +1765,6 @@
       "path": "~/Items/Armor"
     },
     {
-      "name": "AccessorySlots",
-      "type": "procedure",
-      "sortid": 1311,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory_slots",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AccessorySlotsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "SetupAnimations",
       "type": "procedure",
       "sortid": 1315,
@@ -11257,42 +11233,6 @@
       "path": "~/Items/Miscellaneous"
     },
     {
-      "name": "VexDrops",
-      "type": "procedure",
-      "sortid": 2188,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vex_drops",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/VexDropsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "ProliferatingMushroomsDrop",
       "type": "procedure",
       "sortid": 2189,
@@ -16285,42 +16225,6 @@
       "path": "~/Items/Miscellaneous"
     },
     {
-      "name": "WitherSkeletonLootDrops",
-      "type": "procedure",
-      "sortid": 2503,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wither_skeleton_loot_drops",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/WitherSkeletonLootDropsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "LeatherGloveFix",
       "type": "procedure",
       "sortid": 2504,
@@ -17621,10 +17525,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -18823,46 +18723,6 @@
       "path": "~/Items/Accessories"
     },
     {
-      "name": "RottenHeartDrop",
-      "type": "procedure",
-      "sortid": 2640,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rotten_heart_drop",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RottenHeartDropProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "AtlanticSeaNettle",
       "type": "animatedentity",
       "sortid": 2641,
@@ -20041,20 +19901,6 @@
       "path": "~/Items/Accessories"
     },
     {
-      "name": "AccessorySlot",
-      "type": "curiosslot",
-      "sortid": 2759,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory_slot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/curios/tags/items/accessory_slot.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "IShallRendYouApart",
       "type": "achievement",
       "sortid": 2760,
@@ -20865,10 +20711,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
           }
         ]
       },
@@ -22160,15 +22002,72 @@
       "path": "~/Items/Blocks"
     },
     {
-      "name": "ParryMode",
-      "type": "procedure",
-      "sortid": 2871,
+      "name": "TotemCooldown",
+      "type": "gamerule",
+      "sortid": 2872,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "parry_mode",
+      "registry_name": "totem_cooldown",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TotemCooldownProcedure1",
+      "type": "procedure",
+      "sortid": 2873,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_cooldown_procedure_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ParryModeProcedure.java"
+          "src/main/java/net/mcreator/catastrophemod/procedures/TotemCooldownProcedure1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TotemCooldownProcedure2",
+      "type": "procedure",
+      "sortid": 2874,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_cooldown_procedure_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/TotemCooldownProcedure2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ParryProjectileMode",
+      "type": "procedure",
+      "sortid": 2875,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_projectile_mode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ParryProjectileModeProcedure.java"
         ],
         "dependencies": [
           {
@@ -22194,6 +22093,293 @@
         ]
       },
       "path": "~/Key Binds"
+    },
+    {
+      "name": "ParryMeleeAttackMode",
+      "type": "procedure",
+      "sortid": 2876,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_melee_attack_mode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ParryMeleeAttackModeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Key Binds"
+    },
+    {
+      "name": "WoodenKatanaSheathedHit",
+      "type": "procedure",
+      "sortid": 2877,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_katana_sheathed_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WoodenKatanaSheathedHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "Twig",
+      "type": "item",
+      "sortid": 2878,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/twig.json",
+          "src/main/java/net/mcreator/catastrophemod/item/TwigItem.java"
+        ]
+      },
+      "path": "~/Items/Miscellaneous"
+    },
+    {
+      "name": "TwigLootTable",
+      "type": "loottable",
+      "sortid": 2879,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/blocks/twig_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TwigLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2880,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/twig_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TwigLootTable2",
+      "type": "lootmodifier",
+      "sortid": 2881,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig_loot_table_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/twig_loot_table_2.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "VexLootTable",
+      "type": "loottable",
+      "sortid": 2882,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vex_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/vex_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "VexLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2883,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vex_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/vex_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "WitherSkeletonLootTable",
+      "type": "loottable",
+      "sortid": 2884,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wither_skeleton_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/wither_skeleton_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "WitherSkeletonLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2885,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wither_skeleton_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/wither_skeleton_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ZombieLootTable",
+      "type": "loottable",
+      "sortid": 2886,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/zombie_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ZombieLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2887,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/zombie_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "AccessorySlotsFix",
+      "type": "procedure",
+      "sortid": 2888,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accessory_slots_fix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/AccessorySlotsFixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "Accessory",
+      "type": "curiosslot",
+      "sortid": 2890,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accessory",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/accessory.json"
+        ]
+      },
+      "path": "~/Items/Accessories"
+    },
+    {
+      "name": "SwordMasteryCrestBaubleIsEquipped",
+      "type": "procedure",
+      "sortid": 2891,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_mastery_crest_bauble_is_equipped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestBaubleIsEquippedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Accessories"
+    },
+    {
+      "name": "SwordMasteryCrestBaubleIsUnequipped",
+      "type": "procedure",
+      "sortid": 2892,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_mastery_crest_bauble_is_unequipped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestBaubleIsUnequippedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Accessories"
     }
   ],
   "variable_elements": [
@@ -22856,6 +23042,24 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "parry_melee_attack_mode",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "totem_cooldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "wooden_katana_sheathed",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -23483,6 +23687,7 @@
       "block.alexs_mod.razed_trapdoor": "Razed Trapdoor",
       "item.alexs_mod.lightning_blade_staff": "§bLightning Blade Staff",
       "item_group.catastrophe_mod.bullets": "Ranged",
+      "item.catastrophe_mod.twig": "Twig",
       "subtitles.agiel": "Agiel Use",
       "item.alexs_mod.enchanted_sword": "Enchanted Sword",
       "item.alexs_mod.ancient_armor_helmet": "Ancient Mask",
@@ -24121,6 +24326,7 @@
       "key.alexs_mod.two_shots_drink": "Two Shots Drink",
       "item.alexs_mod.amethyst_spear": "Amethyst Spear",
       "effect.alexs_mod.dexterity": "Dexterity",
+      "gamerule.totemCooldown.description": "Time during which a totem will not work",
       "gui.alexs_mod.quest_book_gui.label_4_the_mineral_wraith_is_summone": "4. The Mineral Wraith is summoned using a ",
       "block.alexs_mod.endurance_candle": "Endurance Candle",
       "item.catastrophe_mod.amulet_of_vitality": "§2Amulet of Vitality",
@@ -24195,6 +24401,7 @@
       "item.catastrophe_mod.music_disc_battle_of_stone": "Music Disc",
       "item.alexs_mod.red_split_katana": "§4§lRed-Split Katana",
       "item.catastrophe_mod.calico_stag_beetle_spawn_egg": "Calico Stag Beetle Spawn Egg",
+      "curios.identifier.accessory": "Accessory",
       "item.minecraft.tipped_arrow.effect.intelligence_long": "Arrow of Intelligence",
       "item.alexs_mod.mineral_wraith_loot_bundle": "Mineral Wraith Loot Bundle",
       "item.alexs_mod.metal_plating": "Metal Plating",
@@ -24532,6 +24739,7 @@
       "item.alexs_mod.blaze_ammo": "Blaze Ammo",
       "subtitles.cursed_dash": "Cursed dash",
       "block.alexs_mod.navy_stone": "Navy Stone",
+      "gamerule.totemCooldown": "Totem Cooldown",
       "effect.alexs_mod.multishot_cool_down": "Multishot Cool Down",
       "gui.alexs_mod.abyss_enter.button_close": "Close",
       "item.alexs_mod.greed_mixture": "Greed Mixture",
@@ -24841,7 +25049,6 @@
       "subtitles.alexs_mod_ost_proliferating_mushrooms": "Alex\u0027s Mod OST: Proliferating Mushrooms",
       "effect.alexs_mod.vulnerability": "Vulnerability",
       "entity.alexs_mod.toast_demoman": "Toast Demoman",
-      "curios.identifier.accessory_slot": "Accessory",
       "item.catastrophe_mod.copper_token": "Copper Token",
       "block.catastrophe_mod.calico_mushroom": "Calico Mushroom Block",
       "item.alexs_mod.shroomium_ingot": "Shroomium Ingot",

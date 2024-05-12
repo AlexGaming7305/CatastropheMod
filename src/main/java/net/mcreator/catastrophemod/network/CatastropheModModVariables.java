@@ -183,6 +183,9 @@ public class CatastropheModModVariables {
 				clone.parry_screen_flash = original.parry_screen_flash;
 				clone.parry_cooldown = original.parry_cooldown;
 				clone.parry_projectile_mode = original.parry_projectile_mode;
+				clone.parry_melee_attack_mode = original.parry_melee_attack_mode;
+				clone.totem_cooldown = original.totem_cooldown;
+				clone.wooden_katana_sheathed = original.wooden_katana_sheathed;
 			}
 		}
 
@@ -460,6 +463,9 @@ public class CatastropheModModVariables {
 		public boolean parry_screen_flash = false;
 		public double parry_cooldown = 0.0;
 		public double parry_projectile_mode = 0;
+		public double parry_melee_attack_mode = 0;
+		public double totem_cooldown = 0;
+		public boolean wooden_katana_sheathed = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -577,6 +583,9 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("parry_screen_flash", parry_screen_flash);
 			nbt.putDouble("parry_cooldown", parry_cooldown);
 			nbt.putDouble("parry_projectile_mode", parry_projectile_mode);
+			nbt.putDouble("parry_melee_attack_mode", parry_melee_attack_mode);
+			nbt.putDouble("totem_cooldown", totem_cooldown);
+			nbt.putBoolean("wooden_katana_sheathed", wooden_katana_sheathed);
 			return nbt;
 		}
 
@@ -691,6 +700,9 @@ public class CatastropheModModVariables {
 			parry_screen_flash = nbt.getBoolean("parry_screen_flash");
 			parry_cooldown = nbt.getDouble("parry_cooldown");
 			parry_projectile_mode = nbt.getDouble("parry_projectile_mode");
+			parry_melee_attack_mode = nbt.getDouble("parry_melee_attack_mode");
+			totem_cooldown = nbt.getDouble("totem_cooldown");
+			wooden_katana_sheathed = nbt.getBoolean("wooden_katana_sheathed");
 		}
 	}
 
@@ -824,6 +836,9 @@ public class CatastropheModModVariables {
 					variables.parry_screen_flash = message.data.parry_screen_flash;
 					variables.parry_cooldown = message.data.parry_cooldown;
 					variables.parry_projectile_mode = message.data.parry_projectile_mode;
+					variables.parry_melee_attack_mode = message.data.parry_melee_attack_mode;
+					variables.totem_cooldown = message.data.totem_cooldown;
+					variables.wooden_katana_sheathed = message.data.wooden_katana_sheathed;
 				}
 			});
 			context.setPacketHandled(true);

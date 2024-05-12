@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Comparator;
 
 @Mod.EventBusSubscriber
-public class ParryModeProcedure {
+public class ParryProjectileModeProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {

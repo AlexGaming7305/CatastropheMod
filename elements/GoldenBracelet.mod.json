@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Golden Necklace",
     "rarity": "COMMON",
-    "slotType": "CURIO",
+    "slotType": "Accessory",
     "baubleModel": "Modelgolden_necklace",
     "baubleModelTexture": "golden_necklace_texture.png",
     "creativeTab": {

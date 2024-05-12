@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Rotten Heart",
     "rarity": "COMMON",
-    "slotType": "AccessorySlot",
+    "slotType": "Accessory",
     "baubleModel": "Default",
     "baubleModelTexture": "",
     "creativeTab": {
