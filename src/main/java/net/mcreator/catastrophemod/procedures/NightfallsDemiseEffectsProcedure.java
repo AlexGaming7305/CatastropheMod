@@ -32,7 +32,7 @@ public class NightfallsDemiseEffectsProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double lifetime = 0;
-		if (sourceentity.getPersistentData().getBoolean("NightfallsDemiseOwner") == true) {
+		if (sourceentity.getPersistentData().getBoolean("NightfallsDemiseEffects") == true) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:axe_hits")), SoundSource.PLAYERS, 1, 1);

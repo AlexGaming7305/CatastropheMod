@@ -574,5 +574,14 @@
         "stream": false
       }
     ]
+  },
+  "anglerfish_bite": {
+    "subtitle": "subtitles.anglerfish_bite",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:anglerfish_bite",
+        "stream": false
+      }
+    ]
   }
 }

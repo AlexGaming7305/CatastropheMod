@@ -24,21 +24,8 @@ public class NightfallsDemiseProjectileOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		boolean flag = false;
-		double yort = 0;
-		double xort = 0;
 		double lifetime = 0;
-		double sum = 0;
-		double turn = 0;
-		double zdir = 0;
-		double ydir = 0;
-		double xdir = 0;
-		double speed = 0;
-		double zort = 0;
-		double zvel = 0;
-		double yvel = 0;
-		double radius = 0;
-		double xvel = 0;
+		Entity nightfallsdemiseowner = null;
 		{
 			Entity _ent = entity;
 			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -69,14 +56,23 @@ public class NightfallsDemiseProjectileOnEntityTickUpdateProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(200 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if ((entityiterator.getStringUUID()).equals(entity.getPersistentData().getString("NightfallsDemiseOwner"))) {
+					nightfallsdemiseowner = entityiterator;
+				}
+			}
+		}
+		{
+			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof LivingEntity) {
 					if (!(entityiterator instanceof NightfallsDemiseProjectileEntity)) {
 						if (!(entityiterator.getStringUUID()).equals(entity.getPersistentData().getString("NightfallsDemiseOwner"))) {
 							if (entityiterator.isAlive()) {
-								entityiterator.hurt(
-										new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), entityiterator), 6);
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))),
+										nightfallsdemiseowner), 6);
 								entity.setDeltaMovement(new Vec3(((entityiterator.getX() - entity.getX()) * 0.1), 0.6, ((entityiterator.getZ() - entity.getZ()) * 0.1)));
 								entity.setNoGravity(false);
 							}

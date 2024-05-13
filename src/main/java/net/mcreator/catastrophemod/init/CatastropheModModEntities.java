@@ -141,7 +141,7 @@ public class CatastropheModModEntities {
 
 					.sized(0f, 0f));
 	public static final RegistryObject<EntityType<HermitCrabEntity>> HERMIT_CRAB = register("hermit_crab",
-			EntityType.Builder.<HermitCrabEntity>of(HermitCrabEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HermitCrabEntity::new)
+			EntityType.Builder.<HermitCrabEntity>of(HermitCrabEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HermitCrabEntity::new)
 
 					.sized(0.7f, 0.5f));
 	public static final RegistryObject<EntityType<LightningBladeEntity>> LIGHTNING_BLADE = register("lightning_blade", EntityType.Builder.<LightningBladeEntity>of(LightningBladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
