@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Sea Pendant",
     "rarity": "UNCOMMON",
-    "slotType": "CURIO",
+    "slotType": "Accessory",
     "baubleModel": "Modelsea_pendant",
     "baubleModelTexture": "sea_pendant_texture.png",
     "creativeTab": {

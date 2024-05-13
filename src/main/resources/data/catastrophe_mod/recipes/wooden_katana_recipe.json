@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "pattern": [
     "  a",
     " a ",
@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": {
-      "tag": "minecraft:planks"
+      "item": "catastrophe_mod:twig"
     },
     "b": {
       "item": "minecraft:stick"

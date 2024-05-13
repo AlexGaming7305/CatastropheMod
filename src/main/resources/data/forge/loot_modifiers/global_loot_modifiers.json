@@ -1,0 +1,10 @@
+{
+  "entries": [
+    "catastrophe_mod:twig_loot_table_1",
+    "catastrophe_mod:twig_loot_table_2",
+    "catastrophe_mod:vex_loot_table_1",
+    "catastrophe_mod:wither_skeleton_loot_table_1",
+    "catastrophe_mod:zombie_loot_table_1"
+  ],
+  "replace": false
+}

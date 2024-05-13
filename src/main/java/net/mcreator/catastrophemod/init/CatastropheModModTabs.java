@@ -272,6 +272,7 @@ public class CatastropheModModTabs {
 
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			tabData.accept(CatastropheModModItems.RUSTY_COGWHEEL.get());
+			tabData.accept(CatastropheModModItems.TWIG.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

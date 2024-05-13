@@ -30,7 +30,8 @@ public class FrostAspectEnchantmentProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.FROST_ASPECT.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+		if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.FROST_ASPECT.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0
+				|| EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.FROST_ASPECT.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
 			entity.setTicksFrozen((int) (80 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.FROST_ASPECT.get())));
 		}
 	}

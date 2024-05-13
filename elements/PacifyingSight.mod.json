@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "§5Pacifying Sight",
     "rarity": "COMMON",
-    "slotType": "CURIO",
+    "slotType": "Accessory",
     "baubleModel": "Modelpacifying_sight",
     "baubleModelTexture": "pacifying_sight_texture.png",
     "creativeTab": {

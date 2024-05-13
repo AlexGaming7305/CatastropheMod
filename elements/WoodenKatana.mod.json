@@ -12,7 +12,9 @@
     "specialInformation": {
       "fixedValue": [
         "§7\"Not very practical, but still better than nothing\"",
-        "§aRight-click: §7Leap and slash at nearby targets"
+        "§aRight-click: §7Sheaths the katana",
+        "§7Right-clicking again will perform a leap attack",
+        "§7Attacking after sheathing deals 50% more damage"
       ]
     },
     "creativeTab": {
@@ -30,19 +32,7 @@
     },
     "repairItems": [
       {
-        "value": "Blocks.PLANKS#0"
-      },
-      {
-        "value": "Blocks.PLANKS#1"
-      },
-      {
-        "value": "Blocks.PLANKS#3"
-      },
-      {
-        "value": "Blocks.PLANKS#4"
-      },
-      {
-        "value": "Blocks.PLANKS#5"
+        "value": "Blocks.PLANKS"
       }
     ],
     "immuneToFire": false,

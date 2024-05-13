@@ -87,7 +87,6 @@ public class CatastropheModModVariables {
 			clone.polyphemus_moth_pet = original.polyphemus_moth_pet;
 			clone.comet_moth_pet = original.comet_moth_pet;
 			clone.rosy_maple_moth_pet = original.rosy_maple_moth_pet;
-			clone.silk_moth_pet_counter = original.silk_moth_pet_counter;
 			clone.mana_cost_accursed_tome = original.mana_cost_accursed_tome;
 			if (!event.isWasDeath()) {
 				clone.crimsondagger = original.crimsondagger;
@@ -183,7 +182,10 @@ public class CatastropheModModVariables {
 				clone.WizardryLevel = original.WizardryLevel;
 				clone.parry_screen_flash = original.parry_screen_flash;
 				clone.parry_cooldown = original.parry_cooldown;
-				clone.parry_mode = original.parry_mode;
+				clone.parry_melee_attack_mode = original.parry_melee_attack_mode;
+				clone.wooden_katana_sheathed = original.wooden_katana_sheathed;
+				clone.parry_projectile_mode = original.parry_projectile_mode;
+				clone.totem_cooldown = original.totem_cooldown;
 			}
 		}
 
@@ -455,13 +457,15 @@ public class CatastropheModModVariables {
 		public boolean comet_moth_pet = false;
 		public boolean rosy_maple_moth_pet = false;
 		public boolean is_hit_during_bossfight = false;
-		public boolean silk_moth_pet_counter = false;
 		public double mana_cost_accursed_tome = 6.0;
 		public boolean WizardryEnchantment = false;
 		public double WizardryLevel = 0;
 		public boolean parry_screen_flash = false;
 		public double parry_cooldown = 0.0;
-		public boolean parry_mode = false;
+		public double parry_melee_attack_mode = 0;
+		public boolean wooden_katana_sheathed = false;
+		public double parry_projectile_mode = 0;
+		public double totem_cooldown = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -573,13 +577,15 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("comet_moth_pet", comet_moth_pet);
 			nbt.putBoolean("rosy_maple_moth_pet", rosy_maple_moth_pet);
 			nbt.putBoolean("is_hit_during_bossfight", is_hit_during_bossfight);
-			nbt.putBoolean("silk_moth_pet_counter", silk_moth_pet_counter);
 			nbt.putDouble("mana_cost_accursed_tome", mana_cost_accursed_tome);
 			nbt.putBoolean("WizardryEnchantment", WizardryEnchantment);
 			nbt.putDouble("WizardryLevel", WizardryLevel);
 			nbt.putBoolean("parry_screen_flash", parry_screen_flash);
 			nbt.putDouble("parry_cooldown", parry_cooldown);
-			nbt.putBoolean("parry_mode", parry_mode);
+			nbt.putDouble("parry_melee_attack_mode", parry_melee_attack_mode);
+			nbt.putBoolean("wooden_katana_sheathed", wooden_katana_sheathed);
+			nbt.putDouble("parry_projectile_mode", parry_projectile_mode);
+			nbt.putDouble("totem_cooldown", totem_cooldown);
 			return nbt;
 		}
 
@@ -688,13 +694,15 @@ public class CatastropheModModVariables {
 			comet_moth_pet = nbt.getBoolean("comet_moth_pet");
 			rosy_maple_moth_pet = nbt.getBoolean("rosy_maple_moth_pet");
 			is_hit_during_bossfight = nbt.getBoolean("is_hit_during_bossfight");
-			silk_moth_pet_counter = nbt.getBoolean("silk_moth_pet_counter");
 			mana_cost_accursed_tome = nbt.getDouble("mana_cost_accursed_tome");
 			WizardryEnchantment = nbt.getBoolean("WizardryEnchantment");
 			WizardryLevel = nbt.getDouble("WizardryLevel");
 			parry_screen_flash = nbt.getBoolean("parry_screen_flash");
 			parry_cooldown = nbt.getDouble("parry_cooldown");
-			parry_mode = nbt.getBoolean("parry_mode");
+			parry_melee_attack_mode = nbt.getDouble("parry_melee_attack_mode");
+			wooden_katana_sheathed = nbt.getBoolean("wooden_katana_sheathed");
+			parry_projectile_mode = nbt.getDouble("parry_projectile_mode");
+			totem_cooldown = nbt.getDouble("totem_cooldown");
 		}
 	}
 
@@ -822,13 +830,15 @@ public class CatastropheModModVariables {
 					variables.comet_moth_pet = message.data.comet_moth_pet;
 					variables.rosy_maple_moth_pet = message.data.rosy_maple_moth_pet;
 					variables.is_hit_during_bossfight = message.data.is_hit_during_bossfight;
-					variables.silk_moth_pet_counter = message.data.silk_moth_pet_counter;
 					variables.mana_cost_accursed_tome = message.data.mana_cost_accursed_tome;
 					variables.WizardryEnchantment = message.data.WizardryEnchantment;
 					variables.WizardryLevel = message.data.WizardryLevel;
 					variables.parry_screen_flash = message.data.parry_screen_flash;
 					variables.parry_cooldown = message.data.parry_cooldown;
-					variables.parry_mode = message.data.parry_mode;
+					variables.parry_melee_attack_mode = message.data.parry_melee_attack_mode;
+					variables.wooden_katana_sheathed = message.data.wooden_katana_sheathed;
+					variables.parry_projectile_mode = message.data.parry_projectile_mode;
+					variables.totem_cooldown = message.data.totem_cooldown;
 				}
 			});
 			context.setPacketHandled(true);

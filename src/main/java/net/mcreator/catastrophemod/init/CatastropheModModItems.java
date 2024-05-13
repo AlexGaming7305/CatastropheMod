@@ -30,6 +30,7 @@ import net.mcreator.catastrophemod.item.VenomousBow2Item;
 import net.mcreator.catastrophemod.item.VenomousBow1Item;
 import net.mcreator.catastrophemod.item.VenomousBow0Item;
 import net.mcreator.catastrophemod.item.VeinStrikerItem;
+import net.mcreator.catastrophemod.item.TwigItem;
 import net.mcreator.catastrophemod.item.ThunderStarItem;
 import net.mcreator.catastrophemod.item.ThornSwordItem;
 import net.mcreator.catastrophemod.item.ThornItem;
@@ -499,6 +500,7 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> DEPTHSTONE_STAIRS = block(CatastropheModModBlocks.DEPTHSTONE_STAIRS);
 	public static final RegistryObject<Item> DEPTHSTONE_BRICKS_SLAB = block(CatastropheModModBlocks.DEPTHSTONE_BRICKS_SLAB);
 	public static final RegistryObject<Item> DEPTHSTONE_BRICKS_STAIRS = block(CatastropheModModBlocks.DEPTHSTONE_BRICKS_STAIRS);
+	public static final RegistryObject<Item> TWIG = REGISTRY.register("twig", () -> new TwigItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

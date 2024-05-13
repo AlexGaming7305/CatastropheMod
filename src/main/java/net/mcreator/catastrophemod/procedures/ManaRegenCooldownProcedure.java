@@ -31,9 +31,6 @@ public class ManaRegenCooldownProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		double damage = 0;
-		Entity projectile = null;
-		ItemStack axe = ItemStack.EMPTY;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))) {
 			{
 				double _setval = 40;

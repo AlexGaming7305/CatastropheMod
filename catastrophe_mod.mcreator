@@ -9,8 +9,8 @@
       "registry_name": "wooden_katana",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/WoodenKatanaItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/wooden_katana.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/wooden_katana.json",
+          "src/main/java/net/mcreator/catastrophemod/item/WoodenKatanaItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -85,10 +85,10 @@
         "ec": true,
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/item/reinforced_iron_armor_helmet.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/reinforced_iron_armor_leggings.json",
           "src/main/resources/assets/catastrophe_mod/models/item/reinforced_iron_armor_chestplate.json",
-          "src/main/java/net/mcreator/catastrophemod/item/Reinforced_IronArmorItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/reinforced_iron_armor_boots.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/reinforced_iron_armor_boots.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/reinforced_iron_armor_leggings.json",
+          "src/main/java/net/mcreator/catastrophemod/item/Reinforced_IronArmorItem.java"
         ]
       },
       "path": "~/Items/Armor"
@@ -102,8 +102,8 @@
       "registry_name": "copper_shard",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/copper_shard.json",
-          "src/main/java/net/mcreator/catastrophemod/item/CopperShardItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/CopperShardItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/copper_shard.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -466,9 +466,9 @@
       "registry_name": "calico_mushroom",
       "metadata": {
         "files": [
+          "src/main/resources/assets/catastrophe_mod/models/block/calico_mushroom.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/calico_mushroom.json",
           "src/main/java/net/mcreator/catastrophemod/block/CalicoMushroomBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/calico_mushroom.json",
           "src/main/resources/assets/catastrophe_mod/models/item/calico_mushroom.json"
         ]
       },
@@ -635,8 +635,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/item/BackPackItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/back_pack.json",
-          "src/main/java/net/mcreator/catastrophemod/item/inventory/BackPackInventoryCapability.java"
+          "src/main/java/net/mcreator/catastrophemod/item/inventory/BackPackInventoryCapability.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/back_pack.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -679,8 +679,8 @@
       "registry_name": "natureite_ingot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/NatureiteIngotItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/natureite_ingot.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/natureite_ingot.json",
+          "src/main/java/net/mcreator/catastrophemod/item/NatureiteIngotItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -694,13 +694,13 @@
       "registry_name": "natureite_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/natureite_ore.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/natureite_ore_biome_modifier.json",
-          "src/main/java/net/mcreator/catastrophemod/block/NatureiteOreBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/natureite_ore.json",
           "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/natureite_ore.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/natureite_ore.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/natureite_ore.json",
+          "src/main/java/net/mcreator/catastrophemod/block/NatureiteOreBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/natureite_ore.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/natureite_ore.json"
+          "src/main/resources/assets/catastrophe_mod/models/block/natureite_ore.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -716,8 +716,8 @@
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/block/natureite_block.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/natureite_block.json",
-          "src/main/java/net/mcreator/catastrophemod/block/NatureiteBlockBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/natureite_block.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/natureite_block.json",
+          "src/main/java/net/mcreator/catastrophemod/block/NatureiteBlockBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -803,8 +803,8 @@
       "registry_name": "natureite_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/natureite_sword.json",
-          "src/main/java/net/mcreator/catastrophemod/item/NatureiteSwordItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/NatureiteSwordItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/natureite_sword.json"
         ]
       },
       "path": "~/Items/Tools"
@@ -818,8 +818,8 @@
       "registry_name": "natureite_shovel",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/NatureiteShovelItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/natureite_shovel.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/natureite_shovel.json",
+          "src/main/java/net/mcreator/catastrophemod/item/NatureiteShovelItem.java"
         ]
       },
       "path": "~/Items/Tools"
@@ -833,8 +833,8 @@
       "registry_name": "natureite_hoe",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/NatureiteHoeItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/natureite_hoe.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/natureite_hoe.json",
+          "src/main/java/net/mcreator/catastrophemod/item/NatureiteHoeItem.java"
         ]
       },
       "path": "~/Items/Tools"
@@ -923,10 +923,10 @@
         "ec": true,
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/item/natureite_armor_leggings.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/natureite_armor_boots.json",
           "src/main/resources/assets/catastrophe_mod/models/item/natureite_armor_helmet.json",
           "src/main/resources/assets/catastrophe_mod/models/item/natureite_armor_chestplate.json",
-          "src/main/java/net/mcreator/catastrophemod/item/NatureiteArmorItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/NatureiteArmorItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/natureite_armor_boots.json"
         ]
       },
       "path": "~/Items/Armor"
@@ -1115,8 +1115,8 @@
       "registry_name": "mineral_wraith_loot_bundle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/MineralWraithLootBundleItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/mineral_wraith_loot_bundle.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/mineral_wraith_loot_bundle.json",
+          "src/main/java/net/mcreator/catastrophemod/item/MineralWraithLootBundleItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -1447,8 +1447,8 @@
       "registry_name": "spellof_lightning",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/spellof_lightning.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SpellofLightningItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SpellofLightningItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/spellof_lightning.json"
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
@@ -1661,11 +1661,11 @@
         "eb": true,
         "ec": true,
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/natures_blessing_boots.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/natures_blessing_leggings.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/natures_blessing_chestplate.json",
           "src/main/resources/assets/catastrophe_mod/models/item/natures_blessing_helmet.json",
-          "src/main/java/net/mcreator/catastrophemod/item/NaturesBlessingItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/NaturesBlessingItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/natures_blessing_chestplate.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/natures_blessing_leggings.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/natures_blessing_boots.json"
         ]
       },
       "path": "~/Items/Armor"
@@ -1765,30 +1765,6 @@
       "path": "~/Items/Armor"
     },
     {
-      "name": "AccessorySlots",
-      "type": "procedure",
-      "sortid": 1311,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory_slots",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AccessorySlotsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "SetupAnimations",
       "type": "procedure",
       "sortid": 1315,
@@ -1885,8 +1861,8 @@
       "registry_name": "orbital_barrage",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/orbital_barrage.json",
-          "src/main/java/net/mcreator/catastrophemod/item/OrbitalBarrageItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/OrbitalBarrageItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/orbital_barrage.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -2190,8 +2166,8 @@
       "registry_name": "natureite_apple",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/natureite_apple.json",
-          "src/main/java/net/mcreator/catastrophemod/item/NatureiteAppleItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/NatureiteAppleItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/natureite_apple.json"
         ]
       },
       "path": "~/Items/Food"
@@ -2961,8 +2937,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/client/renderer/ThornInfestedArmorRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/ThornInfestedArmorModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/ThornInfestedArmorEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/ThornInfestedArmorEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/ThornInfestedArmorModel.java"
         ]
       },
       "path": "~/Entities"
@@ -2976,9 +2952,9 @@
       "registry_name": "mineral_wraith",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/MineralWraithModel.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/MineralWraithRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/MineralWraithEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/MineralWraithEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/MineralWraithModel.java"
         ]
       },
       "path": "~/Entities"
@@ -2992,9 +2968,9 @@
       "registry_name": "furious_wind",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/FuriousWindEntity.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/FuriousWindRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/FuriousWindModel.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/model/FuriousWindModel.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/FuriousWindEntity.java"
         ]
       },
       "path": "~/Minions"
@@ -3009,8 +2985,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/PileOfMossEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/PileOfMossModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/PileOfMossRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/PileOfMossRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/PileOfMossModel.java"
         ]
       },
       "path": "~/Minions"
@@ -3024,9 +3000,9 @@
       "registry_name": "swordspin",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/SwordspinModel.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordspinRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/SwordspinEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordspinRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/model/SwordspinModel.java"
         ]
       },
       "path": "~/Entities"
@@ -3040,8 +3016,8 @@
       "registry_name": "sword_orbit",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordOrbitRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/SwordOrbitEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordOrbitRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/model/SwordOrbitModel.java"
         ]
       },
@@ -3092,8 +3068,8 @@
       "registry_name": "reinforced_plates",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/ReinforcedPlatesItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/reinforced_plates.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/reinforced_plates.json",
+          "src/main/java/net/mcreator/catastrophemod/item/ReinforcedPlatesItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -3107,13 +3083,13 @@
       "registry_name": "dried_rosxite_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/dried_rosxite_ore.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/dried_rosxite_ore_biome_modifier.json",
           "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/dried_rosxite_ore.json",
-          "src/main/java/net/mcreator/catastrophemod/block/DriedRosxiteOreBlock.java",
+          "src/main/resources/assets/catastrophe_mod/blockstates/dried_rosxite_ore.json",
           "src/main/resources/assets/catastrophe_mod/models/item/dried_rosxite_ore.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/dried_rosxite_ore.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/dried_rosxite_ore.json"
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/dried_rosxite_ore_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/dried_rosxite_ore.json",
+          "src/main/java/net/mcreator/catastrophemod/block/DriedRosxiteOreBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/block/dried_rosxite_ore.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -3127,8 +3103,8 @@
       "registry_name": "raw_rosxite",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/RawRosxiteItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/raw_rosxite.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/raw_rosxite.json",
+          "src/main/java/net/mcreator/catastrophemod/item/RawRosxiteItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -3142,10 +3118,10 @@
       "registry_name": "rosxite_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/blockstates/rosxite_ore.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/rosxite_ore.json",
           "src/main/resources/assets/catastrophe_mod/models/block/rosxite_ore.json",
           "src/main/java/net/mcreator/catastrophemod/block/RosxiteOreBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/rosxite_ore.json"
+          "src/main/resources/assets/catastrophe_mod/blockstates/rosxite_ore.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -3192,10 +3168,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/AssassinSkeletonEntity.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/assassin_skeleton_spawn_egg.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/assassin_skeleton_biome_modifier.json",
           "src/main/java/net/mcreator/catastrophemod/entity/model/AssassinSkeletonModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AssassinSkeletonRenderer.java"
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/assassin_skeleton_biome_modifier.json",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AssassinSkeletonRenderer.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/assassin_skeleton_spawn_egg.json"
         ]
       },
       "path": "~/Entities"
@@ -3245,8 +3221,8 @@
       "registry_name": "storm_shield",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/storm_shield.json",
-          "src/main/java/net/mcreator/catastrophemod/item/StormShieldItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/StormShieldItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/storm_shield.json"
         ]
       },
       "path": "~/Items/Accessories"
@@ -3260,8 +3236,8 @@
       "registry_name": "running_boots",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/RunningBootsItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/running_boots.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/running_boots.json",
+          "src/main/java/net/mcreator/catastrophemod/item/RunningBootsItem.java"
         ]
       },
       "path": "~/Items/Accessories"
@@ -3305,8 +3281,8 @@
       "registry_name": "crimson_dagger",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/crimson_dagger.json",
-          "src/main/java/net/mcreator/catastrophemod/item/CrimsonDaggerItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/CrimsonDaggerItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/crimson_dagger.json"
         ]
       },
       "path": "~/Items/Accessories"
@@ -3320,8 +3296,8 @@
       "registry_name": "netherite_shield",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/NetheriteShieldItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/netherite_shield.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/netherite_shield.json",
+          "src/main/java/net/mcreator/catastrophemod/item/NetheriteShieldItem.java"
         ]
       },
       "path": "~/Items/Accessories"
@@ -3554,9 +3530,9 @@
       "registry_name": "sea_pendant",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_pendant.json",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/SeaPendantRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/item/SeaPendantItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SeaPendantItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_pendant.json"
         ]
       },
       "path": "~/Items/Accessories"
@@ -3873,8 +3849,8 @@
       "registry_name": "electrified_spark",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/electrified_spark.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/ElectrifiedSparkParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/ElectrifiedSparkParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/electrified_spark.json"
         ]
       },
       "path": "~/Particles"
@@ -3975,8 +3951,8 @@
       "registry_name": "sword_spin_dash",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordSpinDashRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/SwordSpinDashEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/SwordSpinDashEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordSpinDashRenderer.java"
         ]
       },
       "path": "~/Entities"
@@ -4026,8 +4002,8 @@
       "registry_name": "sword_dash",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/SwordDashEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordDashRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/SwordDashRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/SwordDashEntity.java"
         ]
       },
       "path": "~/Entities"
@@ -4056,8 +4032,8 @@
       "registry_name": "music_disc_overgrown_grove",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_overgrown_grove.json",
-          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscOvergrownGroveItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscOvergrownGroveItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_overgrown_grove.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -4071,8 +4047,8 @@
       "registry_name": "music_disc_nethers_fury",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscNethersFuryItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_nethers_fury.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_nethers_fury.json",
+          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscNethersFuryItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -4086,8 +4062,8 @@
       "registry_name": "freezing_staff",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/FreezingStaffItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/freezing_staff.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/freezing_staff.json",
+          "src/main/java/net/mcreator/catastrophemod/item/FreezingStaffItem.java"
         ]
       },
       "path": "~/Items/Weapons/Summoner Weapons"
@@ -4101,8 +4077,8 @@
       "registry_name": "freezing_core",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/FreezingCoreRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/FreezingCoreEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FreezingCoreRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/model/FreezingCoreModel.java"
         ]
       },
@@ -4341,8 +4317,8 @@
       "registry_name": "spell_of_phantoms",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SpellOfPhantomsItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/spell_of_phantoms.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/spell_of_phantoms.json",
+          "src/main/java/net/mcreator/catastrophemod/item/SpellOfPhantomsItem.java"
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
@@ -6189,13 +6165,13 @@
       "registry_name": "calico_shroom",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/block/CalicoShroomBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/calico_shroom.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/calico_shroom_biome_modifier.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/calico_shroom.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/calico_shroom.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/calico_shroom.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/calico_shroom.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/calico_shroom.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/calico_shroom.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/calico_shroom.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/calico_shroom.json",
+          "src/main/java/net/mcreator/catastrophemod/block/CalicoShroomBlock.java",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/calico_shroom_biome_modifier.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -6209,12 +6185,12 @@
       "registry_name": "tall_calico_shroom",
       "metadata": {
         "files": [
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/tall_calico_shroom_biome_modifier.json",
           "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/tall_calico_shroom.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/tall_calico_shroom.json",
           "src/main/resources/assets/catastrophe_mod/models/block/tall_calico_shroom.json",
           "src/main/java/net/mcreator/catastrophemod/block/TallCalicoShroomBlock.java",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/tall_calico_shroom_biome_modifier.json",
           "src/main/resources/assets/catastrophe_mod/models/item/tall_calico_shroom.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/tall_calico_shroom.json",
           "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/tall_calico_shroom.json"
         ]
       },
@@ -6349,8 +6325,8 @@
       "registry_name": "music_disc_enlightened_starlight",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_enlightened_starlight.json",
-          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscEnlightenedStarlightItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscEnlightenedStarlightItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_enlightened_starlight.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -6379,13 +6355,13 @@
       "registry_name": "shroomium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/blockstates/shroomium_ore.json",
-          "src/main/java/net/mcreator/catastrophemod/block/ShroomiumOreBlock.java",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/shroomium_ore_biome_modifier.json",
           "src/main/resources/assets/catastrophe_mod/models/item/shroomium_ore.json",
+          "src/main/java/net/mcreator/catastrophemod/block/ShroomiumOreBlock.java",
           "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/shroomium_ore.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/shroomium_ore.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/shroomium_ore.json"
+          "src/main/resources/assets/catastrophe_mod/blockstates/shroomium_ore.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/shroomium_ore.json",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/shroomium_ore_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/shroomium_ore.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -6414,8 +6390,8 @@
       "registry_name": "shroomium_ingot",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/ShroomiumIngotItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/shroomium_ingot.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/shroomium_ingot.json",
+          "src/main/java/net/mcreator/catastrophemod/item/ShroomiumIngotItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -6443,11 +6419,11 @@
       "registry_name": "shroomium",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/ShroomiumItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/shroomium_chestplate.json",
           "src/main/resources/assets/catastrophe_mod/models/item/shroomium_leggings.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/shroomium_boots.json",
+          "src/main/java/net/mcreator/catastrophemod/item/ShroomiumItem.java",
           "src/main/resources/assets/catastrophe_mod/models/item/shroomium_helmet.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/shroomium_boots.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/shroomium_chestplate.json"
         ]
       },
       "path": "~/Items/Armor"
@@ -6567,8 +6543,8 @@
       "registry_name": "cactus_cutter",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/CactusCutterItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/cactus_cutter.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/cactus_cutter.json",
+          "src/main/java/net/mcreator/catastrophemod/item/CactusCutterItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -6706,8 +6682,8 @@
       "registry_name": "wooden_spear",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/WoodenSpearItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/wooden_spear.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/wooden_spear.json",
+          "src/main/java/net/mcreator/catastrophemod/item/WoodenSpearItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -6721,8 +6697,8 @@
       "registry_name": "stone_spear",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/StoneSpearItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/stone_spear.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/stone_spear.json",
+          "src/main/java/net/mcreator/catastrophemod/item/StoneSpearItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -6781,8 +6757,8 @@
       "registry_name": "netherite_spear",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/netherite_spear.json",
-          "src/main/java/net/mcreator/catastrophemod/item/NetheriteSpearItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/NetheriteSpearItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/netherite_spear.json"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -6796,8 +6772,8 @@
       "registry_name": "naturite_spear",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/naturite_spear.json",
-          "src/main/java/net/mcreator/catastrophemod/item/NaturiteSpearItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/NaturiteSpearItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/naturite_spear.json"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -6811,8 +6787,8 @@
       "registry_name": "spear_of_nature",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/spear_of_nature.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SpearOfNatureItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SpearOfNatureItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/spear_of_nature.json"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -6975,9 +6951,9 @@
       "registry_name": "acid_tarantula_minion",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/AcidTarantulaMinionModel.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AcidTarantulaMinionRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/AcidTarantulaMinionEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AcidTarantulaMinionRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/model/AcidTarantulaMinionModel.java"
         ]
       },
       "path": "~/Minions"
@@ -7177,9 +7153,9 @@
       "registry_name": "moss",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/moss_helmet.json",
           "src/main/resources/assets/catastrophe_mod/models/item/moss_leggings.json",
           "src/main/java/net/mcreator/catastrophemod/item/MossItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/moss_helmet.json",
           "src/main/resources/assets/catastrophe_mod/models/item/moss_chestplate.json",
           "src/main/resources/assets/catastrophe_mod/models/item/moss_boots.json"
         ]
@@ -7276,8 +7252,8 @@
       "registry_name": "spirit_in_a_bottle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SpiritInABottleItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/spirit_in_a_bottle.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/spirit_in_a_bottle.json",
+          "src/main/java/net/mcreator/catastrophemod/item/SpiritInABottleItem.java"
         ]
       },
       "path": "~/Items/Accessories"
@@ -7473,8 +7449,8 @@
       "registry_name": "sea_pickaxe",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_pickaxe.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SeaPickaxeItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SeaPickaxeItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_pickaxe.json"
         ]
       },
       "path": "~/Items/Tools"
@@ -7488,8 +7464,8 @@
       "registry_name": "sea_axe",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SeaAxeItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_axe.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_axe.json",
+          "src/main/java/net/mcreator/catastrophemod/item/SeaAxeItem.java"
         ]
       },
       "path": "~/Items/Tools"
@@ -7503,8 +7479,8 @@
       "registry_name": "sea_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_sword.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SeaSwordItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SeaSwordItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_sword.json"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -7518,8 +7494,8 @@
       "registry_name": "sea_shovel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_shovel.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SeaShovelItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SeaShovelItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_shovel.json"
         ]
       },
       "path": "~/Items/Tools"
@@ -7533,8 +7509,8 @@
       "registry_name": "sea_hoe",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SeaHoeItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_hoe.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_hoe.json",
+          "src/main/java/net/mcreator/catastrophemod/item/SeaHoeItem.java"
         ]
       },
       "path": "~/Items/Tools"
@@ -7813,11 +7789,11 @@
       "registry_name": "nautilus",
       "metadata": {
         "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/nautilus_helmet.json",
           "src/main/resources/assets/catastrophe_mod/models/item/nautilus_chestplate.json",
           "src/main/java/net/mcreator/catastrophemod/item/NautilusItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/nautilus_helmet.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/nautilus_boots.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/nautilus_leggings.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/nautilus_leggings.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/nautilus_boots.json"
         ]
       },
       "path": "~/Items/Armor"
@@ -7940,8 +7916,8 @@
       "registry_name": "whirlpool",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/particle/WhirlpoolParticle.java",
-          "src/main/resources/assets/catastrophe_mod/particles/whirlpool.json"
+          "src/main/resources/assets/catastrophe_mod/particles/whirlpool.json",
+          "src/main/java/net/mcreator/catastrophemod/client/particle/WhirlpoolParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -7955,8 +7931,8 @@
       "registry_name": "riptide",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/RiptideItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/riptide.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/riptide.json",
+          "src/main/java/net/mcreator/catastrophemod/item/RiptideItem.java"
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
@@ -8006,8 +7982,8 @@
       "registry_name": "whirlpool_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/WhirlpoolEntityEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/WhirlpoolEntityRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/WhirlpoolEntityRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/WhirlpoolEntityEntity.java"
         ]
       },
       "path": "~/Entities"
@@ -8076,10 +8052,10 @@
       "registry_name": "hermit_crab",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/hermit_crab_biome_modifier.json",
-          "src/main/java/net/mcreator/catastrophemod/entity/HermitCrabEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/HermitCrabModel.java",
           "src/main/resources/assets/catastrophe_mod/models/item/hermit_crab_spawn_egg.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/HermitCrabEntity.java",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/hermit_crab_biome_modifier.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/HermitCrabModel.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/HermitCrabRenderer.java"
         ]
       },
@@ -8134,8 +8110,8 @@
       "registry_name": "tear_of_the_sea",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/tear_of_the_sea.json",
-          "src/main/java/net/mcreator/catastrophemod/item/TearOfTheSeaItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/TearOfTheSeaItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/tear_of_the_sea.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -8264,11 +8240,11 @@
       "registry_name": "hunter",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/hunter_helmet.json",
           "src/main/java/net/mcreator/catastrophemod/item/HunterItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/hunter_helmet.json",
           "src/main/resources/assets/catastrophe_mod/models/item/hunter_leggings.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/hunter_chestplate.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/hunter_boots.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/hunter_boots.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/hunter_chestplate.json"
         ]
       },
       "path": "~/Items/Armor"
@@ -8556,8 +8532,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/block/ManaRosePlantBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/mana_rose_plant.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/mana_rose_plant.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/mana_rose_plant.json",
           "src/main/resources/assets/catastrophe_mod/models/item/mana_rose_plant.json"
         ]
       },
@@ -8572,8 +8548,8 @@
       "registry_name": "mana_rose",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/mana_rose.json",
-          "src/main/java/net/mcreator/catastrophemod/item/ManaRoseItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/ManaRoseItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/mana_rose.json"
         ]
       },
       "path": "~/Items/Accessories"
@@ -8784,8 +8760,8 @@
       "registry_name": "lightning_blade",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/LightningBladeModel.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/LightningBladeRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/LightningBladeModel.java",
           "src/main/java/net/mcreator/catastrophemod/entity/LightningBladeEntity.java"
         ]
       },
@@ -8965,8 +8941,8 @@
       "registry_name": "marksmans_crest",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/MarksmansCrestItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/marksmans_crest.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/marksmans_crest.json",
+          "src/main/java/net/mcreator/catastrophemod/item/MarksmansCrestItem.java"
         ]
       },
       "path": "~/Items/Accessories"
@@ -9001,9 +8977,9 @@
       "registry_name": "amulet_of_vitality",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AmuletOfVitalityRenderer.java",
           "src/main/resources/assets/catastrophe_mod/models/item/amulet_of_vitality.json",
-          "src/main/java/net/mcreator/catastrophemod/item/AmuletOfVitalityItem.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AmuletOfVitalityRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/item/AmuletOfVitalityItem.java"
         ]
       },
       "path": "~/Items/Accessories"
@@ -9097,11 +9073,11 @@
       "registry_name": "spore_zombie",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/spore_zombie_biome_modifier.json",
           "src/main/java/net/mcreator/catastrophemod/entity/SporeZombieEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/SporeZombieRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/SporeZombieModel.java",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/spore_zombie_biome_modifier.json",
           "src/main/resources/assets/catastrophe_mod/models/item/spore_zombie_spawn_egg.json",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/SporeZombieModel.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/SporeZombieRenderer.java"
         ]
       },
       "path": "~/Entities"
@@ -9139,8 +9115,8 @@
       "registry_name": "knife_of_proficiency",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/knife_of_proficiency.json",
-          "src/main/java/net/mcreator/catastrophemod/item/KnifeOfProficiencyItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/KnifeOfProficiencyItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/knife_of_proficiency.json"
         ]
       },
       "path": "~/Items/Weapons/Ranged Weapons"
@@ -9376,9 +9352,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/item/chiseled_charred_bricks.json",
+          "src/main/java/net/mcreator/catastrophemod/block/ChiseledCharredBricksBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/block/chiseled_charred_bricks.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/chiseled_charred_bricks.json",
-          "src/main/java/net/mcreator/catastrophemod/block/ChiseledCharredBricksBlock.java"
+          "src/main/resources/assets/catastrophe_mod/blockstates/chiseled_charred_bricks.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9392,10 +9368,10 @@
       "registry_name": "charred_bricks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/charred_bricks.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/charred_bricks.json",
           "src/main/java/net/mcreator/catastrophemod/block/CharredBricksBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/charred_bricks.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9409,10 +9385,10 @@
       "registry_name": "cracked_charred_bricks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/cracked_charred_bricks.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/cracked_charred_bricks.json",
           "src/main/java/net/mcreator/catastrophemod/block/CrackedCharredBricksBlock.java",
           "src/main/resources/assets/catastrophe_mod/blockstates/cracked_charred_bricks.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/cracked_charred_bricks.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/cracked_charred_bricks.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9426,10 +9402,10 @@
       "registry_name": "polished_charred_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/polished_charred_stone.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/polished_charred_stone.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone.json",
           "src/main/java/net/mcreator/catastrophemod/block/PolishedCharredStoneBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone.json"
+          "src/main/resources/assets/catastrophe_mod/blockstates/polished_charred_stone.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/polished_charred_stone.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9443,10 +9419,10 @@
       "registry_name": "charred_tiles",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/block/CharredTilesBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/charred_tiles.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/charred_tiles.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/charred_tiles.json"
+          "src/main/java/net/mcreator/catastrophemod/block/CharredTilesBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9462,8 +9438,8 @@
         "files": [
           "src/main/resources/assets/catastrophe_mod/blockstates/charred_stone.json",
           "src/main/resources/assets/catastrophe_mod/models/item/charred_stone.json",
-          "src/main/java/net/mcreator/catastrophemod/block/CharredStoneBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone.json"
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone.json",
+          "src/main/java/net/mcreator/catastrophemod/block/CharredStoneBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9533,12 +9509,12 @@
       "registry_name": "charred_stone_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/charred_stone_slab.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_slab_full.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/charred_stone_slab.json",
           "src/main/java/net/mcreator/catastrophemod/block/CharredStoneSlabBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_slab_top.json",
           "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_slab.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_slab_top.json"
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_slab_full.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/charred_stone_slab.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9552,12 +9528,12 @@
       "registry_name": "charred_stone_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_stairs_inner.json",
-          "src/main/java/net/mcreator/catastrophemod/block/CharredStoneStairsBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/charred_stone_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_stairs_outer.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/charred_stone_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_stairs.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/charred_stone_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_stairs_outer.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_stone_stairs_inner.json",
+          "src/main/java/net/mcreator/catastrophemod/block/CharredStoneStairsBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9614,11 +9590,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_slab_full.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_slab.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/charred_bricks_slab.json",
           "src/main/java/net/mcreator/catastrophemod/block/CharredBricksSlabBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/charred_bricks_slab.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_slab_top.json"
+          "src/main/resources/assets/catastrophe_mod/blockstates/charred_bricks_slab.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_slab.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_slab_top.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/charred_bricks_slab.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9632,10 +9608,10 @@
       "registry_name": "charred_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_stairs_inner.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/charred_bricks_stairs.json",
           "src/main/resources/assets/catastrophe_mod/models/item/charred_bricks_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_stairs_inner.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/charred_bricks_stairs.json",
           "src/main/resources/assets/catastrophe_mod/models/block/charred_bricks_stairs_outer.json",
           "src/main/java/net/mcreator/catastrophemod/block/CharredBricksStairsBlock.java"
         ]
@@ -9679,12 +9655,12 @@
       "registry_name": "charred_tiles_slab",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/block/CharredTilesSlabBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/charred_tiles_slab.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_slab.json",
           "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_slab_top.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/charred_tiles_slab.json",
           "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_slab_full.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/charred_tiles_slab.json"
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_slab.json",
+          "src/main/java/net/mcreator/catastrophemod/block/CharredTilesSlabBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9698,12 +9674,12 @@
       "registry_name": "charred_tiles_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_stairs_outer.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/charred_tiles_stairs.json",
-          "src/main/java/net/mcreator/catastrophemod/block/CharredTilesStairsBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/charred_tiles_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/charred_tiles_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_stairs.json",
           "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_stairs_inner.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_stairs.json"
+          "src/main/java/net/mcreator/catastrophemod/block/CharredTilesStairsBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/block/charred_tiles_stairs_outer.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -9780,8 +9756,8 @@
       "registry_name": "thorn_tentacle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ThornTentacleRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/ThornTentacleEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/ThornTentacleRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/model/ThornTentacleModel.java"
         ]
       },
@@ -9861,10 +9837,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/client/renderer/CalicoStagBeetleRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/CalicoStagBeetleModel.java",
           "src/main/resources/assets/catastrophe_mod/models/item/calico_stag_beetle_spawn_egg.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/calico_stag_beetle_biome_modifier.json",
           "src/main/java/net/mcreator/catastrophemod/entity/CalicoStagBeetleEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/CalicoStagBeetleModel.java"
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/calico_stag_beetle_biome_modifier.json"
         ]
       },
       "path": "~/Entities"
@@ -10011,10 +9987,10 @@
       "registry_name": "decaying_grass",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/decaying_grass.json",
+          "src/main/java/net/mcreator/catastrophemod/block/DecayingGrassBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/decaying_grass.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/decaying_grass.json",
-          "src/main/java/net/mcreator/catastrophemod/block/DecayingGrassBlock.java"
+          "src/main/resources/assets/catastrophe_mod/models/block/decaying_grass.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/decaying_grass.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -10028,10 +10004,10 @@
       "registry_name": "decaying_shale",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/blockstates/decaying_shale.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/decaying_shale.json",
           "src/main/java/net/mcreator/catastrophemod/block/DecayingShaleBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/decaying_shale.json"
+          "src/main/resources/assets/catastrophe_mod/models/block/decaying_shale.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/decaying_shale.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/decaying_shale.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -10047,8 +10023,8 @@
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/block/decaying_spine.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/decaying_spine.json",
-          "src/main/java/net/mcreator/catastrophemod/block/DecayingSpineBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/decaying_spine.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/decaying_spine.json",
+          "src/main/java/net/mcreator/catastrophemod/block/DecayingSpineBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -10062,13 +10038,13 @@
       "registry_name": "flower_of_affliction",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/flower_of_affliction.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/flower_of_affliction.json",
           "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/flower_of_affliction.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/flower_of_affliction_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/flower_of_affliction.json",
           "src/main/resources/assets/catastrophe_mod/models/block/flower_of_affliction.json",
           "src/main/java/net/mcreator/catastrophemod/block/FlowerOfAfflictionBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/flower_of_affliction.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/flower_of_affliction.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/flower_of_affliction.json",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/flower_of_affliction_biome_modifier.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -10096,13 +10072,13 @@
       "registry_name": "withering_grass",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/withering_grass.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/withering_grass_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/withering_grass.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/withering_grass.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/withering_grass.json",
           "src/main/java/net/mcreator/catastrophemod/block/WitheringGrassBlock.java",
           "src/main/resources/assets/catastrophe_mod/blockstates/withering_grass.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/withering_grass.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/withering_grass.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/withering_grass.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/withering_grass.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -10116,8 +10092,8 @@
       "registry_name": "withering_wastes_extras",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/withering_wastes_extras.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/withering_wastes_extras_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/withering_wastes_extras.json",
           "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/withering_wastes_extras.json"
         ]
       },
@@ -10132,14 +10108,14 @@
       "registry_name": "tall_withering_grass",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/block/TallWitheringGrassBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/block/tall_withering_grass.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/tall_withering_grass_biome_modifier.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/tall_withering_grass_bottom.json",
           "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/tall_withering_grass.json",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/tall_withering_grass_biome_modifier.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/tall_withering_grass.json",
           "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/tall_withering_grass.json",
           "src/main/resources/assets/catastrophe_mod/models/item/tall_withering_grass.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/tall_withering_grass.json"
+          "src/main/resources/assets/catastrophe_mod/models/block/tall_withering_grass_bottom.json",
+          "src/main/java/net/mcreator/catastrophemod/block/TallWitheringGrassBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -10222,9 +10198,9 @@
       "registry_name": "baby_calico_stag_beetle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/BabyCalicoStagBeetleRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/BabyCalicoStagBeetleModel.java",
           "src/main/java/net/mcreator/catastrophemod/entity/BabyCalicoStagBeetleEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/BabyCalicoStagBeetleModel.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/BabyCalicoStagBeetleRenderer.java"
         ]
       },
       "path": "~/Minions"
@@ -10379,11 +10355,11 @@
       "registry_name": "shade",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/ShadeModel.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/shade_spawn_egg.json",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadeRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/ShadeEntity.java",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/shade_biome_modifier.json",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadeRenderer.java"
+          "src/main/resources/assets/catastrophe_mod/models/item/shade_spawn_egg.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/ShadeModel.java"
         ]
       },
       "path": "~/Entities"
@@ -10560,8 +10536,8 @@
       "registry_name": "electrified_round",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/ElectrifiedRoundItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/electrified_round.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/electrified_round.json",
+          "src/main/java/net/mcreator/catastrophemod/item/ElectrifiedRoundItem.java"
         ]
       },
       "path": "~/Items/Ammunition"
@@ -10666,8 +10642,8 @@
       "registry_name": "sea_conch",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_conch.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SeaConchItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SeaConchItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_conch.json"
         ]
       },
       "path": "~/Items/Weapons/Summoner Weapons"
@@ -10738,8 +10714,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/HermitCrabMinionEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/HermitCrabMinionModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/HermitCrabMinionRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/HermitCrabMinionRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/HermitCrabMinionModel.java"
         ]
       },
       "path": "~/Minions"
@@ -10827,9 +10803,9 @@
       "registry_name": "nature_blessed_spirit",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/NatureBlessedSpiritEntity.java",
           "src/main/java/net/mcreator/catastrophemod/entity/model/NatureBlessedSpiritModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/NatureBlessedSpiritRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/NatureBlessedSpiritEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/NatureBlessedSpiritRenderer.java"
         ]
       },
       "path": "~/Minions"
@@ -11257,42 +11233,6 @@
       "path": "~/Items/Miscellaneous"
     },
     {
-      "name": "VexDrops",
-      "type": "procedure",
-      "sortid": 2188,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vex_drops",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/VexDropsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "ProliferatingMushroomsDrop",
       "type": "procedure",
       "sortid": 2189,
@@ -11402,8 +11342,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/model/SepulcherModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/SepulcherEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/SepulcherRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/SepulcherRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/SepulcherEntity.java"
         ]
       },
       "path": "~/Entities"
@@ -11602,9 +11542,9 @@
       "registry_name": "shadowflame_spears",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/model/ShadowflameSpearsModel.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadowflameSpearsRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/ShadowflameSpearsEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/ShadowflameSpearsModel.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/ShadowflameSpearsEntity.java"
         ]
       },
       "path": "~/Entities"
@@ -11694,8 +11634,8 @@
       "registry_name": "firebrand",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/FirebrandItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/firebrand.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/firebrand.json",
+          "src/main/java/net/mcreator/catastrophemod/item/FirebrandItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -11752,8 +11692,8 @@
       "registry_name": "copper_token",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/CopperTokenItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/copper_token.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/copper_token.json",
+          "src/main/java/net/mcreator/catastrophemod/item/CopperTokenItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -12001,10 +11941,10 @@
       "registry_name": "molten_charred_bricks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/blockstates/molten_charred_bricks.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/molten_charred_bricks.json",
           "src/main/java/net/mcreator/catastrophemod/block/MoltenCharredBricksBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/molten_charred_bricks.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/molten_charred_bricks.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -12046,12 +11986,12 @@
       "registry_name": "polished_charred_stone_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_stairs_outer.json",
           "src/main/java/net/mcreator/catastrophemod/block/PolishedCharredStoneStairsBlock.java",
-          "src/main/resources/assets/catastrophe_mod/blockstates/polished_charred_stone_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_stairs_inner.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_stairs.json",
           "src/main/resources/assets/catastrophe_mod/models/item/polished_charred_stone_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_stairs_inner.json"
+          "src/main/resources/assets/catastrophe_mod/blockstates/polished_charred_stone_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_stairs_outer.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -12065,12 +12005,12 @@
       "registry_name": "polished_charred_stone_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/polished_charred_stone_slab.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/polished_charred_stone_slab.json",
           "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_slab_full.json",
           "src/main/java/net/mcreator/catastrophemod/block/PolishedCharredStoneSlabBlock.java",
-          "src/main/resources/assets/catastrophe_mod/blockstates/polished_charred_stone_slab.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_slab_top.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_slab.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/polished_charred_stone_slab.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_slab.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/polished_charred_stone_slab_top.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -12112,10 +12052,10 @@
       "registry_name": "molten_charred_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_stairs_outer.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/molten_charred_bricks_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_stairs_inner.json",
           "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_stairs_outer.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_stairs_inner.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/molten_charred_bricks_stairs.json",
           "src/main/java/net/mcreator/catastrophemod/block/MoltenCharredBricksStairsBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/molten_charred_bricks_stairs.json"
         ]
@@ -12131,12 +12071,12 @@
       "registry_name": "molten_charred_bricks_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_slab_top.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_slab_full.json",
+          "src/main/java/net/mcreator/catastrophemod/block/MoltenCharredBricksSlabBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/molten_charred_bricks_slab.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/molten_charred_bricks_slab.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_slab.json",
-          "src/main/java/net/mcreator/catastrophemod/block/MoltenCharredBricksSlabBlock.java"
+          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_slab_full.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_slab_top.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/molten_charred_bricks_slab.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -12292,8 +12232,8 @@
       "registry_name": "crimson_ray",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/CrimsonRayItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/crimson_ray.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/crimson_ray.json",
+          "src/main/java/net/mcreator/catastrophemod/item/CrimsonRayItem.java"
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
@@ -12307,11 +12247,11 @@
       "registry_name": "thorn",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/thorn_chestplate.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/thorn_boots.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/thorn_helmet.json",
+          "src/main/java/net/mcreator/catastrophemod/item/ThornItem.java",
           "src/main/resources/assets/catastrophe_mod/models/item/thorn_leggings.json",
-          "src/main/java/net/mcreator/catastrophemod/item/ThornItem.java"
+          "src/main/resources/assets/catastrophe_mod/models/item/thorn_chestplate.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/thorn_helmet.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/thorn_boots.json"
         ]
       },
       "path": "~/Items/Armor"
@@ -12394,8 +12334,8 @@
       "registry_name": "amatoxin_gas",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/particle/AmatoxinGasParticle.java",
-          "src/main/resources/assets/catastrophe_mod/particles/amatoxin_gas.json"
+          "src/main/resources/assets/catastrophe_mod/particles/amatoxin_gas.json",
+          "src/main/java/net/mcreator/catastrophemod/client/particle/AmatoxinGasParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -12938,8 +12878,8 @@
       "registry_name": "ice_spear",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/IceSpearItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/ice_spear.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/ice_spear.json",
+          "src/main/java/net/mcreator/catastrophemod/item/IceSpearItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -13089,8 +13029,8 @@
       "registry_name": "blood_drop",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/blood_drop.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/BloodDropParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/BloodDropParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/blood_drop.json"
         ]
       },
       "path": "~/Particles"
@@ -13164,10 +13104,10 @@
       "registry_name": "charred_skeleton_guard",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/CharredSkeletonGuardModel.java",
           "src/main/resources/assets/catastrophe_mod/models/item/charred_skeleton_guard_spawn_egg.json",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/CharredSkeletonGuardRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/CharredSkeletonGuardEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/CharredSkeletonGuardEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/CharredSkeletonGuardModel.java"
         ]
       },
       "path": "~/Entities"
@@ -13272,8 +13212,8 @@
       "registry_name": "spearthe_gungnir",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SpeartheGungnirItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/spearthe_gungnir.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/spearthe_gungnir.json",
+          "src/main/java/net/mcreator/catastrophemod/item/SpeartheGungnirItem.java"
         ]
       },
       "path": "~/Items/Weapons/Summoner Weapons"
@@ -13287,8 +13227,8 @@
       "registry_name": "staffof_vitality",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/staffof_vitality.json",
-          "src/main/java/net/mcreator/catastrophemod/item/StaffofVitalityItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/StaffofVitalityItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/staffof_vitality.json"
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
@@ -13458,8 +13398,8 @@
       "registry_name": "sepulcher_loot_bundle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SepulcherLootBundleItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/sepulcher_loot_bundle.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/sepulcher_loot_bundle.json",
+          "src/main/java/net/mcreator/catastrophemod/item/SepulcherLootBundleItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -13473,9 +13413,9 @@
       "registry_name": "nettle",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/NettleEntity.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/NettleRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/NettleModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/NettleEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/model/NettleModel.java"
         ]
       },
       "path": "~/Entities"
@@ -13780,8 +13720,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/client/renderer/NettleMinionRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/NettleMinionModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/NettleMinionEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/NettleMinionEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/NettleMinionModel.java"
         ]
       },
       "path": "~/Minions"
@@ -13943,8 +13883,8 @@
       "registry_name": "infernal_fragment",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/InfernalFragmentItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/infernal_fragment.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/infernal_fragment.json",
+          "src/main/java/net/mcreator/catastrophemod/item/InfernalFragmentItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -13987,8 +13927,8 @@
       "registry_name": "shadowflame_fragment",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/shadowflame_fragment.json",
-          "src/main/java/net/mcreator/catastrophemod/item/ShadowflameFragmentItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/ShadowflameFragmentItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/shadowflame_fragment.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -14002,8 +13942,8 @@
       "registry_name": "crimstone_gem",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/crimstone_gem.json",
-          "src/main/java/net/mcreator/catastrophemod/item/CrimstoneGemItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/CrimstoneGemItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/crimstone_gem.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -14017,10 +13957,10 @@
       "registry_name": "crimstone_ore",
       "metadata": {
         "files": [
+          "src/main/resources/assets/catastrophe_mod/models/block/crimstone_ore.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/crimstone_ore.json",
           "src/main/resources/assets/catastrophe_mod/models/item/crimstone_ore.json",
-          "src/main/java/net/mcreator/catastrophemod/block/CrimstoneOreBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/crimstone_ore.json"
+          "src/main/java/net/mcreator/catastrophemod/block/CrimstoneOreBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -14068,8 +14008,8 @@
       "registry_name": "hellbane",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/HellbaneItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/hellbane.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/hellbane.json",
+          "src/main/java/net/mcreator/catastrophemod/item/HellbaneItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
@@ -14196,10 +14136,10 @@
       "registry_name": "blazing_phoenix",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/BlazingPhoenixModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/BlazingPhoenixRenderer.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/blazing_phoenix_spawn_egg.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/blazing_phoenix_biome_modifier.json",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/BlazingPhoenixRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/BlazingPhoenixModel.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/blazing_phoenix_spawn_egg.json",
           "src/main/java/net/mcreator/catastrophemod/entity/BlazingPhoenixEntity.java"
         ]
       },
@@ -14444,8 +14384,8 @@
       "registry_name": "earthbound_staff",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/EarthboundStaffItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/earthbound_staff.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/earthbound_staff.json",
+          "src/main/java/net/mcreator/catastrophemod/item/EarthboundStaffItem.java"
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
@@ -14531,8 +14471,8 @@
       "registry_name": "earth_shatterer",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/EarthShattererItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/earth_shatterer.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/earth_shatterer.json",
+          "src/main/java/net/mcreator/catastrophemod/item/EarthShattererItem.java"
         ]
       },
       "path": "~/Items/Weapons/Ranged Weapons"
@@ -14626,9 +14566,9 @@
       "registry_name": "earthbound_fist",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/EarthboundFistEntity.java",
           "src/main/java/net/mcreator/catastrophemod/entity/model/EarthboundFistModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthboundFistRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/EarthboundFistEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthboundFistRenderer.java"
         ]
       },
       "path": "~/Minions"
@@ -14805,8 +14745,8 @@
       "registry_name": "earthbound_wraith",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/EarthboundWraithModel.java",
           "src/main/java/net/mcreator/catastrophemod/entity/EarthboundWraithEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/EarthboundWraithModel.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthboundWraithRenderer.java"
         ]
       },
@@ -14882,8 +14822,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/EarthShockwaveEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/EarthShockwaveModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthShockwaveRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthShockwaveRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/EarthShockwaveModel.java"
         ]
       },
       "path": "~/Entities"
@@ -14921,8 +14861,8 @@
       "registry_name": "earthbound_wraith_loot_bundle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/EarthboundWraithLootBundleItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/earthbound_wraith_loot_bundle.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/earthbound_wraith_loot_bundle.json",
+          "src/main/java/net/mcreator/catastrophemod/item/EarthboundWraithLootBundleItem.java"
         ]
       },
       "path": "~/Entities"
@@ -15018,8 +14958,8 @@
       "registry_name": "amulet_of_weakening",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/AmuletOfWeakeningItem.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/AmuletOfWeakeningRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/item/AmuletOfWeakeningItem.java",
           "src/main/resources/assets/catastrophe_mod/models/item/amulet_of_weakening.json"
         ]
       },
@@ -15072,8 +15012,8 @@
       "registry_name": "thunder_star",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/ThunderStarItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/thunder_star.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/thunder_star.json",
+          "src/main/java/net/mcreator/catastrophemod/item/ThunderStarItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -15661,10 +15601,10 @@
       "registry_name": "charred_mantis",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/CharredMantisModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/CharredMantisEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/layer/CharredMantisLayer.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/CharredMantisRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/layer/CharredMantisLayer.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/model/CharredMantisModel.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/CharredMantisEntity.java"
         ]
       },
       "path": "~/Entities"
@@ -15882,10 +15822,10 @@
       "registry_name": "flamestrike",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/flamestrike.json",
-          "src/main/java/net/mcreator/catastrophemod/item/model/FlamestrikeItemModel.java",
           "src/main/java/net/mcreator/catastrophemod/item/FlamestrikeItem.java",
-          "src/main/java/net/mcreator/catastrophemod/item/renderer/FlamestrikeItemRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/FlamestrikeItemRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/item/model/FlamestrikeItemModel.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/flamestrike.json"
         ]
       },
       "path": "~/Items/Weapons/Ranged Weapons"
@@ -16017,8 +15957,8 @@
       "registry_name": "snowflake",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/snowflake.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/SnowflakeParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/SnowflakeParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/snowflake.json"
         ]
       },
       "path": "~/Particles"
@@ -16285,42 +16225,6 @@
       "path": "~/Items/Miscellaneous"
     },
     {
-      "name": "WitherSkeletonLootDrops",
-      "type": "procedure",
-      "sortid": 2503,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wither_skeleton_loot_drops",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/WitherSkeletonLootDropsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "LeatherGloveFix",
       "type": "procedure",
       "sortid": 2504,
@@ -16436,8 +16340,8 @@
       "registry_name": "earthbound_core",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/earthbound_core.json",
-          "src/main/java/net/mcreator/catastrophemod/item/EarthboundCoreItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/EarthboundCoreItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/earthbound_core.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -16569,8 +16473,8 @@
       "registry_name": "music_disc_spark_of_a_shadow",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_spark_of_a_shadow.json",
-          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscSparkOfAShadowItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/MusicDiscSparkOfAShadowItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/music_disc_spark_of_a_shadow.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -16614,10 +16518,10 @@
       "registry_name": "nightfalls_demise_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/NightfallsDemiseProjectileModel.java",
           "src/main/java/net/mcreator/catastrophemod/entity/NightfallsDemiseProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/NightfallsDemiseProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/layer/NightfallsDemiseProjectileLayer.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/layer/NightfallsDemiseProjectileLayer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/NightfallsDemiseProjectileModel.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/NightfallsDemiseProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -17147,8 +17051,8 @@
       "registry_name": "mana_star",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/mana_star.json",
-          "src/main/java/net/mcreator/catastrophemod/item/ManaStarItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/ManaStarItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/mana_star.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -17190,8 +17094,8 @@
       "registry_name": "lesser_mana_potion",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/lesser_mana_potion.json",
-          "src/main/java/net/mcreator/catastrophemod/item/LesserManaPotionItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/LesserManaPotionItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/lesser_mana_potion.json"
         ]
       },
       "path": "~/Items/Food"
@@ -17265,8 +17169,8 @@
       "registry_name": "mana_potion",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/mana_potion.json",
-          "src/main/java/net/mcreator/catastrophemod/item/ManaPotionItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/ManaPotionItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/mana_potion.json"
         ]
       },
       "path": "~/Items/Food"
@@ -17343,9 +17247,9 @@
       "registry_name": "crystal_spear_stab",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/CrystalSpearStabRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/CrystalSpearStabEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/CrystalSpearStabModel.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/model/CrystalSpearStabModel.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/CrystalSpearStabRenderer.java"
         ]
       },
       "path": "~/Entities"
@@ -17593,11 +17497,11 @@
       "registry_name": "cursed_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/cursed_armor_boots.json",
-          "src/main/java/net/mcreator/catastrophemod/item/CursedArmorItem.java",
           "src/main/resources/assets/catastrophe_mod/models/item/cursed_armor_leggings.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/cursed_armor_chestplate.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/cursed_armor_helmet.json"
+          "src/main/java/net/mcreator/catastrophemod/item/CursedArmorItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/cursed_armor_helmet.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/cursed_armor_boots.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/cursed_armor_chestplate.json"
         ]
       },
       "path": "~/Items/Armor"
@@ -17813,10 +17717,10 @@
       "registry_name": "sea_crystal_cluster",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/sea_crystal_cluster.json",
           "src/main/java/net/mcreator/catastrophemod/block/SeaCrystalClusterBlock.java",
           "src/main/resources/assets/catastrophe_mod/blockstates/sea_crystal_cluster.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_crystal_cluster.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/sea_crystal_cluster.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/sea_crystal_cluster.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -18044,8 +17948,8 @@
       "registry_name": "blizzard_wind",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/blizzard_wind.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/BlizzardWindParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/BlizzardWindParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/blizzard_wind.json"
         ]
       },
       "path": "~/Particles"
@@ -18059,8 +17963,8 @@
       "registry_name": "electrified_trail",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/electrified_trail.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/ElectrifiedTrailParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/ElectrifiedTrailParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/electrified_trail.json"
         ]
       },
       "path": "~/Particles"
@@ -18257,9 +18161,9 @@
       "registry_name": "oceanic_splash",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/OceanicSplashModel.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/OceanicSplashRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/OceanicSplashEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/OceanicSplashEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/OceanicSplashModel.java"
         ]
       },
       "path": "~/Entities"
@@ -18273,8 +18177,8 @@
       "registry_name": "phantom_blast",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/phantom_blast.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/PhantomBlastParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/PhantomBlastParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/phantom_blast.json"
         ]
       },
       "path": "~/Particles"
@@ -18324,8 +18228,8 @@
       "registry_name": "phantom_blast_glow",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/phantom_blast_glow.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/PhantomBlastGlowParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/PhantomBlastGlowParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/phantom_blast_glow.json"
         ]
       },
       "path": "~/Particles"
@@ -18339,9 +18243,9 @@
       "registry_name": "ripsaw",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/renderer/RipsawItemRenderer.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/ripsaw.json",
           "src/main/java/net/mcreator/catastrophemod/item/RipsawItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/ripsaw.json",
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/RipsawItemRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/item/model/RipsawItemModel.java"
         ]
       },
@@ -18446,9 +18350,9 @@
       "registry_name": "ripsaw_sawblade",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/RipsawSawbladeRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/RipsawSawbladeEntity.java",
           "src/main/java/net/mcreator/catastrophemod/entity/model/RipsawSawbladeModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/RipsawSawbladeEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/RipsawSawbladeRenderer.java"
         ]
       },
       "path": "~/Entities"
@@ -18655,8 +18559,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/FirebrandSlashEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/FirebrandSlashRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/FirebrandSlashModel.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/model/FirebrandSlashModel.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FirebrandSlashRenderer.java"
         ]
       },
       "path": "~/Entities"
@@ -18710,11 +18614,11 @@
       "registry_name": "silk_moth",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/SilkMothModel.java",
           "src/main/resources/assets/catastrophe_mod/models/item/silk_moth_spawn_egg.json",
-          "src/main/java/net/mcreator/catastrophemod/entity/SilkMothEntity.java",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/silk_moth_biome_modifier.json",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/SilkMothRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/SilkMothEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/SilkMothRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/SilkMothModel.java"
         ]
       },
       "path": "~/Entities"
@@ -18823,46 +18727,6 @@
       "path": "~/Items/Accessories"
     },
     {
-      "name": "RottenHeartDrop",
-      "type": "procedure",
-      "sortid": 2640,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rotten_heart_drop",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RottenHeartDropProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "AtlanticSeaNettle",
       "type": "animatedentity",
       "sortid": 2641,
@@ -18873,10 +18737,10 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/layer/AtlanticSeaNettleLayer.java",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/atlantic_sea_nettle_biome_modifier.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/atlantic_sea_nettle_spawn_egg.json",
           "src/main/java/net/mcreator/catastrophemod/entity/AtlanticSeaNettleEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/AtlanticSeaNettleModel.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AtlanticSeaNettleRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AtlanticSeaNettleRenderer.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/atlantic_sea_nettle_spawn_egg.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/AtlanticSeaNettleModel.java"
         ]
       },
       "path": "~/Entities"
@@ -18926,10 +18790,10 @@
       "registry_name": "mana_rose_plant_feature",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/mana_rose_plant_feature.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/mana_rose_plant_feature_biome_modifier.json",
-          "src/main/java/net/mcreator/catastrophemod/world/features/ManaRosePlantFeatureFeature.java",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/mana_rose_plant_feature.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/mana_rose_plant_feature.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/mana_rose_plant_feature.json",
+          "src/main/java/net/mcreator/catastrophemod/world/features/ManaRosePlantFeatureFeature.java"
         ]
       },
       "path": "~/Structures"
@@ -18943,9 +18807,9 @@
       "registry_name": "small_calico_mushroom_feature",
       "metadata": {
         "files": [
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/small_calico_mushroom_feature.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/small_calico_mushroom_feature_biome_modifier.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/small_calico_mushroom_feature.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/small_calico_mushroom_feature.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/small_calico_mushroom_feature.json"
         ],
         "has_nbt_structure": true
       },
@@ -18961,8 +18825,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/double_calico_mushroom_feature.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/double_calico_mushroom_feature_biome_modifier.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/double_calico_mushroom_feature.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/double_calico_mushroom_feature.json",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/double_calico_mushroom_feature_biome_modifier.json"
         ],
         "has_nbt_structure": true
       },
@@ -18978,8 +18842,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/medium_calico_mushroom_feature.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/medium_calico_mushroom_feature.json",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/medium_calico_mushroom_feature_biome_modifier.json"
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/medium_calico_mushroom_feature_biome_modifier.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/medium_calico_mushroom_feature.json"
         ],
         "has_nbt_structure": true
       },
@@ -18994,8 +18858,8 @@
       "registry_name": "large_calico_mushroom_feature",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/large_calico_mushroom_feature.json",
           "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/large_calico_mushroom_feature.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/large_calico_mushroom_feature.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/large_calico_mushroom_feature_biome_modifier.json"
         ],
         "has_nbt_structure": true
@@ -19011,9 +18875,9 @@
       "registry_name": "crypt_feature",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/crypt_feature.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/crypt_feature_biome_modifier.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/crypt_feature.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/crypt_feature.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/crypt_feature.json"
         ],
         "has_nbt_structure": true
       },
@@ -19028,8 +18892,8 @@
       "registry_name": "flame_projectile_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/FlameProjectileProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/FlameProjectileProjectileRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FlameProjectileProjectileRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/FlameProjectileProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19058,8 +18922,8 @@
       "registry_name": "lightning_book_spark_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/LightningBookSparkProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/LightningBookSparkProjectileRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/LightningBookSparkProjectileRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/LightningBookSparkProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19073,8 +18937,8 @@
       "registry_name": "storm_arrow_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/StormArrowProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/StormArrowProjectileRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/StormArrowProjectileRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/StormArrowProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19088,8 +18952,8 @@
       "registry_name": "storm_arrow",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/StormArrowItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/storm_arrow.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/storm_arrow.json",
+          "src/main/java/net/mcreator/catastrophemod/item/StormArrowItem.java"
         ]
       },
       "path": "~/Items/Ammunition"
@@ -19103,8 +18967,8 @@
       "registry_name": "poisonous_thorn_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/PoisonousThornProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/PoisonousThornProjectileRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/PoisonousThornProjectileRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/PoisonousThornProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19162,8 +19026,8 @@
       "registry_name": "thorn_spear_projectile_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/ThornSpearProjectileProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ThornSpearProjectileProjectileRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/ThornSpearProjectileProjectileRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/ThornSpearProjectileProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19177,8 +19041,8 @@
       "registry_name": "tiny_thorn_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/TinyThornProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/TinyThornProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/TinyThornProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/TinyThornProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19192,8 +19056,8 @@
       "registry_name": "shell_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShellProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/ShellProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/ShellProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShellProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19207,8 +19071,8 @@
       "registry_name": "knife_of_proficiency_projectile_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/KnifeOfProficiencyProjectileProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/KnifeOfProficiencyProjectileProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/KnifeOfProficiencyProjectileProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/KnifeOfProficiencyProjectileProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19237,8 +19101,8 @@
       "registry_name": "shadow_fireball_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadowFireballProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/ShadowFireballProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/ShadowFireballProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadowFireballProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19282,8 +19146,8 @@
       "registry_name": "electrified_round_projectile_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ElectrifiedRoundProjectileProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/ElectrifiedRoundProjectileProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/ElectrifiedRoundProjectileProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/ElectrifiedRoundProjectileProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19297,8 +19161,8 @@
       "registry_name": "healing_orb_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/HealingOrbProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/HealingOrbProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/HealingOrbProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/HealingOrbProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19372,8 +19236,8 @@
       "registry_name": "shadowfire_skull_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadowfireSkullProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/ShadowfireSkullProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/ShadowfireSkullProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShadowfireSkullProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19447,8 +19311,8 @@
       "registry_name": "friendly_poisonous_thorn_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/FriendlyPoisonousThornProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/FriendlyPoisonousThornProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/FriendlyPoisonousThornProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FriendlyPoisonousThornProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19477,8 +19341,8 @@
       "registry_name": "crystal_shard_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/CrystalShardProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/CrystalShardProjectileRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/CrystalShardProjectileRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/CrystalShardProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19492,8 +19356,8 @@
       "registry_name": "blazing_feather_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/BlazingFeatherProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/BlazingFeatherProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/BlazingFeatherProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/BlazingFeatherProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19522,8 +19386,8 @@
       "registry_name": "earthbound_rock_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthboundRockProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/EarthboundRockProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/EarthboundRockProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthboundRockProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19552,8 +19416,8 @@
       "registry_name": "earthbound_rock_shard_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthboundRockShardProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/EarthboundRockShardProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/EarthboundRockShardProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/EarthboundRockShardProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19567,8 +19431,8 @@
       "registry_name": "lifedrain_arrow_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/LifedrainArrowProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/LifedrainArrowProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/LifedrainArrowProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/LifedrainArrowProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19582,8 +19446,8 @@
       "registry_name": "vein_striker_projectile_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/VeinStrikerProjectileProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/VeinStrikerProjectileProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/VeinStrikerProjectileProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/VeinStrikerProjectileProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19597,8 +19461,8 @@
       "registry_name": "vein_striker_blood_knife_projectile_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/VeinStrikerBloodKnifeProjectileProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/VeinStrikerBloodKnifeProjectileProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/VeinStrikerBloodKnifeProjectileProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/VeinStrikerBloodKnifeProjectileProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19612,8 +19476,8 @@
       "registry_name": "blood_knife_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/BloodKnifeProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/BloodKnifeProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/BloodKnifeProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/BloodKnifeProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19627,8 +19491,8 @@
       "registry_name": "fiery_round_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/FieryRoundProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/FieryRoundProjectileRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FieryRoundProjectileRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/FieryRoundProjectileEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -19671,8 +19535,8 @@
       "registry_name": "blizzard",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/BlizzardItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/blizzard.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/blizzard.json",
+          "src/main/java/net/mcreator/catastrophemod/item/BlizzardItem.java"
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
@@ -19778,12 +19642,12 @@
       "registry_name": "anglerfish",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/AnglerfishModel.java",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/anglerfish_biome_modifier.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/layer/AnglerfishLayer.java",
           "src/main/resources/assets/catastrophe_mod/models/item/anglerfish_spawn_egg.json",
           "src/main/java/net/mcreator/catastrophemod/entity/AnglerfishEntity.java",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/AnglerfishRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/layer/AnglerfishLayer.java"
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/anglerfish_biome_modifier.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/AnglerfishModel.java"
         ]
       },
       "path": "~/Entities"
@@ -19905,9 +19769,9 @@
       "registry_name": "naturite_shield",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/NaturiteShieldItem.java",
           "src/main/resources/assets/catastrophe_mod/models/item/naturite_shield.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/naturite_shield_0.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/naturite_shield_0.json",
+          "src/main/java/net/mcreator/catastrophemod/item/NaturiteShieldItem.java"
         ]
       },
       "path": "~/Items/Tools"
@@ -19936,8 +19800,8 @@
       "registry_name": "axe_mastery_crest",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/AxeMasteryCrestItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/axe_mastery_crest.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/axe_mastery_crest.json",
+          "src/main/java/net/mcreator/catastrophemod/item/AxeMasteryCrestItem.java"
         ]
       },
       "path": "~/Items/Accessories"
@@ -20036,20 +19900,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AccessorySlot",
-      "type": "curiosslot",
-      "sortid": 2759,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory_slot",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/curios/tags/items/accessory_slot.json"
         ]
       },
       "path": "~/Items/Accessories"
@@ -20800,8 +20650,8 @@
       "registry_name": "sword_mastery_crest",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/sword_mastery_crest.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SwordMasteryCrestItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SwordMasteryCrestItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sword_mastery_crest.json"
         ]
       },
       "path": "~/Items/Accessories"
@@ -20923,8 +20773,8 @@
       "registry_name": "spear_mastery_crest",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/spear_mastery_crest.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SpearMasteryCrestItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/SpearMasteryCrestItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/spear_mastery_crest.json"
         ]
       },
       "path": "~/Items/Accessories"
@@ -21662,9 +21512,9 @@
       "registry_name": "surface_crypt_feature",
       "metadata": {
         "files": [
+          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/surface_crypt_feature.json",
           "src/main/resources/data/catastrophe_mod/forge/biome_modifier/surface_crypt_feature_biome_modifier.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/surface_crypt_feature.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/placed_feature/surface_crypt_feature.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/configured_feature/surface_crypt_feature.json"
         ],
         "has_nbt_structure": true
       },
@@ -21811,8 +21661,8 @@
       "registry_name": "fiery_explosion",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/fiery_explosion.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/FieryExplosionParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/FieryExplosionParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/fiery_explosion.json"
         ]
       },
       "path": "~/Particles"
@@ -21840,10 +21690,10 @@
       "registry_name": "rustgun",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/rustgun.json",
+          "src/main/java/net/mcreator/catastrophemod/item/model/RustgunItemModel.java",
           "src/main/java/net/mcreator/catastrophemod/item/renderer/RustgunItemRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/item/RustgunItem.java",
-          "src/main/java/net/mcreator/catastrophemod/item/model/RustgunItemModel.java"
+          "src/main/resources/assets/catastrophe_mod/models/item/rustgun.json"
         ]
       },
       "path": "~/Items/Weapons/Ranged Weapons"
@@ -21857,8 +21707,8 @@
       "registry_name": "rusty_cogwheel",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/RustyCogwheelItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/rusty_cogwheel.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/rusty_cogwheel.json",
+          "src/main/java/net/mcreator/catastrophemod/item/RustyCogwheelItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -21927,8 +21777,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/block/DepthstoneBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/block/depthstone.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/depthstone.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/depthstone.json",
           "src/main/resources/assets/catastrophe_mod/models/item/depthstone.json"
         ]
       },
@@ -21943,9 +21793,9 @@
       "registry_name": "depthstone_bricks",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneBricksBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/depthstone_bricks.json",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks.json",
+          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneBricksBlock.java",
           "src/main/resources/assets/catastrophe_mod/blockstates/depthstone_bricks.json"
         ]
       },
@@ -21960,9 +21810,9 @@
       "registry_name": "cracked_depthstone_bricks",
       "metadata": {
         "files": [
+          "src/main/resources/assets/catastrophe_mod/models/block/cracked_depthstone_bricks.json",
           "src/main/java/net/mcreator/catastrophemod/block/CrackedDepthstoneBricksBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/cracked_depthstone_bricks.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/cracked_depthstone_bricks.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/cracked_depthstone_bricks.json"
         ]
       },
@@ -21977,8 +21827,8 @@
       "registry_name": "chiseled_depthstone_bricks",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/block/ChiseledDepthstoneBricksBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/block/chiseled_depthstone_bricks.json",
+          "src/main/java/net/mcreator/catastrophemod/block/ChiseledDepthstoneBricksBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/item/chiseled_depthstone_bricks.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/chiseled_depthstone_bricks.json"
         ]
@@ -21994,12 +21844,12 @@
       "registry_name": "depthstone_slab",
       "metadata": {
         "files": [
+          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_slab_full.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/depthstone_slab.json",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_slab.json",
           "src/main/resources/assets/catastrophe_mod/blockstates/depthstone_slab.json",
-          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneSlabBlock.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/depthstone_slab.json",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_slab_top.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_slab_full.json"
+          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneSlabBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -22013,12 +21863,12 @@
       "registry_name": "depthstone_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/depthstone_stairs.json",
-          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneStairsBlock.java",
+          "src/main/resources/assets/catastrophe_mod/blockstates/depthstone_stairs.json",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_stairs_inner.json",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_stairs_outer.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/depthstone_stairs.json"
+          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneStairsBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/depthstone_stairs.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_stairs_outer.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -22033,11 +21883,11 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_slab_top.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/depthstone_bricks_slab.json",
           "src/main/resources/assets/catastrophe_mod/models/item/depthstone_bricks_slab.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/depthstone_bricks_slab.json",
+          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneBricksSlabBlock.java",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_slab.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_slab_full.json",
-          "src/main/java/net/mcreator/catastrophemod/block/DepthstoneBricksSlabBlock.java"
+          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_slab_full.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -22051,10 +21901,10 @@
       "registry_name": "depthstone_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_stairs.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/depthstone_bricks_stairs.json",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_stairs_inner.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_stairs.json",
           "src/main/resources/assets/catastrophe_mod/models/block/depthstone_bricks_stairs_outer.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/depthstone_bricks_stairs.json",
           "src/main/java/net/mcreator/catastrophemod/block/DepthstoneBricksStairsBlock.java",
           "src/main/resources/assets/catastrophe_mod/blockstates/depthstone_bricks_stairs.json"
         ]
@@ -22227,6 +22077,372 @@
         ]
       },
       "path": "~/Entities"
+    },
+    {
+      "name": "Twig",
+      "type": "item",
+      "sortid": 2878,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/item/TwigItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/twig.json"
+        ]
+      },
+      "path": "~/Items/Miscellaneous"
+    },
+    {
+      "name": "VexLootTable",
+      "type": "loottable",
+      "sortid": 2882,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vex_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/vex_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ZombieLootTable",
+      "type": "loottable",
+      "sortid": 2886,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/zombie_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "WitherSkeletonLootTable",
+      "type": "loottable",
+      "sortid": 2884,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wither_skeleton_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/wither_skeleton_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "VexLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2883,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vex_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/vex_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "SwordMasteryCrestBaubleIsUnequipped",
+      "type": "procedure",
+      "sortid": 2892,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_mastery_crest_bauble_is_unequipped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestBaubleIsUnequippedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Accessories"
+    },
+    {
+      "name": "ParryProjectileMode",
+      "type": "procedure",
+      "sortid": 2875,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_projectile_mode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ParryProjectileModeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Key Binds"
+    },
+    {
+      "name": "Accessory",
+      "type": "curiosslot",
+      "sortid": 2890,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accessory",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/accessory.json"
+        ]
+      },
+      "path": "~/Items/Accessories"
+    },
+    {
+      "name": "ZombieLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2887,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/zombie_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TwigLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2880,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/twig_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TwigLootTable",
+      "type": "loottable",
+      "sortid": 2879,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/blocks/twig_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TwigLootTable2",
+      "type": "lootmodifier",
+      "sortid": 2881,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twig_loot_table_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/twig_loot_table_2.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "WoodenKatanaSheathedHit",
+      "type": "procedure",
+      "sortid": 2877,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_katana_sheathed_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WoodenKatanaSheathedHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "SwordMasteryCrestBaubleIsEquipped",
+      "type": "procedure",
+      "sortid": 2891,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_mastery_crest_bauble_is_equipped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestBaubleIsEquippedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Accessories"
+    },
+    {
+      "name": "TotemCooldownProcedure2",
+      "type": "procedure",
+      "sortid": 2874,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_cooldown_procedure_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/TotemCooldownProcedure2Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "AccessorySlotsFix",
+      "type": "procedure",
+      "sortid": 2888,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accessory_slots_fix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/AccessorySlotsFixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TotemCooldownProcedure1",
+      "type": "procedure",
+      "sortid": 2873,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_cooldown_procedure_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/TotemCooldownProcedure1Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "TotemCooldown",
+      "type": "gamerule",
+      "sortid": 2872,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_cooldown",
+      "metadata": {
+        "files": [],
+        "type": "number"
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ParryMeleeAttackMode",
+      "type": "procedure",
+      "sortid": 2876,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parry_melee_attack_mode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ParryMeleeAttackModeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Key Binds"
+    },
+    {
+      "name": "WitherSkeletonLootTable1",
+      "type": "lootmodifier",
+      "sortid": 2885,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wither_skeleton_loot_table_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_modifiers/wither_skeleton_loot_table_1.json"
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -22855,12 +23071,6 @@
       "value": "false"
     },
     {
-      "name": "silk_moth_pet_counter",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "mana_cost_accursed_tome",
       "type": "number",
       "scope": "player_persistent",
@@ -22891,10 +23101,28 @@
       "value": "0.0"
     },
     {
-      "name": "parry_mode",
+      "name": "parry_melee_attack_mode",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "wooden_katana_sheathed",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "parry_projectile_mode",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "totem_cooldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -23443,8 +23671,8 @@
       "subtitles.fiery_blast": "Fiery blast",
       "entity.alexs_mod.firefly": "Firefly",
       "item.alexs_mod.galaxy_striker": "Galaxy Striker",
-      "subtitles.flash_bang_boom": "flash_bang_boom",
       "block.alexs_mod.laboratory_column_block": "Laboratory Column Block",
+      "subtitles.flash_bang_boom": "flash_bang_boom",
       "block.alexs_mod.overgrown_leaves": "Overgrown Leaves",
       "item.catastrophe_mod.star": "§6Star",
       "gui.alexs_mod.aegex_5_gui.label_the_only_problem_is_that_i_dont": "The only problem is that I don\u0027t",
@@ -23453,15 +23681,15 @@
       "block.alexs_mod.advanced_display": "Advanced Display",
       "item.alexs_mod.mushling_spawn_egg": "Mushling Spawn Egg",
       "entity.catastrophe_mod.acid_tarantula_minion": "Acid Tarantula Minion",
-      "effect.catastrophe_mod.mana_sickness": "Mana Sickness",
       "gui.alexs_mod.aegex_4_gui.label_my_own_creations": "my own creations!?",
+      "effect.catastrophe_mod.mana_sickness": "Mana Sickness",
       "item.alexs_mod.bartosa_tools_hoe": "Bartosa Hoe",
       "block.alexs_mod.dungeon_bricks_hidden_door": "Dungeon Bricks Hidden Door",
       "item.alexs_mod.sigilof_creation": "Sigil of Creation",
       "item.alexs_mod.conos_spawn_egg": "Conos Spawn Egg",
       "gui.alexs_mod.volcanic_peaks_enter.button_enter": "Enter",
-      "gui.alexs_mod.hellion_note_sheet_page.label_blast_etc": " blast, etc.)",
       "block.alexs_mod.tungsten_ore": "Tungsten Ore",
+      "gui.alexs_mod.hellion_note_sheet_page.label_blast_etc": " blast, etc.)",
       "item.catastrophe_mod.music_disc_outside_of_the_atmosphere.desc": "Freddy Frostbear - Outside of the Atmosphere",
       "block.alexs_mod.charred_bricks_stairs": "Charred Bricks Stairs",
       "subtitles.shadow_teleport": "Shadow teleport",
@@ -23469,11 +23697,11 @@
       "block.alexs_mod.soul_stream": "Soul Stream",
       "enchantment.catastrophe_mod.spellcasting": "Spellcasting",
       "item.alexs_mod.knife_of_proficiency_projectile": "Knife Of Proficiency Projectile",
-      "item.catastrophe_mod.music_disc_strike_you_down.desc": "Freddy Frostbear - Strike You Down!",
       "item.alexs_mod.armageddon_robot_spawn_egg": "Armageddon Robot Spawn Egg",
+      "item.catastrophe_mod.music_disc_strike_you_down.desc": "Freddy Frostbear - Strike You Down!",
       "block.alexs_mod.wuflar_plating": "§9Wuflar Plating",
-      "item.catastrophe_mod.freezing_staff": "§bFreezing Staff",
       "effect.alexs_mod.back_step_cool_down": "Back Step Cool Down",
+      "item.catastrophe_mod.freezing_staff": "§bFreezing Staff",
       "item.catastrophe_mod.lifepiercer": "§4Lifepiercer",
       "death.attack.bleed.player": "%1$s bled out to death whilst trying to escape %2$s",
       "item.catastrophe_mod.tear_of_the_sea": "Tear of the Sea",
@@ -23496,9 +23724,9 @@
       "item.catastrophe_mod.venomous_bow_1": "Venomous Bow 1",
       "subtitles.rustgun_shoots": "Rustgun shoots",
       "item.catastrophe_mod.venomous_bow_2": "Venomous Bow 2",
-      "item.alexs_mod.scrap_metal": "Scrap Metal",
-      "item.alexs_mod.ancient_armor_leggings": "Ancient Leggings",
       "block.alexs_mod.natureite_ore": "§aNaturite Ore",
+      "item.alexs_mod.ancient_armor_leggings": "Ancient Leggings",
+      "item.alexs_mod.scrap_metal": "Scrap Metal",
       "item.alexs_mod.raw_tungsten": "Raw Tungsten",
       "entity.alexs_mod.armageddon_robot": "Armageddon Robot",
       "advancements.target_acquired.descr": "Obtain your first ranged weapon",
@@ -23506,8 +23734,8 @@
       "effect.alexs_mod.plane_flight": "Pwane",
       "subtitles.earthbound_wraith_groundpounds": "Earthbound Wraith ground-pounds",
       "item.catastrophe_mod.lesser_mana_potion": "Lesser Mana Potion",
-      "item.catastrophe_mod.blazing_phoenix_spawn_egg": "Blazing Phoenix Spawn Egg",
       "item.alexs_mod.tungsten_sword": "Tungsten Sword",
+      "item.catastrophe_mod.blazing_phoenix_spawn_egg": "Blazing Phoenix Spawn Egg",
       "item.catastrophe_mod.natureite_armor_boots": "§aNaturite Boots",
       "item.alexs_mod.ancient_armor_chestplate": "Ancient Chestplate",
       "item.catastrophe_mod.natureite_axe": "§aNaturite Axe",
@@ -23528,13 +23756,13 @@
       "entity.catastrophe_mod.earthbound_fist": "Earthbound Fist",
       "block.catastrophe_mod.tall_calico_shroom": "Tall Calico Shroom",
       "block.alexs_mod.razed_trapdoor": "Razed Trapdoor",
-      "item_group.catastrophe_mod.bullets": "Ranged",
       "item.alexs_mod.lightning_blade_staff": "§bLightning Blade Staff",
+      "item_group.catastrophe_mod.bullets": "Ranged",
       "subtitles.agiel": "Agiel Use",
       "item.alexs_mod.enchanted_sword": "Enchanted Sword",
       "item.alexs_mod.ancient_armor_helmet": "Ancient Mask",
-      "gui.alexs_mod.ark_scissor_rift_menu.button_close": "Close",
       "item.alexs_mod.ancient_war_horn": "§cAncient War Horn",
+      "gui.alexs_mod.ark_scissor_rift_menu.button_close": "Close",
       "item.catastrophe_mod.crystal_round": "Crystal Round",
       "item.alexs_mod.thorn_bow": "§2Thorn Bow",
       "gui.alexs_mod.aegex_3_gui.label_species_a_name_toast": "species a name. toast..",
@@ -23550,8 +23778,8 @@
       "effect.catastrophe_mod.electrified": "Electrified",
       "item.catastrophe_mod.naturite_bow": "§aNaturite Bow",
       "block.alexs_mod.overgrown_trapdoor": "Overgrown Trapdoor",
-      "item.catastrophe_mod.netherite_spear": "Netherite Spear",
       "subtitles.nightfalls_demise_throw": "Nightfall\u0027s Demise Throw",
+      "item.catastrophe_mod.netherite_spear": "Netherite Spear",
       "block.alexs_mod.razed_button": "Razed Button",
       "effect.catastrophe_mod.bleeding": "Bleeding",
       "item.alexs_mod.the_blade_crown_texture": "The Blade Crown Texture",
@@ -23562,8 +23790,8 @@
       "block.alexs_mod.hive_block": "Hive Block",
       "item.catastrophe_mod.shadow_scythe": "§8Shadow Scythe",
       "block.catastrophe_mod.flower_of_affliction": "Flower of Affliction",
-      "gui.catastrophe_mod.back_pack_screen.label_back_pack": "Backpack",
       "subtitles.metal_hit": "Metal hit",
+      "gui.catastrophe_mod.back_pack_screen.label_back_pack": "Backpack",
       "item.catastrophe_mod.electrified_round": "§bElectrified Round",
       "block.alexs_mod.dried_rosxite_ore": "§2Dried Rosxite Ore",
       "gui.alexs_mod.quest_book_gui.label_robots_and_automatons_that_spaw": " robots and automatons that spawn during the day.",
@@ -23574,8 +23802,8 @@
       "item.alexs_mod.spell_of_souls": "§8Soul Keeper",
       "item.alexs_mod.music_disc_proliferating_mushrooms": "Music Disc",
       "subtitles.halberd_hits": "Halberd Hits",
-      "item.alexs_mod.shadow_ingot": "Shadow Ingot",
       "item.catastrophe_mod.cursed_armor_leggings": "§5Cursed Leggings",
+      "item.alexs_mod.shadow_ingot": "Shadow Ingot",
       "subtitles.charred_mantis_dashes": "Charred Mantis dashes",
       "item.alexs_mod.murky_slime_mob_spawn_egg": "Murky Slime Mob Spawn Egg",
       "item.catastrophe_mod.calico_mushroom_stew": "Calico Mushroom Stew",
@@ -23600,8 +23828,8 @@
       "item.alexs_mod.credits_music_disc": "Music Disc",
       "item.alexs_mod.blink_tech_device": "Blink Tech Device",
       "advancements.im_not_gonna_sugarcoat_it.descr": "Successfully perform a parry",
-      "item.alexs_mod.alex_loot_bundle": "Alex Loot Bundle",
       "entity.alexs_mod.thorn_infested_armor": "Thorn Infested Armor",
+      "item.alexs_mod.alex_loot_bundle": "Alex Loot Bundle",
       "block.alexs_mod.calico_mushroom": "Calico Mushroom Block",
       "key.alexs_mod.aijex_missile_launch": "Bartosa Armor Missile Launch",
       "item.alexs_mod.music_disc_enlightened_starlight": "Music Disc",
@@ -23635,16 +23863,16 @@
       "block.alexs_mod.cracked_dungeon_bricks_slab": "Cracked Dungeon Bricks Slab",
       "item.catastrophe_mod.firebrand": "§6Firebrand",
       "item.catastrophe_mod.riptide": "Riptide",
-      "entity.catastrophe_mod.swordspin": "Sword Orbit",
       "entity.alexs_mod.swordspin": "Sword Orbit",
+      "entity.catastrophe_mod.swordspin": "Sword Orbit",
       "item.catastrophe_mod.hunter_boots": "Hunter\u0027s Boots",
       "entity.catastrophe_mod.oceanic_splash": "Oceanic Splash",
       "item.alexs_mod.natures_strike": "§2Nature\u0027s Strike",
-      "item.alexs_mod.skystardamage": "Skystardamage",
       "enchantment.alexs_mod.draconic_claw": "Draconic Claw",
+      "item.alexs_mod.skystardamage": "Skystardamage",
       "item.alexs_mod.bar_fight": "Music Disc",
-      "item.alexs_mod.armageddon_armor_helmet": "Armageddon Transformation",
       "item.alexs_mod.bullet_shell": "Bullet Shell",
+      "item.alexs_mod.armageddon_armor_helmet": "Armageddon Transformation",
       "item.alexs_mod.ark_parry": "Ark Parry",
       "item.catastrophe_mod.staff_of_thorns": "§2Staff of Thorns",
       "item.alexs_mod.orbital_barrage": "Music Disc",
@@ -23658,8 +23886,8 @@
       "entity.alexs_mod.hermit_crab": "Hermit Crab",
       "item.alexs_mod.electrified_copper_sword": "§bElectrified Sword",
       "effect.alexs_mod.bloodshed_4": "Let\u0027s Dance!",
-      "gui.alexs_mod.stat_bars.label_mana": "Mana:",
       "effect.alexs_mod.endurance": "Endurance",
+      "gui.alexs_mod.stat_bars.label_mana": "Mana:",
       "item.alexs_mod.frigid_slicer": "§3Frigid Slicer",
       "item.minecraft.potion.effect.bullseye_potion": "Potion of Bullseye",
       "death.attack.bleed.item": "%1$s bled out to death",
@@ -23677,8 +23905,8 @@
       "item.alexs_mod.natureite_pickaxe": "§aNaturite Pickaxe",
       "item.alexs_mod.bartosa_bazooka": "Bartosa Bazooka",
       "effect.alexs_mod.slash_2_condition": "attack 2",
-      "item.catastrophe_mod.music_disc_overgrown_grove.desc": "Freddy Frostbear - Overgrown Grove",
       "entity.alexs_mod.fly": "Fly",
+      "item.catastrophe_mod.music_disc_overgrown_grove.desc": "Freddy Frostbear - Overgrown Grove",
       "item.alexs_mod.worm_body_spawn_egg": "Destroyer Body Spawn Egg",
       "item.catastrophe_mod.golden_bracelet": "Golden Necklace",
       "advancements.you_just_dont_believe_me.title": "You Just Don\u0027t Believe Me",
@@ -23687,8 +23915,8 @@
       "effect.alexs_mod.alexs_shield_effect": "Shield Effect",
       "item.catastrophe_mod.crystal_spear": "Crystal Spear",
       "item.alexs_mod.bartosa_chestplate": "Bartosa Body",
-      "item.alexs_mod.fly_spawn_egg": "Fly Spawn Egg",
       "gui.alexs_mod.armageddon_weapon_menu.button_armageddon_robot": "Armageddon Robot",
+      "item.alexs_mod.fly_spawn_egg": "Fly Spawn Egg",
       "block.alexs_mod.overgrown_slab": "Overgrown Slab",
       "item.alexs_mod.alexsmoditem": "Alexsmoditem",
       "death.attack.electricity.item": "%1$s experienced short circuit",
@@ -23703,8 +23931,8 @@
       "item.alexs_mod.natureite_armor_boots": "§aNaturite Boots",
       "subtitles.radar_beep": "Radar Beeps",
       "subtitles.solid_ice_magic_cats": "Solid Ice Magic is Casted",
-      "enchantment.catastrophe_mod.frost_aspect": "Frost Aspect",
       "entity.alexs_mod.worm_body": "Destroyer Body",
+      "enchantment.catastrophe_mod.frost_aspect": "Frost Aspect",
       "item.catastrophe_mod.poisoned_vines": "§2Poisonous Vines",
       "item.catastrophe_mod.natureite_shovel": "§aNaturite Shovel",
       "item.alexs_mod.reaper_scythe": "§dShield Scythe",
@@ -23721,8 +23949,8 @@
       "item.alexs_mod.armageddon_remote": "Armageddon Remote [Off]",
       "key.alexs_mod.ring_open": "The Blade Bell GUI Open",
       "subtitles.redsplit": "redsplit",
-      "subtitles.sheath": "sheath",
       "item.catastrophe_mod.lightning_blade_spawn_egg": "Lightning Blade Spawn Egg",
+      "subtitles.sheath": "sheath",
       "block.alexs_mod.razed_wood": "Razed Wood",
       "item.catastrophe_mod.living_moss": "§2Living Moss",
       "item.alexs_mod.bartosa_blade": "Bartosa Blade",
@@ -23733,8 +23961,8 @@
       "item.alexs_mod.shadow_armor_leggings": "§8Shadow Greaves",
       "effect.alexs_mod.spirit": "Spirit",
       "item.alexs_mod.kaylas_briliance_spawn_egg": "§kHellion Spawn Egg",
-      "gui.alexs_mod.ark_scissor_rift_menu.label_choose_your_destination": "Choose your Destination",
       "entity.alexs_mod.wuflar_blade_robot": "Wuflar Blade Robot",
+      "gui.alexs_mod.ark_scissor_rift_menu.label_choose_your_destination": "Choose your Destination",
       "subtitles.rockslide": "Conos Dies",
       "item.alexs_mod.brush_of_jmaster": "Brush of Jmaster",
       "item.minecraft.splash_potion.effect.intelligence_long": "Splash Potion of Intelligence",
@@ -23781,8 +24009,8 @@
       "item.catastrophe_mod.cursed_armor_helmet": "§5Cursed Hood",
       "gui.alexs_mod.aegex_4_gui.label_armed_with_my_missing_arsenal": "armed with my missing arsenal.",
       "block.catastrophe_mod.depthstone": "Depthstone",
-      "item.catastrophe_mod.pocket_shield_generator": "§6Absorption Aegis",
       "subtitles.deathray": "Deathray",
+      "item.catastrophe_mod.pocket_shield_generator": "§6Absorption Aegis",
       "item.alexs_mod.iron_round": "Iron Round",
       "subtitles.bistro_1": "Bistro 1",
       "item.alexs_mod.kyles_magic_crystal_of_phenomenal_power": "Kyle\u0027s Magic Crystal of Phenomenal Power",
@@ -23794,19 +24022,19 @@
       "item.alexs_mod.redsplitranged": "Redsplitranged",
       "item.alexs_mod.wraith_sparks": "Wraith Sparks",
       "entity.alexs_mod.pile_of_moss": "Pile Of Moss",
-      "subtitles.eldritch_blast": "Eldritch blast",
       "entity.catastrophe_mod.freezing_core": "Freezing Core",
+      "subtitles.eldritch_blast": "Eldritch blast",
       "subtitles.ding": "Cool Down Over",
       "subtitles.axe_swing": "Axe Is Swung",
       "item.alexs_mod.gloveofthe_deserts": "§6Glove of the Deserts",
       "item.catastrophe_mod.music_disc_vines_of_venom.desc": "Freddy Frostbear - Vines of Venom",
-      "item.minecraft.potion.effect.intelligence_potion": "Potion of Intelligence",
       "block.alexs_mod.vigorous_candle": "Vigorous Candle",
+      "item.minecraft.potion.effect.intelligence_potion": "Potion of Intelligence",
       "item.alexs_mod.orbitium_cluster": "Orbitium",
       "item.alexs_mod.bartosa_leggings": "Bartosa Leggings",
       "item.alexs_mod.fire_wyvern_scale_boots": "Fire Wyvern Scale Boots",
-      "effect.alexs_mod.armageddon": "Armageddon",
       "gui.alexs_mod.aegex_4_gui.label_why_the_hell_am_i_being_shot_at": "Why the hell am I being shot at by",
+      "effect.alexs_mod.armageddon": "Armageddon",
       "item.alexs_mod.sea_spear": "Sea Spear",
       "item.catastrophe_mod.cursed_armor_chestplate": "§5Cursed Robes",
       "subtitles.something_is_indicated": "Something is indicated",
@@ -23846,8 +24074,8 @@
       "item.alexs_mod.bistro_1": "Music Disc",
       "block.alexs_mod.hardstone": "Hardstone",
       "subtitles.outside_of_the_atmosphere": "Outside of the Atmosphere",
-      "entity.catastrophe_mod.nature_blessed_spirit": "Nature Blessed Spirit",
       "item.alexs_mod.acid_tarantula": "Acid Tarantula",
+      "entity.catastrophe_mod.nature_blessed_spirit": "Nature Blessed Spirit",
       "gui.alexs_mod.aegex_2_gui.label_to_arm_my_rabbits": "to arm my rabbits",
       "biome.alexs_mod.abyss_water_height": "Abyss Shores",
       "block.catastrophe_mod.natureite_ore": "§aNaturite Ore",
@@ -23858,8 +24086,8 @@
       "entity.alexs_mod.abyssal_slime": "Abyssal Slime",
       "subtitles.crystal_laser_beam": "Crystal laser beam",
       "item.catastrophe_mod.hellbane": "§6Hellbane",
-      "gui.alexs_mod.quest_book_gui.label_metal_scrap": "Metal Scrap.",
       "item.alexs_mod.firefly_spawn_egg": "Firefly Spawn Egg",
+      "gui.alexs_mod.quest_book_gui.label_metal_scrap": "Metal Scrap.",
       "block.alexs_mod.overgrown_wood": "Overgrown Wood",
       "death.attack.crushed": "%1$s was crushed",
       "subtitles.anglerfish_bite": "Anglerfish bites",
@@ -23908,8 +24136,8 @@
       "gui.alexs_mod.hellion_note_sheet_page.label_hellion_note_sheet": "Hellion Note Sheet",
       "item.catastrophe_mod.ripsaw": "§bRipsaw",
       "gui.alexs_mod.aegex_1_gui.label_they_shall_be_utilized_for_my_se": "They shall be utilized for my service",
-      "death.attack.split_in_two.item": "%1$s was split in two by %2$s using %3$s",
       "item.catastrophe_mod.reinforced_axe": "§7Reinforced Axe",
+      "death.attack.split_in_two.item": "%1$s was split in two by %2$s using %3$s",
       "item.alexs_mod.lightning_book_spark": "Lightning Book Spark",
       "subtitles.sword_clang": "sword_clang",
       "item.alexs_mod.challengers_trophy": "Challengers Trophy",
@@ -23927,12 +24155,12 @@
       "block.catastrophe_mod.charred_bricks_stairs": "Charred Bricks Stairs",
       "death.attack.impaled.item": "%1$s was impaled by %2$s using %3$s",
       "item.alexs_mod.armageddonlaser_beam": "Armageddonlaser Beam",
-      "item.catastrophe_mod.thorn_leggings": "§2Thorn Leggings",
       "gui.alexs_mod.quest_book_gui.label_blink_tech": "Blink Tech",
+      "item.catastrophe_mod.thorn_leggings": "§2Thorn Leggings",
       "gui.alexs_mod.aegex_2_gui.label_just_imagine_the_weaponry": "Just imagine the weaponry ",
       "item.alexs_mod.wuflar_scrap": "§9Wuflar Metal Scrap",
-      "item.catastrophe_mod.frozen_shield": "§bFrozen Shield",
       "item.alexs_mod.kyolden_armor_boots": "§6Kyloden Boots",
+      "item.catastrophe_mod.frozen_shield": "§bFrozen Shield",
       "item.catastrophe_mod.shroomium_leggings": "Shroomium Leggings",
       "advancements.i_shall_rend_you_apart.descr": "And you will become inanimate once more",
       "item.catastrophe_mod.sea_hoe": "Sea Hoe",
@@ -23959,8 +24187,8 @@
       "item.catastrophe_mod.charred_mantis_spawn_egg": "Charred Mantis Spawn Egg",
       "item.alexs_mod.tungsten_shield": "Tungsten Shield",
       "block.alexs_mod.shield_scythe_placed": "Shield_Scythe.Placed",
-      "item.alexs_mod.bartosa_tools_pickaxe": "Bartosa Pickaxe",
       "biome.alexs_mod.the_void": "The Void",
+      "item.alexs_mod.bartosa_tools_pickaxe": "Bartosa Pickaxe",
       "item.alexs_mod.excalibur": "§e§lExcalibur",
       "item.alexs_mod.hunter_boots": "Hunter Boots",
       "gui.alexs_mod.ring.button_ring": "Ring",
@@ -23972,8 +24200,8 @@
       "gui.alexs_mod.quest_book_gui.label_portal": "Portal.",
       "gui.alexs_mod.aegex_2_gui.label_i_think_its_a_good_idea": "I think it\u0027s a good idea ",
       "attribute.catastrophe_mod.ranged_damage": "Ranged Damage",
-      "gui.alexs_mod.hellion_note_sheet_page.label_boss_attributes": "Boss Attributes:",
       "key.catastrophe_mod.dash": "Dash",
+      "gui.alexs_mod.hellion_note_sheet_page.label_boss_attributes": "Boss Attributes:",
       "gui.alexs_mod.quest_book_gui.label_6_obtain_a_blink_tech": "6. Obtain a Blink Tech.",
       "item.alexs_mod.salt": "Salt",
       "item.alexs_mod.bone_pickaxe": "Bone Pickaxe",
@@ -23994,8 +24222,8 @@
       "item.catastrophe_mod.descending_misery_spawn_egg": "Descending Misery Spawn Egg",
       "item.alexs_mod.shotgun_shells": "Bartosa Shotgun Shells",
       "item.alexs_mod.red_sun": "Red Sun",
-      "item.alexs_mod.fire_wyvern_scale_leggings": "Fire Wyvern Scale Leggings",
       "item.alexs_mod.stinger": "Stinger",
+      "item.alexs_mod.fire_wyvern_scale_leggings": "Fire Wyvern Scale Leggings",
       "item.alexs_mod.nautilus_chestplate": "Nautilus Chestplate",
       "attribute.catastrophe_mod.armor_penetration": "Armor Penetration",
       "effect.alexs_mod.hellion_x_3": "Hellion x3",
@@ -24041,11 +24269,11 @@
       "item.catastrophe_mod.earth_shockwave_spawn_egg": "Earth Shockwave Spawn Egg",
       "item.minecraft.tipped_arrow.effect.intelligence_potion": "Arrow of Intelligence",
       "item.alexs_mod.abyssal_slime_staff": "Abyssal Slime Staff",
-      "item.catastrophe_mod.reinforced_iron_armor_leggings": "§7Reinforced Leggings",
       "item.alexs_mod.star_metal": "Star Metal",
+      "item.catastrophe_mod.reinforced_iron_armor_leggings": "§7Reinforced Leggings",
       "block.catastrophe_mod.charred_bricks": "Charred Bricks",
-      "item.alexs_mod.tungsten_boots": "Tungsten Boots",
       "key.alexs_mod.speeding_clock_tick_speed": "Speeding Clock Tick Speed",
+      "item.alexs_mod.tungsten_boots": "Tungsten Boots",
       "block.alexs_mod.wormhole_outline": "Wormhole Outline",
       "gui.alexs_mod.mana_bar_number.label_mana1": "Mana:",
       "item.catastrophe_mod.natures_strike_0": "Natures Strike 0",
@@ -24134,8 +24362,8 @@
       "item.catastrophe_mod.naturite_shield": "§aNaturite Shield",
       "item.alexs_mod.reinforced_plates": "§7Reinforced Plates",
       "block.alexs_mod.small_barrel": "Small Barrel",
-      "effect.alexs_mod.arm_cannon_cooldown": "Arm Cannon Cooldown",
       "death.attack.sliced.item": "%1$s was sliced in half by %2$s using %3$s",
+      "effect.alexs_mod.arm_cannon_cooldown": "Arm Cannon Cooldown",
       "gui.alexs_mod.drink_menu.button_buy1": "Buy",
       "gui.alexs_mod.drink_menu.button_buy3": "Buy",
       "gui.alexs_mod.drink_menu.button_buy2": "Buy",
@@ -24146,8 +24374,8 @@
       "item.catastrophe_mod.gloveofthe_deserts": "§6Glove of the Deserts",
       "item.catastrophe_mod.nightfalls_demise": "§5Nightfall\u0027s Demise",
       "gui.alexs_mod.ark_scissor_rift_menu.button_the_abyss": "The Abyss",
-      "entity.alexs_mod.whirlpool_entity": "Whirlpool",
       "item.alexs_mod.alexthe_creatorof_worlds_spawn_egg": "The Creator Spawn Egg",
+      "entity.alexs_mod.whirlpool_entity": "Whirlpool",
       "item.alexs_mod.abyssal_trident": "Abyssal Trident",
       "item.alexs_mod.enhanced_pickaxe": "Enhanced Pickaxe",
       "entity.catastrophe_mod.sword_orbit": "Sword Orbit",
@@ -24890,7 +25118,6 @@
       "subtitles.alexs_mod_ost_proliferating_mushrooms": "Alex\u0027s Mod OST: Proliferating Mushrooms",
       "effect.alexs_mod.vulnerability": "Vulnerability",
       "entity.alexs_mod.toast_demoman": "Toast Demoman",
-      "curios.identifier.accessory_slot": "Accessory",
       "item.catastrophe_mod.copper_token": "Copper Token",
       "block.catastrophe_mod.calico_mushroom": "Calico Mushroom Block",
       "item.alexs_mod.shroomium_ingot": "Shroomium Ingot",

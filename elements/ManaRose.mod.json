@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Mana Rose",
     "rarity": "UNCOMMON",
-    "slotType": "AccessorySlot",
+    "slotType": "Accessory",
     "baubleModel": "Default",
     "baubleModelTexture": "",
     "creativeTab": {

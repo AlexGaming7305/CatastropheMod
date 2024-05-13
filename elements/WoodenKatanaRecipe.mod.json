@@ -8,7 +8,7 @@
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "craftingBookCategory": "MISC",
+    "craftingBookCategory": "EQUIPMENT",
     "recipeShapeless": false,
     "recipeSlots": [
       {
@@ -18,13 +18,13 @@
         "value": ""
       },
       {
-        "value": "Blocks.PLANKS"
+        "value": "CUSTOM:Twig"
       },
       {
         "value": ""
       },
       {
-        "value": "Blocks.PLANKS"
+        "value": "CUSTOM:Twig"
       },
       {
         "value": ""

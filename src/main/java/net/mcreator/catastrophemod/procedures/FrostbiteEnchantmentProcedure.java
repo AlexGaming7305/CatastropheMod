@@ -30,7 +30,8 @@ public class FrostbiteEnchantmentProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.FROSTBITE.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
+		if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.FROSTBITE.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0
+				|| EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.FROSTBITE.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
 			entity.setTicksFrozen(100);
 		}
 	}

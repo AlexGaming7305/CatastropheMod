@@ -2,6 +2,7 @@
 package net.mcreator.catastrophemod.item;
 
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
+import top.theillusivec4.curios.api.SlotContext;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
@@ -9,6 +10,9 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.network.chat.Component;
+
+import net.mcreator.catastrophemod.procedures.SwordMasteryCrestBaubleIsUnequippedProcedure;
+import net.mcreator.catastrophemod.procedures.SwordMasteryCrestBaubleIsEquippedProcedure;
 
 import java.util.List;
 
@@ -22,6 +26,16 @@ public class SwordMasteryCrestItem extends Item implements ICurioItem {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(Component.literal("\u00A77Grants swords the ability to Gash Targets"));
 		list.add(Component.literal("\u00A77Inflicts \u00A7cBleeding \u00A77if armor of the target is less than 6"));
-		list.add(Component.literal("\u00A79+5% Sword Damage \u00A77to bleeding targets"));
+		list.add(Component.literal("\u00A79+5% Sword Damage"));
+	}
+
+	@Override
+	public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
+		SwordMasteryCrestBaubleIsEquippedProcedure.execute(slotContext.entity());
+	}
+
+	@Override
+	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
+		SwordMasteryCrestBaubleIsUnequippedProcedure.execute(slotContext.entity());
 	}
 }
