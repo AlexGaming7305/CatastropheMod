@@ -36,8 +36,6 @@ public class AccursedDaggerWhileProjectileFlyingTickProcedure {
 		double yvel = 0;
 		double radius = 0;
 		double xvel = 0;
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.ACCURSED_SHIMMER.get()), x, y, z, 3, 0.05, 0.05, 0.05, 0);
 		immediatesourceentity.setNoGravity(true);
 		xvel = immediatesourceentity.getDeltaMovement().x();
 		yvel = immediatesourceentity.getDeltaMovement().y();
@@ -115,8 +113,6 @@ public class AccursedDaggerWhileProjectileFlyingTickProcedure {
 		if (immediatesourceentity.getPersistentData().getDouble("lifetime") > lifetime) {
 			if (!immediatesourceentity.level().isClientSide())
 				immediatesourceentity.discard();
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.PURPLE_CURSED_SPARK.get()), x, y, z, 10, 0.2, 0.2, 0.2, 0.1);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.hurt")), SoundSource.PLAYERS, 1, 1);
@@ -124,6 +120,8 @@ public class AccursedDaggerWhileProjectileFlyingTickProcedure {
 					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.hurt")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.ACCURSED_SHIMMER.get()), x, y, z, 1, 0, 0, 0, 0);
 		} else {
 			immediatesourceentity.getPersistentData().putDouble("lifetime", (immediatesourceentity.getPersistentData().getDouble("lifetime") + 1));
 		}

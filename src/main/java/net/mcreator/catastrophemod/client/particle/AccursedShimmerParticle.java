@@ -31,22 +31,18 @@ public class AccursedShimmerParticle extends TextureSheetParticle {
 	}
 
 	private final SpriteSet spriteSet;
-	private float angularVelocity;
-	private float angularAcceleration;
 
 	protected AccursedShimmerParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 0.7f;
-		this.lifetime = 9;
+		this.quadSize *= 4f;
+		this.lifetime = 7;
 		this.gravity = 0f;
 		this.hasPhysics = true;
-		this.xd = vx * 0.1;
-		this.yd = vy * 0.1;
-		this.zd = vz * 0.1;
-		this.angularVelocity = 0.614f;
-		this.angularAcceleration = 0f;
+		this.xd = vx * 0;
+		this.yd = vy * 0;
+		this.zd = vz * 0;
 		this.setSpriteFromAge(spriteSet);
 	}
 
@@ -63,11 +59,8 @@ public class AccursedShimmerParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
-		this.oRoll = this.roll;
-		this.roll += this.angularVelocity;
-		this.angularVelocity += this.angularAcceleration;
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 2) % 5 + 1, 5));
+			this.setSprite(this.spriteSet.get((this.age / 2) % 4 + 1, 4));
 		}
 	}
 }

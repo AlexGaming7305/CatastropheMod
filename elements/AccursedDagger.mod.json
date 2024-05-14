@@ -15,12 +15,6 @@
     "knockback": 1,
     "entityModel": "Modelaccursed_dagger",
     "customModelTexture": "accursed_dagger.png",
-    "onHitsBlock": {
-      "name": "AccursedDaggerProjectileHitsBlock"
-    },
-    "onHitsEntity": {
-      "name": "AccursedDaggerProjectileHitsBlock"
-    },
     "onFlyingTick": {
       "name": "AccursedDaggerWhileProjectileFlyingTick"
     }

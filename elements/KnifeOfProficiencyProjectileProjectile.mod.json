@@ -16,7 +16,7 @@
     "entityModel": "Modelknife_of_proficiency",
     "customModelTexture": "knife_of_proficiency.png",
     "onHitsEntity": {
-      "name": "KnifeOfProficiencyProjectileProjectileHitsLivingEntity"
+      "name": "KnifeOfProficiencyProjectileProjectileProjectileHitsLivingEntity"
     },
     "onFlyingTick": {
       "name": "KnifeOfProficiencyProjectileWhileProjectileFlyingTick"

@@ -39,17 +39,17 @@ public class KnifeOfProficiencyRightclickedProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, 2, 0);
+					}.getArrow(projectileLevel, entity, 1, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 2.5, 0);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_slash")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_slash")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
 			if (entity instanceof Player _player)
@@ -66,54 +66,57 @@ public class KnifeOfProficiencyRightclickedProcedure {
 		} else if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).knife_of_proficiency == 3) {
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
-					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 						AbstractArrow entityToSpawn = new KnifeOfProficiencyProjectileProjectileEntity(CatastropheModModEntities.KNIFE_OF_PROFICIENCY_PROJECTILE_PROJECTILE.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
 						entityToSpawn.setSilent(true);
+						entityToSpawn.setPierceLevel(piercing);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, 3, 0);
+				}.getArrow(projectileLevel, entity, (float) 1.5, 0, (byte) 1);
 				_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.5), (entity.getZ()));
-				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot())) * 1.5), (float) 2.5, 0);
+				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot())) * 1.5), 2, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
-					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 						AbstractArrow entityToSpawn = new KnifeOfProficiencyProjectileProjectileEntity(CatastropheModModEntities.KNIFE_OF_PROFICIENCY_PROJECTILE_PROJECTILE.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
 						entityToSpawn.setSilent(true);
+						entityToSpawn.setPierceLevel(piercing);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, 3, 0);
+				}.getArrow(projectileLevel, entity, (float) 1.5, 0, (byte) 1);
 				_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.5), (entity.getZ()));
-				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() + 10 + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot() + 10)) * 1.5), (float) 2.5, 0);
+				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() + 10 + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot() + 10)) * 1.5), 2, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
-					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
 						AbstractArrow entityToSpawn = new KnifeOfProficiencyProjectileProjectileEntity(CatastropheModModEntities.KNIFE_OF_PROFICIENCY_PROJECTILE_PROJECTILE.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
 						entityToSpawn.setSilent(true);
+						entityToSpawn.setPierceLevel(piercing);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, 3, 0);
+				}.getArrow(projectileLevel, entity, (float) 1.5, 0, (byte) 1);
 				_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.5), (entity.getZ()));
-				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() - 10 + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot() - 10)) * 1.5), (float) 2.5, 0);
+				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() - 10 + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot() - 10)) * 1.5), 2, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_slash")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_slash")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
 			if (entity instanceof Player _player)

@@ -377,24 +377,6 @@
       }
     ]
   },
-  "knife_hit": {
-    "subtitle": "subtitles.knife_hit",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:knife_hit",
-        "stream": false
-      }
-    ]
-  },
-  "knife_slash": {
-    "subtitle": "subtitles.knife_slash",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:knife_slash",
-        "stream": false
-      }
-    ]
-  },
   "cursed_phase": {
     "subtitle": "subtitles.cursed_phase",
     "sounds": [

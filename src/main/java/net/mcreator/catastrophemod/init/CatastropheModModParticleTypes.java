@@ -33,6 +33,6 @@ public class CatastropheModModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> PHANTOM_BLAST_GLOW = REGISTRY.register("phantom_blast_glow", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> SPARK = REGISTRY.register("spark", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> CRYSTAL_BLAST = REGISTRY.register("crystal_blast", () -> new SimpleParticleType(true));
-	public static final RegistryObject<SimpleParticleType> ACCURSED_SHIMMER = REGISTRY.register("accursed_shimmer", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> FIERY_EXPLOSION = REGISTRY.register("fiery_explosion", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> ACCURSED_SHIMMER = REGISTRY.register("accursed_shimmer", () -> new SimpleParticleType(true));
 }

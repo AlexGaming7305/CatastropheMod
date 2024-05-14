@@ -52,7 +52,7 @@ public class CatastropheModModParticles {
 		event.registerSpriteSet(CatastropheModModParticleTypes.PHANTOM_BLAST_GLOW.get(), PhantomBlastGlowParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.SPARK.get(), SparkParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.CRYSTAL_BLAST.get(), CrystalBlastParticle::provider);
-		event.registerSpriteSet(CatastropheModModParticleTypes.ACCURSED_SHIMMER.get(), AccursedShimmerParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.FIERY_EXPLOSION.get(), FieryExplosionParticle::provider);
+		event.registerSpriteSet(CatastropheModModParticleTypes.ACCURSED_SHIMMER.get(), AccursedShimmerParticle::provider);
 	}
 }

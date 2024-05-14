@@ -19,7 +19,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.catastrophemod.procedures.KnifeOfProficiencyProjectileWhileProjectileFlyingTickProcedure;
-import net.mcreator.catastrophemod.procedures.KnifeOfProficiencyProjectileProjectileHitsLivingEntityProcedure;
+import net.mcreator.catastrophemod.procedures.KnifeOfProficiencyProjectileProjectileProjectileHitsLivingEntityProcedure;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
@@ -67,15 +67,13 @@ public class KnifeOfProficiencyProjectileProjectileEntity extends AbstractArrow 
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		KnifeOfProficiencyProjectileProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		KnifeOfProficiencyProjectileProjectileProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		KnifeOfProficiencyProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
-		if (this.inGround)
-			this.discard();
+		KnifeOfProficiencyProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this);
 	}
 
 	public static KnifeOfProficiencyProjectileProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {

@@ -31,6 +31,15 @@ public class PhotonProjectileTrailsProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"photon fx photon:accursed_dagger_trail entity @e[type=minecraft:arrow]");
+					"photon fx photon:accursed_dagger_trail entity @e[type=catastrophe_mod:projectile_accursed_dagger]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:knife_of_proficiency_trail entity @e[type=catastrophe_mod:projectile_knife_of_proficiency_projectile_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:ice_trail entity @e[type=catastrophe_mod:projectile_frost_bolt_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"/photon fx photon:ice_trail entity @e[type=catastrophe_mod:projectile_ice_shard_projectile]");
 	}
 }

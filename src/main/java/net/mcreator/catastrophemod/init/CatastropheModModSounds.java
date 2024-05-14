@@ -59,8 +59,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> STRONG_METAL_HIT = REGISTRY.register("strong_metal_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "strong_metal_hit")));
 	public static final RegistryObject<SoundEvent> AXE_SLASH = REGISTRY.register("axe_slash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "axe_slash")));
 	public static final RegistryObject<SoundEvent> AXE_HITS = REGISTRY.register("axe_hits", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "axe_hits")));
-	public static final RegistryObject<SoundEvent> KNIFE_HIT = REGISTRY.register("knife_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "knife_hit")));
-	public static final RegistryObject<SoundEvent> KNIFE_SLASH = REGISTRY.register("knife_slash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "knife_slash")));
 	public static final RegistryObject<SoundEvent> CURSED_PHASE = REGISTRY.register("cursed_phase", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "cursed_phase")));
 	public static final RegistryObject<SoundEvent> CURSED_DASH = REGISTRY.register("cursed_dash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "cursed_dash")));
 	public static final RegistryObject<SoundEvent> BLIZZARD_LOOP = REGISTRY.register("blizzard_loop", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "blizzard_loop")));
