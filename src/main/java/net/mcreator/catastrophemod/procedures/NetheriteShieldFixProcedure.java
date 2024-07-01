@@ -11,6 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 
 import javax.annotation.Nullable;
 
@@ -31,6 +32,7 @@ public class NetheriteShieldFixProcedure {
 		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(CatastropheModModItems.NETHERITE_SHIELD.get(), lv).isPresent() : false) {
 			((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.KNOCKBACK_RESISTANCE)
 					.setBaseValue((((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.KNOCKBACK_RESISTANCE).getValue() - 2));
+			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.DAMAGEREDUCTION.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.DAMAGEREDUCTION.get()).getBaseValue() - 10));
 		}
 	}
 }

@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§aRight-click: §7Casts 3 electrified bolts above you that home into targets §b(Costs 10 mana)"
+        "§aRight-click: §7Casts 3 Electrified Sparks into the air that home into targets §b(Costs 10 mana)"
       ]
     },
     "glowCondition": {

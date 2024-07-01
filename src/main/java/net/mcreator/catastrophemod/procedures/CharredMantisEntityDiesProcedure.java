@@ -91,7 +91,7 @@ public class CharredMantisEntityDiesProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SMOKE, x, (y + 2), z, 100, 0, 0, 0, 0.4);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.FLAME_EXPLOSION.get()), x, (y + 2), z, 1, 0, 0, 0, 0);
+				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.FIERY_EXPLOSION.get()), x, (y + 2), z, 1, 0, 0, 0, 0);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:fire_magic_explodes")), SoundSource.HOSTILE, 1, 1);

@@ -1,7 +1,7 @@
 {
         "parent": "item/bow",
         "textures": {
-            "layer0": "catastrophe_mod:items/natures_strike"
+            "layer0": "catastrophe_mod:item/natures_strike"
        },
       "display": {
         "thirdperson_righthand": {

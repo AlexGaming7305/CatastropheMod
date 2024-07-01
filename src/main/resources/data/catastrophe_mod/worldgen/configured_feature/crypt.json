@@ -1,0 +1,8 @@
+{
+  "type": "catastrophe_mod:structure_feature",
+  "config": {
+    "structure": "catastrophe_mod:crypt",
+    "random_rotation": true,
+    "ignored_blocks": "minecraft:structure_block"
+  }
+}

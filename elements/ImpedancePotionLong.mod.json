@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Impedance",
+    "splashName": "Splash Potion of Impedance",
+    "lingeringName": "Lingering Potion of Impedance",
+    "arrowName": "Arrow of Impedance",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:Impedance"
+        },
+        "duration": 9600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

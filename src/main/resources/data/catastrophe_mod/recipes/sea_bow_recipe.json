@@ -8,13 +8,13 @@
   ],
   "key": {
     "a": {
-      "item": "minecraft:nautilus_shell"
+      "item": "catastrophe_mod:depthstone"
     },
     "b": {
       "item": "minecraft:string"
     },
     "c": {
-      "item": "catastrophe_mod:sea_crystal_shard"
+      "item": "catastrophe_mod:sea_crystal_geode"
     }
   },
   "result": {

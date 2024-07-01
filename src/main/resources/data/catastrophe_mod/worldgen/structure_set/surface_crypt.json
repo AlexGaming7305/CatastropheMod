@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "catastrophe_mod:surface_crypt",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 21,
+    "separation": 20,
+    "salt": 1382899110
+  }
+}

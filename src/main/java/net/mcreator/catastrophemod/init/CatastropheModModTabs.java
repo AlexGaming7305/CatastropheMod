@@ -46,6 +46,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.CURSED_ARMOR_BOOTS.get());
 				tabData.accept(CatastropheModModItems.BLIZZARD.get());
 				tabData.accept(CatastropheModModItems.ACCURSED_TOME.get());
+				tabData.accept(CatastropheModModItems.HAUNTED_MIRROR.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> MELEE = REGISTRY.register("melee",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.melee")).icon(() -> new ItemStack(CatastropheModModItems.ELECTRIFIED_COPPER_SWORD.get())).displayItems((parameters, tabData) -> {
@@ -103,6 +104,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.THORN_LEGGINGS.get());
 				tabData.accept(CatastropheModModItems.THORN_BOOTS.get());
 				tabData.accept(CatastropheModModItems.EARTH_GAUNTLET.get());
+				tabData.accept(CatastropheModModItems.STARLIT_LACEWING_STAFF.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> ACCESSORIES = REGISTRY.register("accessories",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.accessories")).icon(() -> new ItemStack(CatastropheModModItems.POCKET_SHIELD_GENERATOR.get())).displayItems((parameters, tabData) -> {
@@ -177,6 +179,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.RIPSAW.get());
 				tabData.accept(CatastropheModModItems.STORM_ARROW.get());
 				tabData.accept(CatastropheModModItems.RUSTGUN.get());
+				tabData.accept(CatastropheModModItems.HUNTSMAN_KNIFE.get());
+				tabData.accept(CatastropheModModItems.WOODEN_BOW.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
@@ -243,7 +247,6 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.MUSIC_DISC_NETHERS_FURY.get());
 			tabData.accept(CatastropheModModItems.RAW_SHROOMIUM.get());
 			tabData.accept(CatastropheModModItems.SHROOMIUM_INGOT.get());
-			tabData.accept(CatastropheModModItems.SEA_CRYSTAL_SHARD.get());
 			tabData.accept(CatastropheModModItems.HERMIT_CRAB_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.TEAR_OF_THE_SEA.get());
 			tabData.accept(CatastropheModModItems.SPORE_ZOMBIE_SPAWN_EGG.get());
@@ -273,6 +276,8 @@ public class CatastropheModModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			tabData.accept(CatastropheModModItems.RUSTY_COGWHEEL.get());
 			tabData.accept(CatastropheModModItems.TWIG.get());
+			tabData.accept(CatastropheModModItems.SEA_CRYSTAL_GEODE.get());
+			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_ITEM.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
@@ -292,6 +297,8 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.PURIFIED_CALICO_MUSHROOM_STEW.get());
 			tabData.accept(CatastropheModModItems.LESSER_MANA_POTION.get());
 			tabData.accept(CatastropheModModItems.MANA_POTION.get());
+			tabData.accept(CatastropheModModItems.SPINACH_LEAVES.get());
+			tabData.accept(CatastropheModModItems.SPINACH_SOUP.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

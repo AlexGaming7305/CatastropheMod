@@ -574,5 +574,23 @@
         "stream": false
       }
     ]
+  },
+  "haunted_mirror_shoot": {
+    "subtitle": "subtitles.haunted_mirror_shoot",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:haunted_mirror_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "haunted_mirror_summon": {
+    "subtitle": "subtitles.haunted_mirror_summon",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:haunted_mirror_summon",
+        "stream": false
+      }
+    ]
   }
 }

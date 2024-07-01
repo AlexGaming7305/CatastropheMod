@@ -40,6 +40,48 @@ public class PhotonProjectileTrailsProcedure {
 					"photon fx photon:ice_trail entity @e[type=catastrophe_mod:projectile_frost_bolt_projectile]");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"/photon fx photon:ice_trail entity @e[type=catastrophe_mod:projectile_ice_shard_projectile]");
+					"photon fx photon:ice_trail entity @e[type=catastrophe_mod:projectile_ice_shard_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:ice_trail entity @e[type=catastrophe_mod:projectile_freezing_spike_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:fireball_trail entity @e[type=catastrophe_mod:projectile_flame_projectile_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:electrified_trail entity @e[type=catastrophe_mod:projectile_electric_spark_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:amethyst_trail entity @e[type=catastrophe_mod:projectile_crystal_shard_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:huntsman_knife_trail entity @e[type=catastrophe_mod:projectile_huntsman_knife_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:shadowfire_soul_trail entity @e[type=catastrophe_mod:projectile_shadowfire_soul_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:ghost_phantom_trail entity @e[type=catastrophe_mod:projectile_ghost_phantom_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:iron_round_trail entity @e[type=catastrophe_mod:projectile_iron_round_projectile_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:fiery_round_trail entity @e[type=catastrophe_mod:projectile_fiery_round_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:amethyst_round_trail entity @e[type=catastrophe_mod:projectile_crystal_round_projectile_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:venomous_round_trail entity @e[type=catastrophe_mod:projectile_venomous_bullet_projectile_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:electrified_round_trail entity @e[type=catastrophe_mod:projectile_electrified_round_projectile_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:accursed_soul_trail entity @e[type=catastrophe_mod:projectile_accursed_soul]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"photon fx photon:starlit_lacewing_trail entity @e[type=catastrophe_mod:starlit_lacewing]");
 	}
 }

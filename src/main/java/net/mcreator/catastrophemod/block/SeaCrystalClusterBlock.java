@@ -7,6 +7,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -47,7 +48,7 @@ public class SeaCrystalClusterBlock extends Block implements SimpleWaterloggedBl
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
 	public SeaCrystalClusterBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER).strength(3f).lightLevel(s -> 8).requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER).strength(3f).lightLevel(s -> 8).requiresCorrectToolForDrops().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(FACE, AttachFace.WALL).setValue(WATERLOGGED, false));
 	}
 
@@ -58,7 +59,7 @@ public class SeaCrystalClusterBlock extends Block implements SimpleWaterloggedBl
 
 	@Override
 	public float[] getBeaconColorMultiplier(BlockState state, LevelReader world, BlockPos pos, BlockPos beaconPos) {
-		return new float[]{0.4980392157f, 1f, 0.9568627451f};
+		return new float[]{1f, 0.2980392157f, 1f};
 	}
 
 	@Override
@@ -74,6 +75,32 @@ public class SeaCrystalClusterBlock extends Block implements SimpleWaterloggedBl
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return switch (state.getValue(FACING)) {
+			default -> switch (state.getValue(FACE)) {
+				case FLOOR -> box(3, 0, 3, 13, 7, 13);
+				case WALL -> box(3, 3, 0, 13, 13, 7);
+				case CEILING -> box(3, 9, 3, 13, 16, 13);
+			};
+			case NORTH -> switch (state.getValue(FACE)) {
+				case FLOOR -> box(3, 0, 3, 13, 7, 13);
+				case WALL -> box(3, 3, 9, 13, 13, 16);
+				case CEILING -> box(3, 9, 3, 13, 16, 13);
+			};
+			case EAST -> switch (state.getValue(FACE)) {
+				case FLOOR -> box(3, 0, 3, 13, 7, 13);
+				case WALL -> box(0, 3, 3, 7, 13, 13);
+				case CEILING -> box(3, 9, 3, 13, 16, 13);
+			};
+			case WEST -> switch (state.getValue(FACE)) {
+				case FLOOR -> box(3, 0, 3, 13, 7, 13);
+				case WALL -> box(9, 3, 3, 16, 13, 13);
+				case CEILING -> box(3, 9, 3, 13, 16, 13);
+			};
+		};
 	}
 
 	@Override
@@ -122,6 +149,6 @@ public class SeaCrystalClusterBlock extends Block implements SimpleWaterloggedBl
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_SHARD.get(), 2));
+		return Collections.singletonList(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_GEODE.get(), 2));
 	}
 }

@@ -31,16 +31,16 @@ public class ShadowfireSoulWhileProjectileFlyingTickProcedure {
 		double radius = 0;
 		double xvel = 0;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.SMOKE, x, y, z, 3, 0.15, 0.15, 0.15, 0);
+			_level.sendParticles(ParticleTypes.SMOKE, x, y, z, 1, 0.1, 0.1, 0.1, 0);
 		xvel = immediatesourceentity.getDeltaMovement().x();
 		yvel = immediatesourceentity.getDeltaMovement().y();
 		zvel = immediatesourceentity.getDeltaMovement().z();
 		flag = true;
-		turn = 0.4;
+		turn = 0.6;
 		speed = 2;
 		radius = 100;
 		lifetime = 100;
-		if (immediatesourceentity.getPersistentData().getDouble("lifetime") >= 15) {
+		if (immediatesourceentity.getPersistentData().getDouble("lifetime") >= 15 && immediatesourceentity.getPersistentData().getDouble("lifetime") <= 50) {
 			{
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(radius / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

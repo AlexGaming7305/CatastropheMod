@@ -2,14 +2,6 @@
   "textures": [
     "catastrophe_mod:fiery_explosion_1",
     "catastrophe_mod:fiery_explosion_2",
-    "catastrophe_mod:fiery_explosion_3",
-    "catastrophe_mod:fiery_explosion_4",
-    "catastrophe_mod:fiery_explosion_5",
-    "catastrophe_mod:fiery_explosion_6",
-    "catastrophe_mod:fiery_explosion_7",
-    "catastrophe_mod:fiery_explosion_8",
-    "catastrophe_mod:fiery_explosion_9",
-    "catastrophe_mod:fiery_explosion_10",
-    "catastrophe_mod:fiery_explosion_11"
+    "catastrophe_mod:fiery_explosion_3"
   ]
 }

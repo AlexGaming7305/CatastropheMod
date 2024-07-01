@@ -42,16 +42,16 @@ public class SpellOfPhantomsRightclickedProcedure {
 						entityToSpawn.setSilent(true);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, 4, 0);
+				}.getArrow(projectileLevel, entity, 6, 0);
 				_entityToSpawn.setPos((entity.getX() + Mth.nextInt(RandomSource.create(), -15, 15)), (entity.getY() + 25), (entity.getZ() + Mth.nextInt(RandomSource.create(), -15, 15)));
 				_entityToSpawn.shoot(0, 0, 0, 0, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.flap")), SoundSource.NEUTRAL, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.flap")), SoundSource.HOSTILE, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.flap")), SoundSource.NEUTRAL, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.flap")), SoundSource.HOSTILE, 1, 1, false);
 				}
 			}
 			if (entity instanceof Player _player)

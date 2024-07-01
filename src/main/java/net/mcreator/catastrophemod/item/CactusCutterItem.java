@@ -13,6 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.catastrophemod.procedures.CactusCutterLivingEntityIsHitWithToolProcedure;
+import net.mcreator.catastrophemod.procedures.CactusCutterEntitySwingsItemProcedure;
 
 import java.util.List;
 
@@ -57,5 +58,13 @@ public class CactusCutterItem extends SwordItem {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(Component.literal("\u00A77\"I can totally defeat any boss with this\""));
 		list.add(Component.literal("\u00A77Hit enemies will take damage randomly over time"));
+		list.add(Component.literal("\u00A77Shoots out 4 Cactus Needles"));
+	}
+
+	@Override
+	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
+		boolean retval = super.onEntitySwing(itemstack, entity);
+		CactusCutterEntitySwingsItemProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, itemstack);
+		return retval;
 	}
 }

@@ -65,7 +65,7 @@ public class IronRoundProjectileProjectileEntity extends AbstractArrow implement
 	@Override
 	public void tick() {
 		super.tick();
-		IronRoundProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		IronRoundProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this);
 		if (this.inGround)
 			this.discard();
 	}

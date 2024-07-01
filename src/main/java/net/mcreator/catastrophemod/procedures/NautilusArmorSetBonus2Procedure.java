@@ -13,6 +13,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 
 import javax.annotation.Nullable;
 
@@ -45,19 +46,13 @@ public class NautilusArmorSetBonus2Procedure {
 					});
 				}
 				{
-					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana + 30;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Maxmana = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
 					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana + 30;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Mana = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).getBaseValue() + 30));
 			}
 		}
 		if (!((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == CatastropheModModItems.NAUTILUS_BOOTS.get()
@@ -73,19 +68,13 @@ public class NautilusArmorSetBonus2Procedure {
 					});
 				}
 				{
-					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana - 30;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Maxmana = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
 					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana - 30;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Mana = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).getBaseValue() - 30));
 			}
 		}
 		if (entity.isInWaterRainOrBubble() && (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == CatastropheModModItems.NAUTILUS_BOOTS.get()
@@ -101,19 +90,13 @@ public class NautilusArmorSetBonus2Procedure {
 					});
 				}
 				{
-					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana + 20;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Maxmana = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
 					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana + 20;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Mana = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).getBaseValue() + 20));
 				((LivingEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue((((LivingEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).getBaseValue() + 1));
 			}
 		} else if (!(entity.isInWaterRainOrBubble() && (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == CatastropheModModItems.NAUTILUS_BOOTS.get()
@@ -129,19 +112,13 @@ public class NautilusArmorSetBonus2Procedure {
 					});
 				}
 				{
-					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana - 20;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Maxmana = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
 					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana - 20;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Mana = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).getBaseValue() - 20));
 				((LivingEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).setBaseValue((((LivingEntity) entity).getAttribute(ForgeMod.SWIM_SPEED.get()).getBaseValue() - 1));
 			}
 		}

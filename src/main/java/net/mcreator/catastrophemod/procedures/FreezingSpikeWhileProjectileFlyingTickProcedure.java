@@ -47,7 +47,7 @@ public class FreezingSpikeWhileProjectileFlyingTickProcedure {
 		yvel = immediatesourceentity.getDeltaMovement().y();
 		zvel = immediatesourceentity.getDeltaMovement().z();
 		flag = true;
-		turn = 1;
+		turn = 0.5;
 		speed = 1.6;
 		radius = 25;
 		lifetime = 100;

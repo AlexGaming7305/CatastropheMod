@@ -1,6 +1,0 @@
-{
-  "parent": "item/bow",
-  "textures": {
-    "layer0": "catastrophe_mod:item/venomous_bow_pulling_0"
-  }
-}

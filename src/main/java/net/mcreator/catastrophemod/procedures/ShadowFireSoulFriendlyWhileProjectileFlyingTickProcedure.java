@@ -31,7 +31,7 @@ public class ShadowFireSoulFriendlyWhileProjectileFlyingTickProcedure {
 		double radius = 0;
 		double xvel = 0;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.SMOKE, x, y, z, 3, 0.15, 0.15, 0.15, 0);
+			_level.sendParticles(ParticleTypes.SMOKE, x, y, z, 1, 0.1, 0.1, 0.1, 0);
 		xvel = immediatesourceentity.getDeltaMovement().x();
 		yvel = immediatesourceentity.getDeltaMovement().y();
 		zvel = immediatesourceentity.getDeltaMovement().z();

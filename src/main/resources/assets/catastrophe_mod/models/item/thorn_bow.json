@@ -1,7 +1,7 @@
 {
       "parent": "item/bow",
       "textures": {
-        "layer0": "catastrophe_mod:items/thorn_bow"
+        "layer0": "catastrophe_mod:item/thorn_bow"
       },
       "display": {
         "thirdperson_righthand": {
@@ -30,21 +30,21 @@
               "predicate": {
                   "pulling": 1
               },
-              "model": "catastrophe_mod:item/venomous_bow_0"
+              "model": "catastrophe_mod:item/thorn_bow_0"
           },
           {
               "predicate": {
                   "pulling": 1,
                   "pull": 0.65
               },
-              "model": "catastrophe_mod:item/venomous_bow_1"
+              "model": "catastrophe_mod:item/thorn_bow_1"
           },
           {
               "predicate": {
                   "pulling": 1,
                   "pull": 0.9
               },
-              "model": "catastrophe_mod:item/venomous_bow_2"
+              "model": "catastrophe_mod:item/thorn_bow_2"
           }
      ]
 }

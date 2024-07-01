@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_overworld",
-  "features": "catastrophe_mod:surface_crypt_feature",
-  "step": "surface_structures"
-}

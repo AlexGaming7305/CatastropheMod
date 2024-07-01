@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "particle",
+  "definition": {
+    "texture": "haunted_glimmer.png",
+    "animate": true,
+    "frameDuration": 2,
+    "width": 0.2,
+    "height": 0.2,
+    "scale": 0.7000000000000001,
+    "speedFactor": 0.30000000000000004,
+    "gravity": 0.1,
+    "maxAge": 5,
+    "maxAgeDiff": 0,
+    "angularVelocity": 0.35,
+    "angularAcceleration": 0.0,
+    "canCollide": true,
+    "alwaysShow": true,
+    "renderType": "LIT"
+  }
+}

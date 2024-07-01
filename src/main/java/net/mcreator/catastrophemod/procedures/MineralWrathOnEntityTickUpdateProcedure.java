@@ -30,9 +30,9 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
 import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.WraithSparksProjectileEntity;
 import net.mcreator.catastrophemod.entity.SwordspinEntity;
 import net.mcreator.catastrophemod.entity.MineralWraithEntity;
+import net.mcreator.catastrophemod.entity.ElectricSparkProjectileEntity;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 import java.util.List;
@@ -79,7 +79,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								if (world instanceof ServerLevel projectileLevel) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -94,7 +94,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								if (world instanceof ServerLevel projectileLevel) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -109,7 +109,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								if (world instanceof ServerLevel projectileLevel) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -238,7 +238,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 											if (!projectileLevel.isClientSide()) {
 												Projectile _entityToSpawn = new Object() {
 													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-														AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+														AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 														entityToSpawn.setOwner(shooter);
 														entityToSpawn.setBaseDamage(damage);
 														entityToSpawn.setKnockback(knockback);
@@ -257,7 +257,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 											if (!projectileLevel.isClientSide()) {
 												Projectile _entityToSpawn = new Object() {
 													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-														AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+														AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 														entityToSpawn.setOwner(shooter);
 														entityToSpawn.setBaseDamage(damage);
 														entityToSpawn.setKnockback(knockback);
@@ -276,7 +276,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 											if (!projectileLevel.isClientSide()) {
 												Projectile _entityToSpawn = new Object() {
 													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-														AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+														AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 														entityToSpawn.setOwner(shooter);
 														entityToSpawn.setBaseDamage(damage);
 														entityToSpawn.setKnockback(knockback);
@@ -370,7 +370,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 									if (world instanceof ServerLevel projectileLevel) {
 										Projectile _entityToSpawn = new Object() {
 											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+												AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 												entityToSpawn.setOwner(shooter);
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);
@@ -385,7 +385,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 									if (world instanceof ServerLevel projectileLevel) {
 										Projectile _entityToSpawn = new Object() {
 											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+												AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 												entityToSpawn.setOwner(shooter);
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);
@@ -400,7 +400,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 									if (world instanceof ServerLevel projectileLevel) {
 										Projectile _entityToSpawn = new Object() {
 											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new WraithSparksProjectileEntity(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), level);
+												AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 												entityToSpawn.setOwner(shooter);
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);

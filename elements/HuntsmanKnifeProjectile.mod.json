@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:HuntsmanKnife"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelhuntsman_knife",
+    "customModelTexture": "huntsman_knife.png",
+    "onHitsEntity": {
+      "name": "KnifeOfProficiencyProjectileProjectileProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "KnifeOfProficiencyProjectileWhileProjectileFlyingTick"
+    }
+  }
+}

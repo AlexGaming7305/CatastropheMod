@@ -27,9 +27,11 @@ import net.mcreator.catastrophemod.client.renderer.SwordSpinDashRenderer;
 import net.mcreator.catastrophemod.client.renderer.SwordOrbitRenderer;
 import net.mcreator.catastrophemod.client.renderer.SwordDashRenderer;
 import net.mcreator.catastrophemod.client.renderer.StormArrowProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.StarlitLacewingRenderer;
 import net.mcreator.catastrophemod.client.renderer.SporeZombieRenderer;
 import net.mcreator.catastrophemod.client.renderer.SporeProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.SilkMothRenderer;
+import net.mcreator.catastrophemod.client.renderer.ShootingStarRenderer;
 import net.mcreator.catastrophemod.client.renderer.ShellProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.ShadowflameSpearsRenderer;
 import net.mcreator.catastrophemod.client.renderer.ShadowfireSoulProjectileRenderer;
@@ -50,16 +52,17 @@ import net.mcreator.catastrophemod.client.renderer.NettleMinionRenderer;
 import net.mcreator.catastrophemod.client.renderer.NatureBlessedSpiritRenderer;
 import net.mcreator.catastrophemod.client.renderer.NatureBlastProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.MineralWraithRenderer;
-import net.mcreator.catastrophemod.client.renderer.LightningBookSparkProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.LightningBladeRenderer;
 import net.mcreator.catastrophemod.client.renderer.LifedrainArrowProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.KnifeOfProficiencyProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.IronRoundProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.IceShardProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.HuntsmanKnifeProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.HermitCrabRenderer;
 import net.mcreator.catastrophemod.client.renderer.HermitCrabMinionRenderer;
 import net.mcreator.catastrophemod.client.renderer.HealingOrbProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.HealingBlossomProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.HauntedMirrorEntityRenderer;
 import net.mcreator.catastrophemod.client.renderer.GhostPhantomProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.FuriousWindRenderer;
 import net.mcreator.catastrophemod.client.renderer.FrozenShieldIceSpikeProjectileRenderer;
@@ -85,6 +88,7 @@ import net.mcreator.catastrophemod.client.renderer.CrystalRoundProjectileProject
 import net.mcreator.catastrophemod.client.renderer.CharredSkeletonGuardRenderer;
 import net.mcreator.catastrophemod.client.renderer.CharredMantisRenderer;
 import net.mcreator.catastrophemod.client.renderer.CalicoStagBeetleRenderer;
+import net.mcreator.catastrophemod.client.renderer.CactusNeedleRenderer;
 import net.mcreator.catastrophemod.client.renderer.BloodKnifeProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.BlazingPhoenixRenderer;
 import net.mcreator.catastrophemod.client.renderer.BlazingFeatherProjectileRenderer;
@@ -93,6 +97,7 @@ import net.mcreator.catastrophemod.client.renderer.AtlanticSeaNettleRenderer;
 import net.mcreator.catastrophemod.client.renderer.AssassinSkeletonRenderer;
 import net.mcreator.catastrophemod.client.renderer.AnglerfishRenderer;
 import net.mcreator.catastrophemod.client.renderer.AcidTarantulaMinionRenderer;
+import net.mcreator.catastrophemod.client.renderer.AccursedSoulRenderer;
 import net.mcreator.catastrophemod.client.renderer.AccursedDaggerRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -142,10 +147,8 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.ATLANTIC_SEA_NETTLE.get(), AtlanticSeaNettleRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.FROST_BOLT_PROJECTILE.get(), FrostBoltProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.FLAME_PROJECTILE_PROJECTILE.get(), FlameProjectileProjectileRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.LIGHTNING_BOOK_SPARK_PROJECTILE.get(), LightningBookSparkProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.STORM_ARROW_PROJECTILE.get(), StormArrowProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.POISONOUS_THORN_PROJECTILE.get(), PoisonousThornProjectileRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.WRAITH_SPARKS_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.FREEZING_SPIKE_PROJECTILE.get(), FreezingSpikeProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.GHOST_PHANTOM_PROJECTILE.get(), GhostPhantomProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.THORN_SPEAR_PROJECTILE_PROJECTILE.get(), ThornSpearProjectileProjectileRenderer::new);
@@ -184,5 +187,12 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.BLIZZARD_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.ANGLERFISH.get(), AnglerfishRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.ACCURSED_DAGGER.get(), AccursedDaggerRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.HUNTSMAN_KNIFE_PROJECTILE.get(), HuntsmanKnifeProjectileRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.CACTUS_NEEDLE.get(), CactusNeedleRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.HAUNTED_MIRROR_ENTITY.get(), HauntedMirrorEntityRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.ACCURSED_SOUL.get(), AccursedSoulRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.STARLIT_LACEWING.get(), StarlitLacewingRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.SHOOTING_STAR.get(), ShootingStarRenderer::new);
 	}
 }

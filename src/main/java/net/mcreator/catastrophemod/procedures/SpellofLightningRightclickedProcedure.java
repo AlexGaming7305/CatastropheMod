@@ -16,7 +16,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.LightningBookSparkProjectileEntity;
+import net.mcreator.catastrophemod.entity.ElectricSparkProjectileEntity;
 
 public class SpellofLightningRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -33,7 +33,7 @@ public class SpellofLightningRightclickedProcedure {
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new LightningBookSparkProjectileEntity(CatastropheModModEntities.LIGHTNING_BOOK_SPARK_PROJECTILE.get(), level);
+						AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
@@ -42,13 +42,13 @@ public class SpellofLightningRightclickedProcedure {
 					}
 				}.getArrow(projectileLevel, entity, 1, 0);
 				_entityToSpawn.setPos(x, y, z);
-				_entityToSpawn.shoot(0, 4, 0, 1, 10);
+				_entityToSpawn.shoot(0, 4, 0, 1, 15);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new LightningBookSparkProjectileEntity(CatastropheModModEntities.LIGHTNING_BOOK_SPARK_PROJECTILE.get(), level);
+						AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
@@ -57,13 +57,13 @@ public class SpellofLightningRightclickedProcedure {
 					}
 				}.getArrow(projectileLevel, entity, 1, 0);
 				_entityToSpawn.setPos(x, y, z);
-				_entityToSpawn.shoot(0, 4, 0, 1, 10);
+				_entityToSpawn.shoot(0, 4, 0, 1, 15);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new LightningBookSparkProjectileEntity(CatastropheModModEntities.LIGHTNING_BOOK_SPARK_PROJECTILE.get(), level);
+						AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
@@ -72,7 +72,7 @@ public class SpellofLightningRightclickedProcedure {
 					}
 				}.getArrow(projectileLevel, entity, 1, 0);
 				_entityToSpawn.setPos(x, y, z);
-				_entityToSpawn.shoot(0, 4, 0, 1, 10);
+				_entityToSpawn.shoot(0, 4, 0, 1, 15);
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (world instanceof Level _level) {

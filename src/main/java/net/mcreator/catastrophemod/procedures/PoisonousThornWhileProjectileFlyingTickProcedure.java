@@ -37,7 +37,7 @@ public class PoisonousThornWhileProjectileFlyingTickProcedure {
 		yvel = immediatesourceentity.getDeltaMovement().y();
 		zvel = immediatesourceentity.getDeltaMovement().z();
 		flag = true;
-		turn = 0.5;
+		turn = 0.1;
 		speed = 1.5;
 		radius = 100;
 		lifetime = 100;

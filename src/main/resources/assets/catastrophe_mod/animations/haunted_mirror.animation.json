@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.haunted_mirror.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"haunted_mirror": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [2.5, -2.5, 0]
+						},
+						"1.5": {
+							"vector": [-1.25, 1.25, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, -2, 0]
+						},
+						"1.0": {
+							"vector": [0, 2, 0],
+							"easing": "linear"
+						},
+						"2.0": {
+							"vector": [0, -2, 0],
+							"easing": "linear"
+						}
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

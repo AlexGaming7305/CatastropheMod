@@ -12,7 +12,8 @@
     "specialInformation": {
       "fixedValue": [
         "§7\"I can totally defeat any boss with this\"",
-        "§7Hit enemies will take damage randomly over time"
+        "§7Hit enemies will take damage randomly over time",
+        "§7Shoots out 4 Cactus Needles"
       ]
     },
     "creativeTab": {
@@ -38,6 +39,9 @@
     "damageOnCrafting": false,
     "onEntityHitWith": {
       "name": "CactusCutterLivingEntityIsHitWithTool"
+    },
+    "onEntitySwing": {
+      "name": "CactusCutterEntitySwingsItem"
     }
   }
 }

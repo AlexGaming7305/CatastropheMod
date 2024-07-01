@@ -38,7 +38,7 @@ public class GhostPhantomWhileProjectileFlyingTickProcedure {
 		zvel = immediatesourceentity.getDeltaMovement().z();
 		flag = true;
 		turn = 0.4;
-		speed = 1.5;
+		speed = 2;
 		radius = 100;
 		lifetime = 100;
 		if (immediatesourceentity.getPersistentData().getDouble("lifetime") >= 0) {
@@ -46,7 +46,7 @@ public class GhostPhantomWhileProjectileFlyingTickProcedure {
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(radius / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (flag && (entityiterator == ((Entity) world.getEntitiesOfClass(Monster.class, AABB.ofSize(
+					if (flag && entityiterator == ((Entity) world.getEntitiesOfClass(Monster.class, AABB.ofSize(
 							new Vec3((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())),
@@ -58,7 +58,7 @@ public class GhostPhantomWhileProjectileFlyingTickProcedure {
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 									(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(15)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())))
-							.findFirst().orElse(null)) || entityiterator instanceof Monster == true)) {
+							.findFirst().orElse(null)) && entityiterator instanceof Monster == true) {
 						flag = false;
 						xdir = entityiterator.getX() - immediatesourceentity.getX();
 						ydir = (entityiterator.getY() + entityiterator.getBbHeight()) - immediatesourceentity.getY();

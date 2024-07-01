@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "spell_of_ice",
-    "customModelName": "Ranged item",
+    "customModelName": "Normal",
     "customProperties": {},
     "states": [],
     "name": "§bBlizzard",
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§aRight-click: §7Casts out a chilling wind that occasionally shoots out ice shards §b(Costs 3 mana)"
+        "§aRight-click: §7Casts out a chilling wind §b(Costs 3 mana)"
       ]
     },
     "glowCondition": {

@@ -38,7 +38,7 @@ public class SeaHoeItem extends HoeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_SHARD.get()));
+				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_GEODE.get()));
 			}
 		}, 0, -1f, new Item.Properties());
 	}

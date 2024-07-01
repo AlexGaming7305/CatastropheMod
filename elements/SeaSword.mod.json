@@ -8,10 +8,10 @@
     "texture": "sea_sword",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Sea Sword",
+    "name": "§dSea Sword",
     "specialInformation": {
       "fixedValue": [
-        "§7Deals §a50% §7more damage while submerged"
+        "§aRight-click: §7Forms a current that can be used to cast Water Slashes while attacking"
       ]
     },
     "creativeTab": {
@@ -29,7 +29,7 @@
     },
     "repairItems": [
       {
-        "value": "CUSTOM:SeaCrystalShard"
+        "value": "CUSTOM:SeaCrystalGeode"
       }
     ],
     "immuneToFire": false,
