@@ -1,9 +1,24 @@
 
 package net.mcreator.catastrophemod.recipes.brewing;
 
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.common.brewing.IBrewingRecipe;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+
+import net.mcreator.catastrophemod.init.CatastropheModModPotions;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ImpedancePotionRecipeBrewingRecipe implements IBrewingRecipe {
-
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> BrewingRecipeRegistry.addRecipe(new ImpedancePotionRecipeBrewingRecipe()));
@@ -23,9 +38,8 @@ public class ImpedancePotionRecipeBrewingRecipe implements IBrewingRecipe {
 	@Override
 	public ItemStack getOutput(ItemStack input, ItemStack ingredient) {
 		if (isInput(input) && isIngredient(ingredient)) {
-			return PotionUtils.setPotion(new ItemStack(input.getItem()), CatastropheModModPotions.DELETED_MOD_ELEMENT.get());
+			return PotionUtils.setPotion(new ItemStack(input.getItem()), CatastropheModModPotions.IMPEDANCE_POTION.get());
 		}
 		return ItemStack.EMPTY;
 	}
-
 }
