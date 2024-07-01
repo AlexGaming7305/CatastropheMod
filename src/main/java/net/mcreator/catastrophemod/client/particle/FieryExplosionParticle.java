@@ -60,7 +60,7 @@ public class FieryExplosionParticle extends TextureSheetParticle {
 	public void tick() {
 		super.tick();
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 3 + 1, 3));
+			this.setSprite(this.spriteSet.get((this.age / 1) % 11 + 1, 11));
 		}
 	}
 }

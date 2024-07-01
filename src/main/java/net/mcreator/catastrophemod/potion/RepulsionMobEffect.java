@@ -1,6 +1,9 @@
 
 package net.mcreator.catastrophemod.potion;
 
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
 public class RepulsionMobEffect extends MobEffect {
 	public RepulsionMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -11233345);

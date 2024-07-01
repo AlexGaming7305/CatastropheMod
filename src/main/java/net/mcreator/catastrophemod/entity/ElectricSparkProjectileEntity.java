@@ -1,6 +1,27 @@
 
 package net.mcreator.catastrophemod.entity;
 
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+
+import net.mcreator.catastrophemod.procedures.LightningBookSparkWhileProjectileFlyingTickProcedure;
+import net.mcreator.catastrophemod.procedures.LightningBookSparkProjectileHitsLivingEntityProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ElectricSparkProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
@@ -46,13 +67,13 @@ public class ElectricSparkProjectileEntity extends AbstractArrow implements Item
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		LightningBookSparkProjectileHitsLivingEntityProcedure.execute(this.level(), entityHitResult.getEntity(), this);
+		LightningBookSparkProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		LightningBookSparkWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		LightningBookSparkWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}

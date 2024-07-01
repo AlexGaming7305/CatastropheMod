@@ -1,8 +1,20 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
 
 public class ShootingStarOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -29,6 +41,6 @@ public class ShootingStarOnEntityTickUpdateProcedure {
 		}
 		entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (-0.8), (entity.getDeltaMovement().z())));
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DELETED_MOD_ELEMENT.get()), x, y, z, 2, 0.2, 0.2, 0.2, 0.1);
+			_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.STARRY_SPARKLE.get()), x, y, z, 2, 0.2, 0.2, 0.2, 0.1);
 	}
 }
