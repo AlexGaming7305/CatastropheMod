@@ -14,9 +14,9 @@ public class FrostBoltWhileProjectileFlyingTickProcedure {
 		if (immediatesourceentity == null)
 			return;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.SNOWFLAKE, x, y, z, 1, 0.1, 0.1, 0.1, 0);
+			_level.sendParticles(ParticleTypes.SNOWFLAKE, x, y, z, 1, 0.01, 0.01, 0.01, 0);
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.SNOWFLAKE.get()), x, y, z, 2, 0.1, 0.1, 0.1, 0);
+			_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.SNOWFLAKE.get()), x, y, z, 1, 0.01, 0.01, 0.01, 0);
 		immediatesourceentity.setNoGravity(true);
 		CatastropheModMod.queueServerWork(10, () -> {
 			if (!immediatesourceentity.level().isClientSide())

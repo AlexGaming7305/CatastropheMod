@@ -35,13 +35,6 @@ public class ManaStartProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				double _setval = 20;
-				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Maxmana = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).setBaseValue(20);
 			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MANAREGENERATION.get()).setBaseValue(1);
 			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MINIONSLOTS.get()).setBaseValue(1);

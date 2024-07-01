@@ -56,7 +56,7 @@ public class SpellOfFlamesRightclickedProcedure {
 				}
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 15);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 40);
 		}
 	}
 }

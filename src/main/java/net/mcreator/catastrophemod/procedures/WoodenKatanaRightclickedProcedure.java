@@ -11,6 +11,8 @@ public class WoodenKatanaRightclickedProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).wooden_katana_sheathed == false) {
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 50);
 			{
 				boolean _setval = true;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -18,8 +20,6 @@ public class WoodenKatanaRightclickedProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 50);
 		}
 	}
 }

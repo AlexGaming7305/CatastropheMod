@@ -24,12 +24,12 @@
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 0.0,
+        "mx": 3.0,
         "my": 0.0,
-        "mz": 0.0,
-        "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 16.0,
+        "mz": 3.0,
+        "Mx": 13.0,
+        "My": 7.0,
+        "Mz": 13.0,
         "subtract": false
       }
     ],
@@ -46,7 +46,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:SeaCrystalShard"
+      "value": "CUSTOM:SeaCrystalGeode"
     },
     "dropAmount": 2,
     "useLootTableForDrops": false,
@@ -72,7 +72,7 @@
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
     "beaconColorModifier": {
-      "value": -8388620,
+      "value": -45825,
       "falpha": 0.0
     },
     "flammability": 0,
@@ -81,7 +81,7 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "NORMAL",
+    "reactionToPushing": "DESTROY",
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {

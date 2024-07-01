@@ -38,7 +38,7 @@ public class SeaShovelItem extends ShovelItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_SHARD.get()));
+				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_GEODE.get()));
 			}
 		}, 1, -3f, new Item.Properties());
 	}

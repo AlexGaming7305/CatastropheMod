@@ -38,7 +38,7 @@ public class SeaAxeItem extends AxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_SHARD.get()));
+				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_GEODE.get()));
 			}
 		}, 1, -3.1f, new Item.Properties());
 	}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "catastrophe_mod:fountain",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 19,
+    "separation": 18,
+    "salt": 184205709
+  }
+}

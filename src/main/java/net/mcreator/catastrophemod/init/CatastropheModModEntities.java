@@ -16,7 +16,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.catastrophemod.entity.WraithSparksProjectileEntity;
 import net.mcreator.catastrophemod.entity.WraithDashEntity;
 import net.mcreator.catastrophemod.entity.WhirlpoolEntityEntity;
 import net.mcreator.catastrophemod.entity.VulnerabilitySkullProjectileEntity;
@@ -33,9 +32,11 @@ import net.mcreator.catastrophemod.entity.SwordSpinDashEntity;
 import net.mcreator.catastrophemod.entity.SwordOrbitEntity;
 import net.mcreator.catastrophemod.entity.SwordDashEntity;
 import net.mcreator.catastrophemod.entity.StormArrowProjectileEntity;
+import net.mcreator.catastrophemod.entity.StarlitLacewingEntity;
 import net.mcreator.catastrophemod.entity.SporeZombieEntity;
 import net.mcreator.catastrophemod.entity.SporeProjectileEntity;
 import net.mcreator.catastrophemod.entity.SilkMothEntity;
+import net.mcreator.catastrophemod.entity.ShootingStarEntity;
 import net.mcreator.catastrophemod.entity.ShellProjectileEntity;
 import net.mcreator.catastrophemod.entity.ShadowflameSpearsEntity;
 import net.mcreator.catastrophemod.entity.ShadowfireSoulProjectileEntity;
@@ -56,16 +57,17 @@ import net.mcreator.catastrophemod.entity.NettleEntity;
 import net.mcreator.catastrophemod.entity.NatureBlessedSpiritEntity;
 import net.mcreator.catastrophemod.entity.NatureBlastProjectileEntity;
 import net.mcreator.catastrophemod.entity.MineralWraithEntity;
-import net.mcreator.catastrophemod.entity.LightningBookSparkProjectileEntity;
 import net.mcreator.catastrophemod.entity.LightningBladeEntity;
 import net.mcreator.catastrophemod.entity.LifedrainArrowProjectileEntity;
 import net.mcreator.catastrophemod.entity.KnifeOfProficiencyProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.IronRoundProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.IceShardProjectileEntity;
+import net.mcreator.catastrophemod.entity.HuntsmanKnifeProjectileEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabMinionEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabEntity;
 import net.mcreator.catastrophemod.entity.HealingOrbProjectileEntity;
 import net.mcreator.catastrophemod.entity.HealingBlossomProjectileEntity;
+import net.mcreator.catastrophemod.entity.HauntedMirrorEntityEntity;
 import net.mcreator.catastrophemod.entity.GhostPhantomProjectileEntity;
 import net.mcreator.catastrophemod.entity.FuriousWindEntity;
 import net.mcreator.catastrophemod.entity.FrozenShieldIceSpikeProjectileEntity;
@@ -78,6 +80,7 @@ import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
 import net.mcreator.catastrophemod.entity.FierySlashProjectileEntity;
 import net.mcreator.catastrophemod.entity.FieryRoundProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
+import net.mcreator.catastrophemod.entity.ElectricSparkProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
 import net.mcreator.catastrophemod.entity.EarthboundRockShardProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundRockProjectileEntity;
@@ -91,6 +94,7 @@ import net.mcreator.catastrophemod.entity.CrystalRoundProjectileProjectileEntity
 import net.mcreator.catastrophemod.entity.CharredSkeletonGuardEntity;
 import net.mcreator.catastrophemod.entity.CharredMantisEntity;
 import net.mcreator.catastrophemod.entity.CalicoStagBeetleEntity;
+import net.mcreator.catastrophemod.entity.CactusNeedleEntity;
 import net.mcreator.catastrophemod.entity.BloodKnifeProjectileEntity;
 import net.mcreator.catastrophemod.entity.BlizzardProjectileEntity;
 import net.mcreator.catastrophemod.entity.BlazingPhoenixEntity;
@@ -100,6 +104,7 @@ import net.mcreator.catastrophemod.entity.AtlanticSeaNettleEntity;
 import net.mcreator.catastrophemod.entity.AssassinSkeletonEntity;
 import net.mcreator.catastrophemod.entity.AnglerfishEntity;
 import net.mcreator.catastrophemod.entity.AcidTarantulaMinionEntity;
+import net.mcreator.catastrophemod.entity.AccursedSoulEntity;
 import net.mcreator.catastrophemod.entity.AccursedDaggerEntity;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
@@ -133,7 +138,7 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<SwordDashEntity>> SWORD_DASH = register("sword_dash",
 			EntityType.Builder.<SwordDashEntity>of(SwordDashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SwordDashEntity::new).fireImmune().sized(0f, 0.1f));
 	public static final RegistryObject<EntityType<FreezingCoreEntity>> FREEZING_CORE = register("freezing_core", EntityType.Builder.<FreezingCoreEntity>of(FreezingCoreEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FreezingCoreEntity::new).fireImmune().sized(0.6f, 0.6f));
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FreezingCoreEntity::new).fireImmune().sized(0.3f, 1.2f));
 	public static final RegistryObject<EntityType<AcidTarantulaMinionEntity>> ACID_TARANTULA_MINION = register("acid_tarantula_minion", EntityType.Builder.<AcidTarantulaMinionEntity>of(AcidTarantulaMinionEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AcidTarantulaMinionEntity::new).fireImmune().sized(0.8f, 0.5f));
 	public static final RegistryObject<EntityType<WhirlpoolEntityEntity>> WHIRLPOOL_ENTITY = register("whirlpool_entity",
@@ -214,16 +219,10 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<FlameProjectileProjectileEntity>> FLAME_PROJECTILE_PROJECTILE = register("projectile_flame_projectile_projectile",
 			EntityType.Builder.<FlameProjectileProjectileEntity>of(FlameProjectileProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FlameProjectileProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<LightningBookSparkProjectileEntity>> LIGHTNING_BOOK_SPARK_PROJECTILE = register("projectile_lightning_book_spark_projectile",
-			EntityType.Builder.<LightningBookSparkProjectileEntity>of(LightningBookSparkProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(LightningBookSparkProjectileEntity::new).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<StormArrowProjectileEntity>> STORM_ARROW_PROJECTILE = register("projectile_storm_arrow_projectile", EntityType.Builder.<StormArrowProjectileEntity>of(StormArrowProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(StormArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PoisonousThornProjectileEntity>> POISONOUS_THORN_PROJECTILE = register("projectile_poisonous_thorn_projectile",
 			EntityType.Builder.<PoisonousThornProjectileEntity>of(PoisonousThornProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(PoisonousThornProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<WraithSparksProjectileEntity>> WRAITH_SPARKS_PROJECTILE = register("projectile_wraith_sparks_projectile",
-			EntityType.Builder.<WraithSparksProjectileEntity>of(WraithSparksProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(WraithSparksProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FreezingSpikeProjectileEntity>> FREEZING_SPIKE_PROJECTILE = register("projectile_freezing_spike_projectile",
 			EntityType.Builder.<FreezingSpikeProjectileEntity>of(FreezingSpikeProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FreezingSpikeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
@@ -330,6 +329,22 @@ public class CatastropheModModEntities {
 					.sized(0.8f, 0.6f));
 	public static final RegistryObject<EntityType<AccursedDaggerEntity>> ACCURSED_DAGGER = register("projectile_accursed_dagger",
 			EntityType.Builder.<AccursedDaggerEntity>of(AccursedDaggerEntity::new, MobCategory.MISC).setCustomClientFactory(AccursedDaggerEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ElectricSparkProjectileEntity>> ELECTRIC_SPARK_PROJECTILE = register("projectile_electric_spark_projectile",
+			EntityType.Builder.<ElectricSparkProjectileEntity>of(ElectricSparkProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(ElectricSparkProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<HuntsmanKnifeProjectileEntity>> HUNTSMAN_KNIFE_PROJECTILE = register("projectile_huntsman_knife_projectile",
+			EntityType.Builder.<HuntsmanKnifeProjectileEntity>of(HuntsmanKnifeProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(HuntsmanKnifeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CactusNeedleEntity>> CACTUS_NEEDLE = register("projectile_cactus_needle",
+			EntityType.Builder.<CactusNeedleEntity>of(CactusNeedleEntity::new, MobCategory.MISC).setCustomClientFactory(CactusNeedleEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<HauntedMirrorEntityEntity>> HAUNTED_MIRROR_ENTITY = register("haunted_mirror_entity", EntityType.Builder.<HauntedMirrorEntityEntity>of(HauntedMirrorEntityEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HauntedMirrorEntityEntity::new).fireImmune().sized(0.3f, 0.3f));
+	public static final RegistryObject<EntityType<AccursedSoulEntity>> ACCURSED_SOUL = register("projectile_accursed_soul",
+			EntityType.Builder.<AccursedSoulEntity>of(AccursedSoulEntity::new, MobCategory.MISC).setCustomClientFactory(AccursedSoulEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<StarlitLacewingEntity>> STARLIT_LACEWING = register("starlit_lacewing", EntityType.Builder.<StarlitLacewingEntity>of(StarlitLacewingEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StarlitLacewingEntity::new).fireImmune().sized(0.4f, 0.2f));
+	public static final RegistryObject<EntityType<ShootingStarEntity>> SHOOTING_STAR = register("shooting_star", EntityType.Builder.<ShootingStarEntity>of(ShootingStarEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShootingStarEntity::new).fireImmune().sized(0.8f, 0.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -380,6 +395,9 @@ public class CatastropheModModEntities {
 			SilkMothEntity.init();
 			AtlanticSeaNettleEntity.init();
 			AnglerfishEntity.init();
+			HauntedMirrorEntityEntity.init();
+			StarlitLacewingEntity.init();
+			ShootingStarEntity.init();
 		});
 	}
 
@@ -427,5 +445,8 @@ public class CatastropheModModEntities {
 		event.put(SILK_MOTH.get(), SilkMothEntity.createAttributes().build());
 		event.put(ATLANTIC_SEA_NETTLE.get(), AtlanticSeaNettleEntity.createAttributes().build());
 		event.put(ANGLERFISH.get(), AnglerfishEntity.createAttributes().build());
+		event.put(HAUNTED_MIRROR_ENTITY.get(), HauntedMirrorEntityEntity.createAttributes().build());
+		event.put(STARLIT_LACEWING.get(), StarlitLacewingEntity.createAttributes().build());
+		event.put(SHOOTING_STAR.get(), ShootingStarEntity.createAttributes().build());
 	}
 }

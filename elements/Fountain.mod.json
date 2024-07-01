@@ -1,0 +1,32 @@
+{
+  "_fv": 57,
+  "_type": "structure",
+  "definition": {
+    "structure": "fountain",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      },
+      {
+        "value": "Blocks.AIR"
+      }
+    ],
+    "spacing": 19,
+    "separation": 18,
+    "restrictionBiomes": [
+      {
+        "value": "plains"
+      },
+      {
+        "value": "meadow"
+      },
+      {
+        "value": "forest"
+      }
+    ],
+    "surfaceDetectionType": "WORLD_SURFACE",
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES"
+  }
+}

@@ -48,9 +48,8 @@ import java.util.Comparator;
 public class BowDamageProcedureProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getDirectEntity(), event.getSource().getEntity(), event.getAmount());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getDirectEntity(), event.getSource().getEntity(), event.getAmount());
 		}
 	}
 
@@ -386,6 +385,13 @@ public class BowDamageProcedureProcedure {
 						projectileLevel.addFreshEntity(_entityToSpawn);
 					}
 				}
+			}
+		} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.WOODEN_BOW.get()
+				|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.WOODEN_BOW.get()) {
+			if (projectile instanceof Projectile) {
+				LivingHurtEvent event2 = (LivingHurtEvent) event;
+				damage = amount - 1;
+				event2.setAmount((float) damage);
 			}
 		}
 	}

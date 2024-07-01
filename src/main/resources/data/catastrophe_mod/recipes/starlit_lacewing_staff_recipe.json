@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " aa",
+    " ba",
+    "b  "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:star"
+    },
+    "b": {
+      "item": "catastrophe_mod:twig"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:starlit_lacewing_staff",
+    "count": 1
+  }
+}

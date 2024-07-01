@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_ocean",
+  "features": "catastrophe_mod:sea_crystal_rocks",
+  "step": "underground_structures"
+}

@@ -41,6 +41,7 @@ import net.mcreator.catastrophemod.client.model.Modeliron_round;
 import net.mcreator.catastrophemod.client.model.Modelicicle;
 import net.mcreator.catastrophemod.client.model.Modelice_spike;
 import net.mcreator.catastrophemod.client.model.Modelice_shard;
+import net.mcreator.catastrophemod.client.model.Modelhuntsman_knife;
 import net.mcreator.catastrophemod.client.model.Modelhunters_hat;
 import net.mcreator.catastrophemod.client.model.Modelhunter_leggings;
 import net.mcreator.catastrophemod.client.model.Modelhunter_chestplate;
@@ -66,6 +67,7 @@ import net.mcreator.catastrophemod.client.model.Modelcursed_armor;
 import net.mcreator.catastrophemod.client.model.Modelcrystal_shard;
 import net.mcreator.catastrophemod.client.model.Modelcrystal_round;
 import net.mcreator.catastrophemod.client.model.Modelconos;
+import net.mcreator.catastrophemod.client.model.Modelcactus_needle;
 import net.mcreator.catastrophemod.client.model.Modelblood_knife;
 import net.mcreator.catastrophemod.client.model.Modelblazing_feather;
 import net.mcreator.catastrophemod.client.model.Modelbartosa_plane;
@@ -75,6 +77,7 @@ import net.mcreator.catastrophemod.client.model.Modelamulet_of_weakening;
 import net.mcreator.catastrophemod.client.model.Modelamulet_of_vitality;
 import net.mcreator.catastrophemod.client.model.Modelamethystprojectile;
 import net.mcreator.catastrophemod.client.model.Modelalex_missile;
+import net.mcreator.catastrophemod.client.model.Modelaccursed_soul;
 import net.mcreator.catastrophemod.client.model.Modelaccursed_dagger;
 import net.mcreator.catastrophemod.client.model.Modelabyssal_slime;
 import net.mcreator.catastrophemod.client.model.ModelLava_Brute;
@@ -92,6 +95,7 @@ public class CatastropheModModModels {
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelcursed_armor.LAYER_LOCATION, Modelcursed_armor::createBodyLayer);
 		event.registerLayerDefinition(Modelhunter_boots.LAYER_LOCATION, Modelhunter_boots::createBodyLayer);
+		event.registerLayerDefinition(Modelhuntsman_knife.LAYER_LOCATION, Modelhuntsman_knife::createBodyLayer);
 		event.registerLayerDefinition(Modelshadowfire_skull.LAYER_LOCATION, Modelshadowfire_skull::createBodyLayer);
 		event.registerLayerDefinition(Modelearth_shatterer.LAYER_LOCATION, Modelearth_shatterer::createBodyLayer);
 		event.registerLayerDefinition(Modelabyssal_slime.LAYER_LOCATION, Modelabyssal_slime::createBodyLayer);
@@ -102,6 +106,7 @@ public class CatastropheModModModels {
 		event.registerLayerDefinition(ModelLava_Brute.LAYER_LOCATION, ModelLava_Brute::createBodyLayer);
 		event.registerLayerDefinition(ModelFire_Wyvern.LAYER_LOCATION, ModelFire_Wyvern::createBodyLayer);
 		event.registerLayerDefinition(Modelhunter_chestplate.LAYER_LOCATION, Modelhunter_chestplate::createBodyLayer);
+		event.registerLayerDefinition(Modelcactus_needle.LAYER_LOCATION, Modelcactus_needle::createBodyLayer);
 		event.registerLayerDefinition(Modelsea_pendant.LAYER_LOCATION, Modelsea_pendant::createBodyLayer);
 		event.registerLayerDefinition(Modelsand_pillar.LAYER_LOCATION, Modelsand_pillar::createBodyLayer);
 		event.registerLayerDefinition(Modelpoisonous_thorn.LAYER_LOCATION, Modelpoisonous_thorn::createBodyLayer);
@@ -113,6 +118,7 @@ public class CatastropheModModModels {
 		event.registerLayerDefinition(Modelrubybolt.LAYER_LOCATION, Modelrubybolt::createBodyLayer);
 		event.registerLayerDefinition(Modelcrystal_round.LAYER_LOCATION, Modelcrystal_round::createBodyLayer);
 		event.registerLayerDefinition(Modelnature_blast.LAYER_LOCATION, Modelnature_blast::createBodyLayer);
+		event.registerLayerDefinition(Modelaccursed_soul.LAYER_LOCATION, Modelaccursed_soul::createBodyLayer);
 		event.registerLayerDefinition(ModelDestroyer_Head.LAYER_LOCATION, ModelDestroyer_Head::createBodyLayer);
 		event.registerLayerDefinition(Modelspore.LAYER_LOCATION, Modelspore::createBodyLayer);
 		event.registerLayerDefinition(Modelicicle.LAYER_LOCATION, Modelicicle::createBodyLayer);

@@ -54,6 +54,33 @@ public class BlizzardChargingProcedure {
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.BLIZZARD.get()
 				|| (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.BLIZZARD.get()) {
 			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).blizzard_load == true) {
+				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).blizzard_mana_drain == false) {
+					if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana > 2) {
+						{
+							double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana - 3;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Mana = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+					{
+						boolean _setval = true;
+						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.blizzard_mana_drain = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					CatastropheModMod.queueServerWork(10, () -> {
+						{
+							boolean _setval = false;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.blizzard_mana_drain = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					});
+				}
 				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).blizzard_loop_cooldown == false) {
 					{
 						Entity _ent = entity;

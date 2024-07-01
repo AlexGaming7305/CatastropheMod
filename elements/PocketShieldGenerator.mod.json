@@ -29,7 +29,9 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Grants the user an Absorption Shield which regenerates every 10 seconds"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},

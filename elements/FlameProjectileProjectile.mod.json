@@ -15,6 +15,9 @@
     "knockback": 0,
     "entityModel": "Modelfireball",
     "customModelTexture": "fireball.png",
+    "onHitsBlock": {
+      "name": "FlameProjectileProjectileHitsBlock"
+    },
     "onHitsEntity": {
       "name": "FlameProjectileProjectileHitsBlock"
     },

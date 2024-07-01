@@ -75,7 +75,6 @@ public class CatastropheModModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Mana = original.Mana;
 			clone.ManaStart = original.ManaStart;
-			clone.Maxmana = original.Maxmana;
 			clone.SoulPower = original.SoulPower;
 			clone.MaxSoulPower = original.MaxSoulPower;
 			clone.double_jump_condition = original.double_jump_condition;
@@ -186,6 +185,8 @@ public class CatastropheModModVariables {
 				clone.wooden_katana_sheathed = original.wooden_katana_sheathed;
 				clone.parry_projectile_mode = original.parry_projectile_mode;
 				clone.totem_cooldown = original.totem_cooldown;
+				clone.spear_mastery_crest_strikes = original.spear_mastery_crest_strikes;
+				clone.cactus_cutter_cooldown = original.cactus_cutter_cooldown;
 			}
 		}
 
@@ -356,7 +357,6 @@ public class CatastropheModModVariables {
 	public static class PlayerVariables {
 		public double Mana = 20.0;
 		public boolean ManaStart = false;
-		public double Maxmana = 20.0;
 		public double SoulPower = 0.0;
 		public double MaxSoulPower = 1.0;
 		public boolean crimsondagger = false;
@@ -466,6 +466,8 @@ public class CatastropheModModVariables {
 		public boolean wooden_katana_sheathed = false;
 		public double parry_projectile_mode = 0;
 		public double totem_cooldown = 0;
+		public double spear_mastery_crest_strikes = 0;
+		public boolean cactus_cutter_cooldown = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -476,7 +478,6 @@ public class CatastropheModModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("Mana", Mana);
 			nbt.putBoolean("ManaStart", ManaStart);
-			nbt.putDouble("Maxmana", Maxmana);
 			nbt.putDouble("SoulPower", SoulPower);
 			nbt.putDouble("MaxSoulPower", MaxSoulPower);
 			nbt.putBoolean("crimsondagger", crimsondagger);
@@ -586,6 +587,8 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("wooden_katana_sheathed", wooden_katana_sheathed);
 			nbt.putDouble("parry_projectile_mode", parry_projectile_mode);
 			nbt.putDouble("totem_cooldown", totem_cooldown);
+			nbt.putDouble("spear_mastery_crest_strikes", spear_mastery_crest_strikes);
+			nbt.putBoolean("cactus_cutter_cooldown", cactus_cutter_cooldown);
 			return nbt;
 		}
 
@@ -593,7 +596,6 @@ public class CatastropheModModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			Mana = nbt.getDouble("Mana");
 			ManaStart = nbt.getBoolean("ManaStart");
-			Maxmana = nbt.getDouble("Maxmana");
 			SoulPower = nbt.getDouble("SoulPower");
 			MaxSoulPower = nbt.getDouble("MaxSoulPower");
 			crimsondagger = nbt.getBoolean("crimsondagger");
@@ -703,6 +705,8 @@ public class CatastropheModModVariables {
 			wooden_katana_sheathed = nbt.getBoolean("wooden_katana_sheathed");
 			parry_projectile_mode = nbt.getDouble("parry_projectile_mode");
 			totem_cooldown = nbt.getDouble("totem_cooldown");
+			spear_mastery_crest_strikes = nbt.getDouble("spear_mastery_crest_strikes");
+			cactus_cutter_cooldown = nbt.getBoolean("cactus_cutter_cooldown");
 		}
 	}
 
@@ -729,7 +733,6 @@ public class CatastropheModModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Mana = message.data.Mana;
 					variables.ManaStart = message.data.ManaStart;
-					variables.Maxmana = message.data.Maxmana;
 					variables.SoulPower = message.data.SoulPower;
 					variables.MaxSoulPower = message.data.MaxSoulPower;
 					variables.crimsondagger = message.data.crimsondagger;
@@ -839,6 +842,8 @@ public class CatastropheModModVariables {
 					variables.wooden_katana_sheathed = message.data.wooden_katana_sheathed;
 					variables.parry_projectile_mode = message.data.parry_projectile_mode;
 					variables.totem_cooldown = message.data.totem_cooldown;
+					variables.spear_mastery_crest_strikes = message.data.spear_mastery_crest_strikes;
+					variables.cactus_cutter_cooldown = message.data.cactus_cutter_cooldown;
 				}
 			});
 			context.setPacketHandled(true);

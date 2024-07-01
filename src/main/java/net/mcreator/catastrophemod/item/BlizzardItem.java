@@ -43,7 +43,7 @@ public class BlizzardItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A7aRight-click: \u00A77Casts out a chilling wind that occasionally shoots out ice shards \u00A7b(Costs 3 mana)"));
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Casts out a chilling wind \u00A7b(Costs 3 mana)"));
 	}
 
 	@Override

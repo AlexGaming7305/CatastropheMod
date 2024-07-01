@@ -8,8 +8,10 @@ import net.mcreator.catastrophemod.entity.ThornTentacleEntity;
 import net.mcreator.catastrophemod.entity.ThornInfestedArmorEntity;
 import net.mcreator.catastrophemod.entity.SwordspinEntity;
 import net.mcreator.catastrophemod.entity.SwordOrbitEntity;
+import net.mcreator.catastrophemod.entity.StarlitLacewingEntity;
 import net.mcreator.catastrophemod.entity.SporeZombieEntity;
 import net.mcreator.catastrophemod.entity.SilkMothEntity;
+import net.mcreator.catastrophemod.entity.ShootingStarEntity;
 import net.mcreator.catastrophemod.entity.ShadowflameSpearsEntity;
 import net.mcreator.catastrophemod.entity.ShadeEntity;
 import net.mcreator.catastrophemod.entity.SepulcherEntity;
@@ -24,6 +26,7 @@ import net.mcreator.catastrophemod.entity.MineralWraithEntity;
 import net.mcreator.catastrophemod.entity.LightningBladeEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabMinionEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabEntity;
+import net.mcreator.catastrophemod.entity.HauntedMirrorEntityEntity;
 import net.mcreator.catastrophemod.entity.FuriousWindEntity;
 import net.mcreator.catastrophemod.entity.FreezingCoreEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
@@ -300,6 +303,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof AnglerfishEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof HauntedMirrorEntityEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof StarlitLacewingEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ShootingStarEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

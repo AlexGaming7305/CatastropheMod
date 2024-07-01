@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "venomous_bow",
+    "texture": "thorn_bow",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

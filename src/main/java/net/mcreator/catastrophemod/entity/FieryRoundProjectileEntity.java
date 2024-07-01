@@ -80,7 +80,7 @@ public class FieryRoundProjectileEntity extends AbstractArrow implements ItemSup
 	@Override
 	public void tick() {
 		super.tick();
-		FieryRoundWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		FieryRoundWhileProjectileFlyingTickProcedure.execute(this.level(), this);
 		if (this.inGround)
 			this.discard();
 	}

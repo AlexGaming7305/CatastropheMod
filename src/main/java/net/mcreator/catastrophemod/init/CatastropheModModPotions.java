@@ -21,4 +21,7 @@ public class CatastropheModModPotions {
 	public static final RegistryObject<Potion> INTELLIGENCE_POTION = REGISTRY.register("intelligence_potion", () -> new Potion(new MobEffectInstance(CatastropheModModMobEffects.INTELLIGENCE.get(), 3600, 0, false, true)));
 	public static final RegistryObject<Potion> INTELLIGENCE_LONG = REGISTRY.register("intelligence_long", () -> new Potion(new MobEffectInstance(CatastropheModModMobEffects.INTELLIGENCE.get(), 9600, 0, false, true)));
 	public static final RegistryObject<Potion> INTELLIGENCE_STRONG = REGISTRY.register("intelligence_strong", () -> new Potion(new MobEffectInstance(CatastropheModModMobEffects.INTELLIGENCE.get(), 1800, 1, false, true)));
+	public static final RegistryObject<Potion> IMPEDANCE_POTION = REGISTRY.register("impedance_potion", () -> new Potion(new MobEffectInstance(CatastropheModModMobEffects.IMPEDANCE.get(), 3600, 0, false, true)));
+	public static final RegistryObject<Potion> IMPEDANCE_POTION_LONG = REGISTRY.register("impedance_potion_long", () -> new Potion(new MobEffectInstance(CatastropheModModMobEffects.IMPEDANCE.get(), 9600, 0, false, true)));
+	public static final RegistryObject<Potion> IMPEDANCE_POTION_STRONG = REGISTRY.register("impedance_potion_strong", () -> new Potion(new MobEffectInstance(CatastropheModModMobEffects.IMPEDANCE.get(), 1800, 1, false, true)));
 }

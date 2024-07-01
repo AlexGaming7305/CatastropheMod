@@ -29,7 +29,7 @@
     },
     "repairItems": [
       {
-        "value": "CUSTOM:SeaCrystalShard"
+        "value": "CUSTOM:SeaCrystalGeode"
       }
     ],
     "immuneToFire": false,

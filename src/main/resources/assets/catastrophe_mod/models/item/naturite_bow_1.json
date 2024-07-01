@@ -1,6 +1,6 @@
 {
-  "parent": "item/bow",
-  "textures": {
-    "layer0": "catastrophe_mod:item/naturite_bow_1"
-  }
+  	  "parent": "item/bow",
+  	  "textures": {
+    	"layer0": "catastrophe_mod:item/naturite_bow_pulling_1"
+  	  }
 }

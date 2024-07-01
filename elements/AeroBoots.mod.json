@@ -29,7 +29,9 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Allows the user to double jump"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},

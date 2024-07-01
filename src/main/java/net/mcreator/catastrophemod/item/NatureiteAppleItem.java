@@ -16,7 +16,7 @@ import java.util.List;
 
 public class NatureiteAppleItem extends Item {
 	public NatureiteAppleItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.4f).alwaysEat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(8f).alwaysEat().build()));
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "catastrophe_mod:item/soul_bottle"
+    "layer0": "catastrophe_mod:item/spirit_in_a_bottle"
   }
 }

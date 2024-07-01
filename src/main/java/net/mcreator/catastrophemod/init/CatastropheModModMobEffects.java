@@ -11,12 +11,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.catastrophemod.potion.VulnerabilityMobEffect;
+import net.mcreator.catastrophemod.potion.RepulsionMobEffect;
 import net.mcreator.catastrophemod.potion.PrickedMobEffect;
 import net.mcreator.catastrophemod.potion.PhaseDashCooldownMobEffect;
 import net.mcreator.catastrophemod.potion.MarkedForDeathMobEffect;
 import net.mcreator.catastrophemod.potion.ManaSicknessMobEffect;
 import net.mcreator.catastrophemod.potion.IntelligenceMobEffect;
 import net.mcreator.catastrophemod.potion.IncinerationMobEffect;
+import net.mcreator.catastrophemod.potion.ImpedanceMobEffect;
 import net.mcreator.catastrophemod.potion.FallDamageImmunityMobEffect;
 import net.mcreator.catastrophemod.potion.ElectrifiedMobEffect;
 import net.mcreator.catastrophemod.potion.DashCooldownMobEffect;
@@ -44,4 +46,6 @@ public class CatastropheModModMobEffects {
 	public static final RegistryObject<MobEffect> MANA_SICKNESS = REGISTRY.register("mana_sickness", () -> new ManaSicknessMobEffect());
 	public static final RegistryObject<MobEffect> PHASE_DASH_COOLDOWN = REGISTRY.register("phase_dash_cooldown", () -> new PhaseDashCooldownMobEffect());
 	public static final RegistryObject<MobEffect> ARMOR_SHRED = REGISTRY.register("armor_shred", () -> new ArmorShredMobEffect());
+	public static final RegistryObject<MobEffect> REPULSION = REGISTRY.register("repulsion", () -> new RepulsionMobEffect());
+	public static final RegistryObject<MobEffect> IMPEDANCE = REGISTRY.register("impedance", () -> new ImpedanceMobEffect());
 }

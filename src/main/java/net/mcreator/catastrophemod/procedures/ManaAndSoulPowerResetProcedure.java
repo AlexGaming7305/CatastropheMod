@@ -5,9 +5,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 
 import javax.annotation.Nullable;
 
@@ -45,10 +47,10 @@ public class ManaAndSoulPowerResetProcedure {
 				});
 			}
 		}
-		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana > (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana) {
+		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana > ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get())
+				.getBaseValue()) {
 			{
-				double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Maxmana;
+				double _setval = ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAXMANA.get()).getBaseValue();
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Mana = _setval;
 					capability.syncPlayerVariables(entity);

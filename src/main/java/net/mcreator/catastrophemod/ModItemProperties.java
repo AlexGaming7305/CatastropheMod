@@ -21,6 +21,7 @@ public class ModItemProperties {
 		makeBow(CatastropheModModItems.SHADOWFLAME_WHISPER.get());
 		makeBow(CatastropheModModItems.LIFEPIERCER.get());
 		makeBow(CatastropheModModItems.NATURES_STRIKE.get());
+		makeBow(CatastropheModModItems.WOODEN_BOW.get());
 	}
 
 	private static void makeBow(Item item) {

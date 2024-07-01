@@ -1,0 +1,40 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.starlit_lacewing",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "starlit_lacewing",
+					"pivot": [0, 0.5, 0],
+					"cubes": [
+						{"origin": [-0.5, 0, -2], "size": [1, 1, 4], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "wing1",
+					"parent": "starlit_lacewing",
+					"pivot": [0.5, 1, 0],
+					"cubes": [
+						{"origin": [0.5, 1, -5], "size": [6, 0, 10], "uv": [-10, 5]}
+					]
+				},
+				{
+					"name": "wing2",
+					"parent": "starlit_lacewing",
+					"pivot": [-0.5, 1, 0],
+					"cubes": [
+						{"origin": [-6.5, 1, -5], "size": [6, 0, 10], "uv": [-10, 5], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

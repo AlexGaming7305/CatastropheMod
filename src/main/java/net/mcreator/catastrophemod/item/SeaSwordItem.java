@@ -38,7 +38,7 @@ public class SeaSwordItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_SHARD.get()));
+				return Ingredient.of(new ItemStack(CatastropheModModItems.SEA_CRYSTAL_GEODE.get()));
 			}
 		}, 3, -2.4f, new Item.Properties());
 	}
@@ -46,6 +46,6 @@ public class SeaSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Deals \u00A7a50% \u00A77more damage while submerged"));
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Forms a current that can be used to cast Water Slashes while attacking"));
 	}
 }

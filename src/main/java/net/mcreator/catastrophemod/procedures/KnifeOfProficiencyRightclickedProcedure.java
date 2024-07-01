@@ -39,7 +39,7 @@ public class KnifeOfProficiencyRightclickedProcedure {
 							entityToSpawn.setSilent(true);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, 1, 0);
+					}.getArrow(projectileLevel, entity, (float) 2.5, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
@@ -75,7 +75,7 @@ public class KnifeOfProficiencyRightclickedProcedure {
 						entityToSpawn.setPierceLevel(piercing);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, (float) 1.5, 0, (byte) 1);
+				}.getArrow(projectileLevel, entity, 3, 0, (byte) 1);
 				_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.5), (entity.getZ()));
 				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot())) * 1.5), 2, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
@@ -91,7 +91,7 @@ public class KnifeOfProficiencyRightclickedProcedure {
 						entityToSpawn.setPierceLevel(piercing);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, (float) 1.5, 0, (byte) 1);
+				}.getArrow(projectileLevel, entity, 3, 0, (byte) 1);
 				_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.5), (entity.getZ()));
 				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() + 10 + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot() + 10)) * 1.5), 2, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
@@ -107,7 +107,7 @@ public class KnifeOfProficiencyRightclickedProcedure {
 						entityToSpawn.setPierceLevel(piercing);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, (float) 1.5, 0, (byte) 1);
+				}.getArrow(projectileLevel, entity, 3, 0, (byte) 1);
 				_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.5), (entity.getZ()));
 				_entityToSpawn.shoot((Math.sin(Math.toRadians(entity.getYRot() - 10 + 180)) * 1.5), (entity.getXRot() * (-0.025)), (Math.cos(Math.toRadians(entity.getYRot() - 10)) * 1.5), 2, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);

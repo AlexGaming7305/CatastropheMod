@@ -31,22 +31,18 @@ public class FieryExplosionParticle extends TextureSheetParticle {
 	}
 
 	private final SpriteSet spriteSet;
-	private float angularVelocity;
-	private float angularAcceleration;
 
 	protected FieryExplosionParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.5f, 0.5f);
-		this.quadSize *= 12f;
-		this.lifetime = 10;
+		this.quadSize *= 13f;
+		this.lifetime = 5;
 		this.gravity = 0f;
 		this.hasPhysics = true;
 		this.xd = vx * 0;
 		this.yd = vy * 0;
 		this.zd = vz * 0;
-		this.angularVelocity = 0.15f;
-		this.angularAcceleration = 0.08f;
 		this.setSpriteFromAge(spriteSet);
 	}
 
@@ -63,11 +59,8 @@ public class FieryExplosionParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
-		this.oRoll = this.roll;
-		this.roll += this.angularVelocity;
-		this.angularVelocity += this.angularAcceleration;
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 11 + 1, 11));
+			this.setSprite(this.spriteSet.get((this.age / 1) % 3 + 1, 3));
 		}
 	}
 }

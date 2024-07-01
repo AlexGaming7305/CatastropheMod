@@ -1,6 +1,6 @@
 {
-  "parent": "item/bow",
-  "textures": {
-    "layer0": "catastrophe_mod:item/shadowflame_whisper_pulling_0"
-  }
+  	  "parent": "item/bow",
+  	  "textures": {
+    	"layer0": "catastrophe_mod:item/shadowflame_whisper_pulling_0"
+  	  }
 }

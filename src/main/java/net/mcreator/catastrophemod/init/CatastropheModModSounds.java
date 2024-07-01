@@ -80,4 +80,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> PUNCH_HIT = REGISTRY.register("punch_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "punch_hit")));
 	public static final RegistryObject<SoundEvent> PARRY_PROJECTILE = REGISTRY.register("parry_projectile", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "parry_projectile")));
 	public static final RegistryObject<SoundEvent> ANGLERFISH_BITE = REGISTRY.register("anglerfish_bite", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "anglerfish_bite")));
+	public static final RegistryObject<SoundEvent> HAUNTED_MIRROR_SHOOT = REGISTRY.register("haunted_mirror_shoot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "haunted_mirror_shoot")));
+	public static final RegistryObject<SoundEvent> HAUNTED_MIRROR_SUMMON = REGISTRY.register("haunted_mirror_summon", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "haunted_mirror_summon")));
 }

@@ -29,7 +29,9 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Getting hit 3 times releases a barrage of icicles"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},

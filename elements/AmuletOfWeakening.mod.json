@@ -29,7 +29,9 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Attacks inflict §cWeakness"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},

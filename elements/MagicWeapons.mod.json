@@ -39,6 +39,9 @@
       },
       {
         "value": "CUSTOM:AccursedTome"
+      },
+      {
+        "value": "CUSTOM:HauntedMirror"
       }
     ],
     "blocks": [],

@@ -15,13 +15,13 @@
         "value": ""
       },
       {
-        "value": "Items.NAUTILUS_SHELL"
+        "value": "CUSTOM:Depthstone"
       },
       {
         "value": "Items.STRING"
       },
       {
-        "value": "CUSTOM:SeaCrystalShard"
+        "value": "CUSTOM:SeaCrystalGeode"
       },
       {
         "value": ""
@@ -33,7 +33,7 @@
         "value": ""
       },
       {
-        "value": "Items.NAUTILUS_SHELL"
+        "value": "CUSTOM:Depthstone"
       },
       {
         "value": "Items.STRING"
