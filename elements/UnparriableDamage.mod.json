@@ -1,0 +1,31 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Damage types",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [
+      {
+        "value": "CUSTOM:Bleed"
+      },
+      {
+        "value": "CUSTOM:Electricity"
+      },
+      {
+        "value": "CUSTOM:Electrocuted"
+      },
+      {
+        "value": "CUSTOM:Incinerated"
+      },
+      {
+        "value": "CUSTOM:LiverFailure"
+      }
+    ],
+    "name": "unparriable_damage",
+    "namespace": "mod"
+  }
+}

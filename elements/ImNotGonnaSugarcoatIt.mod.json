@@ -5,7 +5,7 @@
     "achievementName": "I'm Not Gonna Sugarcoat It",
     "achievementDescription": "Successfully perform a parry",
     "achievementIcon": {
-      "value": "CUSTOM:EarthGauntlet"
+      "value": "Items.SHIELD"
     },
     "background": "Default",
     "disableDisplay": false,

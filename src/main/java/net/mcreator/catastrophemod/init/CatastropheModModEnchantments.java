@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.enchantment.Enchantment;
 
 import net.mcreator.catastrophemod.enchantment.WizardryEnchantment;
+import net.mcreator.catastrophemod.enchantment.SpikedEnchantment;
 import net.mcreator.catastrophemod.enchantment.SpellcastingEnchantment;
 import net.mcreator.catastrophemod.enchantment.ResilienceEnchantment;
 import net.mcreator.catastrophemod.enchantment.MagnetismEnchantment;
@@ -30,4 +31,5 @@ public class CatastropheModModEnchantments {
 	public static final RegistryObject<Enchantment> SPELLCASTING = REGISTRY.register("spellcasting", () -> new SpellcastingEnchantment());
 	public static final RegistryObject<Enchantment> WIZARDRY = REGISTRY.register("wizardry", () -> new WizardryEnchantment());
 	public static final RegistryObject<Enchantment> COUNTERATTACK = REGISTRY.register("counterattack", () -> new CounterattackEnchantment());
+	public static final RegistryObject<Enchantment> SPIKED = REGISTRY.register("spiked", () -> new SpikedEnchantment());
 }

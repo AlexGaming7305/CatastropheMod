@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "catastrophe_mod:earth_gauntlet"
+      "item": "minecraft:shield"
     },
     "title": {
       "translate": "advancements.im_not_gonna_sugarcoat_it.title"
