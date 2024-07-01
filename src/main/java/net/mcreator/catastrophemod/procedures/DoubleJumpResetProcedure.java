@@ -28,12 +28,14 @@ public class DoubleJumpResetProcedure {
 		if (entity == null)
 			return;
 		if (entity.onGround()) {
-			{
-				boolean _setval = false;
-				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.double_jump_condition = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).double_jump_condition == true) {
+				{
+					boolean _setval = false;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.double_jump_condition = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

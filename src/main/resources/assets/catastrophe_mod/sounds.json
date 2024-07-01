@@ -565,5 +565,14 @@
         "stream": false
       }
     ]
+  },
+  "parry_melee_attack": {
+    "subtitle": "subtitles.parry_melee_attack",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:parry_melee_attack",
+        "stream": false
+      }
+    ]
   }
 }

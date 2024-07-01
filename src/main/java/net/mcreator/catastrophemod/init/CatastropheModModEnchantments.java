@@ -17,6 +17,7 @@ import net.mcreator.catastrophemod.enchantment.MagnetismEnchantment;
 import net.mcreator.catastrophemod.enchantment.ImpalementEnchantment;
 import net.mcreator.catastrophemod.enchantment.FrostbiteEnchantment;
 import net.mcreator.catastrophemod.enchantment.FrostAspectEnchantment;
+import net.mcreator.catastrophemod.enchantment.CounterattackEnchantment;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class CatastropheModModEnchantments {
@@ -28,4 +29,5 @@ public class CatastropheModModEnchantments {
 	public static final RegistryObject<Enchantment> IMPALEMENT = REGISTRY.register("impalement", () -> new ImpalementEnchantment());
 	public static final RegistryObject<Enchantment> SPELLCASTING = REGISTRY.register("spellcasting", () -> new SpellcastingEnchantment());
 	public static final RegistryObject<Enchantment> WIZARDRY = REGISTRY.register("wizardry", () -> new WizardryEnchantment());
+	public static final RegistryObject<Enchantment> COUNTERATTACK = REGISTRY.register("counterattack", () -> new CounterattackEnchantment());
 }
