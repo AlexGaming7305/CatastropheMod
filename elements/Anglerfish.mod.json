@@ -121,7 +121,7 @@
     "enable2": false,
     "enable3": false,
     "enable4": true,
-    "enable5": true,
+    "enable5": false,
     "enable6": false,
     "enable7": false,
     "enable8": false,
@@ -143,10 +143,10 @@
     "height": 1.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 16,
+    "spawningProbability": 12,
     "mobSpawningType": "undergroundWaterCreature",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 3,
+    "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [
       {
         "value": "cold_ocean"

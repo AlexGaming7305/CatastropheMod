@@ -26,7 +26,7 @@
     "destroyAnyBlock": false,
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
-    "enableArmPose": false,
+    "enableArmPose": true,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
@@ -50,6 +50,39 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "normal": "ripsaw.geo.json",
-    "armPoseList": []
+    "armPoseList": [
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": 80.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": 80.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "Y",
+        "rotation": 0.01,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.01,
+        "swings": false,
+        "followsHead": true
+      }
+    ]
   }
 }

@@ -5,7 +5,7 @@
     "mobName": "Ripsaw Sawblade",
     "mobLabel": "",
     "mobModelTexture": "saw_blade_texture.png",
-    "mobModelGlowTexture": "",
+    "mobModelGlowTexture": "saw_blade_texture_glow.png",
     "visualScale": {
       "fixedValue": 1.0
     },

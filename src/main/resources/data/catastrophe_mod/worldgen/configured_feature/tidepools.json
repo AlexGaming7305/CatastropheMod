@@ -1,0 +1,47 @@
+{
+  "type": "catastrophe_mod:tidepools",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "catastrophe_mod:structure_feature",
+          "config": {
+            "structure": "catastrophe_mod:small_tide_pool_1",
+            "random_rotation": true,
+            "random_mirror": true,
+            "ignored_blocks": [
+              "minecraft:structure_block",
+              "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -5,
+              0
+            ]
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "catastrophe_mod:structure_feature",
+          "config": {
+            "structure": "catastrophe_mod:small_tide_pool_2",
+            "random_rotation": true,
+            "random_mirror": true,
+            "ignored_blocks": [
+              "minecraft:structure_block",
+              "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -5,
+              0
+            ]
+          }
+        },
+        "placement": []
+      }
+    ]
+  }
+}

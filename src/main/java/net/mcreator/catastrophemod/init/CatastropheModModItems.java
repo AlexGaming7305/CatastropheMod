@@ -192,6 +192,8 @@ import net.mcreator.catastrophemod.item.CatastropheModIconItem;
 import net.mcreator.catastrophemod.item.CalicoMushroomStewItem;
 import net.mcreator.catastrophemod.item.CactusCutterItem;
 import net.mcreator.catastrophemod.item.BulletShellItem;
+import net.mcreator.catastrophemod.item.BrassColoredShovelItem;
+import net.mcreator.catastrophemod.item.BrassColoredPickaxeItem;
 import net.mcreator.catastrophemod.item.BlossomFloraItem;
 import net.mcreator.catastrophemod.item.BlizzardItem;
 import net.mcreator.catastrophemod.item.BeetleCallerItem;
@@ -473,6 +475,10 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> STARLIT_LACEWING_STAFF = REGISTRY.register("starlit_lacewing_staff", () -> new StarlitLacewingStaffItem());
 	public static final RegistryObject<Item> SPINACH_LEAVES = REGISTRY.register("spinach_leaves", () -> new SpinachLeavesItem());
 	public static final RegistryObject<Item> SPINACH_SOUP = REGISTRY.register("spinach_soup", () -> new SpinachSoupItem());
+	public static final RegistryObject<Item> BRASS_COLORED_SHOVEL = REGISTRY.register("brass_colored_shovel", () -> new BrassColoredShovelItem());
+	public static final RegistryObject<Item> BRASS_COLORED_PICKAXE = REGISTRY.register("brass_colored_pickaxe", () -> new BrassColoredPickaxeItem());
+	public static final RegistryObject<Item> SEA_SNAIL_SPAWN_EGG = REGISTRY.register("sea_snail_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.SEA_SNAIL, -9418193, -4018234, new Item.Properties()));
+	public static final RegistryObject<Item> GIANT_ISOPOD_SPAWN_EGG = REGISTRY.register("giant_isopod_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.GIANT_ISOPOD, -855041, -7641156, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

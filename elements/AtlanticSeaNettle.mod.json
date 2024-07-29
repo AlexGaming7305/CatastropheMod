@@ -143,7 +143,7 @@
     "height": 1.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 70,
+    "spawningProbability": 60,
     "mobSpawningType": "waterCreature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 5,

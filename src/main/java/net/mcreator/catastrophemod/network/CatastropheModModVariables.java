@@ -181,12 +181,17 @@ public class CatastropheModModVariables {
 				clone.WizardryLevel = original.WizardryLevel;
 				clone.parry_screen_flash = original.parry_screen_flash;
 				clone.parry_cooldown = original.parry_cooldown;
-				clone.parry_melee_attack_mode = original.parry_melee_attack_mode;
+				clone.parry_mode = original.parry_mode;
 				clone.wooden_katana_sheathed = original.wooden_katana_sheathed;
-				clone.parry_projectile_mode = original.parry_projectile_mode;
 				clone.totem_cooldown = original.totem_cooldown;
 				clone.cactus_cutter_cooldown = original.cactus_cutter_cooldown;
 				clone.spear_mastery_crest_strikes = original.spear_mastery_crest_strikes;
+				clone.Swift_Step_Enchantment = original.Swift_Step_Enchantment;
+				clone.preservation_cooldown = original.preservation_cooldown;
+				clone.gravitational_reflux_enchantment = original.gravitational_reflux_enchantment;
+				clone.brass_speed = original.brass_speed;
+				clone.brass_haste = original.brass_haste;
+				clone.diamond_detonation_used = original.diamond_detonation_used;
 			}
 		}
 
@@ -465,12 +470,17 @@ public class CatastropheModModVariables {
 		public double WizardryLevel = 0;
 		public boolean parry_screen_flash = false;
 		public double parry_cooldown = 0.0;
-		public double parry_melee_attack_mode = 0;
+		public double parry_mode = 0;
 		public boolean wooden_katana_sheathed = false;
-		public double parry_projectile_mode = 0;
 		public double totem_cooldown = 0;
 		public boolean cactus_cutter_cooldown = false;
 		public double spear_mastery_crest_strikes = 0;
+		public boolean Swift_Step_Enchantment = false;
+		public boolean preservation_cooldown = false;
+		public boolean gravitational_reflux_enchantment = false;
+		public double brass_speed = 0;
+		public double brass_haste = 0;
+		public boolean diamond_detonation_used = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -586,12 +596,17 @@ public class CatastropheModModVariables {
 			nbt.putDouble("WizardryLevel", WizardryLevel);
 			nbt.putBoolean("parry_screen_flash", parry_screen_flash);
 			nbt.putDouble("parry_cooldown", parry_cooldown);
-			nbt.putDouble("parry_melee_attack_mode", parry_melee_attack_mode);
+			nbt.putDouble("parry_mode", parry_mode);
 			nbt.putBoolean("wooden_katana_sheathed", wooden_katana_sheathed);
-			nbt.putDouble("parry_projectile_mode", parry_projectile_mode);
 			nbt.putDouble("totem_cooldown", totem_cooldown);
 			nbt.putBoolean("cactus_cutter_cooldown", cactus_cutter_cooldown);
 			nbt.putDouble("spear_mastery_crest_strikes", spear_mastery_crest_strikes);
+			nbt.putBoolean("Swift_Step_Enchantment", Swift_Step_Enchantment);
+			nbt.putBoolean("preservation_cooldown", preservation_cooldown);
+			nbt.putBoolean("gravitational_reflux_enchantment", gravitational_reflux_enchantment);
+			nbt.putDouble("brass_speed", brass_speed);
+			nbt.putDouble("brass_haste", brass_haste);
+			nbt.putBoolean("diamond_detonation_used", diamond_detonation_used);
 			return nbt;
 		}
 
@@ -704,12 +719,17 @@ public class CatastropheModModVariables {
 			WizardryLevel = nbt.getDouble("WizardryLevel");
 			parry_screen_flash = nbt.getBoolean("parry_screen_flash");
 			parry_cooldown = nbt.getDouble("parry_cooldown");
-			parry_melee_attack_mode = nbt.getDouble("parry_melee_attack_mode");
+			parry_mode = nbt.getDouble("parry_mode");
 			wooden_katana_sheathed = nbt.getBoolean("wooden_katana_sheathed");
-			parry_projectile_mode = nbt.getDouble("parry_projectile_mode");
 			totem_cooldown = nbt.getDouble("totem_cooldown");
 			cactus_cutter_cooldown = nbt.getBoolean("cactus_cutter_cooldown");
 			spear_mastery_crest_strikes = nbt.getDouble("spear_mastery_crest_strikes");
+			Swift_Step_Enchantment = nbt.getBoolean("Swift_Step_Enchantment");
+			preservation_cooldown = nbt.getBoolean("preservation_cooldown");
+			gravitational_reflux_enchantment = nbt.getBoolean("gravitational_reflux_enchantment");
+			brass_speed = nbt.getDouble("brass_speed");
+			brass_haste = nbt.getDouble("brass_haste");
+			diamond_detonation_used = nbt.getBoolean("diamond_detonation_used");
 		}
 	}
 
@@ -841,12 +861,17 @@ public class CatastropheModModVariables {
 					variables.WizardryLevel = message.data.WizardryLevel;
 					variables.parry_screen_flash = message.data.parry_screen_flash;
 					variables.parry_cooldown = message.data.parry_cooldown;
-					variables.parry_melee_attack_mode = message.data.parry_melee_attack_mode;
+					variables.parry_mode = message.data.parry_mode;
 					variables.wooden_katana_sheathed = message.data.wooden_katana_sheathed;
-					variables.parry_projectile_mode = message.data.parry_projectile_mode;
 					variables.totem_cooldown = message.data.totem_cooldown;
 					variables.cactus_cutter_cooldown = message.data.cactus_cutter_cooldown;
 					variables.spear_mastery_crest_strikes = message.data.spear_mastery_crest_strikes;
+					variables.Swift_Step_Enchantment = message.data.Swift_Step_Enchantment;
+					variables.preservation_cooldown = message.data.preservation_cooldown;
+					variables.gravitational_reflux_enchantment = message.data.gravitational_reflux_enchantment;
+					variables.brass_speed = message.data.brass_speed;
+					variables.brass_haste = message.data.brass_haste;
+					variables.diamond_detonation_used = message.data.diamond_detonation_used;
 				}
 			});
 			context.setPacketHandled(true);

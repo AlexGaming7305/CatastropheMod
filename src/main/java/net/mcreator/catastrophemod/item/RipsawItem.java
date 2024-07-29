@@ -19,10 +19,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.catastrophemod.procedures.RipsawRightclickedProcedure;
 import net.mcreator.catastrophemod.item.renderer.RipsawItemRenderer;
@@ -48,6 +51,26 @@ public class RipsawItem extends Item implements GeoItem {
 			@Override
 			public BlockEntityWithoutLevelRenderer getCustomRenderer() {
 				return renderer;
+			}
+
+			private static final HumanoidModel.ArmPose RipsawPose = HumanoidModel.ArmPose.create("Ripsaw", false, (model, entity, arm) -> {
+				if (arm == HumanoidArm.LEFT) {
+					model.leftArm.xRot = 80F + model.head.xRot;
+					model.leftArm.yRot = 0.01F + model.head.yRot;
+				} else {
+					model.rightArm.xRot = 80F + model.head.xRot;
+					model.rightArm.yRot = 0.01F + model.head.yRot;
+				}
+			});
+
+			@Override
+			public HumanoidModel.ArmPose getArmPose(LivingEntity entityLiving, InteractionHand hand, ItemStack itemStack) {
+				if (!itemStack.isEmpty()) {
+					if (entityLiving.getUsedItemHand() == hand) {
+						return RipsawPose;
+					}
+				}
+				return HumanoidModel.ArmPose.EMPTY;
 			}
 		});
 	}

@@ -29,7 +29,10 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Magic Attacks inflict §cElectrified",
+        "§9+5% Magic Damage"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},
@@ -38,6 +41,12 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "slotAmount": 1,
+    "onEquip": {
+      "name": "StormCatalystBaubleIsEquipped"
+    },
+    "onUnequip": {
+      "name": "StormCatalystBaubleIsUnequipped"
+    },
     "isFood": false,
     "friendlyPigs": false,
     "enderMask": false,

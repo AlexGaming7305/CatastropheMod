@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:brass_colored_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.dragon_eating_youkai.title"
+    },
+    "description": {
+      "translate": "advancements.dragon_eating_youkai.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dragon_eating_youkai": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:catastrophe"
+}

@@ -46,6 +46,7 @@ import net.mcreator.catastrophemod.entity.ShadowFireballProjectileEntity;
 import net.mcreator.catastrophemod.entity.ShadowFireSoulFriendlyProjectileEntity;
 import net.mcreator.catastrophemod.entity.ShadeEntity;
 import net.mcreator.catastrophemod.entity.SepulcherEntity;
+import net.mcreator.catastrophemod.entity.SeaSnailEntity;
 import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
 import net.mcreator.catastrophemod.entity.PoisonousThornProjectileEntity;
 import net.mcreator.catastrophemod.entity.PileOfMossEntity;
@@ -68,6 +69,7 @@ import net.mcreator.catastrophemod.entity.HermitCrabEntity;
 import net.mcreator.catastrophemod.entity.HealingOrbProjectileEntity;
 import net.mcreator.catastrophemod.entity.HealingBlossomProjectileEntity;
 import net.mcreator.catastrophemod.entity.HauntedMirrorEntityEntity;
+import net.mcreator.catastrophemod.entity.GiantIsopodEntity;
 import net.mcreator.catastrophemod.entity.GhostPhantomProjectileEntity;
 import net.mcreator.catastrophemod.entity.FuriousWindEntity;
 import net.mcreator.catastrophemod.entity.FrozenShieldIceSpikeProjectileEntity;
@@ -87,6 +89,7 @@ import net.mcreator.catastrophemod.entity.EarthboundRockProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundFistEntity;
 import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
 import net.mcreator.catastrophemod.entity.EarthShattererProjectileProjectileEntity;
+import net.mcreator.catastrophemod.entity.DiamondDetonationBombEntity;
 import net.mcreator.catastrophemod.entity.DescendingMiseryEntity;
 import net.mcreator.catastrophemod.entity.CrystalSpearStabEntity;
 import net.mcreator.catastrophemod.entity.CrystalShardProjectileEntity;
@@ -345,6 +348,16 @@ public class CatastropheModModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StarlitLacewingEntity::new).fireImmune().sized(0.4f, 0.2f));
 	public static final RegistryObject<EntityType<ShootingStarEntity>> SHOOTING_STAR = register("shooting_star", EntityType.Builder.<ShootingStarEntity>of(ShootingStarEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShootingStarEntity::new).fireImmune().sized(0.8f, 0.8f));
+	public static final RegistryObject<EntityType<SeaSnailEntity>> SEA_SNAIL = register("sea_snail",
+			EntityType.Builder.<SeaSnailEntity>of(SeaSnailEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SeaSnailEntity::new)
+
+					.sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DiamondDetonationBombEntity>> DIAMOND_DETONATION_BOMB = register("diamond_detonation_bomb", EntityType.Builder.<DiamondDetonationBombEntity>of(DiamondDetonationBombEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DiamondDetonationBombEntity::new).fireImmune().sized(0.4f, 0.4f));
+	public static final RegistryObject<EntityType<GiantIsopodEntity>> GIANT_ISOPOD = register("giant_isopod",
+			EntityType.Builder.<GiantIsopodEntity>of(GiantIsopodEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantIsopodEntity::new)
+
+					.sized(0.8f, 0.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -398,6 +411,9 @@ public class CatastropheModModEntities {
 			HauntedMirrorEntityEntity.init();
 			StarlitLacewingEntity.init();
 			ShootingStarEntity.init();
+			SeaSnailEntity.init();
+			DiamondDetonationBombEntity.init();
+			GiantIsopodEntity.init();
 		});
 	}
 
@@ -448,5 +464,8 @@ public class CatastropheModModEntities {
 		event.put(HAUNTED_MIRROR_ENTITY.get(), HauntedMirrorEntityEntity.createAttributes().build());
 		event.put(STARLIT_LACEWING.get(), StarlitLacewingEntity.createAttributes().build());
 		event.put(SHOOTING_STAR.get(), ShootingStarEntity.createAttributes().build());
+		event.put(SEA_SNAIL.get(), SeaSnailEntity.createAttributes().build());
+		event.put(DIAMOND_DETONATION_BOMB.get(), DiamondDetonationBombEntity.createAttributes().build());
+		event.put(GIANT_ISOPOD.get(), GiantIsopodEntity.createAttributes().build());
 	}
 }

@@ -58,7 +58,7 @@
     "material": {
       "value": "AMETHYST"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -123,6 +123,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "SeaCrystalClusterClientDisplayRandomTick"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],

@@ -2,19 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "aba",
-    "c c",
-    " c "
+    " ab",
+    "a a",
+    " a "
   ],
   "key": {
     "a": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:smooth_basalt"
     },
     "b": {
-      "item": "minecraft:lapis_block"
-    },
-    "c": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:amethyst_shard"
     }
   },
   "result": {

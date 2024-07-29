@@ -1,0 +1,35 @@
+{
+  "name": "catastrophe_mod:ruined_tower",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "catastrophe_mod:ruined_tower",
+        "projection": "rigid",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:structure_block"
+                },
+                {
+                  "Name": "minecraft:water"
+                },
+                {
+                  "Name": "minecraft:air"
+                },
+                {
+                  "Name": "minecraft:water"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
