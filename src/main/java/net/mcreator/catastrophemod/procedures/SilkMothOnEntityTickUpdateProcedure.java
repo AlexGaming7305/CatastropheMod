@@ -1,8 +1,9 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.catastrophemod.entity.SilkMothEntity;
@@ -71,7 +72,8 @@ public class SilkMothOnEntityTickUpdateProcedure {
 			}
 		}
 		if (world instanceof Level _lvl32 && _lvl32.isDay()) {
-			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (-0.08), (entity.getDeltaMovement().z())));
+			if (entity instanceof Mob _entity)
+				_entity.getNavigation().moveTo((entity.getX()), (world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) entity.getX(), (int) entity.getZ())), (entity.getZ()), 1);
 		}
 	}
 }

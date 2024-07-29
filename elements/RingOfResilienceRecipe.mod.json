@@ -12,28 +12,28 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.DIAMOND"
+        "value": ""
       },
       {
-        "value": "Blocks.LAPIS_BLOCK"
+        "value": "Blocks.SMOOTH_BASALT"
       },
       {
-        "value": "Items.DIAMOND"
+        "value": "Items.AMETHYST_SHARD"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Blocks.SMOOTH_BASALT"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Blocks.SMOOTH_BASALT"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Blocks.SMOOTH_BASALT"
       },
       {
         "value": ""

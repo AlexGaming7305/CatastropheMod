@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "catastrophe_mod:item/ring_of_resillience"
+    "layer0": "catastrophe_mod:item/ring_of_resilience"
   }
 }

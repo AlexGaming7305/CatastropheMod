@@ -23,6 +23,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
+import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
 
 import java.util.List;
@@ -89,6 +90,8 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 									entityiterator
 											.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:split_in_two"))),
 													(entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)), 5);
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
 								}
 							}
 						}
@@ -99,12 +102,14 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 		if (entity.onGround()) {
 			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x() * 0.8), 0.6, (entity.getDeltaMovement().z() * 0.8)));
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.SPARK.get()), x, (entity.getY()), z, 10, 0, 0, 0, 0.8);
-			if (world instanceof Level _level) {
-				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lantern.step")), SoundSource.PLAYERS, 1, 1);
-				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lantern.step")), SoundSource.PLAYERS, 1, 1, false);
+				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.SPARK.get()), x, (entity.getY() + 0.1), z, 10, 0, 0, 0, 0.8);
+			if (world.isClientSide()) {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lantern.step")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lantern.step")), SoundSource.PLAYERS, 1, 1, false);
+					}
 				}
 			}
 		}

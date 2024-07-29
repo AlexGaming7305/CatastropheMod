@@ -8,7 +8,7 @@
     "texture": "diamond_detonation",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "Diamond Detonation",
+    "name": "§bDiamond Detonation",
     "specialInformation": {
       "fixedValue": []
     },
@@ -32,6 +32,9 @@
     ],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "DiamondDetonationRightclicked"
+    }
   }
 }

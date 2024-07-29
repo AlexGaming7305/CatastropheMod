@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "catastrophe_mod:ruined_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 20,
+    "separation": 19,
+    "salt": 1623580537
+  }
+}

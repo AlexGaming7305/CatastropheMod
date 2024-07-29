@@ -15,8 +15,8 @@
   ],
   "spawners": {
     "type": "catastrophe_mod:anglerfish",
-    "weight": 16,
+    "weight": 12,
     "minCount": 1,
-    "maxCount": 3
+    "maxCount": 2
   }
 }

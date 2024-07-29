@@ -84,6 +84,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.NIGHTFALLS_DEMISE.get());
 				tabData.accept(CatastropheModModItems.CRYSTALLINE_EDGE.get());
 				tabData.accept(CatastropheModModItems.DIAMOND_DETONATION.get());
+				tabData.accept(CatastropheModModItems.BRASS_COLORED_SHOVEL.get());
+				tabData.accept(CatastropheModModItems.BRASS_COLORED_PICKAXE.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.GLOVEOFTHE_DESERTS.get())).displayItems((parameters, tabData) -> {
@@ -271,6 +273,8 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.SILK_MOTH_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ANGLERFISH_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.SEA_SNAIL_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SPAWN_EGG.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {

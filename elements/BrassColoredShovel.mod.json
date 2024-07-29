@@ -1,0 +1,41 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Spade",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "brass_colored_shovel",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§eBrass Colored Shovel",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Critical hits increase §9Speed §7by §910%",
+        "§aRight-Click: §7Performs a Mine Blast with the §eBrass Colored Pickaxe §7in the other hand ",
+        "§7\"Let's dig up!\""
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 2,
+    "efficiency": 11.0,
+    "attackSpeed": 1.0,
+    "enchantability": 20,
+    "damageVsEntity": 6.5,
+    "usageCount": 240,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:CopperShard"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

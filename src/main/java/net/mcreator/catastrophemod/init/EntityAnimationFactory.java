@@ -15,6 +15,7 @@ import net.mcreator.catastrophemod.entity.ShootingStarEntity;
 import net.mcreator.catastrophemod.entity.ShadowflameSpearsEntity;
 import net.mcreator.catastrophemod.entity.ShadeEntity;
 import net.mcreator.catastrophemod.entity.SepulcherEntity;
+import net.mcreator.catastrophemod.entity.SeaSnailEntity;
 import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
 import net.mcreator.catastrophemod.entity.PileOfMossEntity;
 import net.mcreator.catastrophemod.entity.OceanicSplashEntity;
@@ -27,12 +28,14 @@ import net.mcreator.catastrophemod.entity.LightningBladeEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabMinionEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabEntity;
 import net.mcreator.catastrophemod.entity.HauntedMirrorEntityEntity;
+import net.mcreator.catastrophemod.entity.GiantIsopodEntity;
 import net.mcreator.catastrophemod.entity.FuriousWindEntity;
 import net.mcreator.catastrophemod.entity.FreezingCoreEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
 import net.mcreator.catastrophemod.entity.EarthboundFistEntity;
 import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
+import net.mcreator.catastrophemod.entity.DiamondDetonationBombEntity;
 import net.mcreator.catastrophemod.entity.DescendingMiseryEntity;
 import net.mcreator.catastrophemod.entity.CrystalSpearStabEntity;
 import net.mcreator.catastrophemod.entity.CharredSkeletonGuardEntity;
@@ -324,6 +327,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof ShootingStarEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SeaSnailEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DiamondDetonationBombEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GiantIsopodEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

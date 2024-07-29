@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "catastrophe_mod:ruined_pass",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 21,
+    "separation": 20,
+    "salt": 1452436546
+  }
+}

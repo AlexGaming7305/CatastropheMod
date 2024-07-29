@@ -3,9 +3,9 @@
   "_type": "curiosbauble",
   "definition": {
     "renderType": 0,
-    "texture": "ring_of_resillience",
+    "texture": "ring_of_resilience",
     "customModelName": "Normal",
-    "name": "§bRing of Resilience",
+    "name": "§dRing of Resilience",
     "rarity": "COMMON",
     "slotType": "Accessory",
     "baubleModel": "Default",

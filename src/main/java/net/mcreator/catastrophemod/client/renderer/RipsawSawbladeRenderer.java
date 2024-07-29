@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
 import net.mcreator.catastrophemod.entity.model.RipsawSawbladeModel;
+import net.mcreator.catastrophemod.entity.layer.RipsawSawbladeLayer;
 import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -19,6 +20,7 @@ public class RipsawSawbladeRenderer extends GeoEntityRenderer<RipsawSawbladeEnti
 	public RipsawSawbladeRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new RipsawSawbladeModel());
 		this.shadowRadius = 0f;
+		this.addRenderLayer(new RipsawSawbladeLayer(this));
 	}
 
 	@Override

@@ -1,0 +1,23 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Brass Attack Speed",
+    "icon": "brass_attack_speed.png",
+    "color": {
+      "value": -13262,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "BrassAttackSpeedEffectStartedapplied"
+    },
+    "onExpired": {
+      "name": "BrassAttackSpeedEffectExpires"
+    }
+  }
+}

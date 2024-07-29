@@ -186,6 +186,12 @@ public class CatastropheModModVariables {
 				clone.totem_cooldown = original.totem_cooldown;
 				clone.cactus_cutter_cooldown = original.cactus_cutter_cooldown;
 				clone.spear_mastery_crest_strikes = original.spear_mastery_crest_strikes;
+				clone.diamond_detonation_used = original.diamond_detonation_used;
+				clone.preservation_cooldown = original.preservation_cooldown;
+				clone.brass_speed = original.brass_speed;
+				clone.gravitational_reflux_enchantment = original.gravitational_reflux_enchantment;
+				clone.brass_haste = original.brass_haste;
+				clone.Swift_Step_Enchantment = original.Swift_Step_Enchantment;
 			}
 		}
 
@@ -469,6 +475,12 @@ public class CatastropheModModVariables {
 		public double totem_cooldown = 0;
 		public boolean cactus_cutter_cooldown = false;
 		public double spear_mastery_crest_strikes = 0;
+		public boolean diamond_detonation_used = false;
+		public boolean preservation_cooldown = false;
+		public double brass_speed = 0;
+		public boolean gravitational_reflux_enchantment = false;
+		public double brass_haste = 0;
+		public boolean Swift_Step_Enchantment = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -589,6 +601,12 @@ public class CatastropheModModVariables {
 			nbt.putDouble("totem_cooldown", totem_cooldown);
 			nbt.putBoolean("cactus_cutter_cooldown", cactus_cutter_cooldown);
 			nbt.putDouble("spear_mastery_crest_strikes", spear_mastery_crest_strikes);
+			nbt.putBoolean("diamond_detonation_used", diamond_detonation_used);
+			nbt.putBoolean("preservation_cooldown", preservation_cooldown);
+			nbt.putDouble("brass_speed", brass_speed);
+			nbt.putBoolean("gravitational_reflux_enchantment", gravitational_reflux_enchantment);
+			nbt.putDouble("brass_haste", brass_haste);
+			nbt.putBoolean("Swift_Step_Enchantment", Swift_Step_Enchantment);
 			return nbt;
 		}
 
@@ -706,6 +724,12 @@ public class CatastropheModModVariables {
 			totem_cooldown = nbt.getDouble("totem_cooldown");
 			cactus_cutter_cooldown = nbt.getBoolean("cactus_cutter_cooldown");
 			spear_mastery_crest_strikes = nbt.getDouble("spear_mastery_crest_strikes");
+			diamond_detonation_used = nbt.getBoolean("diamond_detonation_used");
+			preservation_cooldown = nbt.getBoolean("preservation_cooldown");
+			brass_speed = nbt.getDouble("brass_speed");
+			gravitational_reflux_enchantment = nbt.getBoolean("gravitational_reflux_enchantment");
+			brass_haste = nbt.getDouble("brass_haste");
+			Swift_Step_Enchantment = nbt.getBoolean("Swift_Step_Enchantment");
 		}
 	}
 
@@ -842,6 +866,12 @@ public class CatastropheModModVariables {
 					variables.totem_cooldown = message.data.totem_cooldown;
 					variables.cactus_cutter_cooldown = message.data.cactus_cutter_cooldown;
 					variables.spear_mastery_crest_strikes = message.data.spear_mastery_crest_strikes;
+					variables.diamond_detonation_used = message.data.diamond_detonation_used;
+					variables.preservation_cooldown = message.data.preservation_cooldown;
+					variables.brass_speed = message.data.brass_speed;
+					variables.gravitational_reflux_enchantment = message.data.gravitational_reflux_enchantment;
+					variables.brass_haste = message.data.brass_haste;
+					variables.Swift_Step_Enchantment = message.data.Swift_Step_Enchantment;
 				}
 			});
 			context.setPacketHandled(true);

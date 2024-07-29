@@ -592,5 +592,32 @@
         "stream": false
       }
     ]
+  },
+  "pickaxe_hit": {
+    "subtitle": "subtitles.pickaxe_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:pickaxe_hit",
+        "stream": false
+      }
+    ]
+  },
+  "shovel_hit": {
+    "subtitle": "subtitles.shovel_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:shovel_hit",
+        "stream": false
+      }
+    ]
+  },
+  "mine_blast": {
+    "subtitle": "subtitles.mine_blast",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mine_blast",
+        "stream": false
+      }
+    ]
   }
 }

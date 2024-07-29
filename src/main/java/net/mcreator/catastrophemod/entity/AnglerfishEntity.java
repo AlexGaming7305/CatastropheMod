@@ -233,9 +233,6 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			if (this.isInWaterOrBubble()) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop(""));
-			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.anglerfish.idle"));
 		}
 		return PlayState.STOP;

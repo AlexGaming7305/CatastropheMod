@@ -15,7 +15,7 @@
   ],
   "spawners": {
     "type": "catastrophe_mod:atlantic_sea_nettle",
-    "weight": 70,
+    "weight": 60,
     "minCount": 1,
     "maxCount": 5
   }

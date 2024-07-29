@@ -1,0 +1,32 @@
+{
+  "_fv": 57,
+  "_type": "structure",
+  "definition": {
+    "structure": "ruined_pass",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      },
+      {
+        "value": "Blocks.FLOWING_WATER"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.WATER"
+      }
+    ],
+    "spacing": 21,
+    "separation": 20,
+    "restrictionBiomes": [
+      {
+        "value": "#is_ocean"
+      }
+    ],
+    "surfaceDetectionType": "OCEAN_FLOOR",
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "UNDERGROUND_STRUCTURES"
+  }
+}
