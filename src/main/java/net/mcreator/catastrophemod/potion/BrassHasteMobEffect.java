@@ -1,9 +1,6 @@
 
 package net.mcreator.catastrophemod.potion;
 
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
 public class BrassHasteMobEffect extends MobEffect {
 	public BrassHasteMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13262);

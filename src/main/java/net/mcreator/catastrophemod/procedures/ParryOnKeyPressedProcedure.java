@@ -32,7 +32,7 @@ public class ParryOnKeyPressedProcedure {
 					});
 				}
 				{
-					double _setval = 10;
+					double _setval = 8;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.parry_mode = _setval;
 						capability.syncPlayerVariables(entity);
@@ -60,7 +60,7 @@ public class ParryOnKeyPressedProcedure {
 					});
 				}
 				{
-					double _setval = 10;
+					double _setval = 8;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.parry_mode = _setval;
 						capability.syncPlayerVariables(entity);

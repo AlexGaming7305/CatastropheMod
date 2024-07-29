@@ -8,15 +8,13 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -51,26 +49,7 @@ public class SeaSpearDashDamageProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
 						if (!(entityiterator instanceof ItemEntity || entityiterator instanceof ExperienceOrb)) {
-							if (entityiterator instanceof LivingEntity _entity)
-								_entity.hurt(new DamageSource(_entity.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)) {
-									@Override
-									public Component getLocalizedDeathMessage(LivingEntity _msgEntity) {
-										String _translatekey = "death.attack." + "impaled";
-										if (this.getEntity() == null && this.getDirectEntity() == null) {
-											return _msgEntity.getKillCredit() != null
-													? Component.translatable(_translatekey + ".player", _msgEntity.getDisplayName(), _msgEntity.getKillCredit().getDisplayName())
-													: Component.translatable(_translatekey, _msgEntity.getDisplayName());
-										} else {
-											Component _component = this.getEntity() == null ? this.getDirectEntity().getDisplayName() : this.getEntity().getDisplayName();
-											ItemStack _itemstack = ItemStack.EMPTY;
-											if (this.getEntity() instanceof LivingEntity _livingentity)
-												_itemstack = _livingentity.getMainHandItem();
-											return !_itemstack.isEmpty() && _itemstack.hasCustomHoverName()
-													? Component.translatable(_translatekey + ".item", _msgEntity.getDisplayName(), _component, _itemstack.getDisplayName())
-													: Component.translatable(_translatekey, _msgEntity.getDisplayName(), _component);
-										}
-									}
-								}, 6);
+							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:impaled")))), 6);
 							entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * (-0.4)), (entity.getXRot() * 0.01), (Math.cos(Math.toRadians(entity.getYRot())) * (-0.4))));
 							{
 								boolean _setval = false;

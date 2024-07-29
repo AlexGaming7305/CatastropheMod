@@ -1,59 +1,24 @@
 
 package net.mcreator.catastrophemod.entity;
 
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animatable.GeoEntity;
-
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.ForgeMod;
-
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
-import net.minecraft.world.entity.ai.control.MoveControl;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.Mth;
+import net.minecraft.nbt.Tag;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 
-import net.mcreator.catastrophemod.procedures.SeaSnailOnEntityTickUpdateProcedure;
-import net.mcreator.catastrophemod.procedures.SeaSnailNaturalEntitySpawningConditionProcedure;
-import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+import javax.annotation.Nullable;
+
+import software.bernie.geckolib.core.animation.AnimatableManager;
+import software.bernie.geckolib.core.animation.AnimationState;
 
 public class SeaSnailEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SeaSnailEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SeaSnailEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SeaSnailEntity.class, EntityDataSerializers.STRING);
+
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -68,27 +33,34 @@ public class SeaSnailEntity extends PathfinderMob implements GeoEntity {
 		super(type, world);
 		xpReward = 3;
 		setNoAi(false);
+
 		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
 				if (SeaSnailEntity.this.isInWater())
 					SeaSnailEntity.this.setDeltaMovement(SeaSnailEntity.this.getDeltaMovement().add(0, 0.005, 0));
+
 				if (this.operation == MoveControl.Operation.MOVE_TO && !SeaSnailEntity.this.getNavigation().isDone()) {
 					double dx = this.wantedX - SeaSnailEntity.this.getX();
 					double dy = this.wantedY - SeaSnailEntity.this.getY();
 					double dz = this.wantedZ - SeaSnailEntity.this.getZ();
+
 					float f = (float) (Mth.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
 					float f1 = (float) (this.speedModifier * SeaSnailEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+
 					SeaSnailEntity.this.setYRot(this.rotlerp(SeaSnailEntity.this.getYRot(), f, 10));
 					SeaSnailEntity.this.yBodyRot = SeaSnailEntity.this.getYRot();
 					SeaSnailEntity.this.yHeadRot = SeaSnailEntity.this.getYRot();
+
 					if (SeaSnailEntity.this.isInWater()) {
 						SeaSnailEntity.this.setSpeed((float) SeaSnailEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+
 						float f2 = -(float) (Mth.atan2(dy, (float) Math.sqrt(dx * dx + dz * dz)) * (180 / Math.PI));
 						f2 = Mth.clamp(Mth.wrapDegrees(f2), -85, 85);
 						SeaSnailEntity.this.setXRot(this.rotlerp(SeaSnailEntity.this.getXRot(), f2, 5));
 						float f3 = Mth.cos(SeaSnailEntity.this.getXRot() * (float) (Math.PI / 180.0));
+
 						SeaSnailEntity.this.setZza(f3 * f1);
 						SeaSnailEntity.this.setYya((float) (f1 * dy));
 					} else {
@@ -132,9 +104,11 @@ public class SeaSnailEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+
 		this.goalSelector.addGoal(1, new PanicGoal(this, 1.2));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
+
 	}
 
 	@Override
@@ -210,8 +184,13 @@ public class SeaSnailEntity extends PathfinderMob implements GeoEntity {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return SeaSnailNaturalEntitySpawningConditionProcedure.execute(world, x, y, z);
+			return
+
+			SeaSnailNaturalEntitySpawningConditionProcedure.execute(world, x, y, z)
+
+			;
 		});
+
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -221,7 +200,9 @@ public class SeaSnailEntity extends PathfinderMob implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 6);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+
 		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.05);
+
 		return builder;
 	}
 
@@ -256,6 +237,7 @@ public class SeaSnailEntity extends PathfinderMob implements GeoEntity {
 		if (this.deathTime == 20) {
 			this.remove(SeaSnailEntity.RemovalReason.KILLED);
 			this.dropExperience();
+
 		}
 	}
 
@@ -277,4 +259,5 @@ public class SeaSnailEntity extends PathfinderMob implements GeoEntity {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
+
 }

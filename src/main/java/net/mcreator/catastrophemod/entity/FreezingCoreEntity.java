@@ -257,7 +257,7 @@ public class FreezingCoreEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		FreezingCoreOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		FreezingCoreOnEntityTickUpdateProcedure.execute();
 		this.refreshDimensions();
 	}
 

@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "catastrophe_mod:rotten_heart",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -21,7 +21,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:air",
-          "weight": 98,
+          "weight": 97,
           "functions": [
             {
               "function": "set_count",

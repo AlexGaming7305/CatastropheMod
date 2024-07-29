@@ -8,8 +8,8 @@
     "name": "Quiver",
     "rarity": "COMMON",
     "slotType": "Accessory",
-    "baubleModel": "Default",
-    "baubleModelTexture": "",
+    "baubleModel": "Modelquiver",
+    "baubleModelTexture": "quiver_texture.png",
     "creativeTab": {
       "value": "CUSTOM:Accessories"
     },
@@ -29,7 +29,9 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§9+10% Arrow Damage"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},
@@ -41,8 +43,8 @@
     "isFood": false,
     "friendlyPigs": false,
     "enderMask": false,
-    "rotateModel": false,
-    "translateModel": false,
+    "rotateModel": true,
+    "translateModel": true,
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
@@ -50,7 +52,7 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "hasModel": false,
+    "hasModel": true,
     "animation": "none"
   }
 }

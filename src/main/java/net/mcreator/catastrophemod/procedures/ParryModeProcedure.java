@@ -15,6 +15,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.tags.TagKey;
@@ -30,6 +31,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 import net.mcreator.catastrophemod.init.CatastropheModModEnchantments;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
@@ -71,6 +73,8 @@ public class ParryModeProcedure {
 						if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
 							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
 									(float) ((amount * (50 + (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) * 10)) / 100));
+							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
 							{
 								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 								if (_ist.hurt((int) amount, RandomSource.create(), null)) {
@@ -81,6 +85,8 @@ public class ParryModeProcedure {
 						} else {
 							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
 									(float) ((amount * 50) / 100));
+							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
 							{
 								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
 								if (_ist.hurt((int) amount, RandomSource.create(), null)) {
@@ -93,6 +99,8 @@ public class ParryModeProcedure {
 						if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
 							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
 									(float) ((amount * (50 + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) * 10)) / 100));
+							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
 							{
 								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
 								if (_ist.hurt((int) amount, RandomSource.create(), null)) {
@@ -103,6 +111,8 @@ public class ParryModeProcedure {
 						} else {
 							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
 									(float) ((amount * 50) / 100));
+							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
 							{
 								ItemStack _ist = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
 								if (_ist.hurt((int) amount, RandomSource.create(), null)) {
@@ -137,8 +147,8 @@ public class ParryModeProcedure {
 					});
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
-					if (!(entity instanceof ServerPlayer _plr34 && _plr34.level() instanceof ServerLevel
-							&& _plr34.getAdvancements().getOrStartProgress(_plr34.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr38 && _plr38.level() instanceof ServerLevel
+							&& _plr38.getAdvancements().getOrStartProgress(_plr38.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
@@ -211,8 +221,8 @@ public class ParryModeProcedure {
 					});
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
-					if (!(entity instanceof ServerPlayer _plr47 && _plr47.level() instanceof ServerLevel
-							&& _plr47.getAdvancements().getOrStartProgress(_plr47.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr51 && _plr51.level() instanceof ServerLevel
+							&& _plr51.getAdvancements().getOrStartProgress(_plr51.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);

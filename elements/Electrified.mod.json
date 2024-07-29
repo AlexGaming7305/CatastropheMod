@@ -13,6 +13,9 @@
     "isBenefitical": false,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "ElectrifiedEffectStartedapplied"
+    },
     "onActiveTick": {
       "name": "ElectrifiedOnEffectActiveTick"
     }
