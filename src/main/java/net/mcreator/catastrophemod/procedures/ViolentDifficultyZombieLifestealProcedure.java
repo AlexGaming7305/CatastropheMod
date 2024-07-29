@@ -34,7 +34,8 @@ public class ViolentDifficultyZombieLifestealProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, double amount) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((entity instanceof Player || entity instanceof Villager) && sourceentity instanceof Zombie && CatastropheModModVariables.WorldVariables.get(world).violent_difficulty == true) {
+		if ((entity instanceof Player || entity instanceof Villager) && sourceentity instanceof Zombie && !(entity instanceof LivingEntity _livEnt3 && _livEnt3.isBlocking())
+				&& CatastropheModModVariables.WorldVariables.get(world).violent_difficulty == true) {
 			if (sourceentity instanceof LivingEntity _entity)
 				_entity.setHealth((float) ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + amount));
 			if (world instanceof ServerLevel _level)

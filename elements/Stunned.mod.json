@@ -1,0 +1,23 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Stunned",
+    "icon": "stunned.png",
+    "color": {
+      "value": -5029632,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "StunnedEffectStartedapplied"
+    },
+    "onExpired": {
+      "name": "StunnedEffectExpires"
+    }
+  }
+}

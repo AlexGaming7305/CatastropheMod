@@ -16,7 +16,7 @@
             "item": {
               "value": "CUSTOM:RottenHeart"
             },
-            "weight": 2,
+            "weight": 3,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
@@ -30,7 +30,7 @@
             "item": {
               "value": "Blocks.AIR"
             },
-            "weight": 98,
+            "weight": 97,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
