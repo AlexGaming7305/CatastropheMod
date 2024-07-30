@@ -8,13 +8,13 @@
     "idle": "0",
     "rarity": "COMMON",
     "displaySettings": "flamestrike.item.json",
-    "leftArm": "left",
-    "rightArm": "right",
+    "leftArm": "",
+    "rightArm": "",
     "perspective": "All Perspectives",
     "creativeTab": {
       "value": "CUSTOM:Bullets"
     },
-    "firstPersonArms": true,
+    "firstPersonArms": false,
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,

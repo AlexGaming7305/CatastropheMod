@@ -3093,7 +3093,28 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/AssassinSkeletonOnEntityTickUpdateProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Entities"
     },
@@ -3515,7 +3536,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/VulnerabilityProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Potion Effects"
     },
@@ -3544,7 +3574,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/BullseyeProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Potion Effects"
     },
@@ -3971,7 +4010,28 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/FreezingCoreOnEntityTickUpdateProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Minions"
     },
@@ -4207,7 +4267,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/IntelligenceProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Potion Effects"
     },
@@ -6275,7 +6344,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/IncinerationProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Potion Effects"
     },
@@ -7225,7 +7303,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/SeaToolsExtraDamageProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Items/Tools"
     },
@@ -7824,15 +7911,12 @@
       "type": "procedure",
       "sortid": 2018,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "hunter_armor_set_bonus",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/HunterArmorSetBonusProcedure.java"
-        ],
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -8179,8 +8263,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/catastrophe_mod/models/item/quiver.json",
-          "src/main/java/net/mcreator/catastrophemod/item/QuiverItem.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/QuiverRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/item/QuiverItem.java"
         ]
       },
       "path": "~/Items/Accessories"
@@ -8424,20 +8507,6 @@
       "path": "~/Items/Weapons/Summoner Weapons"
     },
     {
-      "name": "MarkedForDeath",
-      "type": "potioneffect",
-      "sortid": 2059,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "marked_for_death",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/potion/MarkedForDeathMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
       "name": "MarkedForDeathProcedure",
       "type": "procedure",
       "sortid": 2060,
@@ -8448,7 +8517,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/MarkedForDeathProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Potion Effects"
     },
@@ -10615,20 +10693,6 @@
       "path": "~/Items/Armor"
     },
     {
-      "name": "HuntersTunicRecipe",
-      "type": "recipe",
-      "sortid": 2181,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hunters_tunic_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/hunters_tunic_recipe.json"
-        ]
-      },
-      "path": "~/Items/Armor"
-    },
-    {
       "name": "HuntersLeggingsRecipe",
       "type": "recipe",
       "sortid": 2182,
@@ -10988,7 +11052,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/LeatherGloveDamageProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Items/Accessories"
     },
@@ -13020,7 +13093,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/NetheriteShieldDamageReductionProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Items/Accessories"
     },
@@ -15291,21 +15373,10 @@
       "locked_code": true,
       "registry_name": "hunter_armor_crit",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/HunterArmorCritProcedure.java"
-        ],
         "dependencies": [
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
           },
           {
             "name": "x",
@@ -15342,6 +15413,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -20192,7 +20279,16 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/SpellcastingProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Enchantments"
     },
@@ -20285,44 +20381,6 @@
         ]
       },
       "path": "~/Key Binds"
-    },
-    {
-      "name": "YouJustDontBelieveMeProcedure",
-      "type": "procedure",
-      "sortid": 2848,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "you_just_dont_believe_me_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/YouJustDontBelieveMeProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "YouJustDontBelieveMe",
-      "type": "achievement",
-      "sortid": 2847,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "you_just_dont_believe_me",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/advancements/you_just_dont_believe_me.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "ParryScreenFlashDisplayOverlayIngame",
@@ -22229,7 +22287,28 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/StarlitLacewingOnEntityTickUpdateProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Minions"
     },
@@ -23156,20 +23235,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "DragonEatingYoukai",
-      "type": "achievement",
-      "sortid": 2994,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dragon_eating_youkai",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/advancements/dragon_eating_youkai.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
       "name": "SeaSnailNaturalEntitySpawningCondition",
       "type": "procedure",
       "sortid": 2995,
@@ -23782,6 +23847,328 @@
           "src/main/java/net/mcreator/catastrophemod/procedures/DamageIncreasesProcedure.java"
         ],
         "dependencies": []
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "MagicDamageProcedure",
+      "type": "procedure",
+      "sortid": 3015,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/MagicDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "SummonerDamageProcedure",
+      "type": "procedure",
+      "sortid": 3016,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summoner_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SummonerDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "MeleeDamageProcedure",
+      "type": "procedure",
+      "sortid": 3009,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "melee_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/MeleeDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ArmorPenetrationProcedure",
+      "type": "procedure",
+      "sortid": 3017,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_penetration_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ArmorPenetrationProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ThrowingKnifeDamageProcedure",
+      "type": "procedure",
+      "sortid": 3014,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throwing_knife_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ThrowingKnifeDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "StunnedOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 3023,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stunned_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/StunnedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ThrowingSpeed",
+      "type": "attribute",
+      "sortid": 3020,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throwing_speed",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ViolentDifficultyDamage",
+      "type": "procedure",
+      "sortid": 3019,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "violent_difficulty_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ViolentDifficultyDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "RangedDamageProcedure",
+      "type": "procedure",
+      "sortid": 3013,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ranged_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/RangedDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "SwordDamageProcedure",
+      "type": "procedure",
+      "sortid": 3010,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SwordDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "DamageReductionProcedure",
+      "type": "procedure",
+      "sortid": 3018,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_reduction_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/DamageReductionProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "AxeDamageProcedure",
+      "type": "procedure",
+      "sortid": 3011,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "axe_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/AxeDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "HuntersChestplateRecipe",
+      "type": "recipe",
+      "sortid": 3022,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunters_chestplate_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/recipes/hunters_chestplate_recipe.json"
+        ]
+      },
+      "path": "~/Items/Armor"
+    },
+    {
+      "name": "SpearDamageProcedure",
+      "type": "procedure",
+      "sortid": 3012,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear_damage_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SpearDamageProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
       },
       "path": "~/Misc"
     }

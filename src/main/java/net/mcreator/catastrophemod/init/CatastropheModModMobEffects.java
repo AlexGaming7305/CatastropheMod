@@ -15,7 +15,6 @@ import net.mcreator.catastrophemod.potion.StunnedMobEffect;
 import net.mcreator.catastrophemod.potion.RepulsionMobEffect;
 import net.mcreator.catastrophemod.potion.PrickedMobEffect;
 import net.mcreator.catastrophemod.potion.PhaseDashCooldownMobEffect;
-import net.mcreator.catastrophemod.potion.MarkedForDeathMobEffect;
 import net.mcreator.catastrophemod.potion.ManaSicknessMobEffect;
 import net.mcreator.catastrophemod.potion.IntelligenceMobEffect;
 import net.mcreator.catastrophemod.potion.IncinerationMobEffect;
@@ -25,7 +24,6 @@ import net.mcreator.catastrophemod.potion.ElectrifiedMobEffect;
 import net.mcreator.catastrophemod.potion.DashCooldownMobEffect;
 import net.mcreator.catastrophemod.potion.BullseyeMobEffect;
 import net.mcreator.catastrophemod.potion.BrassSpeedMobEffect;
-import net.mcreator.catastrophemod.potion.BrassHasteMobEffect;
 import net.mcreator.catastrophemod.potion.BrassAttackSpeedMobEffect;
 import net.mcreator.catastrophemod.potion.BossDashMobEffect;
 import net.mcreator.catastrophemod.potion.BleedingMobEffect;
@@ -46,7 +44,6 @@ public class CatastropheModModMobEffects {
 	public static final RegistryObject<MobEffect> AMATOXIN = REGISTRY.register("amatoxin", () -> new AmatoxinMobEffect());
 	public static final RegistryObject<MobEffect> PRICKED = REGISTRY.register("pricked", () -> new PrickedMobEffect());
 	public static final RegistryObject<MobEffect> BLEEDING = REGISTRY.register("bleeding", () -> new BleedingMobEffect());
-	public static final RegistryObject<MobEffect> MARKED_FOR_DEATH = REGISTRY.register("marked_for_death", () -> new MarkedForDeathMobEffect());
 	public static final RegistryObject<MobEffect> MANA_SICKNESS = REGISTRY.register("mana_sickness", () -> new ManaSicknessMobEffect());
 	public static final RegistryObject<MobEffect> PHASE_DASH_COOLDOWN = REGISTRY.register("phase_dash_cooldown", () -> new PhaseDashCooldownMobEffect());
 	public static final RegistryObject<MobEffect> ARMOR_SHRED = REGISTRY.register("armor_shred", () -> new ArmorShredMobEffect());
@@ -55,5 +52,4 @@ public class CatastropheModModMobEffects {
 	public static final RegistryObject<MobEffect> STUNNED = REGISTRY.register("stunned", () -> new StunnedMobEffect());
 	public static final RegistryObject<MobEffect> BRASS_SPEED = REGISTRY.register("brass_speed", () -> new BrassSpeedMobEffect());
 	public static final RegistryObject<MobEffect> BRASS_ATTACK_SPEED = REGISTRY.register("brass_attack_speed", () -> new BrassAttackSpeedMobEffect());
-	public static final RegistryObject<MobEffect> BRASS_HASTE = REGISTRY.register("brass_haste", () -> new BrassHasteMobEffect());
 }

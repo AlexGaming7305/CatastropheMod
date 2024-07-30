@@ -31,6 +31,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.TryFindWaterGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -147,11 +148,12 @@ public class AnglerfishEntity extends Monster implements GeoEntity {
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 12, 40));
-		this.goalSelector.addGoal(4, new TryFindWaterGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Salmon.class, false, true));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Cod.class, false, true));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, TropicalFish.class, false, true));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new TryFindWaterGoal(this));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Salmon.class, false, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Cod.class, false, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, TropicalFish.class, false, true));
 	}
 
 	@Override
