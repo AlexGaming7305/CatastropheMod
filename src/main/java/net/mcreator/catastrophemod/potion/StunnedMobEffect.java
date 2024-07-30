@@ -1,6 +1,14 @@
 
 package net.mcreator.catastrophemod.potion;
 
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
+import net.mcreator.catastrophemod.procedures.StunnedEffectStartedappliedProcedure;
+import net.mcreator.catastrophemod.procedures.StunnedEffectExpiresProcedure;
+
 public class StunnedMobEffect extends MobEffect {
 	public StunnedMobEffect() {
 		super(MobEffectCategory.HARMFUL, -5029632);
@@ -13,7 +21,7 @@ public class StunnedMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		StunnedEffectStartedappliedProcedure.execute();
+		StunnedEffectStartedappliedProcedure.execute(entity);
 	}
 
 	@Override

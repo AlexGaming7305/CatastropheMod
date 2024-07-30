@@ -103,9 +103,8 @@ public abstract class HunterItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(Component.literal(
-					"\u00A76Full Set Bonus: \u00A77Press \u00A7aY \u00A77to enter a stealth mode that increases movement speed by \u00A7a20% \u00A77and makes your next attack deal \u00A7a20% \u00A77more damage after not being hit or attacking for 3 seconds"));
-			list.add(Component.literal("\u00A77Increased \u00A7aRanged Damage \u00A77by \u00A7a10%"));
+			list.add(Component.literal("\u00A76Set Bonus: \u00A77Press \u00A7aY \u00A77to enter stealth mode that grants \u00A79+20% Speed \u00A77and your next attack deals \u00A79+20% Ranged Damage"));
+			list.add(Component.literal("\u00A79+5% Ranged Damage"));
 		}
 
 		@Override
@@ -145,9 +144,7 @@ public abstract class HunterItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(Component.literal(
-					"\u00A76Full Set Bonus: \u00A77Press \u00A7aY \u00A77to enter a stealth mode that increases movement speed by \u00A7a20% \u00A77and makes your next attack deal \u00A7a20% \u00A77more damage after not being hit or attacking for 3 seconds"));
-			list.add(Component.literal("\u00A77Increased \u00A7aRanged Damage \u00A77by \u00A7a10%"));
+			list.add(Component.literal("\u00A76Set Bonus: \u00A77Press \u00A7aY \u00A77to enter stealth mode that grants \u00A79+20% Speed \u00A77and your next attack deals \u00A79+20% Ranged Damage"));
 		}
 
 		@Override
@@ -169,9 +166,7 @@ public abstract class HunterItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(Component.literal(
-					"\u00A76Full Set Bonus: \u00A77Press \u00A7aY \u00A77to enter a stealth mode that increases movement speed by \u00A7a20% \u00A77and makes your next attack deal \u00A7a20% \u00A77more damage after not being hit or attacking for 3 seconds"));
-			list.add(Component.literal("\u00A77Increased \u00A7aRanged Damage \u00A77by \u00A7a10%"));
+			list.add(Component.literal("\u00A76Set Bonus: \u00A77Press \u00A7aY \u00A77to enter stealth mode that grants \u00A79+20% Speed \u00A77and your next attack deals \u00A79+20% Ranged Damage"));
 		}
 
 		@Override
@@ -193,9 +188,7 @@ public abstract class HunterItem extends ArmorItem {
 		@Override
 		public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 			super.appendHoverText(itemstack, world, list, flag);
-			list.add(Component.literal(
-					"\u00A76Full Set Bonus: \u00A77Press \u00A7aY \u00A77to enter a stealth mode that increases movement speed by \u00A7a20% \u00A77and makes your next attack deal \u00A7a20% \u00A77more damage after not being hit or attacking for 3 seconds"));
-			list.add(Component.literal("\u00A77Increased \u00A7aRanged Damage \u00A77by \u00A7a10%"));
+			list.add(Component.literal("\u00A76Set Bonus: \u00A77Press \u00A7aY \u00A77to enter stealth mode that grants \u00A79+20% Speed \u00A77and your next attack deals \u00A79+20% Ranged Damage"));
 		}
 
 		@Override

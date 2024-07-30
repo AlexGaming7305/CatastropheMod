@@ -51,6 +51,15 @@
       },
       {
         "value": "CUSTOM:Ripsaw"
+      },
+      {
+        "value": "CUSTOM:Rustgun"
+      },
+      {
+        "value": "CUSTOM:WoodenBow"
+      },
+      {
+        "value": "CUSTOM:HuntsmanKnife"
       }
     ],
     "blocks": [],

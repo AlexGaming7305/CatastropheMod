@@ -118,7 +118,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.GOLDEN_BRACELET.get());
 				tabData.accept(CatastropheModModItems.NETHER_TREADS.get());
 				tabData.accept(CatastropheModModItems.SEA_PENDANT.get());
-				tabData.accept(CatastropheModModItems.ASSASSINS_GLORY.get());
 				tabData.accept(CatastropheModModItems.SPIRIT_IN_A_BOTTLE.get());
 				tabData.accept(CatastropheModModItems.OCEANIC_ARTIFACT.get());
 				tabData.accept(CatastropheModModItems.MANA_ROSE.get());

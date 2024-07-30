@@ -20,26 +20,23 @@
     "bootsName": "Hunter's Boots",
     "helmetSpecialInformation": {
       "fixedValue": [
-        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
-        "§7Increased §aRanged Damage §7by §a10%"
+        "§6Set Bonus: §7Press §aY §7to enter stealth mode that grants §9+20% Speed §7and your next attack deals §9+20% Ranged Damage",
+        "§9+5% Ranged Damage"
       ]
     },
     "bodySpecialInformation": {
       "fixedValue": [
-        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
-        "§7Increased §aRanged Damage §7by §a10%"
+        "§6Set Bonus: §7Press §aY §7to enter stealth mode that grants §9+20% Speed §7and your next attack deals §9+20% Ranged Damage"
       ]
     },
     "leggingsSpecialInformation": {
       "fixedValue": [
-        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
-        "§7Increased §aRanged Damage §7by §a10%"
+        "§6Set Bonus: §7Press §aY §7to enter stealth mode that grants §9+20% Speed §7and your next attack deals §9+20% Ranged Damage"
       ]
     },
     "bootsSpecialInformation": {
       "fixedValue": [
-        "§6Full Set Bonus: §7Press §aY §7to enter a stealth mode that increases movement speed by §a20% §7and makes your next attack deal §a20% §7more damage after not being hit or attacking for 3 seconds",
-        "§7Increased §aRanged Damage §7by §a10%"
+        "§6Set Bonus: §7Press §aY §7to enter stealth mode that grants §9+20% Speed §7and your next attack deals §9+20% Ranged Damage"
       ]
     },
     "helmetModelName": "Modelhunters_hat",

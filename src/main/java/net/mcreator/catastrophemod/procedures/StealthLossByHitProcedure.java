@@ -39,12 +39,5 @@ public class StealthLossByHitProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		{
-			double _setval = 0;
-			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.hunter_armor_stealth_timer = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
 	}
 }

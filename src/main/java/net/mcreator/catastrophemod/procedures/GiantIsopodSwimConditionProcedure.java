@@ -1,8 +1,6 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.Entity;
 
 public class GiantIsopodSwimConditionProcedure {
 	public static boolean execute(Entity entity) {

@@ -1,6 +1,13 @@
 
 package net.mcreator.catastrophemod.world.features;
 
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleRandomFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.SimpleRandomSelectorFeature;
+import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
+import net.minecraft.world.level.WorldGenLevel;
+
+import net.mcreator.catastrophemod.procedures.TidepoolsAdditionalGenerationConditionProcedure;
+
 public class TidepoolsFeature extends SimpleRandomSelectorFeature {
 	public TidepoolsFeature() {
 		super(SimpleRandomFeatureConfiguration.CODEC);

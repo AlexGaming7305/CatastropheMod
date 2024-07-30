@@ -192,6 +192,7 @@ public class CatastropheModModVariables {
 				clone.brass_speed = original.brass_speed;
 				clone.brass_haste = original.brass_haste;
 				clone.diamond_detonation_used = original.diamond_detonation_used;
+				clone.hunter_armor_hat = original.hunter_armor_hat;
 			}
 		}
 
@@ -481,6 +482,7 @@ public class CatastropheModModVariables {
 		public double brass_speed = 0;
 		public double brass_haste = 0;
 		public boolean diamond_detonation_used = false;
+		public boolean hunter_armor_hat = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -607,6 +609,7 @@ public class CatastropheModModVariables {
 			nbt.putDouble("brass_speed", brass_speed);
 			nbt.putDouble("brass_haste", brass_haste);
 			nbt.putBoolean("diamond_detonation_used", diamond_detonation_used);
+			nbt.putBoolean("hunter_armor_hat", hunter_armor_hat);
 			return nbt;
 		}
 
@@ -730,6 +733,7 @@ public class CatastropheModModVariables {
 			brass_speed = nbt.getDouble("brass_speed");
 			brass_haste = nbt.getDouble("brass_haste");
 			diamond_detonation_used = nbt.getBoolean("diamond_detonation_used");
+			hunter_armor_hat = nbt.getBoolean("hunter_armor_hat");
 		}
 	}
 
@@ -872,6 +876,7 @@ public class CatastropheModModVariables {
 					variables.brass_speed = message.data.brass_speed;
 					variables.brass_haste = message.data.brass_haste;
 					variables.diamond_detonation_used = message.data.diamond_detonation_used;
+					variables.hunter_armor_hat = message.data.hunter_armor_hat;
 				}
 			});
 			context.setPacketHandled(true);

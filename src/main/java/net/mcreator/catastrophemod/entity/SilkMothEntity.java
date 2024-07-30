@@ -31,7 +31,6 @@ import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.MoveBackToVillageGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -173,19 +172,8 @@ public class SilkMothEntity extends PathfinderMob implements GeoEntity {
 			}
 
 		});
-		this.goalSelector.addGoal(5, new PanicGoal(this, 4));
+		this.goalSelector.addGoal(5, new PanicGoal(this, 3));
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this) {
-			@Override
-			public boolean canUse() {
-				double x = SilkMothEntity.this.getX();
-				double y = SilkMothEntity.this.getY();
-				double z = SilkMothEntity.this.getZ();
-				Entity entity = SilkMothEntity.this;
-				Level world = SilkMothEntity.this.level();
-				return super.canUse() && SilkMothSleepConditionProcedure.execute(entity);
-			}
-		});
-		this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5) {
 			@Override
 			public boolean canUse() {
 				double x = SilkMothEntity.this.getX();

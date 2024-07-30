@@ -200,7 +200,6 @@ import net.mcreator.catastrophemod.item.BeetleCallerItem;
 import net.mcreator.catastrophemod.item.BackPackItem;
 import net.mcreator.catastrophemod.item.AxeMasteryCrestItem;
 import net.mcreator.catastrophemod.item.AtlanticSeaNettleItemItem;
-import net.mcreator.catastrophemod.item.AssassinsGloryItem;
 import net.mcreator.catastrophemod.item.AmuletOfWeakeningItem;
 import net.mcreator.catastrophemod.item.AmuletOfVitalityItem;
 import net.mcreator.catastrophemod.item.AeroBootsItem;
@@ -268,7 +267,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> GOLDEN_BRACELET = REGISTRY.register("golden_bracelet", () -> new GoldenBraceletItem());
 	public static final RegistryObject<Item> NETHER_TREADS = REGISTRY.register("nether_treads", () -> new NetherTreadsItem());
 	public static final RegistryObject<Item> SEA_PENDANT = REGISTRY.register("sea_pendant", () -> new SeaPendantItem());
-	public static final RegistryObject<Item> ASSASSINS_GLORY = REGISTRY.register("assassins_glory", () -> new AssassinsGloryItem());
 	public static final RegistryObject<Item> MUSIC_DISC_PROLIFERATING_MUSHROOMS = REGISTRY.register("music_disc_proliferating_mushrooms", () -> new MusicDiscProliferatingMushroomsItem());
 	public static final RegistryObject<Item> MUSIC_DISC_OVERGROWN_GROVE = REGISTRY.register("music_disc_overgrown_grove", () -> new MusicDiscOvergrownGroveItem());
 	public static final RegistryObject<Item> MUSIC_DISC_NETHERS_FURY = REGISTRY.register("music_disc_nethers_fury", () -> new MusicDiscNethersFuryItem());

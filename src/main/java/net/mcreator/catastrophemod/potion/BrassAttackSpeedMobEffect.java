@@ -1,6 +1,14 @@
 
 package net.mcreator.catastrophemod.potion;
 
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
+import net.mcreator.catastrophemod.procedures.BrassAttackSpeedEffectStartedappliedProcedure;
+import net.mcreator.catastrophemod.procedures.BrassAttackSpeedEffectExpiresProcedure;
+
 public class BrassAttackSpeedMobEffect extends MobEffect {
 	public BrassAttackSpeedMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -13262);
