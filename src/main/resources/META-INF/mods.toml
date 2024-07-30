@@ -4,7 +4,7 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="catastrophe_mod"
-version="1.1.0"
+version="1.0.0"
 displayName="Catastrophe Mod"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
