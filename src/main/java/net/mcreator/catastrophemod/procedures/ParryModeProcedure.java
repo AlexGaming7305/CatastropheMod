@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
@@ -124,9 +125,10 @@ public class ParryModeProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_melee_attack")), SoundSource.PLAYERS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_melee_attack")), SoundSource.PLAYERS, 1,
+									(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_melee_attack")), SoundSource.PLAYERS, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_melee_attack")), SoundSource.PLAYERS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
 						}
 					}
 					{
@@ -147,8 +149,8 @@ public class ParryModeProcedure {
 					});
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
-					if (!(entity instanceof ServerPlayer _plr38 && _plr38.level() instanceof ServerLevel
-							&& _plr38.getAdvancements().getOrStartProgress(_plr38.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr39 && _plr39.level() instanceof ServerLevel
+							&& _plr39.getAdvancements().getOrStartProgress(_plr39.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
@@ -198,9 +200,10 @@ public class ParryModeProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1,
+									(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
 						}
 					}
 					{
@@ -221,8 +224,8 @@ public class ParryModeProcedure {
 					});
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
-					if (!(entity instanceof ServerPlayer _plr51 && _plr51.level() instanceof ServerLevel
-							&& _plr51.getAdvancements().getOrStartProgress(_plr51.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr53 && _plr53.level() instanceof ServerLevel
+							&& _plr53.getAdvancements().getOrStartProgress(_plr53.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);

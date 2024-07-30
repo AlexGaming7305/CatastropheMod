@@ -16,6 +16,9 @@
     "onStarted": {
       "name": "StunnedEffectStartedapplied"
     },
+    "onActiveTick": {
+      "name": "StunnedOnEffectActiveTick"
+    },
     "onExpired": {
       "name": "StunnedEffectExpires"
     }

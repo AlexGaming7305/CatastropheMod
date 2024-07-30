@@ -1,8 +1,14 @@
 
 package net.mcreator.catastrophemod.enchantment;
 
-public class PreservationEnchantment extends Enchantment {
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.entity.EquipmentSlot;
 
+import java.util.List;
+
+public class PreservationEnchantment extends Enchantment {
 	public PreservationEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.BREAKABLE, slots);
 	}
@@ -16,5 +22,4 @@ public class PreservationEnchantment extends Enchantment {
 	public boolean isTreasureOnly() {
 		return true;
 	}
-
 }

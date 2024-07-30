@@ -1,8 +1,7 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.entity.Entity;
 
 public class SeaSnailOnEntityTickUpdateProcedure {
 	public static void execute(Entity entity) {

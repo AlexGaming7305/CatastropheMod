@@ -11,6 +11,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -19,6 +21,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 import net.mcreator.catastrophemod.entity.KnifeOfProficiencyProjectileProjectileEntity;
 
 public class KnifeOfProficiencyRightclickedProcedure {
@@ -47,13 +50,14 @@ public class KnifeOfProficiencyRightclickedProcedure {
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1,
+							Mth.nextInt(RandomSource.create(), (int) 0.9, (int) 1.1));
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, Mth.nextInt(RandomSource.create(), (int) 0.9, (int) 1.1), false);
 				}
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 10);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (10 - (10 * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.THROWINGSPEED.get()).getBaseValue()) / 100));
 			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).knife_of_proficiency < 3) {
 				{
 					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).knife_of_proficiency + 1;
@@ -114,13 +118,14 @@ public class KnifeOfProficiencyRightclickedProcedure {
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1,
+							Mth.nextInt(RandomSource.create(), (int) 0.9, (int) 1.1));
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:knife_is_thrown")), SoundSource.PLAYERS, 1, Mth.nextInt(RandomSource.create(), (int) 0.9, (int) 1.1), false);
 				}
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 30);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (30 - (30 * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.THROWINGSPEED.get()).getBaseValue()) / 100));
 			{
 				double _setval = 0;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

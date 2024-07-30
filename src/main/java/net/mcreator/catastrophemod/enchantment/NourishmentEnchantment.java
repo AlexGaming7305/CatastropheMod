@@ -1,8 +1,11 @@
 
 package net.mcreator.catastrophemod.enchantment;
 
-public class NourishmentEnchantment extends Enchantment {
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.entity.EquipmentSlot;
 
+public class NourishmentEnchantment extends Enchantment {
 	public NourishmentEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.ARMOR_HEAD, slots);
 	}
@@ -11,5 +14,4 @@ public class NourishmentEnchantment extends Enchantment {
 	public int getMaxLevel() {
 		return 2;
 	}
-
 }
