@@ -11,29 +11,30 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.network.chat.Component;
 
-import net.mcreator.catastrophemod.procedures.LeatherGloveBaubleIsUnequippedProcedure;
-import net.mcreator.catastrophemod.procedures.LeatherGloveBaubleIsEquippedProcedure;
+import net.mcreator.catastrophemod.procedures.BarbedArrowheadBaubleIsUnequippedProcedure;
+import net.mcreator.catastrophemod.procedures.BarbedArrowheadBaubleIsEquippedProcedure;
 
 import java.util.List;
 
-public class LeatherGloveItem extends Item implements ICurioItem {
-	public LeatherGloveItem() {
+public class BarbedArrowheadItem extends Item implements ICurioItem {
+	public BarbedArrowheadItem() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A79+0.2 Attack Speed"));
+		list.add(Component.literal("\u00A77Arrows inflict \u00A7cBleeding"));
+		list.add(Component.literal("\u00A79+5 Armor Penetration"));
 	}
 
 	@Override
 	public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
-		LeatherGloveBaubleIsEquippedProcedure.execute(slotContext.entity());
+		BarbedArrowheadBaubleIsEquippedProcedure.execute(slotContext.entity());
 	}
 
 	@Override
 	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack) {
-		LeatherGloveBaubleIsUnequippedProcedure.execute(slotContext.entity());
+		BarbedArrowheadBaubleIsUnequippedProcedure.execute(slotContext.entity());
 	}
 }

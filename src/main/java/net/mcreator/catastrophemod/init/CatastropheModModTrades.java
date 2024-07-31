@@ -21,6 +21,9 @@ public class CatastropheModModTrades {
 			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(CatastropheModModItems.QUIVER.get()),
 
 					new ItemStack(Items.EMERALD, 12), 3, 25, 0.05f));
+			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(Items.EMERALD, 10),
+
+					new ItemStack(CatastropheModModItems.BARBED_ARROWHEAD.get()), 3, 5, 0.05f));
 		}
 		if (event.getType() == VillagerProfession.WEAPONSMITH) {
 			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(Items.EMERALD, 18),

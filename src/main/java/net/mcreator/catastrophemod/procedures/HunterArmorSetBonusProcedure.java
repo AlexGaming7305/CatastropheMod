@@ -33,7 +33,6 @@ public class HunterArmorSetBonusProcedure {
 		if (entity == null)
 			return;
 		double damage = 0;
-		Entity projectile = null;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CatastropheModModItems.HUNTER_HELMET.get()) {
 			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).hunter_armor_hat == false) {
 				{

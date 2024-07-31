@@ -3,9 +3,9 @@
   "_type": "curiosbauble",
   "definition": {
     "renderType": 0,
-    "texture": "leather_glove",
+    "texture": "barbed_arrowhead",
     "customModelName": "Normal",
-    "name": "Leather Glove",
+    "name": "Barbed Arrowhead",
     "rarity": "COMMON",
     "slotType": "Accessory",
     "baubleModel": "Default",
@@ -30,7 +30,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9+0.2 Attack Speed"
+        "§7Arrows inflict §cBleeding",
+        "§9+5 Armor Penetration"
       ]
     },
     "hasGlow": false,
@@ -41,10 +42,10 @@
     "inventoryStackSize": 64,
     "slotAmount": 1,
     "onEquip": {
-      "name": "LeatherGloveBaubleIsEquipped"
+      "name": "BarbedArrowheadBaubleIsEquipped"
     },
     "onUnequip": {
-      "name": "LeatherGloveBaubleIsUnequipped"
+      "name": "BarbedArrowheadBaubleIsUnequipped"
     },
     "isFood": false,
     "friendlyPigs": false,

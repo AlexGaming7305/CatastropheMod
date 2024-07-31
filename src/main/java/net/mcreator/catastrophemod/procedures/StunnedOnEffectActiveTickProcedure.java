@@ -1,8 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
 
 public class StunnedOnEffectActiveTickProcedure {
 	public static void execute(Entity entity) {
