@@ -135,6 +135,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.AXE_MASTERY_CREST.get());
 				tabData.accept(CatastropheModModItems.SWORD_MASTERY_CREST.get());
 				tabData.accept(CatastropheModModItems.SPEAR_MASTERY_CREST.get());
+				tabData.accept(CatastropheModModItems.BARBED_ARROWHEAD.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> BOSS_SUMMONS = REGISTRY.register("boss_summons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.boss_summons")).icon(() -> new ItemStack(CatastropheModModItems.COPPER_TOKEN.get())).displayItems((parameters, tabData) -> {
