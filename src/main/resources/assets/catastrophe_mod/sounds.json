@@ -404,15 +404,6 @@
       }
     ]
   },
-  "frozen_shield_activate": {
-    "subtitle": "subtitles.frozen_shield_activate",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:frozen_shield_activate",
-        "stream": false
-      }
-    ]
-  },
   "ice_magic": {
     "subtitle": "subtitles.ice_magic",
     "sounds": [
@@ -616,6 +607,24 @@
     "sounds": [
       {
         "name": "catastrophe_mod:mine_blast",
+        "stream": false
+      }
+    ]
+  },
+  "frozen_shield_activate": {
+    "subtitle": "subtitles.frozen_shield_activate",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:frozen_shield_activate",
+        "stream": false
+      }
+    ]
+  },
+  "marksman_shot": {
+    "subtitle": "subtitles.marksman_shot",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:marksman_shot",
         "stream": false
       }
     ]
