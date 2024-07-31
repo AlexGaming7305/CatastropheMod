@@ -10,13 +10,13 @@
     "biomes": [],
     "damageTypes": [
       {
-        "value": "CUSTOM:Bleed"
+        "value": "CUSTOM:Electrocuted"
       },
       {
         "value": "CUSTOM:Electricity"
       },
       {
-        "value": "CUSTOM:Electrocuted"
+        "value": "CUSTOM:Bleed"
       },
       {
         "value": "CUSTOM:Incinerated"

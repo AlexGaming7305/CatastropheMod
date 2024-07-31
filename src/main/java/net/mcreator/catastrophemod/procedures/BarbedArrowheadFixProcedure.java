@@ -16,7 +16,7 @@ import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class StormCatalystFixProcedure {
+public class BarbedArrowheadFixProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		execute(event, event.getEntity());
@@ -29,8 +29,8 @@ public class StormCatalystFixProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(CatastropheModModItems.STORM_CATALYST.get(), lv).isPresent() : false) {
-			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAGICDAMAGE.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.MAGICDAMAGE.get()).getBaseValue() - 5));
+		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(CatastropheModModItems.BARBED_ARROWHEAD.get(), lv).isPresent() : false) {
+			((LivingEntity) entity).getAttribute(CatastropheModModAttributes.ARMORPENETRATION.get()).setBaseValue((((LivingEntity) entity).getAttribute(CatastropheModModAttributes.ARMORPENETRATION.get()).getBaseValue() - 5));
 		}
 	}
 }
