@@ -23,6 +23,9 @@
       },
       {
         "value": "CUSTOM:LiverFailure"
+      },
+      {
+        "value": "SONIC_BOOM"
       }
     ],
     "name": "unparriable_damage",

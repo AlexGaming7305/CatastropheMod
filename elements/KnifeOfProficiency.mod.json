@@ -28,9 +28,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7\"There's no way they'd come back to life, right? You know, as a hungry ghost....\"",
-        "§aRight-click: §7Throws one knife",
-        "§aSneak + Right-click: §7Throws a spread of three knives"
+        "§aRight-click: §7Every third throw is a spread of three knives",
+        "§7\"There's no way they'd come back to life, right? You know, as a hungry ghost....\""
       ]
     },
     "glowCondition": {

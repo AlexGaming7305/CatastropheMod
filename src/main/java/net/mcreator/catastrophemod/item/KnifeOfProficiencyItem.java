@@ -23,9 +23,8 @@ public class KnifeOfProficiencyItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Every third throw is a spread of three knives"));
 		list.add(Component.literal("\u00A77\"There's no way they'd come back to life, right? You know, as a hungry ghost....\""));
-		list.add(Component.literal("\u00A7aRight-click: \u00A77Throws one knife"));
-		list.add(Component.literal("\u00A7aSneak + Right-click: \u00A77Throws a spread of three knives"));
 	}
 
 	@Override

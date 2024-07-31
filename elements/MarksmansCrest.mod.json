@@ -29,7 +29,9 @@
     "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Every third shot is a Marksman Shot and deals §9+25% Ranged Damage"
+      ]
     },
     "hasGlow": false,
     "customProperties": {},
