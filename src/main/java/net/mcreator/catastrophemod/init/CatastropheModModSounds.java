@@ -62,7 +62,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> CURSED_PHASE = REGISTRY.register("cursed_phase", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "cursed_phase")));
 	public static final RegistryObject<SoundEvent> CURSED_DASH = REGISTRY.register("cursed_dash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "cursed_dash")));
 	public static final RegistryObject<SoundEvent> BLIZZARD_LOOP = REGISTRY.register("blizzard_loop", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "blizzard_loop")));
-	public static final RegistryObject<SoundEvent> FROZEN_SHIELD_ACTIVATE = REGISTRY.register("frozen_shield_activate", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "frozen_shield_activate")));
 	public static final RegistryObject<SoundEvent> ICE_MAGIC = REGISTRY.register("ice_magic", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "ice_magic")));
 	public static final RegistryObject<SoundEvent> FROST_BLAST = REGISTRY.register("frost_blast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "frost_blast")));
 	public static final RegistryObject<SoundEvent> AXE_THROW = REGISTRY.register("axe_throw", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "axe_throw")));
@@ -86,4 +85,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> SHOVEL_HIT = REGISTRY.register("shovel_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "shovel_hit")));
 	public static final RegistryObject<SoundEvent> PICKAXE_HIT = REGISTRY.register("pickaxe_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "pickaxe_hit")));
 	public static final RegistryObject<SoundEvent> MINE_BLAST = REGISTRY.register("mine_blast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mine_blast")));
+	public static final RegistryObject<SoundEvent> FROZEN_SHIELD_ACTIVATE = REGISTRY.register("frozen_shield_activate", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "frozen_shield_activate")));
+	public static final RegistryObject<SoundEvent> MARKSMAN_SHOT = REGISTRY.register("marksman_shot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "marksman_shot")));
 }

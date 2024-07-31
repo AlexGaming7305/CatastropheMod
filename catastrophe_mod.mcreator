@@ -24555,9 +24555,9 @@
     },
     {
       "name": "frozen_shield",
-      "type": "number",
+      "type": "logic",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "false"
     },
     {
       "name": "mana_star_uses",
@@ -25222,14 +25222,6 @@
       "subtitle": "Blizzard"
     },
     {
-      "name": "frozen_shield_activate",
-      "files": [
-        "frozen_shield_activate"
-      ],
-      "category": "player",
-      "subtitle": "Frozen Shield activate"
-    },
-    {
       "name": "ice_magic",
       "files": [
         "ice_magic_casts"
@@ -25412,6 +25404,22 @@
       ],
       "category": "player",
       "subtitle": "Mine blast"
+    },
+    {
+      "name": "frozen_shield_activate",
+      "files": [
+        "frozen_shield_activate"
+      ],
+      "category": "player",
+      "subtitle": "Frozen Shield activate"
+    },
+    {
+      "name": "marksman_shot",
+      "files": [
+        "marksman_shot"
+      ],
+      "category": "player",
+      "subtitle": "Marksman shot"
     }
   ],
   "language_map": {
@@ -26131,8 +26139,8 @@
       "item.catastrophe_mod.sea_shovel": "Sea Shovel",
       "gui.alexs_mod.aegex_5_gui.label_after_the_death_of_the_great_sam": "after the death of the great samurai.",
       "item.alexs_mod.blazing_armor_helmet": "§cBlazing Helmet",
-      "entity.catastrophe_mod.furious_wind": "Furious Wind",
       "death.attack.electricity.player": "%1$s experienced short circuit whilst trying to escape %2$s",
+      "entity.catastrophe_mod.furious_wind": "Furious Wind",
       "item.alexs_mod.acid_bucket": "Acid Bucket",
       "item.alexs_mod.music_disc_proliferating_mushrooms.desc": "Freddy Frostbear - Proliferating Mushrooms",
       "subtitles.air_slash": "air_slash",
@@ -26454,6 +26462,7 @@
       "gui.alexs_mod.aegex_1_gui.label_then_ill_explore_further_and_be": "Then I\u0027ll explore further and beyond",
       "effect.alexs_mod.marked_for_death": "Marked For Death",
       "item.alexs_mod.tungsten_pickaxe": "Tungsten Pickaxe",
+      "subtitles.marksman_shot": "Marksman shot",
       "item.alexs_mod.cipher_spawn_egg": "Cipher Spawn Egg",
       "subtitles.armageddon_laser_beam_shot": "Armageddon Laser Beam Shot",
       "gui.alexs_mod.aegex_1_gui.label_perhaps_rabbits": "Perhaps, rabbits?",
