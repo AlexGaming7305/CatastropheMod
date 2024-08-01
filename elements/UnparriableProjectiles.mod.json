@@ -6,11 +6,7 @@
     "items": [],
     "blocks": [],
     "functions": [],
-    "entities": [
-      {
-        "value": "EntityArrow"
-      }
-    ],
+    "entities": [],
     "biomes": [],
     "damageTypes": [],
     "name": "unparriable_projectiles",

@@ -41,7 +41,7 @@ public class ViolentDifficultyBleedingProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double damage = 0;
-		if (!(sourceentity instanceof Player)
+		if (!(sourceentity instanceof Player) && !(entity instanceof LivingEntity _livEnt1 && _livEnt1.isBlocking())
 				&& ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem
 						|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem
 						|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof PickaxeItem

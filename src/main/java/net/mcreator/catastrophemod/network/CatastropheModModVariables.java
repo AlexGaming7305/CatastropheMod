@@ -433,7 +433,7 @@ public class CatastropheModModVariables {
 		public double intensity_timer = 0;
 		public boolean nightfalls_demise_effects = false;
 		public double knife_of_proficiency = 0;
-		public double frozen_shield = 0;
+		public boolean frozen_shield = false;
 		public double mana_star_uses = 0;
 		public double crystal_bow_charge = 0;
 		public boolean crystal_bow_load = false;
@@ -560,7 +560,7 @@ public class CatastropheModModVariables {
 			nbt.putDouble("intensity_timer", intensity_timer);
 			nbt.putBoolean("nightfalls_demise_effects", nightfalls_demise_effects);
 			nbt.putDouble("knife_of_proficiency", knife_of_proficiency);
-			nbt.putDouble("frozen_shield", frozen_shield);
+			nbt.putBoolean("frozen_shield", frozen_shield);
 			nbt.putDouble("mana_star_uses", mana_star_uses);
 			nbt.putDouble("crystal_bow_charge", crystal_bow_charge);
 			nbt.putBoolean("crystal_bow_load", crystal_bow_load);
@@ -684,7 +684,7 @@ public class CatastropheModModVariables {
 			intensity_timer = nbt.getDouble("intensity_timer");
 			nightfalls_demise_effects = nbt.getBoolean("nightfalls_demise_effects");
 			knife_of_proficiency = nbt.getDouble("knife_of_proficiency");
-			frozen_shield = nbt.getDouble("frozen_shield");
+			frozen_shield = nbt.getBoolean("frozen_shield");
 			mana_star_uses = nbt.getDouble("mana_star_uses");
 			crystal_bow_charge = nbt.getDouble("crystal_bow_charge");
 			crystal_bow_load = nbt.getBoolean("crystal_bow_load");
