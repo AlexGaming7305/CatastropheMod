@@ -7,6 +7,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
@@ -31,7 +32,7 @@ public class AxeDamageProcedureProcedure {
 		if (sourceentity == null)
 			return;
 		double damage = 0;
-		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
+		if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
 			damage = amount + (amount * ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.AXEDAMAGE.get()).getBaseValue()) / 100;
 			event2.setAmount((float) damage);

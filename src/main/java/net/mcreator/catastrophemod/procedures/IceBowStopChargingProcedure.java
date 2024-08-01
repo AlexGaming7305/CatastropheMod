@@ -73,8 +73,8 @@ public class IceBowStopChargingProcedure {
 									+ Mth.nextInt(RandomSource.create(), (int) (-0.5), 1)) - entity.getX()) * 0.1),
 							(((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()
 									+ Mth.nextInt(RandomSource.create(), -1, 1)) - entity.getY()) * 0.1),
-							(((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()
-									+ Mth.nextInt(RandomSource.create(), (int) (-0.5), 1) + Mth.nextInt(RandomSource.create(), (int) (-0.5), 1)) - entity.getZ()) * 0.1));
+							(((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(3)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()
+									+ Mth.nextInt(RandomSource.create(), (int) (-0.5), 1)) - entity.getZ()) * 0.1));
 				}
 			}
 			{

@@ -9,11 +9,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
 
 public class ShootingStarOnEntityTickUpdateProcedure {
@@ -39,8 +37,6 @@ public class ShootingStarOnEntityTickUpdateProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		}
-		entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (-0.8), (entity.getDeltaMovement().z())));
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.STARRY_SPARKLE.get()), x, y, z, 2, 0.2, 0.2, 0.2, 0.1);
+		entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (-1), (entity.getDeltaMovement().z())));
 	}
 }
