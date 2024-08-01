@@ -4145,6 +4145,42 @@
       "path": "~/Items/Weapons/Magic Weapons"
     },
     {
+      "name": "PhantomLootTable",
+      "type": "procedure",
+      "sortid": 1755,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/PhantomLootTableProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
       "name": "Intelligence",
       "type": "potioneffect",
       "sortid": 1756,
@@ -7484,15 +7520,10 @@
       "locked_code": false,
       "registry_name": "flame_projectile_projectile_hits_block",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FlameProjectileProjectileHitsBlockProcedure.java"
+        ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -14970,14 +15001,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -17908,8 +17931,8 @@
       "registry_name": "flame_projectile_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/FlameProjectileProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/FlameProjectileProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/FlameProjectileProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FlameProjectileProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -18478,8 +18501,8 @@
       "registry_name": "fiery_round_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/FieryRoundProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/FieryRoundProjectileEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/FieryRoundProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FieryRoundProjectileRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -23390,6 +23413,20 @@
       "path": "~/Entities"
     },
     {
+      "name": "SkeletonLootTable",
+      "type": "loottable",
+      "sortid": 2975,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/blocks/skeleton_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
       "name": "PillagerOutpostLootTable",
       "type": "loottable",
       "sortid": 2977,
@@ -23508,20 +23545,12 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "sourceentity",
             "type": "entity"
           },
           {
             "name": "amount",
             "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -24083,48 +24112,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "Sugarcoated",
-      "type": "damagetype",
-      "sortid": 3033,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sugarcoated",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/damage_type/sugarcoated.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "SkeletonLootTable",
-      "type": "loottable",
-      "sortid": 3034,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skeleton_loot_table",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/loot_tables/entities/skeleton_loot_table.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "PhantomLootTable",
-      "type": "loottable",
-      "sortid": 3035,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "phantom_loot_table",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/loot_tables/entities/phantom_loot_table.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "PhantomLootTable1",
       "type": "lootmodifier",
       "sortid": 3036,
@@ -24148,6 +24135,20 @@
       "metadata": {
         "files": [
           "src/main/resources/data/catastrophe_mod/tags/damage_type/guard_break_damage.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "Sugarcoated",
+      "type": "damagetype",
+      "sortid": 3033,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sugarcoated",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/damage_type/sugarcoated.json"
         ]
       },
       "path": "~/Misc"
@@ -25555,7 +25556,6 @@
       "item.catastrophe_mod.music_disc_strike_you_down.desc": "Freddy Frostbear - Strike You Down!",
       "item.alexs_mod.armageddon_robot_spawn_egg": "Armageddon Robot Spawn Egg",
       "block.alexs_mod.wuflar_plating": "§9Wuflar Plating",
-      "death.attack.sugarcoated.item": "%1$s sugarcoated it",
       "item.catastrophe_mod.freezing_staff": "§bFreezing Staff",
       "effect.alexs_mod.back_step_cool_down": "Back Step Cool Down",
       "item.minecraft.potion.effect.impedance_potion_long": "Potion of Impedance",
@@ -25586,8 +25586,8 @@
       "subtitles.earthbound_wraith_groundpounds": "Earthbound Wraith ground-pounds",
       "attribute.catastrophe_mod.casting_speed": "Casting Speed",
       "item.catastrophe_mod.lesser_mana_potion": "Lesser Mana Potion",
-      "item.alexs_mod.tungsten_sword": "Tungsten Sword",
       "item.catastrophe_mod.blazing_phoenix_spawn_egg": "Blazing Phoenix Spawn Egg",
+      "item.alexs_mod.tungsten_sword": "Tungsten Sword",
       "item.catastrophe_mod.natureite_armor_boots": "§aNaturite Boots",
       "item.alexs_mod.ancient_armor_chestplate": "Ancient Chestplate",
       "item.catastrophe_mod.natureite_axe": "§aNaturite Axe",
@@ -25802,7 +25802,6 @@
       "item.alexs_mod.poisoned_vines": "Poisoned Vines",
       "subtitles.blizzard_loop": "Blizzard",
       "gui.catastrophe_mod.mana_bar_number.label_mana1": "Mana:",
-      "death.attack.sugarcoated.player": "%1$s sugarcoated it whilst trying to escape %2$s",
       "item.catastrophe_mod.sepulcher_loot_bundle": "Sepulcher Loot Bundle",
       "item.alexs_mod.prismal_leggings": "§bPrismal Leggings",
       "item.alexs_mod.music_disc_outside_of_the_atmosphere": "Music Disc",
@@ -25942,7 +25941,6 @@
       "item.catastrophe_mod.brass_colored_shovel": "§eBrass Colored Shovel",
       "subtitles.outside_of_the_atmosphere": "Outside of the Atmosphere",
       "subtitles.mine_blast": "Mine blast",
-      "death.attack.sugarcoated": "%1$s sugarcoated it",
       "entity.catastrophe_mod.nature_blessed_spirit": "Nature Blessed Spirit",
       "item.alexs_mod.acid_tarantula": "Acid Tarantula",
       "gui.alexs_mod.aegex_2_gui.label_to_arm_my_rabbits": "to arm my rabbits",
