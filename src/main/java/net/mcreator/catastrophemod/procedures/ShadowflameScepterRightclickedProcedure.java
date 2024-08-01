@@ -8,6 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
@@ -16,6 +17,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
 import net.mcreator.catastrophemod.entity.ShadowfireSoulNoGravityProjectileEntity;
 import net.mcreator.catastrophemod.entity.ShadowFireballProjectileEntity;
 
@@ -114,7 +116,7 @@ public class ShadowflameScepterRightclickedProcedure {
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 60);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (60 - (60 * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.CASTINGSPEED.get()).getBaseValue()) / 100));
 		}
 	}
 }

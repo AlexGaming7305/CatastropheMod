@@ -38,6 +38,8 @@ public class ViolentDifficultyDamageProcedure {
 			event2.setAmount((float) damage);
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("hit in violent"), false);
+			if (sourceentity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("you hit in violent"), false);
 		}
 	}
 }

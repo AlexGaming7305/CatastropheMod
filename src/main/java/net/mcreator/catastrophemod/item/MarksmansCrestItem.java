@@ -20,5 +20,6 @@ public class MarksmansCrestItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("\u00A77Every third shot is a Marksman Shot and deals \u00A79+25% Ranged Damage"));
 	}
 }
