@@ -1,0 +1,10 @@
+{
+  "type": "catastrophe_mod:catastrophe_mod_loot_modifier",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/phantom"
+    }
+  ],
+  "lootTable": "catastrophe_mod:entities/phantom_loot_table"
+}

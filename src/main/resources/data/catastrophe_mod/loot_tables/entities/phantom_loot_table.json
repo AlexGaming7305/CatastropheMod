@@ -1,13 +1,13 @@
 {
-  "type": "minecraft:block",
+  "type": "minecraft:entity",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "catastrophe_mod:quiver",
-          "weight": 3,
+          "name": "catastrophe_mod:spell_of_phantoms",
+          "weight": 10,
           "functions": [
             {
               "function": "set_count",
@@ -21,7 +21,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:air",
-          "weight": 97,
+          "weight": 90,
           "functions": [
             {
               "function": "set_count",
@@ -35,5 +35,5 @@
       ]
     }
   ],
-  "random_sequence": "catastrophe_mod:blocks/skeleton_loot_table"
+  "random_sequence": "catastrophe_mod:entities/phantom_loot_table"
 }

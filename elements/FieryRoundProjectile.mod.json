@@ -15,9 +15,6 @@
     "knockback": 0,
     "entityModel": "Modeliron_round",
     "customModelTexture": "fiery_round_texture.png",
-    "onHitsBlock": {
-      "name": "FieryRoundProjectileHitsLivingEntity"
-    },
     "onHitsEntity": {
       "name": "FieryRoundProjectileHitsLivingEntity"
     },

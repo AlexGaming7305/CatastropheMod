@@ -32,7 +32,7 @@ public class AccursedTomeRightclickedProcedure {
 				});
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (10 - (10 * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.CASTINGSPEED.get()).getBaseValue()) / 100));
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (15 - (15 * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.CASTINGSPEED.get()).getBaseValue()) / 100));
 			if (world instanceof ServerLevel projectileLevel) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {

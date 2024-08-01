@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "loottable",
   "definition": {
-    "type": "Block",
+    "type": "Entity",
     "pools": [
       {
         "minrolls": 1,
@@ -42,7 +42,7 @@
         ]
       }
     ],
-    "name": "blocks/skeleton_loot_table",
+    "name": "entities/skeleton_loot_table",
     "namespace": "mod"
   }
 }

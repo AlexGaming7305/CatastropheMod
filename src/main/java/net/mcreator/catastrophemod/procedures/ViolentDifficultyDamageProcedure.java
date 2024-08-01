@@ -9,7 +9,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
@@ -32,14 +31,10 @@ public class ViolentDifficultyDamageProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		double damage = 0;
-		if (entity instanceof Player && sourceentity instanceof LivingEntity && CatastropheModModVariables.WorldVariables.get(world).violent_difficulty == true) {
+		if (entity instanceof Player && sourceentity instanceof LivingEntity && !(sourceentity instanceof Player) && CatastropheModModVariables.WorldVariables.get(world).violent_difficulty == true) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
 			damage = amount + (amount * 25) / 100;
 			event2.setAmount((float) damage);
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("hit in violent"), false);
-			if (sourceentity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("you hit in violent"), false);
 		}
 	}
 }

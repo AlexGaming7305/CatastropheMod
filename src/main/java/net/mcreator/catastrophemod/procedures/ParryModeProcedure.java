@@ -72,7 +72,7 @@ public class ParryModeProcedure {
 					entity.invulnerableTime = 20;
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() instanceof ShieldItem) {
 						if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
-							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
+							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sugarcoated"))), entity),
 									(float) ((amount * (50 + (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) * 10)) / 100));
 							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
@@ -84,7 +84,7 @@ public class ParryModeProcedure {
 								}
 							}
 						} else {
-							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
+							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sugarcoated"))), entity),
 									(float) ((amount * 50) / 100));
 							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
@@ -98,7 +98,7 @@ public class ParryModeProcedure {
 						}
 					} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShieldItem) {
 						if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
-							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
+							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sugarcoated"))), entity),
 									(float) ((amount * (50 + (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) * 10)) / 100));
 							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
@@ -110,7 +110,7 @@ public class ParryModeProcedure {
 								}
 							}
 						} else {
-							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
+							sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sugarcoated"))), entity),
 									(float) ((amount * 50) / 100));
 							if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.STUNNED.get(), 40, 0));
@@ -119,6 +119,29 @@ public class ParryModeProcedure {
 								if (_ist.hurt((int) amount, RandomSource.create(), null)) {
 									_ist.shrink(1);
 									_ist.setDamageValue(0);
+								}
+							}
+						}
+					}
+					if (damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:guard_break_damage")))) {
+						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() instanceof ShieldItem) {
+							if (entity instanceof Player _player)
+								_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem(), 100);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1, false);
+								}
+							}
+						} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShieldItem) {
+							if (entity instanceof Player _player)
+								_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 100);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						}
@@ -149,8 +172,8 @@ public class ParryModeProcedure {
 					});
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
-					if (!(entity instanceof ServerPlayer _plr39 && _plr39.level() instanceof ServerLevel
-							&& _plr39.getAdvancements().getOrStartProgress(_plr39.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr50 && _plr50.level() instanceof ServerLevel
+							&& _plr50.getAdvancements().getOrStartProgress(_plr50.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
@@ -198,6 +221,29 @@ public class ParryModeProcedure {
 							}
 						}
 					}
+					if (immediatesourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:guard_break_projectiles")))) {
+						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() instanceof ShieldItem) {
+							if (entity instanceof Player _player)
+								_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem(), 100);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1, false);
+								}
+							}
+						} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof ShieldItem) {
+							if (entity instanceof Player _player)
+								_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 100);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1, false);
+								}
+							}
+						}
+					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1,
@@ -224,8 +270,8 @@ public class ParryModeProcedure {
 					});
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
-					if (!(entity instanceof ServerPlayer _plr53 && _plr53.level() instanceof ServerLevel
-							&& _plr53.getAdvancements().getOrStartProgress(_plr53.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr75 && _plr75.level() instanceof ServerLevel
+							&& _plr75.getAdvancements().getOrStartProgress(_plr75.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
 						if (entity instanceof ServerPlayer _player) {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);

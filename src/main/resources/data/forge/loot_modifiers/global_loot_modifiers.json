@@ -6,7 +6,8 @@
     "catastrophe_mod:wither_skeleton_loot_table_1",
     "catastrophe_mod:zombie_loot_table_1",
     "catastrophe_mod:skeleton_loot_table_1",
-    "catastrophe_mod:pillager_outpost_loot_table_1"
+    "catastrophe_mod:pillager_outpost_loot_table_1",
+    "catastrophe_mod:phantom_loot_table_1"
   ],
   "replace": false
 }

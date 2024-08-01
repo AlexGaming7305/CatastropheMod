@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.commands.CommandSourceStack;
@@ -38,7 +39,12 @@ public class NoBouncingProjectilesProcedure {
 				}
 			}
 			if (immediatesourceentity instanceof Projectile) {
-				entity.invulnerableTime = 0;
+				if (!(entity instanceof Player)) {
+					entity.invulnerableTime = 0;
+				} else {
+					if (!immediatesourceentity.level().isClientSide())
+						immediatesourceentity.discard();
+				}
 			}
 		}
 	}
