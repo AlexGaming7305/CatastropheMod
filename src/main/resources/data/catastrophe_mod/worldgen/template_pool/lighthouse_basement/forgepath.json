@@ -1,0 +1,56 @@
+{
+  "name": "catastrophe_mod:lighthouse_basement/forgepath",
+  "fallback": "catastrophe_mod:lighthouse_basement/forge",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouseforgehallway",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+	{	
+      "weight": 1,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouseforgelefthallway",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 30,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouseforgecrosshallway",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouseforgeladder",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouseforgemultihallway",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    }
+  ]
+}

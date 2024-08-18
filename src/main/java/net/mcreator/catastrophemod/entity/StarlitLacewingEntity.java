@@ -297,7 +297,7 @@ public class StarlitLacewingEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		StarlitLacewingOnEntityTickUpdateProcedure.execute();
+		StarlitLacewingOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

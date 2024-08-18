@@ -21,6 +21,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
+import net.mcreator.catastrophemod.procedures.WoodenKatanaPropertyValueProviderProcedure;
 import net.mcreator.catastrophemod.item.WoodenSpearItem;
 import net.mcreator.catastrophemod.item.WoodenKatanaItem;
 import net.mcreator.catastrophemod.item.WoodenBowItem;
@@ -162,6 +163,7 @@ import net.mcreator.catastrophemod.item.GraveDiggerItem;
 import net.mcreator.catastrophemod.item.GoldenSpearItem;
 import net.mcreator.catastrophemod.item.GoldenBraceletItem;
 import net.mcreator.catastrophemod.item.GloveoftheDesertsItem;
+import net.mcreator.catastrophemod.item.GiantIsopodScaleItem;
 import net.mcreator.catastrophemod.item.FrozenShieldItem;
 import net.mcreator.catastrophemod.item.FreezingStaffItem;
 import net.mcreator.catastrophemod.item.FlamestrikeItem;
@@ -211,7 +213,6 @@ import net.mcreator.catastrophemod.CatastropheModMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CatastropheModModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, CatastropheModMod.MODID);
-	public static final RegistryObject<Item> WOODEN_KATANA = REGISTRY.register("wooden_katana", () -> new WoodenKatanaItem());
 	public static final RegistryObject<Item> REINFORCED_IRON_ARMOR_HELMET = REGISTRY.register("reinforced_iron_armor_helmet", () -> new Reinforced_IronArmorItem.Helmet());
 	public static final RegistryObject<Item> REINFORCED_IRON_ARMOR_CHESTPLATE = REGISTRY.register("reinforced_iron_armor_chestplate", () -> new Reinforced_IronArmorItem.Chestplate());
 	public static final RegistryObject<Item> REINFORCED_IRON_ARMOR_LEGGINGS = REGISTRY.register("reinforced_iron_armor_leggings", () -> new Reinforced_IronArmorItem.Leggings());
@@ -479,6 +480,8 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> SEA_SNAIL_SPAWN_EGG = REGISTRY.register("sea_snail_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.SEA_SNAIL, -9418193, -4018234, new Item.Properties()));
 	public static final RegistryObject<Item> GIANT_ISOPOD_SPAWN_EGG = REGISTRY.register("giant_isopod_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.GIANT_ISOPOD, -855041, -7641156, new Item.Properties()));
 	public static final RegistryObject<Item> BARBED_ARROWHEAD = REGISTRY.register("barbed_arrowhead", () -> new BarbedArrowheadItem());
+	public static final RegistryObject<Item> GIANT_ISOPOD_SCALE = REGISTRY.register("giant_isopod_scale", () -> new GiantIsopodScaleItem());
+	public static final RegistryObject<Item> WOODEN_KATANA = REGISTRY.register("wooden_katana", () -> new WoodenKatanaItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
@@ -492,6 +495,8 @@ public class CatastropheModModItems {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			ItemProperties.register(NATURITE_SHIELD.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
+			ItemProperties.register(WOODEN_KATANA.get(), new ResourceLocation("catastrophe_mod:wooden_katana_wooden_katana_sheathed"),
+					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) WoodenKatanaPropertyValueProviderProcedure.execute(entity));
 		});
 	}
 }

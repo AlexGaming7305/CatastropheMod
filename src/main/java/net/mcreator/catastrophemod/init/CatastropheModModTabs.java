@@ -50,7 +50,6 @@ public class CatastropheModModTabs {
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> MELEE = REGISTRY.register("melee",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.melee")).icon(() -> new ItemStack(CatastropheModModItems.ELECTRIFIED_COPPER_SWORD.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CatastropheModModItems.WOODEN_KATANA.get());
 				tabData.accept(CatastropheModModItems.REINFORCED_IRON_ARMOR_HELMET.get());
 				tabData.accept(CatastropheModModItems.REINFORCED_IRON_ARMOR_CHESTPLATE.get());
 				tabData.accept(CatastropheModModItems.REINFORCED_IRON_ARMOR_LEGGINGS.get());
@@ -86,6 +85,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.DIAMOND_DETONATION.get());
 				tabData.accept(CatastropheModModItems.BRASS_COLORED_SHOVEL.get());
 				tabData.accept(CatastropheModModItems.BRASS_COLORED_PICKAXE.get());
+				tabData.accept(CatastropheModModItems.WOODEN_KATANA.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.GLOVEOFTHE_DESERTS.get())).displayItems((parameters, tabData) -> {
@@ -282,6 +282,7 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.TWIG.get());
 			tabData.accept(CatastropheModModItems.SEA_CRYSTAL_GEODE.get());
 			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_ITEM.get());
+			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SCALE.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

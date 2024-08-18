@@ -1,0 +1,16 @@
+{
+  "name": "catastrophe_mod:lighthouse_basement/entrance",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 50,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/entrance/lighthouseentrance",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    }
+  ]
+}

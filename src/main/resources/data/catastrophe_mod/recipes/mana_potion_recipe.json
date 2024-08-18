@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:star"
+    },
+    "b": {
+      "item": "catastrophe_mod:sea_crystal_geode"
+    },
+    "c": {
+      "item": "catastrophe_mod:lesser_mana_potion"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:mana_potion",
+    "count": 1
+  }
+}

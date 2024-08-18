@@ -6,5 +6,5 @@
       "loot_table_id": "minecraft:entities/skeleton"
     }
   ],
-  "lootTable": "catastrophe_mod:blocks/skeleton_loot_table"
+  "lootTable": "catastrophe_mod:entities/skeleton_loot_table"
 }

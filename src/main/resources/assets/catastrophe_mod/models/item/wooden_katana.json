@@ -2,5 +2,13 @@
   "parent": "item/handheld",
   "textures": {
     "layer0": "catastrophe_mod:item/wooden_katana"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "catastrophe_mod:wooden_katana_wooden_katana_sheathed": 1
+      },
+      "model": "catastrophe_mod:item/wooden_katana_0"
+    }
+  ]
 }

@@ -11,11 +11,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.catastrophemod.procedures.WoodenKatanaRightclickedProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
 
 import java.util.List;
 
@@ -27,7 +26,7 @@ public class WoodenKatanaItem extends SwordItem {
 			}
 
 			public float getSpeed() {
-				return 2f;
+				return 4f;
 			}
 
 			public float getAttackDamageBonus() {
@@ -35,7 +34,7 @@ public class WoodenKatanaItem extends SwordItem {
 			}
 
 			public int getLevel() {
-				return 0;
+				return 1;
 			}
 
 			public int getEnchantmentValue() {
@@ -43,9 +42,15 @@ public class WoodenKatanaItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(ItemTags.create(new ResourceLocation("minecraft:planks")));
+				return Ingredient.of(new ItemStack(CatastropheModModItems.TWIG.get()));
 			}
 		}, 3, -2.2f, new Item.Properties());
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Sheaths the katana and the next attack deals \u00A79+50% Melee Damage"));
 	}
 
 	@Override
@@ -53,14 +58,5 @@ public class WoodenKatanaItem extends SwordItem {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		WoodenKatanaRightclickedProcedure.execute(entity, ar.getObject());
 		return ar;
-	}
-
-	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77\"Not very practical, but still better than nothing\""));
-		list.add(Component.literal("\u00A7aRight-click: \u00A77Sheaths the katana"));
-		list.add(Component.literal("\u00A77Right-clicking again will perform a leap attack"));
-		list.add(Component.literal("\u00A77Attacking after sheathing deals 50% more damage"));
 	}
 }

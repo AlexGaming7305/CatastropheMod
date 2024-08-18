@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "catastrophe_mod:lighthouse",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 19,
+    "separation": 18,
+    "salt": 1463095153
+  }
+}

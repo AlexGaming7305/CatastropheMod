@@ -1,0 +1,6 @@
+{
+  "parent": "item/bow",
+  "textures": {
+    "layer0": "catastrophe_mod:item/wooden_katana_sheathed"
+  }
+}
