@@ -35,7 +35,7 @@ public class FlamestrikeRightclickedProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 				{
-					double _setval = 3;
+					double _setval = 2;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.intensity_timer = _setval;
 						capability.syncPlayerVariables(entity);
@@ -48,7 +48,7 @@ public class FlamestrikeRightclickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				CatastropheModMod.queueServerWork(5, () -> {
+				CatastropheModMod.queueServerWork(25, () -> {
 					{
 						boolean _setval = false;
 						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -138,7 +138,7 @@ public class FlamestrikeRightclickedProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 				{
-					double _setval = 3;
+					double _setval = 2;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.intensity_timer = _setval;
 						capability.syncPlayerVariables(entity);
@@ -151,7 +151,7 @@ public class FlamestrikeRightclickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				CatastropheModMod.queueServerWork(5, () -> {
+				CatastropheModMod.queueServerWork(25, () -> {
 					{
 						boolean _setval = false;
 						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -241,7 +241,7 @@ public class FlamestrikeRightclickedProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 				{
-					double _setval = 3;
+					double _setval = 2;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.intensity_timer = _setval;
 						capability.syncPlayerVariables(entity);
@@ -254,7 +254,7 @@ public class FlamestrikeRightclickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				CatastropheModMod.queueServerWork(5, () -> {
+				CatastropheModMod.queueServerWork(25, () -> {
 					{
 						boolean _setval = false;
 						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -347,7 +347,7 @@ public class FlamestrikeRightclickedProcedure {
 					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 				}
 				{
-					double _setval = 3;
+					double _setval = 2;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.intensity_timer = _setval;
 						capability.syncPlayerVariables(entity);
@@ -360,7 +360,7 @@ public class FlamestrikeRightclickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				CatastropheModMod.queueServerWork(5, () -> {
+				CatastropheModMod.queueServerWork(25, () -> {
 					{
 						boolean _setval = false;
 						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

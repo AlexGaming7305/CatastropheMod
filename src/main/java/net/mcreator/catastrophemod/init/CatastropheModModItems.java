@@ -22,6 +22,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.catastrophemod.procedures.WoodenKatanaPropertyValueProviderProcedure;
+import net.mcreator.catastrophemod.procedures.ElectrifiedSwordChargedPropertyValueProviderProcedure;
+import net.mcreator.catastrophemod.procedures.ElectrifiedSwordChargePropertyValueProviderProcedure;
 import net.mcreator.catastrophemod.item.WoodenSpearItem;
 import net.mcreator.catastrophemod.item.WoodenKatanaItem;
 import net.mcreator.catastrophemod.item.WoodenBowItem;
@@ -168,9 +170,9 @@ import net.mcreator.catastrophemod.item.FrozenShieldItem;
 import net.mcreator.catastrophemod.item.FreezingStaffItem;
 import net.mcreator.catastrophemod.item.FlamestrikeItem;
 import net.mcreator.catastrophemod.item.FirebrandItem;
+import net.mcreator.catastrophemod.item.ElectrifiedSwordItem;
 import net.mcreator.catastrophemod.item.ElectrifiedSpearItem;
 import net.mcreator.catastrophemod.item.ElectrifiedRoundItem;
-import net.mcreator.catastrophemod.item.ElectrifiedCopperSwordItem;
 import net.mcreator.catastrophemod.item.EarthboundWraithLootBundleItem;
 import net.mcreator.catastrophemod.item.EarthboundStaffItem;
 import net.mcreator.catastrophemod.item.EarthboundCoreItem;
@@ -185,6 +187,7 @@ import net.mcreator.catastrophemod.item.CrystallineEdgeItem;
 import net.mcreator.catastrophemod.item.CrystalSpearItem;
 import net.mcreator.catastrophemod.item.CrystalRoundItem;
 import net.mcreator.catastrophemod.item.CrystalBowItem;
+import net.mcreator.catastrophemod.item.CrystalBallItem;
 import net.mcreator.catastrophemod.item.CrimstoneGemItem;
 import net.mcreator.catastrophemod.item.CrimsonRayItem;
 import net.mcreator.catastrophemod.item.CrimsonDaggerItem;
@@ -240,7 +243,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> MINERAL_WRAITH_LOOT_BUNDLE = REGISTRY.register("mineral_wraith_loot_bundle", () -> new MineralWraithLootBundleItem());
 	public static final RegistryObject<Item> THORN_INFESTED_ARMOR_LOOT_BUNDLE = REGISTRY.register("thorn_infested_armor_loot_bundle", () -> new ThornInfestedArmorLootBundleItem());
 	public static final RegistryObject<Item> SPELLOF_LIGHTNING = REGISTRY.register("spellof_lightning", () -> new SpellofLightningItem());
-	public static final RegistryObject<Item> ELECTRIFIED_COPPER_SWORD = REGISTRY.register("electrified_copper_sword", () -> new ElectrifiedCopperSwordItem());
 	public static final RegistryObject<Item> SPELLOF_POISON = REGISTRY.register("spellof_poison", () -> new SpellofPoisonItem());
 	public static final RegistryObject<Item> ROSXITE_INGOT = REGISTRY.register("rosxite_ingot", () -> new RosxiteIngotItem());
 	public static final RegistryObject<Item> NATURES_BLESSING_HELMET = REGISTRY.register("natures_blessing_helmet", () -> new NaturesBlessingItem.Helmet());
@@ -439,7 +441,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> CURSED_ARMOR_CHESTPLATE = REGISTRY.register("cursed_armor_chestplate", () -> new CursedArmorItem.Chestplate());
 	public static final RegistryObject<Item> CURSED_ARMOR_LEGGINGS = REGISTRY.register("cursed_armor_leggings", () -> new CursedArmorItem.Leggings());
 	public static final RegistryObject<Item> CURSED_ARMOR_BOOTS = REGISTRY.register("cursed_armor_boots", () -> new CursedArmorItem.Boots());
-	public static final RegistryObject<Item> SEA_CRYSTAL_BLOCK = block(CatastropheModModBlocks.SEA_CRYSTAL_BLOCK);
 	public static final RegistryObject<Item> SEA_CRYSTAL_CLUSTER = block(CatastropheModModBlocks.SEA_CRYSTAL_CLUSTER);
 	public static final RegistryObject<Item> RING_OF_RESILIENCE = REGISTRY.register("ring_of_resilience", () -> new RingOfResilienceItem());
 	public static final RegistryObject<Item> RIPSAW = REGISTRY.register("ripsaw", () -> new RipsawItem());
@@ -482,6 +483,9 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> BARBED_ARROWHEAD = REGISTRY.register("barbed_arrowhead", () -> new BarbedArrowheadItem());
 	public static final RegistryObject<Item> GIANT_ISOPOD_SCALE = REGISTRY.register("giant_isopod_scale", () -> new GiantIsopodScaleItem());
 	public static final RegistryObject<Item> WOODEN_KATANA = REGISTRY.register("wooden_katana", () -> new WoodenKatanaItem());
+	public static final RegistryObject<Item> ELECTRIFIED_SWORD = REGISTRY.register("electrified_sword", () -> new ElectrifiedSwordItem());
+	public static final RegistryObject<Item> LIGHTHOUSE_LANTERN_BLOCK = block(CatastropheModModBlocks.LIGHTHOUSE_LANTERN_BLOCK);
+	public static final RegistryObject<Item> CRYSTAL_BALL = REGISTRY.register("crystal_ball", () -> new CrystalBallItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
@@ -497,6 +501,10 @@ public class CatastropheModModItems {
 			ItemProperties.register(NATURITE_SHIELD.get(), new ResourceLocation("blocking"), ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
 			ItemProperties.register(WOODEN_KATANA.get(), new ResourceLocation("catastrophe_mod:wooden_katana_wooden_katana_sheathed"),
 					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) WoodenKatanaPropertyValueProviderProcedure.execute(entity));
+			ItemProperties.register(ELECTRIFIED_SWORD.get(), new ResourceLocation("catastrophe_mod:electrified_sword_electrified_sword_charge"),
+					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) ElectrifiedSwordChargePropertyValueProviderProcedure.execute(entity));
+			ItemProperties.register(ELECTRIFIED_SWORD.get(), new ResourceLocation("catastrophe_mod:electrified_sword_electrified_sword_charged"),
+					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) ElectrifiedSwordChargedPropertyValueProviderProcedure.execute(entity));
 		});
 	}
 }

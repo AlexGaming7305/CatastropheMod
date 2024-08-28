@@ -49,14 +49,13 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.HAUNTED_MIRROR.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> MELEE = REGISTRY.register("melee",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.melee")).icon(() -> new ItemStack(CatastropheModModItems.ELECTRIFIED_COPPER_SWORD.get())).displayItems((parameters, tabData) -> {
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.melee")).icon(() -> new ItemStack(CatastropheModModItems.ELECTRIFIED_SWORD.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CatastropheModModItems.REINFORCED_IRON_ARMOR_HELMET.get());
 				tabData.accept(CatastropheModModItems.REINFORCED_IRON_ARMOR_CHESTPLATE.get());
 				tabData.accept(CatastropheModModItems.REINFORCED_IRON_ARMOR_LEGGINGS.get());
 				tabData.accept(CatastropheModModItems.REINFORCED_IRON_ARMOR_BOOTS.get());
 				tabData.accept(CatastropheModModItems.ICE_SWORD.get());
 				tabData.accept(CatastropheModModItems.NATUREITE_SWORD.get());
-				tabData.accept(CatastropheModModItems.ELECTRIFIED_COPPER_SWORD.get());
 				tabData.accept(CatastropheModModItems.CACTUS_CUTTER.get());
 				tabData.accept(CatastropheModModItems.WOODEN_SPEAR.get());
 				tabData.accept(CatastropheModModItems.STONE_SPEAR.get());
@@ -86,6 +85,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.BRASS_COLORED_SHOVEL.get());
 				tabData.accept(CatastropheModModItems.BRASS_COLORED_PICKAXE.get());
 				tabData.accept(CatastropheModModItems.WOODEN_KATANA.get());
+				tabData.accept(CatastropheModModItems.ELECTRIFIED_SWORD.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.GLOVEOFTHE_DESERTS.get())).displayItems((parameters, tabData) -> {
@@ -136,6 +136,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.SWORD_MASTERY_CREST.get());
 				tabData.accept(CatastropheModModItems.SPEAR_MASTERY_CREST.get());
 				tabData.accept(CatastropheModModItems.BARBED_ARROWHEAD.get());
+				tabData.accept(CatastropheModModItems.CRYSTAL_BALL.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> BOSS_SUMMONS = REGISTRY.register("boss_summons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.boss_summons")).icon(() -> new ItemStack(CatastropheModModItems.COPPER_TOKEN.get())).displayItems((parameters, tabData) -> {
@@ -215,7 +216,6 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModBlocks.POLISHED_CHARRED_STONE_SLAB.get().asItem());
 			tabData.accept(CatastropheModModBlocks.MOLTEN_CHARRED_BRICKS_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.MOLTEN_CHARRED_BRICKS_SLAB.get().asItem());
-			tabData.accept(CatastropheModModBlocks.SEA_CRYSTAL_BLOCK.get().asItem());
 			tabData.accept(CatastropheModModBlocks.SEA_CRYSTAL_CLUSTER.get().asItem());
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE.get().asItem());
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS.get().asItem());

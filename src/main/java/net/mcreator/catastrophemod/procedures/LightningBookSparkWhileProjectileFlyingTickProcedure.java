@@ -31,21 +31,21 @@ public class LightningBookSparkWhileProjectileFlyingTickProcedure {
 		double yvel = 0;
 		double radius = 0;
 		double xvel = 0;
-		if (entity instanceof Player == true) {
+		if (entity instanceof Player) {
 			xvel = immediatesourceentity.getDeltaMovement().x();
 			yvel = immediatesourceentity.getDeltaMovement().y();
 			zvel = immediatesourceentity.getDeltaMovement().z();
 			flag = true;
 			turn = 0.8;
 			speed = 1.2;
-			radius = 25;
+			radius = 40;
 			lifetime = 100;
-			if (immediatesourceentity.getPersistentData().getDouble("lifetime") >= 20) {
+			if (immediatesourceentity.getPersistentData().getDouble("lifetime") >= 10) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(radius / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (flag && (entityiterator == ((Entity) world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 25, 25, 25), e -> true).stream().sorted(new Object() {
+						if (flag && (entityiterator == ((Entity) world.getEntitiesOfClass(Monster.class, AABB.ofSize(new Vec3(x, y, z), 40, 40, 40), e -> true).stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 							}

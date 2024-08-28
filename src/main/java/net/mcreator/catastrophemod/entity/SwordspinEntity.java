@@ -103,12 +103,12 @@ public class SwordspinEntity extends Monster implements GeoEntity {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:copper_sword_is_hit"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:copper_sword_is_hit"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit"));
 	}
 
 	@Override

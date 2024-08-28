@@ -332,15 +332,6 @@
       }
     ]
   },
-  "copper_sword_is_hit": {
-    "subtitle": "subtitles.copper_sword_is_hit",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:spinbladehit",
-        "stream": false
-      }
-    ]
-  },
   "metal_hit": {
     "subtitle": "subtitles.metal_hit",
     "sounds": [
@@ -625,6 +616,24 @@
     "sounds": [
       {
         "name": "catastrophe_mod:marksman_shot",
+        "stream": false
+      }
+    ]
+  },
+  "electrified_sword_hit": {
+    "subtitle": "subtitles.electrified_sword_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_sword_hit",
+        "stream": false
+      }
+    ]
+  },
+  "weak_metal_hit": {
+    "subtitle": "subtitles.weak_metal_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:weak_metal_hit",
         "stream": false
       }
     ]

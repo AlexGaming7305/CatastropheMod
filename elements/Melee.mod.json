@@ -4,7 +4,7 @@
   "definition": {
     "name": "Melee",
     "icon": {
-      "value": "CUSTOM:ElectrifiedCopperSword"
+      "value": "CUSTOM:ElectrifiedSword"
     },
     "showSearch": true
   }

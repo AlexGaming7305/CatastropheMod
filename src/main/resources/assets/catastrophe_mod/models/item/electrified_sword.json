@@ -1,0 +1,20 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "catastrophe_mod:item/electrified_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "catastrophe_mod:electrified_sword_electrified_sword_charge": 1
+      },
+      "model": "catastrophe_mod:item/electrified_sword_0"
+    },
+    {
+      "predicate": {
+        "catastrophe_mod:electrified_sword_electrified_sword_charged": 2
+      },
+      "model": "catastrophe_mod:item/electrified_sword_1"
+    }
+  ]
+}

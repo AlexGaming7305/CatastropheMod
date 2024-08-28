@@ -26,7 +26,7 @@ public class ScreenshakeTestItemRightclickedProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		CatastropheModMod.queueServerWork(20, () -> {
+		CatastropheModMod.queueServerWork(60, () -> {
 			{
 				boolean _setval = false;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -81,6 +81,7 @@ import net.mcreator.catastrophemod.entity.FlameProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
 import net.mcreator.catastrophemod.entity.FierySlashProjectileEntity;
 import net.mcreator.catastrophemod.entity.FieryRoundProjectileEntity;
+import net.mcreator.catastrophemod.entity.ElectrifiedSwordProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectricSparkProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
@@ -358,6 +359,9 @@ public class CatastropheModModEntities {
 			EntityType.Builder.<GiantIsopodEntity>of(GiantIsopodEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantIsopodEntity::new)
 
 					.sized(0.8f, 0.8f));
+	public static final RegistryObject<EntityType<ElectrifiedSwordProjectileEntity>> ELECTRIFIED_SWORD_PROJECTILE = register("electrified_sword_projectile",
+			EntityType.Builder.<ElectrifiedSwordProjectileEntity>of(ElectrifiedSwordProjectileEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(ElectrifiedSwordProjectileEntity::new).fireImmune().sized(0.3f, 0.3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -414,6 +418,7 @@ public class CatastropheModModEntities {
 			SeaSnailEntity.init();
 			DiamondDetonationBombEntity.init();
 			GiantIsopodEntity.init();
+			ElectrifiedSwordProjectileEntity.init();
 		});
 	}
 
@@ -467,5 +472,6 @@ public class CatastropheModModEntities {
 		event.put(SEA_SNAIL.get(), SeaSnailEntity.createAttributes().build());
 		event.put(DIAMOND_DETONATION_BOMB.get(), DiamondDetonationBombEntity.createAttributes().build());
 		event.put(GIANT_ISOPOD.get(), GiantIsopodEntity.createAttributes().build());
+		event.put(ELECTRIFIED_SWORD_PROJECTILE.get(), ElectrifiedSwordProjectileEntity.createAttributes().build());
 	}
 }

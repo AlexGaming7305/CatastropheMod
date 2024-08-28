@@ -92,7 +92,7 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "CUSTOM:copper_sword_is_hit"
+      "value": "CUSTOM:weak_metal_hit"
     },
     "deathSound": {
       "value": ""

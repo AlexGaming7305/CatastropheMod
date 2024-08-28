@@ -15,7 +15,6 @@ import net.mcreator.catastrophemod.block.TallWitheringGrassBlock;
 import net.mcreator.catastrophemod.block.TallCalicoShroomBlock;
 import net.mcreator.catastrophemod.block.ShroomiumOreBlock;
 import net.mcreator.catastrophemod.block.SeaCrystalClusterBlock;
-import net.mcreator.catastrophemod.block.SeaCrystalBlockBlock;
 import net.mcreator.catastrophemod.block.RosxiteOreBlock;
 import net.mcreator.catastrophemod.block.PolishedCharredStoneStairsBlock;
 import net.mcreator.catastrophemod.block.PolishedCharredStoneSlabBlock;
@@ -26,6 +25,7 @@ import net.mcreator.catastrophemod.block.MoltenCharredBricksStairsBlock;
 import net.mcreator.catastrophemod.block.MoltenCharredBricksSlabBlock;
 import net.mcreator.catastrophemod.block.MoltenCharredBricksBlock;
 import net.mcreator.catastrophemod.block.ManaRosePlantBlock;
+import net.mcreator.catastrophemod.block.LighthouseLanternBlockBlock;
 import net.mcreator.catastrophemod.block.FlowerOfAfflictionBlock;
 import net.mcreator.catastrophemod.block.DriedRosxiteOreBlock;
 import net.mcreator.catastrophemod.block.DepthstoneStairsBlock;
@@ -90,7 +90,6 @@ public class CatastropheModModBlocks {
 	public static final RegistryObject<Block> MOLTEN_CHARRED_BRICKS_STAIRS = REGISTRY.register("molten_charred_bricks_stairs", () -> new MoltenCharredBricksStairsBlock());
 	public static final RegistryObject<Block> MOLTEN_CHARRED_BRICKS_SLAB = REGISTRY.register("molten_charred_bricks_slab", () -> new MoltenCharredBricksSlabBlock());
 	public static final RegistryObject<Block> CRIMSTONE_ORE = REGISTRY.register("crimstone_ore", () -> new CrimstoneOreBlock());
-	public static final RegistryObject<Block> SEA_CRYSTAL_BLOCK = REGISTRY.register("sea_crystal_block", () -> new SeaCrystalBlockBlock());
 	public static final RegistryObject<Block> SEA_CRYSTAL_CLUSTER = REGISTRY.register("sea_crystal_cluster", () -> new SeaCrystalClusterBlock());
 	public static final RegistryObject<Block> DEPTHSTONE = REGISTRY.register("depthstone", () -> new DepthstoneBlock());
 	public static final RegistryObject<Block> DEPTHSTONE_BRICKS = REGISTRY.register("depthstone_bricks", () -> new DepthstoneBricksBlock());
@@ -100,4 +99,5 @@ public class CatastropheModModBlocks {
 	public static final RegistryObject<Block> DEPTHSTONE_STAIRS = REGISTRY.register("depthstone_stairs", () -> new DepthstoneStairsBlock());
 	public static final RegistryObject<Block> DEPTHSTONE_BRICKS_SLAB = REGISTRY.register("depthstone_bricks_slab", () -> new DepthstoneBricksSlabBlock());
 	public static final RegistryObject<Block> DEPTHSTONE_BRICKS_STAIRS = REGISTRY.register("depthstone_bricks_stairs", () -> new DepthstoneBricksStairsBlock());
+	public static final RegistryObject<Block> LIGHTHOUSE_LANTERN_BLOCK = REGISTRY.register("lighthouse_lantern_block", () -> new LighthouseLanternBlockBlock());
 }

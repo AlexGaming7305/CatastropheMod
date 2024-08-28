@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/lighthouse_lantern_block_side",
+    "up": "catastrophe_mod:block/lighthouse_lantern_block_side",
+    "north": "catastrophe_mod:block/lighthouse_lantern_block_front",
+    "east": "catastrophe_mod:block/lighthouse_lantern_block_side",
+    "south": "catastrophe_mod:block/lighthouse_lantern_block_side",
+    "west": "catastrophe_mod:block/lighthouse_lantern_block_side",
+    "particle": "catastrophe_mod:block/lighthouse_lantern_block_side"
+  },
+  "render_type": "solid"
+}

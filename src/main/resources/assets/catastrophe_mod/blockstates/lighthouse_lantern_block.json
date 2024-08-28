@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "catastrophe_mod:block/lighthouse_lantern_block"
+    },
+    "facing=east": {
+      "model": "catastrophe_mod:block/lighthouse_lantern_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "catastrophe_mod:block/lighthouse_lantern_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "catastrophe_mod:block/lighthouse_lantern_block",
+      "y": 270
+    }
+  }
+}

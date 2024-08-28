@@ -22,7 +22,7 @@ public class MineralWraithLootBundleEntitySwingsItemProcedure {
 		}
 		if (drop == 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CatastropheModModItems.ELECTRIFIED_COPPER_SWORD.get());
+				ItemStack _setstack = new ItemStack(CatastropheModModItems.ELECTRIFIED_SWORD.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

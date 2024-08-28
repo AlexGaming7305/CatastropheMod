@@ -32,6 +32,7 @@ import net.mcreator.catastrophemod.entity.GiantIsopodEntity;
 import net.mcreator.catastrophemod.entity.FuriousWindEntity;
 import net.mcreator.catastrophemod.entity.FreezingCoreEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
+import net.mcreator.catastrophemod.entity.ElectrifiedSwordProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
 import net.mcreator.catastrophemod.entity.EarthboundFistEntity;
 import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
@@ -348,6 +349,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof GiantIsopodEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof ElectrifiedSwordProjectileEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

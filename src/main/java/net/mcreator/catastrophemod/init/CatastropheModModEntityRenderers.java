@@ -76,6 +76,7 @@ import net.mcreator.catastrophemod.client.renderer.FlameProjectileProjectileRend
 import net.mcreator.catastrophemod.client.renderer.FirebrandSlashRenderer;
 import net.mcreator.catastrophemod.client.renderer.FierySlashProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.FieryRoundProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.ElectrifiedSwordProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.ElectrifiedRoundProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.EarthboundWraithRenderer;
 import net.mcreator.catastrophemod.client.renderer.EarthboundRockShardProjectileRenderer;
@@ -200,5 +201,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.SEA_SNAIL.get(), SeaSnailRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.DIAMOND_DETONATION_BOMB.get(), DiamondDetonationBombRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.GIANT_ISOPOD.get(), GiantIsopodRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.ELECTRIFIED_SWORD_PROJECTILE.get(), ElectrifiedSwordProjectileRenderer::new);
 	}
 }
