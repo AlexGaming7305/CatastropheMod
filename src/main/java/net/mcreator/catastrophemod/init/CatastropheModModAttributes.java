@@ -10,10 +10,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLConstructModEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.EntityType;
@@ -65,17 +63,5 @@ public class CatastropheModModAttributes {
 		event.add(EntityType.PLAYER, MINIONSLOTS.get());
 		event.add(EntityType.PLAYER, THROWINGSPEED.get());
 		event.add(EntityType.PLAYER, CASTINGSPEED.get());
-	}
-
-	@Mod.EventBusSubscriber
-	private class Utils {
-		@SubscribeEvent
-		public static void persistAttributes(PlayerEvent.Clone event) {
-			Player oldP = event.getOriginal();
-			Player newP = (Player) event.getEntity();
-			newP.getAttribute(MAXMANA.get()).setBaseValue(oldP.getAttribute(MAXMANA.get()).getBaseValue());
-			newP.getAttribute(MANAREGENERATION.get()).setBaseValue(oldP.getAttribute(MANAREGENERATION.get()).getBaseValue());
-			newP.getAttribute(MINIONSLOTS.get()).setBaseValue(oldP.getAttribute(MINIONSLOTS.get()).getBaseValue());
-		}
 	}
 }
