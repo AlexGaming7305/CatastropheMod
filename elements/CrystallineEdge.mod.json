@@ -1,46 +1,59 @@
 {
   "_fv": 57,
-  "_type": "tool",
+  "_type": "item",
   "definition": {
-    "toolType": "Sword",
     "renderType": 0,
-    "blockingRenderType": 0,
     "texture": "crystalline_edge_large",
     "customModelName": "Normal",
-    "blockingModelName": "Normal blocking",
+    "customProperties": {},
+    "states": [],
     "name": "§dCrystalline Edge",
-    "specialInformation": {
-      "fixedValue": [
-        "§7Attack to gain charges, you can cast a Laser Beam with enough charges",
-        "§aRight-click: §7Casts a Laser Beam"
-      ]
-    },
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Melee"
     },
-    "harvestLevel": 1,
-    "efficiency": 4.0,
-    "attackSpeed": 1.2000000000000002,
-    "enchantability": 15,
-    "damageVsEntity": 6.0,
-    "usageCount": 1135,
-    "blocksAffected": [],
-    "glowCondition": {
-      "fixedValue": false
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 72000,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
     },
-    "repairItems": [
-      {
-        "value": "Items.AMETHYST_SHARD"
-      }
-    ],
+    "destroyAnyBlock": false,
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onRightClickedInAir": {
-      "name": "CrystalArkRightClickedInAir"
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§aRight-click: §7Charges the blade",
+        "§7Attacking when the blade is fully charged will perform a big aoe slash dealing §9+50% Melee Damage"
+      ]
     },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
     "onEntityHitWith": {
-      "name": "CrystalArkLivingEntityIsHitWithTool"
-    }
+      "name": "CrystallineEdgeLivingEntityIsHitWithTool"
+    },
+    "enableRanged": true,
+    "shootConstantly": false,
+    "projectile": {
+      "value": "CUSTOM:BlizzardProjectile"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "bow"
   }
 }

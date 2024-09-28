@@ -30,7 +30,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7Getting hit 3 times releases a barrage of icicles"
+        "§7Getting hit will release a Frost Blast"
       ]
     },
     "hasGlow": false,

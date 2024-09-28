@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Sea Bow",
+    "name": "§dSea Bow",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Bullets"
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7Has a §a25% chance §7to fire a Shell."
+        "§7Fully charged shots fire an additional 2 Sea Crystal Shards"
       ]
     },
     "glowCondition": {

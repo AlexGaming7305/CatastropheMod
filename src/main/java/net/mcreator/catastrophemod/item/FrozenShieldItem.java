@@ -20,6 +20,6 @@ public class FrozenShieldItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Getting hit 3 times releases a barrage of icicles"));
+		list.add(Component.literal("\u00A77Getting hit will release a Frost Blast"));
 	}
 }

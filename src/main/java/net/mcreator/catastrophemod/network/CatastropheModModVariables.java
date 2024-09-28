@@ -194,6 +194,14 @@ public class CatastropheModModVariables {
 				clone.diamond_detonation_used = original.diamond_detonation_used;
 				clone.hunter_armor_hat = original.hunter_armor_hat;
 				clone.electrified_sword_charges = original.electrified_sword_charges;
+				clone.sea_bow_charge = original.sea_bow_charge;
+				clone.sea_bow_load = original.sea_bow_load;
+				clone.sea_bow_ready = original.sea_bow_ready;
+				clone.marksmans_crest_charges = original.marksmans_crest_charges;
+				clone.crystalline_edge_charge = original.crystalline_edge_charge;
+				clone.crystalline_edge_charged = original.crystalline_edge_charged;
+				clone.crystalline_edge_load = original.crystalline_edge_load;
+				clone.crystalline_edge_charges = original.crystalline_edge_charges;
 			}
 		}
 
@@ -485,6 +493,14 @@ public class CatastropheModModVariables {
 		public boolean diamond_detonation_used = false;
 		public boolean hunter_armor_hat = false;
 		public double electrified_sword_charges = 0;
+		public double sea_bow_charge = 0;
+		public boolean sea_bow_load = false;
+		public boolean sea_bow_ready = false;
+		public double marksmans_crest_charges = 0;
+		public double crystalline_edge_charge = 0;
+		public boolean crystalline_edge_charged = false;
+		public boolean crystalline_edge_load = false;
+		public double crystalline_edge_charges = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -613,6 +629,14 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("diamond_detonation_used", diamond_detonation_used);
 			nbt.putBoolean("hunter_armor_hat", hunter_armor_hat);
 			nbt.putDouble("electrified_sword_charges", electrified_sword_charges);
+			nbt.putDouble("sea_bow_charge", sea_bow_charge);
+			nbt.putBoolean("sea_bow_load", sea_bow_load);
+			nbt.putBoolean("sea_bow_ready", sea_bow_ready);
+			nbt.putDouble("marksmans_crest_charges", marksmans_crest_charges);
+			nbt.putDouble("crystalline_edge_charge", crystalline_edge_charge);
+			nbt.putBoolean("crystalline_edge_charged", crystalline_edge_charged);
+			nbt.putBoolean("crystalline_edge_load", crystalline_edge_load);
+			nbt.putDouble("crystalline_edge_charges", crystalline_edge_charges);
 			return nbt;
 		}
 
@@ -738,6 +762,14 @@ public class CatastropheModModVariables {
 			diamond_detonation_used = nbt.getBoolean("diamond_detonation_used");
 			hunter_armor_hat = nbt.getBoolean("hunter_armor_hat");
 			electrified_sword_charges = nbt.getDouble("electrified_sword_charges");
+			sea_bow_charge = nbt.getDouble("sea_bow_charge");
+			sea_bow_load = nbt.getBoolean("sea_bow_load");
+			sea_bow_ready = nbt.getBoolean("sea_bow_ready");
+			marksmans_crest_charges = nbt.getDouble("marksmans_crest_charges");
+			crystalline_edge_charge = nbt.getDouble("crystalline_edge_charge");
+			crystalline_edge_charged = nbt.getBoolean("crystalline_edge_charged");
+			crystalline_edge_load = nbt.getBoolean("crystalline_edge_load");
+			crystalline_edge_charges = nbt.getDouble("crystalline_edge_charges");
 		}
 	}
 
@@ -882,6 +914,14 @@ public class CatastropheModModVariables {
 					variables.diamond_detonation_used = message.data.diamond_detonation_used;
 					variables.hunter_armor_hat = message.data.hunter_armor_hat;
 					variables.electrified_sword_charges = message.data.electrified_sword_charges;
+					variables.sea_bow_charge = message.data.sea_bow_charge;
+					variables.sea_bow_load = message.data.sea_bow_load;
+					variables.sea_bow_ready = message.data.sea_bow_ready;
+					variables.marksmans_crest_charges = message.data.marksmans_crest_charges;
+					variables.crystalline_edge_charge = message.data.crystalline_edge_charge;
+					variables.crystalline_edge_charged = message.data.crystalline_edge_charged;
+					variables.crystalline_edge_load = message.data.crystalline_edge_load;
+					variables.crystalline_edge_charges = message.data.crystalline_edge_charges;
 				}
 			});
 			context.setPacketHandled(true);

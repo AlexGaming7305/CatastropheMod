@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "electrified_copper_arrow",
+    "texture": "storm_arrow",
     "customModelName": "Ranged item",
     "customProperties": {},
     "states": [],
@@ -27,11 +27,14 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Strikes the target with lightning"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
     },
+    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "enableRanged": true,

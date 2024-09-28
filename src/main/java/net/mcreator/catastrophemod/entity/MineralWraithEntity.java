@@ -70,7 +70,7 @@ public class MineralWraithEntity extends Monster implements GeoEntity {
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.YELLOW, ServerBossEvent.BossBarOverlay.NOTCHED_12);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.BLUE, ServerBossEvent.BossBarOverlay.NOTCHED_12);
 
 	public MineralWraithEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(CatastropheModModEntities.MINERAL_WRAITH.get(), world);
@@ -78,7 +78,7 @@ public class MineralWraithEntity extends Monster implements GeoEntity {
 
 	public MineralWraithEntity(EntityType<MineralWraithEntity> type, Level world) {
 		super(type, world);
-		xpReward = 255;
+		xpReward = 325;
 		setNoAi(false);
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
@@ -88,7 +88,7 @@ public class MineralWraithEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "mineral_wraith");
+		this.entityData.define(TEXTURE, "mineral_wraith_texture");
 	}
 
 	public void setTexture(String texture) {
@@ -193,7 +193,7 @@ public class MineralWraithEntity extends Monster implements GeoEntity {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		MineralWraithOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getZ(), this);
+		MineralWraithOnInitialEntitySpawnProcedure.execute();
 		return retval;
 	}
 
@@ -213,7 +213,7 @@ public class MineralWraithEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		MineralWrathOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		MineralWrathOnEntityTickUpdateProcedure.execute(this.level(), this);
 		this.refreshDimensions();
 	}
 
@@ -265,8 +265,8 @@ public class MineralWraithEntity extends Monster implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 200);
-		builder = builder.add(Attributes.ARMOR, 10);
+		builder = builder.add(Attributes.MAX_HEALTH, 300);
+		builder = builder.add(Attributes.ARMOR, 15);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 500);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 10);
@@ -276,10 +276,7 @@ public class MineralWraithEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			if (this.isDeadOrDying()) {
-				return event.setAndContinue(RawAnimation.begin().thenPlay("death"));
-			}
-			return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.mineral_wraith.idle"));
 		}
 		return PlayState.STOP;
 	}

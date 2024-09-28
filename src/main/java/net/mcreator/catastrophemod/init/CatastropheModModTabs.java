@@ -24,7 +24,6 @@ public class CatastropheModModTabs {
 	public static final RegistryObject<CreativeModeTab> MAGE = REGISTRY.register("mage",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.mage")).icon(() -> new ItemStack(CatastropheModModItems.BLIZZARD.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CatastropheModModItems.SPELL_OF_FLAMES.get());
-				tabData.accept(CatastropheModModItems.SPELLOF_LIGHTNING.get());
 				tabData.accept(CatastropheModModItems.SPELLOF_POISON.get());
 				tabData.accept(CatastropheModModItems.SPELL_OF_PHANTOMS.get());
 				tabData.accept(CatastropheModModItems.SHROOMIUM_HELMET.get());
@@ -47,6 +46,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.BLIZZARD.get());
 				tabData.accept(CatastropheModModItems.ACCURSED_TOME.get());
 				tabData.accept(CatastropheModModItems.HAUNTED_MIRROR.get());
+				tabData.accept(CatastropheModModItems.FORCE_MISSILES.get());
+				tabData.accept(CatastropheModModItems.THUNDERSTRIKE.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> MELEE = REGISTRY.register("melee",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.melee")).icon(() -> new ItemStack(CatastropheModModItems.ELECTRIFIED_SWORD.get())).displayItems((parameters, tabData) -> {
@@ -80,12 +81,12 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.HELLBANE.get());
 				tabData.accept(CatastropheModModItems.EARTH_BREAKER.get());
 				tabData.accept(CatastropheModModItems.NIGHTFALLS_DEMISE.get());
-				tabData.accept(CatastropheModModItems.CRYSTALLINE_EDGE.get());
 				tabData.accept(CatastropheModModItems.DIAMOND_DETONATION.get());
 				tabData.accept(CatastropheModModItems.BRASS_COLORED_SHOVEL.get());
 				tabData.accept(CatastropheModModItems.BRASS_COLORED_PICKAXE.get());
 				tabData.accept(CatastropheModModItems.WOODEN_KATANA.get());
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_SWORD.get());
+				tabData.accept(CatastropheModModItems.CRYSTALLINE_EDGE.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.GLOVEOFTHE_DESERTS.get())).displayItems((parameters, tabData) -> {
@@ -123,6 +124,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.MANA_ROSE.get());
 				tabData.accept(CatastropheModModItems.QUIVER.get());
 				tabData.accept(CatastropheModModItems.REINFORCED_SHIELD.get());
+				tabData.accept(CatastropheModModItems.MARKSMANS_CREST.get());
 				tabData.accept(CatastropheModModItems.AMULET_OF_VITALITY.get());
 				tabData.accept(CatastropheModModItems.AERO_BOOTS.get());
 				tabData.accept(CatastropheModModItems.LEATHER_GLOVE.get());
@@ -137,6 +139,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.SPEAR_MASTERY_CREST.get());
 				tabData.accept(CatastropheModModItems.BARBED_ARROWHEAD.get());
 				tabData.accept(CatastropheModModItems.CRYSTAL_BALL.get());
+				tabData.accept(CatastropheModModItems.JELLYFISH_PENDANT.get());
+				tabData.accept(CatastropheModModItems.TATTERED_QUIVER.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> BOSS_SUMMONS = REGISTRY.register("boss_summons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.boss_summons")).icon(() -> new ItemStack(CatastropheModModItems.COPPER_TOKEN.get())).displayItems((parameters, tabData) -> {
@@ -275,6 +279,9 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.ANGLERFISH_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.SEA_SNAIL_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.VOLTBLADE_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.ARC_STRIKER_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.SURGE_BREAKER_SPAWN_EGG.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
@@ -283,6 +290,7 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.SEA_CRYSTAL_GEODE.get());
 			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_ITEM.get());
 			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SCALE.get());
+			tabData.accept(CatastropheModModItems.FORGE_KEY.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

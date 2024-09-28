@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AtlanticSeaNettleItem"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AtlanticSeaNettleItem"
+      },
+      {
+        "value": "CUSTOM:SeaPendant"
+      },
+      {
+        "value": "CUSTOM:AtlanticSeaNettleItem"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AtlanticSeaNettleItem"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:JellyfishPendant"
+    },
+    "name": "jellyfish_pendant_recipe",
+    "namespace": "mod"
+  }
+}

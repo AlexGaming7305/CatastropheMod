@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Riptide",
+    "name": "§dRiptide",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Mage"
@@ -28,8 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§aRight-click: §7Fires a Shell §b(Costs 5 Mana)",
-        "§aSneak + Right-click: §7Casts a Whirlpool §b(Costs 20 Mana)"
+        "§aRight-click: §7Casts a Sea Crystal Riptide that pulls enemies in as it travels §b(Costs 10 Mana)"
       ]
     },
     "glowCondition": {

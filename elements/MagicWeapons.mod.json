@@ -8,9 +8,6 @@
         "value": "CUSTOM:SpellOfFlames"
       },
       {
-        "value": "CUSTOM:SpellofLightning"
-      },
-      {
         "value": "CUSTOM:SpellofPoison"
       },
       {
@@ -42,6 +39,12 @@
       },
       {
         "value": "CUSTOM:HauntedMirror"
+      },
+      {
+        "value": "CUSTOM:ForceMissiles"
+      },
+      {
+        "value": "CUSTOM:Thunderstrike"
       }
     ],
     "blocks": [],

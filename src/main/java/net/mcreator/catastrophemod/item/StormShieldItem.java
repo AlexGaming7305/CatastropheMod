@@ -20,5 +20,6 @@ public class StormShieldItem extends Item implements ICurioItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("\u00A77Summons a Sword Orbit around you which damages enemies"));
 	}
 }

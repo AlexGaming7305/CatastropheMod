@@ -25,6 +25,7 @@ import net.mcreator.catastrophemod.block.MoltenCharredBricksStairsBlock;
 import net.mcreator.catastrophemod.block.MoltenCharredBricksSlabBlock;
 import net.mcreator.catastrophemod.block.MoltenCharredBricksBlock;
 import net.mcreator.catastrophemod.block.ManaRosePlantBlock;
+import net.mcreator.catastrophemod.block.LighthousePowerBlockBlock;
 import net.mcreator.catastrophemod.block.LighthouseLanternBlockBlock;
 import net.mcreator.catastrophemod.block.FlowerOfAfflictionBlock;
 import net.mcreator.catastrophemod.block.DriedRosxiteOreBlock;
@@ -100,4 +101,5 @@ public class CatastropheModModBlocks {
 	public static final RegistryObject<Block> DEPTHSTONE_BRICKS_SLAB = REGISTRY.register("depthstone_bricks_slab", () -> new DepthstoneBricksSlabBlock());
 	public static final RegistryObject<Block> DEPTHSTONE_BRICKS_STAIRS = REGISTRY.register("depthstone_bricks_stairs", () -> new DepthstoneBricksStairsBlock());
 	public static final RegistryObject<Block> LIGHTHOUSE_LANTERN_BLOCK = REGISTRY.register("lighthouse_lantern_block", () -> new LighthouseLanternBlockBlock());
+	public static final RegistryObject<Block> LIGHTHOUSE_POWER_BLOCK = REGISTRY.register("lighthouse_power_block", () -> new LighthousePowerBlockBlock());
 }

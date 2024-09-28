@@ -52,7 +52,7 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "hasModel": true,
+    "hasModel": false,
     "animation": "none"
   }
 }

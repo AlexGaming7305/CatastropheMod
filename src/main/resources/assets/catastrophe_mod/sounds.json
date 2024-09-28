@@ -332,15 +332,6 @@
       }
     ]
   },
-  "metal_hit": {
-    "subtitle": "subtitles.metal_hit",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:strong_metal_is_hit",
-        "stream": false
-      }
-    ]
-  },
   "strong_metal_hit": {
     "subtitle": "subtitles.strong_metal_hit",
     "sounds": [
@@ -634,6 +625,114 @@
     "sounds": [
       {
         "name": "catastrophe_mod:weak_metal_hit",
+        "stream": false
+      }
+    ]
+  },
+  "electrified_lightning_strikes": {
+    "subtitle": "subtitles.electrified_lightning_strikes",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_lightning_strikes",
+        "stream": false
+      }
+    ]
+  },
+  "surge_breaker_charge": {
+    "subtitle": "subtitles.surge_breaker_charge",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:surge_breaker_charge",
+        "stream": false
+      }
+    ]
+  },
+  "surge_breaker_shockwave": {
+    "subtitle": "subtitles.surge_breaker_shockwave",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:surge_breaker_shockwave",
+        "stream": false
+      }
+    ]
+  },
+  "surge_breaker_punch": {
+    "subtitle": "subtitles.surge_breaker_punch",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:surge_breaker_punch",
+        "stream": false
+      }
+    ]
+  },
+  "crystalline_edge_big_slash": {
+    "subtitle": "subtitles.crystalline_edge_big_slash",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:crystalline_edge_big_slash",
+        "stream": false
+      }
+    ]
+  },
+  "crystalline_edge_resonates": {
+    "subtitle": "subtitles.crystalline_edge_resonates",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:crystalline_edge_resonate",
+        "stream": false
+      }
+    ]
+  },
+  "crystalline_edge_charged": {
+    "subtitle": "subtitles.crystalline_edge_charged",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:crystalline_edge_charged",
+        "stream": false
+      }
+    ]
+  },
+  "mw_start_speech": {
+    "subtitle": "subtitles.mw_start_speech",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mw_start_speech",
+        "stream": false
+      }
+    ]
+  },
+  "mw_spare_speech": {
+    "subtitle": "subtitles.mw_spare_speech",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mw_spare_speech",
+        "stream": false
+      }
+    ]
+  },
+  "mw_hit_speech": {
+    "subtitle": "subtitles.mw_hit_speech",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mw_hit_speech",
+        "stream": false
+      }
+    ]
+  },
+  "mw_final_defeat_speech": {
+    "subtitle": "subtitles.mw_final_defeat_speech",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mw_final_defeat_speech",
+        "stream": false
+      }
+    ]
+  },
+  "mineral_wraith_charges": {
+    "subtitle": "subtitles.mineral_wraith_charges",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mineral_wraith_charges",
         "stream": false
       }
     ]

@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "aa",
+    "ab",
     "bc"
   ],
   "key": {
     "a": {
-      "item": "catastrophe_mod:deleted_mod_element"
+      "item": "catastrophe_mod:depthstone"
     },
     "b": {
-      "item": "minecraft:nautilus_shell"
+      "item": "catastrophe_mod:sea_crystal_geode"
     },
     "c": {
       "item": "catastrophe_mod:spell_tome"

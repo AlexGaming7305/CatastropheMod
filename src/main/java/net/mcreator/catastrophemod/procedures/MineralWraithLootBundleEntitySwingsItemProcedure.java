@@ -34,7 +34,7 @@ public class MineralWraithLootBundleEntitySwingsItemProcedure {
 			}
 		} else if (drop == 2) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CatastropheModModItems.SPELLOF_LIGHTNING.get());
+				ItemStack _setstack = new ItemStack(CatastropheModModItems.THUNDERSTRIKE.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

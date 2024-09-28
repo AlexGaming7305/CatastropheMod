@@ -120,6 +120,8 @@ public class RipsawItem extends Item implements GeoItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("\u00A77\"Dude, Eureka.\""));
+		list.add(Component.literal("\u00A77Shoots an Electrified Sawblade that inflicts \u00A7cElectrified"));
 	}
 
 	@Override

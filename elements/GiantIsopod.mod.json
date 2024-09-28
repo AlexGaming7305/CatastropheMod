@@ -100,6 +100,9 @@
     "stepSound": {
       "value": ""
     },
+    "onRightClickedOn": {
+      "name": "GiantIsopodRightClickedOnEntity"
+    },
     "onMobTickUpdate": {
       "name": "GiantIsopodOnEntityTickUpdate"
     },

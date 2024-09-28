@@ -3,563 +3,865 @@ package net.mcreator.catastrophemod.procedures;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.LightningBolt;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.SwordspinEntity;
+import net.mcreator.catastrophemod.entity.VoltbladeEntity;
+import net.mcreator.catastrophemod.entity.SurgeBreakerEntity;
 import net.mcreator.catastrophemod.entity.MineralWraithEntity;
-import net.mcreator.catastrophemod.entity.ElectricSparkProjectileEntity;
+import net.mcreator.catastrophemod.entity.ArcStrikerEntity;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 import java.util.List;
 import java.util.Comparator;
 
 public class MineralWrathOnEntityTickUpdateProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double random = 0;
-		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(CatastropheModModMobEffects.DASH_COOLDOWN.get()))) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.DASH_COOLDOWN.get(), 1000000, 0, false, false));
-			entity.getPersistentData().putDouble("phase1", 105);
+		double attack = 0;
+		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
+			entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
 		}
-		if (entity instanceof LivingEntity _entity)
-			_entity.removeEffect(CatastropheModModMobEffects.ELECTRIFIED.get());
-		if (entity.getPersistentData().getBoolean("Phase2") == false) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < 100) {
-				entity.getPersistentData().putBoolean("Phase2", true);
-				entity.getPersistentData().putDouble("timer", 180);
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 150) {
+			entity.getPersistentData().putBoolean("Phase2", true);
+		}
+		if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) && entity.getPersistentData().getBoolean("lightningcooldown") == false) {
+			if (entity.isAlive()) {
+				entity.getPersistentData().putDouble("mwx", ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + Mth.nextDouble(RandomSource.create(), -1, 1)));
+				entity.getPersistentData().putDouble("mwy", ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()));
+				entity.getPersistentData().putDouble("mwz", ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + Mth.nextDouble(RandomSource.create(), -1, 1)));
 			}
 		}
 		if (entity.getPersistentData().getBoolean("Phase2") == false) {
-			if (entity.getPersistentData().getDouble("phase1") == 130) {
-				entity.getPersistentData().putDouble("phase1", 0);
-				if (entity.isAlive()) {
-					if (entity.getPersistentData().getBoolean("Phase2") == false) {
+			if (entity.getPersistentData().getDouble("mineral_wraith_ai") == 0) {
+				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+					attack = Math.round(Math.random() * 3);
+					if (attack == 0) {
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
 						if (entity instanceof MineralWraithEntity) {
-							((MineralWraithEntity) entity).setAnimation("empty");
+							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.thunderclap");
+						}
+						entity.getPersistentData().putBoolean("thunderclap", true);
+						{
+							Entity _ent = entity;
+							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_teleport entity @s 0 1.5 0");
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
+							}
+						}
+						{
+							Entity _ent = entity;
+							_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + Mth.nextDouble(RandomSource.create(), -2, 2) + 0.5),
+									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + Mth.nextDouble(RandomSource.create(), -2, 2) + 0.5));
+							if (_ent instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + Mth.nextDouble(RandomSource.create(), -2, 2) + 0.5),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + Mth.nextDouble(RandomSource.create(), -2, 2) + 0.5), _ent.getYRot(), _ent.getXRot());
+						}
+						{
+							Entity _ent = entity;
+							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_charging entity @s");
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_charges")), SoundSource.HOSTILE, 1,
+										1);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_charges")), SoundSource.HOSTILE, 1, 1, false);
+							}
 						}
 						CatastropheModMod.queueServerWork(1, () -> {
-							if (entity instanceof MineralWraithEntity) {
-								((MineralWraithEntity) entity).setAnimation("cast_electric_sparks");
-							}
-							CatastropheModMod.queueServerWork(15, () -> {
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_claps")), SoundSource.HOSTILE, 1, 1);
-									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_claps")), SoundSource.HOSTILE, 1, 1, false);
-									}
-								}
-								if (world instanceof ServerLevel projectileLevel) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											entityToSpawn.setSilent(true);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity, 5, 0);
-									_entityToSpawn.setPos(x, (y + 2), z);
-									_entityToSpawn.shoot(0, 4, 0, 1, 10);
-									projectileLevel.addFreshEntity(_entityToSpawn);
-								}
-								if (world instanceof ServerLevel projectileLevel) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											entityToSpawn.setSilent(true);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity, 5, 0);
-									_entityToSpawn.setPos(x, (y + 2), z);
-									_entityToSpawn.shoot(0, 4, 0, 1, 10);
-									projectileLevel.addFreshEntity(_entityToSpawn);
-								}
-								if (world instanceof ServerLevel projectileLevel) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											entityToSpawn.setSilent(true);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity, 5, 0);
-									_entityToSpawn.setPos(x, (y + 2), z);
-									_entityToSpawn.shoot(0, 4, 0, 1, 10);
-									projectileLevel.addFreshEntity(_entityToSpawn);
-								}
-							});
-						});
-					}
-				}
-				CatastropheModMod.queueServerWork(35, () -> {
-					if (entity.isAlive()) {
-						if (entity.getPersistentData().getBoolean("Phase2") == false) {
-							if (entity instanceof MineralWraithEntity) {
-								((MineralWraithEntity) entity).setAnimation("empty");
-							}
-							CatastropheModMod.queueServerWork(1, () -> {
-								CatastropheModMod.queueServerWork(10, () -> {
-									if (entity instanceof MineralWraithEntity) {
-										((MineralWraithEntity) entity).setAnimation("punch");
-									}
-								});
-								CatastropheModMod.queueServerWork(20, () -> {
-									if (world instanceof Level _level) {
-										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrical_surge")), SoundSource.HOSTILE, 1, 1);
-										} else {
-											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrical_surge")), SoundSource.HOSTILE, 1, 1, false);
-										}
-									}
-									if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.BOSS_DASH.get(), 10, 0, false, false));
-								});
-								{
-									Entity _ent = ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null));
-									if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-										_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-												_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "summon catastrophe_mod:wraith_dash");
-									}
-								}
-								{
-									Entity _ent = ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(x, y, z)).findFirst().orElse(null));
-									if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-										_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
-												_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
-												"particle catastrophe_mod:dash_indicator ~ ~1 ~");
-									}
-								}
-							});
-						}
-					}
-				});
-				CatastropheModMod.queueServerWork(75, () -> {
-					if (entity.isAlive()) {
-						if (entity.getPersistentData().getBoolean("Phase2") == false) {
-							if (entity instanceof MineralWraithEntity) {
-								((MineralWraithEntity) entity).setAnimation("empty");
-							}
-							CatastropheModMod.queueServerWork(1, () -> {
-								if (!world.getEntitiesOfClass(SwordspinEntity.class, AABB.ofSize(new Vec3(x, y, z), 50, 50, 50), e -> true).isEmpty()) {
-									if (entity instanceof MineralWraithEntity) {
-										((MineralWraithEntity) entity).setAnimation("throw_sword_orbit");
-									}
-									CatastropheModMod.queueServerWork(30, () -> {
-										if (world instanceof Level _level) {
-											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:axe_swings")), SoundSource.NEUTRAL, 1, 1);
-											} else {
-												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:axe_swings")), SoundSource.NEUTRAL, 1, 1, false);
-											}
-										}
-									});
-									if (world instanceof ServerLevel _level) {
-										Entity entityToSpawn = CatastropheModModEntities.SWORD_DASH.get().spawn(_level,
-												new BlockPos(
-														entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(20)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-																.getBlockPos().getX(),
-														world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z),
-														entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(20)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-																.getBlockPos().getZ()),
-												MobSpawnType.MOB_SUMMONED);
-										if (entityToSpawn != null) {
-										}
-									}
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 									{
-										Entity _ent = ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
-											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-												return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-											}
-										}.compareDistOf(x, y, z)).findFirst().orElse(null));
+										Entity _ent = entity;
 										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
 													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
-													"particle catastrophe_mod:dash_indicator ~ ~1 ~");
+													"/photon fx photon:mineral_wraith_teleport block ~0.5 ~1.5 ~0.5");
 										}
 									}
-								}
-								if (!world.getEntitiesOfClass(SwordspinEntity.class, AABB.ofSize(new Vec3(x, y, z), 50, 50, 50), e -> true).isEmpty() == false) {
-									if (entity instanceof MineralWraithEntity) {
-										((MineralWraithEntity) entity).setAnimation("throw_sword_orbit");
-									}
-									CatastropheModMod.queueServerWork(30, () -> {
-										if (world instanceof Level _level) {
-											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:axe_swings")), SoundSource.NEUTRAL, 1, 1);
-											} else {
-												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:axe_swings")), SoundSource.NEUTRAL, 1, 1, false);
-											}
-										}
-										{
-											Entity _shootFrom = entity;
-											Level projectileLevel = _shootFrom.level();
-											if (!projectileLevel.isClientSide()) {
-												Projectile _entityToSpawn = new Object() {
-													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-														AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-														entityToSpawn.setOwner(shooter);
-														entityToSpawn.setBaseDamage(damage);
-														entityToSpawn.setKnockback(knockback);
-														entityToSpawn.setSilent(true);
-														return entityToSpawn;
-													}
-												}.getArrow(projectileLevel, entity, 5, 0);
-												_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-												_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 10);
-												projectileLevel.addFreshEntity(_entityToSpawn);
-											}
-										}
-										{
-											Entity _shootFrom = entity;
-											Level projectileLevel = _shootFrom.level();
-											if (!projectileLevel.isClientSide()) {
-												Projectile _entityToSpawn = new Object() {
-													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-														AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-														entityToSpawn.setOwner(shooter);
-														entityToSpawn.setBaseDamage(damage);
-														entityToSpawn.setKnockback(knockback);
-														entityToSpawn.setSilent(true);
-														return entityToSpawn;
-													}
-												}.getArrow(projectileLevel, entity, 5, 0);
-												_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-												_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 10);
-												projectileLevel.addFreshEntity(_entityToSpawn);
-											}
-										}
-										{
-											Entity _shootFrom = entity;
-											Level projectileLevel = _shootFrom.level();
-											if (!projectileLevel.isClientSide()) {
-												Projectile _entityToSpawn = new Object() {
-													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-														AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-														entityToSpawn.setOwner(shooter);
-														entityToSpawn.setBaseDamage(damage);
-														entityToSpawn.setKnockback(knockback);
-														entityToSpawn.setSilent(true);
-														return entityToSpawn;
-													}
-												}.getArrow(projectileLevel, entity, 5, 0);
-												_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-												_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 10);
-												projectileLevel.addFreshEntity(_entityToSpawn);
-											}
-										}
-									});
-								}
-							});
-						}
-					}
-				});
-			} else {
-				entity.getPersistentData().putDouble("phase1", (entity.getPersistentData().getDouble("phase1") + 1));
-			}
-		}
-		if (entity.getPersistentData().getBoolean("Phase2") == true) {
-			if (entity.getPersistentData().getDouble("timer") == 180) {
-				entity.getPersistentData().putDouble("timer", 0);
-				if (entity.isAlive()) {
-					if (entity.getPersistentData().getBoolean("Phase2") == true) {
-						if (entity instanceof MineralWraithEntity) {
-							((MineralWraithEntity) entity).setAnimation("empty");
-						}
-						CatastropheModMod.queueServerWork(1, () -> {
-							CatastropheModMod.queueServerWork(10, () -> {
-								if (entity instanceof MineralWraithEntity) {
-									((MineralWraithEntity) entity).setAnimation("punch");
-								}
-							});
-							CatastropheModMod.queueServerWork(20, () -> {
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrical_surge")), SoundSource.HOSTILE, 1, 1);
-									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrical_surge")), SoundSource.HOSTILE, 1, 1, false);
-									}
-								}
-								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.BOSS_DASH.get(), 10, 0, false, false));
-							});
-							{
-								Entity _ent = ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-									}
-								}.compareDistOf(x, y, z)).findFirst().orElse(null));
-								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
-											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "summon catastrophe_mod:wraith_dash");
 								}
 							}
-							{
-								Entity _ent = ((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+						});
+						CatastropheModMod.queueServerWork(35, () -> {
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+									entity.getPersistentData().putBoolean("thunderclap", false);
+									{
+										Entity _ent = entity;
+										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+													"/photon fx photon:thunderclap entity @s 0 1.5 0");
+										}
 									}
-								}.compareDistOf(x, y, z)).findFirst().orElse(null));
-								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
-											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "particle catastrophe_mod:dash_indicator ~ ~1 ~");
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY() + 1.5, entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_claps")),
+													SoundSource.HOSTILE, 1, 1);
+										} else {
+											_level.playLocalSound((entity.getX()), (entity.getY() + 1.5), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_claps")), SoundSource.HOSTILE, 1, 1,
+													false);
+										}
+									}
+									{
+										final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+										List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+												.toList();
+										for (Entity entityiterator : _entfound) {
+											if (!(entityiterator == entity)) {
+												if (entityiterator instanceof LivingEntity) {
+													entityiterator.hurt(new DamageSource(
+															world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 7);
+													if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+														_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+												}
+											}
+										}
+									}
 								}
 							}
 						});
 					}
-				}
-				CatastropheModMod.queueServerWork(50, () -> {
-					if (entity.isAlive()) {
-						if (entity.getPersistentData().getBoolean("Phase2") == true) {
-							if (entity instanceof MineralWraithEntity) {
-								((MineralWraithEntity) entity).setAnimation("empty");
+					if (attack == 1) {
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
+						if (entity instanceof MineralWraithEntity) {
+							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.phasing_thunder");
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY() + 1.5, entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:thorn_infested_armor_dashes")),
+										SoundSource.HOSTILE, 2, 1);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY() + 1.5), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:thorn_infested_armor_dashes")), SoundSource.HOSTILE, 2, 1,
+										false);
 							}
-							CatastropheModMod.queueServerWork(1, () -> {
-								if (entity instanceof MineralWraithEntity) {
-									((MineralWraithEntity) entity).setAnimation("cast_electric_sparks");
-								}
-								CatastropheModMod.queueServerWork(15, () -> {
+						}
+						entity.setDeltaMovement(new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().x * 1), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().y),
+								((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().z * 1)));
+						CatastropheModMod.queueServerWork(18, () -> {
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+									entity.getPersistentData().putBoolean("dash", true);
+									{
+										Entity _ent = entity;
+										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+													"/photon fx photon:mineral_wraith_dash_lightning entity @s 0 1.5 0");
+										}
+									}
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_claps")), SoundSource.HOSTILE, 1, 1);
+											_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY() + 1.5, entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrical_surge")),
+													SoundSource.HOSTILE, 2, 1);
 										} else {
-											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_claps")), SoundSource.HOSTILE, 1, 1, false);
+											_level.playLocalSound((entity.getX()), (entity.getY() + 1.5), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrical_surge")), SoundSource.HOSTILE, 2, 1,
+													false);
 										}
 									}
-									if (world instanceof ServerLevel projectileLevel) {
-										Projectile _entityToSpawn = new Object() {
-											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-												entityToSpawn.setOwner(shooter);
-												entityToSpawn.setBaseDamage(damage);
-												entityToSpawn.setKnockback(knockback);
-												entityToSpawn.setSilent(true);
-												return entityToSpawn;
-											}
-										}.getArrow(projectileLevel, entity, 5, 0);
-										_entityToSpawn.setPos((entity.getX()), (entity.getY() + 2), (entity.getZ()));
-										_entityToSpawn.shoot(0, 4, 0, 1, 10);
-										projectileLevel.addFreshEntity(_entityToSpawn);
-									}
-									if (world instanceof ServerLevel projectileLevel) {
-										Projectile _entityToSpawn = new Object() {
-											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-												entityToSpawn.setOwner(shooter);
-												entityToSpawn.setBaseDamage(damage);
-												entityToSpawn.setKnockback(knockback);
-												entityToSpawn.setSilent(true);
-												return entityToSpawn;
-											}
-										}.getArrow(projectileLevel, entity, 5, 0);
-										_entityToSpawn.setPos((entity.getX()), (entity.getY() + 2), (entity.getZ()));
-										_entityToSpawn.shoot(0, 4, 0, 1, 10);
-										projectileLevel.addFreshEntity(_entityToSpawn);
-									}
-									if (world instanceof ServerLevel projectileLevel) {
-										Projectile _entityToSpawn = new Object() {
-											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new ElectricSparkProjectileEntity(CatastropheModModEntities.ELECTRIC_SPARK_PROJECTILE.get(), level);
-												entityToSpawn.setOwner(shooter);
-												entityToSpawn.setBaseDamage(damage);
-												entityToSpawn.setKnockback(knockback);
-												entityToSpawn.setSilent(true);
-												return entityToSpawn;
-											}
-										}.getArrow(projectileLevel, entity, 5, 0);
-										_entityToSpawn.setPos((entity.getX()), (entity.getY() + 2), (entity.getZ()));
-										_entityToSpawn.shoot(0, 4, 0, 1, 10);
-										projectileLevel.addFreshEntity(_entityToSpawn);
-									}
-								});
-							});
-						}
-					}
-				});
-				CatastropheModMod.queueServerWork(80, () -> {
-					if (entity.isAlive()) {
-						if (entity.getPersistentData().getBoolean("Phase2") == true) {
-							if (entity instanceof MineralWraithEntity) {
-								((MineralWraithEntity) entity).setAnimation("empty");
+									entity.setDeltaMovement(new Vec3((((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() - entity.getX()) * 0.2),
+											((((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 1) - entity.getY()) * 0.2),
+											(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() - entity.getZ()) * 0.2)));
+								}
 							}
-							CatastropheModMod.queueServerWork(1, () -> {
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1);
-									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
+						});
+						CatastropheModMod.queueServerWork(35, () -> {
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+									entity.getPersistentData().putBoolean("dash", false);
+									entity.setDeltaMovement(new Vec3(0, 0, 0));
+									{
+										Entity _ent = entity;
+										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+													"/photon fx photon:mineral_wraith_teleport entity @s 0 1.5 0");
+										}
+									}
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1,
+													1);
+										} else {
+											_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
+										}
+									}
+									{
+										Entity _ent = entity;
+										_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + Mth.nextDouble(RandomSource.create(), -5, 5) + 0.5),
+												((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + Mth.nextDouble(RandomSource.create(), 1, 3)),
+												((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + Mth.nextDouble(RandomSource.create(), -5, 5) + 0.5));
+										if (_ent instanceof ServerPlayer _serverPlayer)
+											_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + Mth.nextDouble(RandomSource.create(), -5, 5) + 0.5),
+													((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + Mth.nextDouble(RandomSource.create(), 1, 3)),
+													((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + Mth.nextDouble(RandomSource.create(), -5, 5) + 0.5), _ent.getYRot(), _ent.getXRot());
 									}
 								}
-								if (world instanceof ServerLevel _level)
-									_level.sendParticles(ParticleTypes.FLASH, (entity.getX()), (entity.getY() + 1), (entity.getZ()), 10, 2, 2, 2, 0);
-								{
-									final Vec3 _center = new Vec3(x, y, z);
-									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(50 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-											.toList();
-									for (Entity entityiterator : _entfound) {
-										if (entityiterator instanceof Player) {
-											{
-												Entity _ent = entity;
-												_ent.teleportTo((entityiterator.getX()), (entityiterator.getY() + 6), (entityiterator.getZ()));
-												if (_ent instanceof ServerPlayer _serverPlayer)
-													_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY() + 6), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
-											}
+							}
+						});
+						CatastropheModMod.queueServerWork(36, () -> {
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+									{
+										Entity _ent = entity;
+										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+													"/photon fx photon:mineral_wraith_teleport block ~0.5 ~1.5 ~0.5");
 										}
-										CatastropheModMod.queueServerWork(20, () -> {
-											if (entity instanceof MineralWraithEntity) {
-												((MineralWraithEntity) entity).setAnimation("lightning_slam");
-											}
-											entity.setDeltaMovement(new Vec3(0, (-0.7), 0));
-											CatastropheModMod.queueServerWork(10, () -> {
-												if (world instanceof ServerLevel _level) {
-													LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-													entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX(), world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), entity.getZ())));;
-													_level.addFreshEntity(entityToSpawn);
-												}
-												if (world instanceof ServerLevel _level) {
-													LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-													entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX(), world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), entity.getZ())));;
-													_level.addFreshEntity(entityToSpawn);
-												}
-												if (world instanceof ServerLevel _level) {
-													LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-													entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX(), world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) x, (int) z), entity.getZ())));;
-													_level.addFreshEntity(entityToSpawn);
-												}
-											});
+									}
+								}
+							}
+						});
+					}
+					if (attack == 2) {
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
+						if (entity instanceof MineralWraithEntity) {
+							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.lightning_slam");
+						}
+						{
+							Entity _ent = entity;
+							_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + 0.5), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
+									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + 0.5));
+							if (_ent instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + 0.5), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + 0.5), _ent.getYRot(), _ent.getXRot());
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
+							}
+						}
+						{
+							Entity _ent = entity;
+							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_teleport entity @s 0 1.5 0");
+							}
+						}
+						CatastropheModMod.queueServerWork(1, () -> {
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+									{
+										Entity _ent = entity;
+										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+													"/photon fx photon:mineral_wraith_teleport block ~0.5 ~1.5 ~0.5");
+										}
+									}
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(27, () -> {
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_dash_lightning entity @s 0 1.5 0");
+								}
+							}
+							entity.setDeltaMovement(new Vec3(0, (-2), 0));
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY() + 1.5, entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:thorn_infested_armor_dashes")),
+											SoundSource.HOSTILE, 2, 1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY() + 1.5), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:thorn_infested_armor_dashes")), SoundSource.HOSTILE, 2, 1,
+											false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(35, () -> {
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_cracks block ~ ~-1 ~");
+								}
+							}
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = CatastropheModModEntities.ELECTRIFIED_LIGHTNING.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+								if (entityToSpawn != null) {
+								}
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")),
+											SoundSource.HOSTILE, 1, 1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.HOSTILE, 1, 1,
+											false);
+								}
+							}
+							{
+								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 8);
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+									}
+								}
+							}
+							{
+								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									{
+										double _setval = 3;
+										entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.intensity_timer = _setval;
+											capability.syncPlayerVariables(entityiterator);
 										});
 									}
+									{
+										boolean _setval = true;
+										entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.screenshake = _setval;
+											capability.syncPlayerVariables(entityiterator);
+										});
+									}
+									CatastropheModMod.queueServerWork(40, () -> {
+										{
+											boolean _setval = false;
+											entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+												capability.screenshake = _setval;
+												capability.syncPlayerVariables(entityiterator);
+											});
+										}
+									});
 								}
-							});
-						}
-					}
-				});
-				CatastropheModMod.queueServerWork(120, () -> {
-					if (entity.isAlive()) {
-						if (entity.getPersistentData().getBoolean("Phase2") == true) {
-							if (entity instanceof MineralWraithEntity) {
-								((MineralWraithEntity) entity).setAnimation("empty");
 							}
-							CatastropheModMod.queueServerWork(1, () -> {
-								if (entity instanceof MineralWraithEntity) {
-									((MineralWraithEntity) entity).setAnimation("cast_lightning_sphere");
+						});
+					}
+					if (attack == 3) {
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 170);
+						if (entity instanceof MineralWraithEntity) {
+							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.blade_combo");
+						}
+						{
+							Entity _ent = entity;
+							_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + Mth.nextDouble(RandomSource.create(), -2, 2)), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()),
+									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + Mth.nextDouble(RandomSource.create(), -2, 2)));
+							if (_ent instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + Mth.nextDouble(RandomSource.create(), -2, 2)),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + Mth.nextDouble(RandomSource.create(), -2, 2)),
+										_ent.getYRot(), _ent.getXRot());
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
+							}
+						}
+						{
+							Entity _ent = entity;
+							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_teleport entity @s 0 1.5 0");
+							}
+						}
+						CatastropheModMod.queueServerWork(1, () -> {
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+									{
+										Entity _ent = entity;
+										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+													"/photon fx photon:mineral_wraith_teleport block ~0.5 ~1.5 ~0.5");
+										}
+									}
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(10, () -> {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_charges")), SoundSource.HOSTILE,
+											1, 1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_charges")), SoundSource.HOSTILE, 1, 1, false);
+								}
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_summon_sword entity @s 0 4 0");
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(15, () -> {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 1.1, 1.3));
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 1.1, 1.3), false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(20, () -> {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 1.1, 1.3));
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 1.1, 1.3), false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(25, () -> {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 1.1, 1.3));
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:weak_metal_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 1.1, 1.3), false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(30, () -> {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(35, () -> {
+							entity.getPersistentData().putBoolean("bladecombo", true);
+						});
+						CatastropheModMod.queueServerWork(63, () -> {
+						});
+						CatastropheModMod.queueServerWork(65, () -> {
+							if (entity.isAlive()) {
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+									} else {
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+									}
+								}
+								{
+									final Vec3 _center = new Vec3(
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getX()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getY()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getZ()));
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+											.toList();
+									for (Entity entityiterator : _entfound) {
+										if (!(entityiterator == entity)) {
+											if (entityiterator instanceof LivingEntity) {
+												entityiterator.hurt(new DamageSource(
+														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), entity), 5);
+											}
+										}
+									}
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(70, () -> {
+							if (entity instanceof MineralWraithEntity animatable)
+								animatable.setTexture("mineral_wraith_texture_charge_1");
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(83, () -> {
+						});
+						CatastropheModMod.queueServerWork(85, () -> {
+							if (entity.isAlive()) {
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+									} else {
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+									}
+								}
+								{
+									final Vec3 _center = new Vec3(
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getX()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getY()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getZ()));
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+											.toList();
+									for (Entity entityiterator : _entfound) {
+										if (!(entityiterator == entity)) {
+											if (entityiterator instanceof LivingEntity) {
+												entityiterator.hurt(new DamageSource(
+														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), entity), 5);
+											}
+										}
+									}
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(90, () -> {
+							if (entity instanceof MineralWraithEntity animatable)
+								animatable.setTexture("mineral_wraith_texture_charge_2");
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(116, () -> {
+						});
+						CatastropheModMod.queueServerWork(118, () -> {
+							if (entity.isAlive()) {
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+									} else {
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+									}
+								}
+								{
+									final Vec3 _center = new Vec3(
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getX()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getY()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getZ()));
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+											.toList();
+									for (Entity entityiterator : _entfound) {
+										if (!(entityiterator == entity)) {
+											if (entityiterator instanceof LivingEntity) {
+												entityiterator.hurt(new DamageSource(
+														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 5);
+												if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+													_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+											}
+										}
+									}
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(149, () -> {
+						});
+						CatastropheModMod.queueServerWork(151, () -> {
+							if (entity.isAlive()) {
+								entity.getPersistentData().putBoolean("bladecombo", false);
+								if (world instanceof ServerLevel _level) {
+									Entity entityToSpawn = CatastropheModModEntities.ELECTRIFIED_SWORD_PROJECTILE.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY() + 2.5, entity.getZ()), MobSpawnType.MOB_SUMMONED);
+									if (entityToSpawn != null) {
+									}
 								}
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_whispers")), SoundSource.NEUTRAL, 1, 1);
+										_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_whispers")), SoundSource.NEUTRAL, 1, 1, false);
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
 									}
 								}
-								CatastropheModMod.queueServerWork(20, () -> {
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX() + 6), (entity.getY()), (entity.getZ()), 1, 0, 0, 0, 0);
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX() + -6), (entity.getY()), (entity.getZ()), 1, 0, 0, 0, 0);
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX()), (entity.getY()), (entity.getZ() + 6), 1, 0, 0, 0, 0);
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX()), (entity.getY()), (entity.getZ() + -6), 1, 0, 0, 0, 0);
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX() + 4), (entity.getY()), (entity.getZ() + 4), 1, 0, 0, 0, 0);
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX() + -4), (entity.getY()), (entity.getZ() + -4), 1, 0, 0, 0, 0);
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX() + 4), (entity.getY()), (entity.getZ() + -4), 1, 0, 0, 0, 0);
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DASH_INDICATOR.get()), (entity.getX() + -4), (entity.getY()), (entity.getZ() + 4), 1, 0, 0, 0, 0);
-								});
-								CatastropheModMod.queueServerWork(50, () -> {
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX() + 6, entity.getY(), entity.getZ())));;
-										_level.addFreshEntity(entityToSpawn);
+								if (entity instanceof MineralWraithEntity animatable)
+									animatable.setTexture("mineral_wraith_texture");
+							}
+						});
+					}
+				}
+			} else {
+				entity.getPersistentData().putDouble("mineral_wraith_ai", (entity.getPersistentData().getDouble("mineral_wraith_ai") - 1));
+			}
+		} else if (entity.getPersistentData().getBoolean("Phase2") == true) {
+			if (entity.getPersistentData().getDouble("mineral_wraith_ai") == 0) {
+				entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
+				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+					attack = Math.round(Math.random() * 2);
+					if (attack == 0) {
+						if (entity instanceof MineralWraithEntity) {
+							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.lightning_slam");
+						}
+						{
+							Entity _ent = entity;
+							_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
+									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()));
+							if (_ent instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()), _ent.getYRot(), _ent.getXRot());
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
+							}
+						}
+						CatastropheModMod.queueServerWork(27, () -> {
+							entity.setDeltaMovement(new Vec3(0, (-2), 0));
+						});
+						CatastropheModMod.queueServerWork(35, () -> {
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_cracks block ~ ~-1 ~");
+								}
+							}
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = CatastropheModModEntities.ELECTRIFIED_LIGHTNING.get().spawn(_level, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), MobSpawnType.MOB_SUMMONED);
+								if (entityToSpawn != null) {
+								}
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")),
+											SoundSource.HOSTILE, 1, 1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.HOSTILE, 1, 1,
+											false);
+								}
+							}
+							{
+								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 8);
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
 									}
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX() + -6, entity.getY(), entity.getZ())));;
-										_level.addFreshEntity(entityToSpawn);
+								}
+							}
+							{
+								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									{
+										double _setval = 3;
+										entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.intensity_timer = _setval;
+											capability.syncPlayerVariables(entityiterator);
+										});
 									}
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ() + 6)));;
-										_level.addFreshEntity(entityToSpawn);
+									{
+										boolean _setval = true;
+										entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.screenshake = _setval;
+											capability.syncPlayerVariables(entityiterator);
+										});
 									}
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ() + -6)));;
-										_level.addFreshEntity(entityToSpawn);
-									}
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX() + 4, entity.getY(), entity.getZ() + 4)));;
-										_level.addFreshEntity(entityToSpawn);
-									}
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX() + -4, entity.getY(), entity.getZ() + -4)));;
-										_level.addFreshEntity(entityToSpawn);
-									}
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX() + 4, entity.getY(), entity.getZ() + -4)));;
-										_level.addFreshEntity(entityToSpawn);
-									}
-									if (world instanceof ServerLevel _level) {
-										LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
-										entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entity.getX() + -4, entity.getY(), entity.getZ() + 4)));;
-										_level.addFreshEntity(entityToSpawn);
-									}
-								});
-							});
+									CatastropheModMod.queueServerWork(40, () -> {
+										{
+											boolean _setval = false;
+											entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+												capability.screenshake = _setval;
+												capability.syncPlayerVariables(entityiterator);
+											});
+										}
+									});
+								}
+							}
+						});
+					}
+					if (attack == 1) {
+						if (entity instanceof MineralWraithEntity) {
+							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.raging_thunder");
+						}
+						CatastropheModMod.queueServerWork(10, () -> {
+							entity.getPersistentData().putBoolean("ragingthunder", true);
+						});
+						CatastropheModMod.queueServerWork(70, () -> {
+							entity.getPersistentData().putBoolean("ragingthunder", false);
+						});
+					}
+					if (attack == 2) {
+						if (entity instanceof MineralWraithEntity) {
+							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.tempest_strike");
 						}
 					}
-				});
+				}
 			} else {
-				entity.getPersistentData().putDouble("timer", (entity.getPersistentData().getDouble("timer") + 1));
+				entity.getPersistentData().putDouble("mineral_wraith_ai", (entity.getPersistentData().getDouble("mineral_wraith_ai") - 1));
 			}
 		}
-		entity.getPersistentData().putBoolean("activate", true);
+		if (entity.getPersistentData().getBoolean("thunderclap") == true) {
+			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+				entity.setDeltaMovement(new Vec3(0, 0, 0));
+			}
+		}
+		if (entity.getPersistentData().getBoolean("bladecombo") == true) {
+			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+				entity.setDeltaMovement(new Vec3((((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() - entity.getX()) * 0.05),
+						((((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 0) - entity.getY()) * 0.05), (((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() - entity.getZ()) * 0.05)));
+			}
+		}
+		if (entity.getPersistentData().getBoolean("ragingthunder") == false) {
+			entity.getPersistentData().putDouble("lightningstrikes", 19);
+		}
+		if (entity.getPersistentData().getDouble("lightningstrikes") == 0) {
+			entity.getPersistentData().putDouble("lightningstrikes", 19);
+			if (entity.getPersistentData().getBoolean("ragingthunder") == true) {
+				if (entity.isAlive()) {
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands()
+								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getPersistentData().getDouble("mwx")), (entity.getPersistentData().getDouble("mwy")), (entity.getPersistentData().getDouble("mwz"))),
+										Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/photon fx photon:lightning_telegraph block ~ ~0.5 ~");
+					CatastropheModMod.queueServerWork(19, () -> {
+						{
+							final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("mwx")), (entity.getPersistentData().getDouble("mwy")), (entity.getPersistentData().getDouble("mwz")));
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (!(entityiterator == entity)) {
+									if (!(entityiterator instanceof SurgeBreakerEntity || entityiterator instanceof ArcStrikerEntity || entityiterator instanceof VoltbladeEntity)) {
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 8);
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+									}
+								}
+							}
+						}
+						{
+							final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("mwx")), (entity.getPersistentData().getDouble("mwy")), (entity.getPersistentData().getDouble("mwz")));
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								{
+									double _setval = 3;
+									entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.intensity_timer = _setval;
+										capability.syncPlayerVariables(entityiterator);
+									});
+								}
+								{
+									boolean _setval = true;
+									entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.screenshake = _setval;
+										capability.syncPlayerVariables(entityiterator);
+									});
+								}
+								CatastropheModMod.queueServerWork(40, () -> {
+									{
+										boolean _setval = false;
+										entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.screenshake = _setval;
+											capability.syncPlayerVariables(entityiterator);
+										});
+									}
+								});
+							}
+						}
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = CatastropheModModEntities.ELECTRIFIED_LIGHTNING.get().spawn(_level,
+									BlockPos.containing(entity.getPersistentData().getDouble("mwx"), entity.getPersistentData().getDouble("mwy"), entity.getPersistentData().getDouble("mwz")), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(entity.getPersistentData().getDouble("mwx"), entity.getPersistentData().getDouble("mwy"), entity.getPersistentData().getDouble("mwz")),
+										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.HOSTILE, 3, 1);
+							} else {
+								_level.playLocalSound((entity.getPersistentData().getDouble("mwx")), (entity.getPersistentData().getDouble("mwy")), (entity.getPersistentData().getDouble("mwz")),
+										ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.HOSTILE, 3, 1, false);
+							}
+						}
+					});
+					entity.getPersistentData().putBoolean("lightningcooldown", true);
+					CatastropheModMod.queueServerWork(20, () -> {
+						entity.getPersistentData().putBoolean("lightningcooldown", false);
+					});
+				}
+			}
+		} else {
+			entity.getPersistentData().putDouble("lightningstrikes", (entity.getPersistentData().getDouble("lightningstrikes") + -1));
+		}
+		if (entity.getPersistentData().getBoolean("dash") == true) {
+			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+				if (entity.isAlive()) {
+					{
+						final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (!(entityiterator == entity)) {
+								if (entityiterator instanceof LivingEntity) {
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity), 8);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }

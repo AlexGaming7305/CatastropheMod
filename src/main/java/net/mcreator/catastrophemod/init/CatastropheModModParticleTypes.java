@@ -18,7 +18,6 @@ public class CatastropheModModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> POISON_TRAIL = REGISTRY.register("poison_trail", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> DASH_INDICATOR = REGISTRY.register("dash_indicator", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> ELECTRIFIED_SPARK = REGISTRY.register("electrified_spark", () -> new SimpleParticleType(true));
-	public static final RegistryObject<SimpleParticleType> WHIRLPOOL = REGISTRY.register("whirlpool", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> HEALING_SPARK = REGISTRY.register("healing_spark", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> AMATOXIN_GAS = REGISTRY.register("amatoxin_gas", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> BLOOD_DROP = REGISTRY.register("blood_drop", () -> new SimpleParticleType(false));

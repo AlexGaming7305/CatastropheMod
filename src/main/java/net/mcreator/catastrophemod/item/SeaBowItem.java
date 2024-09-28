@@ -24,6 +24,6 @@ public class SeaBowItem extends BowItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Has a \u00A7a25% chance \u00A77to fire a Shell."));
+		list.add(Component.literal("\u00A77Fully charged shots fire an additional 2 Sea Crystal Shards"));
 	}
 }

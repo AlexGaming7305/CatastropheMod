@@ -15,7 +15,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class RipsawSawbladeLayer extends GeoRenderLayer<RipsawSawbladeEntity> {
-	private static final ResourceLocation LAYER = new ResourceLocation("catastrophe_mod", "textures/entities/saw_blade_texture_glow.png");
+	private static final ResourceLocation LAYER = new ResourceLocation("catastrophe_mod", "textures/entities/ripsaw_sawblade_texture_glow.png");
 
 	public RipsawSawbladeLayer(GeoRenderer<RipsawSawbladeEntity> entityRenderer) {
 		super(entityRenderer);

@@ -41,6 +41,8 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 		double radius = 0;
 		double xvel = 0;
 		double speed = 0;
+		Entity nightfallsdemiseowner = null;
+		Entity ripsawowner = null;
 		{
 			Entity _ent = entity;
 			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -64,10 +66,8 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(100 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
-					if (entityiterator == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)) {
-						entity.setDeltaMovement(new Vec3((((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getX() - entity.getX()) * 0.2),
-								((((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getY() + 1) - entity.getY()) * 0.2),
-								(((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getZ() - entity.getZ()) * 0.2)));
+					if ((entityiterator.getStringUUID()).equals(entity.getPersistentData().getString("RipsawOwner"))) {
+						entity.setDeltaMovement(new Vec3(((entityiterator.getX() - entity.getX()) * 0.2), (((entityiterator.getY() + 1) - entity.getY()) * 0.2), ((entityiterator.getZ() - entity.getZ()) * 0.2)));
 					}
 				}
 			}
@@ -80,18 +80,28 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(200 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if ((entityiterator.getStringUUID()).equals(entity.getPersistentData().getString("RipsawOwner"))) {
+					ripsawowner = entityiterator;
+				}
+			}
+		}
+		{
+			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof LivingEntity) {
 					if (!(entityiterator == entity)) {
-						if (!(entityiterator == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
-							if (!(entityiterator instanceof RipsawSawbladeEntity)) {
-								if (entityiterator.isAlive()) {
-									entityiterator
-											.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:split_in_two"))),
-													(entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null)), 5);
-									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
+						if (!(entityiterator.getStringUUID()).equals(entity.getPersistentData().getString("RipsawOwner"))) {
+							if (!(entityiterator == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
+								if (!(entityiterator instanceof RipsawSawbladeEntity)) {
+									if (entityiterator.isAlive()) {
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:split_in_two"))), ripsawowner), 5);
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
+									}
 								}
 							}
 						}

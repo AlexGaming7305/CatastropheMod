@@ -54,7 +54,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> VINES_OF_VENOM = REGISTRY.register("vines_of_venom", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "vines_of_venom")));
 	public static final RegistryObject<SoundEvent> BATTLE_OF_STONE = REGISTRY.register("battle_of_stone", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "battle_of_stone")));
 	public static final RegistryObject<SoundEvent> SPARK_OF_A_SHADOW = REGISTRY.register("spark_of_a_shadow", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "spark_of_a_shadow")));
-	public static final RegistryObject<SoundEvent> METAL_HIT = REGISTRY.register("metal_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "metal_hit")));
 	public static final RegistryObject<SoundEvent> STRONG_METAL_HIT = REGISTRY.register("strong_metal_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "strong_metal_hit")));
 	public static final RegistryObject<SoundEvent> AXE_SLASH = REGISTRY.register("axe_slash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "axe_slash")));
 	public static final RegistryObject<SoundEvent> AXE_HITS = REGISTRY.register("axe_hits", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "axe_hits")));
@@ -88,4 +87,17 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> MARKSMAN_SHOT = REGISTRY.register("marksman_shot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "marksman_shot")));
 	public static final RegistryObject<SoundEvent> ELECTRIFIED_SWORD_HIT = REGISTRY.register("electrified_sword_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_sword_hit")));
 	public static final RegistryObject<SoundEvent> WEAK_METAL_HIT = REGISTRY.register("weak_metal_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "weak_metal_hit")));
+	public static final RegistryObject<SoundEvent> ELECTRIFIED_LIGHTNING_STRIKES = REGISTRY.register("electrified_lightning_strikes",
+			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_lightning_strikes")));
+	public static final RegistryObject<SoundEvent> SURGE_BREAKER_CHARGE = REGISTRY.register("surge_breaker_charge", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "surge_breaker_charge")));
+	public static final RegistryObject<SoundEvent> SURGE_BREAKER_SHOCKWAVE = REGISTRY.register("surge_breaker_shockwave", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "surge_breaker_shockwave")));
+	public static final RegistryObject<SoundEvent> SURGE_BREAKER_PUNCH = REGISTRY.register("surge_breaker_punch", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "surge_breaker_punch")));
+	public static final RegistryObject<SoundEvent> CRYSTALLINE_EDGE_BIG_SLASH = REGISTRY.register("crystalline_edge_big_slash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "crystalline_edge_big_slash")));
+	public static final RegistryObject<SoundEvent> CRYSTALLINE_EDGE_RESONATES = REGISTRY.register("crystalline_edge_resonates", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "crystalline_edge_resonates")));
+	public static final RegistryObject<SoundEvent> CRYSTALLINE_EDGE_CHARGED = REGISTRY.register("crystalline_edge_charged", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "crystalline_edge_charged")));
+	public static final RegistryObject<SoundEvent> MW_START_SPEECH = REGISTRY.register("mw_start_speech", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mw_start_speech")));
+	public static final RegistryObject<SoundEvent> MW_SPARE_SPEECH = REGISTRY.register("mw_spare_speech", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mw_spare_speech")));
+	public static final RegistryObject<SoundEvent> MW_HIT_SPEECH = REGISTRY.register("mw_hit_speech", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mw_hit_speech")));
+	public static final RegistryObject<SoundEvent> MW_FINAL_DEFEAT_SPEECH = REGISTRY.register("mw_final_defeat_speech", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mw_final_defeat_speech")));
+	public static final RegistryObject<SoundEvent> MINERAL_WRAITH_CHARGES = REGISTRY.register("mineral_wraith_charges", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mineral_wraith_charges")));
 }

@@ -43,5 +43,13 @@ public class GiantIsopodOnEntityTickUpdateProcedure {
 		if (entity.getPersistentData().getBoolean("isopodpanicked") == false) {
 			entity.getPersistentData().putDouble("panictime", 0);
 		}
+		if (entity.getPersistentData().getBoolean("isopodcooldown") == true) {
+			if (entity.getPersistentData().getDouble("isopodtimer") == 2400) {
+				entity.getPersistentData().putDouble("isopodtimer", 0);
+				entity.getPersistentData().putBoolean("isopodcooldown", false);
+			} else {
+				entity.getPersistentData().putDouble("isopodtimer", (entity.getPersistentData().getDouble("isopodtimer") + 1));
+			}
+		}
 	}
 }

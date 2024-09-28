@@ -26,6 +26,7 @@ import net.mcreator.catastrophemod.client.model.Modelshadowfire_soul;
 import net.mcreator.catastrophemod.client.model.Modelshadowfire_skull;
 import net.mcreator.catastrophemod.client.model.Modelshadowfire_ball;
 import net.mcreator.catastrophemod.client.model.Modelsea_pendant;
+import net.mcreator.catastrophemod.client.model.Modelsea_crystal_shard;
 import net.mcreator.catastrophemod.client.model.Modelrunning_boot;
 import net.mcreator.catastrophemod.client.model.Modelquiver;
 import net.mcreator.catastrophemod.client.model.Modelpoisonous_thorn;
@@ -120,6 +121,7 @@ public class CatastropheModModModels {
 		event.registerLayerDefinition(Modelamulet_of_vitality.LAYER_LOCATION, Modelamulet_of_vitality::createBodyLayer);
 		event.registerLayerDefinition(Modelknife_of_proficiency.LAYER_LOCATION, Modelknife_of_proficiency::createBodyLayer);
 		event.registerLayerDefinition(Modelfrost_ray.LAYER_LOCATION, Modelfrost_ray::createBodyLayer);
+		event.registerLayerDefinition(Modelsea_crystal_shard.LAYER_LOCATION, Modelsea_crystal_shard::createBodyLayer);
 		event.registerLayerDefinition(Modelquiver.LAYER_LOCATION, Modelquiver::createBodyLayer);
 		event.registerLayerDefinition(Modelspore.LAYER_LOCATION, Modelspore::createBodyLayer);
 		event.registerLayerDefinition(Modelpacifying_sight.LAYER_LOCATION, Modelpacifying_sight::createBodyLayer);

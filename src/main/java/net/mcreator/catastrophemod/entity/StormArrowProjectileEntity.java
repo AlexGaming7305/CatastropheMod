@@ -22,6 +22,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.catastrophemod.procedures.StormArrowProjectileHitsLivingEntityProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
@@ -57,7 +58,7 @@ public class StormArrowProjectileEntity extends AbstractArrow implements ItemSup
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return PROJECTILE_ITEM;
+		return new ItemStack(CatastropheModModItems.STORM_ARROW.get());
 	}
 
 	@Override
@@ -69,14 +70,12 @@ public class StormArrowProjectileEntity extends AbstractArrow implements ItemSup
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		StormArrowProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		StormArrowProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner());
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		if (this.inGround)
-			this.discard();
 	}
 
 	public static StormArrowProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {

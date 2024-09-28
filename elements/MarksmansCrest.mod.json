@@ -5,13 +5,13 @@
     "renderType": 0,
     "texture": "marksmans_crest",
     "customModelName": "Normal",
-    "name": "Marksman's Crest",
+    "name": "§cMarksman's Crest",
     "rarity": "COMMON",
     "slotType": "Accessory",
     "baubleModel": "Default",
     "baubleModelTexture": "",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Accessories"
     },
     "stackSize": 1,
     "enchantability": 0,

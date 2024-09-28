@@ -23,8 +23,7 @@ public class RiptideItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A7aRight-click: \u00A77Fires a Shell \u00A7b(Costs 5 Mana)"));
-		list.add(Component.literal("\u00A7aSneak + Right-click: \u00A77Casts a Whirlpool \u00A7b(Costs 20 Mana)"));
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Casts a Sea Crystal Riptide that pulls enemies in as it travels \u00A7b(Costs 10 Mana)"));
 	}
 
 	@Override

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:atlantic_sea_nettle_item"
+    },
+    "b": {
+      "item": "catastrophe_mod:sea_pendant"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:jellyfish_pendant",
+    "count": 1
+  }
+}

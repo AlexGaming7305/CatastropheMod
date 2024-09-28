@@ -31,7 +31,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7\"Dude, Eureka.\"",
+        "§7Shoots an Electrified Sawblade that inflicts §cElectrified"
+      ]
     },
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

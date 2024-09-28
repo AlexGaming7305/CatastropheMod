@@ -9,7 +9,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.mcreator.catastrophemod.client.particle.WhirlpoolParticle;
 import net.mcreator.catastrophemod.client.particle.StarrySparkleParticle;
 import net.mcreator.catastrophemod.client.particle.SparkParticle;
 import net.mcreator.catastrophemod.client.particle.SnowflakeParticle;
@@ -33,7 +32,6 @@ public class CatastropheModModParticles {
 		event.registerSpriteSet(CatastropheModModParticleTypes.POISON_TRAIL.get(), PoisonTrailParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.DASH_INDICATOR.get(), DashIndicatorParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.ELECTRIFIED_SPARK.get(), ElectrifiedSparkParticle::provider);
-		event.registerSpriteSet(CatastropheModModParticleTypes.WHIRLPOOL.get(), WhirlpoolParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.HEALING_SPARK.get(), HealingSparkParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.AMATOXIN_GAS.get(), AmatoxinGasParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.BLOOD_DROP.get(), BloodDropParticle::provider);

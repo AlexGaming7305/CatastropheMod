@@ -80,7 +80,7 @@ public class RipsawSawbladeEntity extends TamableAnimal implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "saw_blade_texture");
+		this.entityData.define(TEXTURE, "ripsaw_sawblade_texture");
 	}
 
 	public void setTexture(String texture) {
