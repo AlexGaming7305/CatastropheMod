@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 0.0,
+    "damage": 1.0,
+    "knockback": 0,
+    "entityModel": "Modelnailgun_nail_Converted",
+    "customModelTexture": "nailgun_nail_texture.png",
+    "onFlyingTick": {
+      "name": "NailgunNailWhileProjectileFlyingTick"
+    }
+  }
+}

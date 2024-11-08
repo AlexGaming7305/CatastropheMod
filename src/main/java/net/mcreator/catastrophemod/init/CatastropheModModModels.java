@@ -32,6 +32,7 @@ import net.mcreator.catastrophemod.client.model.Modelquiver;
 import net.mcreator.catastrophemod.client.model.Modelpoisonous_thorn;
 import net.mcreator.catastrophemod.client.model.Modelpacifying_sight;
 import net.mcreator.catastrophemod.client.model.Modelnature_blast;
+import net.mcreator.catastrophemod.client.model.Modelnailgun_nail_Converted;
 import net.mcreator.catastrophemod.client.model.Modelknife_of_proficiency;
 import net.mcreator.catastrophemod.client.model.Modeliron_round;
 import net.mcreator.catastrophemod.client.model.Modelicicle;
@@ -89,6 +90,7 @@ public class CatastropheModModModels {
 		event.registerLayerDefinition(Modelblazing_feather.LAYER_LOCATION, Modelblazing_feather::createBodyLayer);
 		event.registerLayerDefinition(Modelthorn_spear.LAYER_LOCATION, Modelthorn_spear::createBodyLayer);
 		event.registerLayerDefinition(Modelelectrified_bolt.LAYER_LOCATION, Modelelectrified_bolt::createBodyLayer);
+		event.registerLayerDefinition(Modelnailgun_nail_Converted.LAYER_LOCATION, Modelnailgun_nail_Converted::createBodyLayer);
 		event.registerLayerDefinition(Modelshroomium_hat.LAYER_LOCATION, Modelshroomium_hat::createBodyLayer);
 		event.registerLayerDefinition(Modelhunter_chestplate.LAYER_LOCATION, Modelhunter_chestplate::createBodyLayer);
 		event.registerLayerDefinition(Modelcactus_needle.LAYER_LOCATION, Modelcactus_needle::createBodyLayer);

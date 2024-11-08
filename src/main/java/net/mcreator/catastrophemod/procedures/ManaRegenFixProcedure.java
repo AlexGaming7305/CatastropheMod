@@ -165,5 +165,12 @@ public class ManaRegenFixProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.electrified_armor_cooldown = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "catastrophe_mod:displaysettings/nailgun",
+  "textures": {
+    "layer0": "catastrophe_mod:item/nailgun_texture"
+  }
+}

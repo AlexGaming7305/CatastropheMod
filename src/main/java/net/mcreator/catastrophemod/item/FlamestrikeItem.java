@@ -130,7 +130,7 @@ public class FlamestrikeItem extends Item implements GeoItem {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		FlamestrikeRightclickedProcedure.execute(world, x, y, z, entity, itemstack);
+		FlamestrikeRightclickedProcedure.execute();
 		return ar;
 	}
 }

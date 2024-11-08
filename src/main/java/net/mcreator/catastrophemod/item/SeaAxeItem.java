@@ -34,7 +34,7 @@ public class SeaAxeItem extends AxeItem {
 			}
 
 			public int getEnchantmentValue() {
-				return 10;
+				return 15;
 			}
 
 			public Ingredient getRepairIngredient() {
@@ -46,7 +46,6 @@ public class SeaAxeItem extends AxeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Deals \u00A7a50% \u00A77more damage while submerged"));
-		list.add(Component.literal("\u00A77Doubled \u00A7aMining Speed \u00A77while submerged"));
+		list.add(Component.literal("\u00A77Grants you \u00A79Water Breathing \u00A77when held"));
 	}
 }

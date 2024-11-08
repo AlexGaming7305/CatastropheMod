@@ -11,8 +11,8 @@
     "name": "Sea Spear",
     "specialInformation": {
       "fixedValue": [
-        "§7Deals §a50% §7more damage while submerged",
-        "§aWhile Submerged + Right-click: §7Performs a dash which can damage enemies"
+        "§aRight-click: §7Throws the spear out",
+        "§aRight-click + While Thrown: §7Reels you towards the spear causing a burst of energy when reached"
       ]
     },
     "creativeTab": {
@@ -21,7 +21,7 @@
     "harvestLevel": 2,
     "efficiency": 6.0,
     "attackSpeed": 1.1,
-    "enchantability": 10,
+    "enchantability": 15,
     "damageVsEntity": 5.0,
     "usageCount": 285,
     "blocksAffected": [],

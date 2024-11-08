@@ -18,7 +18,7 @@ public class SeaBowItem extends BowItem {
 
 	@Override
 	public int getEnchantmentValue() {
-		return 10;
+		return 15;
 	}
 
 	@Override

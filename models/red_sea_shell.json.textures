@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "red_sea_shell"
+      },
+      "name": "default"
+    }
+  }
+}

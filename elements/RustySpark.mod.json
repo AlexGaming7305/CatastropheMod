@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "particle",
+  "definition": {
+    "texture": "rusty_spark.png",
+    "animate": true,
+    "frameDuration": 6,
+    "width": 0.19999999999999998,
+    "height": 0.2,
+    "scale": 2.0,
+    "speedFactor": 0.19999999999999998,
+    "gravity": 1.2000000000000002,
+    "maxAge": 6,
+    "maxAgeDiff": 0,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
+    "canCollide": true,
+    "alwaysShow": true,
+    "renderType": "LIT"
+  }
+}

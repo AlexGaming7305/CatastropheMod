@@ -7,7 +7,7 @@
     "name": "Rustgun",
     "idle": "0",
     "rarity": "COMMON",
-    "displaySettings": "rustgun.item.json",
+    "displaySettings": "rustgun.json",
     "leftArm": "",
     "rightArm": "",
     "perspective": "All Perspectives",
@@ -41,6 +41,12 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "RustgunRightclicked"
+    },
+    "onItemInInventoryTick": {
+      "name": "GunAmmoTypeReset"
+    },
+    "onItemInUseTick": {
+      "name": "RustgunItemInHandTick"
     },
     "isFood": false,
     "nutritionalValue": 4,
@@ -85,7 +91,6 @@
         "swings": false,
         "followsHead": true
       }
-    ],
-    "disableSwing": false
+    ]
   }
 }

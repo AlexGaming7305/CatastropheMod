@@ -1,0 +1,17 @@
+{
+  "type": "catastrophe_mod:structure_feature",
+  "config": {
+    "structure": "catastrophe_mod:moai",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": [
+      "minecraft:air",
+      "minecraft:structure_block"
+    ],
+    "offset": [
+      0,
+      -1,
+      0
+    ]
+  }
+}

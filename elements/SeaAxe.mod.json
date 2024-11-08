@@ -11,8 +11,7 @@
     "name": "Sea Axe",
     "specialInformation": {
       "fixedValue": [
-        "§7Deals §a50% §7more damage while submerged",
-        "§7Doubled §aMining Speed §7while submerged"
+        "§7Grants you §9Water Breathing §7when held"
       ]
     },
     "creativeTab": {
@@ -21,7 +20,7 @@
     "harvestLevel": 2,
     "efficiency": 6.0,
     "attackSpeed": 0.9,
-    "enchantability": 10,
+    "enchantability": 15,
     "damageVsEntity": 8.0,
     "usageCount": 285,
     "blocksAffected": [],

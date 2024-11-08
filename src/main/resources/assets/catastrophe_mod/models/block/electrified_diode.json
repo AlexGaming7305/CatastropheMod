@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/electrified_diode",
+    "up": "catastrophe_mod:block/electrified_diode",
+    "north": "catastrophe_mod:block/electrified_diode",
+    "east": "catastrophe_mod:block/electrified_diode",
+    "south": "catastrophe_mod:block/electrified_diode",
+    "west": "catastrophe_mod:block/electrified_diode",
+    "particle": "catastrophe_mod:block/electrified_diode"
+  },
+  "render_type": "solid"
+}

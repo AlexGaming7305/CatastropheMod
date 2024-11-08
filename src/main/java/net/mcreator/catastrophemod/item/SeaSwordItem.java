@@ -34,7 +34,7 @@ public class SeaSwordItem extends SwordItem {
 			}
 
 			public int getEnchantmentValue() {
-				return 10;
+				return 15;
 			}
 
 			public Ingredient getRepairIngredient() {

@@ -43,7 +43,7 @@ public class SeaCrystalRiptideProjectileOnInitialEntitySpawnProcedure {
 								_entity.yHeadRotO = _entity.getYRot();
 							}
 						}
-						entity.setDeltaMovement(new Vec3((entityiterator.getLookAngle().x * 1.5), (entityiterator.getLookAngle().y), (entityiterator.getLookAngle().z * 1.5)));
+						entity.setDeltaMovement(new Vec3((entityiterator.getLookAngle().x * 2), (entityiterator.getLookAngle().y), (entityiterator.getLookAngle().z * 2)));
 						entity.getPersistentData().putString("RiptideOwner", (entityiterator.getStringUUID()));
 					}
 				}

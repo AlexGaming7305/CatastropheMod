@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "beach",
+  "features": "catastrophe_mod:shale_rocks",
+  "step": "surface_structures"
+}

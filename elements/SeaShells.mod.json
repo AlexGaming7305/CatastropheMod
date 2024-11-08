@@ -1,0 +1,13 @@
+{
+  "_fv": 57,
+  "_type": "feature",
+  "definition": {
+    "generationStep": "UNDERGROUND_STRUCTURES",
+    "restrictionBiomes": [
+      {
+        "value": "beaches"
+      }
+    ],
+    "featurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"feature_container\" deletable=\"false\" x=\"40\" y=\"40\"><value name=\"feature\"><block type=\"feature_simple_random_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"5\"></mutation><value name=\"feature0\"><block type=\"feature_block_column_simple\"><value name=\"height\"><block type=\"int_provider_constant\"><field name=\"value\">1</field></block></value><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:YellowSeaShell</field></block></value></block></value><value name=\"feature1\"><block type=\"feature_block_column_simple\"><value name=\"height\"><block type=\"int_provider_constant\"><field name=\"value\">1</field></block></value><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:BlueSeaShell</field></block></value></block></value><value name=\"feature2\"><block type=\"feature_block_column_simple\"><value name=\"height\"><block type=\"int_provider_constant\"><field name=\"value\">1</field></block></value><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:RedSeaShell</field></block></value></block></value><value name=\"feature3\"><block type=\"feature_block_column_simple\"><value name=\"height\"><block type=\"int_provider_constant\"><field name=\"value\">1</field></block></value><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:PurpleSeaShell</field></block></value></block></value><value name=\"feature4\"><block type=\"feature_block_column_simple\"><value name=\"height\"><block type=\"int_provider_constant\"><field name=\"value\">1</field></block></value><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">CUSTOM:PinkSeaShell</field></block></value></block></value></block></value><next><block type=\"placement_count\"><value name=\"count\"><block type=\"int_provider_uniform\"><field name=\"min\">0</field><field name=\"max\">3</field></block></value><next><block type=\"placement_in_square\"><next><block type=\"placement_heightmap\"><field name=\"heightmap\">OCEAN_FLOOR_WG</field><next><block type=\"placement_biome_filter\"></block></next></block></next></block></next></block></next></block></xml>"
+  }
+}

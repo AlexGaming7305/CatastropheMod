@@ -11,7 +11,7 @@
     "name": "Sea Pickaxe",
     "specialInformation": {
       "fixedValue": [
-        "§7Doubled §aMining Speed §7while submerged"
+        "§7Grants you §9Water Breathing §7when held"
       ]
     },
     "creativeTab": {
@@ -20,7 +20,7 @@
     "harvestLevel": 2,
     "efficiency": 6.0,
     "attackSpeed": 1.2000000000000002,
-    "enchantability": 10,
+    "enchantability": 15,
     "damageVsEntity": 3.0,
     "usageCount": 285,
     "blocksAffected": [],

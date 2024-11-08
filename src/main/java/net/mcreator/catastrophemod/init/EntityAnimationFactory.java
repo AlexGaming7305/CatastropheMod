@@ -16,7 +16,6 @@ import net.mcreator.catastrophemod.entity.ShootingStarEntity;
 import net.mcreator.catastrophemod.entity.ShadowflameSpearsEntity;
 import net.mcreator.catastrophemod.entity.ShadeEntity;
 import net.mcreator.catastrophemod.entity.SepulcherEntity;
-import net.mcreator.catastrophemod.entity.SeaSnailEntity;
 import net.mcreator.catastrophemod.entity.SeaCrystalRiptideProjectileEntity;
 import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
 import net.mcreator.catastrophemod.entity.PileOfMossEntity;
@@ -52,6 +51,7 @@ import net.mcreator.catastrophemod.entity.AssassinSkeletonEntity;
 import net.mcreator.catastrophemod.entity.ArcStrikerEntity;
 import net.mcreator.catastrophemod.entity.AnglerfishEntity;
 import net.mcreator.catastrophemod.entity.AcidTarantulaMinionEntity;
+import net.mcreator.catastrophemod.entity.AccursedWitchEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -331,13 +331,6 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof SeaSnailEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
 			if (event.getEntity() instanceof DiamondDetonationBombEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
@@ -388,6 +381,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof SurgeBreakerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AccursedWitchEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

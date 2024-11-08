@@ -46,6 +46,6 @@ public class SeaHoeItem extends HoeItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Doubled \u00A7aMining Speed \u00A77while submerged"));
+		list.add(Component.literal("\u00A77Grants you \u00A79Water Breathing \u00A77when held"));
 	}
 }

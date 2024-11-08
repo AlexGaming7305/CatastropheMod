@@ -1,0 +1,152 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "config": {
+            "allowed_placement": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            "direction": "up",
+            "layers": [
+              {
+                "height": 1,
+                "provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "catastrophe_mod:yellow_sea_shell",
+                    "Properties": {
+                      "waterlogged": "false",
+                      "facing": "north"
+                    }
+                  }
+                }
+              }
+            ],
+            "prioritize_tip": false
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "config": {
+            "allowed_placement": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            "direction": "up",
+            "layers": [
+              {
+                "height": 1,
+                "provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "catastrophe_mod:blue_sea_shell",
+                    "Properties": {
+                      "waterlogged": "false",
+                      "facing": "north"
+                    }
+                  }
+                }
+              }
+            ],
+            "prioritize_tip": false
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "config": {
+            "allowed_placement": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            "direction": "up",
+            "layers": [
+              {
+                "height": 1,
+                "provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "catastrophe_mod:red_sea_shell",
+                    "Properties": {
+                      "waterlogged": "false",
+                      "facing": "north"
+                    }
+                  }
+                }
+              }
+            ],
+            "prioritize_tip": false
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "config": {
+            "allowed_placement": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            "direction": "up",
+            "layers": [
+              {
+                "height": 1,
+                "provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "catastrophe_mod:purple_sea_shell",
+                    "Properties": {
+                      "waterlogged": "false",
+                      "facing": "north"
+                    }
+                  }
+                }
+              }
+            ],
+            "prioritize_tip": false
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "minecraft:block_column",
+          "config": {
+            "allowed_placement": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:air"
+            },
+            "direction": "up",
+            "layers": [
+              {
+                "height": 1,
+                "provider": {
+                  "type": "minecraft:simple_state_provider",
+                  "state": {
+                    "Name": "catastrophe_mod:pink_sea_shell",
+                    "Properties": {
+                      "waterlogged": "false",
+                      "facing": "north"
+                    }
+                  }
+                }
+              }
+            ],
+            "prioritize_tip": false
+          }
+        },
+        "placement": []
+      }
+    ]
+  }
+}

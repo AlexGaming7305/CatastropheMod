@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bab",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:copper_shard"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:electrified_armor_chestplate",
+    "count": 1
+  }
+}

@@ -202,6 +202,12 @@ public class CatastropheModModVariables {
 				clone.crystalline_edge_charged = original.crystalline_edge_charged;
 				clone.crystalline_edge_load = original.crystalline_edge_load;
 				clone.crystalline_edge_charges = original.crystalline_edge_charges;
+				clone.riptide_effects = original.riptide_effects;
+				clone.electrified_chestplate = original.electrified_chestplate;
+				clone.electrified_armor_cooldown = original.electrified_armor_cooldown;
+				clone.flamestrike_ammo = original.flamestrike_ammo;
+				clone.rustgun_ammo = original.rustgun_ammo;
+				clone.out_of_ammo_timer = original.out_of_ammo_timer;
 			}
 		}
 
@@ -501,6 +507,12 @@ public class CatastropheModModVariables {
 		public boolean crystalline_edge_charged = false;
 		public boolean crystalline_edge_load = false;
 		public double crystalline_edge_charges = 0;
+		public boolean riptide_effects = false;
+		public boolean electrified_chestplate = false;
+		public boolean electrified_armor_cooldown = false;
+		public double flamestrike_ammo = 0;
+		public double rustgun_ammo = 0;
+		public boolean out_of_ammo_timer = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -637,6 +649,12 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("crystalline_edge_charged", crystalline_edge_charged);
 			nbt.putBoolean("crystalline_edge_load", crystalline_edge_load);
 			nbt.putDouble("crystalline_edge_charges", crystalline_edge_charges);
+			nbt.putBoolean("riptide_effects", riptide_effects);
+			nbt.putBoolean("electrified_chestplate", electrified_chestplate);
+			nbt.putBoolean("electrified_armor_cooldown", electrified_armor_cooldown);
+			nbt.putDouble("flamestrike_ammo", flamestrike_ammo);
+			nbt.putDouble("rustgun_ammo", rustgun_ammo);
+			nbt.putBoolean("out_of_ammo_timer", out_of_ammo_timer);
 			return nbt;
 		}
 
@@ -770,6 +788,12 @@ public class CatastropheModModVariables {
 			crystalline_edge_charged = nbt.getBoolean("crystalline_edge_charged");
 			crystalline_edge_load = nbt.getBoolean("crystalline_edge_load");
 			crystalline_edge_charges = nbt.getDouble("crystalline_edge_charges");
+			riptide_effects = nbt.getBoolean("riptide_effects");
+			electrified_chestplate = nbt.getBoolean("electrified_chestplate");
+			electrified_armor_cooldown = nbt.getBoolean("electrified_armor_cooldown");
+			flamestrike_ammo = nbt.getDouble("flamestrike_ammo");
+			rustgun_ammo = nbt.getDouble("rustgun_ammo");
+			out_of_ammo_timer = nbt.getBoolean("out_of_ammo_timer");
 		}
 	}
 
@@ -922,6 +946,12 @@ public class CatastropheModModVariables {
 					variables.crystalline_edge_charged = message.data.crystalline_edge_charged;
 					variables.crystalline_edge_load = message.data.crystalline_edge_load;
 					variables.crystalline_edge_charges = message.data.crystalline_edge_charges;
+					variables.riptide_effects = message.data.riptide_effects;
+					variables.electrified_chestplate = message.data.electrified_chestplate;
+					variables.electrified_armor_cooldown = message.data.electrified_armor_cooldown;
+					variables.flamestrike_ammo = message.data.flamestrike_ammo;
+					variables.rustgun_ammo = message.data.rustgun_ammo;
+					variables.out_of_ammo_timer = message.data.out_of_ammo_timer;
 				}
 			});
 			context.setPacketHandled(true);

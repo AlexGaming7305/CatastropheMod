@@ -28,7 +28,7 @@ public class AccursedTomeItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A7aRight-click: \u00A77Casts two daggers that curve towards your crosshair"));
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Casts two daggers that curve towards your crosshair \u00A7b(Costs 6 mana)"));
 	}
 
 	@Override

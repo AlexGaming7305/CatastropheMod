@@ -736,5 +736,68 @@
         "stream": false
       }
     ]
+  },
+  "riptide_casts": {
+    "subtitle": "subtitles.riptide_casts",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:riptide_casts",
+        "stream": false
+      }
+    ]
+  },
+  "something_is_sliced": {
+    "subtitle": "subtitles.something_is_sliced",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:something_is_sliced",
+        "stream": false
+      }
+    ]
+  },
+  "gun_clicks": {
+    "subtitle": "subtitles.gun_clicks",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:gun_clicks",
+        "stream": false
+      }
+    ]
+  },
+  "sparkshredder_explodes": {
+    "subtitle": "subtitles.sparkshredder_explodes",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:sparkshredder_explodes",
+        "stream": false
+      }
+    ]
+  },
+  "sparkshredder_charges": {
+    "subtitle": "subtitles.sparkshredder_charges",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:sparkshredder_charges",
+        "stream": false
+      }
+    ]
+  },
+  "sparkshredder_fires": {
+    "subtitle": "subtitles.sparkshredder_fires",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:sparkshredder_fires",
+        "stream": false
+      }
+    ]
+  },
+  "sparkshredder_starts": {
+    "subtitle": "subtitles.sparkshredder_starts",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:sparkshredder_starts",
+        "stream": false
+      }
+    ]
   }
 }

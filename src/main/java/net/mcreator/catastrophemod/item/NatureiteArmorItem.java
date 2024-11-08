@@ -36,7 +36,7 @@ public abstract class NatureiteArmorItem extends ArmorItem {
 
 			@Override
 			public int getEnchantmentValue() {
-				return 7;
+				return 11;
 			}
 
 			@Override

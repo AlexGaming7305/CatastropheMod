@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "catastrophe_mod:block/shale",
+    "top": "catastrophe_mod:block/shale",
+    "side": "catastrophe_mod:block/shale"
+  },
+  "render_type": "solid"
+}

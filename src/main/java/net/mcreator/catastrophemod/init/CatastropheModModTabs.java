@@ -48,6 +48,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.HAUNTED_MIRROR.get());
 				tabData.accept(CatastropheModModItems.FORCE_MISSILES.get());
 				tabData.accept(CatastropheModModItems.THUNDERSTRIKE.get());
+				tabData.accept(CatastropheModModItems.STARLIGHT_SCEPTER.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> MELEE = REGISTRY.register("melee",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.melee")).icon(() -> new ItemStack(CatastropheModModItems.ELECTRIFIED_SWORD.get())).displayItems((parameters, tabData) -> {
@@ -87,6 +88,10 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.WOODEN_KATANA.get());
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_SWORD.get());
 				tabData.accept(CatastropheModModItems.CRYSTALLINE_EDGE.get());
+				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_HELMET.get());
+				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_CHESTPLATE.get());
+				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_LEGGINGS.get());
+				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_BOOTS.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.GLOVEOFTHE_DESERTS.get())).displayItems((parameters, tabData) -> {
@@ -140,7 +145,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.BARBED_ARROWHEAD.get());
 				tabData.accept(CatastropheModModItems.CRYSTAL_BALL.get());
 				tabData.accept(CatastropheModModItems.JELLYFISH_PENDANT.get());
-				tabData.accept(CatastropheModModItems.TATTERED_QUIVER.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> BOSS_SUMMONS = REGISTRY.register("boss_summons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.boss_summons")).icon(() -> new ItemStack(CatastropheModModItems.COPPER_TOKEN.get())).displayItems((parameters, tabData) -> {
@@ -172,7 +176,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.HUNTER_LEGGINGS.get());
 				tabData.accept(CatastropheModModItems.HUNTER_BOOTS.get());
 				tabData.accept(CatastropheModModItems.KNIFE_OF_PROFICIENCY.get());
-				tabData.accept(CatastropheModModItems.IRON_ROUND.get());
 				tabData.accept(CatastropheModModItems.CRYSTAL_ROUND.get());
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_ROUND.get());
 				tabData.accept(CatastropheModModItems.VENOMOUS_ROUND.get());
@@ -188,6 +191,11 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.RUSTGUN.get());
 				tabData.accept(CatastropheModModItems.HUNTSMAN_KNIFE.get());
 				tabData.accept(CatastropheModModItems.WOODEN_BOW.get());
+				tabData.accept(CatastropheModModItems.ACCURSED_ARROW.get());
+				tabData.accept(CatastropheModModItems.STARBURST_ARROW.get());
+				tabData.accept(CatastropheModModItems.NAILGUN.get());
+				tabData.accept(CatastropheModModItems.SCRAP_ROUND.get());
+				tabData.accept(CatastropheModModItems.COPPER_ROUND.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
@@ -229,6 +237,20 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_SLAB.get().asItem());
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_STAIRS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.YELLOW_SEA_SHELL.get().asItem());
+			tabData.accept(CatastropheModModBlocks.BLUE_SEA_SHELL.get().asItem());
+			tabData.accept(CatastropheModModBlocks.RED_SEA_SHELL.get().asItem());
+			tabData.accept(CatastropheModModBlocks.PURPLE_SEA_SHELL.get().asItem());
+			tabData.accept(CatastropheModModBlocks.PINK_SEA_SHELL.get().asItem());
+			tabData.accept(CatastropheModModBlocks.ELECTRIFIED_DIODE.get().asItem());
+			tabData.accept(CatastropheModModBlocks.SHALE.get().asItem());
+			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CRACKED_SHALE_BRICKS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CHISELED_SHALE_BRICKS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.SHALE_SLAB.get().asItem());
+			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS_SLAB.get().asItem());
+			tabData.accept(CatastropheModModBlocks.SHALE_STAIRS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS_STAIRS.get().asItem());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
@@ -256,7 +278,6 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.HERMIT_CRAB_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.TEAR_OF_THE_SEA.get());
 			tabData.accept(CatastropheModModItems.SPORE_ZOMBIE_SPAWN_EGG.get());
-			tabData.accept(CatastropheModModItems.BULLET_SHELL.get());
 			tabData.accept(CatastropheModModItems.CALICO_STAG_BEETLE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ROD_OF_TELEPORTATION.get());
 			tabData.accept(CatastropheModModItems.SHADE_SPAWN_EGG.get());
@@ -277,11 +298,11 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.SILK_MOTH_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ANGLERFISH_SPAWN_EGG.get());
-			tabData.accept(CatastropheModModItems.SEA_SNAIL_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.VOLTBLADE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ARC_STRIKER_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.SURGE_BREAKER_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.ACCURSED_WITCH_SPAWN_EGG.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {

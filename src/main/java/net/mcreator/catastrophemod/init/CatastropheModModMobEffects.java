@@ -16,9 +16,11 @@ import net.mcreator.catastrophemod.potion.RepulsionMobEffect;
 import net.mcreator.catastrophemod.potion.PrickedMobEffect;
 import net.mcreator.catastrophemod.potion.PhaseDashCooldownMobEffect;
 import net.mcreator.catastrophemod.potion.ManaSicknessMobEffect;
+import net.mcreator.catastrophemod.potion.LightningSlamCooldownMobEffect;
 import net.mcreator.catastrophemod.potion.IntelligenceMobEffect;
 import net.mcreator.catastrophemod.potion.IncinerationMobEffect;
 import net.mcreator.catastrophemod.potion.ImpedanceMobEffect;
+import net.mcreator.catastrophemod.potion.HunterStealthCooldownMobEffect;
 import net.mcreator.catastrophemod.potion.FallDamageImmunityMobEffect;
 import net.mcreator.catastrophemod.potion.ElectrifiedMobEffect;
 import net.mcreator.catastrophemod.potion.DashCooldownMobEffect;
@@ -52,4 +54,6 @@ public class CatastropheModModMobEffects {
 	public static final RegistryObject<MobEffect> STUNNED = REGISTRY.register("stunned", () -> new StunnedMobEffect());
 	public static final RegistryObject<MobEffect> BRASS_SPEED = REGISTRY.register("brass_speed", () -> new BrassSpeedMobEffect());
 	public static final RegistryObject<MobEffect> BRASS_ATTACK_SPEED = REGISTRY.register("brass_attack_speed", () -> new BrassAttackSpeedMobEffect());
+	public static final RegistryObject<MobEffect> LIGHTNING_SLAM_COOLDOWN = REGISTRY.register("lightning_slam_cooldown", () -> new LightningSlamCooldownMobEffect());
+	public static final RegistryObject<MobEffect> HUNTER_STEALTH_COOLDOWN = REGISTRY.register("hunter_stealth_cooldown", () -> new HunterStealthCooldownMobEffect());
 }

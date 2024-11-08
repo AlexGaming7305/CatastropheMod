@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.catastrophemod.client.particle.StarrySparkleParticle;
 import net.mcreator.catastrophemod.client.particle.SparkParticle;
 import net.mcreator.catastrophemod.client.particle.SnowflakeParticle;
+import net.mcreator.catastrophemod.client.particle.RustySparkParticle;
 import net.mcreator.catastrophemod.client.particle.PoisonTrailParticle;
 import net.mcreator.catastrophemod.client.particle.HealingSparkParticle;
 import net.mcreator.catastrophemod.client.particle.HauntedGlimmerParticle;
@@ -44,5 +45,6 @@ public class CatastropheModModParticles {
 		event.registerSpriteSet(CatastropheModModParticleTypes.ACCURSED_SHIMMER.get(), AccursedShimmerParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.HAUNTED_GLIMMER.get(), HauntedGlimmerParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.STARRY_SPARKLE.get(), StarrySparkleParticle::provider);
+		event.registerSpriteSet(CatastropheModModParticleTypes.RUSTY_SPARK.get(), RustySparkParticle::provider);
 	}
 }

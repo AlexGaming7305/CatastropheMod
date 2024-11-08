@@ -100,4 +100,11 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> MW_HIT_SPEECH = REGISTRY.register("mw_hit_speech", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mw_hit_speech")));
 	public static final RegistryObject<SoundEvent> MW_FINAL_DEFEAT_SPEECH = REGISTRY.register("mw_final_defeat_speech", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mw_final_defeat_speech")));
 	public static final RegistryObject<SoundEvent> MINERAL_WRAITH_CHARGES = REGISTRY.register("mineral_wraith_charges", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mineral_wraith_charges")));
+	public static final RegistryObject<SoundEvent> RIPTIDE_CASTS = REGISTRY.register("riptide_casts", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "riptide_casts")));
+	public static final RegistryObject<SoundEvent> SOMETHING_IS_SLICED = REGISTRY.register("something_is_sliced", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "something_is_sliced")));
+	public static final RegistryObject<SoundEvent> GUN_CLICKS = REGISTRY.register("gun_clicks", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "gun_clicks")));
+	public static final RegistryObject<SoundEvent> SPARKSHREDDER_EXPLODES = REGISTRY.register("sparkshredder_explodes", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_explodes")));
+	public static final RegistryObject<SoundEvent> SPARKSHREDDER_CHARGES = REGISTRY.register("sparkshredder_charges", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_charges")));
+	public static final RegistryObject<SoundEvent> SPARKSHREDDER_FIRES = REGISTRY.register("sparkshredder_fires", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_fires")));
+	public static final RegistryObject<SoundEvent> SPARKSHREDDER_STARTS = REGISTRY.register("sparkshredder_starts", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_starts")));
 }

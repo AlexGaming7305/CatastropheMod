@@ -17,6 +17,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
+import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class RiptideRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -31,11 +32,27 @@ public class RiptideRightclickedProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				boolean _setval = true;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.riptide_effects = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			CatastropheModMod.queueServerWork(20, () -> {
+				{
+					boolean _setval = false;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.riptide_effects = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			});
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:ripsaw_shoot")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:riptide_casts")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:ripsaw_shoot")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:riptide_casts")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
 			if (world instanceof ServerLevel _level) {
@@ -44,7 +61,7 @@ public class RiptideRightclickedProcedure {
 				}
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (30 - (30 * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.CASTINGSPEED.get()).getBaseValue()) / 100));
+				_player.getCooldowns().addCooldown(itemstack.getItem(), (int) (20 - (20 * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.CASTINGSPEED.get()).getBaseValue()) / 100));
 		}
 	}
 }

@@ -55,7 +55,7 @@ public class SeaSpearItem extends Item {
 
 	@Override
 	public int getEnchantmentValue() {
-		return 10;
+		return 15;
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class SeaSpearItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Deals \u00A7a50% \u00A77more damage while submerged"));
-		list.add(Component.literal("\u00A7aWhile Submerged + Right-click: \u00A77Performs a dash which can damage enemies"));
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Throws the spear out"));
+		list.add(Component.literal("\u00A7aRight-click + While Thrown: \u00A77Reels you towards the spear causing a burst of energy when reached"));
 	}
 }

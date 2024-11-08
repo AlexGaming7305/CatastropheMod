@@ -18,8 +18,8 @@
         "value": "Blocks.WATER"
       }
     ],
-    "spacing": 20,
-    "separation": 19,
+    "spacing": 19,
+    "separation": 18,
     "restrictionBiomes": [
       {
         "value": "#is_ocean"

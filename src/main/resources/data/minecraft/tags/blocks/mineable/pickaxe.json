@@ -35,6 +35,15 @@
     "catastrophe_mod:depthstone_slab",
     "catastrophe_mod:depthstone_stairs",
     "catastrophe_mod:depthstone_bricks_slab",
-    "catastrophe_mod:depthstone_bricks_stairs"
+    "catastrophe_mod:depthstone_bricks_stairs",
+    "catastrophe_mod:electrified_diode",
+    "catastrophe_mod:shale",
+    "catastrophe_mod:shale_bricks",
+    "catastrophe_mod:cracked_shale_bricks",
+    "catastrophe_mod:chiseled_shale_bricks",
+    "catastrophe_mod:shale_slab",
+    "catastrophe_mod:shale_bricks_slab",
+    "catastrophe_mod:shale_stairs",
+    "catastrophe_mod:shale_bricks_stairs"
   ]
 }

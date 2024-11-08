@@ -72,7 +72,7 @@ public class FlameProjectileProjectileHitsBlockProcedure {
 						capability.syncPlayerVariables(entityiterator);
 					});
 				}
-				CatastropheModMod.queueServerWork(10, () -> {
+				CatastropheModMod.queueServerWork(30, () -> {
 					{
 						boolean _setval = false;
 						entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

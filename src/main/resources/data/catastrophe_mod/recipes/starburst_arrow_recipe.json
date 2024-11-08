@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "c"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:star"
+    },
+    "b": {
+      "item": "catastrophe_mod:twig"
+    },
+    "c": {
+      "item": "minecraft:feather"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:starburst_arrow",
+    "count": 4
+  }
+}

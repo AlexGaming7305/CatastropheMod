@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/shale",
+    "up": "catastrophe_mod:block/shale",
+    "north": "catastrophe_mod:block/shale",
+    "east": "catastrophe_mod:block/shale",
+    "south": "catastrophe_mod:block/shale",
+    "west": "catastrophe_mod:block/shale",
+    "particle": "catastrophe_mod:block/shale"
+  },
+  "render_type": "solid"
+}

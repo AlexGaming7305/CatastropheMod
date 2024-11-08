@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "plains",
+    "forest",
+    "meadow"
+  ],
+  "spawners": {
+    "type": "catastrophe_mod:accursed_witch",
+    "weight": 100,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

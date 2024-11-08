@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    " aa",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:twig"
+    },
+    "b": {
+      "item": "catastrophe_mod:star"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:starlight_scepter",
+    "count": 1
+  }
+}
