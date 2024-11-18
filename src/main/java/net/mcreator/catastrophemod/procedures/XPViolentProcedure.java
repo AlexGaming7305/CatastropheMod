@@ -16,7 +16,7 @@ import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class ViolentDifficultyXPProcedure {
+public class XPViolentProcedure {
 	@SubscribeEvent
 	public static void onLivingDropXp(LivingExperienceDropEvent event) {
 		if (event != null && event.getEntity() != null) {

@@ -19,7 +19,7 @@ import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class ViolentDifficultyZombieLifestealProcedure {
+public class ZombieLifestealViolentProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {

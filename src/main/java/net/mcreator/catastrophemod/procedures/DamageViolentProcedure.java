@@ -15,7 +15,7 @@ import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class ViolentDifficultyDamageProcedure {
+public class DamageViolentProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingHurtEvent event) {
 		if (event != null && event.getEntity() != null) {
