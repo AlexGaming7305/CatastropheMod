@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "iron_round",
+    "texture": "copper_round",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

@@ -14,7 +14,7 @@
     "damage": 5.0,
     "knockback": 0,
     "entityModel": "Modeliron_round",
-    "customModelTexture": "iron_round_texture.png",
+    "customModelTexture": "copper_round_texture.png",
     "onFlyingTick": {
       "name": "IronRoundProjectileWhileProjectileFlyingTick"
     }

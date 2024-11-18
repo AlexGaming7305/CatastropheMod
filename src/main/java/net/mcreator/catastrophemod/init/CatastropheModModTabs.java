@@ -251,6 +251,9 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS_SLAB.get().asItem());
 			tabData.accept(CatastropheModModBlocks.SHALE_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS_STAIRS.get().asItem());
+			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING.get().asItem());
+			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING_SLAB.get().asItem());
+			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING_STAIRS.get().asItem());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {

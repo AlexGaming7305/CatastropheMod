@@ -523,6 +523,9 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> NAILGUN = REGISTRY.register("nailgun", () -> new NailgunItem());
 	public static final RegistryObject<Item> SCRAP_ROUND = REGISTRY.register("scrap_round", () -> new ScrapRoundItem());
 	public static final RegistryObject<Item> COPPER_ROUND = REGISTRY.register("copper_round", () -> new CopperRoundItem());
+	public static final RegistryObject<Item> RUSTY_PLATING = block(CatastropheModModBlocks.RUSTY_PLATING);
+	public static final RegistryObject<Item> RUSTY_PLATING_SLAB = block(CatastropheModModBlocks.RUSTY_PLATING_SLAB);
+	public static final RegistryObject<Item> RUSTY_PLATING_STAIRS = block(CatastropheModModBlocks.RUSTY_PLATING_STAIRS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

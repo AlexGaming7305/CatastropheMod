@@ -61,7 +61,6 @@ import net.mcreator.catastrophemod.client.renderer.MineralWraithRenderer;
 import net.mcreator.catastrophemod.client.renderer.LightningBladeRenderer;
 import net.mcreator.catastrophemod.client.renderer.LifedrainArrowProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.KnifeOfProficiencyProjectileProjectileRenderer;
-import net.mcreator.catastrophemod.client.renderer.IronRoundProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.IceShardProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.HuntsmanKnifeProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.HermitCrabRenderer;
@@ -96,6 +95,7 @@ import net.mcreator.catastrophemod.client.renderer.DescendingMiseryRenderer;
 import net.mcreator.catastrophemod.client.renderer.CrystalSpearStabRenderer;
 import net.mcreator.catastrophemod.client.renderer.CrystalShardProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.CrystalRoundProjectileProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.CopperRoundProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.CharredSkeletonGuardRenderer;
 import net.mcreator.catastrophemod.client.renderer.CharredMantisRenderer;
 import net.mcreator.catastrophemod.client.renderer.CalicoStagBeetleRenderer;
@@ -167,7 +167,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.TINY_THORN_PROJECTILE.get(), TinyThornProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SHELL_PROJECTILE.get(), ShellProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.KNIFE_OF_PROFICIENCY_PROJECTILE_PROJECTILE.get(), KnifeOfProficiencyProjectileProjectileRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.IRON_ROUND_PROJECTILE_PROJECTILE.get(), IronRoundProjectileProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SHADOW_FIREBALL_PROJECTILE.get(), ShadowFireballProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.CRYSTAL_ROUND_PROJECTILE_PROJECTILE.get(), CrystalRoundProjectileProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.VENOMOUS_BULLET_PROJECTILE_PROJECTILE.get(), VenomousBulletProjectileProjectileRenderer::new);
@@ -223,5 +222,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.STARBURST_ARROW_PROJECTILE.get(), StarburstArrowProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.NAILGUN_NAIL.get(), NailgunNailRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SCRAP_ROUND_PROJECTILE.get(), ScrapRoundProjectileRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.COPPER_ROUND_PROJECTILE.get(), CopperRoundProjectileRenderer::new);
 	}
 }

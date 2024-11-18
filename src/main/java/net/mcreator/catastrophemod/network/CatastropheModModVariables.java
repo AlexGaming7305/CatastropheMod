@@ -275,6 +275,10 @@ public class CatastropheModModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "catastrophe_mod_mapvars";
+		public boolean electrified_lightning_sky_visuals = false;
+		public double electrified_lightning_sky_visuals_transparency = 0;
+		public double electrified_lightning_R = 0;
+		public double electrified_lightning_G = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -283,10 +287,18 @@ public class CatastropheModModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			electrified_lightning_sky_visuals = nbt.getBoolean("electrified_lightning_sky_visuals");
+			electrified_lightning_sky_visuals_transparency = nbt.getDouble("electrified_lightning_sky_visuals_transparency");
+			electrified_lightning_R = nbt.getDouble("electrified_lightning_R");
+			electrified_lightning_G = nbt.getDouble("electrified_lightning_G");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
+			nbt.putBoolean("electrified_lightning_sky_visuals", electrified_lightning_sky_visuals);
+			nbt.putDouble("electrified_lightning_sky_visuals_transparency", electrified_lightning_sky_visuals_transparency);
+			nbt.putDouble("electrified_lightning_R", electrified_lightning_R);
+			nbt.putDouble("electrified_lightning_G", electrified_lightning_G);
 			return nbt;
 		}
 

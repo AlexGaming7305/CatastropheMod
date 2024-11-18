@@ -73,8 +73,8 @@ public class CatastropheModMod {
 		CatastropheModModPotions.REGISTRY.register(bus);
 		CatastropheModModPaintings.REGISTRY.register(bus);
 		CatastropheModModParticleTypes.REGISTRY.register(bus);
-		CatastropheModModMenus.REGISTRY.register(bus);
 		bus.addListener(this::clientSetup);
+		CatastropheModModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

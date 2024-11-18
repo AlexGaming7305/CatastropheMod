@@ -123,7 +123,7 @@ public class RustgunItem extends Item implements GeoItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Iron Rounds break into shards of Rusty Scrap"));
+		list.add(Component.literal("\u00A77Copper Rounds break into shards of Rusty Scrap"));
 	}
 
 	@Override

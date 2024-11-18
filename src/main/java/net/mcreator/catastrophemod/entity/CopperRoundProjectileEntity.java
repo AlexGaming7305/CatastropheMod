@@ -21,22 +21,22 @@ import net.mcreator.catastrophemod.procedures.IronRoundProjectileWhileProjectile
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class IronRoundProjectileProjectileEntity extends AbstractArrow implements ItemSupplier {
+public class CopperRoundProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Items.ARROW);
 
-	public IronRoundProjectileProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(CatastropheModModEntities.IRON_ROUND_PROJECTILE_PROJECTILE.get(), world);
+	public CopperRoundProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(CatastropheModModEntities.COPPER_ROUND_PROJECTILE.get(), world);
 	}
 
-	public IronRoundProjectileProjectileEntity(EntityType<? extends IronRoundProjectileProjectileEntity> type, Level world) {
+	public CopperRoundProjectileEntity(EntityType<? extends CopperRoundProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public IronRoundProjectileProjectileEntity(EntityType<? extends IronRoundProjectileProjectileEntity> type, double x, double y, double z, Level world) {
+	public CopperRoundProjectileEntity(EntityType<? extends CopperRoundProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public IronRoundProjectileProjectileEntity(EntityType<? extends IronRoundProjectileProjectileEntity> type, LivingEntity entity, Level world) {
+	public CopperRoundProjectileEntity(EntityType<? extends CopperRoundProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -70,12 +70,12 @@ public class IronRoundProjectileProjectileEntity extends AbstractArrow implement
 			this.discard();
 	}
 
-	public static IronRoundProjectileProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+	public static CopperRoundProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1f, 5, 0);
 	}
 
-	public static IronRoundProjectileProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		IronRoundProjectileProjectileEntity entityarrow = new IronRoundProjectileProjectileEntity(CatastropheModModEntities.IRON_ROUND_PROJECTILE_PROJECTILE.get(), entity, world);
+	public static CopperRoundProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		CopperRoundProjectileEntity entityarrow = new CopperRoundProjectileEntity(CatastropheModModEntities.COPPER_ROUND_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -85,8 +85,8 @@ public class IronRoundProjectileProjectileEntity extends AbstractArrow implement
 		return entityarrow;
 	}
 
-	public static IronRoundProjectileProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		IronRoundProjectileProjectileEntity entityarrow = new IronRoundProjectileProjectileEntity(CatastropheModModEntities.IRON_ROUND_PROJECTILE_PROJECTILE.get(), entity, entity.level());
+	public static CopperRoundProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		CopperRoundProjectileEntity entityarrow = new CopperRoundProjectileEntity(CatastropheModModEntities.COPPER_ROUND_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

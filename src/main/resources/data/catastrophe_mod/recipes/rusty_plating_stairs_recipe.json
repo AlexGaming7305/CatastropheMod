@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " aa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:rusty_plating"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:rusty_plating_stairs",
+    "count": 4
+  }
+}

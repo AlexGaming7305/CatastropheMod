@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/rusty_plating",
+    "up": "catastrophe_mod:block/rusty_plating",
+    "north": "catastrophe_mod:block/rusty_plating",
+    "east": "catastrophe_mod:block/rusty_plating",
+    "south": "catastrophe_mod:block/rusty_plating",
+    "west": "catastrophe_mod:block/rusty_plating",
+    "particle": "catastrophe_mod:block/rusty_plating"
+  },
+  "render_type": "solid"
+}

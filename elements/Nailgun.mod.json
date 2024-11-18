@@ -32,7 +32,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7Iron Rounds convert into a High Velocity Nail that can pierce"
+        "§7Copper Rounds convert into a High Velocity Nail that can pierce"
       ]
     },
     "hasGlow": false,
@@ -85,6 +85,7 @@
         "swings": false,
         "followsHead": true
       }
-    ]
+    ],
+    "disableSwing": false
   }
 }
