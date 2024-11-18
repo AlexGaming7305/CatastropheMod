@@ -16,7 +16,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
 import net.mcreator.catastrophemod.network.ReloadMessage;
-import net.mcreator.catastrophemod.network.ParryMessage;
 import net.mcreator.catastrophemod.network.DoubleJumpKeyMessage;
 import net.mcreator.catastrophemod.network.DashMessage;
 import net.mcreator.catastrophemod.network.ArmorSetBonusMessage;
@@ -63,19 +62,6 @@ public class CatastropheModModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping PARRY = new KeyMapping("key.catastrophe_mod.parry", GLFW.GLFW_KEY_R, "key.categories.catastrophe") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CatastropheModMod.PACKET_HANDLER.sendToServer(new ParryMessage(0, 0));
-				ParryMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
 	public static final KeyMapping RELOAD = new KeyMapping("key.catastrophe_mod.reload", GLFW.GLFW_KEY_X, "key.categories.catastrophe") {
 		private boolean isDownOld = false;
 
@@ -95,7 +81,6 @@ public class CatastropheModModKeyMappings {
 		event.register(DOUBLE_JUMP_KEY);
 		event.register(ARMOR_SET_BONUS);
 		event.register(DASH);
-		event.register(PARRY);
 		event.register(RELOAD);
 	}
 
@@ -107,7 +92,6 @@ public class CatastropheModModKeyMappings {
 				DOUBLE_JUMP_KEY.consumeClick();
 				ARMOR_SET_BONUS.consumeClick();
 				DASH.consumeClick();
-				PARRY.consumeClick();
 				RELOAD.consumeClick();
 			}
 		}

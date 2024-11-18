@@ -1,7 +1,0 @@
-{
-  "_fv": 57,
-  "_type": "procedure",
-  "definition": {
-    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field></block><block type=\"controls_if\" x=\"43\" y=\"156\"><value name=\"IF0\"><block type=\"logic_negate\"><value name=\"BOOL\"><block type=\"logic_entity_compare\"><field name=\"entity\">EntityPlayer</field><value name=\"compareTo\"><block type=\"entity_from_deps\"></block></value></block></value></block></value><statement name=\"DO0\"><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_boolean\"><field name=\"BOOL\">FALSE</field></block></value><statement name=\"DO0\"><block type=\"text_print\"><value name=\"TEXT\"><block type=\"entity_from_deps\"></block></value></block></statement><next><block type=\"java_code\"><field name=\"CODE\">((Mob)entity).setNoAi(false);</field></block></next></block></statement></block></xml>"
-  }
-}

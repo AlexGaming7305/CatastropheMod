@@ -11,7 +11,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.catastrophemod.potion.VulnerabilityMobEffect;
-import net.mcreator.catastrophemod.potion.StunnedMobEffect;
 import net.mcreator.catastrophemod.potion.RepulsionMobEffect;
 import net.mcreator.catastrophemod.potion.PrickedMobEffect;
 import net.mcreator.catastrophemod.potion.PhaseDashCooldownMobEffect;
@@ -51,7 +50,6 @@ public class CatastropheModModMobEffects {
 	public static final RegistryObject<MobEffect> ARMOR_SHRED = REGISTRY.register("armor_shred", () -> new ArmorShredMobEffect());
 	public static final RegistryObject<MobEffect> REPULSION = REGISTRY.register("repulsion", () -> new RepulsionMobEffect());
 	public static final RegistryObject<MobEffect> IMPEDANCE = REGISTRY.register("impedance", () -> new ImpedanceMobEffect());
-	public static final RegistryObject<MobEffect> STUNNED = REGISTRY.register("stunned", () -> new StunnedMobEffect());
 	public static final RegistryObject<MobEffect> BRASS_SPEED = REGISTRY.register("brass_speed", () -> new BrassSpeedMobEffect());
 	public static final RegistryObject<MobEffect> BRASS_ATTACK_SPEED = REGISTRY.register("brass_attack_speed", () -> new BrassAttackSpeedMobEffect());
 	public static final RegistryObject<MobEffect> LIGHTNING_SLAM_COOLDOWN = REGISTRY.register("lightning_slam_cooldown", () -> new LightningSlamCooldownMobEffect());

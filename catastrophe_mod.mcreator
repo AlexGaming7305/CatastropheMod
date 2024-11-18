@@ -19633,16 +19633,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "tooltip",
-            "type": "tooltip"
           }
         ]
       },
@@ -19753,111 +19745,6 @@
       "path": "~/Enchantments"
     },
     {
-      "name": "ParryOnKeyPressed",
-      "type": "procedure",
-      "sortid": 2851,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ParryOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Key Binds"
-    },
-    {
-      "name": "ParryCooldown",
-      "type": "procedure",
-      "sortid": 2852,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ParryCooldownProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Key Binds"
-    },
-    {
-      "name": "ParryScreenFlashDisplayOverlayIngame",
-      "type": "procedure",
-      "sortid": 2855,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry_screen_flash_display_overlay_ingame",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ParryScreenFlashDisplayOverlayIngameProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ParryScreenFlash",
-      "type": "overlay",
-      "sortid": 2854,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry_screen_flash",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/screens/ParryScreenFlashOverlay.java"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "Parry",
-      "type": "keybind",
-      "sortid": 2850,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/network/ParryMessage.java"
-        ]
-      },
-      "path": "~/Key Binds"
-    },
-    {
       "name": "ImNotGonnaSugarcoatIt",
       "type": "achievement",
       "sortid": 2853,
@@ -19916,20 +19803,6 @@
         ]
       },
       "path": "~/Particles"
-    },
-    {
-      "name": "StarryNightEffects",
-      "type": "procedure",
-      "sortid": 2853,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starry_night_effects",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StarryNightEffectsProcedure.java"
-        ],
-        "dependencies": []
-      }
     },
     {
       "name": "Rustgun",
@@ -20420,6 +20293,20 @@
       "path": "~/Items/Accessories"
     },
     {
+      "name": "Accessory",
+      "type": "curiosslot",
+      "sortid": 2890,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accessory",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/accessory.json"
+        ]
+      },
+      "path": "~/Items/Accessories"
+    },
+    {
       "name": "ZombieLootTable1",
       "type": "lootmodifier",
       "sortid": 2887,
@@ -20686,97 +20573,6 @@
         ]
       },
       "path": "~/Enchantments"
-    },
-    {
-      "name": "ViolentDifficultyZombieLifesteal",
-      "type": "procedure",
-      "sortid": 2898,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "violent_difficulty_zombie_lifesteal",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ViolentDifficultyZombieLifestealProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ViolentDifficultyEnraged",
-      "type": "procedure",
-      "sortid": 2899,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "violent_difficulty_enraged",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ViolentDifficultyEnragedProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ViolentDifficultyFallDamage",
-      "type": "procedure",
-      "sortid": 2897,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "violent_difficulty_fall_damage",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ViolentDifficultyFallDamageProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
     },
     {
       "name": "CactusNeedle",
@@ -21965,126 +21761,6 @@
       "path": "~/Items/Food"
     },
     {
-      "name": "ViolentDifficultyXP",
-      "type": "procedure",
-      "sortid": 2960,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "violent_difficulty_xp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ViolentDifficultyXPProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "originalexperience",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "UnparriableDamage",
-      "type": "tag",
-      "sortid": 2961,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unparriable_damage",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/tags/damage_type/unparriable_damage.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "UnparriableProjectiles",
-      "type": "tag",
-      "sortid": 2962,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unparriable_projectiles",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/tags/entity_types/unparriable_projectiles.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ParryMode",
-      "type": "procedure",
-      "sortid": 2963,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry_mode",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ParryModeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Key Binds"
-    },
-    {
       "name": "Spiked",
       "type": "enchantment",
       "sortid": 2964,
@@ -22973,21 +22649,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "StunnedEffectExpires",
-      "type": "procedure",
-      "sortid": 2974,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stunned_effect_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StunnedEffectExpiresProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Potion Effects"
-    },
-    {
       "name": "SkeletonLootTable1",
       "type": "lootmodifier",
       "sortid": 2976,
@@ -23000,20 +22661,6 @@
         ]
       },
       "path": "~/Misc"
-    },
-    {
-      "name": "Stunned",
-      "type": "potioneffect",
-      "sortid": 2972,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stunned",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/potion/StunnedMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
     },
     {
       "name": "ElectrifiedEffectStartedapplied",
@@ -23032,21 +22679,6 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "StunnedEffectStartedapplied",
-      "type": "procedure",
-      "sortid": 2973,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stunned_effect_startedapplied",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StunnedEffectStartedappliedProcedure.java"
-        ],
-        "dependencies": []
       },
       "path": "~/Potion Effects"
     },
@@ -23277,26 +22909,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "StunnedOnEffectActiveTick",
-      "type": "procedure",
-      "sortid": 3023,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stunned_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StunnedOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
       "name": "ThrowingSpeed",
       "type": "attribute",
       "sortid": 3020,
@@ -23305,38 +22917,6 @@
       "registry_name": "throwing_speed",
       "metadata": {
         "files": []
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ViolentDifficultyDamage",
-      "type": "procedure",
-      "sortid": 3019,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "violent_difficulty_damage",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ViolentDifficultyDamageProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
       },
       "path": "~/Misc"
     },
@@ -23574,30 +23154,6 @@
       "path": "~/Items/Accessories"
     },
     {
-      "name": "UnblockableDamageProcedure",
-      "type": "procedure",
-      "sortid": 3030,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unblockable_damage_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/UnblockableDamageProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "CastingSpeed",
       "type": "attribute",
       "sortid": 3031,
@@ -23606,34 +23162,6 @@
       "registry_name": "casting_speed",
       "metadata": {
         "files": []
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ViolentDifficultyBleeding",
-      "type": "procedure",
-      "sortid": 3032,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "violent_difficulty_bleeding",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ViolentDifficultyBleedingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
       },
       "path": "~/Misc"
     },
@@ -23647,92 +23175,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/catastrophe_mod/loot_modifiers/phantom_loot_table_1.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "GuardBreakDamage",
-      "type": "tag",
-      "sortid": 3037,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guard_break_damage",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/tags/damage_type/guard_break_damage.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "Sugarcoated",
-      "type": "damagetype",
-      "sortid": 3033,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sugarcoated",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/damage_type/sugarcoated.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "GuardBreakProjectiles",
-      "type": "tag",
-      "sortid": 3038,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guard_break_projectiles",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/tags/entity_types/guard_break_projectiles.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "GuardBreakProcedure",
-      "type": "procedure",
-      "sortid": 3039,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guard_break_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/GuardBreakProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       },
       "path": "~/Misc"
@@ -26274,65 +25716,6 @@
       "path": "~/Items/Ammunition"
     },
     {
-      "name": "Accessory",
-      "type": "curiosslot",
-      "sortid": 3172,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/curios/tags/items/accessory.json"
-        ]
-      }
-    },
-    {
-      "name": "CopperRoundProjectile",
-      "type": "projectile",
-      "sortid": 3173,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "copper_round_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/CopperRoundProjectileEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/CopperRoundProjectileRenderer.java"
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "RustyPlating",
-      "type": "block",
-      "sortid": 3174,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rusty_plating",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/block/rusty_plating.json",
-          "src/main/resources/assets/catastrophe_mod/blockstates/rusty_plating.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/rusty_plating.json",
-          "src/main/java/net/mcreator/catastrophemod/block/RustyPlatingBlock.java"
-        ]
-      },
-      "path": "~/Items/Blocks"
-    },
-    {
-      "name": "RustyPlatingRecipe",
-      "type": "recipe",
-      "sortid": 3175,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rusty_plating_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/rusty_plating_recipe.json"
-        ]
-      },
-      "path": "~/Items/Blocks"
-    },
-    {
       "name": "RustyPlatingSlab",
       "type": "block",
       "sortid": 3176,
@@ -26350,6 +25733,20 @@
         ]
       },
       "path": "~/Items/Blocks"
+    },
+    {
+      "name": "ElectrifiedStormSky",
+      "type": "procedure",
+      "sortid": 3183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrified_storm_sky",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormSkyProcedure.java"
+        ],
+        "dependencies": []
+      }
     },
     {
       "name": "RustyPlatingStairs",
@@ -26385,15 +25782,32 @@
       "path": "~/Items/Blocks"
     },
     {
-      "name": "RustyPlatingStairsRecipe",
-      "type": "recipe",
-      "sortid": 3179,
+      "name": "RustyPlating",
+      "type": "block",
+      "sortid": 3174,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rusty_plating_stairs_recipe",
+      "registry_name": "rusty_plating",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/rusty_plating_stairs_recipe.json"
+          "src/main/resources/assets/catastrophe_mod/models/block/rusty_plating.json",
+          "src/main/resources/assets/catastrophe_mod/blockstates/rusty_plating.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/rusty_plating.json",
+          "src/main/java/net/mcreator/catastrophemod/block/RustyPlatingBlock.java"
+        ]
+      },
+      "path": "~/Items/Blocks"
+    },
+    {
+      "name": "RustyPlatingRecipe",
+      "type": "recipe",
+      "sortid": 3175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rusty_plating_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/recipes/rusty_plating_recipe.json"
         ]
       },
       "path": "~/Items/Blocks"
@@ -26409,32 +25823,213 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedLightningSkyVisualsTransparencyProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
-      "name": "ElectrifiedStormSky",
-      "type": "procedure",
-      "sortid": 3183,
+      "name": "RustyPlatingStairsRecipe",
+      "type": "recipe",
+      "sortid": 3179,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "electrified_storm_sky",
+      "registry_name": "rusty_plating_stairs_recipe",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormSkyProcedure.java"
+          "src/main/resources/data/catastrophe_mod/recipes/rusty_plating_stairs_recipe.json"
+        ]
+      },
+      "path": "~/Items/Blocks"
+    },
+    {
+      "name": "CopperRoundProjectile",
+      "type": "projectile",
+      "sortid": 3173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_round_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/CopperRoundProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/CopperRoundProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "BleedingViolent",
+      "type": "procedure",
+      "sortid": 3172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding_violent",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/BleedingViolentProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Violent Difficulty"
+    },
+    {
+      "name": "XPViolent",
+      "type": "procedure",
+      "sortid": 3174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_violent",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/XPViolentProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "originalexperience",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Violent Difficulty"
+    },
+    {
+      "name": "DamageViolent",
+      "type": "procedure",
+      "sortid": 3175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_violent",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/DamageViolentProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Violent Difficulty"
+    },
+    {
+      "name": "ZombieLifestealViolent",
+      "type": "procedure",
+      "sortid": 3176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_lifesteal_violent",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ZombieLifestealViolentProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Violent Difficulty"
+    },
+    {
+      "name": "FallDamageViolent",
+      "type": "procedure",
+      "sortid": 3173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fall_damage_violent",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FallDamageViolentProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Violent Difficulty"
     }
   ],
   "variable_elements": [
@@ -27255,6 +26850,12 @@
       "value": "false"
     },
     {
+      "name": "electrified_lightning_G",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
       "name": "electrified_lightning_sky_visuals",
       "type": "logic",
       "scope": "map",
@@ -27268,12 +26869,6 @@
     },
     {
       "name": "electrified_lightning_R",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "electrified_lightning_G",
       "type": "number",
       "scope": "map",
       "value": "0"
@@ -29723,6 +29318,10 @@
         "children": []
       },
       {
+        "name": "Attributes",
+        "children": []
+      },
+      {
         "name": "Advancements",
         "children": []
       },
@@ -29806,6 +29405,14 @@
       },
       {
         "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Violent Difficulty",
+        "children": []
+      },
+      {
+        "name": "Damage Types",
         "children": []
       },
       {
