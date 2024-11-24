@@ -39,6 +39,7 @@ public class CatastropheModModAttributes {
 	public static final RegistryObject<Attribute> MINIONSLOTS = ATTRIBUTES.register("minion_slots", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".minion_slots", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> THROWINGSPEED = ATTRIBUTES.register("throwing_speed", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".throwing_speed", 0, 0, 0)).setSyncable(true));
 	public static final RegistryObject<Attribute> CASTINGSPEED = ATTRIBUTES.register("casting_speed", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".casting_speed", 0, 0, 0)).setSyncable(true));
+	public static final RegistryObject<Attribute> PARRYDAMAGE = ATTRIBUTES.register("parry_damage", () -> (new RangedAttribute("attribute." + CatastropheModMod.MODID + ".parry_damage", 0, 0, 0)).setSyncable(true));
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
@@ -65,6 +66,7 @@ public class CatastropheModModAttributes {
 		event.add(EntityType.PLAYER, MINIONSLOTS.get());
 		event.add(EntityType.PLAYER, THROWINGSPEED.get());
 		event.add(EntityType.PLAYER, CASTINGSPEED.get());
+		event.add(EntityType.PLAYER, PARRYDAMAGE.get());
 	}
 
 	@Mod.EventBusSubscriber

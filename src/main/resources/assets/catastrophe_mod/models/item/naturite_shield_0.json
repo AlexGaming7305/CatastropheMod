@@ -1,46 +1,7 @@
 {
-  "parent": "item/handheld",
+  "parent": "catastrophe_mod:custom/naturite_shield_blocking",
   "textures": {
-    "layer0": "catastrophe_mod:item/naturite_shield"
-  },
-  "display": {
-    "thirdperson_righthand": {
-      "rotation": [
-        45,
-        -35,
-        0
-      ]
-    },
-    "thirdperson_lefthand": {
-      "rotation": [
-        45,
-        -35,
-        0
-      ]
-    },
-    "firstperson_righthand": {
-      "rotation": [
-        0,
-        0,
-        5
-      ],
-      "translation": [
-        -5,
-        2,
-        -1
-      ]
-    },
-    "firstperson_lefthand": {
-      "rotation": [
-        0,
-        0,
-        5
-      ],
-      "translation": [
-        -5,
-        2,
-        -1
-      ]
-    }
+    "0": "catastrophe_mod:block/naturite_shield",
+    "particle": "catastrophe_mod:item/naturite_shield"
   }
 }

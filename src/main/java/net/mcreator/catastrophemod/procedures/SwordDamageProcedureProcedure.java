@@ -32,7 +32,8 @@ public class SwordDamageProcedureProcedure {
 		if (sourceentity == null)
 			return;
 		double damage = 0;
-		if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem) {
+		if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof SwordItem
+				&& ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.SWORDDAMAGE.get()).getBaseValue() != 0) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
 			damage = amount + (amount * ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.SWORDDAMAGE.get()).getBaseValue()) / 100;
 			event2.setAmount((float) damage);

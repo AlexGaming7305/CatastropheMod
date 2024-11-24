@@ -85,6 +85,7 @@
         "swings": false,
         "followsHead": true
       }
-    ]
+    ],
+    "disableSwing": false
   }
 }

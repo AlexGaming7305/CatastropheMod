@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityTrident"
+      },
+      {
+        "value": "EntityFireworkRocket"
+      }
+    ],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "guard_break_projectiles",
+    "namespace": "mod"
+  }
+}

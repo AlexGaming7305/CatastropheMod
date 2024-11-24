@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "catastrophe_mod:bleed",
+    "catastrophe_mod:electricity",
+    "catastrophe_mod:electrocuted",
+    "catastrophe_mod:incinerated",
+    "catastrophe_mod:liver_failure"
+  ]
+}

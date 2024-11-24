@@ -32,7 +32,8 @@ public class AxeDamageProcedureProcedure {
 		if (sourceentity == null)
 			return;
 		double damage = 0;
-		if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
+		if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem
+				&& ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.AXEDAMAGE.get()).getBaseValue() != 0) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
 			damage = amount + (amount * ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.AXEDAMAGE.get()).getBaseValue()) / 100;
 			event2.setAmount((float) damage);

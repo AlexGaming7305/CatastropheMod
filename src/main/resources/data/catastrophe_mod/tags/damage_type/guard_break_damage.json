@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "falling_anvil",
+    "explosion",
+    "player_explosion",
+    "sonic_boom"
+  ]
+}
