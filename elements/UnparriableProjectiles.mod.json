@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:AccursedSoul"
+      },
+      {
+        "value": "CUSTOM:ElectricSparkProjectile"
+      },
+      {
+        "value": "EntityArrow"
+      }
+    ],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "unparriable_projectiles",
+    "namespace": "mod"
+  }
+}

@@ -36,12 +36,12 @@ public class SpellcastingProcedureProcedure {
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))
 				&& EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.SPELLCASTING.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
-			damage = amount + (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.SPELLCASTING.get()) / 2 + 0.5;
+			damage = amount + 0.5 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;
 			event2.setAmount((float) damage);
 		} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))
 				&& EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.SPELLCASTING.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)) != 0) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
-			damage = amount + (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.SPELLCASTING.get()) / 2 + 0.5;
+			damage = amount + 0.5 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;
 			event2.setAmount((float) damage);
 		}
 	}

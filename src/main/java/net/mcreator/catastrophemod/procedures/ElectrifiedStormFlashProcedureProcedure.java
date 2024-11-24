@@ -1,14 +1,11 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
-import net.mcreator.catastrophemod.CatastropheModMod;
+import javax.annotation.Nullable;
 
 public class ElectrifiedStormFlashProcedureProcedure {
-	public static void execute(Entity entity) {
-		if (entity == null)
-			return;
-		CatastropheModMod.LOGGER.info((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).fade_variable);
+	public static void execute() {
+		CatastropheModMod.LOGGER.info();
 	}
 }

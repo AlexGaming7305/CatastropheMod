@@ -180,7 +180,6 @@ public class CatastropheModModVariables {
 				clone.WizardryEnchantment = original.WizardryEnchantment;
 				clone.WizardryLevel = original.WizardryLevel;
 				clone.parry_screen_flash = original.parry_screen_flash;
-				clone.parry_cooldown = original.parry_cooldown;
 				clone.parry_mode = original.parry_mode;
 				clone.wooden_katana_sheathed = original.wooden_katana_sheathed;
 				clone.totem_cooldown = original.totem_cooldown;
@@ -209,6 +208,10 @@ public class CatastropheModModVariables {
 				clone.rustgun_ammo = original.rustgun_ammo;
 				clone.out_of_ammo_timer = original.out_of_ammo_timer;
 				clone.fade_variable = original.fade_variable;
+				clone.naturiteShieldDamage = original.naturiteShieldDamage;
+				clone.parry_screen_flash_active = original.parry_screen_flash_active;
+				clone.shieldDamage = original.shieldDamage;
+				clone.shield_parry_damage = original.shield_parry_damage;
 			}
 		}
 
@@ -501,7 +504,6 @@ public class CatastropheModModVariables {
 		public boolean WizardryEnchantment = false;
 		public double WizardryLevel = 0;
 		public boolean parry_screen_flash = false;
-		public double parry_cooldown = 0.0;
 		public double parry_mode = 0;
 		public boolean wooden_katana_sheathed = false;
 		public double totem_cooldown = 0;
@@ -530,6 +532,10 @@ public class CatastropheModModVariables {
 		public double rustgun_ammo = 0;
 		public boolean out_of_ammo_timer = false;
 		public double fade_variable = 0;
+		public boolean naturiteShieldDamage = false;
+		public boolean parry_screen_flash_active = false;
+		public boolean shieldDamage = false;
+		public double shield_parry_damage = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -644,7 +650,6 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("WizardryEnchantment", WizardryEnchantment);
 			nbt.putDouble("WizardryLevel", WizardryLevel);
 			nbt.putBoolean("parry_screen_flash", parry_screen_flash);
-			nbt.putDouble("parry_cooldown", parry_cooldown);
 			nbt.putDouble("parry_mode", parry_mode);
 			nbt.putBoolean("wooden_katana_sheathed", wooden_katana_sheathed);
 			nbt.putDouble("totem_cooldown", totem_cooldown);
@@ -673,6 +678,10 @@ public class CatastropheModModVariables {
 			nbt.putDouble("rustgun_ammo", rustgun_ammo);
 			nbt.putBoolean("out_of_ammo_timer", out_of_ammo_timer);
 			nbt.putDouble("fade_variable", fade_variable);
+			nbt.putBoolean("naturiteShieldDamage", naturiteShieldDamage);
+			nbt.putBoolean("parry_screen_flash_active", parry_screen_flash_active);
+			nbt.putBoolean("shieldDamage", shieldDamage);
+			nbt.putDouble("shield_parry_damage", shield_parry_damage);
 			return nbt;
 		}
 
@@ -784,7 +793,6 @@ public class CatastropheModModVariables {
 			WizardryEnchantment = nbt.getBoolean("WizardryEnchantment");
 			WizardryLevel = nbt.getDouble("WizardryLevel");
 			parry_screen_flash = nbt.getBoolean("parry_screen_flash");
-			parry_cooldown = nbt.getDouble("parry_cooldown");
 			parry_mode = nbt.getDouble("parry_mode");
 			wooden_katana_sheathed = nbt.getBoolean("wooden_katana_sheathed");
 			totem_cooldown = nbt.getDouble("totem_cooldown");
@@ -813,6 +821,10 @@ public class CatastropheModModVariables {
 			rustgun_ammo = nbt.getDouble("rustgun_ammo");
 			out_of_ammo_timer = nbt.getBoolean("out_of_ammo_timer");
 			fade_variable = nbt.getDouble("fade_variable");
+			naturiteShieldDamage = nbt.getBoolean("naturiteShieldDamage");
+			parry_screen_flash_active = nbt.getBoolean("parry_screen_flash_active");
+			shieldDamage = nbt.getBoolean("shieldDamage");
+			shield_parry_damage = nbt.getDouble("shield_parry_damage");
 		}
 	}
 
@@ -943,7 +955,6 @@ public class CatastropheModModVariables {
 					variables.WizardryEnchantment = message.data.WizardryEnchantment;
 					variables.WizardryLevel = message.data.WizardryLevel;
 					variables.parry_screen_flash = message.data.parry_screen_flash;
-					variables.parry_cooldown = message.data.parry_cooldown;
 					variables.parry_mode = message.data.parry_mode;
 					variables.wooden_katana_sheathed = message.data.wooden_katana_sheathed;
 					variables.totem_cooldown = message.data.totem_cooldown;
@@ -972,6 +983,10 @@ public class CatastropheModModVariables {
 					variables.rustgun_ammo = message.data.rustgun_ammo;
 					variables.out_of_ammo_timer = message.data.out_of_ammo_timer;
 					variables.fade_variable = message.data.fade_variable;
+					variables.naturiteShieldDamage = message.data.naturiteShieldDamage;
+					variables.parry_screen_flash_active = message.data.parry_screen_flash_active;
+					variables.shieldDamage = message.data.shieldDamage;
+					variables.shield_parry_damage = message.data.shield_parry_damage;
 				}
 			});
 			context.setPacketHandled(true);

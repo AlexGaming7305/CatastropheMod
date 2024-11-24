@@ -15,6 +15,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.catastrophemod.network.ShieldParryMessage;
 import net.mcreator.catastrophemod.network.ReloadMessage;
 import net.mcreator.catastrophemod.network.DoubleJumpKeyMessage;
 import net.mcreator.catastrophemod.network.DashMessage;
@@ -75,6 +76,19 @@ public class CatastropheModModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping SHIELD_PARRY = new KeyMapping("key.catastrophe_mod.shield_parry", GLFW.GLFW_KEY_R, "key.categories.catastrophe") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CatastropheModMod.PACKET_HANDLER.sendToServer(new ShieldParryMessage(0, 0));
+				ShieldParryMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -82,6 +96,7 @@ public class CatastropheModModKeyMappings {
 		event.register(ARMOR_SET_BONUS);
 		event.register(DASH);
 		event.register(RELOAD);
+		event.register(SHIELD_PARRY);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -93,6 +108,7 @@ public class CatastropheModModKeyMappings {
 				ARMOR_SET_BONUS.consumeClick();
 				DASH.consumeClick();
 				RELOAD.consumeClick();
+				SHIELD_PARRY.consumeClick();
 			}
 		}
 	}

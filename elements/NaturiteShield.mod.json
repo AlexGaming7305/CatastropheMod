@@ -4,13 +4,15 @@
   "definition": {
     "toolType": "Shield",
     "renderType": 1,
-    "blockingRenderType": 0,
+    "blockingRenderType": 1,
     "texture": "naturite_shield",
     "customModelName": "naturite_shield:default",
-    "blockingModelName": "Normal blocking",
+    "blockingModelName": "naturite_shield_blocking:default",
     "name": "§aNaturite Shield",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Grants §9Regeneration §7after a successful §eParry"
+      ]
     },
     "creativeTab": {
       "value": "COMBAT"

@@ -87,6 +87,8 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> MARKSMAN_SHOT = REGISTRY.register("marksman_shot", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "marksman_shot")));
 	public static final RegistryObject<SoundEvent> ELECTRIFIED_SWORD_HIT = REGISTRY.register("electrified_sword_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_sword_hit")));
 	public static final RegistryObject<SoundEvent> WEAK_METAL_HIT = REGISTRY.register("weak_metal_hit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "weak_metal_hit")));
+	public static final RegistryObject<SoundEvent> ELECTRIFIED_LIGHTNING_STRIKES = REGISTRY.register("electrified_lightning_strikes",
+			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_lightning_strikes")));
 	public static final RegistryObject<SoundEvent> SURGE_BREAKER_CHARGE = REGISTRY.register("surge_breaker_charge", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "surge_breaker_charge")));
 	public static final RegistryObject<SoundEvent> SURGE_BREAKER_SHOCKWAVE = REGISTRY.register("surge_breaker_shockwave", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "surge_breaker_shockwave")));
 	public static final RegistryObject<SoundEvent> SURGE_BREAKER_PUNCH = REGISTRY.register("surge_breaker_punch", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "surge_breaker_punch")));
@@ -105,8 +107,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> SPARKSHREDDER_CHARGES = REGISTRY.register("sparkshredder_charges", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_charges")));
 	public static final RegistryObject<SoundEvent> SPARKSHREDDER_FIRES = REGISTRY.register("sparkshredder_fires", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_fires")));
 	public static final RegistryObject<SoundEvent> SPARKSHREDDER_STARTS = REGISTRY.register("sparkshredder_starts", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_starts")));
-	public static final RegistryObject<SoundEvent> ELECTRIFIED_LIGHTNING_STRIKES = REGISTRY.register("electrified_lightning_strikes",
-			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_lightning_strikes")));
-	public static final RegistryObject<SoundEvent> ELECTRIFIED_STORM_AMBIENCE = REGISTRY.register("electrified_storm_ambience", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_storm_ambience")));
 	public static final RegistryObject<SoundEvent> ELECTRIFIED_STORM_RUMBLE = REGISTRY.register("electrified_storm_rumble", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_storm_rumble")));
+	public static final RegistryObject<SoundEvent> ELECTRIFIED_STORM_AMBIENCE = REGISTRY.register("electrified_storm_ambience", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_storm_ambience")));
 }

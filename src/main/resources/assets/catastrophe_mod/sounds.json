@@ -629,6 +629,15 @@
       }
     ]
   },
+  "electrified_lightning_strikes": {
+    "subtitle": "subtitles.electrified_lightning_strikes",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_lightning_strikes",
+        "stream": false
+      }
+    ]
+  },
   "surge_breaker_charge": {
     "subtitle": "subtitles.surge_breaker_charge",
     "sounds": [
@@ -791,11 +800,11 @@
       }
     ]
   },
-  "electrified_lightning_strikes": {
-    "subtitle": "subtitles.electrified_lightning_strikes",
+  "electrified_storm_rumble": {
+    "subtitle": "subtitles.electrified_storm_rumble",
     "sounds": [
       {
-        "name": "catastrophe_mod:electrified_lightning_strikes",
+        "name": "catastrophe_mod:electrified_storm_rumble",
         "stream": false
       }
     ]
@@ -805,15 +814,6 @@
     "sounds": [
       {
         "name": "catastrophe_mod:electrified_storm_ambience",
-        "stream": false
-      }
-    ]
-  },
-  "electrified_storm_rumble": {
-    "subtitle": "subtitles.electrified_storm_rumble",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:electrified_storm_rumble",
         "stream": false
       }
     ]

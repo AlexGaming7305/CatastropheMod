@@ -1,0 +1,20 @@
+{
+  "_fv": 57,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [],
+    "baseTexture": "parry_screen_flash.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "ParryScreenFlashDisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

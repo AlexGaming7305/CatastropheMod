@@ -12,7 +12,7 @@
     "excludeEnchantments": false,
     "compatibleItems": [
       {
-        "value": "Items.SHIELD"
+        "value": "TAG:catastrophe_mod:shields"
       }
     ],
     "excludeItems": false,

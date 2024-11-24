@@ -1,18 +1,6 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.client.event.ViewportEvent;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
 import javax.annotation.Nullable;
 
@@ -33,17 +21,17 @@ public class ElectrifiedStormFogColorProcedure {
 		Entity entity = _provider.getCamera().getEntity();
 		if (level != null && entity != null) {
 			Vec3 entPos = entity.getPosition((float) _provider.getPartialTick());
-			execute(_provider, level);
+			execute(_provider);
 		}
 	}
 
-	public static void execute(LevelAccessor world) {
-		execute(null, world);
+	public static void execute() {
+		execute(null);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world) {
-		if (CatastropheModModVariables.MapVariables.get(world).electrified_storm == true) {
-			setColor((int) (255 << 24 | 60 << 16 | 60 << 8 | 70));
-		}
-	}
+private static void execute(
+@Nullable Event event
+) {
+if (==true) {setColor((int)(255 << 24 | 60 << 16 | 60 << 8 | 70));}
+}
 }

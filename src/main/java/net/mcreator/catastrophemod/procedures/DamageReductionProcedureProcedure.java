@@ -29,7 +29,8 @@ public class DamageReductionProcedureProcedure {
 		if (entity == null)
 			return;
 		double damage = 0;
-		if (entity instanceof LivingEntity && ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.DAMAGEREDUCTION.get()) != null) {
+		if (entity instanceof LivingEntity && ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.DAMAGEREDUCTION.get()) != null
+				&& ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.DAMAGEREDUCTION.get()).getBaseValue() != 0) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
 			damage = amount - (amount * ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.DAMAGEREDUCTION.get()).getBaseValue()) / 100;
 			event2.setAmount((float) damage);

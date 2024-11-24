@@ -31,4 +31,5 @@ public class CatastropheModModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> HAUNTED_GLIMMER = REGISTRY.register("haunted_glimmer", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> STARRY_SPARKLE = REGISTRY.register("starry_sparkle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> RUSTY_SPARK = REGISTRY.register("rusty_spark", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> PARRY = REGISTRY.register("parry", () -> new SimpleParticleType(true));
 }

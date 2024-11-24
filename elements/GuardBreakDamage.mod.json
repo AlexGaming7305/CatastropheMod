@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Damage types",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [
+      {
+        "value": "ANVIL"
+      },
+      {
+        "value": "EXPLOSION"
+      },
+      {
+        "value": "PLAYER_EXPLOSION"
+      },
+      {
+        "value": "SONIC_BOOM"
+      }
+    ],
+    "name": "guard_break_damage",
+    "namespace": "mod"
+  }
+}

@@ -33,7 +33,8 @@ public class SpearDamageProcedureProcedure {
 		if (sourceentity == null)
 			return;
 		double damage = 0;
-		if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:spears")))) {
+		if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:spears")))
+				&& ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.SPEARDAMAGE.get()).getBaseValue() != 0) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
 			damage = amount + (amount * ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.SPEARDAMAGE.get()).getBaseValue()) / 100;
 			event2.setAmount((float) damage);

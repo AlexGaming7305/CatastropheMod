@@ -33,8 +33,10 @@ public class MagicDamageProcedureProcedure {
 		if (sourceentity == null)
 			return;
 		double damage = 0;
-		if (sourceentity instanceof Player && ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))
-				|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons"))))) {
+		if (sourceentity instanceof Player
+				&& ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons")))
+						|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:magic_weapons"))))
+				&& ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.MAGICDAMAGE.get()).getBaseValue() != 0) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;
 			damage = amount + (amount * ((LivingEntity) sourceentity).getAttribute(CatastropheModModAttributes.MAGICDAMAGE.get()).getBaseValue()) / 100;
 			event2.setAmount((float) damage);

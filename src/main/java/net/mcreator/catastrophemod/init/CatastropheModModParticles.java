@@ -14,6 +14,7 @@ import net.mcreator.catastrophemod.client.particle.SparkParticle;
 import net.mcreator.catastrophemod.client.particle.SnowflakeParticle;
 import net.mcreator.catastrophemod.client.particle.RustySparkParticle;
 import net.mcreator.catastrophemod.client.particle.PoisonTrailParticle;
+import net.mcreator.catastrophemod.client.particle.ParryParticle;
 import net.mcreator.catastrophemod.client.particle.HealingSparkParticle;
 import net.mcreator.catastrophemod.client.particle.HauntedGlimmerParticle;
 import net.mcreator.catastrophemod.client.particle.FieryExplosionParticle;
@@ -46,5 +47,6 @@ public class CatastropheModModParticles {
 		event.registerSpriteSet(CatastropheModModParticleTypes.HAUNTED_GLIMMER.get(), HauntedGlimmerParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.STARRY_SPARKLE.get(), StarrySparkleParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.RUSTY_SPARK.get(), RustySparkParticle::provider);
+		event.registerSpriteSet(CatastropheModModParticleTypes.PARRY.get(), ParryParticle::provider);
 	}
 }
