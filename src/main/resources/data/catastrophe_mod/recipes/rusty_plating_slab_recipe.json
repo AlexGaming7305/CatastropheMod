@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:deleted_mod_element"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:rusty_plating_slab",
+    "count": 6
+  }
+}

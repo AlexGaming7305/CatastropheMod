@@ -66,7 +66,6 @@ import net.mcreator.catastrophemod.entity.MineralWraithEntity;
 import net.mcreator.catastrophemod.entity.LightningBladeEntity;
 import net.mcreator.catastrophemod.entity.LifedrainArrowProjectileEntity;
 import net.mcreator.catastrophemod.entity.KnifeOfProficiencyProjectileProjectileEntity;
-import net.mcreator.catastrophemod.entity.IronRoundProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.IceShardProjectileEntity;
 import net.mcreator.catastrophemod.entity.HuntsmanKnifeProjectileEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabMinionEntity;
@@ -103,6 +102,7 @@ import net.mcreator.catastrophemod.entity.DescendingMiseryEntity;
 import net.mcreator.catastrophemod.entity.CrystalSpearStabEntity;
 import net.mcreator.catastrophemod.entity.CrystalShardProjectileEntity;
 import net.mcreator.catastrophemod.entity.CrystalRoundProjectileProjectileEntity;
+import net.mcreator.catastrophemod.entity.CopperRoundProjectileEntity;
 import net.mcreator.catastrophemod.entity.CharredSkeletonGuardEntity;
 import net.mcreator.catastrophemod.entity.CharredMantisEntity;
 import net.mcreator.catastrophemod.entity.CalicoStagBeetleEntity;
@@ -249,9 +249,6 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<KnifeOfProficiencyProjectileProjectileEntity>> KNIFE_OF_PROFICIENCY_PROJECTILE_PROJECTILE = register("projectile_knife_of_proficiency_projectile_projectile",
 			EntityType.Builder.<KnifeOfProficiencyProjectileProjectileEntity>of(KnifeOfProficiencyProjectileProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(KnifeOfProficiencyProjectileProjectileEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<IronRoundProjectileProjectileEntity>> IRON_ROUND_PROJECTILE_PROJECTILE = register("projectile_iron_round_projectile_projectile",
-			EntityType.Builder.<IronRoundProjectileProjectileEntity>of(IronRoundProjectileProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(IronRoundProjectileProjectileEntity::new).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ShadowFireballProjectileEntity>> SHADOW_FIREBALL_PROJECTILE = register("projectile_shadow_fireball_projectile",
 			EntityType.Builder.<ShadowFireballProjectileEntity>of(ShadowFireballProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(ShadowFireballProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -397,6 +394,9 @@ public class CatastropheModModEntities {
 			EntityType.Builder.<NailgunNailEntity>of(NailgunNailEntity::new, MobCategory.MISC).setCustomClientFactory(NailgunNailEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ScrapRoundProjectileEntity>> SCRAP_ROUND_PROJECTILE = register("projectile_scrap_round_projectile", EntityType.Builder.<ScrapRoundProjectileEntity>of(ScrapRoundProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(ScrapRoundProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CopperRoundProjectileEntity>> COPPER_ROUND_PROJECTILE = register("projectile_copper_round_projectile",
+			EntityType.Builder.<CopperRoundProjectileEntity>of(CopperRoundProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(CopperRoundProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

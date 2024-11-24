@@ -22,6 +22,9 @@ import net.mcreator.catastrophemod.block.ShaleBricksSlabBlock;
 import net.mcreator.catastrophemod.block.ShaleBricksBlock;
 import net.mcreator.catastrophemod.block.ShaleBlock;
 import net.mcreator.catastrophemod.block.SeaCrystalClusterBlock;
+import net.mcreator.catastrophemod.block.RustyPlatingStairsBlock;
+import net.mcreator.catastrophemod.block.RustyPlatingSlabBlock;
+import net.mcreator.catastrophemod.block.RustyPlatingBlock;
 import net.mcreator.catastrophemod.block.RosxiteOreBlock;
 import net.mcreator.catastrophemod.block.RedSeaShellBlock;
 import net.mcreator.catastrophemod.block.PurpleSeaShellBlock;
@@ -130,4 +133,7 @@ public class CatastropheModModBlocks {
 	public static final RegistryObject<Block> SHALE_BRICKS_SLAB = REGISTRY.register("shale_bricks_slab", () -> new ShaleBricksSlabBlock());
 	public static final RegistryObject<Block> SHALE_STAIRS = REGISTRY.register("shale_stairs", () -> new ShaleStairsBlock());
 	public static final RegistryObject<Block> SHALE_BRICKS_STAIRS = REGISTRY.register("shale_bricks_stairs", () -> new ShaleBricksStairsBlock());
+	public static final RegistryObject<Block> RUSTY_PLATING = REGISTRY.register("rusty_plating", () -> new RustyPlatingBlock());
+	public static final RegistryObject<Block> RUSTY_PLATING_SLAB = REGISTRY.register("rusty_plating_slab", () -> new RustyPlatingSlabBlock());
+	public static final RegistryObject<Block> RUSTY_PLATING_STAIRS = REGISTRY.register("rusty_plating_stairs", () -> new RustyPlatingStairsBlock());
 }

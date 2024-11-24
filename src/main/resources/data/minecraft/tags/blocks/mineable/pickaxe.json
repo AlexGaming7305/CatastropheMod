@@ -44,6 +44,9 @@
     "catastrophe_mod:shale_slab",
     "catastrophe_mod:shale_bricks_slab",
     "catastrophe_mod:shale_stairs",
-    "catastrophe_mod:shale_bricks_stairs"
+    "catastrophe_mod:shale_bricks_stairs",
+    "catastrophe_mod:rusty_plating",
+    "catastrophe_mod:rusty_plating_slab",
+    "catastrophe_mod:rusty_plating_stairs"
   ]
 }

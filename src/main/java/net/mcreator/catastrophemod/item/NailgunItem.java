@@ -120,7 +120,7 @@ public class NailgunItem extends Item implements GeoItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Iron Rounds convert into a High Velocity Nail that can pierce"));
+		list.add(Component.literal("\u00A77Copper Rounds convert into a High Velocity Nail that can pierce"));
 	}
 
 	@Override

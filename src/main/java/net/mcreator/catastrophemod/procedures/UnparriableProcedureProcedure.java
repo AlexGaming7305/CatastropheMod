@@ -1,15 +1,6 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.ShieldBlockEvent;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.tags.TagKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.Registries;
 
 import javax.annotation.Nullable;
 
