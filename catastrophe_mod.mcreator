@@ -19633,8 +19633,16 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
           }
         ]
       },
@@ -25745,7 +25753,12 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormSkyProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -25823,7 +25836,28 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedLightningSkyVisualsTransparencyProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -26030,6 +26064,76 @@
         ]
       },
       "path": "~/Violent Difficulty"
+    },
+    {
+      "name": "ElectrifiedStormFog",
+      "type": "procedure",
+      "sortid": 3184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrified_storm_fog",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormFogProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ElectrifiedStormFogColor",
+      "type": "procedure",
+      "sortid": 3185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrified_storm_fog_color",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormFogColorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ElectrifiedStormFlash",
+      "type": "overlay",
+      "sortid": 3186,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "electrified_storm_flash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/client/screens/ElectrifiedStormFlashOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "ElectrifiedStormFlashProcedure",
+      "type": "procedure",
+      "sortid": 3187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrified_storm_flash_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormFlashProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -26872,6 +26976,18 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "fade_variable",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "electrified_storm",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -27436,14 +27552,6 @@
       "subtitle": "Weak metal hit"
     },
     {
-      "name": "electrified_lightning_strikes",
-      "files": [
-        "electrified_lightning_strikes"
-      ],
-      "category": "hostile",
-      "subtitle": "Electrified lightning strikes"
-    },
-    {
       "name": "surge_breaker_charge",
       "files": [
         "surge_breaker_charge"
@@ -27586,6 +27694,30 @@
       ],
       "category": "player",
       "subtitle": "Sparkshredder starts"
+    },
+    {
+      "name": "electrified_lightning_strikes",
+      "files": [
+        "electrified_lightning_strikes"
+      ],
+      "category": "hostile",
+      "subtitle": "Electrified lightning strikes"
+    },
+    {
+      "name": "electrified_storm_ambience",
+      "files": [
+        "electrified_storm_ambience"
+      ],
+      "category": "weather",
+      "subtitle": "Electrified storm ambience"
+    },
+    {
+      "name": "electrified_storm_rumble",
+      "files": [
+        "electrified_storm_rumble"
+      ],
+      "category": "weather",
+      "subtitle": "Electrified storm rumble"
     }
   ],
   "language_map": {
@@ -27710,6 +27842,7 @@
       "gui.alexs_mod.ark_scissor_rift_menu.button_close": "Close",
       "item.alexs_mod.ancient_war_horn": "§cAncient War Horn",
       "item.catastrophe_mod.crystal_round": "§dCrystal Round",
+      "subtitles.electrified_storm_rumble": "Electrified storm rumble",
       "block.catastrophe_mod.shale": "Shale",
       "item.alexs_mod.thorn_bow": "§2Thorn Bow",
       "gui.alexs_mod.aegex_3_gui.label_species_a_name_toast": "species a name. toast..",
@@ -28706,6 +28839,7 @@
       "block.catastrophe_mod.withering_grass": "Withering Grass",
       "item.catastrophe_mod.raw_rosxite": "§2Raw Rosxite",
       "gui.alexs_mod.overgrowth_enter.button_enter": "Enter",
+      "subtitles.electrified_storm_ambience": "Electrified storm ambience",
       "block.catastrophe_mod.mana_rose_plant": "Mana Rose",
       "block.alexs_mod.computer_base": "Computer Base",
       "subtitles.alexs_mod_ost_nethers_fury": "Alex\u0027s Mod OST: Nether\u0027s Fury",

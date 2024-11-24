@@ -629,15 +629,6 @@
       }
     ]
   },
-  "electrified_lightning_strikes": {
-    "subtitle": "subtitles.electrified_lightning_strikes",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:electrified_lightning_strikes",
-        "stream": false
-      }
-    ]
-  },
   "surge_breaker_charge": {
     "subtitle": "subtitles.surge_breaker_charge",
     "sounds": [
@@ -796,6 +787,33 @@
     "sounds": [
       {
         "name": "catastrophe_mod:sparkshredder_starts",
+        "stream": false
+      }
+    ]
+  },
+  "electrified_lightning_strikes": {
+    "subtitle": "subtitles.electrified_lightning_strikes",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_lightning_strikes",
+        "stream": false
+      }
+    ]
+  },
+  "electrified_storm_ambience": {
+    "subtitle": "subtitles.electrified_storm_ambience",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_storm_ambience",
+        "stream": false
+      }
+    ]
+  },
+  "electrified_storm_rumble": {
+    "subtitle": "subtitles.electrified_storm_rumble",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_storm_rumble",
         "stream": false
       }
     ]

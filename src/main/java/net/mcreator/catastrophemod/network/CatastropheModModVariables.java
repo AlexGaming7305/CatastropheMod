@@ -208,6 +208,7 @@ public class CatastropheModModVariables {
 				clone.flamestrike_ammo = original.flamestrike_ammo;
 				clone.rustgun_ammo = original.rustgun_ammo;
 				clone.out_of_ammo_timer = original.out_of_ammo_timer;
+				clone.fade_variable = original.fade_variable;
 			}
 		}
 
@@ -279,6 +280,7 @@ public class CatastropheModModVariables {
 		public boolean electrified_lightning_sky_visuals = false;
 		public double electrified_lightning_sky_visuals_transparency = 0;
 		public double electrified_lightning_R = 0;
+		public boolean electrified_storm = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -291,6 +293,7 @@ public class CatastropheModModVariables {
 			electrified_lightning_sky_visuals = nbt.getBoolean("electrified_lightning_sky_visuals");
 			electrified_lightning_sky_visuals_transparency = nbt.getDouble("electrified_lightning_sky_visuals_transparency");
 			electrified_lightning_R = nbt.getDouble("electrified_lightning_R");
+			electrified_storm = nbt.getBoolean("electrified_storm");
 		}
 
 		@Override
@@ -299,6 +302,7 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("electrified_lightning_sky_visuals", electrified_lightning_sky_visuals);
 			nbt.putDouble("electrified_lightning_sky_visuals_transparency", electrified_lightning_sky_visuals_transparency);
 			nbt.putDouble("electrified_lightning_R", electrified_lightning_R);
+			nbt.putBoolean("electrified_storm", electrified_storm);
 			return nbt;
 		}
 
@@ -525,6 +529,7 @@ public class CatastropheModModVariables {
 		public double flamestrike_ammo = 0;
 		public double rustgun_ammo = 0;
 		public boolean out_of_ammo_timer = false;
+		public double fade_variable = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -667,6 +672,7 @@ public class CatastropheModModVariables {
 			nbt.putDouble("flamestrike_ammo", flamestrike_ammo);
 			nbt.putDouble("rustgun_ammo", rustgun_ammo);
 			nbt.putBoolean("out_of_ammo_timer", out_of_ammo_timer);
+			nbt.putDouble("fade_variable", fade_variable);
 			return nbt;
 		}
 
@@ -806,6 +812,7 @@ public class CatastropheModModVariables {
 			flamestrike_ammo = nbt.getDouble("flamestrike_ammo");
 			rustgun_ammo = nbt.getDouble("rustgun_ammo");
 			out_of_ammo_timer = nbt.getBoolean("out_of_ammo_timer");
+			fade_variable = nbt.getDouble("fade_variable");
 		}
 	}
 
@@ -964,6 +971,7 @@ public class CatastropheModModVariables {
 					variables.flamestrike_ammo = message.data.flamestrike_ammo;
 					variables.rustgun_ammo = message.data.rustgun_ammo;
 					variables.out_of_ammo_timer = message.data.out_of_ammo_timer;
+					variables.fade_variable = message.data.fade_variable;
 				}
 			});
 			context.setPacketHandled(true);
