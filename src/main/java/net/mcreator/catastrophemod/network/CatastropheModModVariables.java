@@ -211,6 +211,7 @@ public class CatastropheModModVariables {
 				clone.parry_screen_flash_active = original.parry_screen_flash_active;
 				clone.shieldDamage = original.shieldDamage;
 				clone.shield_parry_damage = original.shield_parry_damage;
+				clone.fade_variable = original.fade_variable;
 			}
 		}
 
@@ -282,6 +283,7 @@ public class CatastropheModModVariables {
 		public boolean electrified_lightning_sky_visuals = false;
 		public double electrified_lightning_sky_visuals_transparency = 0;
 		public double electrified_lightning_R = 0;
+		public boolean electrified_storm = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -294,6 +296,7 @@ public class CatastropheModModVariables {
 			electrified_lightning_sky_visuals = nbt.getBoolean("electrified_lightning_sky_visuals");
 			electrified_lightning_sky_visuals_transparency = nbt.getDouble("electrified_lightning_sky_visuals_transparency");
 			electrified_lightning_R = nbt.getDouble("electrified_lightning_R");
+			electrified_storm = nbt.getBoolean("electrified_storm");
 		}
 
 		@Override
@@ -302,6 +305,7 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("electrified_lightning_sky_visuals", electrified_lightning_sky_visuals);
 			nbt.putDouble("electrified_lightning_sky_visuals_transparency", electrified_lightning_sky_visuals_transparency);
 			nbt.putDouble("electrified_lightning_R", electrified_lightning_R);
+			nbt.putBoolean("electrified_storm", electrified_storm);
 			return nbt;
 		}
 
@@ -531,6 +535,7 @@ public class CatastropheModModVariables {
 		public boolean parry_screen_flash_active = false;
 		public boolean shieldDamage = false;
 		public double shield_parry_damage = 0.0;
+		public double fade_variable = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -676,6 +681,7 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("parry_screen_flash_active", parry_screen_flash_active);
 			nbt.putBoolean("shieldDamage", shieldDamage);
 			nbt.putDouble("shield_parry_damage", shield_parry_damage);
+			nbt.putDouble("fade_variable", fade_variable);
 			return nbt;
 		}
 
@@ -818,6 +824,7 @@ public class CatastropheModModVariables {
 			parry_screen_flash_active = nbt.getBoolean("parry_screen_flash_active");
 			shieldDamage = nbt.getBoolean("shieldDamage");
 			shield_parry_damage = nbt.getDouble("shield_parry_damage");
+			fade_variable = nbt.getDouble("fade_variable");
 		}
 	}
 
@@ -979,6 +986,7 @@ public class CatastropheModModVariables {
 					variables.parry_screen_flash_active = message.data.parry_screen_flash_active;
 					variables.shieldDamage = message.data.shieldDamage;
 					variables.shield_parry_damage = message.data.shield_parry_damage;
+					variables.fade_variable = message.data.fade_variable;
 				}
 			});
 			context.setPacketHandled(true);

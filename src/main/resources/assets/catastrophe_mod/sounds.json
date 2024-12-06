@@ -799,5 +799,23 @@
         "stream": false
       }
     ]
+  },
+  "electrified_storm_rumble": {
+    "subtitle": "subtitles.electrified_storm_rumble",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_storm_rumble",
+        "stream": false
+      }
+    ]
+  },
+  "electrified_storm_ambience": {
+    "subtitle": "subtitles.electrified_storm_ambience",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electrified_storm_ambience",
+        "stream": false
+      }
+    ]
   }
 }

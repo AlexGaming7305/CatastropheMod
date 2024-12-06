@@ -107,4 +107,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> SPARKSHREDDER_CHARGES = REGISTRY.register("sparkshredder_charges", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_charges")));
 	public static final RegistryObject<SoundEvent> SPARKSHREDDER_FIRES = REGISTRY.register("sparkshredder_fires", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_fires")));
 	public static final RegistryObject<SoundEvent> SPARKSHREDDER_STARTS = REGISTRY.register("sparkshredder_starts", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_starts")));
+	public static final RegistryObject<SoundEvent> ELECTRIFIED_STORM_RUMBLE = REGISTRY.register("electrified_storm_rumble", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_storm_rumble")));
+	public static final RegistryObject<SoundEvent> ELECTRIFIED_STORM_AMBIENCE = REGISTRY.register("electrified_storm_ambience", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_storm_ambience")));
 }

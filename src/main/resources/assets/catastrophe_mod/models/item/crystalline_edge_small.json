@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "catastrophe_mod:item/crystalline_edge"
+    "layer0": "catastrophe_mod:item/crystalline_edge_small"
   }
 }
