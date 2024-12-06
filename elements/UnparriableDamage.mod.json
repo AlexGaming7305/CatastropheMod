@@ -10,19 +10,13 @@
     "biomes": [],
     "damageTypes": [
       {
-        "value": "CUSTOM:Bleed"
-      },
-      {
         "value": "CUSTOM:Electricity"
       },
       {
         "value": "CUSTOM:Electrocuted"
       },
       {
-        "value": "CUSTOM:Incinerated"
-      },
-      {
-        "value": "CUSTOM:LiverFailure"
+        "value": "CUSTOM:Demise"
       }
     ],
     "name": "unparriable_damage",
