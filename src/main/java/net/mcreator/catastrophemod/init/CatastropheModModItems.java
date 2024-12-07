@@ -552,7 +552,7 @@ public class CatastropheModModItems {
 					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) ElectrifiedSwordChargePropertyValueProviderProcedure.execute(entity));
 			ItemProperties.register(ELECTRIFIED_SWORD.get(), new ResourceLocation("catastrophe_mod:electrified_sword_electrified_sword_charged"),
 					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) ElectrifiedSwordChargedPropertyValueProviderProcedure.execute(entity));
-			ItemProperties.register(WIRESAW.get(), new ResourceLocation("catastrophe_mod:wiresaw_wiresaw_active"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) WiresawPropertyValueProviderProcedure.execute());
+			ItemProperties.register(WIRESAW.get(), new ResourceLocation("catastrophe_mod:wiresaw_wiresaw_active"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) WiresawPropertyValueProviderProcedure.execute(entity));
 		});
 	}
 }

@@ -74,7 +74,7 @@ public class NightfallsDemiseProjectileOnEntityTickUpdateProcedure {
 						if (!(entityiterator instanceof NightfallsDemiseProjectileEntity)) {
 							if (!(entityiterator.getStringUUID()).equals(entity.getPersistentData().getString("NightfallsDemiseOwner"))) {
 								if (entityiterator.isAlive()) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))),
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:demise"))),
 											nightfallsdemiseowner), 10);
 									entity.setDeltaMovement(new Vec3(((entityiterator.getX() - entity.getX()) * 0.1), 0.6, ((entityiterator.getZ() - entity.getZ()) * 0.1)));
 									entity.setNoGravity(false);
@@ -111,7 +111,7 @@ public class NightfallsDemiseProjectileOnEntityTickUpdateProcedure {
 						if (!(entityiterator instanceof NightfallsDemiseProjectileEntity)) {
 							if (!(entityiterator.getStringUUID()).equals(entity.getPersistentData().getString("NightfallsDemiseOwner"))) {
 								if (entityiterator.isAlive()) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))),
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:demise"))),
 											nightfallsdemiseowner), 8);
 									entity.setDeltaMovement(new Vec3(((entityiterator.getX() - entity.getX()) * 0.1), 0.6, ((entityiterator.getZ() - entity.getZ()) * 0.1)));
 									entity.setNoGravity(false);

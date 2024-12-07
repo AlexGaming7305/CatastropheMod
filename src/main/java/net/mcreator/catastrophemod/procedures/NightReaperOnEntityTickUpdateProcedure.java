@@ -1,8 +1,35 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+import net.mcreator.catastrophemod.entity.NightReaperEntity;
+import net.mcreator.catastrophemod.CatastropheModMod;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class NightReaperOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -55,9 +82,8 @@ public class NightReaperOnEntityTickUpdateProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										if (entityiterator instanceof LivingEntity) {
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), entity),
-													7);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:rend_apart"))), entity), 7);
 										}
 									}
 								}
@@ -77,7 +103,7 @@ public class NightReaperOnEntityTickUpdateProcedure {
 											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
 								}
 							}
-							entity.setDeltaMovement(new Vec3((0.2 * entity.getLookAngle().x), (0.1 * entity.getLookAngle().y), (0.2 * entity.getLookAngle().z)));
+							entity.setDeltaMovement(new Vec3((0.5 * entity.getLookAngle().x), (0.1 * entity.getLookAngle().y), (0.5 * entity.getLookAngle().z)));
 							{
 								final Vec3 _center = new Vec3(
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -90,9 +116,8 @@ public class NightReaperOnEntityTickUpdateProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										if (entityiterator instanceof LivingEntity) {
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), entity),
-													7);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:rend_apart"))), entity), 7);
 										}
 									}
 								}
@@ -125,11 +150,13 @@ public class NightReaperOnEntityTickUpdateProcedure {
 								if (entityToSpawn != null) {
 								}
 							}
+							entity.getPersistentData().putBoolean("NightfallsDemiseEffects", true);
 						}
 					});
 					CatastropheModMod.queueServerWork(42, () -> {
 						if (entity instanceof NightReaperEntity animatable)
 							animatable.setTexture("night_reaper");
+						entity.getPersistentData().putBoolean("NightfallsDemiseEffects", false);
 					});
 				}
 			}

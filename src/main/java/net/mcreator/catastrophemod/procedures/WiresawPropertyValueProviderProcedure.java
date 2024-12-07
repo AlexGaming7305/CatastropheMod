@@ -1,14 +1,16 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
 public class WiresawPropertyValueProviderProcedure {
-public static double execute(
-) {
-if (==true) {return
-1;}return
-0;
-}
+	public static double execute(Entity entity) {
+		if (entity == null)
+			return 0;
+		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).wiresaw_active == true) {
+			return 1;
+		}
+		return 0;
+	}
 }

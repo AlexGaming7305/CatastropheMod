@@ -99,7 +99,7 @@ public class AccursedWitchOnEntityTickUpdateProcedure {
 									if (!(entityiterator == entity)) {
 										if (entityiterator instanceof LivingEntity) {
 											entityiterator.hurt(new DamageSource(
-													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity), 6);
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:witch_slap"))), entity), 6);
 											entityiterator.setDeltaMovement(new Vec3((2.25 * entity.getLookAngle().x), 0.2, (2.25 * entity.getLookAngle().z)));
 										}
 									}
@@ -125,48 +125,51 @@ public class AccursedWitchOnEntityTickUpdateProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 255, false, false));
 					CatastropheModMod.queueServerWork(25, () -> {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:haunted_mirror_shoot")), SoundSource.HOSTILE, 1, 1);
-							} else {
-								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:haunted_mirror_shoot")), SoundSource.HOSTILE, 1, 1, false);
-							}
-						}
-						if (entity.getPersistentData().getBoolean("accursed_witch_mana_drain_attack") == true) {
-							entity.getPersistentData().putBoolean("accursed_witch_mana_drain_attack", false);
-							for (int index0 = 0; index0 < 4; index0++) {
-								if (world instanceof ServerLevel projectileLevel) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new AccursedSoulEntity(CatastropheModModEntities.ACCURSED_SOUL.get(), level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											entityToSpawn.setSilent(true);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity, 4, 0);
-									_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.3), (entity.getZ()));
-									_entityToSpawn.shoot(0, 4, 0, 1, 15);
-									projectileLevel.addFreshEntity(_entityToSpawn);
+						if (entity.isAlive()) {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:haunted_mirror_shoot")), SoundSource.HOSTILE, 1,
+											1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:haunted_mirror_shoot")), SoundSource.HOSTILE, 1, 1, false);
 								}
 							}
-						} else {
-							for (int index1 = 0; index1 < 2; index1++) {
-								if (world instanceof ServerLevel projectileLevel) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new AccursedSoulEntity(CatastropheModModEntities.ACCURSED_SOUL.get(), level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											entityToSpawn.setSilent(true);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity, 4, 0);
-									_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.3), (entity.getZ()));
-									_entityToSpawn.shoot(0, 4, 0, 1, 15);
-									projectileLevel.addFreshEntity(_entityToSpawn);
+							if (entity.getPersistentData().getBoolean("accursed_witch_mana_drain_attack") == true) {
+								entity.getPersistentData().putBoolean("accursed_witch_mana_drain_attack", false);
+								for (int index0 = 0; index0 < 4; index0++) {
+									if (world instanceof ServerLevel projectileLevel) {
+										Projectile _entityToSpawn = new Object() {
+											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+												AbstractArrow entityToSpawn = new AccursedSoulEntity(CatastropheModModEntities.ACCURSED_SOUL.get(), level);
+												entityToSpawn.setOwner(shooter);
+												entityToSpawn.setBaseDamage(damage);
+												entityToSpawn.setKnockback(knockback);
+												entityToSpawn.setSilent(true);
+												return entityToSpawn;
+											}
+										}.getArrow(projectileLevel, entity, 4, 0);
+										_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.3), (entity.getZ()));
+										_entityToSpawn.shoot(0, 4, 0, 1, 15);
+										projectileLevel.addFreshEntity(_entityToSpawn);
+									}
+								}
+							} else {
+								for (int index1 = 0; index1 < 2; index1++) {
+									if (world instanceof ServerLevel projectileLevel) {
+										Projectile _entityToSpawn = new Object() {
+											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+												AbstractArrow entityToSpawn = new AccursedSoulEntity(CatastropheModModEntities.ACCURSED_SOUL.get(), level);
+												entityToSpawn.setOwner(shooter);
+												entityToSpawn.setBaseDamage(damage);
+												entityToSpawn.setKnockback(knockback);
+												entityToSpawn.setSilent(true);
+												return entityToSpawn;
+											}
+										}.getArrow(projectileLevel, entity, 4, 0);
+										_entityToSpawn.setPos((entity.getX()), (entity.getY() + 1.3), (entity.getZ()));
+										_entityToSpawn.shoot(0, 4, 0, 1, 15);
+										projectileLevel.addFreshEntity(_entityToSpawn);
+									}
 								}
 							}
 						}

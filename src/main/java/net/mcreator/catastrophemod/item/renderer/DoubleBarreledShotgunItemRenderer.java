@@ -1,5 +1,23 @@
 package net.mcreator.catastrophemod.item.renderer;
 
+import software.bernie.geckolib.renderer.GeoItemRenderer;
+import software.bernie.geckolib.cache.object.BakedGeoModel;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import net.mcreator.catastrophemod.item.model.DoubleBarreledShotgunItemModel;
+import net.mcreator.catastrophemod.item.DoubleBarreledShotgunItem;
+
+import java.util.Set;
+import java.util.HashSet;
+
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class DoubleBarreledShotgunItemRenderer extends GeoItemRenderer<DoubleBarreledShotgunItem> {
 	public DoubleBarreledShotgunItemRenderer() {
 		super(new DoubleBarreledShotgunItemModel());
@@ -43,5 +61,4 @@ public class DoubleBarreledShotgunItemRenderer extends GeoItemRenderer<DoubleBar
 	public ResourceLocation getTextureLocation(DoubleBarreledShotgunItem instance) {
 		return super.getTextureLocation(instance);
 	}
-
 }

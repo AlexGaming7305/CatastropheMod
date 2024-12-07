@@ -66,7 +66,7 @@ public class HellbaneItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(Component.literal("\u00A77Puncture Strikes causes enemies to erupt into flames"));
-		list.add(Component.literal("\u00A77Normal Attacks fire 3 Fiery Bolts"));
+		list.add(Component.literal("\u00A77Normal Attacks fire a Fiery Slash"));
 	}
 
 	@Override
