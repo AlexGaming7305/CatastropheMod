@@ -1,8 +1,38 @@
 package net.mcreator.catastrophemod.procedures;
 
+import org.checkerframework.checker.units.qual.h;
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.client.event.RenderLevelStageEvent;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.ShaderInstance;
+import net.minecraft.client.renderer.GameRenderer;
+import net.minecraft.client.renderer.FogRenderer;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
 import javax.annotation.Nullable;
+
+import com.mojang.blaze3d.vertex.VertexFormatElement;
+import com.mojang.blaze3d.vertex.VertexFormat;
+import com.mojang.blaze3d.vertex.VertexBuffer;
+import com.mojang.blaze3d.vertex.Tesselator;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.DefaultVertexFormat;
+import com.mojang.blaze3d.vertex.BufferBuilder;
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.platform.GlStateManager;
 
 @Mod.EventBusSubscriber(value = {Dist.CLIENT})
 public class ElectrifiedStormSkyProcedure {
@@ -831,11 +861,13 @@ public class ElectrifiedStormSkyProcedure {
 		execute(null, world);
 	}
 
-private static void execute(
-@Nullable Event event,
-LevelAccessor world
-) {
-double transparency = 0;
-if (==true) {if (CatastropheModModVariables.MapVariables.get(world).electrified_lightning_sky_visuals==true) {renderDeepsky((int)((int)(250-CatastropheModModVariables.MapVariables.get(world).electrified_lightning_sky_visuals_transparency) << 24 | 50 << 16 | 186 << 8 | 250));renderSunlights((int)((int)(250-CatastropheModModVariables.MapVariables.get(world).electrified_lightning_sky_visuals_transparency) << 24 | 50 << 16 | 186 << 8 | 250));}}
-}
+	private static void execute(@Nullable Event event, LevelAccessor world) {
+		double transparency = 0;
+		if (CatastropheModModVariables.MapVariables.get(world).electrified_storm == true) {
+			if (CatastropheModModVariables.MapVariables.get(world).electrified_lightning_sky_visuals == true) {
+				renderDeepsky((int) ((int) (250 - CatastropheModModVariables.MapVariables.get(world).electrified_lightning_sky_visuals_transparency) << 24 | 50 << 16 | 186 << 8 | 250));
+				renderSunlights((int) ((int) (250 - CatastropheModModVariables.MapVariables.get(world).electrified_lightning_sky_visuals_transparency) << 24 | 50 << 16 | 186 << 8 | 250));
+			}
+		}
+	}
 }
