@@ -1,23 +1,5 @@
 package net.mcreator.catastrophemod.item.renderer;
 
-import software.bernie.geckolib.renderer.GeoItemRenderer;
-import software.bernie.geckolib.cache.object.BakedGeoModel;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import net.mcreator.catastrophemod.item.model.SawedOffShotgunItemModel;
-import net.mcreator.catastrophemod.item.SawedOffShotgunItem;
-
-import java.util.Set;
-import java.util.HashSet;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class SawedOffShotgunItemRenderer extends GeoItemRenderer<SawedOffShotgunItem> {
 	public SawedOffShotgunItemRenderer() {
 		super(new SawedOffShotgunItemModel());
@@ -61,4 +43,5 @@ public class SawedOffShotgunItemRenderer extends GeoItemRenderer<SawedOffShotgun
 	public ResourceLocation getTextureLocation(SawedOffShotgunItem instance) {
 		return super.getTextureLocation(instance);
 	}
+
 }

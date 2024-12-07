@@ -1,11 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import javax.annotation.Nullable;
 
 public class DoubleBarreledShotgunItemInHandTickProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {

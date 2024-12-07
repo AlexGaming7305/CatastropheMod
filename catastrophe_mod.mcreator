@@ -12933,7 +12933,7 @@
       "type": "tool",
       "sortid": 2372,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "hellbane",
       "metadata": {
         "files": [
@@ -15473,6 +15473,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -24414,18 +24426,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -25548,10 +25548,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -26386,6 +26382,30 @@
       "path": "~/Misc"
     },
     {
+      "name": "SawedOffShotgunItemInHandTick",
+      "type": "procedure",
+      "sortid": 3213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawed_off_shotgun_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SawedOffShotgunItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
       "name": "LighthouseBarrel",
       "type": "loottable",
       "sortid": 3199,
@@ -26398,115 +26418,6 @@
         ]
       },
       "path": "~/Misc"
-    },
-    {
-      "name": "FieryBoltProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 3200,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fiery_bolt_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/FieryBoltProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "FieryBoltWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 3201,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fiery_bolt_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/FieryBoltWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "FieryBolt",
-      "type": "projectile",
-      "sortid": 3202,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fiery_bolt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/FieryBoltEntity.java"
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "LighthouseAlchemyChest",
-      "type": "loottable",
-      "sortid": 3203,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lighthouse_alchemy_chest",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/loot_tables/chests/lighthouse_alchemy_chest.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "WiresawPropertyValueProvider",
-      "type": "procedure",
-      "sortid": 3204,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wiresaw_property_value_provider",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawPropertyValueProviderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Weapons/Melee Weapons"
-    },
-    {
-      "name": "Wiresaw",
-      "type": "item",
-      "sortid": 3205,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "wiresaw",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/wiresaw.json",
-          "src/main/resources/assets/catastrophe_mod/models/item/wiresaw_0.json",
-          "src/main/java/net/mcreator/catastrophemod/item/WiresawItem.java"
-        ]
-      },
-      "path": "~/Items/Weapons/Melee Weapons"
     },
     {
       "name": "WiresawChargeStart",
@@ -26545,32 +26456,20 @@
       "path": "~/Items/Weapons/Melee Weapons"
     },
     {
-      "name": "WiresawCharging",
+      "name": "NightReaperOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 3207,
+      "sortid": 3217,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wiresaw_charging",
+      "registry_name": "night_reaper_on_entity_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawChargingProcedure.java"
+          "src/main/java/net/mcreator/catastrophemod/procedures/NightReaperOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -26578,31 +26477,73 @@
           }
         ]
       },
-      "path": "~/Items/Weapons/Melee Weapons"
+      "path": "~/Entities"
     },
     {
-      "name": "WiresawStopCharging",
-      "type": "procedure",
-      "sortid": 3208,
+      "name": "Wiresaw",
+      "type": "item",
+      "sortid": 3205,
       "compiles": true,
-      "locked_code": false,
-      "registry_name": "wiresaw_stop_charging",
+      "locked_code": true,
+      "registry_name": "wiresaw",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawStopChargingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
+          "src/main/resources/assets/catastrophe_mod/models/item/wiresaw.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/wiresaw_0.json",
+          "src/main/java/net/mcreator/catastrophemod/item/WiresawItem.java"
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "FieryBolt",
+      "type": "projectile",
+      "sortid": 3202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiery_bolt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/FieryBoltEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "SawedOffShotgun",
+      "type": "animateditem",
+      "sortid": 3214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawed_off_shotgun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/item/model/SawedOffShotgunItemModel.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sawed_off_shotgun.json",
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/SawedOffShotgunItemRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/item/SawedOffShotgunItem.java"
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "NightReaper",
+      "type": "animatedentity",
+      "sortid": 3216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "night_reaper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/model/NightReaperModel.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/NightReaperEntity.java",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/night_reaper_biome_modifier.json",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/NightReaperRenderer.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/night_reaper_spawn_egg.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/layer/NightReaperLayer.java"
+        ]
+      },
+      "path": "~/Entities"
     },
     {
       "name": "WiresawEffects",
@@ -26617,10 +26558,6 @@
         ],
         "dependencies": [
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -26639,47 +26576,6 @@
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
-    },
-    {
-      "name": "DoubleBarreledShotgun",
-      "type": "animateditem",
-      "sortid": 3211,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "double_barreled_shotgun",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/model/DoubleBarreledShotgunItemModel.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/double_barreled_shotgun.json",
-          "src/main/java/net/mcreator/catastrophemod/item/DoubleBarreledShotgunItem.java",
-          "src/main/java/net/mcreator/catastrophemod/item/renderer/DoubleBarreledShotgunItemRenderer.java"
-        ]
-      },
-      "path": "~/Items/Weapons/Ranged Weapons"
-    },
-    {
-      "name": "DoubleBarreledShotgunItemInHandTick",
-      "type": "procedure",
-      "sortid": 3210,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "double_barreled_shotgun_item_in_hand_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/DoubleBarreledShotgunItemInHandTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Items/Weapons/Ranged Weapons"
     },
     {
       "name": "DoubleBarreledShotgunRightclicked",
@@ -26722,32 +26618,138 @@
       "path": "~/Items/Weapons/Ranged Weapons"
     },
     {
-      "name": "SawedOffShotgun",
-      "type": "animateditem",
-      "sortid": 3214,
+      "name": "WiresawStopCharging",
+      "type": "procedure",
+      "sortid": 3208,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sawed_off_shotgun",
+      "registry_name": "wiresaw_stop_charging",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/model/SawedOffShotgunItemModel.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/sawed_off_shotgun.json",
-          "src/main/java/net/mcreator/catastrophemod/item/renderer/SawedOffShotgunItemRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/item/SawedOffShotgunItem.java"
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawStopChargingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "FieryBoltWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 3201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiery_bolt_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FieryBoltWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "LighthouseAlchemyChest",
+      "type": "loottable",
+      "sortid": 3203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighthouse_alchemy_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/chests/lighthouse_alchemy_chest.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "DoubleBarreledShotgun",
+      "type": "animateditem",
+      "sortid": 3211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_barreled_shotgun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/item/model/DoubleBarreledShotgunItemModel.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/double_barreled_shotgun.json",
+          "src/main/java/net/mcreator/catastrophemod/item/DoubleBarreledShotgunItem.java",
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/DoubleBarreledShotgunItemRenderer.java"
         ]
       },
       "path": "~/Items/Weapons/Ranged Weapons"
     },
     {
-      "name": "SawedOffShotgunItemInHandTick",
+      "name": "AccursedWitchManaDrain",
       "type": "procedure",
-      "sortid": 3213,
+      "sortid": 3218,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sawed_off_shotgun_item_in_hand_tick",
+      "registry_name": "accursed_witch_mana_drain",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SawedOffShotgunItemInHandTickProcedure.java"
+          "src/main/java/net/mcreator/catastrophemod/procedures/AccursedWitchManaDrainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "WiresawPropertyValueProvider",
+      "type": "procedure",
+      "sortid": 3204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wiresaw_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "DoubleBarreledShotgunItemInHandTick",
+      "type": "procedure",
+      "sortid": 3210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_barreled_shotgun_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/DoubleBarreledShotgunItemInHandTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -26761,6 +26763,26 @@
         ]
       },
       "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "FieryBoltProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 3200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiery_bolt_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FieryBoltProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
     },
     {
       "name": "SawedOffShotgunRightclicked",
@@ -26803,34 +26825,15 @@
       "path": "~/Items/Weapons/Ranged Weapons"
     },
     {
-      "name": "NightReaper",
-      "type": "animatedentity",
-      "sortid": 3216,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "night_reaper",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/model/NightReaperModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/NightReaperEntity.java",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/night_reaper_biome_modifier.json",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/NightReaperRenderer.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/night_reaper_spawn_egg.json",
-          "src/main/java/net/mcreator/catastrophemod/entity/layer/NightReaperLayer.java"
-        ]
-      },
-      "path": "~/Entities"
-    },
-    {
-      "name": "NightReaperOnEntityTickUpdate",
+      "name": "WiresawCharging",
       "type": "procedure",
-      "sortid": 3217,
+      "sortid": 3207,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "night_reaper_on_entity_tick_update",
+      "registry_name": "wiresaw_charging",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/NightReaperOnEntityTickUpdateProcedure.java"
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawChargingProcedure.java"
         ],
         "dependencies": [
           {
@@ -26838,40 +26841,66 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/Entities"
+      "path": "~/Items/Weapons/Melee Weapons"
     },
     {
-      "name": "AccursedWitchManaDrain",
-      "type": "procedure",
-      "sortid": 3218,
+      "name": "Demise",
+      "type": "damagetype",
+      "sortid": 3199,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "accursed_witch_mana_drain",
+      "registry_name": "demise",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AccursedWitchManaDrainProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+          "src/main/resources/data/catastrophe_mod/damage_type/demise.json"
         ]
       },
-      "path": "~/Entities"
+      "path": "~/Damage Types"
+    },
+    {
+      "name": "RendApart",
+      "type": "damagetype",
+      "sortid": 3200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rend_apart",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/damage_type/rend_apart.json"
+        ]
+      },
+      "path": "~/Damage Types"
+    },
+    {
+      "name": "WitchSlap",
+      "type": "damagetype",
+      "sortid": 3201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "witch_slap",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/damage_type/witch_slap.json"
+        ]
+      },
+      "path": "~/Damage Types"
     }
   ],
   "variable_elements": [
@@ -28253,7 +28282,7 @@
         "haunted_mirror_shoot"
       ],
       "category": "player",
-      "subtitle": "Haunted Mirror shoot"
+      "subtitle": "Haunted mirror shoot"
     },
     {
       "name": "haunted_mirror_summon",
@@ -28261,7 +28290,7 @@
         "haunted_mirror_summon"
       ],
       "category": "player",
-      "subtitle": "Haunted Mirror summon"
+      "subtitle": "Haunted mirror summon"
     },
     {
       "name": "shovel_hit",
@@ -28333,7 +28362,7 @@
         "surge_breaker_charge"
       ],
       "category": "hostile",
-      "subtitle": "Surge Breaker charge"
+      "subtitle": "Surge breaker charge"
     },
     {
       "name": "surge_breaker_shockwave",
@@ -28341,7 +28370,7 @@
         "surge_breaker_shockwave"
       ],
       "category": "hostile",
-      "subtitle": "Surge Breaker shockwave"
+      "subtitle": "Surge breaker shockwave"
     },
     {
       "name": "surge_breaker_punch",
@@ -28349,7 +28378,7 @@
         "surge_breaker_punch"
       ],
       "category": "hostile",
-      "subtitle": "Surge Breaker punch"
+      "subtitle": "Surge breaker punch"
     },
     {
       "name": "crystalline_edge_big_slash",
@@ -28357,7 +28386,7 @@
         "crystalline_edge_big_slash"
       ],
       "category": "player",
-      "subtitle": "Crystalline Edge big slash"
+      "subtitle": "Crystalline edge big slash"
     },
     {
       "name": "crystalline_edge_resonates",
@@ -28365,7 +28394,7 @@
         "crystalline_edge_resonate"
       ],
       "category": "player",
-      "subtitle": "Crystalline Edge resonates"
+      "subtitle": "Crystalline edge resonates"
     },
     {
       "name": "crystalline_edge_charged",
@@ -28373,7 +28402,7 @@
         "crystalline_edge_charged"
       ],
       "category": "player",
-      "subtitle": "Crystalline Edge charged"
+      "subtitle": "Crystalline edge charged"
     },
     {
       "name": "mw_start_speech",
@@ -28488,20 +28517,12 @@
       "subtitle": "Electrified storm ambience"
     },
     {
-      "name": "wiresaw_loop",
+      "name": "sawed_off_shotgun_shoots",
       "files": [
-        "wiresaw_loop"
+        "sawed_off_shotgun_shoots"
       ],
       "category": "player",
-      "subtitle": "Wiresaw loop"
-    },
-    {
-      "name": "double_barreled_shotgun_shoots",
-      "files": [
-        "double_barreled_shotgun_shoots"
-      ],
-      "category": "player",
-      "subtitle": "Double-Barreled Shotgun shoots"
+      "subtitle": "Sawed-Off Shotgun shoots"
     },
     {
       "name": "double_barreled_shotgun_reloads",
@@ -28510,14 +28531,6 @@
       ],
       "category": "player",
       "subtitle": "Double-Barreled Shotgun reloads"
-    },
-    {
-      "name": "sawed_off_shotgun_shoots",
-      "files": [
-        "sawed_off_shotgun_shoots"
-      ],
-      "category": "player",
-      "subtitle": "Sawed-Off Shotgun shoots"
     },
     {
       "name": "accursed_witch_swings",
@@ -28534,6 +28547,22 @@
       ],
       "category": "hostile",
       "subtitle": "Mana is drained"
+    },
+    {
+      "name": "wiresaw_loop",
+      "files": [
+        "wiresaw_loop"
+      ],
+      "category": "player",
+      "subtitle": "Wiresaw loop"
+    },
+    {
+      "name": "double_barreled_shotgun_shoots",
+      "files": [
+        "double_barreled_shotgun_shoots"
+      ],
+      "category": "player",
+      "subtitle": "Double-Barreled Shotgun shoots"
     }
   ],
   "language_map": {

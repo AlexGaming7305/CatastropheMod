@@ -1,23 +1,8 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.client.event.ViewportEvent;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.client.renderer.FogRenderer;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
 import javax.annotation.Nullable;
-
-import com.mojang.blaze3d.shaders.FogShape;
 
 @Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class ElectrifiedStormFogProcedure {
