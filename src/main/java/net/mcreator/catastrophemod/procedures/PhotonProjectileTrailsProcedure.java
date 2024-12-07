@@ -119,5 +119,8 @@ public class PhotonProjectileTrailsProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"/photon fx photon:rusty_scrap_trail entity @e[type=catastrophe_mod:projectile_scrap_round_projectile]");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"/photon fx photon:fiery_bolt_trail entity @e[type=catastrophe_mod:projectile_fiery_bolt]");
 	}
 }

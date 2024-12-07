@@ -1,0 +1,95 @@
+{
+  "_fv": 57,
+  "_type": "animateditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "sawed_off_shotgun",
+    "name": "Sawed-Off Shotgun",
+    "idle": "animation.sawed_off_shotgun.idle",
+    "rarity": "COMMON",
+    "displaySettings": "sawed_off_shotgun.item.json",
+    "leftArm": "",
+    "rightArm": "",
+    "perspective": "All Perspectives",
+    "creativeTab": {
+      "value": "CUSTOM:Bullets"
+    },
+    "firstPersonArms": false,
+    "stackSize": 1,
+    "enchantability": 14,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 187,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "enableArmPose": true,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "SawedOffShotgunRightclicked"
+    },
+    "onItemInInventoryTick": {
+      "name": "GunAmmoTypeReset"
+    },
+    "onItemInUseTick": {
+      "name": "SawedOffShotgunItemInHandTick"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none",
+    "normal": "sawed_off_shotgun.geo.json",
+    "armPoseList": [
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "X",
+        "rotation": 80.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "X",
+        "rotation": 80.0,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "LEFT",
+        "arm": "LEFT",
+        "angle": "Y",
+        "rotation": 0.01,
+        "swings": false,
+        "followsHead": true
+      },
+      {
+        "armHeld": "RIGHT",
+        "arm": "RIGHT",
+        "angle": "Y",
+        "rotation": 0.01,
+        "swings": false,
+        "followsHead": true
+      }
+    ],
+    "disableSwing": false
+  }
+}

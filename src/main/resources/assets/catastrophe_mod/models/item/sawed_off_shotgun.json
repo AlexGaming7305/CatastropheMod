@@ -1,0 +1,6 @@
+{
+  "parent": "catastrophe_mod:displaysettings/sawed_off_shotgun.item",
+  "textures": {
+    "layer0": "catastrophe_mod:item/sawed_off_shotgun"
+  }
+}

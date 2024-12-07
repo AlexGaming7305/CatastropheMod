@@ -57,6 +57,7 @@ import net.mcreator.catastrophemod.entity.PileOfMossEntity;
 import net.mcreator.catastrophemod.entity.OceanicSplashEntity;
 import net.mcreator.catastrophemod.entity.NohomingHealingOrbProjectileEntity;
 import net.mcreator.catastrophemod.entity.NightfallsDemiseProjectileEntity;
+import net.mcreator.catastrophemod.entity.NightReaperEntity;
 import net.mcreator.catastrophemod.entity.NettleMinionEntity;
 import net.mcreator.catastrophemod.entity.NettleEntity;
 import net.mcreator.catastrophemod.entity.NatureBlessedSpiritEntity;
@@ -87,6 +88,7 @@ import net.mcreator.catastrophemod.entity.FlameProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
 import net.mcreator.catastrophemod.entity.FierySlashProjectileEntity;
 import net.mcreator.catastrophemod.entity.FieryRoundProjectileEntity;
+import net.mcreator.catastrophemod.entity.FieryBoltEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedSwordProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedLightningEntity;
@@ -113,7 +115,6 @@ import net.mcreator.catastrophemod.entity.BlazingPhoenixEntity;
 import net.mcreator.catastrophemod.entity.BlazingFeatherProjectileEntity;
 import net.mcreator.catastrophemod.entity.BabyCalicoStagBeetleEntity;
 import net.mcreator.catastrophemod.entity.AtlanticSeaNettleEntity;
-import net.mcreator.catastrophemod.entity.AssassinSkeletonEntity;
 import net.mcreator.catastrophemod.entity.ArcStrikerEntity;
 import net.mcreator.catastrophemod.entity.AnglerfishEntity;
 import net.mcreator.catastrophemod.entity.AcidTarantulaMinionEntity;
@@ -140,10 +141,6 @@ public class CatastropheModModEntities {
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PileOfMossEntity::new).fireImmune().sized(0.6f, 1.2f));
 	public static final RegistryObject<EntityType<SwordspinEntity>> SWORDSPIN = register("swordspin",
 			EntityType.Builder.<SwordspinEntity>of(SwordspinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SwordspinEntity::new).fireImmune().sized(3f, 0.1f));
-	public static final RegistryObject<EntityType<AssassinSkeletonEntity>> ASSASSIN_SKELETON = register("assassin_skeleton",
-			EntityType.Builder.<AssassinSkeletonEntity>of(AssassinSkeletonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AssassinSkeletonEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<WraithDashEntity>> WRAITH_DASH = register("wraith_dash", EntityType.Builder.<WraithDashEntity>of(WraithDashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(WraithDashEntity::new).fireImmune().sized(0f, 0.1f));
 	public static final RegistryObject<EntityType<SwordSpinDashEntity>> SWORD_SPIN_DASH = register("sword_spin_dash", EntityType.Builder.<SwordSpinDashEntity>of(SwordSpinDashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
@@ -397,6 +394,12 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<CopperRoundProjectileEntity>> COPPER_ROUND_PROJECTILE = register("projectile_copper_round_projectile",
 			EntityType.Builder.<CopperRoundProjectileEntity>of(CopperRoundProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(CopperRoundProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FieryBoltEntity>> FIERY_BOLT = register("projectile_fiery_bolt",
+			EntityType.Builder.<FieryBoltEntity>of(FieryBoltEntity::new, MobCategory.MISC).setCustomClientFactory(FieryBoltEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<NightReaperEntity>> NIGHT_REAPER = register("night_reaper",
+			EntityType.Builder.<NightReaperEntity>of(NightReaperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NightReaperEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -411,7 +414,6 @@ public class CatastropheModModEntities {
 			FuriousWindEntity.init();
 			PileOfMossEntity.init();
 			SwordspinEntity.init();
-			AssassinSkeletonEntity.init();
 			WraithDashEntity.init();
 			SwordSpinDashEntity.init();
 			SwordDashEntity.init();
@@ -458,6 +460,7 @@ public class CatastropheModModEntities {
 			ArcStrikerEntity.init();
 			SurgeBreakerEntity.init();
 			AccursedWitchEntity.init();
+			NightReaperEntity.init();
 		});
 	}
 
@@ -469,7 +472,6 @@ public class CatastropheModModEntities {
 		event.put(FURIOUS_WIND.get(), FuriousWindEntity.createAttributes().build());
 		event.put(PILE_OF_MOSS.get(), PileOfMossEntity.createAttributes().build());
 		event.put(SWORDSPIN.get(), SwordspinEntity.createAttributes().build());
-		event.put(ASSASSIN_SKELETON.get(), AssassinSkeletonEntity.createAttributes().build());
 		event.put(WRAITH_DASH.get(), WraithDashEntity.createAttributes().build());
 		event.put(SWORD_SPIN_DASH.get(), SwordSpinDashEntity.createAttributes().build());
 		event.put(SWORD_DASH.get(), SwordDashEntity.createAttributes().build());
@@ -516,5 +518,6 @@ public class CatastropheModModEntities {
 		event.put(ARC_STRIKER.get(), ArcStrikerEntity.createAttributes().build());
 		event.put(SURGE_BREAKER.get(), SurgeBreakerEntity.createAttributes().build());
 		event.put(ACCURSED_WITCH.get(), AccursedWitchEntity.createAttributes().build());
+		event.put(NIGHT_REAPER.get(), NightReaperEntity.createAttributes().build());
 	}
 }

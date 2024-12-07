@@ -2924,39 +2924,6 @@
       "path": "~/Items/Blocks"
     },
     {
-      "name": "AssassinSkeleton",
-      "type": "animatedentity",
-      "sortid": 1613,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "assassin_skeleton",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/assassin_skeleton_spawn_egg.json",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AssassinSkeletonRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/AssassinSkeletonModel.java",
-          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/assassin_skeleton_biome_modifier.json",
-          "src/main/java/net/mcreator/catastrophemod/entity/AssassinSkeletonEntity.java"
-        ]
-      },
-      "path": "~/Entities"
-    },
-    {
-      "name": "AssassinSkeletonOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 1614,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "assassin_skeleton_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AssassinSkeletonOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Entities"
-    },
-    {
       "name": "StormShield",
       "type": "curiosbauble",
       "sortid": 1636,
@@ -12966,7 +12933,7 @@
       "type": "tool",
       "sortid": 2372,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "hellbane",
       "metadata": {
         "files": [
@@ -15506,18 +15473,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -19633,8 +19588,16 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
           }
         ]
       },
@@ -24451,6 +24414,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -25573,6 +25548,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -25679,7 +25658,12 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormSkyProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -25757,7 +25741,28 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedLightningSkyVisualsTransparencyProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -25989,7 +25994,12 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormFlashProcedureProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -26003,7 +26013,12 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormFogProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -26017,7 +26032,12 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedStormFogColorProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -26033,26 +26053,6 @@
         ]
       },
       "path": "~/Key Binds"
-    },
-    {
-      "name": "ParryScreenFlashFade",
-      "type": "procedure",
-      "sortid": 3194,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry_screen_flash_fade",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ParryScreenFlashFadeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Misc"
     },
     {
       "name": "UnparriableDamage",
@@ -26293,22 +26293,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "ParryScreenFlashDisplayOverlayIngame",
-      "type": "procedure",
-      "sortid": 3193,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "parry_screen_flash_display_overlay_ingame",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ParryScreenFlashDisplayOverlayIngameProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "ShieldParryDamageDisplay",
       "type": "procedure",
       "sortid": 3188,
@@ -26328,20 +26312,6 @@
             "name": "tooltip",
             "type": "tooltip"
           }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ParryScreenFlash",
-      "type": "overlay",
-      "sortid": 3192,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "parry_screen_flash",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/screens/ParryScreenFlashOverlay.java"
         ]
       },
       "path": "~/Misc"
@@ -26414,6 +26384,494 @@
         ]
       },
       "path": "~/Misc"
+    },
+    {
+      "name": "LighthouseBarrel",
+      "type": "loottable",
+      "sortid": 3199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighthouse_barrel",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/chests/lighthouse_barrel.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "FieryBoltProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 3200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiery_bolt_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FieryBoltProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "FieryBoltWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 3201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiery_bolt_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FieryBoltWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "FieryBolt",
+      "type": "projectile",
+      "sortid": 3202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiery_bolt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/FieryBoltEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "LighthouseAlchemyChest",
+      "type": "loottable",
+      "sortid": 3203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighthouse_alchemy_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/chests/lighthouse_alchemy_chest.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "WiresawPropertyValueProvider",
+      "type": "procedure",
+      "sortid": 3204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wiresaw_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "Wiresaw",
+      "type": "item",
+      "sortid": 3205,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "wiresaw",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/wiresaw.json",
+          "src/main/resources/assets/catastrophe_mod/models/item/wiresaw_0.json",
+          "src/main/java/net/mcreator/catastrophemod/item/WiresawItem.java"
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "WiresawChargeStart",
+      "type": "procedure",
+      "sortid": 3206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wiresaw_charge_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawChargeStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "WiresawCharging",
+      "type": "procedure",
+      "sortid": 3207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wiresaw_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawChargingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "WiresawStopCharging",
+      "type": "procedure",
+      "sortid": 3208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wiresaw_stop_charging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawStopChargingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "WiresawEffects",
+      "type": "procedure",
+      "sortid": 3209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wiresaw_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/WiresawEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Melee Weapons"
+    },
+    {
+      "name": "DoubleBarreledShotgun",
+      "type": "animateditem",
+      "sortid": 3211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_barreled_shotgun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/item/model/DoubleBarreledShotgunItemModel.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/double_barreled_shotgun.json",
+          "src/main/java/net/mcreator/catastrophemod/item/DoubleBarreledShotgunItem.java",
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/DoubleBarreledShotgunItemRenderer.java"
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "DoubleBarreledShotgunItemInHandTick",
+      "type": "procedure",
+      "sortid": 3210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_barreled_shotgun_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/DoubleBarreledShotgunItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "DoubleBarreledShotgunRightclicked",
+      "type": "procedure",
+      "sortid": 3212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_barreled_shotgun_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/DoubleBarreledShotgunRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "SawedOffShotgun",
+      "type": "animateditem",
+      "sortid": 3214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawed_off_shotgun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/item/model/SawedOffShotgunItemModel.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/sawed_off_shotgun.json",
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/SawedOffShotgunItemRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/item/SawedOffShotgunItem.java"
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "SawedOffShotgunItemInHandTick",
+      "type": "procedure",
+      "sortid": 3213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawed_off_shotgun_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SawedOffShotgunItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "SawedOffShotgunRightclicked",
+      "type": "procedure",
+      "sortid": 3215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sawed_off_shotgun_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/SawedOffShotgunRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "NightReaper",
+      "type": "animatedentity",
+      "sortid": 3216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "night_reaper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/model/NightReaperModel.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/NightReaperEntity.java",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/night_reaper_biome_modifier.json",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/NightReaperRenderer.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/night_reaper_spawn_egg.json",
+          "src/main/java/net/mcreator/catastrophemod/entity/layer/NightReaperLayer.java"
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "NightReaperOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 3217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "night_reaper_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/NightReaperOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "AccursedWitchManaDrain",
+      "type": "procedure",
+      "sortid": 3218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accursed_witch_mana_drain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/AccursedWitchManaDrainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities"
     }
   ],
   "variable_elements": [
@@ -27286,6 +27744,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0.0"
+    },
+    {
+      "name": "wiresaw_active",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "wiresaw_loop_cooldown",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -27783,7 +28253,7 @@
         "haunted_mirror_shoot"
       ],
       "category": "player",
-      "subtitle": "Haunted mirror shoot"
+      "subtitle": "Haunted Mirror shoot"
     },
     {
       "name": "haunted_mirror_summon",
@@ -27791,7 +28261,7 @@
         "haunted_mirror_summon"
       ],
       "category": "player",
-      "subtitle": "Haunted mirror summon"
+      "subtitle": "Haunted Mirror summon"
     },
     {
       "name": "shovel_hit",
@@ -27863,7 +28333,7 @@
         "surge_breaker_charge"
       ],
       "category": "hostile",
-      "subtitle": "Surge breaker charge"
+      "subtitle": "Surge Breaker charge"
     },
     {
       "name": "surge_breaker_shockwave",
@@ -27871,7 +28341,7 @@
         "surge_breaker_shockwave"
       ],
       "category": "hostile",
-      "subtitle": "Surge breaker shockwave"
+      "subtitle": "Surge Breaker shockwave"
     },
     {
       "name": "surge_breaker_punch",
@@ -27879,7 +28349,7 @@
         "surge_breaker_punch"
       ],
       "category": "hostile",
-      "subtitle": "Surge breaker punch"
+      "subtitle": "Surge Breaker punch"
     },
     {
       "name": "crystalline_edge_big_slash",
@@ -27887,7 +28357,7 @@
         "crystalline_edge_big_slash"
       ],
       "category": "player",
-      "subtitle": "Crystalline edge big slash"
+      "subtitle": "Crystalline Edge big slash"
     },
     {
       "name": "crystalline_edge_resonates",
@@ -27895,7 +28365,7 @@
         "crystalline_edge_resonate"
       ],
       "category": "player",
-      "subtitle": "Crystalline edge resonates"
+      "subtitle": "Crystalline Edge resonates"
     },
     {
       "name": "crystalline_edge_charged",
@@ -27903,7 +28373,7 @@
         "crystalline_edge_charged"
       ],
       "category": "player",
-      "subtitle": "Crystalline edge charged"
+      "subtitle": "Crystalline Edge charged"
     },
     {
       "name": "mw_start_speech",
@@ -28016,6 +28486,54 @@
       ],
       "category": "weather",
       "subtitle": "Electrified storm ambience"
+    },
+    {
+      "name": "wiresaw_loop",
+      "files": [
+        "wiresaw_loop"
+      ],
+      "category": "player",
+      "subtitle": "Wiresaw loop"
+    },
+    {
+      "name": "double_barreled_shotgun_shoots",
+      "files": [
+        "double_barreled_shotgun_shoots"
+      ],
+      "category": "player",
+      "subtitle": "Double-Barreled Shotgun shoots"
+    },
+    {
+      "name": "double_barreled_shotgun_reloads",
+      "files": [
+        "double_barreled_shotgun_reloads"
+      ],
+      "category": "player",
+      "subtitle": "Double-Barreled Shotgun reloads"
+    },
+    {
+      "name": "sawed_off_shotgun_shoots",
+      "files": [
+        "sawed_off_shotgun_shoots"
+      ],
+      "category": "player",
+      "subtitle": "Sawed-Off Shotgun shoots"
+    },
+    {
+      "name": "accursed_witch_swings",
+      "files": [
+        "accursed_witch_swings"
+      ],
+      "category": "player",
+      "subtitle": "Accursed Witch swings"
+    },
+    {
+      "name": "mana_is_drained",
+      "files": [
+        "mana_is_drained"
+      ],
+      "category": "hostile",
+      "subtitle": "Mana is drained"
     }
   ],
   "language_map": {
@@ -28030,9 +28548,9 @@
       "item.alexs_mod.storm_bow_0": "Storm Bow 0",
       "item.alexs_mod.storm_bow_1": "Storm Bow 1",
       "entity.alexs_mod.abyssal_skater": "Abyssal Skater",
-      "entity.alexs_mod.freezing_core": "Freezing Core",
-      "block.alexs_mod.acid_light": "Acid Light",
       "entity.alexs_mod.kolden_energy": "Kyolden Energy",
+      "block.alexs_mod.acid_light": "Acid Light",
+      "entity.alexs_mod.freezing_core": "Freezing Core",
       "item.catastrophe_mod.mana_star": "§bMana Star",
       "item.catastrophe_mod.spell_of_flames": "§6Spell of Flames",
       "item.catastrophe_mod.anglerfish_spawn_egg": "Anglerfish Spawn Egg",
@@ -28044,8 +28562,8 @@
       "subtitles.fiery_blast": "Fiery blast",
       "entity.alexs_mod.firefly": "Firefly",
       "item.alexs_mod.galaxy_striker": "Galaxy Striker",
-      "block.alexs_mod.laboratory_column_block": "Laboratory Column Block",
       "subtitles.flash_bang_boom": "flash_bang_boom",
+      "block.alexs_mod.laboratory_column_block": "Laboratory Column Block",
       "block.alexs_mod.overgrown_leaves": "Overgrown Leaves",
       "item.catastrophe_mod.star": "§6Star",
       "gui.alexs_mod.aegex_5_gui.label_the_only_problem_is_that_i_dont": "The only problem is that I don\u0027t",
@@ -28055,8 +28573,8 @@
       "block.alexs_mod.advanced_display": "Advanced Display",
       "item.alexs_mod.mushling_spawn_egg": "Mushling Spawn Egg",
       "entity.catastrophe_mod.acid_tarantula_minion": "Acid Tarantula Minion",
-      "gui.alexs_mod.aegex_4_gui.label_my_own_creations": "my own creations!?",
       "effect.catastrophe_mod.mana_sickness": "Mana Sickness",
+      "gui.alexs_mod.aegex_4_gui.label_my_own_creations": "my own creations!?",
       "item.alexs_mod.bartosa_tools_hoe": "Bartosa Hoe",
       "block.alexs_mod.dungeon_bricks_hidden_door": "Dungeon Bricks Hidden Door",
       "item.alexs_mod.sigilof_creation": "Sigil of Creation",
@@ -28071,8 +28589,8 @@
       "block.alexs_mod.soul_stream": "Soul Stream",
       "enchantment.catastrophe_mod.spellcasting": "Spellcasting",
       "item.alexs_mod.knife_of_proficiency_projectile": "Knife Of Proficiency Projectile",
-      "item.alexs_mod.armageddon_robot_spawn_egg": "Armageddon Robot Spawn Egg",
       "item.catastrophe_mod.music_disc_strike_you_down.desc": "Freddy Frostbear - Strike You Down!",
+      "item.alexs_mod.armageddon_robot_spawn_egg": "Armageddon Robot Spawn Egg",
       "block.alexs_mod.wuflar_plating": "§9Wuflar Plating",
       "item.catastrophe_mod.freezing_staff": "§bFreezing Staff",
       "effect.alexs_mod.back_step_cool_down": "Back Step Cool Down",
@@ -28094,16 +28612,16 @@
       "item.catastrophe_mod.shroomium_ingot": "Shroomium Ingot",
       "effect.alexs_mod.bullseye": "Bullseye",
       "subtitles.rustgun_shoots": "Rustgun shoots",
-      "block.alexs_mod.natureite_ore": "§aNaturite Ore",
-      "item.alexs_mod.ancient_armor_leggings": "Ancient Leggings",
       "item.alexs_mod.scrap_metal": "Scrap Metal",
+      "item.alexs_mod.ancient_armor_leggings": "Ancient Leggings",
+      "block.alexs_mod.natureite_ore": "§aNaturite Ore",
       "item.alexs_mod.raw_tungsten": "Raw Tungsten",
       "entity.alexs_mod.armageddon_robot": "Armageddon Robot",
       "advancements.target_acquired.descr": "Obtain your first ranged weapon",
       "item.alexs_mod.galaxium_ingot": "Galaxium Ingot",
       "effect.alexs_mod.plane_flight": "Pwane",
-      "attribute.catastrophe_mod.casting_speed": "Casting Speed",
       "subtitles.earthbound_wraith_groundpounds": "Earthbound Wraith ground-pounds",
+      "attribute.catastrophe_mod.casting_speed": "Casting Speed",
       "item.catastrophe_mod.lesser_mana_potion": "Lesser Mana Potion",
       "item.catastrophe_mod.blazing_phoenix_spawn_egg": "Blazing Phoenix Spawn Egg",
       "item.alexs_mod.tungsten_sword": "Tungsten Sword",
@@ -28131,8 +28649,8 @@
       "entity.catastrophe_mod.earthbound_fist": "Earthbound Fist",
       "block.catastrophe_mod.tall_calico_shroom": "Tall Calico Shroom",
       "block.alexs_mod.razed_trapdoor": "Razed Trapdoor",
-      "item.alexs_mod.lightning_blade_staff": "§bLightning Blade Staff",
       "item_group.catastrophe_mod.bullets": "Ranged",
+      "item.alexs_mod.lightning_blade_staff": "§bLightning Blade Staff",
       "item.catastrophe_mod.twig": "Twig",
       "subtitles.agiel": "Agiel Use",
       "item.alexs_mod.enchanted_sword": "Enchanted Sword",
@@ -28140,8 +28658,8 @@
       "gui.alexs_mod.ark_scissor_rift_menu.button_close": "Close",
       "item.alexs_mod.ancient_war_horn": "§cAncient War Horn",
       "item.catastrophe_mod.crystal_round": "§dCrystal Round",
-      "block.catastrophe_mod.shale": "Shale",
       "subtitles.electrified_storm_rumble": "Electrified storm rumble",
+      "block.catastrophe_mod.shale": "Shale",
       "item.alexs_mod.thorn_bow": "§2Thorn Bow",
       "gui.alexs_mod.aegex_3_gui.label_species_a_name_toast": "species a name. toast..",
       "block.alexs_mod.compacted_torch_stone": "Compacted Torchstone",
@@ -28156,10 +28674,10 @@
       "effect.catastrophe_mod.electrified": "Electrified",
       "item.catastrophe_mod.naturite_bow": "§aNaturite Bow",
       "block.alexs_mod.overgrown_trapdoor": "Overgrown Trapdoor",
-      "subtitles.nightfalls_demise_throw": "Nightfall\u0027s Demise Throw",
       "item.catastrophe_mod.netherite_spear": "Netherite Spear",
-      "block.alexs_mod.razed_button": "Razed Button",
+      "subtitles.nightfalls_demise_throw": "Nightfall\u0027s Demise Throw",
       "entity.catastrophe_mod.voltblade": "Voltblade",
+      "block.alexs_mod.razed_button": "Razed Button",
       "effect.catastrophe_mod.bleeding": "Bleeding",
       "item.alexs_mod.the_blade_crown_texture": "The Blade Crown Texture",
       "gui.alexs_mod.drink_menu.label_greed_mixture": "Greed Mixture:",
@@ -28173,23 +28691,24 @@
       "subtitles.metal_hit": "Metal hit",
       "gui.catastrophe_mod.back_pack_screen.label_back_pack": "Backpack",
       "item.catastrophe_mod.electrified_round": "§bElectrified Round",
-      "block.alexs_mod.dried_rosxite_ore": "§2Dried Rosxite Ore",
       "subtitles.weak_metal_hit": "Weak metal hit",
+      "block.alexs_mod.dried_rosxite_ore": "§2Dried Rosxite Ore",
       "gui.alexs_mod.quest_book_gui.label_robots_and_automatons_that_spaw": " robots and automatons that spawn during the day.",
       "entity.alexs_mod.ratsechi": "Ratsechi",
       "subtitles.stardust_explodes": "Stardust Explodes",
       "item.alexs_mod.flame_thrower": "Flame Thrower",
       "biome.alexs_mod.the_hoard": "The Hoard",
-      "subtitles.surge_breaker_punch": "Surge breaker punch",
+      "subtitles.surge_breaker_punch": "Surge Breaker punch",
       "item.alexs_mod.spell_of_souls": "§8Soul Keeper",
       "item.alexs_mod.music_disc_proliferating_mushrooms": "Music Disc",
       "subtitles.halberd_hits": "Halberd Hits",
-      "item.catastrophe_mod.cursed_armor_leggings": "§5Cursed Leggings",
       "item.alexs_mod.shadow_ingot": "Shadow Ingot",
+      "item.catastrophe_mod.cursed_armor_leggings": "§5Cursed Leggings",
       "subtitles.charred_mantis_dashes": "Charred Mantis dashes",
       "item.alexs_mod.murky_slime_mob_spawn_egg": "Murky Slime Mob Spawn Egg",
       "item.catastrophe_mod.calico_mushroom_stew": "Calico Mushroom Stew",
       "subtitles.plane_start_up": "Bartosa Plane Starts Up ",
+      "item.catastrophe_mod.wiresaw": "Wiresaw",
       "enchantment.catastrophe_mod.wizardry": "Wizardry",
       "block.alexs_mod.fire_blossom": "Fire Blossom",
       "item.minecraft.tipped_arrow.effect.bullseye_potion": "Arrow of Bullseye",
@@ -28211,8 +28730,8 @@
       "item.alexs_mod.credits_music_disc": "Music Disc",
       "item.alexs_mod.blink_tech_device": "Blink Tech Device",
       "advancements.im_not_gonna_sugarcoat_it.descr": "Successfully perform a parry",
-      "entity.alexs_mod.thorn_infested_armor": "Thorn Infested Armor",
       "item.alexs_mod.alex_loot_bundle": "Alex Loot Bundle",
+      "entity.alexs_mod.thorn_infested_armor": "Thorn Infested Armor",
       "block.alexs_mod.calico_mushroom": "Calico Mushroom Block",
       "key.alexs_mod.aijex_missile_launch": "Bartosa Armor Missile Launch",
       "item.alexs_mod.music_disc_enlightened_starlight": "Music Disc",
@@ -28254,14 +28773,14 @@
       "item.catastrophe_mod.hunter_boots": "Hunter\u0027s Boots",
       "entity.catastrophe_mod.oceanic_splash": "Oceanic Splash",
       "item.alexs_mod.natures_strike": "§2Nature\u0027s Strike",
-      "enchantment.alexs_mod.draconic_claw": "Draconic Claw",
       "item.alexs_mod.skystardamage": "Skystardamage",
+      "enchantment.alexs_mod.draconic_claw": "Draconic Claw",
       "item.alexs_mod.bar_fight": "Music Disc",
-      "item.alexs_mod.bullet_shell": "Bullet Shell",
       "item.alexs_mod.armageddon_armor_helmet": "Armageddon Transformation",
+      "item.alexs_mod.bullet_shell": "Bullet Shell",
       "item.alexs_mod.ark_parry": "Ark Parry",
-      "item.catastrophe_mod.staff_of_thorns": "§2Staff of Thorns",
       "effect.catastrophe_mod.hunter_stealth_cooldown": "Hunter Stealth Cooldown",
+      "item.catastrophe_mod.staff_of_thorns": "§2Staff of Thorns",
       "item.alexs_mod.orbital_barrage": "Music Disc",
       "subtitles.scissors_close": "Ark of the Universe Cut",
       "effect.alexs_mod.bloodshed_1": ".",
@@ -28273,12 +28792,12 @@
       "entity.alexs_mod.hermit_crab": "Hermit Crab",
       "item.alexs_mod.electrified_copper_sword": "§bElectrified Sword",
       "effect.alexs_mod.bloodshed_4": "Let\u0027s Dance!",
-      "effect.alexs_mod.endurance": "Endurance",
       "gui.alexs_mod.stat_bars.label_mana": "Mana:",
+      "effect.alexs_mod.endurance": "Endurance",
       "entity.catastrophe_mod.surge_breaker": "Surge Breaker",
       "item.alexs_mod.frigid_slicer": "§3Frigid Slicer",
-      "item.minecraft.potion.effect.bullseye_potion": "Potion of Bullseye",
       "death.attack.bleed.item": "%1$s bled out to death",
+      "item.minecraft.potion.effect.bullseye_potion": "Potion of Bullseye",
       "entity.alexs_mod.wuflar_hoverbot": "Wuflar Hoverbot",
       "item.catastrophe_mod.thunderstrike": "§bThunderstrike",
       "block.catastrophe_mod.depthstone_slab": "Depthstone Slab",
@@ -28293,8 +28812,8 @@
       "item.alexs_mod.natureite_pickaxe": "§aNaturite Pickaxe",
       "item.alexs_mod.bartosa_bazooka": "Bartosa Bazooka",
       "effect.alexs_mod.slash_2_condition": "attack 2",
-      "entity.alexs_mod.fly": "Fly",
       "item.catastrophe_mod.music_disc_overgrown_grove.desc": "Freddy Frostbear - Overgrown Grove",
+      "entity.alexs_mod.fly": "Fly",
       "item.alexs_mod.worm_body_spawn_egg": "Destroyer Body Spawn Egg",
       "item.catastrophe_mod.golden_bracelet": "Golden Necklace",
       "block.catastrophe_mod.red_sea_shell": "Red Sea Shell",
@@ -28305,8 +28824,8 @@
       "effect.alexs_mod.alexs_shield_effect": "Shield Effect",
       "item.catastrophe_mod.crystal_spear": "Crystal Spear",
       "item.alexs_mod.bartosa_chestplate": "Bartosa Body",
-      "gui.alexs_mod.armageddon_weapon_menu.button_armageddon_robot": "Armageddon Robot",
       "item.alexs_mod.fly_spawn_egg": "Fly Spawn Egg",
+      "gui.alexs_mod.armageddon_weapon_menu.button_armageddon_robot": "Armageddon Robot",
       "block.alexs_mod.overgrown_slab": "Overgrown Slab",
       "item.alexs_mod.alexsmoditem": "Alexsmoditem",
       "death.attack.electricity.item": "%1$s experienced short circuit",
@@ -28322,8 +28841,8 @@
       "item.alexs_mod.natureite_armor_boots": "§aNaturite Boots",
       "subtitles.radar_beep": "Radar Beeps",
       "subtitles.solid_ice_magic_cats": "Solid Ice Magic is Casted",
-      "entity.alexs_mod.worm_body": "Destroyer Body",
       "enchantment.catastrophe_mod.frost_aspect": "Frost Aspect",
+      "entity.alexs_mod.worm_body": "Destroyer Body",
       "item.catastrophe_mod.poisoned_vines": "§2Poisonous Vines",
       "item.catastrophe_mod.natureite_shovel": "§aNaturite Shovel",
       "item.alexs_mod.reaper_scythe": "§dShield Scythe",
@@ -28343,8 +28862,8 @@
       "item.alexs_mod.armageddon_remote": "Armageddon Remote [Off]",
       "key.alexs_mod.ring_open": "The Blade Bell GUI Open",
       "subtitles.redsplit": "redsplit",
-      "item.catastrophe_mod.lightning_blade_spawn_egg": "Lightning Blade Spawn Egg",
       "subtitles.sheath": "sheath",
+      "item.catastrophe_mod.lightning_blade_spawn_egg": "Lightning Blade Spawn Egg",
       "block.alexs_mod.razed_wood": "Razed Wood",
       "item.catastrophe_mod.living_moss": "§2Living Moss",
       "item.alexs_mod.bartosa_blade": "Bartosa Blade",
@@ -28355,8 +28874,8 @@
       "item.alexs_mod.shadow_armor_leggings": "§8Shadow Greaves",
       "effect.alexs_mod.spirit": "Spirit",
       "item.alexs_mod.kaylas_briliance_spawn_egg": "§kHellion Spawn Egg",
-      "entity.alexs_mod.wuflar_blade_robot": "Wuflar Blade Robot",
       "gui.alexs_mod.ark_scissor_rift_menu.label_choose_your_destination": "Choose your Destination",
+      "entity.alexs_mod.wuflar_blade_robot": "Wuflar Blade Robot",
       "subtitles.rockslide": "Conos Dies",
       "item.alexs_mod.brush_of_jmaster": "Brush of Jmaster",
       "item.minecraft.splash_potion.effect.intelligence_long": "Splash Potion of Intelligence",
@@ -28396,8 +28915,8 @@
       "item.alexs_mod.ratsechi_spawn_egg": "Ratsechi Spawn Egg",
       "key.alexs_mod.blink_tech_teleport": "Blink Tech Teleport",
       "gui.alexs_mod.aegex_5_gui.label_ive_come_to_realize_this_planet": "I\u0027ve come to realize this planet",
-      "entity.catastrophe_mod.nettle": "Nettle",
       "block.alexs_mod.razed_slab": "Razed Slab",
+      "entity.catastrophe_mod.nettle": "Nettle",
       "item.catastrophe_mod.electrified_armor_leggings": "§bElectrified Leggings",
       "item.alexs_mod.aijex_loot_bundle": "Aijex Loot Bundle",
       "entity.catastrophe_mod.sword_spin_dash": "Sword Spin Dash",
@@ -28419,20 +28938,21 @@
       "item.alexs_mod.redsplitranged": "Redsplitranged",
       "item.alexs_mod.wraith_sparks": "Wraith Sparks",
       "entity.alexs_mod.pile_of_moss": "Pile Of Moss",
-      "entity.catastrophe_mod.freezing_core": "Freezing Core",
       "subtitles.eldritch_blast": "Eldritch blast",
-      "subtitles.crystalline_edge_big_slash": "Crystalline edge big slash",
+      "entity.catastrophe_mod.freezing_core": "Freezing Core",
+      "subtitles.crystalline_edge_big_slash": "Crystalline Edge big slash",
       "subtitles.ding": "Cool Down Over",
       "subtitles.axe_swing": "Axe Is Swung",
       "item.alexs_mod.gloveofthe_deserts": "§6Glove of the Deserts",
       "item.catastrophe_mod.music_disc_vines_of_venom.desc": "Freddy Frostbear - Vines of Venom",
-      "block.alexs_mod.vigorous_candle": "Vigorous Candle",
       "item.minecraft.potion.effect.intelligence_potion": "Potion of Intelligence",
+      "block.alexs_mod.vigorous_candle": "Vigorous Candle",
       "item.alexs_mod.orbitium_cluster": "Orbitium",
       "item.alexs_mod.bartosa_leggings": "Bartosa Leggings",
+      "key.catastrophe_mod.shield_parry": "Shield Parry",
       "item.alexs_mod.fire_wyvern_scale_boots": "Fire Wyvern Scale Boots",
-      "gui.alexs_mod.aegex_4_gui.label_why_the_hell_am_i_being_shot_at": "Why the hell am I being shot at by",
       "effect.alexs_mod.armageddon": "Armageddon",
+      "gui.alexs_mod.aegex_4_gui.label_why_the_hell_am_i_being_shot_at": "Why the hell am I being shot at by",
       "item.alexs_mod.sea_spear": "Sea Spear",
       "item.catastrophe_mod.cursed_armor_chestplate": "§5Cursed Robes",
       "subtitles.something_is_indicated": "Something is indicated",
@@ -28447,7 +28967,7 @@
       "item.catastrophe_mod.crystalline_edge": "§dCrystalline Edge",
       "entity.catastrophe_mod.diamond_detonation_bomb": "Diamond Detonation Bomb",
       "subtitles.star_shatterer": "star_shatterer",
-      "subtitles.crystalline_edge_resonates": "Crystalline edge resonates",
+      "subtitles.crystalline_edge_resonates": "Crystalline Edge resonates",
       "entity.alexs_mod.fire_walker_chief": "Fire Walker Chief",
       "subtitles.battle_of_stone": "Battle of Stone",
       "item.minecraft.lingering_potion.effect.impedance_potion_long": "Lingering Potion of Impedance",
@@ -28461,8 +28981,8 @@
       "item.alexs_mod.aegex_journal_1": "Aegex Journal 1",
       "key.alexs_mod.back_step_keybind": "Back Step",
       "item.alexs_mod.aegex_journal_5": "Aegex Journal 5",
-      "item.alexs_mod.aegex_journal_4": "Aegex Journal 4",
       "item.catastrophe_mod.earthbound_wraith_loot_bundle": "Earthbound Wraith Loot Bundle",
+      "item.alexs_mod.aegex_journal_4": "Aegex Journal 4",
       "item.alexs_mod.aegex_journal_3": "Aegex Journal 3",
       "block.alexs_mod.dungeon_jigsaw": "Dungeon Jigsaw",
       "item.alexs_mod.aegex_journal_2": "Aegex Journal 2",
@@ -28480,8 +29000,9 @@
       "subtitles.outside_of_the_atmosphere": "Outside of the Atmosphere",
       "subtitles.mine_blast": "Mine blast",
       "death.attack.sugarcoated": "%1$s sugarcoated it",
-      "item.alexs_mod.acid_tarantula": "Acid Tarantula",
+      "subtitles.sawed_off_shotgun_shoots": "Sawed-Off Shotgun shoots",
       "entity.catastrophe_mod.nature_blessed_spirit": "Nature Blessed Spirit",
+      "item.alexs_mod.acid_tarantula": "Acid Tarantula",
       "gui.alexs_mod.aegex_2_gui.label_to_arm_my_rabbits": "to arm my rabbits",
       "biome.alexs_mod.abyss_water_height": "Abyss Shores",
       "block.catastrophe_mod.natureite_ore": "§aNaturite Ore",
@@ -28493,12 +29014,13 @@
       "entity.alexs_mod.abyssal_slime": "Abyssal Slime",
       "subtitles.crystal_laser_beam": "Crystal laser beam",
       "item.catastrophe_mod.hellbane": "§6Hellbane",
-      "item.alexs_mod.firefly_spawn_egg": "Firefly Spawn Egg",
       "gui.alexs_mod.quest_book_gui.label_metal_scrap": "Metal Scrap.",
+      "item.alexs_mod.firefly_spawn_egg": "Firefly Spawn Egg",
       "block.alexs_mod.overgrown_wood": "Overgrown Wood",
       "death.attack.crushed": "%1$s was crushed",
       "subtitles.anglerfish_bite": "Anglerfish bites",
       "item.alexs_mod.assembally_shard": "Assembly Shard",
+      "subtitles.wiresaw_loop": "Wiresaw loop",
       "subtitles.something_finishes_using_shadow_magic": "Finished shadow magic",
       "item.alexs_mod.swamp_thing_spawn_egg": "Swamp Thing Spawn Egg",
       "block.alexs_mod.abyss_sand": "Abyss Sand",
@@ -28516,8 +29038,10 @@
       "item.catastrophe_mod.atlantic_sea_nettle_spawn_egg": "Atlantic Sea Nettle Spawn Egg",
       "block.alexs_mod.rosxite_ore": "§2Rosxite Ore",
       "item.alexs_mod.gauss_nuke": "Gauss Nuke",
-      "item.catastrophe_mod.scrap_round": "Scrap Round",
+      "block.catastrophe_mod.rusty_plating": "Rusty Plating",
+      "subtitles.mana_is_drained": "Mana is drained",
       "effect.alexs_mod.intelligence": "Intelligence",
+      "item.catastrophe_mod.scrap_round": "Scrap Round",
       "item.alexs_mod.shroomium_leggings": "Shroomium Leggings",
       "block.alexs_mod.overgrown_fence_gate": "Overgrown Fence Gate",
       "attribute.catastrophe_mod.melee_damage": "Melee Damage",
@@ -28525,6 +29049,7 @@
       "item.alexs_mod.nautilus_leggings": "Nautilus Leggings",
       "subtitles.punch_hit": "Punch hit",
       "item.catastrophe_mod.electrified_armor_boots": "§bElectrified Boots",
+      "block.catastrophe_mod.rusty_plating_stairs": "Rusty Plating Stairs",
       "item.alexs_mod.hurricane_spawn_egg": "Hurricane Spawn Egg",
       "item.catastrophe_mod.grave_digger": "Grave Digger",
       "item.catastrophe_mod.orbital_barrage.desc": "Freddy Frostbear - Orbital Barrage",
@@ -28548,8 +29073,8 @@
       "gui.alexs_mod.hellion_note_sheet_page.label_hellion_note_sheet": "Hellion Note Sheet",
       "item.catastrophe_mod.ripsaw": "§bRipsaw",
       "gui.alexs_mod.aegex_1_gui.label_they_shall_be_utilized_for_my_se": "They shall be utilized for my service",
-      "item.catastrophe_mod.reinforced_axe": "§7Reinforced Axe",
       "death.attack.split_in_two.item": "%1$s was split in two by %2$s using %3$s",
+      "item.catastrophe_mod.reinforced_axe": "§7Reinforced Axe",
       "item.catastrophe_mod.starlight_scepter": "§6Starlight Scepter",
       "item.alexs_mod.lightning_book_spark": "Lightning Book Spark",
       "subtitles.sword_clang": "sword_clang",
@@ -28569,17 +29094,16 @@
       "block.catastrophe_mod.charred_bricks_stairs": "Charred Bricks Stairs",
       "death.attack.impaled.item": "%1$s was impaled by %2$s using %3$s",
       "item.alexs_mod.armageddonlaser_beam": "Armageddonlaser Beam",
-      "gui.alexs_mod.quest_book_gui.label_blink_tech": "Blink Tech",
       "item.catastrophe_mod.thorn_leggings": "§2Thorn Leggings",
+      "gui.alexs_mod.quest_book_gui.label_blink_tech": "Blink Tech",
       "gui.alexs_mod.aegex_2_gui.label_just_imagine_the_weaponry": "Just imagine the weaponry ",
       "item.alexs_mod.wuflar_scrap": "§9Wuflar Metal Scrap",
-      "item.alexs_mod.kyolden_armor_boots": "§6Kyloden Boots",
       "item.catastrophe_mod.frozen_shield": "§bFrozen Shield",
+      "item.alexs_mod.kyolden_armor_boots": "§6Kyloden Boots",
       "item.catastrophe_mod.shroomium_leggings": "Shroomium Leggings",
       "advancements.i_shall_rend_you_apart.descr": "And you will become inanimate once more",
       "item.catastrophe_mod.sea_hoe": "Sea Hoe",
       "item.catastrophe_mod.shadowflame_burster": "§8Shadowflame Burster",
-      "item.catastrophe_mod.assassin_skeleton_spawn_egg": "Assassin Skeleton Spawn Egg",
       "item.alexs_mod.cosmic_megablade": "Cosmic Megablade",
       "itemGroup.tabaccessories": "Accessories",
       "gui.alexs_mod.aegex_1_gui.label_i_found_this_strange_planet": "I found this strange planet,",
@@ -28603,8 +29127,8 @@
       "item.catastrophe_mod.charred_mantis_spawn_egg": "Charred Mantis Spawn Egg",
       "item.alexs_mod.tungsten_shield": "Tungsten Shield",
       "block.alexs_mod.shield_scythe_placed": "Shield_Scythe.Placed",
-      "biome.alexs_mod.the_void": "The Void",
       "item.alexs_mod.bartosa_tools_pickaxe": "Bartosa Pickaxe",
+      "biome.alexs_mod.the_void": "The Void",
       "item.alexs_mod.excalibur": "§e§lExcalibur",
       "item.alexs_mod.hunter_boots": "Hunter Boots",
       "gui.alexs_mod.ring.button_ring": "Ring",
@@ -28616,8 +29140,8 @@
       "gui.alexs_mod.quest_book_gui.label_portal": "Portal.",
       "gui.alexs_mod.aegex_2_gui.label_i_think_its_a_good_idea": "I think it\u0027s a good idea ",
       "attribute.catastrophe_mod.ranged_damage": "Ranged Damage",
-      "key.catastrophe_mod.dash": "Dash",
       "gui.alexs_mod.hellion_note_sheet_page.label_boss_attributes": "Boss Attributes:",
+      "key.catastrophe_mod.dash": "Dash",
       "enchantment.catastrophe_mod.gravitational_reflux": "Gravitational Reflux",
       "gui.alexs_mod.quest_book_gui.label_6_obtain_a_blink_tech": "6. Obtain a Blink Tech.",
       "item.alexs_mod.salt": "Salt",
@@ -28638,9 +29162,10 @@
       "item.catastrophe_mod.spore_staff": "Spore Staff",
       "item.catastrophe_mod.descending_misery_spawn_egg": "Descending Misery Spawn Egg",
       "item.alexs_mod.shotgun_shells": "Bartosa Shotgun Shells",
+      "block.catastrophe_mod.rusty_plating_slab": "Rusty Plating Slab",
       "item.alexs_mod.red_sun": "Red Sun",
-      "item.alexs_mod.stinger": "Stinger",
       "item.alexs_mod.fire_wyvern_scale_leggings": "Fire Wyvern Scale Leggings",
+      "item.alexs_mod.stinger": "Stinger",
       "item.alexs_mod.nautilus_chestplate": "Nautilus Chestplate",
       "attribute.catastrophe_mod.armor_penetration": "Armor Penetration",
       "effect.alexs_mod.hellion_x_3": "Hellion x3",
@@ -28687,11 +29212,11 @@
       "item.catastrophe_mod.earth_shockwave_spawn_egg": "Earth Shockwave Spawn Egg",
       "item.minecraft.tipped_arrow.effect.intelligence_potion": "Arrow of Intelligence",
       "item.alexs_mod.abyssal_slime_staff": "Abyssal Slime Staff",
-      "item.alexs_mod.star_metal": "Star Metal",
       "item.catastrophe_mod.reinforced_iron_armor_leggings": "§7Reinforced Leggings",
+      "item.alexs_mod.star_metal": "Star Metal",
       "block.catastrophe_mod.charred_bricks": "Charred Bricks",
-      "key.alexs_mod.speeding_clock_tick_speed": "Speeding Clock Tick Speed",
       "item.alexs_mod.tungsten_boots": "Tungsten Boots",
+      "key.alexs_mod.speeding_clock_tick_speed": "Speeding Clock Tick Speed",
       "block.alexs_mod.wormhole_outline": "Wormhole Outline",
       "gui.alexs_mod.mana_bar_number.label_mana1": "Mana:",
       "block.alexs_mod.dungeon_bricks_stairs": "Dungeon Bricks Stairs",
@@ -28781,7 +29306,7 @@
       "subtitles.electric_shock": "Electric shock",
       "item.catastrophe_mod.naturite_shield": "§aNaturite Shield",
       "item.alexs_mod.reinforced_plates": "§7Reinforced Plates",
-      "subtitles.haunted_mirror_summon": "Haunted mirror summon",
+      "subtitles.haunted_mirror_summon": "Haunted Mirror summon",
       "block.alexs_mod.small_barrel": "Small Barrel",
       "effect.alexs_mod.arm_cannon_cooldown": "Arm Cannon Cooldown",
       "death.attack.sliced.item": "%1$s was sliced in half by %2$s using %3$s",
@@ -28836,11 +29361,11 @@
       "item.alexs_mod.pile_of_moss_spawn_egg": "Pile Of Moss Spawn Egg",
       "item.alexs_mod.ember_sword": "§cEmber Sword",
       "item.alexs_mod.conos_loot_bundle": "Conos Loot Bundle",
-      "entity.catastrophe_mod.assassin_skeleton": "Assassin Skeleton",
       "subtitles.jump_scare": "Jump Scare",
       "gui.alexs_mod.aegex_5_gui.label_which_requires_high_skills_to_ge": "which requires high skills to get to.",
       "gui.alexs_mod.aegex_1_gui.label_this_planet": "this planet",
       "item.alexs_mod.reinforced_battleaxe": "§7Reinforced Battleaxe",
+      "subtitles.double_barreled_shotgun_shoots": "Double-Barreled Shotgun shoots",
       "item.alexs_mod.fire_walker_chief_loot_bundle": "Fire Walker Chief Loot Bundle",
       "gui.alexs_mod.drink_menu.label_warrior_mixture": "Warrior Mixture:",
       "item.minecraft.potion.effect.bullseye_potion_strong": "Potion of Bullseye",
@@ -28866,6 +29391,7 @@
       "item.alexs_mod.reinforced_iron_armor_helmet": "§7Reinforced Helmet",
       "item.alexs_mod.bartosa_plane": "Bartosa Plane",
       "block.alexs_mod.blockof_tungsten": "Block of Tungsten",
+      "subtitles.accursed_witch_swings": "Accursed Witch swings",
       "block.alexs_mod.razed_door": "Razed Door",
       "item.alexs_mod.energy_ball": "Energy Ball",
       "block.alexs_mod.razed_fence": "Razed Fence",
@@ -28969,7 +29495,7 @@
       "gui.alexs_mod.hellion_note_sheet_page.label_arrow_bartosa": "(arrow, bartosa-",
       "item.catastrophe_mod.cursed_cloth": "§5Cursed Cloth",
       "item.catastrophe_mod.knife_of_proficiency": "§9Knife of Proficiency",
-      "subtitles.surge_breaker_shockwave": "Surge breaker shockwave",
+      "subtitles.surge_breaker_shockwave": "Surge Breaker shockwave",
       "subtitles.parry": "Parry",
       "gui.alexs_mod.aegex_5_gui.label_isnt_safe_for_me_anymore": "isn\u0027t safe for me anymore.",
       "gui.alexs_mod.quest_book_gui.label_poisoned_iron_heart": "poisoned iron heart.",
@@ -29040,6 +29566,7 @@
       "block.catastrophe_mod.tall_withering_grass": "Tall Withering Grass",
       "item.alexs_mod.energy_charged_cog": "§bEnergy Charged Cog",
       "key.catastrophe_mod.reload": "Reload",
+      "item.catastrophe_mod.night_reaper_spawn_egg": "Night Reaper Spawn Egg",
       "gui.alexs_mod.aegex_4_gui.label_gone_then_i_saw_15_toasts_outsi": "gone. Then I saw 15 toasts outside",
       "item.alexs_mod.moss_helmet": "§2Mossy Helmet",
       "item.alexs_mod.freezing_vial": "Freezing Vial",
@@ -29080,7 +29607,7 @@
       "effect.catastrophe_mod.brass_attack_speed": "Brass Attack Speed",
       "item.alexs_mod.cooked_corn": "Cooked Corn",
       "item.catastrophe_mod.axe_mastery_crest": "§9Axe Mastery Crest",
-      "subtitles.crystalline_edge_charged": "Crystalline edge charged",
+      "subtitles.crystalline_edge_charged": "Crystalline Edge charged",
       "item.alexs_mod.bartosa_tools_shovel": "Bartosa Shovel",
       "item.alexs_mod.cyborg_armor_boots": "Cyborg Boots",
       "item.minecraft.lingering_potion.effect.impedance_potion": "Lingering Potion of Impedance",
@@ -29122,6 +29649,7 @@
       "entity.alexs_mod.wuflar_droid": "Wuflar Droid",
       "entity.catastrophe_mod.earth_shockwave": "Earth Shockwave",
       "effect.catastrophe_mod.intelligence": "Intelligence",
+      "entity.catastrophe_mod.night_reaper": "Night Reaper",
       "subtitles.strong_metal_hit": "Strong metal hit",
       "item.alexs_mod.diamond_detonation": "Diamond Detonation",
       "item.alexs_mod.bartosa_ingot": "Bartosa Ingot",
@@ -29258,6 +29786,7 @@
       "block.alexs_mod.navy_stone": "Navy Stone",
       "attribute.catastrophe_mod.throwing_speed": "Throwing Speed",
       "gamerule.totemCooldown": "Totem cooldown",
+      "attribute.catastrophe_mod.parry_damage": "Parry Damage",
       "effect.alexs_mod.multishot_cool_down": "Multishot Cool Down",
       "gui.alexs_mod.abyss_enter.button_close": "Close",
       "item.alexs_mod.greed_mixture": "Greed Mixture",
@@ -29285,7 +29814,7 @@
       "subtitles.magic_blade_swung": "Magic Blade Swung",
       "block.alexs_mod.galaxium_ore": "Galaxium Ore",
       "item.catastrophe_mod.sporesplosion": "Sporesplosion",
-      "subtitles.surge_breaker_charge": "Surge breaker charge",
+      "subtitles.surge_breaker_charge": "Surge Breaker charge",
       "item.catastrophe_mod.vein_striker": "§4Vein Striker",
       "item.alexs_mod.ink_thing_spawn_egg": "Ink Thing Spawn Egg",
       "item.alexs_mod.abyss_item": "Abyss Item",
@@ -29299,6 +29828,7 @@
       "item.alexs_mod.natures_blessing_leggings": "§2Nature\u0027s Blessing Leggings",
       "block.alexs_mod.kolden_ore": "Kyolden Ore",
       "item.alexs_mod.warning": "Warning",
+      "item.catastrophe_mod.double_barreled_shotgun": "Double-Barreled Shotgun",
       "item.alexs_mod.spirit_in_a_bottle": "Spirit in a Bottle",
       "item.alexs_mod.mechanical_components": "Mechanical Components",
       "item.alexs_mod.sea_bow": "Sea Bow",
@@ -29349,6 +29879,7 @@
       "enchantment.catastrophe_mod.impalement": "Impalement",
       "item.alexs_mod.redsplit_katana_sheathed": "§4Red Split Katana §f[Sheathed]",
       "item.alexs_mod.sea_bow_1": "Sea Bow 1",
+      "item.catastrophe_mod.sawed_off_shotgun": "Sawed-Off Shotgun",
       "item.alexs_mod.natures_strike_0": "Natures Strike 0",
       "item.alexs_mod.sea_bow_0": "Sea Bow 0",
       "item.alexs_mod.grenade": "Grenade",
@@ -29391,7 +29922,7 @@
       "gui.alexs_mod.stat_bars.label_stamina": "Stamina:",
       "entity.alexs_mod.spore_zombie": "Spore Zombie",
       "item.alexs_mod.tesla_cannon": "§9Tesla Cannon",
-      "subtitles.haunted_mirror_shoot": "Haunted mirror shoot",
+      "subtitles.haunted_mirror_shoot": "Haunted Mirror shoot",
       "block.alexs_mod.torchstone": "Torchstone",
       "gui.alexs_mod.quest_book_gui.label_copper_shard_4x": "-Copper Shard 4x",
       "gui.alexs_mod.aegex_3_gui.label_toast_it_is": "Toast it is!",
@@ -29566,6 +30097,7 @@
       "item.alexs_mod.music_disc_strike_you_down.desc": "Freddy Frostbear - Strike You Down!",
       "block.alexs_mod.ash_block": "Ash Block",
       "item.alexs_mod.riptide": "Riptide",
+      "subtitles.double_barreled_shotgun_reloads": "Double-Barreled Shotgun reloads",
       "subtitles.fire_magic_explodes": "Fire magic explodes",
       "item.alexs_mod.shadow_scythe": "§8Shadow Scythe",
       "subtitles.alexs_mod_ost_outside_of_the_atmosphere": "Alex\u0027s Mod OST: Outside of the Atmosphere",

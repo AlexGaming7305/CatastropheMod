@@ -21,6 +21,7 @@ import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
 import net.mcreator.catastrophemod.entity.PileOfMossEntity;
 import net.mcreator.catastrophemod.entity.OceanicSplashEntity;
 import net.mcreator.catastrophemod.entity.NightfallsDemiseProjectileEntity;
+import net.mcreator.catastrophemod.entity.NightReaperEntity;
 import net.mcreator.catastrophemod.entity.NettleMinionEntity;
 import net.mcreator.catastrophemod.entity.NettleEntity;
 import net.mcreator.catastrophemod.entity.NatureBlessedSpiritEntity;
@@ -47,7 +48,6 @@ import net.mcreator.catastrophemod.entity.CalicoStagBeetleEntity;
 import net.mcreator.catastrophemod.entity.BlazingPhoenixEntity;
 import net.mcreator.catastrophemod.entity.BabyCalicoStagBeetleEntity;
 import net.mcreator.catastrophemod.entity.AtlanticSeaNettleEntity;
-import net.mcreator.catastrophemod.entity.AssassinSkeletonEntity;
 import net.mcreator.catastrophemod.entity.ArcStrikerEntity;
 import net.mcreator.catastrophemod.entity.AnglerfishEntity;
 import net.mcreator.catastrophemod.entity.AcidTarantulaMinionEntity;
@@ -87,13 +87,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof SwordspinEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof AssassinSkeletonEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -388,6 +381,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof AccursedWitchEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof NightReaperEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

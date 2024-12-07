@@ -1,0 +1,24 @@
+{
+  "name": "catastrophe_mod:lighthouse_basement/entrance_stairwell",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 50,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/entrance_stairwell/lighthouse_entrance_stairwell",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 50,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/entrance_stairwell/lighthouse",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

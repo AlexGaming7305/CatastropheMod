@@ -52,7 +52,7 @@ public class ReloadMessage {
 			return;
 		if (type == 0) {
 
-			ReloadOnKeyPressedProcedure.execute(entity);
+			ReloadOnKeyPressedProcedure.execute(world, entity);
 		}
 	}
 

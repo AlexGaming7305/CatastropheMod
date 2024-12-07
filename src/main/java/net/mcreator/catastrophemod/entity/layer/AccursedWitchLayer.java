@@ -15,7 +15,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class AccursedWitchLayer extends GeoRenderLayer<AccursedWitchEntity> {
-	private static final ResourceLocation LAYER = new ResourceLocation("catastrophe_mod", "textures/entities/accursed_witch_texture_glow.png");
+	private static final ResourceLocation LAYER = new ResourceLocation("catastrophe_mod", "textures/entities/accursed_witch_glow.png");
 
 	public AccursedWitchLayer(GeoRenderer<AccursedWitchEntity> entityRenderer) {
 		super(entityRenderer);

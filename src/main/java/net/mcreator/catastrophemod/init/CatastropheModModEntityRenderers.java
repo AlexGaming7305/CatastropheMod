@@ -52,6 +52,7 @@ import net.mcreator.catastrophemod.client.renderer.PileOfMossRenderer;
 import net.mcreator.catastrophemod.client.renderer.OceanicSplashRenderer;
 import net.mcreator.catastrophemod.client.renderer.NohomingHealingOrbProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.NightfallsDemiseProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.NightReaperRenderer;
 import net.mcreator.catastrophemod.client.renderer.NettleRenderer;
 import net.mcreator.catastrophemod.client.renderer.NettleMinionRenderer;
 import net.mcreator.catastrophemod.client.renderer.NatureBlessedSpiritRenderer;
@@ -105,7 +106,6 @@ import net.mcreator.catastrophemod.client.renderer.BlazingPhoenixRenderer;
 import net.mcreator.catastrophemod.client.renderer.BlazingFeatherProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.BabyCalicoStagBeetleRenderer;
 import net.mcreator.catastrophemod.client.renderer.AtlanticSeaNettleRenderer;
-import net.mcreator.catastrophemod.client.renderer.AssassinSkeletonRenderer;
 import net.mcreator.catastrophemod.client.renderer.ArcStrikerRenderer;
 import net.mcreator.catastrophemod.client.renderer.AnglerfishRenderer;
 import net.mcreator.catastrophemod.client.renderer.AcidTarantulaMinionRenderer;
@@ -124,7 +124,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.FURIOUS_WIND.get(), FuriousWindRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.PILE_OF_MOSS.get(), PileOfMossRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SWORDSPIN.get(), SwordspinRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.ASSASSIN_SKELETON.get(), AssassinSkeletonRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.WRAITH_DASH.get(), WraithDashRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SWORD_SPIN_DASH.get(), SwordSpinDashRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SWORD_DASH.get(), SwordDashRenderer::new);
@@ -223,5 +222,7 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.NAILGUN_NAIL.get(), NailgunNailRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.SCRAP_ROUND_PROJECTILE.get(), ScrapRoundProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.COPPER_ROUND_PROJECTILE.get(), CopperRoundProjectileRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.FIERY_BOLT.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.NIGHT_REAPER.get(), NightReaperRenderer::new);
 	}
 }

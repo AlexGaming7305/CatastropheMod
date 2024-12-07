@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "plains",
+    "meadow",
+    "forest"
+  ],
+  "spawners": {
+    "type": "catastrophe_mod:night_reaper",
+    "weight": 100,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

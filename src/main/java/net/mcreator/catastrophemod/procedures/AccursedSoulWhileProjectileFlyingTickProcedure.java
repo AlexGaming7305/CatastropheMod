@@ -91,7 +91,7 @@ public class AccursedSoulWhileProjectileFlyingTickProcedure {
 			flag = true;
 			turn = 0.45;
 			speed = 1.5;
-			radius = 30;
+			radius = 100;
 			lifetime = 100;
 			if (immediatesourceentity.getPersistentData().getDouble("lifetime") >= 2) {
 				{

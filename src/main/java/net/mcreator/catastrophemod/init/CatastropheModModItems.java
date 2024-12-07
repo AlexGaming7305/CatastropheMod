@@ -22,12 +22,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.catastrophemod.procedures.WoodenKatanaPropertyValueProviderProcedure;
+import net.mcreator.catastrophemod.procedures.WiresawPropertyValueProviderProcedure;
 import net.mcreator.catastrophemod.procedures.ElectrifiedSwordChargedPropertyValueProviderProcedure;
 import net.mcreator.catastrophemod.procedures.ElectrifiedSwordChargePropertyValueProviderProcedure;
 import net.mcreator.catastrophemod.item.WoodenSpearItem;
 import net.mcreator.catastrophemod.item.WoodenKatanaItem;
 import net.mcreator.catastrophemod.item.WoodenBowItem;
 import net.mcreator.catastrophemod.item.WitherSkullFragmentItem;
+import net.mcreator.catastrophemod.item.WiresawItem;
 import net.mcreator.catastrophemod.item.WhispersCurseItem;
 import net.mcreator.catastrophemod.item.VenomousRoundItem;
 import net.mcreator.catastrophemod.item.VeinStrikerItem;
@@ -84,6 +86,7 @@ import net.mcreator.catastrophemod.item.SeaBowItem;
 import net.mcreator.catastrophemod.item.SeaAxeItem;
 import net.mcreator.catastrophemod.item.ScreenshakeTestItemItem;
 import net.mcreator.catastrophemod.item.ScrapRoundItem;
+import net.mcreator.catastrophemod.item.SawedOffShotgunItem;
 import net.mcreator.catastrophemod.item.SandstormSurgeItem;
 import net.mcreator.catastrophemod.item.RustyCogwheelItem;
 import net.mcreator.catastrophemod.item.RustgunItem;
@@ -186,6 +189,7 @@ import net.mcreator.catastrophemod.item.EarthboundCoreItem;
 import net.mcreator.catastrophemod.item.EarthShattererItem;
 import net.mcreator.catastrophemod.item.EarthGauntletItem;
 import net.mcreator.catastrophemod.item.EarthBreakerItem;
+import net.mcreator.catastrophemod.item.DoubleBarreledShotgunItem;
 import net.mcreator.catastrophemod.item.DiamondSpearItem;
 import net.mcreator.catastrophemod.item.DiamondDetonationItem;
 import net.mcreator.catastrophemod.item.CursedClothItem;
@@ -268,7 +272,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> DRIED_ROSXITE_ORE = block(CatastropheModModBlocks.DRIED_ROSXITE_ORE);
 	public static final RegistryObject<Item> RAW_ROSXITE = REGISTRY.register("raw_rosxite", () -> new RawRosxiteItem());
 	public static final RegistryObject<Item> ROSXITE_ORE = block(CatastropheModModBlocks.ROSXITE_ORE);
-	public static final RegistryObject<Item> ASSASSIN_SKELETON_SPAWN_EGG = REGISTRY.register("assassin_skeleton_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.ASSASSIN_SKELETON, -1, -7602176, new Item.Properties()));
 	public static final RegistryObject<Item> STORM_SHIELD = REGISTRY.register("storm_shield", () -> new StormShieldItem());
 	public static final RegistryObject<Item> RUNNING_BOOTS = REGISTRY.register("running_boots", () -> new RunningBootsItem());
 	public static final RegistryObject<Item> POCKET_SHIELD_GENERATOR = REGISTRY.register("pocket_shield_generator", () -> new PocketShieldGeneratorItem());
@@ -526,6 +529,10 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> RUSTY_PLATING = block(CatastropheModModBlocks.RUSTY_PLATING);
 	public static final RegistryObject<Item> RUSTY_PLATING_SLAB = block(CatastropheModModBlocks.RUSTY_PLATING_SLAB);
 	public static final RegistryObject<Item> RUSTY_PLATING_STAIRS = block(CatastropheModModBlocks.RUSTY_PLATING_STAIRS);
+	public static final RegistryObject<Item> WIRESAW = REGISTRY.register("wiresaw", () -> new WiresawItem());
+	public static final RegistryObject<Item> DOUBLE_BARRELED_SHOTGUN = REGISTRY.register("double_barreled_shotgun", () -> new DoubleBarreledShotgunItem());
+	public static final RegistryObject<Item> SAWED_OFF_SHOTGUN = REGISTRY.register("sawed_off_shotgun", () -> new SawedOffShotgunItem());
+	public static final RegistryObject<Item> NIGHT_REAPER_SPAWN_EGG = REGISTRY.register("night_reaper_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.NIGHT_REAPER, -14869219, -7070506, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
@@ -545,6 +552,7 @@ public class CatastropheModModItems {
 					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) ElectrifiedSwordChargePropertyValueProviderProcedure.execute(entity));
 			ItemProperties.register(ELECTRIFIED_SWORD.get(), new ResourceLocation("catastrophe_mod:electrified_sword_electrified_sword_charged"),
 					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) ElectrifiedSwordChargedPropertyValueProviderProcedure.execute(entity));
+			ItemProperties.register(WIRESAW.get(), new ResourceLocation("catastrophe_mod:wiresaw_wiresaw_active"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) WiresawPropertyValueProviderProcedure.execute(entity));
 		});
 	}
 }

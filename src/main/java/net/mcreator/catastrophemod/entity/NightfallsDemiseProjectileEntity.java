@@ -143,7 +143,7 @@ public class NightfallsDemiseProjectileEntity extends TamableAnimal implements G
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		NightfallsDemiseProjectileOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
+		NightfallsDemiseProjectileOnInitialEntitySpawnProcedure.execute(world, this);
 		return retval;
 	}
 

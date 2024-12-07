@@ -1,0 +1,38 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "catastrophe_mod:item/wiresaw_active"
+  },
+    "display": {
+        "ground": {
+            "rotation": [ 0, -90, 55 ],
+            "translation": [ 0, 5, 0.5],
+            "scale":[ 0.5, 0.5, 0.5 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.6, 0.6, 0.6 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 0, 270, 40],
+            "translation": [ 0, -2, -5 ],
+            "scale": [ 0.8, 0.8, 0.8 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 0, -270, -40 ],
+            "translation": [ 0, -2, -5 ],
+            "scale": [ 0.8, 0.8, 0.8 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 270, 20 ],
+            "translation": [ 0, 4, -2 ],
+            "scale": [ 0.6, 0.6, 0.6 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, -270, -20 ],
+            "translation": [ 0, 4, -2 ],
+            "scale": [ 0.6, 0.6, 0.6 ]
+        }
+    }
+}

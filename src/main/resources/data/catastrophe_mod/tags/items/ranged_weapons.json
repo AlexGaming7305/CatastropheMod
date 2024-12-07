@@ -20,6 +20,8 @@
     "catastrophe_mod:rustgun",
     "catastrophe_mod:wooden_bow",
     "catastrophe_mod:huntsman_knife",
-    "catastrophe_mod:nailgun"
+    "catastrophe_mod:nailgun",
+    "catastrophe_mod:double_barreled_shotgun",
+    "catastrophe_mod:sawed_off_shotgun"
   ]
 }

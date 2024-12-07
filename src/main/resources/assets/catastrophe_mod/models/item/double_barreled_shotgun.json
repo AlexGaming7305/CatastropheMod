@@ -1,0 +1,6 @@
+{
+  "parent": "catastrophe_mod:displaysettings/double_barreled_shotgun.item",
+  "textures": {
+    "layer0": "catastrophe_mod:item/double_barreled_shotgun"
+  }
+}

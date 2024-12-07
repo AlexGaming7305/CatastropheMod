@@ -3,19 +3,9 @@
   "fallback": "catastrophe_mod:lighthouse_basement/fallbackrooms",
   "elements": [
     {
-      "weight": 15,
+      "weight": 20,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousefightroom1",
-        "processors": "minecraft:empty",
-		"projection": "rigid",
-        "element_type": "minecraft:single_pool_element",
-        "terrain_adaptation": "none"
-      }
-    },
-	{	
-      "weight": 15,
-      "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousefightroom2",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_corridor",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -23,9 +13,9 @@
       }
     },
     {
-      "weight": 20,
+      "weight": 40,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousemultihallway",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_hallway",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -33,9 +23,9 @@
       }
     },
     {
-      "weight": 20,
+      "weight": 30,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousehallway",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_stairwell",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -45,7 +35,7 @@
     {
       "weight": 10,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousestairup",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_cellar_room",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -55,7 +45,7 @@
     {
       "weight": 10,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousestairdown",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_meeting_room",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -63,9 +53,9 @@
       }
     },
     {
-      "weight": 20,
+      "weight": 10,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouseladder",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_alchemy_room",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -73,9 +63,9 @@
       }
     },
     {
-      "weight": 15,
+      "weight": 10,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousecellar",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_ritual_room",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -83,47 +73,7 @@
       }
     },
     {
-      "weight": 15,
-      "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousetableroom",
-        "processors": "minecraft:empty",
-		"projection": "rigid",
-        "element_type": "minecraft:single_pool_element",
-        "terrain_adaptation": "none"
-      }
-    },
-    {
-      "weight": 5,
-      "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousebrewingroom",
-        "processors": "minecraft:empty",
-		"projection": "rigid",
-        "element_type": "minecraft:single_pool_element",
-        "terrain_adaptation": "none"
-      }
-    },
-    {
-      "weight": 20,
-      "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousefourwayhallway",
-        "processors": "minecraft:empty",
-		"projection": "rigid",
-        "element_type": "minecraft:single_pool_element",
-        "terrain_adaptation": "none"
-      }
-    },
-    {
-      "weight": 5,
-      "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousetestroom",
-        "processors": "minecraft:empty",
-		"projection": "rigid",
-        "element_type": "minecraft:single_pool_element",
-        "terrain_adaptation": "none"
-      }
-    },
-    {
-      "weight": 5,
+      "weight": 10,
       "element": {
         "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousecageroom",
         "processors": "minecraft:empty",
@@ -133,9 +83,9 @@
       }
     },
     {
-      "weight": 5,
+      "weight": 10,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouseengineeringroom",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_quarters",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",
@@ -143,9 +93,39 @@
       }
     },
     {
-      "weight": 5,
+      "weight": 10,
       "element": {
         "location": "catastrophe_mod:lighthouse_basement/rooms/lighthousechurch",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_storage_room",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_combat_room",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_torture_room",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",

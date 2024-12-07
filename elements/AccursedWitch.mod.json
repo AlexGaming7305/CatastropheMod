@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Accursed Witch",
     "mobLabel": "",
-    "mobModelTexture": "accursed_witch_texture.png",
-    "mobModelGlowTexture": "accursed_witch_texture_glow.png",
+    "mobModelTexture": "accursed_witch.png",
+    "mobModelGlowTexture": "accursed_witch_glow.png",
     "visualScale": {
       "fixedValue": 1.0
     },
@@ -58,7 +58,7 @@
     "movementSpeed": 0.25,
     "armorBaseValue": 4.0,
     "trackingRange": 64,
-    "followRange": 16,
+    "followRange": 64,
     "health": 26,
     "xpAmount": 5,
     "waterMob": false,

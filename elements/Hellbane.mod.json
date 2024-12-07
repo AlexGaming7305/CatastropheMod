@@ -11,7 +11,8 @@
     "name": "§6Hellbane",
     "specialInformation": {
       "fixedValue": [
-        "§7Fires a Fiery Slash"
+        "§7Puncture Strikes causes enemies to erupt into flames",
+        "§7Normal Attacks fire a Fiery Slash"
       ]
     },
     "creativeTab": {

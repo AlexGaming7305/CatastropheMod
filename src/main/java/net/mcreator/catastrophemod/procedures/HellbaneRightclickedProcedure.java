@@ -15,7 +15,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.FierySlashProjectileEntity;
+import net.mcreator.catastrophemod.entity.FieryBoltEntity;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class HellbaneRightclickedProcedure {
@@ -34,30 +34,92 @@ public class HellbaneRightclickedProcedure {
 				Level projectileLevel = _shootFrom.level();
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-							AbstractArrow entityToSpawn = new FierySlashProjectileEntity(CatastropheModModEntities.FIERY_SLASH_PROJECTILE.get(), level);
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new FieryBoltEntity(CatastropheModModEntities.FIERY_BOLT.get(), level);
 							entityToSpawn.setOwner(shooter);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);
 							entityToSpawn.setSilent(true);
-							entityToSpawn.setPierceLevel(piercing);
 							return entityToSpawn;
 						}
-					}.getArrow(projectileLevel, entity, 4, 0, (byte) 1);
+					}.getArrow(projectileLevel, entity, 1, 0);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 2.5, 0);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 2.5, 5);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:fiery_swing")), SoundSource.HOSTILE, 1, 1);
+					_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:fiery_swing")), SoundSource.HOSTILE, 1, 1, false);
+					_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
+			CatastropheModMod.queueServerWork(2, () -> {
+				{
+					Entity _shootFrom = entity;
+					Level projectileLevel = _shootFrom.level();
+					if (!projectileLevel.isClientSide()) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new FieryBoltEntity(CatastropheModModEntities.FIERY_BOLT.get(), level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								entityToSpawn.setSilent(true);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 1, 0);
+						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 2.5, 5);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+					}
+				}
+			});
+			CatastropheModMod.queueServerWork(4, () -> {
+				{
+					Entity _shootFrom = entity;
+					Level projectileLevel = _shootFrom.level();
+					if (!projectileLevel.isClientSide()) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new FieryBoltEntity(CatastropheModModEntities.FIERY_BOLT.get(), level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								entityToSpawn.setSilent(true);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 1, 0);
+						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 2.5, 5);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+					}
+				}
+			});
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:fiery_swing")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:fiery_swing")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
 			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(itemstack.getItem(), 30);
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 16);
 			{
 				boolean _setval = true;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -65,7 +127,7 @@ public class HellbaneRightclickedProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			CatastropheModMod.queueServerWork(30, () -> {
+			CatastropheModMod.queueServerWork(16, () -> {
 				{
 					boolean _setval = false;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -10,10 +10,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.catastrophemod.item.SawedOffShotgunItem;
 import net.mcreator.catastrophemod.item.RustgunItem;
 import net.mcreator.catastrophemod.item.RipsawItem;
 import net.mcreator.catastrophemod.item.NailgunItem;
 import net.mcreator.catastrophemod.item.FlamestrikeItem;
+import net.mcreator.catastrophemod.item.DoubleBarreledShotgunItem;
 
 @Mod.EventBusSubscriber
 public class ItemAnimationFactory {
@@ -113,6 +115,46 @@ public class ItemAnimationFactory {
 					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
 					if (event.player.level().isClientSide()) {
 						((NailgunItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("left");
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof DoubleBarreledShotgunItem animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((DoubleBarreledShotgunItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("right");
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof DoubleBarreledShotgunItem animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((DoubleBarreledShotgunItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("left");
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof SawedOffShotgunItem animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((SawedOffShotgunItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("right");
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof SawedOffShotgunItem animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((SawedOffShotgunItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
 						disableUseAnim("left");
 					}
 				}

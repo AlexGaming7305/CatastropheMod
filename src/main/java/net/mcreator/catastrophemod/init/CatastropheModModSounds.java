@@ -109,4 +109,12 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> SPARKSHREDDER_STARTS = REGISTRY.register("sparkshredder_starts", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sparkshredder_starts")));
 	public static final RegistryObject<SoundEvent> ELECTRIFIED_STORM_RUMBLE = REGISTRY.register("electrified_storm_rumble", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_storm_rumble")));
 	public static final RegistryObject<SoundEvent> ELECTRIFIED_STORM_AMBIENCE = REGISTRY.register("electrified_storm_ambience", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electrified_storm_ambience")));
+	public static final RegistryObject<SoundEvent> WIRESAW_LOOP = REGISTRY.register("wiresaw_loop", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "wiresaw_loop")));
+	public static final RegistryObject<SoundEvent> DOUBLE_BARRELED_SHOTGUN_SHOOTS = REGISTRY.register("double_barreled_shotgun_shoots",
+			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "double_barreled_shotgun_shoots")));
+	public static final RegistryObject<SoundEvent> DOUBLE_BARRELED_SHOTGUN_RELOADS = REGISTRY.register("double_barreled_shotgun_reloads",
+			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "double_barreled_shotgun_reloads")));
+	public static final RegistryObject<SoundEvent> SAWED_OFF_SHOTGUN_SHOOTS = REGISTRY.register("sawed_off_shotgun_shoots", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "sawed_off_shotgun_shoots")));
+	public static final RegistryObject<SoundEvent> ACCURSED_WITCH_SWINGS = REGISTRY.register("accursed_witch_swings", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "accursed_witch_swings")));
+	public static final RegistryObject<SoundEvent> MANA_IS_DRAINED = REGISTRY.register("mana_is_drained", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "mana_is_drained")));
 }

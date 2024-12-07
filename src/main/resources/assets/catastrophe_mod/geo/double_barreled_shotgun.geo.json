@@ -1,0 +1,60 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.double_barreled_shotgun",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "double_barreled_shotgun",
+					"pivot": [0, 0, 6],
+					"cubes": [
+						{"origin": [-1, 0.9, 6], "size": [2, 2, 4], "inflate": 0.001, "pivot": [0, 0.75, 6], "rotation": [-12.5, 0, 0], "uv": [49, 0]},
+						{"origin": [-1, 0, 4], "size": [2, 2, 11], "uv": [22, 0]},
+						{"origin": [-1, 1.96, 9.6], "size": [2, 2, 5], "inflate": -0.001, "pivot": [0, 1, 5], "rotation": [-22.5, 0, 0], "uv": [48, 6]},
+						{"origin": [0, -2, 6], "size": [0, 2, 5], "uv": [43, 4]}
+					]
+				},
+				{
+					"name": "barrels",
+					"parent": "double_barreled_shotgun",
+					"pivot": [0, 0, 4],
+					"cubes": [
+						{"origin": [-1, 0, -10], "size": [2, 2, 16], "inflate": 0.001, "uv": [22, 20]},
+						{"origin": [-2, 1, -11], "size": [2, 2, 18], "uv": [0, 0]},
+						{"origin": [0, 1, -11], "size": [2, 2, 18], "uv": [0, 20]}
+					]
+				},
+				{
+					"name": "shotshell_1",
+					"parent": "barrels",
+					"pivot": [-1, 2, 5],
+					"cubes": [
+						{"origin": [-2, 1, 3], "size": [2, 2, 4], "inflate": -0.25, "uv": [49, 13]}
+					]
+				},
+				{
+					"name": "shotshell_2",
+					"parent": "barrels",
+					"pivot": [1, 2, 5],
+					"cubes": [
+						{"origin": [0, 1, 3], "size": [2, 2, 4], "inflate": -0.25, "uv": [49, 19]}
+					]
+				},
+				{
+					"name": "flash",
+					"pivot": [0, 2, -11],
+					"cubes": [
+						{"origin": [-6.5, -4.5, -11], "size": [13, 13, 0], "inflate": 0.001, "uv": [0, 40]}
+					]
+				}
+			]
+		}
+	]
+}

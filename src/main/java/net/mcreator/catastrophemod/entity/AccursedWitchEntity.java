@@ -71,7 +71,7 @@ public class AccursedWitchEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "accursed_witch_texture");
+		this.entityData.define(TEXTURE, "accursed_witch");
 	}
 
 	public void setTexture(String texture) {
@@ -133,7 +133,7 @@ public class AccursedWitchEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		AccursedWitchOnEntityTickUpdateProcedure.execute(this.level(), this);
+		AccursedWitchOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
@@ -153,7 +153,7 @@ public class AccursedWitchEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.MAX_HEALTH, 26);
 		builder = builder.add(Attributes.ARMOR, 4);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 64);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.25);
 		return builder;
 	}

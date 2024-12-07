@@ -63,6 +63,12 @@
       },
       {
         "value": "CUSTOM:Nailgun"
+      },
+      {
+        "value": "CUSTOM:DoubleBarreledShotgun"
+      },
+      {
+        "value": "CUSTOM:SawedOffShotgun"
       }
     ],
     "blocks": [],

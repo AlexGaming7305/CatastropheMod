@@ -92,6 +92,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_CHESTPLATE.get());
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_LEGGINGS.get());
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_BOOTS.get());
+				tabData.accept(CatastropheModModItems.WIRESAW.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.GLOVEOFTHE_DESERTS.get())).displayItems((parameters, tabData) -> {
@@ -196,6 +197,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.NAILGUN.get());
 				tabData.accept(CatastropheModModItems.SCRAP_ROUND.get());
 				tabData.accept(CatastropheModModItems.COPPER_ROUND.get());
+				tabData.accept(CatastropheModModItems.DOUBLE_BARRELED_SHOTGUN.get());
+				tabData.accept(CatastropheModModItems.SAWED_OFF_SHOTGUN.get());
 			}).withSearchBar().build());
 
 	@SubscribeEvent
@@ -273,7 +276,6 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.MUSIC_DISC_STRIKE_YOU_DOWN.get());
 			tabData.accept(CatastropheModModItems.REINFORCED_PLATES.get());
 			tabData.accept(CatastropheModModItems.RAW_ROSXITE.get());
-			tabData.accept(CatastropheModModItems.ASSASSIN_SKELETON_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.MUSIC_DISC_PROLIFERATING_MUSHROOMS.get());
 			tabData.accept(CatastropheModModItems.MUSIC_DISC_NETHERS_FURY.get());
 			tabData.accept(CatastropheModModItems.RAW_SHROOMIUM.get());
@@ -306,6 +308,7 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.ARC_STRIKER_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.SURGE_BREAKER_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ACCURSED_WITCH_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.NIGHT_REAPER_SPAWN_EGG.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {

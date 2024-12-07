@@ -1,0 +1,77 @@
+{
+  "_fv": 57,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "wiresaw_0",
+    "customModelName": "Normal",
+    "customProperties": {
+      "wiresaw_active": {
+        "name": "WiresawPropertyValueProvider"
+      }
+    },
+    "states": [
+      {
+        "renderType": 0,
+        "texture": "wiresaw_active",
+        "customModelName": "Normal",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:wiresaw_active",
+              "type": "number"
+            },
+            "value": 1.0
+          }
+        ]
+      }
+    ],
+    "name": "Wiresaw",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "stackSize": 1,
+    "enchantability": 12,
+    "useDuration": 72000,
+    "toolType": 1.0,
+    "damageCount": 200,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": [
+        "§aRight-click: §7Shreds enemies in front of you",
+        "§cBleeding §7targets suffer §cRusty Wounds"
+      ]
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "enableRanged": true,
+    "shootConstantly": false,
+    "projectile": {
+      "value": "CUSTOM:BlizzardProjectile"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "bow"
+  }
+}

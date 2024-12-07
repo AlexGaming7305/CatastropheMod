@@ -817,5 +817,59 @@
         "stream": false
       }
     ]
+  },
+  "wiresaw_loop": {
+    "subtitle": "subtitles.wiresaw_loop",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:wiresaw_loop",
+        "stream": false
+      }
+    ]
+  },
+  "double_barreled_shotgun_shoots": {
+    "subtitle": "subtitles.double_barreled_shotgun_shoots",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:double_barreled_shotgun_shoots",
+        "stream": false
+      }
+    ]
+  },
+  "double_barreled_shotgun_reloads": {
+    "subtitle": "subtitles.double_barreled_shotgun_reloads",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:double_barreled_shotgun_reloads",
+        "stream": false
+      }
+    ]
+  },
+  "sawed_off_shotgun_shoots": {
+    "subtitle": "subtitles.sawed_off_shotgun_shoots",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:sawed_off_shotgun_shoots",
+        "stream": false
+      }
+    ]
+  },
+  "accursed_witch_swings": {
+    "subtitle": "subtitles.accursed_witch_swings",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:accursed_witch_swings",
+        "stream": false
+      }
+    ]
+  },
+  "mana_is_drained": {
+    "subtitle": "subtitles.mana_is_drained",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:mana_is_drained",
+        "stream": false
+      }
+    ]
   }
 }
