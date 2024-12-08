@@ -1,0 +1,9 @@
+{
+  "parent": "catastrophe_mod:custom/electrified_chain",
+  "textures": {
+    "all": "catastrophe_mod:block/electrified_chain",
+    "particle": "catastrophe_mod:block/electrified_chain",
+    "0": "catastrophe_mod:block/electrified_chain"
+  },
+  "render_type": "cutout"
+}

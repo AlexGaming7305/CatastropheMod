@@ -14,25 +14,11 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:SpellOfPhantoms"
+              "value": "CUSTOM:CursedCloth"
             },
-            "weight": 13,
+            "weight": 1,
             "minCount": 1,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "Blocks.AIR"
-            },
-            "weight": 87,
-            "minCount": 1,
-            "maxCount": 1,
+            "maxCount": 3,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -42,7 +28,7 @@
         ]
       }
     ],
-    "name": "entities/phantom_loot_table",
+    "name": "entities/accursed_witch",
     "namespace": "mod"
   }
 }

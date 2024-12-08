@@ -38,71 +38,73 @@ public class ShieldParryDamageProcedure {
 		if (entity == null)
 			return;
 		ItemStack shield_held = ItemStack.EMPTY;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
-			shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
-			shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-		}
-		if (shield_held.getItem() == Items.SHIELD) {
-			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shieldDamage == false) {
-				{
-					boolean _setval = true;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.shieldDamage = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), shield_held) != 0) {
-					{
-						double _setval = 8 + 0.5 * shield_held.getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.shield_parry_damage = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				} else {
-					{
-						double _setval = 8;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.shield_parry_damage = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage + " parry damage")),
-							false);
+		if (entity.isAlive()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
+				shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
+				shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
 			}
-		}
-		if (shield_held.getItem() == CatastropheModModItems.NATURITE_SHIELD.get()) {
-			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).naturiteShieldDamage == false) {
-				{
-					boolean _setval = true;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.naturiteShieldDamage = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), shield_held) != 0) {
+			if (shield_held.getItem() == Items.SHIELD) {
+				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shieldDamage == false) {
 					{
-						double _setval = 7.5 + 0.5 * shield_held.getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;
+						boolean _setval = true;
 						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.shield_parry_damage = _setval;
+							capability.shieldDamage = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
-				} else {
+					if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), shield_held) != 0) {
+						{
+							double _setval = 8 + 0.5 * shield_held.getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.shield_parry_damage = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else {
+						{
+							double _setval = 8;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.shield_parry_damage = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(
+								Component.literal(((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage + " parry damage")), false);
+				}
+			}
+			if (shield_held.getItem() == CatastropheModModItems.NATURITE_SHIELD.get()) {
+				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).naturiteShieldDamage == false) {
 					{
-						double _setval = 7.5;
+						boolean _setval = true;
 						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.shield_parry_damage = _setval;
+							capability.naturiteShieldDamage = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), shield_held) != 0) {
+						{
+							double _setval = 7.5 + 0.5 * shield_held.getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.shield_parry_damage = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else {
+						{
+							double _setval = 7.5;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.shield_parry_damage = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(
+								Component.literal(((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage + " parry damage")), false);
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage + " parry damage")),
-							false);
 			}
 		}
 	}

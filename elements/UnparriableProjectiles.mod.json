@@ -15,6 +15,9 @@
       },
       {
         "value": "EntityArrow"
+      },
+      {
+        "value": "EntityFireball"
       }
     ],
     "biomes": [],

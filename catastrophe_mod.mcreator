@@ -3989,42 +3989,6 @@
       "path": "~/Items/Weapons/Magic Weapons"
     },
     {
-      "name": "PhantomLootTable",
-      "type": "procedure",
-      "sortid": 1755,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "phantom_loot_table",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/PhantomLootTableProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "Intelligence",
       "type": "potioneffect",
       "sortid": 1756,
@@ -18098,7 +18062,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/sliced.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "RipsawSawbladeOnEntityTickUpdate",
@@ -18148,7 +18112,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/electrocuted.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "BlossomFloraRecipe",
@@ -19229,7 +19193,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/crushed.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "LiverFailure",
@@ -19243,7 +19207,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/liver_failure.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "Impaled",
@@ -19257,7 +19221,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/impaled.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "Incinerated",
@@ -19271,7 +19235,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/incinerated.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "SplitInTwo",
@@ -19285,7 +19249,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/split_in_two.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "RingOfResilienceBaubleIsEquipped",
@@ -19537,7 +19501,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/electricity.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "ManaUsageReduction",
@@ -19563,7 +19527,7 @@
           "src/main/resources/data/catastrophe_mod/damage_type/bleed.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Damage Types"
     },
     {
       "name": "ManaCostDisplay",
@@ -20617,8 +20581,8 @@
       "registry_name": "accursed_soul",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/AccursedSoulEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AccursedSoulRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AccursedSoulRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/AccursedSoulEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -21355,6 +21319,10 @@
           "src/main/java/net/mcreator/catastrophemod/procedures/AccursedSoulProjectileHitsLivingEntityProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -26165,48 +26133,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "UnparriableProcedure",
-      "type": "procedure",
-      "sortid": 3198,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unparriable_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/UnparriableProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "UnparriableProjectiles",
-      "type": "tag",
-      "sortid": 3197,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unparriable_projectiles",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/tags/entity_types/unparriable_projectiles.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "GuardBreakProjectiles",
       "type": "tag",
       "sortid": 3186,
@@ -26898,6 +26824,124 @@
         ]
       },
       "path": "~/Damage Types"
+    },
+    {
+      "name": "PhantomLootTable",
+      "type": "loottable",
+      "sortid": 3219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/phantom_loot_table.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "NightReaperLootTable",
+      "type": "loottable",
+      "sortid": 3220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "night_reaper_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/night_reaper.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "AccursedWitchLootTable",
+      "type": "loottable",
+      "sortid": 3221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "accursed_witch_loot_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/entities/accursed_witch.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ElectrifiedChain",
+      "type": "block",
+      "sortid": 3222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrified_chain",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/blockstates/electrified_chain.json",
+          "src/main/java/net/mcreator/catastrophemod/block/ElectrifiedChainBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/electrified_chain.json",
+          "src/main/resources/assets/catastrophe_mod/models/block/electrified_chain.json"
+        ]
+      },
+      "path": "~/Items/Blocks"
+    },
+    {
+      "name": "ElectrifiedChainEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 3223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrified_chain_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedChainEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Blocks"
+    },
+    {
+      "name": "UnparriableProjectiles",
+      "type": "tag",
+      "sortid": 3224,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "unparriable_projectiles",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/tags/entity_types/unparriable_projectiles.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "UnparriableProcedure",
+      "type": "procedure",
+      "sortid": 3225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unparriable_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -30230,6 +30274,7 @@
       "item.alexs_mod.blaze_wand": "Blaze Wand",
       "gui.alexs_mod.quest_book_gui.label_4_kill_the_mineral": "4. Kill The Mineral",
       "item.catastrophe_mod.moss_helmet": "§2Mossy Helmet",
+      "block.catastrophe_mod.electrified_chain": "Electrified Chain",
       "block.alexs_mod.charred_stone_stairs": "Charred Stone Stairs",
       "item.alexs_mod.bloodlust": "§8Bloodlust",
       "entity.catastrophe_mod.electrified_lightning": "Electrified Lightning",
