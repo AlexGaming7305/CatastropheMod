@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "catastrophe_mod:block/electrified_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "catastrophe_mod:block/electrified_chain"
+    },
+    "axis=z": {
+      "model": "catastrophe_mod:block/electrified_chain",
+      "x": 90
+    }
+  }
+}
