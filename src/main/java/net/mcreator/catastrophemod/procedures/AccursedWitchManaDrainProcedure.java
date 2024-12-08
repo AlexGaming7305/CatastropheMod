@@ -9,6 +9,7 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
@@ -41,50 +42,45 @@ public class AccursedWitchManaDrainProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, Entity sourceentity) {
 		if (damagesource == null || entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof AccursedWitchEntity) {
-			if (entity instanceof Player) {
-				if (damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:witch_slap")))) {
-					if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana >= 20) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.HAUNTED_GLIMMER.get()), (sourceentity.getX()), (sourceentity.getY() + 1), (sourceentity.getZ()), 20, 0.2, 0.5, 0.2, 0.1);
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")),
-										SoundSource.HOSTILE, 1, 1);
-							} else {
-								_level.playLocalSound((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")), SoundSource.HOSTILE, 1, 1,
-										false);
-							}
-						}
-						{
-							double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana - 20;
-							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Mana = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
-						sourceentity.getPersistentData().putBoolean("accursed_witch_mana_drain_attack", true);
-					} else if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana < 20
-							&& (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana != 0) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.HAUNTED_GLIMMER.get()), (sourceentity.getX()), (sourceentity.getY() + 1), (sourceentity.getZ()), 20, 0.2, 0.5, 0.2, 0.1);
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")),
-										SoundSource.HOSTILE, 1, 1);
-							} else {
-								_level.playLocalSound((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")), SoundSource.HOSTILE, 1, 1,
-										false);
-							}
-						}
-						{
-							double _setval = 0;
-							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Mana = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
+		if (sourceentity instanceof AccursedWitchEntity && damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:witch_slap"))) && entity instanceof Player
+				&& !(entity instanceof LivingEntity _livEnt3 && _livEnt3.isBlocking())) {
+			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana >= 20) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.HAUNTED_GLIMMER.get()), (sourceentity.getX()), (sourceentity.getY() + 1), (sourceentity.getZ()), 20, 0.2, 0.5, 0.2, 0.1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")), SoundSource.HOSTILE, 1,
+								1);
+					} else {
+						_level.playLocalSound((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")), SoundSource.HOSTILE, 1, 1, false);
 					}
+				}
+				{
+					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana - 20;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Mana = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				sourceentity.getPersistentData().putBoolean("accursed_witch_mana_drain_attack", true);
+			} else if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana < 20
+					&& (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana != 0) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.HAUNTED_GLIMMER.get()), (sourceentity.getX()), (sourceentity.getY() + 1), (sourceentity.getZ()), 20, 0.2, 0.5, 0.2, 0.1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")), SoundSource.HOSTILE, 1,
+								1);
+					} else {
+						_level.playLocalSound((sourceentity.getX()), (sourceentity.getY()), (sourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mana_is_drained")), SoundSource.HOSTILE, 1, 1, false);
+					}
+				}
+				{
+					double _setval = 0;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Mana = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 		}

@@ -20581,8 +20581,8 @@
       "registry_name": "accursed_soul",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/AccursedSoulEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AccursedSoulRenderer.java"
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AccursedSoulRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/AccursedSoulEntity.java"
         ]
       },
       "path": "~/Projectiles"
@@ -21319,6 +21319,10 @@
           "src/main/java/net/mcreator/catastrophemod/procedures/AccursedSoulProjectileHitsLivingEntityProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -26129,41 +26133,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "UnparriableProcedure",
-      "type": "procedure",
-      "sortid": 3198,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unparriable_procedure",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "UnparriableProjectiles",
-      "type": "tag",
-      "sortid": 3197,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "unparriable_projectiles",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/tags/entity_types/unparriable_projectiles.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "GuardBreakProjectiles",
       "type": "tag",
       "sortid": 3186,
@@ -26938,6 +26907,41 @@
         ]
       },
       "path": "~/Items/Blocks"
+    },
+    {
+      "name": "UnparriableProjectiles",
+      "type": "tag",
+      "sortid": 3224,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "unparriable_projectiles",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/tags/entity_types/unparriable_projectiles.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "UnparriableProcedure",
+      "type": "procedure",
+      "sortid": 3225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unparriable_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [

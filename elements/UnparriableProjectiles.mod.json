@@ -12,6 +12,12 @@
       },
       {
         "value": "CUSTOM:ElectricSparkProjectile"
+      },
+      {
+        "value": "EntityArrow"
+      },
+      {
+        "value": "EntityFireball"
       }
     ],
     "biomes": [],

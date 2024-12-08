@@ -30,7 +30,7 @@ public class SporeZombieProcedureProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof SporeZombieEntity) {
+		if (sourceentity instanceof SporeZombieEntity && !(entity instanceof LivingEntity _livEnt1 && _livEnt1.isBlocking())) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.AMATOXIN.get(), 100, 0));
 		}
