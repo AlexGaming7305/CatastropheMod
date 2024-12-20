@@ -260,6 +260,10 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModBlocks.ELECTRIFIED_CHAIN.get().asItem());
 		}
 
+		if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+			tabData.accept(CatastropheModModBlocks.OIL.get().asItem());
+		}
+
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(CatastropheModModItems.NATURITE_SHIELD.get());
 		}

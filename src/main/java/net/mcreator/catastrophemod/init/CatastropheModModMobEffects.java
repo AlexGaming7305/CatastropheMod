@@ -14,6 +14,7 @@ import net.mcreator.catastrophemod.potion.VulnerabilityMobEffect;
 import net.mcreator.catastrophemod.potion.RepulsionMobEffect;
 import net.mcreator.catastrophemod.potion.PrickedMobEffect;
 import net.mcreator.catastrophemod.potion.PhaseDashCooldownMobEffect;
+import net.mcreator.catastrophemod.potion.OiledMobEffect;
 import net.mcreator.catastrophemod.potion.ManaSicknessMobEffect;
 import net.mcreator.catastrophemod.potion.LightningSlamCooldownMobEffect;
 import net.mcreator.catastrophemod.potion.IntelligenceMobEffect;
@@ -54,4 +55,5 @@ public class CatastropheModModMobEffects {
 	public static final RegistryObject<MobEffect> BRASS_ATTACK_SPEED = REGISTRY.register("brass_attack_speed", () -> new BrassAttackSpeedMobEffect());
 	public static final RegistryObject<MobEffect> LIGHTNING_SLAM_COOLDOWN = REGISTRY.register("lightning_slam_cooldown", () -> new LightningSlamCooldownMobEffect());
 	public static final RegistryObject<MobEffect> HUNTER_STEALTH_COOLDOWN = REGISTRY.register("hunter_stealth_cooldown", () -> new HunterStealthCooldownMobEffect());
+	public static final RegistryObject<MobEffect> OILED = REGISTRY.register("oiled", () -> new OiledMobEffect());
 }

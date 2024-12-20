@@ -32,6 +32,7 @@ import net.mcreator.catastrophemod.block.PolishedCharredStoneStairsBlock;
 import net.mcreator.catastrophemod.block.PolishedCharredStoneSlabBlock;
 import net.mcreator.catastrophemod.block.PolishedCharredStoneBlock;
 import net.mcreator.catastrophemod.block.PinkSeaShellBlock;
+import net.mcreator.catastrophemod.block.OilBlock;
 import net.mcreator.catastrophemod.block.NatureiteOreBlock;
 import net.mcreator.catastrophemod.block.NatureiteBlockBlock;
 import net.mcreator.catastrophemod.block.MoltenCharredBricksStairsBlock;
@@ -138,4 +139,5 @@ public class CatastropheModModBlocks {
 	public static final RegistryObject<Block> RUSTY_PLATING_SLAB = REGISTRY.register("rusty_plating_slab", () -> new RustyPlatingSlabBlock());
 	public static final RegistryObject<Block> RUSTY_PLATING_STAIRS = REGISTRY.register("rusty_plating_stairs", () -> new RustyPlatingStairsBlock());
 	public static final RegistryObject<Block> ELECTRIFIED_CHAIN = REGISTRY.register("electrified_chain", () -> new ElectrifiedChainBlock());
+	public static final RegistryObject<Block> OIL = REGISTRY.register("oil", () -> new OilBlock());
 }
