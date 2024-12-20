@@ -1,11 +1,11 @@
 {
-  "name": "catastrophe_mod:lighthouse_basement/forge",
+  "name": "catastrophe_mod:lighthouse_basement/forge_fallback",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 50,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouseforgeentrance",
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouse_forge",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",

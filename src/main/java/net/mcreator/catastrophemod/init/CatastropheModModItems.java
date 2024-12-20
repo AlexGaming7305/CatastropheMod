@@ -533,6 +533,7 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> DOUBLE_BARRELED_SHOTGUN = REGISTRY.register("double_barreled_shotgun", () -> new DoubleBarreledShotgunItem());
 	public static final RegistryObject<Item> SAWED_OFF_SHOTGUN = REGISTRY.register("sawed_off_shotgun", () -> new SawedOffShotgunItem());
 	public static final RegistryObject<Item> NIGHT_REAPER_SPAWN_EGG = REGISTRY.register("night_reaper_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.NIGHT_REAPER, -14869219, -7070506, new Item.Properties()));
+	public static final RegistryObject<Item> ELECTRIFIED_CHAIN = block(CatastropheModModBlocks.ELECTRIFIED_CHAIN);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

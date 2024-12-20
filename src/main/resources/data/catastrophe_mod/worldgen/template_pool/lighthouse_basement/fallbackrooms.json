@@ -65,7 +65,7 @@
     {
       "weight": 5,
       "element": {
-        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouseengineeringroom",
+        "location": "catastrophe_mod:lighthouse_basement/rooms/lighthouse_ritual_room",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element",

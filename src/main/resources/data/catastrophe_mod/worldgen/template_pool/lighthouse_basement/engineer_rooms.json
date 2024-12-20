@@ -1,0 +1,76 @@
+{
+  "name": "catastrophe_mod:lighthouse_basement/engineer_rooms",
+  "fallback": "catastrophe_mod:lighthouse_basement/engineer_rooms_fallback",
+  "elements": [
+    {
+      "weight": 20,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_engineer_hallway",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_goobet_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 15,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_engineer_stairwell",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_engineer_storage_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 15,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_observing_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_design_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_generator_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
+    }
+  ]
+}

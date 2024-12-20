@@ -871,5 +871,23 @@
         "stream": false
       }
     ]
+  },
+  "lighthouse_impact_ambience": {
+    "subtitle": "subtitles.lighthouse_impact_ambience",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:lighthouse_impact_ambience",
+        "stream": false
+      }
+    ]
+  },
+  "electric_buzzing": {
+    "subtitle": "subtitles.electric_buzzing",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:electric_buzzing",
+        "stream": false
+      }
+    ]
   }
 }

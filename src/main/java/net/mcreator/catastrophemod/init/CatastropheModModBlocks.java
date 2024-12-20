@@ -42,6 +42,7 @@ import net.mcreator.catastrophemod.block.LighthousePowerBlockBlock;
 import net.mcreator.catastrophemod.block.LighthouseLanternBlockBlock;
 import net.mcreator.catastrophemod.block.FlowerOfAfflictionBlock;
 import net.mcreator.catastrophemod.block.ElectrifiedDiodeBlock;
+import net.mcreator.catastrophemod.block.ElectrifiedChainBlock;
 import net.mcreator.catastrophemod.block.DriedRosxiteOreBlock;
 import net.mcreator.catastrophemod.block.DepthstoneStairsBlock;
 import net.mcreator.catastrophemod.block.DepthstoneSlabBlock;
@@ -136,4 +137,5 @@ public class CatastropheModModBlocks {
 	public static final RegistryObject<Block> RUSTY_PLATING = REGISTRY.register("rusty_plating", () -> new RustyPlatingBlock());
 	public static final RegistryObject<Block> RUSTY_PLATING_SLAB = REGISTRY.register("rusty_plating_slab", () -> new RustyPlatingSlabBlock());
 	public static final RegistryObject<Block> RUSTY_PLATING_STAIRS = REGISTRY.register("rusty_plating_stairs", () -> new RustyPlatingStairsBlock());
+	public static final RegistryObject<Block> ELECTRIFIED_CHAIN = REGISTRY.register("electrified_chain", () -> new ElectrifiedChainBlock());
 }

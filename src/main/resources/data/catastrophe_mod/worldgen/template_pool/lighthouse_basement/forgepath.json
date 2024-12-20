@@ -1,0 +1,24 @@
+{
+  "name": "catastrophe_mod:lighthouse_basement/forgepath",
+  "fallback": "catastrophe_mod:lighthouse_basement/forge_fallback",
+  "elements": [
+    {
+      "weight": 50,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouse_forge_hallway",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+	{	
+      "weight": 50,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/forgepath/lighthouse_forge_stairwell",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

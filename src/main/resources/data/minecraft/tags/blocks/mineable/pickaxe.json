@@ -47,6 +47,7 @@
     "catastrophe_mod:shale_bricks_stairs",
     "catastrophe_mod:rusty_plating",
     "catastrophe_mod:rusty_plating_slab",
-    "catastrophe_mod:rusty_plating_stairs"
+    "catastrophe_mod:rusty_plating_stairs",
+    "catastrophe_mod:electrified_chain"
   ]
 }

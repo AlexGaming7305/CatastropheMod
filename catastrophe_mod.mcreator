@@ -23043,9 +23043,9 @@
       "registry_name": "lighthouse",
       "metadata": {
         "files": [
-          "src/main/resources/data/catastrophe_mod/worldgen/structure_set/lighthouse.json",
           "src/main/resources/data/catastrophe_mod/worldgen/template_pool/lighthouse.json",
-          "src/main/resources/data/catastrophe_mod/worldgen/structure/lighthouse.json"
+          "src/main/resources/data/catastrophe_mod/worldgen/structure/lighthouse.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/structure_set/lighthouse.json"
         ]
       },
       "path": "~/Structures"
@@ -26877,9 +26877,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/catastrophe_mod/blockstates/electrified_chain.json",
-          "src/main/java/net/mcreator/catastrophemod/block/ElectrifiedChainBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/block/electrified_chain.json",
           "src/main/resources/assets/catastrophe_mod/models/item/electrified_chain.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/electrified_chain.json"
+          "src/main/java/net/mcreator/catastrophemod/block/ElectrifiedChainBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -26939,6 +26939,64 @@
             "name": "entity",
             "type": "entity"
           }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "ElectrifiedChainsBuzzing",
+      "type": "procedure",
+      "sortid": 3226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrified_chains_buzzing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/ElectrifiedChainsBuzzingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "LighthouseAmbience",
+      "type": "procedure",
+      "sortid": 3227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighthouse_ambience",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/LighthouseAmbienceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "LighthouseEngineerBarrel",
+      "type": "loottable",
+      "sortid": 3228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighthouse_engineer_barrel",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/chests/lighthouse_engineer_barrel.json"
         ]
       },
       "path": "~/Misc"
@@ -28604,6 +28662,22 @@
       ],
       "category": "player",
       "subtitle": "Double-Barreled Shotgun shoots"
+    },
+    {
+      "name": "lighthouse_impact_ambience",
+      "files": [
+        "lighthouse_impact_ambience"
+      ],
+      "category": "hostile",
+      "subtitle": "Lighthouse impact ambience"
+    },
+    {
+      "name": "electric_buzzing",
+      "files": [
+        "electric_buzzing"
+      ],
+      "category": "block",
+      "subtitle": "Electric buzzing"
     }
   ],
   "language_map": {
@@ -28649,6 +28723,7 @@
       "block.alexs_mod.dungeon_bricks_hidden_door": "Dungeon Bricks Hidden Door",
       "item.alexs_mod.sigilof_creation": "Sigil of Creation",
       "item.alexs_mod.conos_spawn_egg": "Conos Spawn Egg",
+      "subtitles.lighthouse_impact_ambience": "Lighthouse impact ambience",
       "gui.alexs_mod.volcanic_peaks_enter.button_enter": "Enter",
       "block.alexs_mod.tungsten_ore": "Tungsten Ore",
       "gui.alexs_mod.hellion_note_sheet_page.label_blast_etc": " blast, etc.)",
@@ -28709,6 +28784,7 @@
       "item.alexs_mod.firefall_ingot": "§cFirefall Ingot",
       "effect.alexs_mod.dash_cooldown": "Dash_Cooldown",
       "item.catastrophe_mod.nailgun": "Nailgun",
+      "subtitles.electrified_chain_buzzing": "Electrified chain buzzing",
       "item.alexs_mod.landmine": "Landmine",
       "effect.alexs_mod.pricked": "Pricked",
       "item.catastrophe_mod.thorn_sword": "§2Thorn Sword",
@@ -29027,6 +29103,7 @@
       "effect.alexs_mod.armageddon": "Armageddon",
       "item.alexs_mod.sea_spear": "Sea Spear",
       "item.catastrophe_mod.cursed_armor_chestplate": "§5Cursed Robes",
+      "subtitles.electric_buzzing": "Electric buzzing",
       "subtitles.something_is_indicated": "Something is indicated",
       "item.alexs_mod.the_creator_loot_bundle": "The Creator Loot Bundle",
       "item.alexs_mod.hell_whip": "Hell Whip",
@@ -30016,6 +30093,7 @@
       "item.catastrophe_mod.storm_arrow": "§bStorm Arrow",
       "item.catastrophe_mod.diamond_detonation_bomb_spawn_egg": "Diamond Detonation Bomb Spawn Egg",
       "attribute.catastrophe_mod.magic_damage": "Magic Damage",
+      "subtitles.electrified_chain_buzzes": "Electrified chain buzzes",
       "death.attack.witch_slap": "%1$s was witch slapped",
       "subtitles.alexs_mod_ost_orbital_barrage": "Alex\u0027s Mod OST: Orbital Barrage",
       "item.alexs_mod.sea_crystal_shard": "Sea Crystal Shard",
