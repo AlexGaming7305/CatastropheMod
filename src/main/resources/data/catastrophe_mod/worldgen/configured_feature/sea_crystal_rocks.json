@@ -6,12 +6,17 @@
         "feature": {
           "type": "catastrophe_mod:structure_feature",
           "config": {
-            "structure": "catastrophe_mod:sea_crystal_rock_1",
+            "structure": "catastrophe_mod:sea_crystal_round_rock_1",
             "random_rotation": true,
             "random_mirror": true,
             "ignored_blocks": [
               "minecraft:structure_block",
               "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -2,
+              0
             ]
           }
         },
@@ -21,12 +26,17 @@
         "feature": {
           "type": "catastrophe_mod:structure_feature",
           "config": {
-            "structure": "catastrophe_mod:sea_crystal_rock_2",
+            "structure": "catastrophe_mod:sea_crystal_round_rock_2",
             "random_rotation": true,
             "random_mirror": true,
             "ignored_blocks": [
               "minecraft:structure_block",
               "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -2,
+              0
             ]
           }
         },
@@ -36,12 +46,17 @@
         "feature": {
           "type": "catastrophe_mod:structure_feature",
           "config": {
-            "structure": "catastrophe_mod:sea_crystal_rock_3",
+            "structure": "catastrophe_mod:sea_crystal_round_rock_3",
             "random_rotation": true,
             "random_mirror": true,
             "ignored_blocks": [
               "minecraft:structure_block",
               "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -2,
+              0
             ]
           }
         },
@@ -51,12 +66,17 @@
         "feature": {
           "type": "catastrophe_mod:structure_feature",
           "config": {
-            "structure": "catastrophe_mod:sea_crystal_rock_4",
+            "structure": "catastrophe_mod:sea_crystal_spike_rock_1",
             "random_rotation": true,
             "random_mirror": true,
             "ignored_blocks": [
               "minecraft:structure_block",
               "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -2,
+              0
             ]
           }
         },
@@ -66,12 +86,37 @@
         "feature": {
           "type": "catastrophe_mod:structure_feature",
           "config": {
-            "structure": "catastrophe_mod:sea_crystal_rock_5",
+            "structure": "catastrophe_mod:sea_crystal_spike_rock_2",
             "random_rotation": true,
             "random_mirror": true,
             "ignored_blocks": [
               "minecraft:structure_block",
               "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -2,
+              0
+            ]
+          }
+        },
+        "placement": []
+      },
+      {
+        "feature": {
+          "type": "catastrophe_mod:structure_feature",
+          "config": {
+            "structure": "catastrophe_mod:sea_crystal_spike_rock_3",
+            "random_rotation": true,
+            "random_mirror": true,
+            "ignored_blocks": [
+              "minecraft:structure_block",
+              "minecraft:air"
+            ],
+            "offset": [
+              0,
+              -2,
+              0
             ]
           }
         },

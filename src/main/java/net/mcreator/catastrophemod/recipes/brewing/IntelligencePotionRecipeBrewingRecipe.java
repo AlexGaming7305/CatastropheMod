@@ -15,7 +15,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 
 import net.mcreator.catastrophemod.init.CatastropheModModPotions;
-import net.mcreator.catastrophemod.init.CatastropheModModItems;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class IntelligencePotionRecipeBrewingRecipe implements IBrewingRecipe {
@@ -32,7 +31,7 @@ public class IntelligencePotionRecipeBrewingRecipe implements IBrewingRecipe {
 
 	@Override
 	public boolean isIngredient(ItemStack ingredient) {
-		return Ingredient.of(new ItemStack(CatastropheModModItems.STAR.get())).test(ingredient);
+		return Ingredient.of(new ItemStack(Items.LAPIS_LAZULI)).test(ingredient);
 	}
 
 	@Override

@@ -9,10 +9,10 @@ import net.mcreator.catastrophemod.entity.ThornTentacleEntity;
 import net.mcreator.catastrophemod.entity.ThornInfestedArmorEntity;
 import net.mcreator.catastrophemod.entity.SwordspinEntity;
 import net.mcreator.catastrophemod.entity.SurgeBreakerEntity;
+import net.mcreator.catastrophemod.entity.StarlitLacewingMinionEntity;
 import net.mcreator.catastrophemod.entity.StarlitLacewingEntity;
 import net.mcreator.catastrophemod.entity.SporeZombieEntity;
 import net.mcreator.catastrophemod.entity.SilkMothEntity;
-import net.mcreator.catastrophemod.entity.ShootingStarEntity;
 import net.mcreator.catastrophemod.entity.ShadowflameSpearsEntity;
 import net.mcreator.catastrophemod.entity.ShadeEntity;
 import net.mcreator.catastrophemod.entity.SepulcherEntity;
@@ -317,13 +317,6 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof ShootingStarEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
 			if (event.getEntity() instanceof DiamondDetonationBombEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
@@ -388,6 +381,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof NightReaperEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof StarlitLacewingMinionEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "catastrophe_mod:storm_arrow",
-    "catastrophe_mod:accursed_arrow",
-    "catastrophe_mod:starburst_arrow"
+    "catastrophe_mod:accursed_arrow"
   ]
 }

@@ -19,7 +19,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.StarlitLacewingEntity;
+import net.mcreator.catastrophemod.entity.StarlitLacewingMinionEntity;
 
 import java.util.Comparator;
 
@@ -38,7 +38,7 @@ public class StarlitLacewingStaffRightclickedProcedure {
 					});
 				}
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = CatastropheModModEntities.STARLIT_LACEWING.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = CatastropheModModEntities.STARLIT_LACEWING_MINION.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 						entityToSpawn.setDeltaMovement(0, 0, 0);
 					}
@@ -54,17 +54,17 @@ public class StarlitLacewingStaffRightclickedProcedure {
 					_player.getCooldowns().addCooldown(itemstack.getItem(), 20);
 			}
 		} else if (entity.isShiftKeyDown()) {
-			if (((Entity) world.getEntitiesOfClass(StarlitLacewingEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
+			if (((Entity) world.getEntitiesOfClass(StarlitLacewingMinionEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
 				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 				}
 			}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _tamIsTamedBy && entity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) {
-				if (!((Entity) world.getEntitiesOfClass(StarlitLacewingEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
+				if (!((Entity) world.getEntitiesOfClass(StarlitLacewingMinionEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
 					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 					}
 				}.compareDistOf(x, y, z)).findFirst().orElse(null)).level().isClientSide())
-					((Entity) world.getEntitiesOfClass(StarlitLacewingEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
+					((Entity) world.getEntitiesOfClass(StarlitLacewingMinionEntity.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 						}

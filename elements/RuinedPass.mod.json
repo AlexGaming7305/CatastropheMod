@@ -22,7 +22,7 @@
     "separation": 20,
     "restrictionBiomes": [
       {
-        "value": "#is_ocean"
+        "value": "#is_deep_ocean"
       }
     ],
     "surfaceDetectionType": "OCEAN_FLOOR",

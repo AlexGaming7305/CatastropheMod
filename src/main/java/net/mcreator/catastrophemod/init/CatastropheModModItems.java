@@ -48,9 +48,6 @@ import net.mcreator.catastrophemod.item.StormBowItem;
 import net.mcreator.catastrophemod.item.StormArrowItem;
 import net.mcreator.catastrophemod.item.StoneSpearItem;
 import net.mcreator.catastrophemod.item.StarlitLacewingStaffItem;
-import net.mcreator.catastrophemod.item.StarlightScepterItem;
-import net.mcreator.catastrophemod.item.StarburstArrowItem;
-import net.mcreator.catastrophemod.item.StarItem;
 import net.mcreator.catastrophemod.item.StaffofVitalityItem;
 import net.mcreator.catastrophemod.item.StaffOfThornsItem;
 import net.mcreator.catastrophemod.item.SporesplosionItem;
@@ -439,7 +436,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> MUSIC_DISC_SPARK_OF_A_SHADOW = REGISTRY.register("music_disc_spark_of_a_shadow", () -> new MusicDiscSparkOfAShadowItem());
 	public static final RegistryObject<Item> CATASTROPHE_MOD_ICON = REGISTRY.register("catastrophe_mod_icon", () -> new CatastropheModIconItem());
 	public static final RegistryObject<Item> NIGHTFALLS_DEMISE = REGISTRY.register("nightfalls_demise", () -> new NightfallsDemiseItem());
-	public static final RegistryObject<Item> STAR = REGISTRY.register("star", () -> new StarItem());
 	public static final RegistryObject<Item> MANA_STAR = REGISTRY.register("mana_star", () -> new ManaStarItem());
 	public static final RegistryObject<Item> LESSER_MANA_POTION = REGISTRY.register("lesser_mana_potion", () -> new LesserManaPotionItem());
 	public static final RegistryObject<Item> MANA_POTION = REGISTRY.register("mana_potion", () -> new ManaPotionItem());
@@ -480,6 +476,7 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> ATLANTIC_SEA_NETTLE_ITEM = REGISTRY.register("atlantic_sea_nettle_item", () -> new AtlanticSeaNettleItemItem());
 	public static final RegistryObject<Item> HAUNTED_MIRROR = REGISTRY.register("haunted_mirror", () -> new HauntedMirrorItem());
 	public static final RegistryObject<Item> WOODEN_BOW = REGISTRY.register("wooden_bow", () -> new WoodenBowItem());
+	public static final RegistryObject<Item> STARLIT_LACEWING_SPAWN_EGG = REGISTRY.register("starlit_lacewing_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.STARLIT_LACEWING, -8399617, -7113985, new Item.Properties()));
 	public static final RegistryObject<Item> STARLIT_LACEWING_STAFF = REGISTRY.register("starlit_lacewing_staff", () -> new StarlitLacewingStaffItem());
 	public static final RegistryObject<Item> SPINACH_LEAVES = REGISTRY.register("spinach_leaves", () -> new SpinachLeavesItem());
 	public static final RegistryObject<Item> SPINACH_SOUP = REGISTRY.register("spinach_soup", () -> new SpinachSoupItem());
@@ -512,7 +509,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> ELECTRIFIED_ARMOR_CHESTPLATE = REGISTRY.register("electrified_armor_chestplate", () -> new ElectrifiedArmorItem.Chestplate());
 	public static final RegistryObject<Item> ELECTRIFIED_ARMOR_LEGGINGS = REGISTRY.register("electrified_armor_leggings", () -> new ElectrifiedArmorItem.Leggings());
 	public static final RegistryObject<Item> ELECTRIFIED_ARMOR_BOOTS = REGISTRY.register("electrified_armor_boots", () -> new ElectrifiedArmorItem.Boots());
-	public static final RegistryObject<Item> STARLIGHT_SCEPTER = REGISTRY.register("starlight_scepter", () -> new StarlightScepterItem());
 	public static final RegistryObject<Item> SHALE = block(CatastropheModModBlocks.SHALE);
 	public static final RegistryObject<Item> SHALE_BRICKS = block(CatastropheModModBlocks.SHALE_BRICKS);
 	public static final RegistryObject<Item> CRACKED_SHALE_BRICKS = block(CatastropheModModBlocks.CRACKED_SHALE_BRICKS);
@@ -522,7 +518,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> SHALE_STAIRS = block(CatastropheModModBlocks.SHALE_STAIRS);
 	public static final RegistryObject<Item> SHALE_BRICKS_STAIRS = block(CatastropheModModBlocks.SHALE_BRICKS_STAIRS);
 	public static final RegistryObject<Item> ACCURSED_ARROW = REGISTRY.register("accursed_arrow", () -> new AccursedArrowItem());
-	public static final RegistryObject<Item> STARBURST_ARROW = REGISTRY.register("starburst_arrow", () -> new StarburstArrowItem());
 	public static final RegistryObject<Item> NAILGUN = REGISTRY.register("nailgun", () -> new NailgunItem());
 	public static final RegistryObject<Item> SCRAP_ROUND = REGISTRY.register("scrap_round", () -> new ScrapRoundItem());
 	public static final RegistryObject<Item> COPPER_ROUND = REGISTRY.register("copper_round", () -> new CopperRoundItem());

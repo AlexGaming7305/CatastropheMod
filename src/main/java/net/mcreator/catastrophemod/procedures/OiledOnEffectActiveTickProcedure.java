@@ -1,8 +1,9 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 
 public class OiledOnEffectActiveTickProcedure {
 	public static void execute(Entity entity) {
@@ -10,8 +11,7 @@ public class OiledOnEffectActiveTickProcedure {
 			return;
 		boolean burning_oil = false;
 		if (entity.isOnFire() && burning_oil == false) {
-			entity.setSecondsOnFire(
-					(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CatastropheModModMobEffects.DELETED_MOD_ELEMENT.get()) ? _livEnt.getEffect(CatastropheModModMobEffects.DELETED_MOD_ELEMENT.get()).getDuration() : 0) / 20));
+			entity.setSecondsOnFire((int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CatastropheModModMobEffects.OILED.get()) ? _livEnt.getEffect(CatastropheModModMobEffects.OILED.get()).getDuration() : 0) / 20));
 			burning_oil = true;
 		}
 	}

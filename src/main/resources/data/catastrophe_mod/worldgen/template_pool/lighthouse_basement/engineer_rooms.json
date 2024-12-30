@@ -71,6 +71,16 @@
         "element_type": "minecraft:single_pool_element",
         "terrain_adaptation": "none"
       }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "catastrophe_mod:lighthouse_basement/engineer_rooms/lighthouse_vault_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "terrain_adaptation": "none"
+      }
     }
   ]
 }

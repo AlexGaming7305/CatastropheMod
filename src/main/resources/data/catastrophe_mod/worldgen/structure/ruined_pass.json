@@ -10,6 +10,6 @@
     "absolute": 0
   },
   "project_start_to_heightmap": "OCEAN_FLOOR",
-  "biomes": "#is_ocean",
+  "biomes": "#is_deep_ocean",
   "use_expansion_hack": false
 }

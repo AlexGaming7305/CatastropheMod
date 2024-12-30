@@ -889,5 +889,14 @@
         "stream": false
       }
     ]
+  },
+  "oil_ignites": {
+    "subtitle": "subtitles.oil_ignites",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:oil_ignites",
+        "stream": false
+      }
+    ]
   }
 }

@@ -15793,21 +15793,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "Star",
-      "type": "item",
-      "sortid": 2548,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/star.json",
-          "src/main/java/net/mcreator/catastrophemod/item/StarItem.java"
-        ]
-      },
-      "path": "~/Items/Miscellaneous"
-    },
-    {
       "name": "ManaStar",
       "type": "item",
       "sortid": 2549,
@@ -15821,34 +15806,6 @@
         ]
       },
       "path": "~/Items/Miscellaneous"
-    },
-    {
-      "name": "ManaStarRecipe",
-      "type": "recipe",
-      "sortid": 2550,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_star_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/mana_star_recipe.json"
-        ]
-      },
-      "path": "~/Items/Miscellaneous"
-    },
-    {
-      "name": "LesserManaPotionRecipe",
-      "type": "recipe",
-      "sortid": 2552,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lesser_mana_potion_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/lesser_mana_potion_recipe.json"
-        ]
-      },
-      "path": "~/Items/Food"
     },
     {
       "name": "LesserManaPotion",
@@ -20581,8 +20538,8 @@
       "registry_name": "accursed_soul",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/AccursedSoulRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/AccursedSoulEntity.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/AccursedSoulEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/AccursedSoulRenderer.java"
         ]
       },
       "path": "~/Projectiles"
@@ -20658,42 +20615,6 @@
         ]
       },
       "path": "~/Items/Weapons/Magic Weapons"
-    },
-    {
-      "name": "ShootingStarOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 2950,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shooting_star_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ShootingStarOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Entities"
     },
     {
       "name": "StarrySparkle",
@@ -20863,30 +20784,6 @@
         ]
       },
       "path": "~/Potion Effects"
-    },
-    {
-      "name": "ShootingStarSpawning",
-      "type": "procedure",
-      "sortid": 2952,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shooting_star_spawning",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ShootingStarSpawningProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
     },
     {
       "name": "CursedArmorActive",
@@ -21101,56 +20998,6 @@
         ]
       },
       "path": "~/Potion Effects"
-    },
-    {
-      "name": "StarlitLacewingStaffRecipe",
-      "type": "recipe",
-      "sortid": 2940,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starlit_lacewing_staff_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/starlit_lacewing_staff_recipe.json"
-        ]
-      },
-      "path": "~/Items/Weapons/Summoner Weapons"
-    },
-    {
-      "name": "StarlitLacewingOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 2934,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starlit_lacewing_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StarlitLacewingOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Minions"
     },
     {
       "name": "SpearMasteryCrestFix",
@@ -21550,12 +21397,14 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/catastrophemod/entity/StarlitLacewingEntity.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/starlit_lacewing_spawn_egg.json",
           "src/main/java/net/mcreator/catastrophemod/client/renderer/StarlitLacewingRenderer.java",
           "src/main/java/net/mcreator/catastrophemod/entity/model/StarlitLacewingModel.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/layer/StarlitLacewingLayer.java"
+          "src/main/java/net/mcreator/catastrophemod/entity/layer/StarlitLacewingLayer.java",
+          "src/main/resources/data/catastrophe_mod/forge/biome_modifier/starlit_lacewing_biome_modifier.json"
         ]
       },
-      "path": "~/Minions"
+      "path": "~/Entities"
     },
     {
       "name": "RockSpikes",
@@ -21603,23 +21452,6 @@
         ]
       },
       "path": "~/Items/Weapons/Ranged Weapons"
-    },
-    {
-      "name": "ShootingStar",
-      "type": "animatedentity",
-      "sortid": 2951,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shooting_star",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/entity/ShootingStarEntity.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/layer/ShootingStarLayer.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/ShootingStarRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/model/ShootingStarModel.java"
-        ]
-      },
-      "path": "~/Entities"
     },
     {
       "name": "HauntedMirrorRecipe",
@@ -22465,22 +22297,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -22501,6 +22317,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -23092,20 +22912,6 @@
         ]
       },
       "path": "~/Items/Miscellaneous"
-    },
-    {
-      "name": "ManaPotionRecipe",
-      "type": "recipe",
-      "sortid": 3044,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_potion_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/mana_potion_recipe.json"
-        ]
-      },
-      "path": "~/Items/Food"
     },
     {
       "name": "WoodenKatanaPropertyValueProvider",
@@ -24729,59 +24535,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "StarlightScepter",
-      "type": "item",
-      "sortid": 3124,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starlight_scepter",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/StarlightScepterItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/starlight_scepter.json"
-        ]
-      },
-      "path": "~/Items/Weapons/Magic Weapons"
-    },
-    {
-      "name": "StarlightScepterRecipe",
-      "type": "recipe",
-      "sortid": 3125,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starlight_scepter_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/starlight_scepter_recipe.json"
-        ]
-      },
-      "path": "~/Items/Weapons/Magic Weapons"
-    },
-    {
-      "name": "StarlightScepterRightclicked",
-      "type": "procedure",
-      "sortid": 3126,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starlight_scepter_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StarlightScepterRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Weapons/Magic Weapons"
-    },
-    {
       "name": "Shale",
       "type": "block",
       "sortid": 3127,
@@ -25171,90 +24924,6 @@
         ]
       },
       "path": "~/Potion Effects"
-    },
-    {
-      "name": "StarburstArrowProjectileProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 3150,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starburst_arrow_projectile_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StarburstArrowProjectileProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "StarburstArrowProjectile",
-      "type": "projectile",
-      "sortid": 3152,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "starburst_arrow_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/StarburstArrowProjectileRenderer.java",
-          "src/main/java/net/mcreator/catastrophemod/entity/StarburstArrowProjectileEntity.java"
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "StarburstArrow",
-      "type": "item",
-      "sortid": 3153,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "starburst_arrow",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/StarburstArrowItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/starburst_arrow.json"
-        ]
-      },
-      "path": "~/Items/Ammunition"
-    },
-    {
-      "name": "StarburstArrowRecipe",
-      "type": "recipe",
-      "sortid": 3154,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starburst_arrow_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/starburst_arrow_recipe.json"
-        ]
-      },
-      "path": "~/Items/Ammunition"
     },
     {
       "name": "Nailgun",
@@ -26877,9 +26546,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/catastrophe_mod/blockstates/electrified_chain.json",
-          "src/main/java/net/mcreator/catastrophemod/block/ElectrifiedChainBlock.java",
+          "src/main/resources/assets/catastrophe_mod/models/block/electrified_chain.json",
           "src/main/resources/assets/catastrophe_mod/models/item/electrified_chain.json",
-          "src/main/resources/assets/catastrophe_mod/models/block/electrified_chain.json"
+          "src/main/java/net/mcreator/catastrophemod/block/ElectrifiedChainBlock.java"
         ]
       },
       "path": "~/Items/Blocks"
@@ -26930,13 +26599,16 @@
       "locked_code": false,
       "registry_name": "unparriable_procedure",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/UnparriableProcedureProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "damagesource",
             "type": "damagesource"
           },
           {
-            "name": "entity",
+            "name": "immediatesourceentity",
             "type": "entity"
           }
         ]
@@ -27071,6 +26743,214 @@
         ]
       },
       "path": "~/Items/Blocks"
+    },
+    {
+      "name": "OilUpdateTick",
+      "type": "procedure",
+      "sortid": 3230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oil_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/OilUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Blocks"
+    },
+    {
+      "name": "LighthouseEngineerChest",
+      "type": "loottable",
+      "sortid": 3231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighthouse_engineer_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/loot_tables/chests/lighthouse_engineer_chest.json"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "RuinedShrine",
+      "type": "structure",
+      "sortid": 3232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruined_shrine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/worldgen/template_pool/ruined_shrine.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/structure/ruined_shrine.json",
+          "src/main/resources/data/catastrophe_mod/worldgen/structure_set/ruined_shrine.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "StarlitLacewingMinion",
+      "type": "animatedentity",
+      "sortid": 3233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starlit_lacewing_minion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/StarlitLacewingMinionEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/layer/StarlitLacewingMinionLayer.java",
+          "src/main/java/net/mcreator/catastrophemod/entity/model/StarlitLacewingMinionModel.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/StarlitLacewingMinionRenderer.java"
+        ]
+      },
+      "path": "~/Minions"
+    },
+    {
+      "name": "StarlitLacewingMinionOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 3234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starlit_lacewing_minion_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/StarlitLacewingMinionOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minions"
+    },
+    {
+      "name": "StarlitLacewingMinionOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 3235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starlit_lacewing_minion_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/StarlitLacewingMinionOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minions"
+    },
+    {
+      "name": "StarlitLacewingNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "sortid": 3236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starlit_lacewing_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/StarlitLacewingNaturalEntitySpawningConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "StarlitLacewingRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 3237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starlit_lacewing_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/StarlitLacewingRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities"
     }
   ],
   "variable_elements": [
@@ -28749,6 +28629,14 @@
       ],
       "category": "block",
       "subtitle": "Electric buzzing"
+    },
+    {
+      "name": "oil_ignites",
+      "files": [
+        "oil_ignites"
+      ],
+      "category": "block",
+      "subtitle": "Oil ignites"
     }
   ],
   "language_map": {
@@ -28780,7 +28668,6 @@
       "subtitles.flash_bang_boom": "flash_bang_boom",
       "block.alexs_mod.laboratory_column_block": "Laboratory Column Block",
       "block.alexs_mod.overgrown_leaves": "Overgrown Leaves",
-      "item.catastrophe_mod.star": "§6Star",
       "gui.alexs_mod.aegex_5_gui.label_the_only_problem_is_that_i_dont": "The only problem is that I don\u0027t",
       "enchantment.catastrophe_mod.swift_step": "Swift Step",
       "entity.catastrophe_mod.wraith_dash": "Wraith Dash",
@@ -29288,14 +29175,13 @@
       "block.alexs_mod.wuflar_plating_stairs": "§9Wuflar Plating Stairs",
       "block.catastrophe_mod.shale_bricks_stairs": "Shale Bricks Stairs",
       "item.catastrophe_mod.heart_of_thorns": "§2Heart of Thorns",
-      "item.catastrophe_mod.starlit_lacewing_staff": "§6Starlit Lacewing Staff",
+      "item.catastrophe_mod.starlit_lacewing_staff": "§bStarlit Lacewing Staff",
       "item.catastrophe_mod.ripsaw": "§bRipsaw",
       "gui.alexs_mod.hellion_note_sheet_page.label_hellion_note_sheet": "Hellion Note Sheet",
       "item.alexs_mod.chocolate_milk": "Chocolate Milk",
       "gui.alexs_mod.aegex_1_gui.label_they_shall_be_utilized_for_my_se": "They shall be utilized for my service",
       "death.attack.split_in_two.item": "%1$s was split in two by %2$s using %3$s",
       "item.catastrophe_mod.reinforced_axe": "§7Reinforced Axe",
-      "item.catastrophe_mod.starlight_scepter": "§6Starlight Scepter",
       "item.alexs_mod.lightning_book_spark": "Lightning Book Spark",
       "subtitles.sword_clang": "sword_clang",
       "item.alexs_mod.challengers_trophy": "Challengers Trophy",
@@ -29401,7 +29287,6 @@
       "item.alexs_mod.amethyst_bomb": "Amethyst Bomb",
       "gui.alexs_mod.quest_book_gui.label_empty": "\u003d",
       "effect.alexs_mod.fall_damage_immunity": "Fall Damage Immunity",
-      "item.catastrophe_mod.starburst_arrow": "§6Starburst Arrow",
       "item.alexs_mod.mana_crystal": "Mana Crystal",
       "item.alexs_mod.natures_blessing_boots": "§2Nature\u0027s Blessing Boots",
       "entity.alexs_mod.wuflar_spider": "Wuflar Spider",
@@ -29522,7 +29407,6 @@
       "item.catastrophe_mod.hermit_crab_minion_spawn_egg": "Hermit Crab Minion Spawn Egg",
       "item.alexs_mod.spell_tome": "Spell Tome",
       "item.alexs_mod.wuflar_droid_spawn_egg": "Wuflar Droid Spawn Egg",
-      "item.catastrophe_mod.shooting_star_spawn_egg": "Shooting Star Spawn Egg",
       "item.alexs_mod.plane_carrier": "Plane Carrier",
       "block.alexs_mod.charred_bricks": "Charred Bricks",
       "subtitles.electric_shock": "Electric shock",
@@ -29532,6 +29416,7 @@
       "block.alexs_mod.small_barrel": "Small Barrel",
       "effect.alexs_mod.arm_cannon_cooldown": "Arm Cannon Cooldown",
       "death.attack.sliced.item": "%1$s was sliced in half by %2$s using %3$s",
+      "item.catastrophe_mod.starlit_lacewing_minion_spawn_egg": "Starlit Lacewing Spawn Egg",
       "enchantment.catastrophe_mod.preservation": "Preservation",
       "gui.alexs_mod.drink_menu.button_buy1": "Buy",
       "gui.alexs_mod.drink_menu.button_buy3": "Buy",
@@ -29574,6 +29459,7 @@
       "item.alexs_mod.amethyst_shard": "Amethyst Shard",
       "block.catastrophe_mod.natureite_block": "§aBlock of Naturite",
       "block.alexs_mod.dungeon_spawn_block": "Dungeon Spawn Block",
+      "subtitles.oil_ignites": "Oil ignites",
       "item.catastrophe_mod.diamond_spear": "Diamond Spear",
       "item.alexs_mod.sandstorm_surge": "Sandstorm Surge",
       "item.alexs_mod.cyborg_armor_leggings": "Cyborg Leggings",
@@ -29802,6 +29688,7 @@
       "item.alexs_mod.abyssal_diving_boots": "Abyssal Diver Boots",
       "item.alexs_mod.shell": "Shell",
       "subtitles.laser_beam": "Crystal Laser Beam",
+      "effect.catastrophe_mod.oiled": "Oiled",
       "key.alexs_mod.cyborg_dash": "Cyborg Dash",
       "item.catastrophe_mod.shroomium_helmet": "Shroomium Hat",
       "item.catastrophe_mod.blizzard": "§bBlizzard",
@@ -30080,7 +29967,6 @@
       "item.catastrophe_mod.giant_isopod_spawn_egg": "Giant Isopod Spawn Egg",
       "item.alexs_mod.kyle_spawn_egg": "Kyle Spawn Egg",
       "entity.alexs_mod.pax_penguina_friendly": "Pax Penguina Friendly",
-      "entity.catastrophe_mod.shooting_star": "Shooting Star",
       "item.alexs_mod.moss_chestplate": "§2Mossy Chestplate",
       "item.catastrophe_mod.nettle_minion_spawn_egg": "Nettle Minion Spawn Egg",
       "advancements.catastrophe.title": "Catastrophe",
@@ -30377,6 +30263,7 @@
       "item.alexs_mod.venomous_bullet": "Venomous Round",
       "item.alexs_mod.agility_mixture": "Agility Mixture",
       "subtitles.gun_clicks": "Gun clicks",
+      "block.catastrophe_mod.oil": "Oil",
       "item.catastrophe_mod.natures_blessing_leggings": "§2Nature\u0027s Blessing Leggings",
       "entity.catastrophe_mod.tia_dash": "Tia Dash",
       "item.catastrophe_mod.haunted_mirror": "§5Haunted Mirror",
@@ -30455,6 +30342,7 @@
       "item.catastrophe_mod.purified_calico_mushroom_stew": "Purified Calico Mushroom Stew",
       "entity.alexs_mod.kaylas_briliance": "§kHellion",
       "options.difficulty.violent": "Violent",
+      "entity.catastrophe_mod.starlit_lacewing_minion": "Starlit Lacewing",
       "block.alexs_mod.acid": "Acid",
       "effect.alexs_mod.amatoxin": "Amatoxin",
       "item.catastrophe_mod.thorn_bow": "§2Thorn Bow",

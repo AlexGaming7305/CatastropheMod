@@ -39,7 +39,7 @@ public class StarrySparkleParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 0.7f;
-		this.lifetime = 5;
+		this.lifetime = 7;
 		this.gravity = 0.1f;
 		this.hasPhysics = true;
 		this.xd = vx * 0.3;
@@ -67,7 +67,7 @@ public class StarrySparkleParticle extends TextureSheetParticle {
 		this.roll += this.angularVelocity;
 		this.angularVelocity += this.angularAcceleration;
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 2) % 3 + 1, 3));
+			this.setSprite(this.spriteSet.get((this.age / 2) % 4 + 1, 4));
 		}
 	}
 }

@@ -6,7 +6,7 @@ public class SilkMothSleepConditionProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (entity.getPersistentData().getBoolean("sleeping") == false && !entity.onGround()) {
+		if (entity.getPersistentData().getBoolean("sleeping") == false) {
 			return true;
 		}
 		return false;

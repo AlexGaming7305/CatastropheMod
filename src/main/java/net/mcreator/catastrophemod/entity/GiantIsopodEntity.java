@@ -199,7 +199,7 @@ public class GiantIsopodEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		GiantIsopodOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		GiantIsopodOnEntityTickUpdateProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

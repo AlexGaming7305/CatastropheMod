@@ -14,7 +14,7 @@
       "value": "POTION:AWKWARD"
     },
     "brewingIngredientStack": {
-      "value": "CUSTOM:Star"
+      "value": "Items.DYE#4"
     },
     "brewingReturnStack": {
       "value": "POTION:CUSTOM:IntelligencePotion"

@@ -7,7 +7,7 @@
     "customModelName": "Tool",
     "customProperties": {},
     "states": [],
-    "name": "§6Starlit Lacewing Staff",
+    "name": "§bStarlit Lacewing Staff",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:DarkMagic"
@@ -28,8 +28,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§aRight-click: §7Summons a §6Starlit Lacewing §7to fight for you",
-        "§aSneak + Right-click: §7Despawns the nearest §6Starlit Lacewing"
+        "§aRight-click: §7Summons a §bStarlit Lacewing §7to fight for you",
+        "§aSneak + Right-click: §7Despawns the nearest §bStarlit Lacewing"
       ]
     },
     "glowCondition": {

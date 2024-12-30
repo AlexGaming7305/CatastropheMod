@@ -122,5 +122,9 @@ public class NightfallsDemiseProjectileOnEntityTickUpdateProcedure {
 				}
 			}
 		}
+		if (nightfallsdemiseowner == null) {
+			if (!entity.level().isClientSide())
+				entity.discard();
+		}
 	}
 }

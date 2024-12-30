@@ -48,7 +48,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.HAUNTED_MIRROR.get());
 				tabData.accept(CatastropheModModItems.FORCE_MISSILES.get());
 				tabData.accept(CatastropheModModItems.THUNDERSTRIKE.get());
-				tabData.accept(CatastropheModModItems.STARLIGHT_SCEPTER.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> MELEE = REGISTRY.register("melee",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.melee")).icon(() -> new ItemStack(CatastropheModModItems.ELECTRIFIED_SWORD.get())).displayItems((parameters, tabData) -> {
@@ -193,7 +192,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.HUNTSMAN_KNIFE.get());
 				tabData.accept(CatastropheModModItems.WOODEN_BOW.get());
 				tabData.accept(CatastropheModModItems.ACCURSED_ARROW.get());
-				tabData.accept(CatastropheModModItems.STARBURST_ARROW.get());
 				tabData.accept(CatastropheModModItems.NAILGUN.get());
 				tabData.accept(CatastropheModModItems.SCRAP_ROUND.get());
 				tabData.accept(CatastropheModModItems.COPPER_ROUND.get());
@@ -302,12 +300,12 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.WITHER_SKULL_FRAGMENT.get());
 			tabData.accept(CatastropheModModItems.MUSIC_DISC_BATTLE_OF_STONE.get());
 			tabData.accept(CatastropheModModItems.MUSIC_DISC_SPARK_OF_A_SHADOW.get());
-			tabData.accept(CatastropheModModItems.STAR.get());
 			tabData.accept(CatastropheModModItems.MANA_STAR.get());
 			tabData.accept(CatastropheModModItems.CURSED_CLOTH.get());
 			tabData.accept(CatastropheModModItems.SILK_MOTH_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ANGLERFISH_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.STARLIT_LACEWING_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.VOLTBLADE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ARC_STRIKER_SPAWN_EGG.get());

@@ -119,4 +119,5 @@ public class CatastropheModModSounds {
 			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "double_barreled_shotgun_shoots")));
 	public static final RegistryObject<SoundEvent> LIGHTHOUSE_IMPACT_AMBIENCE = REGISTRY.register("lighthouse_impact_ambience", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "lighthouse_impact_ambience")));
 	public static final RegistryObject<SoundEvent> ELECTRIC_BUZZING = REGISTRY.register("electric_buzzing", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electric_buzzing")));
+	public static final RegistryObject<SoundEvent> OIL_IGNITES = REGISTRY.register("oil_ignites", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "oil_ignites")));
 }

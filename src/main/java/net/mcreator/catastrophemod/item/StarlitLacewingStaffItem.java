@@ -23,8 +23,8 @@ public class StarlitLacewingStaffItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A7aRight-click: \u00A77Summons a \u00A76Starlit Lacewing \u00A77to fight for you"));
-		list.add(Component.literal("\u00A7aSneak + Right-click: \u00A77Despawns the nearest \u00A76Starlit Lacewing"));
+		list.add(Component.literal("\u00A7aRight-click: \u00A77Summons a \u00A7bStarlit Lacewing \u00A77to fight for you"));
+		list.add(Component.literal("\u00A7aSneak + Right-click: \u00A77Despawns the nearest \u00A7bStarlit Lacewing"));
 	}
 
 	@Override

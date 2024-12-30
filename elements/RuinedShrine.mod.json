@@ -1,0 +1,32 @@
+{
+  "_fv": 57,
+  "_type": "structure",
+  "definition": {
+    "structure": "ruined_shrine",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      },
+      {
+        "value": "Blocks.FLOWING_WATER"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.WATER"
+      }
+    ],
+    "spacing": 22,
+    "separation": 21,
+    "restrictionBiomes": [
+      {
+        "value": "#is_deep_ocean"
+      }
+    ],
+    "surfaceDetectionType": "OCEAN_FLOOR",
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "UNDERGROUND_STRUCTURES"
+  }
+}
