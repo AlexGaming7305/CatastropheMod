@@ -16257,7 +16257,7 @@
       "type": "overlay",
       "sortid": 2574,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "phasing_visual_border",
       "metadata": {
         "files": [
@@ -26951,6 +26951,26 @@
         ]
       },
       "path": "~/Entities"
+    },
+    {
+      "name": "PhasingDashBorderProcedure",
+      "type": "procedure",
+      "sortid": 3238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phasing_dash_border_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/PhasingDashBorderProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -27835,6 +27855,18 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "phasing_dash_variable",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "screenshake_time",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [

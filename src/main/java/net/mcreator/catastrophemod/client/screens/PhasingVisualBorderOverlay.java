@@ -16,6 +16,7 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.catastrophemod.procedures.PhasingVisualBorderDisplayOverlayIngameProcedure;
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
@@ -42,7 +43,7 @@ public class PhasingVisualBorderOverlay {
 		RenderSystem.enableBlend();
 		RenderSystem.setShader(GameRenderer::getPositionTexShader);
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-		RenderSystem.setShaderColor(1, 1, 1, 1);
+		RenderSystem.setShaderColor(1, 1, 1, (float) (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).phasing_dash_variable);
 		if (PhasingVisualBorderDisplayOverlayIngameProcedure.execute(entity)) {
 			event.getGuiGraphics().blit(new ResourceLocation("catastrophe_mod:textures/screens/phasing_visual_border.png"), 0, 0, 0, 0, w, h, w, h);
 		}

@@ -180,6 +180,13 @@ public class ArmorSetBonusOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = 1;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.phasing_dash_variable = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:cursed_phase")), SoundSource.NEUTRAL, 1, 1);

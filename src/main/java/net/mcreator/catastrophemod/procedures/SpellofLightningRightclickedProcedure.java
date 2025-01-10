@@ -25,7 +25,6 @@ import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 import net.mcreator.catastrophemod.init.CatastropheModModAttributes;
-import net.mcreator.catastrophemod.CatastropheModMod;
 
 import java.util.List;
 import java.util.Comparator;
@@ -96,28 +95,19 @@ public class SpellofLightningRightclickedProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						{
-							double _setval = 3;
+							double _setval = (entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).intensity_timer + 3;
 							entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.intensity_timer = _setval;
 								capability.syncPlayerVariables(entityiterator);
 							});
 						}
 						{
-							boolean _setval = true;
+							double _setval = (entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).screenshake_time + 60;
 							entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.screenshake = _setval;
+								capability.screenshake_time = _setval;
 								capability.syncPlayerVariables(entityiterator);
 							});
 						}
-						CatastropheModMod.queueServerWork(40, () -> {
-							{
-								boolean _setval = false;
-								entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.screenshake = _setval;
-									capability.syncPlayerVariables(entityiterator);
-								});
-							}
-						});
 					}
 				}
 				if (world instanceof Level _level) {

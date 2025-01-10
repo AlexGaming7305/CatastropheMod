@@ -34,6 +34,13 @@ public class CursedArmorActiveProcedure {
 		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Cursed_Armor_Phasing) {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.HAUNTED_GLIMMER.get()), x, (y + 1), z, 1, 0.2, 0.5, 0.2, 0.1);
+			{
+				double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).phasing_dash_variable - 0.007;
+				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.phasing_dash_variable = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

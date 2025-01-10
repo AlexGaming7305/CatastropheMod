@@ -59,28 +59,19 @@ public class RustgunRightclickedProcedure {
 			}
 			if (itemstack.getOrCreateTag().getDouble("ammo") > 0) {
 				{
-					double _setval = 1.5;
+					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).intensity_timer + 1.5;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.intensity_timer = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 				{
-					boolean _setval = true;
+					double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).screenshake_time + 30;
 					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.screenshake = _setval;
+						capability.screenshake_time = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				CatastropheModMod.queueServerWork(10, () -> {
-					{
-						boolean _setval = false;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.screenshake = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-				});
 				if (itemstack.getItem() instanceof RustgunItem)
 					itemstack.getOrCreateTag().putString("geckoAnim", "animation.rustgun.shoot");
 				if (entity instanceof Player _player)

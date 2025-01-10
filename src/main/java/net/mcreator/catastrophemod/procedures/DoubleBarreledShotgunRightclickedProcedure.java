@@ -61,28 +61,19 @@ public class DoubleBarreledShotgunRightclickedProcedure {
 		}
 		if (itemstack.getOrCreateTag().getDouble("ammo") > 0) {
 			{
-				double _setval = 2;
+				double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).intensity_timer + 2;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.intensity_timer = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				boolean _setval = true;
+				double _setval = (entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).screenshake_time + 40;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.screenshake = _setval;
+					capability.screenshake_time = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			CatastropheModMod.queueServerWork(15, () -> {
-				{
-					boolean _setval = false;
-					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.screenshake = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			});
 			if (itemstack.getItem() instanceof DoubleBarreledShotgunItem)
 				itemstack.getOrCreateTag().putString("geckoAnim", "animation.double_barreled_shotgun.fire");
 			if (entity instanceof Player _player)

@@ -214,6 +214,8 @@ public class CatastropheModModVariables {
 				clone.shield_parry_damage = original.shield_parry_damage;
 				clone.wiresaw_active = original.wiresaw_active;
 				clone.wiresaw_loop_cooldown = original.wiresaw_loop_cooldown;
+				clone.phasing_dash_variable = original.phasing_dash_variable;
+				clone.screenshake_time = original.screenshake_time;
 			}
 		}
 
@@ -540,6 +542,8 @@ public class CatastropheModModVariables {
 		public double shield_parry_damage = 0.0;
 		public boolean wiresaw_active = false;
 		public boolean wiresaw_loop_cooldown = false;
+		public double phasing_dash_variable = 0;
+		public double screenshake_time = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -688,6 +692,8 @@ public class CatastropheModModVariables {
 			nbt.putDouble("shield_parry_damage", shield_parry_damage);
 			nbt.putBoolean("wiresaw_active", wiresaw_active);
 			nbt.putBoolean("wiresaw_loop_cooldown", wiresaw_loop_cooldown);
+			nbt.putDouble("phasing_dash_variable", phasing_dash_variable);
+			nbt.putDouble("screenshake_time", screenshake_time);
 			return nbt;
 		}
 
@@ -833,6 +839,8 @@ public class CatastropheModModVariables {
 			shield_parry_damage = nbt.getDouble("shield_parry_damage");
 			wiresaw_active = nbt.getBoolean("wiresaw_active");
 			wiresaw_loop_cooldown = nbt.getBoolean("wiresaw_loop_cooldown");
+			phasing_dash_variable = nbt.getDouble("phasing_dash_variable");
+			screenshake_time = nbt.getDouble("screenshake_time");
 		}
 	}
 
@@ -997,6 +1005,8 @@ public class CatastropheModModVariables {
 					variables.shield_parry_damage = message.data.shield_parry_damage;
 					variables.wiresaw_active = message.data.wiresaw_active;
 					variables.wiresaw_loop_cooldown = message.data.wiresaw_loop_cooldown;
+					variables.phasing_dash_variable = message.data.phasing_dash_variable;
+					variables.screenshake_time = message.data.screenshake_time;
 				}
 			});
 			context.setPacketHandled(true);
