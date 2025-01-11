@@ -1,7 +1,0 @@
-{
-  "parent": "block/door_top_rh",
-  "textures": {
-    "bottom": "alexs_mod:blocks/overgrowth_portal_up",
-    "top": "alexs_mod:blocks/overgrowth_portal_down"
-  }
-}
