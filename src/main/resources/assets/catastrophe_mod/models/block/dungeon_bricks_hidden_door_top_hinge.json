@@ -1,7 +1,0 @@
-{
-  "parent": "block/door_top_rh",
-  "textures": {
-    "bottom": "alexs_mod:blocks/dungeon_bricks",
-    "top": "alexs_mod:blocks/dungeon_bricks"
-  }
-}

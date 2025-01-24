@@ -120,4 +120,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> LIGHTHOUSE_IMPACT_AMBIENCE = REGISTRY.register("lighthouse_impact_ambience", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "lighthouse_impact_ambience")));
 	public static final RegistryObject<SoundEvent> ELECTRIC_BUZZING = REGISTRY.register("electric_buzzing", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "electric_buzzing")));
 	public static final RegistryObject<SoundEvent> OIL_IGNITES = REGISTRY.register("oil_ignites", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "oil_ignites")));
+	public static final RegistryObject<SoundEvent> WIRESAW_START = REGISTRY.register("wiresaw_start", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "wiresaw_start")));
+	public static final RegistryObject<SoundEvent> WIRESAW_STOP = REGISTRY.register("wiresaw_stop", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "wiresaw_stop")));
 }

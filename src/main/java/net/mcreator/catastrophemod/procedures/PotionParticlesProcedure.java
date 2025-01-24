@@ -1,18 +1,6 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.SimpleParticleType;
-
-import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
-import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -42,8 +30,8 @@ public class PotionParticlesProcedure {
 		}
 		if (entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(CatastropheModModMobEffects.OILED.get())) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.OIL_DROP.get()), (entity.getX()), (entity.getY() + entity.getBbHeight() / 2), (entity.getZ()), 2, (entity.getBbWidth() / 2), (entity.getBbHeight() / 4),
-						(entity.getBbWidth() / 2), 0);
+				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.DELETED_MOD_ELEMENT.get()), (entity.getX()), (entity.getY() + entity.getBbHeight() / 2), (entity.getZ()), 2, (entity.getBbWidth() / 2),
+						(entity.getBbHeight() / 4), (entity.getBbWidth() / 2), 0);
 		}
 	}
 }

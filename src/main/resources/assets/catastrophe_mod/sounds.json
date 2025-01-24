@@ -898,5 +898,23 @@
         "stream": false
       }
     ]
+  },
+  "wiresaw_start": {
+    "subtitle": "subtitles.wiresaw_start",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:wiresaw_start",
+        "stream": false
+      }
+    ]
+  },
+  "wiresaw_stop": {
+    "subtitle": "subtitles.wiresaw_stop",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:wiresaw_stop",
+        "stream": false
+      }
+    ]
   }
 }

@@ -172,5 +172,12 @@ public class ManaRegenFixProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.wiresaw_fuel_drain = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

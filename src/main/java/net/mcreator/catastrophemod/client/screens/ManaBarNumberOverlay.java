@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.catastrophemod.procedures.ManaBarValueProcedure;
@@ -34,10 +33,9 @@ public class ManaBarNumberOverlay {
 			z = entity.getZ();
 		}
 		if (true) {
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.catastrophe_mod.mana_bar_number.label_mana1"), w - 220, h - 39, -16711681, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					ManaBarValueProcedure.execute(entity), w - 193, h - 39, -16711681, false);
+					ManaBarValueProcedure.execute(entity), w / 2 + 96, h - 37, -16711681, false);
 		}
 	}
 }

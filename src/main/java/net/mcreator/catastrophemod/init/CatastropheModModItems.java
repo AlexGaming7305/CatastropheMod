@@ -170,6 +170,7 @@ import net.mcreator.catastrophemod.item.GoldenSpearItem;
 import net.mcreator.catastrophemod.item.GoldenBraceletItem;
 import net.mcreator.catastrophemod.item.GloveoftheDesertsItem;
 import net.mcreator.catastrophemod.item.GiantIsopodScaleItem;
+import net.mcreator.catastrophemod.item.GasolineCanisterItem;
 import net.mcreator.catastrophemod.item.FrozenShieldItem;
 import net.mcreator.catastrophemod.item.FreezingStaffItem;
 import net.mcreator.catastrophemod.item.ForgeKeyItem;
@@ -530,6 +531,7 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> NIGHT_REAPER_SPAWN_EGG = REGISTRY.register("night_reaper_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.NIGHT_REAPER, -14869219, -7070506, new Item.Properties()));
 	public static final RegistryObject<Item> ELECTRIFIED_CHAIN = block(CatastropheModModBlocks.ELECTRIFIED_CHAIN);
 	public static final RegistryObject<Item> OIL = block(CatastropheModModBlocks.OIL);
+	public static final RegistryObject<Item> GASOLINE_CANISTER = REGISTRY.register("gasoline_canister", () -> new GasolineCanisterItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
