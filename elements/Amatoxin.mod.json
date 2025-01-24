@@ -15,6 +15,9 @@
     "renderStatusInHUD": true,
     "onActiveTick": {
       "name": "AmatoxinOnEffectActiveTick"
+    },
+    "activeTickCondition": {
+      "name": "AmatoxinActiveTickCondition"
     }
   }
 }

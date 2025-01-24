@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "catastrophe_mod:electricity",
+    "catastrophe_mod:electrocuted"
+  ]
+}

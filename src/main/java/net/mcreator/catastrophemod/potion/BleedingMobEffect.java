@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.catastrophemod.procedures.BleedingOnEffectActiveTickProcedure;
+import net.mcreator.catastrophemod.procedures.BleedingActiveTickConditionProcedure;
 
 public class BleedingMobEffect extends MobEffect {
 	public BleedingMobEffect() {
@@ -19,11 +20,11 @@ public class BleedingMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		BleedingOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, amplifier);
+		BleedingOnEffectActiveTickProcedure.execute(entity.level(), entity);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
+		return BleedingActiveTickConditionProcedure.execute(amplifier, duration);
 	}
 }

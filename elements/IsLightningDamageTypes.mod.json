@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Damage types",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [
+      {
+        "value": "CUSTOM:Electricity"
+      },
+      {
+        "value": "CUSTOM:Electrocuted"
+      }
+    ],
+    "name": "is_lightning",
+    "namespace": "minecraft"
+  }
+}

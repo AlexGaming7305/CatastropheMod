@@ -1,7 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "catastrophe_mod:projectile_accursed_soul",
-    "catastrophe_mod:projectile_electric_spark_projectile"
-  ]
+  "values": []
 }

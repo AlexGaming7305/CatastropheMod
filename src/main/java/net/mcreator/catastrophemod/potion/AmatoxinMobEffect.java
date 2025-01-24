@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.catastrophemod.procedures.AmatoxinOnEffectActiveTickProcedure;
+import net.mcreator.catastrophemod.procedures.AmatoxinActiveTickConditionProcedure;
 
 public class AmatoxinMobEffect extends MobEffect {
 	public AmatoxinMobEffect() {
@@ -19,11 +20,11 @@ public class AmatoxinMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		AmatoxinOnEffectActiveTickProcedure.execute(entity.level(), entity, amplifier);
+		AmatoxinOnEffectActiveTickProcedure.execute(entity.level(), entity);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
+		return AmatoxinActiveTickConditionProcedure.execute(amplifier, duration);
 	}
 }

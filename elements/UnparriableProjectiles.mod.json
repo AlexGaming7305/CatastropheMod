@@ -6,20 +6,7 @@
     "items": [],
     "blocks": [],
     "functions": [],
-    "entities": [
-      {
-        "value": "CUSTOM:AccursedSoul"
-      },
-      {
-        "value": "CUSTOM:ElectricSparkProjectile"
-      },
-      {
-        "value": "EntityArrow"
-      },
-      {
-        "value": "EntityFireball"
-      }
-    ],
+    "entities": [],
     "biomes": [],
     "damageTypes": [],
     "name": "unparriable_projectiles",
