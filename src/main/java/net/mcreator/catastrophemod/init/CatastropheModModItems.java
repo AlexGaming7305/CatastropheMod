@@ -81,7 +81,6 @@ import net.mcreator.catastrophemod.item.SeaCrystalGeodeItem;
 import net.mcreator.catastrophemod.item.SeaConchItem;
 import net.mcreator.catastrophemod.item.SeaBowItem;
 import net.mcreator.catastrophemod.item.SeaAxeItem;
-import net.mcreator.catastrophemod.item.ScreenshakeTestItemItem;
 import net.mcreator.catastrophemod.item.ScrapRoundItem;
 import net.mcreator.catastrophemod.item.SawedOffShotgunItem;
 import net.mcreator.catastrophemod.item.SandstormSurgeItem;
@@ -455,7 +454,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> STORM_ARROW = REGISTRY.register("storm_arrow", () -> new StormArrowItem());
 	public static final RegistryObject<Item> BLIZZARD = REGISTRY.register("blizzard", () -> new BlizzardItem());
 	public static final RegistryObject<Item> ANGLERFISH_SPAWN_EGG = REGISTRY.register("anglerfish_spawn_egg", () -> new ForgeSpawnEggItem(CatastropheModModEntities.ANGLERFISH, -5214389, -13605228, new Item.Properties()));
-	public static final RegistryObject<Item> SCREENSHAKE_TEST_ITEM = REGISTRY.register("screenshake_test_item", () -> new ScreenshakeTestItemItem());
 	public static final RegistryObject<Item> NATURITE_SHIELD = REGISTRY.register("naturite_shield", () -> new NaturiteShieldItem());
 	public static final RegistryObject<Item> AXE_MASTERY_CREST = REGISTRY.register("axe_mastery_crest", () -> new AxeMasteryCrestItem());
 	public static final RegistryObject<Item> ACCURSED_TOME = REGISTRY.register("accursed_tome", () -> new AccursedTomeItem());

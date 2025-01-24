@@ -1,8 +1,10 @@
 package net.mcreator.catastrophemod.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
 
 public class GasolineCanisterRightclickedProcedure {
 	public static void execute(Entity entity) {

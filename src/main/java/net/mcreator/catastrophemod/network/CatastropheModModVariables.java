@@ -248,7 +248,6 @@ public class CatastropheModModVariables {
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "catastrophe_mod_worldvars";
 		public boolean Tia_Killed = false;
-		public boolean violent_difficulty = false;
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -258,13 +257,11 @@ public class CatastropheModModVariables {
 
 		public void read(CompoundTag nbt) {
 			Tia_Killed = nbt.getBoolean("Tia_Killed");
-			violent_difficulty = nbt.getBoolean("violent_difficulty");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("Tia_Killed", Tia_Killed);
-			nbt.putBoolean("violent_difficulty", violent_difficulty);
 			return nbt;
 		}
 
