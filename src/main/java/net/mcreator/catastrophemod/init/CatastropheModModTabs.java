@@ -321,6 +321,7 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.ATLANTIC_SEA_NETTLE_ITEM.get());
 			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SCALE.get());
 			tabData.accept(CatastropheModModItems.FORGE_KEY.get());
+			tabData.accept(CatastropheModModItems.GASOLINE_CANISTER.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

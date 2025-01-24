@@ -87,6 +87,9 @@ public class CatastropheModModVariables {
 			clone.comet_moth_pet = original.comet_moth_pet;
 			clone.rosy_maple_moth_pet = original.rosy_maple_moth_pet;
 			clone.mana_cost_accursed_tome = original.mana_cost_accursed_tome;
+			clone.Mana_Bar_Fill = original.Mana_Bar_Fill;
+			clone.Fuel_Meter_Fill = original.Fuel_Meter_Fill;
+			clone.max_fuel = original.max_fuel;
 			if (!event.isWasDeath()) {
 				clone.crimsondagger = original.crimsondagger;
 				clone.pocketshield = original.pocketshield;
@@ -216,6 +219,7 @@ public class CatastropheModModVariables {
 				clone.wiresaw_loop_cooldown = original.wiresaw_loop_cooldown;
 				clone.phasing_dash_variable = original.phasing_dash_variable;
 				clone.screenshake_time = original.screenshake_time;
+				clone.wiresaw_fuel_drain = original.wiresaw_fuel_drain;
 			}
 		}
 
@@ -544,6 +548,10 @@ public class CatastropheModModVariables {
 		public boolean wiresaw_loop_cooldown = false;
 		public double phasing_dash_variable = 0;
 		public double screenshake_time = 0;
+		public double Mana_Bar_Fill = 0;
+		public double Fuel_Meter_Fill = 0;
+		public double max_fuel = 0;
+		public boolean wiresaw_fuel_drain = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -694,6 +702,10 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("wiresaw_loop_cooldown", wiresaw_loop_cooldown);
 			nbt.putDouble("phasing_dash_variable", phasing_dash_variable);
 			nbt.putDouble("screenshake_time", screenshake_time);
+			nbt.putDouble("Mana_Bar_Fill", Mana_Bar_Fill);
+			nbt.putDouble("Fuel_Meter_Fill", Fuel_Meter_Fill);
+			nbt.putDouble("max_fuel", max_fuel);
+			nbt.putBoolean("wiresaw_fuel_drain", wiresaw_fuel_drain);
 			return nbt;
 		}
 
@@ -841,6 +853,10 @@ public class CatastropheModModVariables {
 			wiresaw_loop_cooldown = nbt.getBoolean("wiresaw_loop_cooldown");
 			phasing_dash_variable = nbt.getDouble("phasing_dash_variable");
 			screenshake_time = nbt.getDouble("screenshake_time");
+			Mana_Bar_Fill = nbt.getDouble("Mana_Bar_Fill");
+			Fuel_Meter_Fill = nbt.getDouble("Fuel_Meter_Fill");
+			max_fuel = nbt.getDouble("max_fuel");
+			wiresaw_fuel_drain = nbt.getBoolean("wiresaw_fuel_drain");
 		}
 	}
 
@@ -1007,6 +1023,10 @@ public class CatastropheModModVariables {
 					variables.wiresaw_loop_cooldown = message.data.wiresaw_loop_cooldown;
 					variables.phasing_dash_variable = message.data.phasing_dash_variable;
 					variables.screenshake_time = message.data.screenshake_time;
+					variables.Mana_Bar_Fill = message.data.Mana_Bar_Fill;
+					variables.Fuel_Meter_Fill = message.data.Fuel_Meter_Fill;
+					variables.max_fuel = message.data.max_fuel;
+					variables.wiresaw_fuel_drain = message.data.wiresaw_fuel_drain;
 				}
 			});
 			context.setPacketHandled(true);

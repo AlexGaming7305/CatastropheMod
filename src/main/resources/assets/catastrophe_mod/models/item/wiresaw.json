@@ -15,7 +15,7 @@
             "scale":[ 0.6, 0.6, 0.6 ]
         },
         "thirdperson_righthand": {
-            "rotation": [ 0, 270, -30],
+            "rotation": [ 0, 270, -30 ],
             "translation": [ 0, 5, 0 ],
             "scale": [ 0.8, 0.8, 0.8 ]
         },
@@ -35,12 +35,12 @@
             "scale": [ 0.6, 0.6, 0.6 ]
         }
         },
-  		"overrides": [
-    		{
-      		"predicate": {
-        		"catastrophe_mod:wiresaw_wiresaw_active": 1
-      		},
-      		"model": "catastrophe_mod:item/wiresaw_0"
-      		}
+          "overrides": [
+            {
+              "predicate": {
+                "catastrophe_mod:wiresaw_wiresaw_active": 1
+              },
+              "model": "catastrophe_mod:item/wiresaw_0"
+              }
       ]
 }

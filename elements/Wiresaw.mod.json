@@ -64,6 +64,9 @@
     "projectile": {
       "value": "CUSTOM:BlizzardProjectile"
     },
+    "rangedUseCondition": {
+      "name": "WiresawCanUseRangedItem"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
