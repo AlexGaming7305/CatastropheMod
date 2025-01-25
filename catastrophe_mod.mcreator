@@ -168,40 +168,6 @@
       "path": "~/Entities"
     },
     {
-      "name": "PocketShieldGeneratorItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 379,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pocket_shield_generator_item_in_inventory_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/PocketShieldGeneratorItemInInventoryTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "PocketShieldGeneratorRecipe",
-      "type": "recipe",
-      "sortid": 388,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pocket_shield_generator_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/pocket_shield_generator_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "CrystalArkRecipe",
       "type": "recipe",
       "sortid": 421,
@@ -495,18 +461,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "dark_magic",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "Accessories",
-      "type": "tab",
-      "sortid": 724,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessories",
       "metadata": {
         "files": []
       },
@@ -911,28 +865,7 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/DoubleJumpEnchantmentProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Misc"
     },
@@ -1176,34 +1109,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "CrimsonDaggerHeal",
-      "type": "procedure",
-      "sortid": 1163,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crimson_dagger_heal",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/CrimsonDaggerHealProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "DashCooldown",
       "type": "potioneffect",
       "sortid": 1172,
@@ -1216,76 +1121,6 @@
         ]
       },
       "path": "~/Potion Effects"
-    },
-    {
-      "name": "StormShieldStrike",
-      "type": "procedure",
-      "sortid": 1181,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_shield_strike",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StormShieldStrikeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RunningBootsItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 1186,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "running_boots_item_in_inventory_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RunningBootsItemInInventoryTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RunningBootsRecipe",
-      "type": "recipe",
-      "sortid": 1188,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "running_boots_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/running_boots_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "NatureiteSetBonus",
@@ -1698,30 +1533,6 @@
         ]
       },
       "path": "~/Potion Effects"
-    },
-    {
-      "name": "AccessorySlotsNotEquiped",
-      "type": "procedure",
-      "sortid": 1420,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory_slots_not_equiped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AccessorySlotsNotEquipedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "OrbitalBarrage",
@@ -2570,20 +2381,6 @@
       "path": "~/Minions"
     },
     {
-      "name": "SpiritInABottleRecipe",
-      "type": "recipe",
-      "sortid": 1572,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_in_a_bottle_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/spirit_in_a_bottle_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "PileOfMossOnInitialEntitySpawn",
       "type": "procedure",
       "sortid": 1579,
@@ -2922,343 +2719,6 @@
         ]
       },
       "path": "~/Items/Blocks"
-    },
-    {
-      "name": "StormShield",
-      "type": "curiosbauble",
-      "sortid": 1636,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_shield",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/StormShieldItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/storm_shield.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RunningBoots",
-      "type": "curiosbauble",
-      "sortid": 1637,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "running_boots",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/running_boots.json",
-          "src/main/java/net/mcreator/catastrophemod/item/RunningBootsItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "PocketShieldGenerator",
-      "type": "curiosbauble",
-      "sortid": 1640,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pocket_shield_generator",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/PocketShieldGeneratorItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/pocket_shield_generator.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AcidTarantula",
-      "type": "curiosbauble",
-      "sortid": 1645,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acid_tarantula",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/acid_tarantula.json",
-          "src/main/java/net/mcreator/catastrophemod/item/AcidTarantulaItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "CrimsonDagger",
-      "type": "curiosbauble",
-      "sortid": 1646,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crimson_dagger",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/CrimsonDaggerItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/crimson_dagger.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetheriteShield",
-      "type": "curiosbauble",
-      "sortid": 1648,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "netherite_shield",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/netherite_shield.json",
-          "src/main/java/net/mcreator/catastrophemod/item/NetheriteShieldItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "GoldenBracelet",
-      "type": "curiosbauble",
-      "sortid": 1652,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "golden_bracelet",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/GoldenBraceletItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/golden_bracelet.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RunningBootsBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 1655,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "running_boots_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RunningBootsBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RunningBootsBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 1656,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "running_boots_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RunningBootsBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetherTreadsBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 1657,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nether_treads_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/NetherTreadsBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetherTreadsBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 1658,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nether_treads_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/NetherTreadsBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetherTreads",
-      "type": "curiosbauble",
-      "sortid": 1659,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nether_treads",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/NetherTreadsItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/nether_treads.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "GoldenBraceletRecipe",
-      "type": "recipe",
-      "sortid": 1660,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "golden_bracelet_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/golden_bracelet_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetherTreadsRecipe",
-      "type": "recipe",
-      "sortid": 1661,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nether_treads_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/nether_treads_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetheriteShieldBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 1663,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "netherite_shield_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/NetheriteShieldBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetheriteShieldBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 1664,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "netherite_shield_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/NetheriteShieldBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SeaPendantBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 1669,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sea_pendant_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SeaPendantBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SeaPendantBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 1670,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sea_pendant_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SeaPendantBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SeaPendant",
-      "type": "curiosbauble",
-      "sortid": 1671,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sea_pendant",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SeaPendantItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/sea_pendant.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SeaPendantRecipe",
-      "type": "recipe",
-      "sortid": 1672,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sea_pendant_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/sea_pendant_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "ElectrifiedOnEffectActiveTick",
@@ -5132,46 +4592,6 @@
       "path": "~/Minions"
     },
     {
-      "name": "AcidTarantulaBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 1941,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acid_tarantula_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AcidTarantulaBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AcidTarantulaBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 1942,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "acid_tarantula_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AcidTarantulaBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "AcidTarantulaProcedure",
       "type": "procedure",
       "sortid": 1943,
@@ -5377,61 +4797,6 @@
       "path": "~/Items/Armor"
     },
     {
-      "name": "SpiritInABottleBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 1954,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_in_a_bottle_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SpiritInABottleBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SpiritInABottleBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 1955,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_in_a_bottle_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SpiritInABottleBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SpiritInABottle",
-      "type": "curiosbauble",
-      "sortid": 1956,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_in_a_bottle",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/spirit_in_a_bottle.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SpiritInABottleItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "SoulPowerOverlayValue",
       "type": "procedure",
       "sortid": 1957,
@@ -5486,26 +4851,6 @@
         ]
       },
       "path": "~/Misc"
-    },
-    {
-      "name": "SpiritInABottleFix",
-      "type": "procedure",
-      "sortid": 1960,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spirit_in_a_bottle_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SpiritInABottleFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "SeaSpear",
@@ -6216,21 +5561,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "OceanicArtifact",
-      "type": "curiosbauble",
-      "sortid": 2014,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oceanic_artifact",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/OceanicArtifactItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/oceanic_artifact.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "Hunter",
       "type": "armor",
       "sortid": 2016,
@@ -6391,140 +5721,6 @@
       "path": "~/Items/Weapons/Ranged Weapons"
     },
     {
-      "name": "SeaPendantFix",
-      "type": "procedure",
-      "sortid": 2026,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sea_pendant_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SeaPendantFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "OceanicArtifactProcedure",
-      "type": "procedure",
-      "sortid": 2027,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oceanic_artifact_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/OceanicArtifactProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "OceanicArtifactBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2028,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oceanic_artifact_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/OceanicArtifactBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "OceanicArtifactBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2029,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oceanic_artifact_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/OceanicArtifactBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "OceanicArtifactRecipe",
-      "type": "recipe",
-      "sortid": 2030,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oceanic_artifact_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/oceanic_artifact_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "OceanicArtifactFix",
-      "type": "procedure",
-      "sortid": 2031,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "oceanic_artifact_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/OceanicArtifactFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "ManaRosePlant",
       "type": "plant",
       "sortid": 2032,
@@ -6540,21 +5736,6 @@
         ]
       },
       "path": "~/Items/Blocks"
-    },
-    {
-      "name": "ManaRose",
-      "type": "curiosbauble",
-      "sortid": 2033,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_rose",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/ManaRoseItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/mana_rose.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "NatureiteOreLoottable",
@@ -6611,117 +5792,6 @@
         ]
       },
       "path": "~/Misc"
-    },
-    {
-      "name": "Quiver",
-      "type": "curiosbauble",
-      "sortid": 2046,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "quiver",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/quiver.json",
-          "src/main/java/net/mcreator/catastrophemod/item/QuiverItem.java",
-          "src/main/java/net/mcreator/catastrophemod/client/renderer/QuiverRenderer.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "NetheriteShieldFix",
-      "type": "procedure",
-      "sortid": 2049,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "netherite_shield_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/NetheriteShieldFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "ReinforcedShieldBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2050,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reinforced_shield_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ReinforcedShieldBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "ReinforcedShieldBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2051,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reinforced_shield_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ReinforcedShieldBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "ReinforcedShield",
-      "type": "curiosbauble",
-      "sortid": 2052,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reinforced_shield",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/ReinforcedShieldItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/reinforced_shield.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "ReinforcedShieldFix",
-      "type": "procedure",
-      "sortid": 2053,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reinforced_shield_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ReinforcedShieldFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "LightningBlade",
@@ -6865,80 +5935,6 @@
         ]
       },
       "path": "~/Items/Weapons/Summoner Weapons"
-    },
-    {
-      "name": "MarksmansCrest",
-      "type": "curiosbauble",
-      "sortid": 2061,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "marksmans_crest",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/marksmans_crest.json",
-          "src/main/java/net/mcreator/catastrophemod/item/MarksmansCrestItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AmuletOfVitality",
-      "type": "curiosbauble",
-      "sortid": 2063,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amulet_of_vitality",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/amulet_of_vitality.json",
-          "src/main/java/net/mcreator/catastrophemod/item/AmuletOfVitalityItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AmuletOfVitalityBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2064,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amulet_of_vitality_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AmuletOfVitalityBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AmuletOfVitalityBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2065,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amulet_of_vitality_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AmuletOfVitalityBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "ShroomiumProcedure",
@@ -7096,57 +6092,6 @@
         ]
       },
       "path": "~/Projectiles"
-    },
-    {
-      "name": "SandstormSurge",
-      "type": "curiosbauble",
-      "sortid": 2075,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sandstorm_surge",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/sandstorm_surge.json",
-          "src/main/java/net/mcreator/catastrophemod/item/SandstormSurgeItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SandstormSurgeProcedure",
-      "type": "procedure",
-      "sortid": 2076,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sandstorm_surge_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SandstormSurgeProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "IronRoundProjectileWhileProjectileFlyingTick",
@@ -8960,49 +7905,6 @@
       "path": "~/Items/Armor"
     },
     {
-      "name": "AmuletOfVitalityRecipe",
-      "type": "recipe",
-      "sortid": 2184,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amulet_of_vitality_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/amulet_of_vitality_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AeroBoots",
-      "type": "curiosbauble",
-      "sortid": 2185,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aero_boots",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/aero_boots.json",
-          "src/main/java/net/mcreator/catastrophemod/item/AeroBootsItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AeroBootsRecipe",
-      "type": "recipe",
-      "sortid": 2186,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aero_boots_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/aero_boots_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "MusicDiscVinesOfVenom",
       "type": "musicdisc",
       "sortid": 2187,
@@ -9224,75 +8126,6 @@
         ]
       },
       "path": "~/Projectiles"
-    },
-    {
-      "name": "LeatherGloveBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2200,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leather_glove_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/LeatherGloveBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "LeatherGloveBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2201,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leather_glove_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/LeatherGloveBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "LeatherGlove",
-      "type": "curiosbauble",
-      "sortid": 2202,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leather_glove",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/LeatherGloveItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/leather_glove.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "LeatherGloveRecipe",
-      "type": "recipe",
-      "sortid": 2204,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leather_glove_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/leather_glove_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "ShadowflameSpears",
@@ -10206,61 +9039,6 @@
         ]
       },
       "path": "~/Items/Weapons/Melee Weapons"
-    },
-    {
-      "name": "FrozenShield",
-      "type": "curiosbauble",
-      "sortid": 2270,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen_shield",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/frozen_shield.json",
-          "src/main/java/net/mcreator/catastrophemod/item/FrozenShieldItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "FrozenShieldProcedure",
-      "type": "procedure",
-      "sortid": 2271,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen_shield_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/FrozenShieldProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "ShadowflameWhisper",
@@ -11184,20 +9962,6 @@
         ]
       },
       "path": "~/Items/Miscellaneous"
-    },
-    {
-      "name": "FrozenShieldRecipe",
-      "type": "recipe",
-      "sortid": 2343,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen_shield_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/frozen_shield_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "RiptideRecipe",
@@ -12486,88 +11250,6 @@
       "path": "~/Entities"
     },
     {
-      "name": "PacifyingSight",
-      "type": "curiosbauble",
-      "sortid": 2420,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pacifying_sight",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/PacifyingSightItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/pacifying_sight.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "PacifyingSightRecipe",
-      "type": "recipe",
-      "sortid": 2421,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pacifying_sight_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/pacifying_sight_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AmuletOfWeakening",
-      "type": "curiosbauble",
-      "sortid": 2422,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amulet_of_weakening",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/AmuletOfWeakeningItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/amulet_of_weakening.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AmuletofWeakeningProcedure",
-      "type": "procedure",
-      "sortid": 2423,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amuletof_weakening_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AmuletofWeakeningProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AmuletOfWeakeningRecipe",
-      "type": "recipe",
-      "sortid": 2424,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amulet_of_weakening_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/amulet_of_weakening_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "ThunderStar",
       "type": "item",
       "sortid": 2425,
@@ -12615,59 +11297,6 @@
         ]
       },
       "path": "~/Items/Miscellaneous"
-    },
-    {
-      "name": "StormCatalyst",
-      "type": "curiosbauble",
-      "sortid": 2428,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_catalyst",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/storm_catalyst.json",
-          "src/main/java/net/mcreator/catastrophemod/item/StormCatalystItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "StormCatalystProcedure",
-      "type": "procedure",
-      "sortid": 2429,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_catalyst_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StormCatalystProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "StormCatalystRecipe",
-      "type": "recipe",
-      "sortid": 2431,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_catalyst_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/storm_catalyst_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "ShadowfireSkullProjectileHitsBlock",
@@ -13606,20 +12235,6 @@
       "path": "~/Items/Armor"
     },
     {
-      "name": "NetheriteShieldRecipe",
-      "type": "recipe",
-      "sortid": 2492,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "netherite_shield_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/netherite_shield_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "Bullets",
       "type": "tab",
       "sortid": 2493,
@@ -13752,26 +12367,6 @@
         ]
       },
       "path": "~/Items/Miscellaneous"
-    },
-    {
-      "name": "LeatherGloveFix",
-      "type": "procedure",
-      "sortid": 2504,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leather_glove_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/LeatherGloveFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "VulnerabilitySkullWhileProjectileFlyingTick",
@@ -15134,46 +13729,6 @@
       "path": "~/Key Binds"
     },
     {
-      "name": "ManaRoseBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2591,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_rose_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ManaRoseBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "ManaRoseBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2592,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_rose_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/ManaRoseBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "BlizzardChargeStart",
       "type": "procedure",
       "sortid": 2594,
@@ -15283,35 +13838,6 @@
         ]
       },
       "path": "~/Particles"
-    },
-    {
-      "name": "RingOfResilience",
-      "type": "curiosbauble",
-      "sortid": 2601,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ring_of_resilience",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/RingOfResilienceItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/ring_of_resilience.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RingOfResilienceRecipe",
-      "type": "recipe",
-      "sortid": 2603,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ring_of_resilience_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/ring_of_resilience_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "CursedHoodRecipe",
@@ -15902,65 +14428,6 @@
         ]
       },
       "path": "~/Entities"
-    },
-    {
-      "name": "RottenHeart",
-      "type": "curiosbauble",
-      "sortid": 2637,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rotten_heart",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/rotten_heart.json",
-          "src/main/java/net/mcreator/catastrophemod/item/RottenHeartItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RottenHeartHungerImmunity",
-      "type": "procedure",
-      "sortid": 2638,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rotten_heart_hunger_immunity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RottenHeartHungerImmunityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RottenHeartRottenFlesh",
-      "type": "procedure",
-      "sortid": 2639,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rotten_heart_rotten_flesh",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RottenHeartRottenFleshProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "AtlanticSeaNettle",
@@ -16948,21 +15415,6 @@
       "path": "~/Particles"
     },
     {
-      "name": "AxeMasteryCrest",
-      "type": "curiosbauble",
-      "sortid": 2754,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axe_mastery_crest",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/axe_mastery_crest.json",
-          "src/main/java/net/mcreator/catastrophemod/item/AxeMasteryCrestItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "ArmorShred",
       "type": "potioneffect",
       "sortid": 2755,
@@ -17021,46 +15473,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "AxeMasteryCrestProcedure",
-      "type": "procedure",
-      "sortid": 2758,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axe_mastery_crest_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AxeMasteryCrestProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "IShallRendYouApart",
       "type": "achievement",
       "sortid": 2760,
@@ -17085,16 +15497,7 @@
         "files": [
           "src/main/java/net/mcreator/catastrophemod/procedures/IShallRendYouApartAdvancementProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Advancements"
     },
@@ -17507,140 +15910,6 @@
       "path": "~/Advancements"
     },
     {
-      "name": "SwordMasteryCrest",
-      "type": "curiosbauble",
-      "sortid": 2797,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sword_mastery_crest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SwordMasteryCrestItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/sword_mastery_crest.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AxeMasteryCrestBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2798,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axe_mastery_crest_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AxeMasteryCrestBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "AxeMasteryCrestBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2799,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axe_mastery_crest_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AxeMasteryCrestBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SwordMasteryCrestProcedure",
-      "type": "procedure",
-      "sortid": 2800,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sword_mastery_crest_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SpearMasteryCrestBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2801,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spear_mastery_crest_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SpearMasteryCrestBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SpearMasteryCrestBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2802,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spear_mastery_crest_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SpearMasteryCrestBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "SpearMasteryCrest",
-      "type": "curiosbauble",
-      "sortid": 2803,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spear_mastery_crest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/SpearMasteryCrestItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/spear_mastery_crest.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "Catastrophe",
       "type": "achievement",
       "sortid": 2804,
@@ -17897,46 +16166,6 @@
         ]
       },
       "path": "~/Damage Types"
-    },
-    {
-      "name": "RingOfResilienceBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2820,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ring_of_resilience_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RingOfResilienceBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "RingOfResilienceBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2821,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ring_of_resilience_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RingOfResilienceBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "MaxMana",
@@ -18837,40 +17066,6 @@
       "path": "~/Misc"
     },
     {
-      "name": "SwordMasteryCrestBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2892,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sword_mastery_crest_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "Accessory",
-      "type": "curiosslot",
-      "sortid": 2890,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/curios/tags/items/accessory.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "ZombieLootTable1",
       "type": "lootmodifier",
       "sortid": 2887,
@@ -18951,26 +17146,6 @@
       "path": "~/Items/Weapons/Melee Weapons"
     },
     {
-      "name": "SwordMasteryCrestBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2891,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sword_mastery_crest_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "TotemCooldownProcedure2",
       "type": "procedure",
       "sortid": 2874,
@@ -18985,30 +17160,6 @@
           {
             "name": "entity",
             "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "AccessorySlotsFix",
-      "type": "procedure",
-      "sortid": 2888,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "accessory_slots_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AccessorySlotsFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
           }
         ]
       },
@@ -19183,26 +17334,6 @@
         "has_nbt_structure": true
       },
       "path": "~/Structures"
-    },
-    {
-      "name": "RingOfResilienceFix",
-      "type": "procedure",
-      "sortid": 2959,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ring_of_resilience_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/RingOfResilienceFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "HauntedGlimmer",
@@ -19527,26 +17658,6 @@
       "path": "~/Items/Food"
     },
     {
-      "name": "SwordMasteryCrestFix",
-      "type": "procedure",
-      "sortid": 2957,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sword_mastery_crest_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SwordMasteryCrestFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "StarlitLacewingStaffRightclicked",
       "type": "procedure",
       "sortid": 2938,
@@ -19690,26 +17801,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "SpearMasteryCrestFix",
-      "type": "procedure",
-      "sortid": 2958,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spear_mastery_crest_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/SpearMasteryCrestFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "Impedance",
       "type": "potioneffect",
       "sortid": 2909,
@@ -19739,26 +17830,6 @@
         "has_nbt_structure": true
       },
       "path": "~/Structures"
-    },
-    {
-      "name": "AxeMasteryCrestFix",
-      "type": "procedure",
-      "sortid": 2956,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "axe_mastery_crest_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/AxeMasteryCrestFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "Repulsion",
@@ -20420,66 +18491,6 @@
       "path": "~/Enchantments"
     },
     {
-      "name": "StormCatalystBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 2976,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_catalyst_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StormCatalystBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "StormCatalystBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 2977,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_catalyst_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StormCatalystBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "StormCatalystFix",
-      "type": "procedure",
-      "sortid": 2978,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "storm_catalyst_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/StormCatalystFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "GravitationalReflux",
       "type": "enchantment",
       "sortid": 2979,
@@ -21114,42 +19125,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "FletcherTrade",
-      "type": "villagertrade",
-      "sortid": 2979,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fletcher_trade",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "WeaponsmithTrade",
-      "type": "villagertrade",
-      "sortid": 2980,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "weaponsmith_trade",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "ClericTrade",
-      "type": "villagertrade",
-      "sortid": 2981,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cleric_trade",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "MagicDamageProcedure",
       "type": "procedure",
       "sortid": 3015,
@@ -21418,105 +19393,6 @@
         ]
       },
       "path": "~/Misc"
-    },
-    {
-      "name": "BarbedArrowhead",
-      "type": "curiosbauble",
-      "sortid": 3024,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "barbed_arrowhead",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/BarbedArrowheadItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/barbed_arrowhead.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "BarbedArrowheadProcedure",
-      "type": "procedure",
-      "sortid": 3025,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "barbed_arrowhead_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/BarbedArrowheadProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "BarbedArrowheadBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 3026,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "barbed_arrowhead_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/BarbedArrowheadBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "BarbedArrowheadBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 3027,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "barbed_arrowhead_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/BarbedArrowheadBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "BarbedArrowheadFix",
-      "type": "procedure",
-      "sortid": 3028,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "barbed_arrowhead_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/BarbedArrowheadFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "CastingSpeed",
@@ -21906,81 +19782,6 @@
       "path": "~/Items/Blocks"
     },
     {
-      "name": "CrystalBallBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 3058,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystal_ball_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/CrystalBallBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "CrystalBallBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 3059,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystal_ball_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/CrystalBallBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "CrystalBall",
-      "type": "curiosbauble",
-      "sortid": 3060,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystal_ball",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/crystal_ball.json",
-          "src/main/java/net/mcreator/catastrophemod/item/CrystalBallItem.java"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "CrystalBallFix",
-      "type": "procedure",
-      "sortid": 3061,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crystal_ball_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/CrystalBallFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "ForceMissiles",
       "type": "item",
       "sortid": 3062,
@@ -22250,46 +20051,6 @@
       "path": "~/Projectiles"
     },
     {
-      "name": "MarksmansCrestProcedure",
-      "type": "procedure",
-      "sortid": 3073,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "marksmans_crest_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/MarksmansCrestProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
       "name": "ManaInCreative",
       "type": "procedure",
       "sortid": 3074,
@@ -22490,119 +20251,6 @@
         ]
       },
       "path": "~/Entities"
-    },
-    {
-      "name": "JellyfishPendantBaubleIsEquipped",
-      "type": "procedure",
-      "sortid": 3085,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jellyfish_pendant_bauble_is_equipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/JellyfishPendantBaubleIsEquippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "JellyfishPendantBaubleIsUnequipped",
-      "type": "procedure",
-      "sortid": 3086,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jellyfish_pendant_bauble_is_unequipped",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/JellyfishPendantBaubleIsUnequippedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "JellyfishPendant",
-      "type": "curiosbauble",
-      "sortid": 3087,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jellyfish_pendant",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/JellyfishPendantItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/jellyfish_pendant.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "JellyfishPendantFix",
-      "type": "procedure",
-      "sortid": 3088,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jellyfish_pendant_fix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/JellyfishPendantFixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "JellyfishPendantProcedure",
-      "type": "procedure",
-      "sortid": 3089,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jellyfish_pendant_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/catastrophemod/procedures/JellyfishPendantProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Accessories"
-    },
-    {
-      "name": "JellyfishPendantRecipe",
-      "type": "recipe",
-      "sortid": 3090,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jellyfish_pendant_recipe",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/catastrophe_mod/recipes/jellyfish_pendant_recipe.json"
-        ]
-      },
-      "path": "~/Items/Accessories"
     },
     {
       "name": "GiantIsopodRightClickedOnEntity",
@@ -25597,8 +23245,8 @@
       "registry_name": "oil_drop",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/particles/oil_drop.json",
-          "src/main/java/net/mcreator/catastrophemod/client/particle/OilDropParticle.java"
+          "src/main/java/net/mcreator/catastrophemod/client/particle/OilDropParticle.java",
+          "src/main/resources/assets/catastrophe_mod/particles/oil_drop.json"
         ]
       },
       "path": "~/Particles"
@@ -25703,8 +23351,8 @@
       "registry_name": "gasoline_canister",
       "metadata": {
         "files": [
-          "src/main/resources/assets/catastrophe_mod/models/item/gasoline_canister.json",
-          "src/main/java/net/mcreator/catastrophemod/item/GasolineCanisterItem.java"
+          "src/main/java/net/mcreator/catastrophemod/item/GasolineCanisterItem.java",
+          "src/main/resources/assets/catastrophe_mod/models/item/gasoline_canister.json"
         ]
       },
       "path": "~/Items/Miscellaneous"
@@ -27670,9 +25318,9 @@
       "item.alexs_mod.storm_bow_0": "Storm Bow 0",
       "item.alexs_mod.storm_bow_1": "Storm Bow 1",
       "entity.alexs_mod.abyssal_skater": "Abyssal Skater",
-      "entity.alexs_mod.freezing_core": "Freezing Core",
-      "block.alexs_mod.acid_light": "Acid Light",
       "entity.alexs_mod.kolden_energy": "Kyolden Energy",
+      "block.alexs_mod.acid_light": "Acid Light",
+      "entity.alexs_mod.freezing_core": "Freezing Core",
       "item.catastrophe_mod.mana_star": "§bMana Star",
       "item.catastrophe_mod.spell_of_flames": "§6Spell of Flames",
       "item.catastrophe_mod.anglerfish_spawn_egg": "Anglerfish Spawn Egg",
@@ -27684,8 +25332,8 @@
       "subtitles.fiery_blast": "Fiery blast",
       "entity.alexs_mod.firefly": "Firefly",
       "item.alexs_mod.galaxy_striker": "Galaxy Striker",
-      "block.alexs_mod.laboratory_column_block": "Laboratory Column Block",
       "subtitles.flash_bang_boom": "flash_bang_boom",
+      "block.alexs_mod.laboratory_column_block": "Laboratory Column Block",
       "block.alexs_mod.overgrown_leaves": "Overgrown Leaves",
       "gui.alexs_mod.aegex_5_gui.label_the_only_problem_is_that_i_dont": "The only problem is that I don\u0027t",
       "enchantment.catastrophe_mod.swift_step": "Swift Step",
@@ -27694,8 +25342,8 @@
       "block.alexs_mod.advanced_display": "Advanced Display",
       "item.alexs_mod.mushling_spawn_egg": "Mushling Spawn Egg",
       "entity.catastrophe_mod.acid_tarantula_minion": "Acid Tarantula Minion",
-      "gui.alexs_mod.aegex_4_gui.label_my_own_creations": "my own creations!?",
       "effect.catastrophe_mod.mana_sickness": "Mana Sickness",
+      "gui.alexs_mod.aegex_4_gui.label_my_own_creations": "my own creations!?",
       "item.alexs_mod.bartosa_tools_hoe": "Bartosa Hoe",
       "block.alexs_mod.dungeon_bricks_hidden_door": "Dungeon Bricks Hidden Door",
       "item.alexs_mod.sigilof_creation": "Sigil of Creation",
@@ -27708,11 +25356,11 @@
       "block.alexs_mod.charred_bricks_stairs": "Charred Bricks Stairs",
       "subtitles.shadow_teleport": "Shadow teleport",
       "subtitles.spear_pin_point": "Spear puncture",
-      "block.alexs_mod.soul_stream": "Soul Stream",
       "enchantment.catastrophe_mod.spellcasting": "Spellcasting",
+      "block.alexs_mod.soul_stream": "Soul Stream",
       "item.alexs_mod.knife_of_proficiency_projectile": "Knife Of Proficiency Projectile",
-      "item.alexs_mod.armageddon_robot_spawn_egg": "Armageddon Robot Spawn Egg",
       "item.catastrophe_mod.music_disc_strike_you_down.desc": "Freddy Frostbear - Strike You Down!",
+      "item.alexs_mod.armageddon_robot_spawn_egg": "Armageddon Robot Spawn Egg",
       "block.alexs_mod.wuflar_plating": "§9Wuflar Plating",
       "item.catastrophe_mod.freezing_staff": "§bFreezing Staff",
       "effect.alexs_mod.back_step_cool_down": "Back Step Cool Down",
@@ -27730,20 +25378,19 @@
       "subtitles.knife_flying": "Knife flying",
       "subtitles.knife_is_thrown": "Knife is thrown",
       "effect.catastrophe_mod.boss_dash": "Boss Dash",
-      "item.catastrophe_mod.acid_tarantula": "Acid Tarantula",
       "item.catastrophe_mod.shroomium_ingot": "Shroomium Ingot",
       "effect.alexs_mod.bullseye": "Bullseye",
       "subtitles.rustgun_shoots": "Rustgun shoots",
-      "block.alexs_mod.natureite_ore": "§aNaturite Ore",
-      "item.alexs_mod.ancient_armor_leggings": "Ancient Leggings",
       "item.alexs_mod.scrap_metal": "Scrap Metal",
+      "item.alexs_mod.ancient_armor_leggings": "Ancient Leggings",
+      "block.alexs_mod.natureite_ore": "§aNaturite Ore",
       "item.alexs_mod.raw_tungsten": "Raw Tungsten",
       "entity.alexs_mod.armageddon_robot": "Armageddon Robot",
       "advancements.target_acquired.descr": "Obtain your first ranged weapon",
       "item.alexs_mod.galaxium_ingot": "Galaxium Ingot",
       "effect.alexs_mod.plane_flight": "Pwane",
-      "attribute.catastrophe_mod.casting_speed": "Casting Speed",
       "subtitles.earthbound_wraith_groundpounds": "Earthbound Wraith ground-pounds",
+      "attribute.catastrophe_mod.casting_speed": "Casting Speed",
       "item.catastrophe_mod.lesser_mana_potion": "Lesser Mana Potion",
       "item.catastrophe_mod.blazing_phoenix_spawn_egg": "Blazing Phoenix Spawn Egg",
       "item.alexs_mod.tungsten_sword": "Tungsten Sword",
@@ -27772,8 +25419,8 @@
       "entity.catastrophe_mod.earthbound_fist": "Earthbound Fist",
       "block.catastrophe_mod.tall_calico_shroom": "Tall Calico Shroom",
       "block.alexs_mod.razed_trapdoor": "Razed Trapdoor",
-      "item.alexs_mod.lightning_blade_staff": "§bLightning Blade Staff",
       "item_group.catastrophe_mod.bullets": "Ranged",
+      "item.alexs_mod.lightning_blade_staff": "§bLightning Blade Staff",
       "item.catastrophe_mod.twig": "Twig",
       "subtitles.agiel": "Agiel Use",
       "item.alexs_mod.enchanted_sword": "Enchanted Sword",
@@ -27781,8 +25428,8 @@
       "gui.alexs_mod.ark_scissor_rift_menu.button_close": "Close",
       "item.alexs_mod.ancient_war_horn": "§cAncient War Horn",
       "item.catastrophe_mod.crystal_round": "§dCrystal Round",
-      "block.catastrophe_mod.shale": "Shale",
       "subtitles.electrified_storm_rumble": "Electrified storm rumble",
+      "block.catastrophe_mod.shale": "Shale",
       "item.alexs_mod.thorn_bow": "§2Thorn Bow",
       "gui.alexs_mod.aegex_3_gui.label_species_a_name_toast": "species a name. toast..",
       "block.alexs_mod.compacted_torch_stone": "Compacted Torchstone",
@@ -27791,16 +25438,15 @@
       "subtitles.wraith_claps": "Mineral Wraith Claps",
       "item.alexs_mod.raw_corn": "Raw Corn",
       "item.alexs_mod.hunter_leggings": "Hunter Leggings",
-      "item_group.catastrophe_mod.accessories": "Accessories",
       "gui.alexs_mod.aegex_2_gui.label_been_dropping_recently": "been dropping recently",
       "advancements.catastrophe.descr": "A scarred world left to burn in its own flames",
       "effect.catastrophe_mod.electrified": "Electrified",
       "item.catastrophe_mod.naturite_bow": "§aNaturite Bow",
       "block.alexs_mod.overgrown_trapdoor": "Overgrown Trapdoor",
-      "subtitles.nightfalls_demise_throw": "Nightfall\u0027s Demise Throw",
       "item.catastrophe_mod.netherite_spear": "Netherite Spear",
-      "block.alexs_mod.razed_button": "Razed Button",
+      "subtitles.nightfalls_demise_throw": "Nightfall\u0027s Demise Throw",
       "entity.catastrophe_mod.voltblade": "Voltblade",
+      "block.alexs_mod.razed_button": "Razed Button",
       "effect.catastrophe_mod.bleeding": "Bleeding",
       "item.alexs_mod.the_blade_crown_texture": "The Blade Crown Texture",
       "gui.alexs_mod.drink_menu.label_greed_mixture": "Greed Mixture:",
@@ -27815,8 +25461,8 @@
       "subtitles.metal_hit": "Metal hit",
       "gui.catastrophe_mod.back_pack_screen.label_back_pack": "Backpack",
       "item.catastrophe_mod.electrified_round": "§bElectrified Round",
-      "block.alexs_mod.dried_rosxite_ore": "§2Dried Rosxite Ore",
       "subtitles.weak_metal_hit": "Weak metal hit",
+      "block.alexs_mod.dried_rosxite_ore": "§2Dried Rosxite Ore",
       "gui.alexs_mod.quest_book_gui.label_robots_and_automatons_that_spaw": " robots and automatons that spawn during the day.",
       "entity.alexs_mod.ratsechi": "Ratsechi",
       "subtitles.stardust_explodes": "Stardust Explodes",
@@ -27826,8 +25472,8 @@
       "item.alexs_mod.spell_of_souls": "§8Soul Keeper",
       "item.alexs_mod.music_disc_proliferating_mushrooms": "Music Disc",
       "subtitles.halberd_hits": "Halberd Hits",
-      "item.catastrophe_mod.cursed_armor_leggings": "§5Cursed Leggings",
       "item.alexs_mod.shadow_ingot": "Shadow Ingot",
+      "item.catastrophe_mod.cursed_armor_leggings": "§5Cursed Leggings",
       "subtitles.charred_mantis_dashes": "Charred Mantis dashes",
       "item.alexs_mod.murky_slime_mob_spawn_egg": "Murky Slime Mob Spawn Egg",
       "item.catastrophe_mod.calico_mushroom_stew": "Calico Mushroom Stew",
@@ -27844,7 +25490,6 @@
       "item.alexs_mod.armageddon_armor_leggings": "Armageddon Transformation",
       "item.alexs_mod.tungsten_axe": "Tungsten Axe",
       "gui.alexs_mod.overgrowth_enter.button_close": "Close",
-      "item.catastrophe_mod.amulet_of_weakening": "§7Amulet of Weakening",
       "item.alexs_mod.ancient_armor_boots": "Ancient Boots",
       "enchantment.catastrophe_mod.nourishment": "Nourishment",
       "block.alexs_mod.limbo_ore": "Limbo Ore",
@@ -27876,7 +25521,6 @@
       "death.attack.demise.item": "%1$s\u0027s night became their demise by %2$s using %3$s",
       "item.alexs_mod.alex_explosion": "Alex Explosion",
       "block.alexs_mod.laboratory_panel_slab": "Laboratory Panel Slab",
-      "item.catastrophe_mod.spear_mastery_crest": "§9Spear Mastery Crest",
       "block.alexs_mod.charred_bricks_slab": "Charred Bricks Slab",
       "item.alexs_mod.icicle": "Icicle",
       "item.alexs_mod.freezing_spike": "Freezing Spike",
@@ -27898,14 +25542,14 @@
       "item.catastrophe_mod.hunter_boots": "Hunter\u0027s Boots",
       "entity.catastrophe_mod.oceanic_splash": "Oceanic Splash",
       "item.alexs_mod.natures_strike": "§2Nature\u0027s Strike",
-      "enchantment.alexs_mod.draconic_claw": "Draconic Claw",
       "item.alexs_mod.skystardamage": "Skystardamage",
+      "enchantment.alexs_mod.draconic_claw": "Draconic Claw",
       "item.alexs_mod.bar_fight": "Music Disc",
-      "item.alexs_mod.bullet_shell": "Bullet Shell",
       "item.alexs_mod.armageddon_armor_helmet": "Armageddon Transformation",
+      "item.alexs_mod.bullet_shell": "Bullet Shell",
       "item.alexs_mod.ark_parry": "Ark Parry",
-      "item.catastrophe_mod.staff_of_thorns": "§2Staff of Thorns",
       "effect.catastrophe_mod.hunter_stealth_cooldown": "Hunter Stealth Cooldown",
+      "item.catastrophe_mod.staff_of_thorns": "§2Staff of Thorns",
       "item.alexs_mod.orbital_barrage": "Music Disc",
       "subtitles.scissors_close": "Ark of the Universe Cut",
       "effect.alexs_mod.bloodshed_1": ".",
@@ -27917,12 +25561,12 @@
       "entity.alexs_mod.hermit_crab": "Hermit Crab",
       "item.alexs_mod.electrified_copper_sword": "§bElectrified Sword",
       "effect.alexs_mod.bloodshed_4": "Let\u0027s Dance!",
-      "effect.alexs_mod.endurance": "Endurance",
       "gui.alexs_mod.stat_bars.label_mana": "Mana:",
+      "effect.alexs_mod.endurance": "Endurance",
       "entity.catastrophe_mod.surge_breaker": "Surge Breaker",
       "item.alexs_mod.frigid_slicer": "§3Frigid Slicer",
-      "item.minecraft.potion.effect.bullseye_potion": "Potion of Bullseye",
       "death.attack.bleed.item": "%1$s bled out to death",
+      "item.minecraft.potion.effect.bullseye_potion": "Potion of Bullseye",
       "entity.alexs_mod.wuflar_hoverbot": "Wuflar Hoverbot",
       "item.catastrophe_mod.thunderstrike": "§bThunderstrike",
       "block.catastrophe_mod.depthstone_slab": "Depthstone Slab",
@@ -27937,10 +25581,9 @@
       "item.alexs_mod.natureite_pickaxe": "§aNaturite Pickaxe",
       "item.alexs_mod.bartosa_bazooka": "Bartosa Bazooka",
       "effect.alexs_mod.slash_2_condition": "attack 2",
-      "entity.alexs_mod.fly": "Fly",
       "item.catastrophe_mod.music_disc_overgrown_grove.desc": "Freddy Frostbear - Overgrown Grove",
+      "entity.alexs_mod.fly": "Fly",
       "item.alexs_mod.worm_body_spawn_egg": "Destroyer Body Spawn Egg",
-      "item.catastrophe_mod.golden_bracelet": "Golden Necklace",
       "block.catastrophe_mod.red_sea_shell": "Red Sea Shell",
       "advancements.you_just_dont_believe_me.title": "You Just Don\u0027t Believe Me",
       "subtitles.strike_you_down": "Strike You Down!",
@@ -27949,8 +25592,8 @@
       "effect.alexs_mod.alexs_shield_effect": "Shield Effect",
       "item.catastrophe_mod.crystal_spear": "Crystal Spear",
       "item.alexs_mod.bartosa_chestplate": "Bartosa Body",
-      "gui.alexs_mod.armageddon_weapon_menu.button_armageddon_robot": "Armageddon Robot",
       "item.alexs_mod.fly_spawn_egg": "Fly Spawn Egg",
+      "gui.alexs_mod.armageddon_weapon_menu.button_armageddon_robot": "Armageddon Robot",
       "block.alexs_mod.overgrown_slab": "Overgrown Slab",
       "item.alexs_mod.alexsmoditem": "Alexsmoditem",
       "death.attack.electricity.item": "%1$s experienced short circuit",
@@ -27966,8 +25609,8 @@
       "item.alexs_mod.natureite_armor_boots": "§aNaturite Boots",
       "subtitles.radar_beep": "Radar Beeps",
       "subtitles.solid_ice_magic_cats": "Solid Ice Magic is Casted",
-      "entity.alexs_mod.worm_body": "Destroyer Body",
       "enchantment.catastrophe_mod.frost_aspect": "Frost Aspect",
+      "entity.alexs_mod.worm_body": "Destroyer Body",
       "item.catastrophe_mod.poisoned_vines": "§2Poisonous Vines",
       "item.catastrophe_mod.natureite_shovel": "§aNaturite Shovel",
       "item.alexs_mod.reaper_scythe": "§dShield Scythe",
@@ -27987,8 +25630,8 @@
       "item.alexs_mod.armageddon_remote": "Armageddon Remote [Off]",
       "key.alexs_mod.ring_open": "The Blade Bell GUI Open",
       "subtitles.redsplit": "redsplit",
-      "item.catastrophe_mod.lightning_blade_spawn_egg": "Lightning Blade Spawn Egg",
       "subtitles.sheath": "sheath",
+      "item.catastrophe_mod.lightning_blade_spawn_egg": "Lightning Blade Spawn Egg",
       "block.alexs_mod.razed_wood": "Razed Wood",
       "item.catastrophe_mod.living_moss": "§2Living Moss",
       "item.alexs_mod.bartosa_blade": "Bartosa Blade",
@@ -27999,8 +25642,8 @@
       "item.alexs_mod.shadow_armor_leggings": "§8Shadow Greaves",
       "effect.alexs_mod.spirit": "Spirit",
       "item.alexs_mod.kaylas_briliance_spawn_egg": "§kHellion Spawn Egg",
-      "entity.alexs_mod.wuflar_blade_robot": "Wuflar Blade Robot",
       "gui.alexs_mod.ark_scissor_rift_menu.label_choose_your_destination": "Choose your Destination",
+      "entity.alexs_mod.wuflar_blade_robot": "Wuflar Blade Robot",
       "subtitles.rockslide": "Conos Dies",
       "item.alexs_mod.brush_of_jmaster": "Brush of Jmaster",
       "item.minecraft.splash_potion.effect.intelligence_long": "Splash Potion of Intelligence",
@@ -28009,8 +25652,8 @@
       "key.catastrophe_mod.double_jump_key": "Double Jump",
       "biome.catastrophe_mod.calico_mushroom_fields": "Calico Mushroom Fields",
       "item.alexs_mod.golden_bomb": "Golden Bomb",
-      "entity.catastrophe_mod.starlit_lacewing": "Starlit Lacewing",
       "item_group.catastrophe_mod.mage": "Magic",
+      "entity.catastrophe_mod.starlit_lacewing": "Starlit Lacewing",
       "subtitles.spell_fire": "Spell Fire",
       "item.alexs_mod.bookof_blades": "Book of Blades",
       "subtitles.sigil_of_sacrific": "Sigil of Sacrific Activate",
@@ -28040,8 +25683,8 @@
       "item.alexs_mod.ratsechi_spawn_egg": "Ratsechi Spawn Egg",
       "key.alexs_mod.blink_tech_teleport": "Blink Tech Teleport",
       "gui.alexs_mod.aegex_5_gui.label_ive_come_to_realize_this_planet": "I\u0027ve come to realize this planet",
-      "entity.catastrophe_mod.nettle": "Nettle",
       "block.alexs_mod.razed_slab": "Razed Slab",
+      "entity.catastrophe_mod.nettle": "Nettle",
       "item.catastrophe_mod.electrified_armor_leggings": "§bElectrified Leggings",
       "item.alexs_mod.aijex_loot_bundle": "Aijex Loot Bundle",
       "entity.catastrophe_mod.sword_spin_dash": "Sword Spin Dash",
@@ -28049,7 +25692,6 @@
       "item.catastrophe_mod.cursed_armor_helmet": "§5Cursed Hood",
       "gui.alexs_mod.aegex_4_gui.label_armed_with_my_missing_arsenal": "armed with my missing arsenal.",
       "block.catastrophe_mod.depthstone": "Depthstone",
-      "item.catastrophe_mod.pocket_shield_generator": "§6Absorption Aegis",
       "subtitles.deathray": "Deathray",
       "item.alexs_mod.iron_round": "Iron Round",
       "subtitles.bistro_1": "Bistro 1",
@@ -28063,21 +25705,21 @@
       "item.alexs_mod.redsplitranged": "Redsplitranged",
       "item.alexs_mod.wraith_sparks": "Wraith Sparks",
       "entity.alexs_mod.pile_of_moss": "Pile Of Moss",
-      "entity.catastrophe_mod.freezing_core": "Freezing Core",
       "subtitles.eldritch_blast": "Eldritch blast",
+      "entity.catastrophe_mod.freezing_core": "Freezing Core",
       "subtitles.crystalline_edge_big_slash": "Crystalline Edge big slash",
       "subtitles.ding": "Cool Down Over",
       "subtitles.axe_swing": "Axe Is Swung",
       "item.alexs_mod.gloveofthe_deserts": "§6Glove of the Deserts",
       "item.catastrophe_mod.music_disc_vines_of_venom.desc": "Freddy Frostbear - Vines of Venom",
-      "block.alexs_mod.vigorous_candle": "Vigorous Candle",
       "item.minecraft.potion.effect.intelligence_potion": "Potion of Intelligence",
+      "block.alexs_mod.vigorous_candle": "Vigorous Candle",
       "item.alexs_mod.orbitium_cluster": "Orbitium",
       "item.alexs_mod.bartosa_leggings": "Bartosa Leggings",
       "key.catastrophe_mod.shield_parry": "Shield Parry",
       "item.alexs_mod.fire_wyvern_scale_boots": "Fire Wyvern Scale Boots",
-      "gui.alexs_mod.aegex_4_gui.label_why_the_hell_am_i_being_shot_at": "Why the hell am I being shot at by",
       "effect.alexs_mod.armageddon": "Armageddon",
+      "gui.alexs_mod.aegex_4_gui.label_why_the_hell_am_i_being_shot_at": "Why the hell am I being shot at by",
       "item.alexs_mod.sea_spear": "Sea Spear",
       "item.catastrophe_mod.cursed_armor_chestplate": "§5Cursed Robes",
       "subtitles.electric_buzzing": "Electric buzzing",
@@ -28107,8 +25749,8 @@
       "item.alexs_mod.aegex_journal_1": "Aegex Journal 1",
       "key.alexs_mod.back_step_keybind": "Back Step",
       "item.alexs_mod.aegex_journal_5": "Aegex Journal 5",
-      "item.alexs_mod.aegex_journal_4": "Aegex Journal 4",
       "item.catastrophe_mod.earthbound_wraith_loot_bundle": "Earthbound Wraith Loot Bundle",
+      "item.alexs_mod.aegex_journal_4": "Aegex Journal 4",
       "item.alexs_mod.aegex_journal_3": "Aegex Journal 3",
       "block.alexs_mod.dungeon_jigsaw": "Dungeon Jigsaw",
       "item.alexs_mod.aegex_journal_2": "Aegex Journal 2",
@@ -28127,8 +25769,8 @@
       "subtitles.mine_blast": "Mine blast",
       "death.attack.sugarcoated": "%1$s sugarcoated it",
       "subtitles.sawed_off_shotgun_shoots": "Sawed-Off Shotgun shoots",
-      "item.alexs_mod.acid_tarantula": "Acid Tarantula",
       "entity.catastrophe_mod.nature_blessed_spirit": "Nature Blessed Spirit",
+      "item.alexs_mod.acid_tarantula": "Acid Tarantula",
       "gui.alexs_mod.aegex_2_gui.label_to_arm_my_rabbits": "to arm my rabbits",
       "biome.alexs_mod.abyss_water_height": "Abyss Shores",
       "block.catastrophe_mod.natureite_ore": "§aNaturite Ore",
@@ -28140,13 +25782,13 @@
       "entity.alexs_mod.abyssal_slime": "Abyssal Slime",
       "subtitles.crystal_laser_beam": "Crystal laser beam",
       "item.catastrophe_mod.hellbane": "§6Hellbane",
-      "item.alexs_mod.firefly_spawn_egg": "Firefly Spawn Egg",
       "gui.alexs_mod.quest_book_gui.label_metal_scrap": "Metal Scrap.",
+      "item.alexs_mod.firefly_spawn_egg": "Firefly Spawn Egg",
       "block.alexs_mod.overgrown_wood": "Overgrown Wood",
       "death.attack.crushed": "%1$s was crushed",
       "subtitles.anglerfish_bite": "Anglerfish bites",
-      "subtitles.wiresaw_loop": "Wiresaw loop",
       "item.alexs_mod.assembally_shard": "Assembly Shard",
+      "subtitles.wiresaw_loop": "Wiresaw loop",
       "subtitles.something_finishes_using_shadow_magic": "Finished shadow magic",
       "item.alexs_mod.swamp_thing_spawn_egg": "Swamp Thing Spawn Egg",
       "block.alexs_mod.abyss_sand": "Abyss Sand",
@@ -28166,8 +25808,8 @@
       "item.alexs_mod.gauss_nuke": "Gauss Nuke",
       "block.catastrophe_mod.rusty_plating": "Rusty Plating",
       "subtitles.mana_is_drained": "Mana is drained",
-      "item.catastrophe_mod.scrap_round": "Scrap Round",
       "effect.alexs_mod.intelligence": "Intelligence",
+      "item.catastrophe_mod.scrap_round": "Scrap Round",
       "item.alexs_mod.shroomium_leggings": "Shroomium Leggings",
       "block.alexs_mod.overgrown_fence_gate": "Overgrown Fence Gate",
       "attribute.catastrophe_mod.melee_damage": "Melee Damage",
@@ -28182,7 +25824,6 @@
       "item.catastrophe_mod.earth_gauntlet": "§7Earth Gauntlet",
       "item.catastrophe_mod.nautilus_leggings": "Nautilus Leggings",
       "subtitles.mineral_wraith_claps": "Mineral Wraith claps",
-      "item.catastrophe_mod.netherite_shield": "Netherite Shield",
       "gui.alexs_mod.quest_book_gui.label_iron_block_1x": "-Iron Block 1x",
       "effect.alexs_mod.iceshield_teleport": "shield tp",
       "subtitles.shovel_hit": "Shovel hit",
@@ -28195,19 +25836,18 @@
       "block.catastrophe_mod.shale_bricks_stairs": "Shale Bricks Stairs",
       "item.catastrophe_mod.heart_of_thorns": "§2Heart of Thorns",
       "item.catastrophe_mod.starlit_lacewing_staff": "§bStarlit Lacewing Staff",
-      "item.alexs_mod.chocolate_milk": "Chocolate Milk",
-      "gui.alexs_mod.hellion_note_sheet_page.label_hellion_note_sheet": "Hellion Note Sheet",
       "item.catastrophe_mod.ripsaw": "§bRipsaw",
+      "gui.alexs_mod.hellion_note_sheet_page.label_hellion_note_sheet": "Hellion Note Sheet",
+      "item.alexs_mod.chocolate_milk": "Chocolate Milk",
       "gui.alexs_mod.aegex_1_gui.label_they_shall_be_utilized_for_my_se": "They shall be utilized for my service",
-      "item.catastrophe_mod.reinforced_axe": "§7Reinforced Axe",
       "death.attack.split_in_two.item": "%1$s was split in two by %2$s using %3$s",
+      "item.catastrophe_mod.reinforced_axe": "§7Reinforced Axe",
       "item.alexs_mod.lightning_book_spark": "Lightning Book Spark",
       "subtitles.sword_clang": "sword_clang",
       "item.alexs_mod.challengers_trophy": "Challengers Trophy",
       "gui.catastrophe_mod.soul_power_overlay.label_empty": "/",
       "item.alexs_mod.hunter_chestplate": "Hunter Tunic",
       "subtitles.frost_blast": "Frost blast",
-      "item.catastrophe_mod.marksmans_crest": "§cMarksman\u0027s Crest",
       "item.minecraft.tipped_arrow.effect.bullseye_potion_strong": "Arrow of Bullseye",
       "item.catastrophe_mod.gasoline_canister": "Gasoline Canister",
       "effect.alexs_mod.green_dash": "Green Dash",
@@ -28220,12 +25860,11 @@
       "block.catastrophe_mod.charred_bricks_stairs": "Charred Bricks Stairs",
       "death.attack.impaled.item": "%1$s was impaled by %2$s using %3$s",
       "item.alexs_mod.armageddonlaser_beam": "Armageddonlaser Beam",
-      "gui.alexs_mod.quest_book_gui.label_blink_tech": "Blink Tech",
       "item.catastrophe_mod.thorn_leggings": "§2Thorn Leggings",
+      "gui.alexs_mod.quest_book_gui.label_blink_tech": "Blink Tech",
       "gui.alexs_mod.aegex_2_gui.label_just_imagine_the_weaponry": "Just imagine the weaponry ",
       "item.alexs_mod.wuflar_scrap": "§9Wuflar Metal Scrap",
       "item.alexs_mod.kyolden_armor_boots": "§6Kyloden Boots",
-      "item.catastrophe_mod.frozen_shield": "§bFrozen Shield",
       "item.catastrophe_mod.shroomium_leggings": "Shroomium Leggings",
       "advancements.i_shall_rend_you_apart.descr": "And you will become inanimate once more",
       "item.catastrophe_mod.sea_hoe": "Sea Hoe",
@@ -28239,7 +25878,6 @@
       "item.catastrophe_mod.hermit_crab_spawn_egg": "Hermit Crab Spawn Egg",
       "item.alexs_mod.natures_blessing_helmet": "§2Nature\u0027s Blessing Helmet",
       "effect.catastrophe_mod.marked_for_death": "Marked For Death",
-      "item.catastrophe_mod.mana_rose": "Mana Rose",
       "advancements.im_not_gonna_sugarcoat_it.title": "I\u0027m Not Gonna Sugarcoat It",
       "item.minecraft.potion.effect.bullseye_potion_long": "Potion of Bullseye",
       "item.catastrophe_mod.thorn_infested_armor_loot_bundle": "Thorn Infested Armor Loot Bundle",
@@ -28255,8 +25893,8 @@
       "item.catastrophe_mod.charred_mantis_spawn_egg": "Charred Mantis Spawn Egg",
       "item.alexs_mod.tungsten_shield": "Tungsten Shield",
       "block.alexs_mod.shield_scythe_placed": "Shield_Scythe.Placed",
-      "biome.alexs_mod.the_void": "The Void",
       "item.alexs_mod.bartosa_tools_pickaxe": "Bartosa Pickaxe",
+      "biome.alexs_mod.the_void": "The Void",
       "item.alexs_mod.excalibur": "§e§lExcalibur",
       "item.alexs_mod.hunter_boots": "Hunter Boots",
       "gui.alexs_mod.ring.button_ring": "Ring",
@@ -28268,8 +25906,8 @@
       "gui.alexs_mod.quest_book_gui.label_portal": "Portal.",
       "gui.alexs_mod.aegex_2_gui.label_i_think_its_a_good_idea": "I think it\u0027s a good idea ",
       "attribute.catastrophe_mod.ranged_damage": "Ranged Damage",
-      "key.catastrophe_mod.dash": "Dash",
       "gui.alexs_mod.hellion_note_sheet_page.label_boss_attributes": "Boss Attributes:",
+      "key.catastrophe_mod.dash": "Dash",
       "enchantment.catastrophe_mod.gravitational_reflux": "Gravitational Reflux",
       "gui.alexs_mod.quest_book_gui.label_6_obtain_a_blink_tech": "6. Obtain a Blink Tech.",
       "item.alexs_mod.salt": "Salt",
@@ -28287,14 +25925,13 @@
       "gui.alexs_mod.quest_book_gui.label_iron_ingot_2x": "-Iron Ingot 2x",
       "item.alexs_mod.natureite_sword": "§aNaturite Sword",
       "subtitles.wind_whistles": "Wind Whistles",
-      "item.catastrophe_mod.quiver": "Quiver",
       "item.catastrophe_mod.spore_staff": "Spore Staff",
       "item.catastrophe_mod.descending_misery_spawn_egg": "Descending Misery Spawn Egg",
       "item.alexs_mod.shotgun_shells": "Bartosa Shotgun Shells",
       "block.catastrophe_mod.rusty_plating_slab": "Rusty Plating Slab",
       "item.alexs_mod.red_sun": "Red Sun",
-      "item.alexs_mod.stinger": "Stinger",
       "item.alexs_mod.fire_wyvern_scale_leggings": "Fire Wyvern Scale Leggings",
+      "item.alexs_mod.stinger": "Stinger",
       "item.alexs_mod.nautilus_chestplate": "Nautilus Chestplate",
       "attribute.catastrophe_mod.armor_penetration": "Armor Penetration",
       "effect.alexs_mod.hellion_x_3": "Hellion x3",
@@ -28393,7 +26030,6 @@
       "item.alexs_mod.tungsten_gripping_glove": "Tungsten Gripping Glove",
       "item.alexs_mod.natureite_hoe": "§aNaturite Hoe",
       "item.alexs_mod.bloater_spawn_egg": "Bloater Spawn Egg",
-      "item.catastrophe_mod.aero_boots": "§bAero Boots",
       "item.alexs_mod.flash_bang": "Flash Bang",
       "item.alexs_mod.wuflar_cog": "§9Wuflar Cog",
       "subtitles.hunter_critical_hit": "Hunter critical hit",
@@ -28403,7 +26039,6 @@
       "item.alexs_mod.tungsten_hoe": "Tungsten Hoe",
       "item.alexs_mod.bartosa_tools_axe": "Bartosa Axe",
       "death.attack.split_in_two": "%1$s was split in two",
-      "item.catastrophe_mod.sea_pendant": "Sea Pendant",
       "item.alexs_mod.nether_treads": "Nether Treads",
       "item.alexs_mod.acid_tarantula_minion_spawn_egg": "Acid Tarantula Minion Spawn Egg",
       "item.alexs_mod.netherite_wraith_loot_bundle": "Netherite Wraith Loot Bundle",
@@ -28477,7 +26112,6 @@
       "gamerule.totemCooldown.description": "Time during which a totem will not work",
       "gui.alexs_mod.quest_book_gui.label_4_the_mineral_wraith_is_summone": "4. The Mineral Wraith is summoned using a ",
       "block.alexs_mod.endurance_candle": "Endurance Candle",
-      "item.catastrophe_mod.amulet_of_vitality": "§2Amulet of Vitality",
       "effect.alexs_mod.jump_scare_effect": "Jump Scare",
       "item.alexs_mod.amethyst_shard": "Amethyst Shard",
       "block.catastrophe_mod.natureite_block": "§aBlock of Naturite",
@@ -28550,7 +26184,6 @@
       "item.catastrophe_mod.music_disc_battle_of_stone": "Music Disc",
       "item.alexs_mod.red_split_katana": "§4§lRed-Split Katana",
       "item.catastrophe_mod.calico_stag_beetle_spawn_egg": "Calico Stag Beetle Spawn Egg",
-      "curios.identifier.accessory": "Accessory",
       "item.minecraft.tipped_arrow.effect.intelligence_long": "Arrow of Intelligence",
       "item.alexs_mod.mineral_wraith_loot_bundle": "Mineral Wraith Loot Bundle",
       "item.alexs_mod.metal_plating": "Metal Plating",
@@ -28593,17 +26226,14 @@
       "item.alexs_mod.wuflar_helmet": "Wuflar Helmet",
       "subtitles.spark_of_a_shadow": "Spark of a Shadow",
       "block.alexs_mod.shroomium_ore": "Shroomium Ore",
-      "item.catastrophe_mod.storm_shield": "§bStorm Shield",
       "advancements.this_i_command.title": "This I Command!",
       "item.catastrophe_mod.natureite_armor_chestplate": "§aNaturite Chestplate",
-      "item.catastrophe_mod.rotten_heart": "Rotten Heart",
       "item.alexs_mod.the_final_battlefield": "The Final Battlefield Portal Igniter",
       "block.alexs_mod.laboratory_block": "Laboratory Block",
       "item.catastrophe_mod.music_disc_strike_you_down": "Music Disc",
       "block.alexs_mod.tall_calico_shroom": "Tall Calico Shroom",
       "effect.alexs_mod.banishing_soul": "Banishing Soul",
       "entity.alexs_mod.mechanical_monstrosity": "Mechanical Monstrosity",
-      "item.catastrophe_mod.sandstorm_surge": "Sandstorm Surge",
       "block.catastrophe_mod.crimstone_ore": "§4Crimstone Ore",
       "subtitles.vines_of_venom": "Vines of Venom",
       "entity.alexs_mod.sword_dash": "Sword Dash",
@@ -28688,7 +26318,6 @@
       "item.alexs_mod.star_blast": "Star Blast",
       "entity.alexs_mod.furious_wind": "Furious Wind",
       "item.alexs_mod.energizer_spawn_egg": "Energizer Spawn Egg",
-      "item.catastrophe_mod.barbed_arrowhead": "Barbed Arrowhead",
       "entity.alexs_mod.hurricane": "Hurricane",
       "item.catastrophe_mod.mineral_wraith_loot_bundle": "Mineral Wraith Loot Bundle",
       "entity.alexs_mod.cipher": "Cipher",
@@ -28742,7 +26371,6 @@
       "item.alexs_mod.netherite_shield": "Netherite Shield",
       "effect.catastrophe_mod.brass_attack_speed": "Brass Attack Speed",
       "item.alexs_mod.cooked_corn": "Cooked Corn",
-      "item.catastrophe_mod.axe_mastery_crest": "§9Axe Mastery Crest",
       "subtitles.crystalline_edge_charged": "Crystalline Edge charged",
       "item.alexs_mod.bartosa_tools_shovel": "Bartosa Shovel",
       "item.alexs_mod.cyborg_armor_boots": "Cyborg Boots",
@@ -28809,7 +26437,6 @@
       "entity.alexs_mod.tia_dash": "Tia Dash",
       "item.alexs_mod.ark_of_the_universe": "Ark of the Universe",
       "item.alexs_mod.reinforced_shield": "§7Reinforced Shield",
-      "item.catastrophe_mod.oceanic_artifact": "Oceanic Artifact",
       "biome.alexs_mod.calico_mushroom_fields": "Calico Mushroom Fields",
       "itemGroup.tabbullets": "Ranged",
       "entity.alexs_mod.assassin_skeleton": "Assassin Skeleton",
@@ -28844,7 +26471,6 @@
       "subtitles.sparkshredder_starts": "Sparkshredder starts",
       "block.catastrophe_mod.charred_bricks_slab": "Charred Bricks Slab",
       "entity.alexs_mod.lava_brute": "Lava Brute",
-      "item.catastrophe_mod.storm_catalyst": "§bStorm Catalyst",
       "item.alexs_mod.projectile_paint": "Projectile Paint",
       "item.catastrophe_mod.hunter_helmet": "Hunter\u0027s Hat",
       "subtitles.rpg": "rpg",
@@ -28864,7 +26490,6 @@
       "item.catastrophe_mod.music_disc_nethers_fury.desc": "Freddy Frostbear - Nether\u0027s Fury",
       "item.alexs_mod.enhanced_plating": "Enhanced Plating",
       "subtitles.knife_of_proficiency_throw": "Knife of Proficiency Throw",
-      "item.catastrophe_mod.ring_of_resilience": "§dRing of Resilience",
       "item.alexs_mod.kyle_fragment": "Kyle Fragment",
       "item.alexs_mod.monocle_armor_helmet": "Monocle",
       "item.catastrophe_mod.accursed_tome": "§5Accursed Tome",
@@ -28885,9 +26510,7 @@
       "item.alexs_mod.moss_boots": "§2Mossy Boots",
       "block.alexs_mod.shield_plush": "Shield Plush",
       "enchantment.alexs_mod.wither_aspect": "Wither Aspect",
-      "item.catastrophe_mod.pacifying_sight": "§5Pacifying Sight",
       "item.alexs_mod.ark_dash": "Ark Dash",
-      "item.catastrophe_mod.reinforced_shield": "§7Reinforced Shield",
       "item.alexs_mod.frost_blast": "Frost Blast",
       "item.catastrophe_mod.moss_chestplate": "§2Mossy Chestplate",
       "biome.alexs_mod.the_arena": "The Arena",
@@ -28907,7 +26530,6 @@
       "item.catastrophe_mod.nautilus_chestplate": "Nautilus Chestplate",
       "subtitles.adrenaline_mode": "Adrenaline Mode",
       "item.alexs_mod.hellion_note_sheet": "Hellion Note Sheet",
-      "item.catastrophe_mod.running_boots": "Running Boots",
       "subtitles.agiel_scream": "Agiel Use",
       "item.catastrophe_mod.beetle_caller": "Beetle Caller",
       "block.alexs_mod.abyss_gravel": "Abyss Gravel",
@@ -29049,7 +26671,6 @@
       "item.alexs_mod.fire_walker_spawn_egg": "Fire Walker Spawn Egg",
       "block.catastrophe_mod.charred_tiles": "Charred Tiles",
       "item.alexs_mod.venomous_bow_0": "Venomous Bow 0",
-      "item.catastrophe_mod.jellyfish_pendant": "§dJellyfish Pendant",
       "item.alexs_mod.lightning_arc_spawn_egg": "Lightning Arc Spawn Egg",
       "item.alexs_mod.venomous_bow_2": "Venomous Bow 2",
       "entity.catastrophe_mod.sword_dash": "Sword Dash",
@@ -29114,7 +26735,6 @@
       "item.alexs_mod.natureite_shovel": "§aNaturite Shovel",
       "block.alexs_mod.overgrown_log": "Overgrown Log",
       "item.alexs_mod.calico_mushroom_stew": "Calico Mushroom Stew",
-      "item.catastrophe_mod.crimson_dagger": "§4Crimson Dagger",
       "item.catastrophe_mod.accursed_arrow": "§5Accursed Arrow",
       "entity.alexs_mod.sword_orbit": "Sword Orbit",
       "block.alexs_mod.charred_tiles_stairs": "Charred Tiles Stairs",
@@ -29142,7 +26762,6 @@
       "block.alexs_mod.cornstalk": "Cornstalk",
       "item.alexs_mod.combat_mug": "Combat Mug",
       "block.alexs_mod.kyloden_block": "Block of Kyloden",
-      "item.catastrophe_mod.crystal_ball": "§bCrystal Ball",
       "item.alexs_mod.paxs_switch_knife": "Pax\u0027s Switch Knife",
       "subtitles.proliferating_mushrooms": "Proliferating Mushrooms",
       "entity.catastrophe_mod.charred_mantis": "Charred Mantis",
@@ -29157,7 +26776,6 @@
       "item.alexs_mod.nautilus_helmet": "Nautilus Helmet",
       "entity.catastrophe_mod.lightning_blade": "Lightning Blade",
       "item.catastrophe_mod.rod_of_teleportation": "§5Rod of Teleportation",
-      "item.catastrophe_mod.spirit_in_a_bottle": "§5Spirit in a Bottle",
       "entity.catastrophe_mod.baby_calico_stag_beetle": "Baby Calico Stag Beetle",
       "subtitles.frozen_shield_activate": "Frozen Shield activate",
       "entity.catastrophe_mod.sepulcher": "Sepulcher",
@@ -29225,7 +26843,6 @@
       "block.catastrophe_mod.pink_sea_shell": "Pink Sea Shell",
       "subtitles.amatoxin_gas": "Amatoxin gas",
       "subtitles.redsplit_launch": "Redsplit Katana Launched",
-      "item.catastrophe_mod.leather_glove": "Leather Glove",
       "subtitles.dash": "Dash",
       "attribute.catastrophe_mod.summoner_damage": "Summoner Damage",
       "item_group.catastrophe_mod.classless_items": "Classless Items",
@@ -29243,7 +26860,6 @@
       "subtitles.copper_sword_is_hit": "Weak metal hit",
       "block.alexs_mod.bartosa_ore": "Bartosa Ore",
       "effect.catastrophe_mod.vulnerability": "Vulnerability",
-      "item.catastrophe_mod.sword_mastery_crest": "§9Sword Mastery Crest",
       "gui.alexs_mod.aegex_2_gui.label_it_appears_to_be_very_durable": "It appears to be very durable",
       "item.catastrophe_mod.electrified_spear": "§bElectrified Spear",
       "item.catastrophe_mod.forge_key": "§bForge Key",
@@ -29268,7 +26884,6 @@
       "subtitles.axe_rend": "Axe rend",
       "item.alexs_mod.starter_bag": "Starter Bag",
       "gui.alexs_mod.aegex_5_gui.label_you_have_found_a_lab_to_obtain_t": "You have found a lab to obtain this,",
-      "item.catastrophe_mod.nether_treads": "Nether Treads",
       "item.catastrophe_mod.thorn_tentacle_spawn_egg": "Thorn Tentacle Spawn Egg",
       "item.catastrophe_mod.infernal_fragment": "Infernal Fragment",
       "block.catastrophe_mod.depthstone_bricks_slab": "Depthstone Bricks Slab",
@@ -29441,10 +27056,6 @@
         "name": "Items",
         "children": [
           {
-            "name": "Accessories",
-            "children": []
-          },
-          {
             "name": "Tools",
             "children": []
           },
@@ -29488,6 +27099,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Relics",
+            "children": []
           }
         ]
       },
@@ -29505,10 +27120,6 @@
       },
       {
         "name": "Structures",
-        "children": []
-      },
-      {
-        "name": "Violent Difficulty",
         "children": []
       },
       {
@@ -29540,7 +27151,6 @@
     "dependants": [],
     "mcreatorDependencies": [
       "use_compiled_mods",
-      "curios_api",
       "geckolib",
       "playeranimator"
     ],

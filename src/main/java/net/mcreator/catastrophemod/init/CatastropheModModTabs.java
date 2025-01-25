@@ -114,38 +114,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.EARTH_GAUNTLET.get());
 				tabData.accept(CatastropheModModItems.STARLIT_LACEWING_STAFF.get());
 			}).withSearchBar().build());
-	public static final RegistryObject<CreativeModeTab> ACCESSORIES = REGISTRY.register("accessories",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.accessories")).icon(() -> new ItemStack(CatastropheModModItems.POCKET_SHIELD_GENERATOR.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CatastropheModModItems.STORM_SHIELD.get());
-				tabData.accept(CatastropheModModItems.RUNNING_BOOTS.get());
-				tabData.accept(CatastropheModModItems.POCKET_SHIELD_GENERATOR.get());
-				tabData.accept(CatastropheModModItems.ACID_TARANTULA.get());
-				tabData.accept(CatastropheModModItems.NETHERITE_SHIELD.get());
-				tabData.accept(CatastropheModModItems.GOLDEN_BRACELET.get());
-				tabData.accept(CatastropheModModItems.NETHER_TREADS.get());
-				tabData.accept(CatastropheModModItems.SEA_PENDANT.get());
-				tabData.accept(CatastropheModModItems.SPIRIT_IN_A_BOTTLE.get());
-				tabData.accept(CatastropheModModItems.OCEANIC_ARTIFACT.get());
-				tabData.accept(CatastropheModModItems.MANA_ROSE.get());
-				tabData.accept(CatastropheModModItems.QUIVER.get());
-				tabData.accept(CatastropheModModItems.REINFORCED_SHIELD.get());
-				tabData.accept(CatastropheModModItems.MARKSMANS_CREST.get());
-				tabData.accept(CatastropheModModItems.AMULET_OF_VITALITY.get());
-				tabData.accept(CatastropheModModItems.AERO_BOOTS.get());
-				tabData.accept(CatastropheModModItems.LEATHER_GLOVE.get());
-				tabData.accept(CatastropheModModItems.FROZEN_SHIELD.get());
-				tabData.accept(CatastropheModModItems.PACIFYING_SIGHT.get());
-				tabData.accept(CatastropheModModItems.AMULET_OF_WEAKENING.get());
-				tabData.accept(CatastropheModModItems.STORM_CATALYST.get());
-				tabData.accept(CatastropheModModItems.RING_OF_RESILIENCE.get());
-				tabData.accept(CatastropheModModItems.ROTTEN_HEART.get());
-				tabData.accept(CatastropheModModItems.AXE_MASTERY_CREST.get());
-				tabData.accept(CatastropheModModItems.SWORD_MASTERY_CREST.get());
-				tabData.accept(CatastropheModModItems.SPEAR_MASTERY_CREST.get());
-				tabData.accept(CatastropheModModItems.BARBED_ARROWHEAD.get());
-				tabData.accept(CatastropheModModItems.CRYSTAL_BALL.get());
-				tabData.accept(CatastropheModModItems.JELLYFISH_PENDANT.get());
-			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> BOSS_SUMMONS = REGISTRY.register("boss_summons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.boss_summons")).icon(() -> new ItemStack(CatastropheModModItems.COPPER_TOKEN.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CatastropheModModItems.POISONED_IRON_HEART.get());

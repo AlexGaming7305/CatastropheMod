@@ -1,9 +1,0 @@
-{
-  "_fv": 57,
-  "_type": "curiosslot",
-  "definition": {
-    "texture": "accessory_slot_icon.png",
-    "name": "Accessory",
-    "amount": 5
-  }
-}

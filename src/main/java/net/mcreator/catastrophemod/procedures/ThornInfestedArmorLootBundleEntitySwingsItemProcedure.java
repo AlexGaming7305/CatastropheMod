@@ -9,6 +9,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModBlocks;
 
 public class ThornInfestedArmorLootBundleEntitySwingsItemProcedure {
 	public static void execute(Entity entity) {
@@ -43,13 +44,13 @@ public class ThornInfestedArmorLootBundleEntitySwingsItemProcedure {
 		}
 		if (accessory_drop == 0) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CatastropheModModItems.ACID_TARANTULA.get());
+				ItemStack _setstack = new ItemStack(CatastropheModModBlocks.MOLTEN_CHARRED_BRICKS.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else if (accessory_drop == 1) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CatastropheModModItems.REINFORCED_SHIELD.get());
+				ItemStack _setstack = new ItemStack(CatastropheModModBlocks.MOLTEN_CHARRED_BRICKS.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

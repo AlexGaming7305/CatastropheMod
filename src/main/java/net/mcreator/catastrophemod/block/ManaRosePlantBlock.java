@@ -20,7 +20,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -56,7 +56,7 @@ public class ManaRosePlantBlock extends FlowerBlock {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(CatastropheModModItems.MANA_ROSE.get()));
+		return Collections.singletonList(new ItemStack(CatastropheModModBlocks.MOLTEN_CHARRED_BRICKS.get()));
 	}
 
 	@Override

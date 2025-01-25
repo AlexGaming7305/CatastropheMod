@@ -61,7 +61,7 @@
     },
     "useLootTableForDrops": false,
     "customDrop": {
-      "value": "CUSTOM:ManaRose"
+      "value": "CUSTOM:MoltenCharredBricks"
     },
     "dropAmount": 1,
     "forceTicking": false,

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "catastrophe_mod:quiver",
+          "name": "catastrophe_mod:deleted_mod_element",
           "weight": 3,
           "functions": [
             {

@@ -52,7 +52,7 @@ public class DoubleJumpKeyMessage {
 			return;
 		if (type == 0) {
 
-			DoubleJumpEnchantmentProcedure.execute(world, x, y, z, entity);
+			DoubleJumpEnchantmentProcedure.execute();
 		}
 	}
 

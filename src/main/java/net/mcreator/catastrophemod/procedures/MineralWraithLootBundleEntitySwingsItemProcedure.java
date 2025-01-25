@@ -9,6 +9,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
 import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModBlocks;
 
 public class MineralWraithLootBundleEntitySwingsItemProcedure {
 	public static void execute(Entity entity) {
@@ -47,7 +48,7 @@ public class MineralWraithLootBundleEntitySwingsItemProcedure {
 		}
 		if (Math.random() < 0.25) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(CatastropheModModItems.STORM_SHIELD.get());
+				ItemStack _setstack = new ItemStack(CatastropheModModBlocks.MOLTEN_CHARRED_BRICKS.get());
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
