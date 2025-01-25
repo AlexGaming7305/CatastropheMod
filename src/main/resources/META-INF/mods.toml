@@ -27,6 +27,12 @@ authors="Alex Gaming, MCreator"
     ordering="NONE"
     side="BOTH"
 [[dependencies.catastrophe_mod]]
+    modId="curios_api"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.catastrophe_mod]]
     modId="geckolib"
     mandatory=false
     versionRange="[0,)"

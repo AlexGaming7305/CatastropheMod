@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "curiosslot",
+  "definition": {
+    "texture": "relic.png",
+    "name": "Relic",
+    "amount": 4
+  }
+}

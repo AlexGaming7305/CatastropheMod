@@ -79,6 +79,7 @@ import net.mcreator.catastrophemod.item.ScrapRoundItem;
 import net.mcreator.catastrophemod.item.SawedOffShotgunItem;
 import net.mcreator.catastrophemod.item.RustyCogwheelItem;
 import net.mcreator.catastrophemod.item.RustgunItem;
+import net.mcreator.catastrophemod.item.RunningBootsItem;
 import net.mcreator.catastrophemod.item.RosxiteIngotItem;
 import net.mcreator.catastrophemod.item.RodOfTeleportationItem;
 import net.mcreator.catastrophemod.item.RiptideItem;
@@ -468,6 +469,7 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> ELECTRIFIED_CHAIN = block(CatastropheModModBlocks.ELECTRIFIED_CHAIN);
 	public static final RegistryObject<Item> OIL = block(CatastropheModModBlocks.OIL);
 	public static final RegistryObject<Item> GASOLINE_CANISTER = REGISTRY.register("gasoline_canister", () -> new GasolineCanisterItem());
+	public static final RegistryObject<Item> RUNNING_BOOTS = REGISTRY.register("running_boots", () -> new RunningBootsItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

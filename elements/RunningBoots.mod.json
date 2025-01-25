@@ -1,16 +1,17 @@
 {
   "_fv": 57,
-  "_type": "item",
+  "_type": "curiosbauble",
   "definition": {
     "renderType": 0,
-    "texture": "gasoline_canister",
+    "texture": "running_boots",
     "customModelName": "Normal",
-    "customProperties": {},
-    "states": [],
-    "name": "Gasoline Canister",
+    "name": "Running Boots",
     "rarity": "COMMON",
+    "slotType": "Relic",
+    "baubleModel": "Default",
+    "baubleModelTexture": "",
     "creativeTab": {
-      "value": "MATERIALS"
+      "value": "CUSTOM:Relics"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -25,27 +26,25 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
+    "addSlot": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§aRight-Click: §7Collects oil from a puddle"
+        "§9+10% Speed"
       ]
     },
-    "glowCondition": {
-      "fixedValue": false
-    },
+    "hasGlow": false,
+    "customProperties": {},
+    "states": [],
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "GasolineCanisterRightclicked"
-    },
-    "enableRanged": false,
-    "shootConstantly": false,
-    "projectile": {
-      "value": "CUSTOM:FlameProjectileProjectile"
-    },
+    "slotAmount": 1,
     "isFood": false,
+    "friendlyPigs": false,
+    "enderMask": false,
+    "rotateModel": false,
+    "translateModel": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
     "eatResultItem": {
@@ -53,6 +52,7 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
+    "hasModel": false,
     "animation": "none"
   }
 }

@@ -166,6 +166,12 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.DOUBLE_BARRELED_SHOTGUN.get());
 				tabData.accept(CatastropheModModItems.SAWED_OFF_SHOTGUN.get());
 			}).withSearchBar().build());
+	public static final RegistryObject<CreativeModeTab> RELICS = REGISTRY.register("relics",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.relics")).icon(() -> new ItemStack(CatastropheModModItems.RUNNING_BOOTS.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(CatastropheModModItems.RUNNING_BOOTS.get());
+			})
+
+					.build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {

@@ -23572,6 +23572,47 @@
         ]
       },
       "path": "~/Items/Miscellaneous"
+    },
+    {
+      "name": "Relic",
+      "type": "curiosslot",
+      "sortid": 3255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "relic",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/relic.json"
+        ]
+      },
+      "path": "~/Items/Relics"
+    },
+    {
+      "name": "Relics",
+      "type": "tab",
+      "sortid": 3256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "relics",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "RunningBoots",
+      "type": "curiosbauble",
+      "sortid": 3257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "running_boots",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/running_boots.json",
+          "src/main/java/net/mcreator/catastrophemod/item/RunningBootsItem.java"
+        ]
+      },
+      "path": "~/Items/Relics"
     }
   ],
   "variable_elements": [
@@ -26484,6 +26525,7 @@
       "item.catastrophe_mod.natureite_ingot": "§aNaturite Ingot",
       "subtitles.electrified_sword_hit": "Electrified sword hit",
       "fluid.alexs_mod.soul_stream": "Soul Stream",
+      "item_group.catastrophe_mod.relics": "Relics",
       "item.catastrophe_mod.surge_breaker_spawn_egg": "Surge Breaker Spawn Egg",
       "subtitles.magic_beam": "Magic Beam Strikes Down",
       "item.alexs_mod.alex_teleport_spawn_egg": "Alex Teleport Spawn Egg",
@@ -26530,6 +26572,7 @@
       "item.catastrophe_mod.nautilus_chestplate": "Nautilus Chestplate",
       "subtitles.adrenaline_mode": "Adrenaline Mode",
       "item.alexs_mod.hellion_note_sheet": "Hellion Note Sheet",
+      "item.catastrophe_mod.running_boots": "Running Boots",
       "subtitles.agiel_scream": "Agiel Use",
       "item.catastrophe_mod.beetle_caller": "Beetle Caller",
       "block.alexs_mod.abyss_gravel": "Abyss Gravel",
@@ -26908,6 +26951,7 @@
       "subtitles.healing_potion_drink": "Healing Potion Drinks",
       "gui.alexs_mod.quest_book_gui.label_2_stone_is_obtained_underground": "2. Stone is obtained underground.",
       "biome.alexs_mod.smokeywoods": "Smokeywoods",
+      "curios.identifier.relic": "Relic",
       "block.catastrophe_mod.cracked_shale_bricks": "Cracked Shale Bricks",
       "item.alexs_mod.star_metal_mold": "Star Metal Mold",
       "entity.alexs_mod.worm_head": "XM-07 Moros",
@@ -27151,6 +27195,7 @@
     "dependants": [],
     "mcreatorDependencies": [
       "use_compiled_mods",
+      "curios_api",
       "geckolib",
       "playeranimator"
     ],

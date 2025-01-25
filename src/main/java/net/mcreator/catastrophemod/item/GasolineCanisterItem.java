@@ -23,7 +23,7 @@ public class GasolineCanisterItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A7aRight-Click: \u00A77Collects fuel from an oil puddle when in your main-hand"));
+		list.add(Component.literal("\u00A7aRight-Click: \u00A77Collects oil from a puddle"));
 	}
 
 	@Override
