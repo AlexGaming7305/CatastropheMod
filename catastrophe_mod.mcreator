@@ -4325,7 +4325,7 @@
       "type": "overlay",
       "sortid": 1812,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "mana_bar",
       "metadata": {
         "files": [
@@ -25597,8 +25597,8 @@
       "registry_name": "oil_drop",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/client/particle/OilDropParticle.java",
-          "src/main/resources/assets/catastrophe_mod/particles/oil_drop.json"
+          "src/main/resources/assets/catastrophe_mod/particles/oil_drop.json",
+          "src/main/java/net/mcreator/catastrophemod/client/particle/OilDropParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -25703,8 +25703,8 @@
       "registry_name": "gasoline_canister",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/catastrophemod/item/GasolineCanisterItem.java",
-          "src/main/resources/assets/catastrophe_mod/models/item/gasoline_canister.json"
+          "src/main/resources/assets/catastrophe_mod/models/item/gasoline_canister.json",
+          "src/main/java/net/mcreator/catastrophemod/item/GasolineCanisterItem.java"
         ]
       },
       "path": "~/Items/Miscellaneous"

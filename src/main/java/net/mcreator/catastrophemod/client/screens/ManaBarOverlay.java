@@ -15,6 +15,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 
@@ -43,9 +45,7 @@ public class ManaBarOverlay {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
 			event.getGuiGraphics().blit(new ResourceLocation("catastrophe_mod:textures/screens/mana_bar_empty.png"), w / 2 + 96, h - 29, 0, 0, 58, 5, 58, 5);
-
-			event.getGuiGraphics().blit(new ResourceLocation("catastrophe_mod:textures/screens/mana_bar_full.png"), w / 2 + 96, h - 29, 0, 0, 58, 5, 58, 5);
-
+			event.getGuiGraphics().blit(new ResourceLocation("catastrophe_mod:textures/screens/mana_bar_full.png"), w / 2 + 96, h - 29, 0, 0, (int) ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Mana_Bar_Fill), 5, 58, 5);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
