@@ -3,9 +3,9 @@
   "_type": "curiosbauble",
   "definition": {
     "renderType": 0,
-    "texture": "running_boots",
+    "texture": "rotten_heart",
     "customModelName": "Normal",
-    "name": "Running Boots",
+    "name": "Rotten Heart",
     "rarity": "COMMON",
     "slotType": "Relic",
     "baubleModel": "Default",
@@ -30,7 +30,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§9+10% Speed"
+        "§7Immunity to §cHunger",
+        "§7Eating Rotten Flesh will grant you §9Regeneration"
       ]
     },
     "hasGlow": false,
@@ -40,12 +41,6 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "slotAmount": 1,
-    "onEquip": {
-      "name": "RunningBootsBaubleIsEquipped"
-    },
-    "onUnequip": {
-      "name": "RunningBootsBaubleIsUnequipped"
-    },
     "isFood": false,
     "friendlyPigs": false,
     "enderMask": false,

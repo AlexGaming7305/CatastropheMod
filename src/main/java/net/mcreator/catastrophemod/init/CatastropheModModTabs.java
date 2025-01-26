@@ -169,6 +169,8 @@ public class CatastropheModModTabs {
 	public static final RegistryObject<CreativeModeTab> RELICS = REGISTRY.register("relics",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.relics")).icon(() -> new ItemStack(CatastropheModModItems.RUNNING_BOOTS.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CatastropheModModItems.RUNNING_BOOTS.get());
+				tabData.accept(CatastropheModModItems.BURNACE.get());
+				tabData.accept(CatastropheModModItems.ROTTEN_HEART.get());
 			})
 
 					.build());

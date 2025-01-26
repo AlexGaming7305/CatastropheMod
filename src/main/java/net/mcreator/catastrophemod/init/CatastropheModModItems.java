@@ -80,6 +80,7 @@ import net.mcreator.catastrophemod.item.SawedOffShotgunItem;
 import net.mcreator.catastrophemod.item.RustyCogwheelItem;
 import net.mcreator.catastrophemod.item.RustgunItem;
 import net.mcreator.catastrophemod.item.RunningBootsItem;
+import net.mcreator.catastrophemod.item.RottenHeartItem;
 import net.mcreator.catastrophemod.item.RosxiteIngotItem;
 import net.mcreator.catastrophemod.item.RodOfTeleportationItem;
 import net.mcreator.catastrophemod.item.RiptideItem;
@@ -181,6 +182,7 @@ import net.mcreator.catastrophemod.item.CopperRoundItem;
 import net.mcreator.catastrophemod.item.CatastropheModIconItem;
 import net.mcreator.catastrophemod.item.CalicoMushroomStewItem;
 import net.mcreator.catastrophemod.item.CactusCutterItem;
+import net.mcreator.catastrophemod.item.BurnaceItem;
 import net.mcreator.catastrophemod.item.BrassColoredShovelItem;
 import net.mcreator.catastrophemod.item.BrassColoredPickaxeItem;
 import net.mcreator.catastrophemod.item.BlossomFloraItem;
@@ -470,6 +472,8 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> OIL = block(CatastropheModModBlocks.OIL);
 	public static final RegistryObject<Item> GASOLINE_CANISTER = REGISTRY.register("gasoline_canister", () -> new GasolineCanisterItem());
 	public static final RegistryObject<Item> RUNNING_BOOTS = REGISTRY.register("running_boots", () -> new RunningBootsItem());
+	public static final RegistryObject<Item> BURNACE = REGISTRY.register("burnace", () -> new BurnaceItem());
+	public static final RegistryObject<Item> ROTTEN_HEART = REGISTRY.register("rotten_heart", () -> new RottenHeartItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

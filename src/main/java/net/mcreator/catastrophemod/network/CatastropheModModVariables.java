@@ -90,6 +90,9 @@ public class CatastropheModModVariables {
 			clone.Mana_Bar_Fill = original.Mana_Bar_Fill;
 			clone.Fuel_Meter_Fill = original.Fuel_Meter_Fill;
 			clone.max_fuel = original.max_fuel;
+			clone.burnace_heat = original.burnace_heat;
+			clone.Heat_Meter_Fill = original.Heat_Meter_Fill;
+			clone.heat_meter_shake = original.heat_meter_shake;
 			if (!event.isWasDeath()) {
 				clone.crimsondagger = original.crimsondagger;
 				clone.pocketshield = original.pocketshield;
@@ -220,6 +223,8 @@ public class CatastropheModModVariables {
 				clone.phasing_dash_variable = original.phasing_dash_variable;
 				clone.screenshake_time = original.screenshake_time;
 				clone.wiresaw_fuel_drain = original.wiresaw_fuel_drain;
+				clone.running_boots_equipped = original.running_boots_equipped;
+				clone.burnace_heat_cooldown = original.burnace_heat_cooldown;
 			}
 		}
 
@@ -459,7 +464,7 @@ public class CatastropheModModVariables {
 		public boolean hunter_crit_damage = false;
 		public boolean hunter_armor_stealth = false;
 		public double hunter_armor_stealth_timer = 0;
-		public double running_boots_speed = 0;
+		public double running_boots_speed = 0.0;
 		public double nether_treads_speed = 0;
 		public double hunter_armor_speed = 0;
 		public boolean thorn_infested_armor_theme_cooldown = false;
@@ -549,6 +554,11 @@ public class CatastropheModModVariables {
 		public double Fuel_Meter_Fill = 0;
 		public boolean wiresaw_fuel_drain = false;
 		public double max_fuel = 0;
+		public boolean running_boots_equipped = false;
+		public double burnace_heat = 0;
+		public double Heat_Meter_Fill = 0;
+		public boolean burnace_heat_cooldown = false;
+		public double heat_meter_shake = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -703,6 +713,11 @@ public class CatastropheModModVariables {
 			nbt.putDouble("Fuel_Meter_Fill", Fuel_Meter_Fill);
 			nbt.putBoolean("wiresaw_fuel_drain", wiresaw_fuel_drain);
 			nbt.putDouble("max_fuel", max_fuel);
+			nbt.putBoolean("running_boots_equipped", running_boots_equipped);
+			nbt.putDouble("burnace_heat", burnace_heat);
+			nbt.putDouble("Heat_Meter_Fill", Heat_Meter_Fill);
+			nbt.putBoolean("burnace_heat_cooldown", burnace_heat_cooldown);
+			nbt.putDouble("heat_meter_shake", heat_meter_shake);
 			return nbt;
 		}
 
@@ -854,6 +869,11 @@ public class CatastropheModModVariables {
 			Fuel_Meter_Fill = nbt.getDouble("Fuel_Meter_Fill");
 			wiresaw_fuel_drain = nbt.getBoolean("wiresaw_fuel_drain");
 			max_fuel = nbt.getDouble("max_fuel");
+			running_boots_equipped = nbt.getBoolean("running_boots_equipped");
+			burnace_heat = nbt.getDouble("burnace_heat");
+			Heat_Meter_Fill = nbt.getDouble("Heat_Meter_Fill");
+			burnace_heat_cooldown = nbt.getBoolean("burnace_heat_cooldown");
+			heat_meter_shake = nbt.getDouble("heat_meter_shake");
 		}
 	}
 
@@ -1024,6 +1044,11 @@ public class CatastropheModModVariables {
 					variables.Fuel_Meter_Fill = message.data.Fuel_Meter_Fill;
 					variables.wiresaw_fuel_drain = message.data.wiresaw_fuel_drain;
 					variables.max_fuel = message.data.max_fuel;
+					variables.running_boots_equipped = message.data.running_boots_equipped;
+					variables.burnace_heat = message.data.burnace_heat;
+					variables.Heat_Meter_Fill = message.data.Heat_Meter_Fill;
+					variables.burnace_heat_cooldown = message.data.burnace_heat_cooldown;
+					variables.heat_meter_shake = message.data.heat_meter_shake;
 				}
 			});
 			context.setPacketHandled(true);

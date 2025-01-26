@@ -2,6 +2,8 @@
   "replace": "false",
   "values": [
     "minecraft:air",
-    "catastrophe_mod:running_boots"
+    "catastrophe_mod:running_boots",
+    "catastrophe_mod:burnace",
+    "catastrophe_mod:rotten_heart"
   ]
 }
