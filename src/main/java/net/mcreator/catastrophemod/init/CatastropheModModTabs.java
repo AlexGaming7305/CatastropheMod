@@ -68,7 +68,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.SPEAR_OF_NATURE.get());
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_SPEAR.get());
 				tabData.accept(CatastropheModModItems.SEA_SPEAR.get());
-				tabData.accept(CatastropheModModItems.SEA_SWORD.get());
 				tabData.accept(CatastropheModModItems.THORN_SWORD.get());
 				tabData.accept(CatastropheModModItems.NATURE_DEFENDER.get());
 				tabData.accept(CatastropheModModItems.FIREBRAND.get());
@@ -92,26 +91,12 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_LEGGINGS.get());
 				tabData.accept(CatastropheModModItems.ELECTRIFIED_ARMOR_BOOTS.get());
 				tabData.accept(CatastropheModModItems.WIRESAW.get());
+				tabData.accept(CatastropheModModItems.RUSTY_SCISSORS.get());
+				tabData.accept(CatastropheModModItems.TIDE_SLASHER.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.GLOVEOFTHE_DESERTS.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CatastropheModModItems.GLOVEOFTHE_DESERTS.get());
-				tabData.accept(CatastropheModModItems.LIVING_MOSS.get());
-				tabData.accept(CatastropheModModItems.FREEZING_STAFF.get());
-				tabData.accept(CatastropheModModItems.MOSS_HELMET.get());
-				tabData.accept(CatastropheModModItems.MOSS_CHESTPLATE.get());
-				tabData.accept(CatastropheModModItems.MOSS_LEGGINGS.get());
-				tabData.accept(CatastropheModModItems.MOSS_BOOTS.get());
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.STARLIT_LACEWING_STAFF.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(CatastropheModModItems.LIGHTNING_BLADE_STAFF.get());
-				tabData.accept(CatastropheModModItems.BEETLE_CALLER.get());
-				tabData.accept(CatastropheModModItems.SEA_CONCH.get());
-				tabData.accept(CatastropheModModItems.NATURE_BLESSED_SPIRIT_STAFF.get());
-				tabData.accept(CatastropheModModItems.WHISPERS_CURSE.get());
-				tabData.accept(CatastropheModModItems.THORN_HELMET.get());
-				tabData.accept(CatastropheModModItems.THORN_CHESTPLATE.get());
-				tabData.accept(CatastropheModModItems.THORN_LEGGINGS.get());
-				tabData.accept(CatastropheModModItems.THORN_BOOTS.get());
-				tabData.accept(CatastropheModModItems.EARTH_GAUNTLET.get());
 				tabData.accept(CatastropheModModItems.STARLIT_LACEWING_STAFF.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> BOSS_SUMMONS = REGISTRY.register("boss_summons",
@@ -171,6 +156,12 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.RUNNING_BOOTS.get());
 				tabData.accept(CatastropheModModItems.BURNACE.get());
 				tabData.accept(CatastropheModModItems.ROTTEN_HEART.get());
+				tabData.accept(CatastropheModModItems.STORM_CATALYST.get());
+				tabData.accept(CatastropheModModItems.SPIRIT_IN_A_BOTTLE.get());
+				tabData.accept(CatastropheModModItems.SCAFFOLDING_KIT.get());
+				tabData.accept(CatastropheModModItems.MANA_ROSE.get());
+				tabData.accept(CatastropheModModItems.FOREST_TOTEM.get());
+				tabData.accept(CatastropheModModItems.ENERGY_COIL.get());
 			})
 
 					.build());
@@ -214,24 +205,12 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_SLAB.get().asItem());
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_STAIRS.get().asItem());
-			tabData.accept(CatastropheModModBlocks.YELLOW_SEA_SHELL.get().asItem());
-			tabData.accept(CatastropheModModBlocks.BLUE_SEA_SHELL.get().asItem());
-			tabData.accept(CatastropheModModBlocks.RED_SEA_SHELL.get().asItem());
-			tabData.accept(CatastropheModModBlocks.PURPLE_SEA_SHELL.get().asItem());
-			tabData.accept(CatastropheModModBlocks.PINK_SEA_SHELL.get().asItem());
 			tabData.accept(CatastropheModModBlocks.ELECTRIFIED_DIODE.get().asItem());
-			tabData.accept(CatastropheModModBlocks.SHALE.get().asItem());
-			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS.get().asItem());
-			tabData.accept(CatastropheModModBlocks.CRACKED_SHALE_BRICKS.get().asItem());
-			tabData.accept(CatastropheModModBlocks.CHISELED_SHALE_BRICKS.get().asItem());
-			tabData.accept(CatastropheModModBlocks.SHALE_SLAB.get().asItem());
-			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS_SLAB.get().asItem());
-			tabData.accept(CatastropheModModBlocks.SHALE_STAIRS.get().asItem());
-			tabData.accept(CatastropheModModBlocks.SHALE_BRICKS_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING.get().asItem());
 			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING_SLAB.get().asItem());
 			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.ELECTRIFIED_CHAIN.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CORRODED_GRATE.get().asItem());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
@@ -288,6 +267,8 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.SURGE_BREAKER_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.ACCURSED_WITCH_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.NIGHT_REAPER_SPAWN_EGG.get());
+			tabData.accept(CatastropheModModItems.MUSIC_DISC_FAILED_INCARNATIONS.get());
+			tabData.accept(CatastropheModModItems.MUSIC_DISC_ALTAR_OF_THE_INCARNATE.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
@@ -298,6 +279,7 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.GIANT_ISOPOD_SCALE.get());
 			tabData.accept(CatastropheModModItems.FORGE_KEY.get());
 			tabData.accept(CatastropheModModItems.GASOLINE_CANISTER.get());
+			tabData.accept(CatastropheModModItems.FERTILIZER.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
@@ -317,8 +299,6 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.PURIFIED_CALICO_MUSHROOM_STEW.get());
 			tabData.accept(CatastropheModModItems.LESSER_MANA_POTION.get());
 			tabData.accept(CatastropheModModItems.MANA_POTION.get());
-			tabData.accept(CatastropheModModItems.SPINACH_LEAVES.get());
-			tabData.accept(CatastropheModModItems.SPINACH_SOUP.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

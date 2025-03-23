@@ -69,6 +69,8 @@ public class MineralWrathEntityDiesProcedure {
 			}
 		});
 		CatastropheModMod.queueServerWork(25, () -> {
+			CatastropheModModVariables.MapVariables.get(world).electrified_storm = false;
+			CatastropheModModVariables.MapVariables.get(world).syncData(world);
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.SMOKE, (entity.getX()), (entity.getY() + 1.9), (entity.getZ()), 30, 0.2, 0.3, 0.2, 0);
 			if (world instanceof ServerLevel _level) {

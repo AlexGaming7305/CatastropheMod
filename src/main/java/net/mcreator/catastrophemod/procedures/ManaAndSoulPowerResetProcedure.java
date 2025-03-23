@@ -29,11 +29,11 @@ public class ManaAndSoulPowerResetProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).SoulPower < 0) {
+		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).Taken_Minion_Slots < 0) {
 			{
 				double _setval = 0;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.SoulPower = _setval;
+					capability.Taken_Minion_Slots = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

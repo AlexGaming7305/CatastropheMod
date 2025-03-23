@@ -1,9 +1,0 @@
-{
-  "parent": "catastrophe_mod:custom/purple_sea_shell",
-  "textures": {
-    "all": "catastrophe_mod:block/purple_sea_shell",
-    "particle": "catastrophe_mod:block/purple_sea_shell",
-    "0": "catastrophe_mod:block/purple_sea_shell"
-  },
-  "render_type": "solid"
-}

@@ -1,0 +1,24 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "music_disc_altar_of_the_incarnate",
+    "description": "arkimedeez - Altar of the Incarnate",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:altar_of_the_incarnate"
+    },
+    "lengthInTicks": 5600,
+    "analogOutput": 0
+  }
+}

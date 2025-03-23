@@ -8,34 +8,7 @@
     "functions": [],
     "entities": [
       {
-        "value": "CUSTOM:FuriousWind"
-      },
-      {
-        "value": "CUSTOM:PileOfMoss"
-      },
-      {
-        "value": "CUSTOM:FreezingCore"
-      },
-      {
         "value": "CUSTOM:LightningBlade"
-      },
-      {
-        "value": "CUSTOM:BabyCalicoStagBeetle"
-      },
-      {
-        "value": "CUSTOM:HermitCrabMinion"
-      },
-      {
-        "value": "CUSTOM:NatureBlessedSpirit"
-      },
-      {
-        "value": "CUSTOM:DescendingMisery"
-      },
-      {
-        "value": "CUSTOM:NettleMinion"
-      },
-      {
-        "value": "CUSTOM:EarthboundFist"
       },
       {
         "value": "CUSTOM:StarlitLacewingMinion"

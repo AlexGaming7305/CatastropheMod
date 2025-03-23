@@ -1,7 +1,7 @@
 {
       "parent": "item/bow",
       "textures": {
-        "layer0": "catastrophe_mod:item/storming_bow"
+        "layer0": "catastrophe_mod:item/storm_bow"
       },
       "display": {
         "thirdperson_righthand": {
@@ -37,14 +37,14 @@
                   "pulling": 1,
                   "pull": 0.65
               },
-              "model": "catastrophe_mod:item/storm_bow_0"
+              "model": "catastrophe_mod:item/storm_bow_1"
           },
           {
               "predicate": {
                   "pulling": 1,
                   "pull": 0.9
               },
-              "model": "catastrophe_mod:item/storm_bow_0"
+              "model": "catastrophe_mod:item/storm_bow_2"
           }
      ]
 }

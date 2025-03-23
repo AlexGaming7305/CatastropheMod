@@ -75,8 +75,7 @@ public class CatastropheModModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.Mana = original.Mana;
 			clone.ManaStart = original.ManaStart;
-			clone.SoulPower = original.SoulPower;
-			clone.MaxSoulPower = original.MaxSoulPower;
+			clone.Taken_Minion_Slots = original.Taken_Minion_Slots;
 			clone.double_jump_condition = original.double_jump_condition;
 			clone.thunder_star = original.thunder_star;
 			clone.mana_star_uses = original.mana_star_uses;
@@ -225,6 +224,19 @@ public class CatastropheModModVariables {
 				clone.wiresaw_fuel_drain = original.wiresaw_fuel_drain;
 				clone.running_boots_equipped = original.running_boots_equipped;
 				clone.burnace_heat_cooldown = original.burnace_heat_cooldown;
+				clone.storm_catalyst_equipped = original.storm_catalyst_equipped;
+				clone.storm_bow_charge = original.storm_bow_charge;
+				clone.storm_bow_load = original.storm_bow_load;
+				clone.storm_bow_ready = original.storm_bow_ready;
+				clone.lightning_blade_slam_cooldown = original.lightning_blade_slam_cooldown;
+				clone.spirit_in_a_bottle_equipped = original.spirit_in_a_bottle_equipped;
+				clone.rusty_scissors_1 = original.rusty_scissors_1;
+				clone.rusty_scissors_2 = original.rusty_scissors_2;
+				clone.scaffolding_kit_equipped = original.scaffolding_kit_equipped;
+				clone.mana_rose_equipped = original.mana_rose_equipped;
+				clone.tide_slasher_cooldown = original.tide_slasher_cooldown;
+				clone.forest_totem_equipped = original.forest_totem_equipped;
+				clone.electricity_absorbed = original.electricity_absorbed;
 			}
 		}
 
@@ -410,8 +422,7 @@ public class CatastropheModModVariables {
 	public static class PlayerVariables {
 		public double Mana = 20.0;
 		public boolean ManaStart = false;
-		public double SoulPower = 0.0;
-		public double MaxSoulPower = 1.0;
+		public double Taken_Minion_Slots = 0.0;
 		public boolean crimsondagger = false;
 		public boolean pocketshield = false;
 		public boolean acidtarantula = false;
@@ -559,6 +570,19 @@ public class CatastropheModModVariables {
 		public double Heat_Meter_Fill = 0;
 		public boolean burnace_heat_cooldown = false;
 		public double heat_meter_shake = 0;
+		public boolean storm_catalyst_equipped = false;
+		public double storm_bow_charge = 0;
+		public boolean storm_bow_load = false;
+		public boolean storm_bow_ready = false;
+		public boolean lightning_blade_slam_cooldown = false;
+		public boolean spirit_in_a_bottle_equipped = false;
+		public boolean rusty_scissors_1 = false;
+		public boolean rusty_scissors_2 = false;
+		public boolean scaffolding_kit_equipped = false;
+		public boolean mana_rose_equipped = false;
+		public boolean tide_slasher_cooldown = false;
+		public boolean forest_totem_equipped = false;
+		public double electricity_absorbed = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -569,8 +593,7 @@ public class CatastropheModModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("Mana", Mana);
 			nbt.putBoolean("ManaStart", ManaStart);
-			nbt.putDouble("SoulPower", SoulPower);
-			nbt.putDouble("MaxSoulPower", MaxSoulPower);
+			nbt.putDouble("Taken_Minion_Slots", Taken_Minion_Slots);
 			nbt.putBoolean("crimsondagger", crimsondagger);
 			nbt.putBoolean("pocketshield", pocketshield);
 			nbt.putBoolean("acidtarantula", acidtarantula);
@@ -718,6 +741,19 @@ public class CatastropheModModVariables {
 			nbt.putDouble("Heat_Meter_Fill", Heat_Meter_Fill);
 			nbt.putBoolean("burnace_heat_cooldown", burnace_heat_cooldown);
 			nbt.putDouble("heat_meter_shake", heat_meter_shake);
+			nbt.putBoolean("storm_catalyst_equipped", storm_catalyst_equipped);
+			nbt.putDouble("storm_bow_charge", storm_bow_charge);
+			nbt.putBoolean("storm_bow_load", storm_bow_load);
+			nbt.putBoolean("storm_bow_ready", storm_bow_ready);
+			nbt.putBoolean("lightning_blade_slam_cooldown", lightning_blade_slam_cooldown);
+			nbt.putBoolean("spirit_in_a_bottle_equipped", spirit_in_a_bottle_equipped);
+			nbt.putBoolean("rusty_scissors_1", rusty_scissors_1);
+			nbt.putBoolean("rusty_scissors_2", rusty_scissors_2);
+			nbt.putBoolean("scaffolding_kit_equipped", scaffolding_kit_equipped);
+			nbt.putBoolean("mana_rose_equipped", mana_rose_equipped);
+			nbt.putBoolean("tide_slasher_cooldown", tide_slasher_cooldown);
+			nbt.putBoolean("forest_totem_equipped", forest_totem_equipped);
+			nbt.putDouble("electricity_absorbed", electricity_absorbed);
 			return nbt;
 		}
 
@@ -725,8 +761,7 @@ public class CatastropheModModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			Mana = nbt.getDouble("Mana");
 			ManaStart = nbt.getBoolean("ManaStart");
-			SoulPower = nbt.getDouble("SoulPower");
-			MaxSoulPower = nbt.getDouble("MaxSoulPower");
+			Taken_Minion_Slots = nbt.getDouble("Taken_Minion_Slots");
 			crimsondagger = nbt.getBoolean("crimsondagger");
 			pocketshield = nbt.getBoolean("pocketshield");
 			acidtarantula = nbt.getBoolean("acidtarantula");
@@ -874,6 +909,19 @@ public class CatastropheModModVariables {
 			Heat_Meter_Fill = nbt.getDouble("Heat_Meter_Fill");
 			burnace_heat_cooldown = nbt.getBoolean("burnace_heat_cooldown");
 			heat_meter_shake = nbt.getDouble("heat_meter_shake");
+			storm_catalyst_equipped = nbt.getBoolean("storm_catalyst_equipped");
+			storm_bow_charge = nbt.getDouble("storm_bow_charge");
+			storm_bow_load = nbt.getBoolean("storm_bow_load");
+			storm_bow_ready = nbt.getBoolean("storm_bow_ready");
+			lightning_blade_slam_cooldown = nbt.getBoolean("lightning_blade_slam_cooldown");
+			spirit_in_a_bottle_equipped = nbt.getBoolean("spirit_in_a_bottle_equipped");
+			rusty_scissors_1 = nbt.getBoolean("rusty_scissors_1");
+			rusty_scissors_2 = nbt.getBoolean("rusty_scissors_2");
+			scaffolding_kit_equipped = nbt.getBoolean("scaffolding_kit_equipped");
+			mana_rose_equipped = nbt.getBoolean("mana_rose_equipped");
+			tide_slasher_cooldown = nbt.getBoolean("tide_slasher_cooldown");
+			forest_totem_equipped = nbt.getBoolean("forest_totem_equipped");
+			electricity_absorbed = nbt.getDouble("electricity_absorbed");
 		}
 	}
 
@@ -900,8 +948,7 @@ public class CatastropheModModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Mana = message.data.Mana;
 					variables.ManaStart = message.data.ManaStart;
-					variables.SoulPower = message.data.SoulPower;
-					variables.MaxSoulPower = message.data.MaxSoulPower;
+					variables.Taken_Minion_Slots = message.data.Taken_Minion_Slots;
 					variables.crimsondagger = message.data.crimsondagger;
 					variables.pocketshield = message.data.pocketshield;
 					variables.acidtarantula = message.data.acidtarantula;
@@ -1049,6 +1096,19 @@ public class CatastropheModModVariables {
 					variables.Heat_Meter_Fill = message.data.Heat_Meter_Fill;
 					variables.burnace_heat_cooldown = message.data.burnace_heat_cooldown;
 					variables.heat_meter_shake = message.data.heat_meter_shake;
+					variables.storm_catalyst_equipped = message.data.storm_catalyst_equipped;
+					variables.storm_bow_charge = message.data.storm_bow_charge;
+					variables.storm_bow_load = message.data.storm_bow_load;
+					variables.storm_bow_ready = message.data.storm_bow_ready;
+					variables.lightning_blade_slam_cooldown = message.data.lightning_blade_slam_cooldown;
+					variables.spirit_in_a_bottle_equipped = message.data.spirit_in_a_bottle_equipped;
+					variables.rusty_scissors_1 = message.data.rusty_scissors_1;
+					variables.rusty_scissors_2 = message.data.rusty_scissors_2;
+					variables.scaffolding_kit_equipped = message.data.scaffolding_kit_equipped;
+					variables.mana_rose_equipped = message.data.mana_rose_equipped;
+					variables.tide_slasher_cooldown = message.data.tide_slasher_cooldown;
+					variables.forest_totem_equipped = message.data.forest_totem_equipped;
+					variables.electricity_absorbed = message.data.electricity_absorbed;
 				}
 			});
 			context.setPacketHandled(true);

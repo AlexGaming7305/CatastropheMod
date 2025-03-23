@@ -1,0 +1,20 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "catastrophe_mod:item/rusty_scissors_0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "catastrophe_mod:rusty_scissors_rusty_scissors_1": 1
+      },
+      "model": "catastrophe_mod:item/rusty_scissors_0"
+    },
+    {
+      "predicate": {
+        "catastrophe_mod:rusty_scissors_rusty_scissors_2": 1
+      },
+      "model": "catastrophe_mod:item/rusty_scissors_1"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:rusty_scissors"
+    },
+    "title": {
+      "translate": "advancements.clean_cut.title"
+    },
+    "description": {
+      "translate": "advancements.clean_cut.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "clean_cut": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:double_edged"
+}

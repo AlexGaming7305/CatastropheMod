@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Mineral Wraith",
+    "mobName": "§b§lMineral Wraith",
     "mobLabel": "",
     "mobModelTexture": "mineral_wraith_texture.png",
     "mobModelGlowTexture": "",
@@ -59,7 +59,7 @@
     "armorBaseValue": 15.0,
     "trackingRange": 64,
     "followRange": 500,
-    "health": 300,
+    "health": 330,
     "xpAmount": 325,
     "waterMob": false,
     "flyingMob": true,

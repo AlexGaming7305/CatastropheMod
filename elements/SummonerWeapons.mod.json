@@ -5,37 +5,10 @@
     "type": "Items",
     "items": [
       {
-        "value": "CUSTOM:GloveoftheDeserts"
-      },
-      {
-        "value": "CUSTOM:LivingMoss"
-      },
-      {
-        "value": "CUSTOM:FreezingStaff"
-      },
-      {
-        "value": "CUSTOM:WhispersCurse"
-      },
-      {
-        "value": "CUSTOM:SpeartheGungnir"
-      },
-      {
-        "value": "CUSTOM:BeetleCaller"
-      },
-      {
-        "value": "CUSTOM:StaffOfThorns"
-      },
-      {
-        "value": "CUSTOM:NatureBlessedSpiritStaff"
-      },
-      {
-        "value": "CUSTOM:SeaConch"
-      },
-      {
         "value": "CUSTOM:LightningBladeStaff"
       },
       {
-        "value": "CUSTOM:EarthGauntlet"
+        "value": "CUSTOM:StarlitLacewingStaff"
       }
     ],
     "blocks": [],

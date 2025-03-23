@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:wooden_sword"
+      "item": "catastrophe_mod:wooden_katana"
     },
     "title": {
       "translate": "advancements.double_edged.title"

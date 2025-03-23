@@ -1,9 +1,0 @@
-{
-  "parent": "catastrophe_mod:custom/yellow_sea_shell",
-  "textures": {
-    "all": "catastrophe_mod:block/yellow_sea_shell_texture",
-    "particle": "catastrophe_mod:block/yellow_sea_shell_texture",
-    "0": "catastrophe_mod:block/yellow_sea_shell_texture"
-  },
-  "render_type": "solid"
-}

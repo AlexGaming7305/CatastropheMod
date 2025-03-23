@@ -1,16 +1,7 @@
 {
   "replace": false,
   "values": [
-    "catastrophe_mod:gloveofthe_deserts",
-    "catastrophe_mod:living_moss",
-    "catastrophe_mod:freezing_staff",
-    "catastrophe_mod:whispers_curse",
-    "catastrophe_mod:spearthe_gungnir",
-    "catastrophe_mod:beetle_caller",
-    "catastrophe_mod:staff_of_thorns",
-    "catastrophe_mod:nature_blessed_spirit_staff",
-    "catastrophe_mod:sea_conch",
     "catastrophe_mod:lightning_blade_staff",
-    "catastrophe_mod:earth_gauntlet"
+    "catastrophe_mod:starlit_lacewing_staff"
   ]
 }

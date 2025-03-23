@@ -13,6 +13,7 @@ import net.mcreator.catastrophemod.client.model.Modelvulnerability_skull;
 import net.mcreator.catastrophemod.client.model.Modelvenomous_round;
 import net.mcreator.catastrophemod.client.model.Modelvein_striker;
 import net.mcreator.catastrophemod.client.model.Modeltiny_thorn;
+import net.mcreator.catastrophemod.client.model.Modeltide_slash;
 import net.mcreator.catastrophemod.client.model.Modelthorn_spear;
 import net.mcreator.catastrophemod.client.model.Modelthorn_leggings;
 import net.mcreator.catastrophemod.client.model.Modelthorn_helmet;
@@ -97,6 +98,7 @@ public class CatastropheModModModels {
 		event.registerLayerDefinition(Modelghost_phantom.LAYER_LOCATION, Modelghost_phantom::createBodyLayer);
 		event.registerLayerDefinition(Modelsea_pendant.LAYER_LOCATION, Modelsea_pendant::createBodyLayer);
 		event.registerLayerDefinition(Modelfiery_slash.LAYER_LOCATION, Modelfiery_slash::createBodyLayer);
+		event.registerLayerDefinition(Modeltide_slash.LAYER_LOCATION, Modeltide_slash::createBodyLayer);
 		event.registerLayerDefinition(Modelhealing_orb.LAYER_LOCATION, Modelhealing_orb::createBodyLayer);
 		event.registerLayerDefinition(Modelenchanted_sword.LAYER_LOCATION, Modelenchanted_sword::createBodyLayer);
 		event.registerLayerDefinition(Modelpoisonous_thorn.LAYER_LOCATION, Modelpoisonous_thorn::createBodyLayer);

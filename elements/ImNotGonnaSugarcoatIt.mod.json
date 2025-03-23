@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "I'm Not Gonna Sugarcoat It",
-    "achievementDescription": "Successfully perform a parry",
+    "achievementDescription": "Successfully perform a Parry",
     "achievementIcon": {
       "value": "Items.SHIELD"
     },

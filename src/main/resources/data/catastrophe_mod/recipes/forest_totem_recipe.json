@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bbb",
+    " b "
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:twig"
+    },
+    "b": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:forest_totem",
+    "count": 1
+  }
+}

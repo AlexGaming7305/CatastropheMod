@@ -1,16 +1,7 @@
 {
   "replace": false,
   "values": [
-    "catastrophe_mod:furious_wind",
-    "catastrophe_mod:pile_of_moss",
-    "catastrophe_mod:freezing_core",
     "catastrophe_mod:lightning_blade",
-    "catastrophe_mod:baby_calico_stag_beetle",
-    "catastrophe_mod:hermit_crab_minion",
-    "catastrophe_mod:nature_blessed_spirit",
-    "catastrophe_mod:descending_misery",
-    "catastrophe_mod:nettle_minion",
-    "catastrophe_mod:earthbound_fist",
     "catastrophe_mod:starlit_lacewing_minion"
   ]
 }

@@ -24,7 +24,6 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 import net.mcreator.catastrophemod.entity.ElectricSparkProjectileEntity;
-import net.mcreator.catastrophemod.CatastropheModMod;
 
 import java.util.List;
 import java.util.Comparator;
@@ -59,7 +58,7 @@ public class ElectrifiedSwordProjectileOnEntityTickUpdateProcedure {
 			entity.setNoGravity(true);
 		}
 		if (entity.getPersistentData().getDouble("lifetime") == 20) {
-			for (int index0 = 0; index0 < 2; index0++) {
+			for (int index0 = 0; index0 < 3; index0++) {
 				{
 					Entity _shootFrom = entity;
 					Level projectileLevel = _shootFrom.level();
@@ -73,7 +72,7 @@ public class ElectrifiedSwordProjectileOnEntityTickUpdateProcedure {
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, electrifiedswordowner, 4, 0);
+						}.getArrow(projectileLevel, electrifiedswordowner, 3, 0);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 0.5, 100);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -82,42 +81,10 @@ public class ElectrifiedSwordProjectileOnEntityTickUpdateProcedure {
 			}
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"/photon fx photon:electrified_lightning_0 block ~ ~ ~");
-			CatastropheModMod.queueServerWork(1, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/photon fx photon:electrified_lightning_1 block ~ ~ ~");
-			});
-			CatastropheModMod.queueServerWork(2, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/photon fx photon:electrified_lightning_2 block ~ ~ ~");
-			});
-			CatastropheModMod.queueServerWork(3, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/photon fx photon:electrified_lightning_3 block ~ ~ ~");
-			});
-			CatastropheModMod.queueServerWork(4, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/photon fx photon:electrified_lightning_4 block ~ ~ ~");
-			});
-			CatastropheModMod.queueServerWork(5, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/photon fx photon:electrified_lightning_5 block ~ ~ ~");
-			});
-			CatastropheModMod.queueServerWork(6, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/photon fx photon:electrified_lightning_6 block ~ ~ ~");
-			});
-			CatastropheModMod.queueServerWork(7, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-							"/photon fx photon:electrified_lightning_7 block ~ ~ ~");
-			});
+						"/photon fx photon:electrified_lightning block ~ ~ ~");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"/photon fx photon:electrified_flow block ~ ~ ~");
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.PLAYERS, 3, 1);

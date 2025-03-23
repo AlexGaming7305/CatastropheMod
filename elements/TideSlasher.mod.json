@@ -1,0 +1,42 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "tide_slasher",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§dTide Slasher",
+    "specialInformation": {
+      "fixedValue": [
+        "§7Casts a short ranged Tide Slash"
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Melee"
+    },
+    "harvestLevel": 2,
+    "efficiency": 6.0,
+    "attackSpeed": 1.6,
+    "enchantability": 15,
+    "damageVsEntity": 3.0,
+    "usageCount": 285,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:SeaCrystalGeode"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntitySwing": {
+      "name": "TideSlasherEntitySwingsItem"
+    }
+  }
+}

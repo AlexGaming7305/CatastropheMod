@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:running_boots"
+    },
+    "title": {
+      "translate": "advancements.lost_and_found.title"
+    },
+    "description": {
+      "translate": "advancements.lost_and_found.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lost_and_found": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:catastrophe"
+}

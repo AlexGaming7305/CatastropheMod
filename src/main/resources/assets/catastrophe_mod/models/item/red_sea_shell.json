@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "catastrophe_mod:item/red_sea_shell_item"
-  },
-  "render_type": "translucent"
-}

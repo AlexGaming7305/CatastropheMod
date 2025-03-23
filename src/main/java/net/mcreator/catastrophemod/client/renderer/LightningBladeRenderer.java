@@ -18,7 +18,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class LightningBladeRenderer extends GeoEntityRenderer<LightningBladeEntity> {
 	public LightningBladeRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new LightningBladeModel());
-		this.shadowRadius = 0.3f;
+		this.shadowRadius = 0f;
 	}
 
 	@Override

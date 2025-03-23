@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:burnace"
+    },
+    "title": {
+      "translate": "advancements.melting_point.title"
+    },
+    "description": {
+      "translate": "advancements.melting_point.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "melting_point": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:lost_and_found"
+}

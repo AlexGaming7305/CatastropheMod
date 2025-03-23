@@ -1,0 +1,24 @@
+{
+  "_fv": 57,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "music_disc_failed_incarnations",
+    "description": "arkimedeez - Failed Incarnations",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:failed_incarnations"
+    },
+    "lengthInTicks": 2960,
+    "analogOutput": 0
+  }
+}

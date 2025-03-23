@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:gasoline_canister"
+    },
+    "title": {
+      "translate": "advancements.fill_er_up.title"
+    },
+    "description": {
+      "translate": "advancements.fill_er_up.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fill_er_up": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:catastrophe"
+}

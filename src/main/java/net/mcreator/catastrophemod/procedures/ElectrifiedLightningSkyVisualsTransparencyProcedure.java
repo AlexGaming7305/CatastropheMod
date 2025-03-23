@@ -6,19 +6,25 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 import javax.annotation.Nullable;
@@ -39,7 +45,12 @@ public class ElectrifiedLightningSkyVisualsTransparencyProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double randomx = 0;
+		double randomz = 0;
 		if (CatastropheModModVariables.MapVariables.get(world).electrified_storm == true) {
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"weather thunder");
 			if (!world.isClientSide()) {
 				if (Math.random() < 0.005) {
 					{
@@ -61,6 +72,8 @@ public class ElectrifiedLightningSkyVisualsTransparencyProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
+						randomx = Mth.nextInt(RandomSource.create(), -40, 40);
+						randomz = Mth.nextInt(RandomSource.create(), -40, 40);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_storm_ambience")), SoundSource.WEATHER, 1,
@@ -68,6 +81,13 @@ public class ElectrifiedLightningSkyVisualsTransparencyProcedure {
 							} else {
 								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_storm_ambience")), SoundSource.WEATHER, 1, (float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1),
 										false);
+							}
+						}
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = CatastropheModModEntities.ELECTRIFIED_LIGHTNING.get().spawn(_level,
+									BlockPos.containing(entity.getX() + randomx, world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (int) randomx, (int) randomz), entity.getZ() + randomz), MobSpawnType.MOB_SUMMONED);
+							if (entityToSpawn != null) {
+								entityToSpawn.setDeltaMovement(0, 0, 0);
 							}
 						}
 						CatastropheModMod.queueServerWork(10, () -> {

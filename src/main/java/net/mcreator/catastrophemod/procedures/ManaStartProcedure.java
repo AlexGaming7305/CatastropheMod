@@ -29,13 +29,6 @@ public class ManaStartProcedure {
 			return;
 		if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).ManaStart == false) {
 			{
-				double _setval = 0;
-				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.SoulPower = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
 				double _setval = 20;
 				entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Mana = _setval;

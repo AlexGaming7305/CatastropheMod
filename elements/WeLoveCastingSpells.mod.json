@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "We Love Casting Spells",
-    "achievementDescription": "Obtain your first magic weapon",
+    "achievementDescription": "Obtain your first Magic Weapon",
     "achievementIcon": {
       "value": "CUSTOM:BlossomFlora"
     },

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "catastrophe_mod:deleted_mod_element",
+          "name": "catastrophe_mod:rotten_heart",
           "weight": 3,
           "functions": [
             {

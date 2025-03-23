@@ -186,5 +186,26 @@ public class ManaRegenFixProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.lightning_blade_slam_cooldown = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.tide_slasher_cooldown = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			boolean _setval = false;
+			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.cactus_cutter_cooldown = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

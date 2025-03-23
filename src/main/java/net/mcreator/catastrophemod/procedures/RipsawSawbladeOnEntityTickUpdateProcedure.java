@@ -60,8 +60,8 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 		turn = 0.5;
 		speed = 1.5;
 		radius = 100;
-		lifetime = 50;
-		if (entity.getPersistentData().getDouble("lifetime") >= 35) {
+		lifetime = 30;
+		if (entity.getPersistentData().getDouble("lifetime") >= 15) {
 			{
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(100 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -98,7 +98,7 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 								if (!(entityiterator instanceof RipsawSawbladeEntity)) {
 									if (entityiterator.isAlive()) {
 										entityiterator.hurt(new DamageSource(
-												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:split_in_two"))), ripsawowner), 5);
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:split_in_two"))), ripsawowner), 7);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
 									}
@@ -110,7 +110,7 @@ public class RipsawSawbladeOnEntityTickUpdateProcedure {
 			}
 		}
 		if (entity.onGround()) {
-			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x() * 0.8), 0.6, (entity.getDeltaMovement().z() * 0.8)));
+			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x() * 2.5), 0.6, (entity.getDeltaMovement().z() * 2.5)));
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.SPARK.get()), x, (entity.getY() + 0.1), z, 10, 0, 0, 0, 0.8);
 			if (world.isClientSide()) {

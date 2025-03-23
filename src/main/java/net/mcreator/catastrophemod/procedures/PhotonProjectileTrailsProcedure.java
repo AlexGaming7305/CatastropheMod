@@ -64,7 +64,7 @@ public class PhotonProjectileTrailsProcedure {
 					"photon fx photon:ghost_phantom_trail entity @e[type=catastrophe_mod:projectile_ghost_phantom_projectile]");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"photon fx photon:iron_round_trail entity @e[type=catastrophe_mod:projectile_iron_round_projectile_projectile]");
+					"photon fx photon:copper_round_trail entity @e[type=catastrophe_mod:projectile_copper_round_projectile]");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"photon fx photon:fiery_round_trail entity @e[type=catastrophe_mod:projectile_fiery_round_projectile]");

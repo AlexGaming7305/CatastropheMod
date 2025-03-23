@@ -14,7 +14,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
@@ -30,11 +29,7 @@ import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.ai.goal.FollowParentGoal;
 import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
@@ -46,9 +41,9 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -56,7 +51,6 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -75,7 +69,6 @@ import net.mcreator.catastrophemod.init.CatastropheModModEntities;
 import javax.annotation.Nullable;
 
 import java.util.List;
-import java.util.EnumSet;
 
 public class LightningBladeEntity extends TamableAnimal implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(LightningBladeEntity.class, EntityDataSerializers.BOOLEAN);
@@ -103,7 +96,7 @@ public class LightningBladeEntity extends TamableAnimal implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "lightning_blade");
+		this.entityData.define(TEXTURE, "lightning_blade_texture");
 	}
 
 	public void setTexture(String texture) {
@@ -127,68 +120,12 @@ public class LightningBladeEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
-		this.goalSelector.addGoal(2, new FollowParentGoal(this, 0.8));
-		this.targetSelector.addGoal(3, new OwnerHurtTargetGoal(this));
-		this.goalSelector.addGoal(4, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Monster.class, false, false));
-		this.goalSelector.addGoal(6, new Goal() {
-			{
-				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
-			}
-
-			public boolean canUse() {
-				if (LightningBladeEntity.this.getTarget() != null && !LightningBladeEntity.this.getMoveControl().hasWanted()) {
-					return true;
-				} else {
-					return false;
-				}
-			}
-
-			@Override
-			public boolean canContinueToUse() {
-				return LightningBladeEntity.this.getMoveControl().hasWanted() && LightningBladeEntity.this.getTarget() != null && LightningBladeEntity.this.getTarget().isAlive();
-			}
-
-			@Override
-			public void start() {
-				LivingEntity livingentity = LightningBladeEntity.this.getTarget();
-				Vec3 vec3d = livingentity.getEyePosition(1);
-				LightningBladeEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
-			}
-
-			@Override
-			public void tick() {
-				LivingEntity livingentity = LightningBladeEntity.this.getTarget();
-				if (LightningBladeEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-					LightningBladeEntity.this.doHurtTarget(livingentity);
-				} else {
-					double d0 = LightningBladeEntity.this.distanceToSqr(livingentity);
-					if (d0 < 16) {
-						Vec3 vec3d = livingentity.getEyePosition(1);
-						LightningBladeEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
-					}
-				}
-			}
-		});
-		this.goalSelector.addGoal(7, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
-			protected double getAttackReachSqr(LivingEntity entity) {
-				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
-			}
-		});
-		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 0.8, 20) {
-			@Override
-			protected Vec3 getPosition() {
-				RandomSource random = LightningBladeEntity.this.getRandom();
-				double dir_x = LightningBladeEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = LightningBladeEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = LightningBladeEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
-				return new Vec3(dir_x, dir_y, dir_z);
-			}
-		});
-		this.goalSelector.addGoal(9, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(10, new FloatGoal(this));
+		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 25, (float) 40, false));
+		this.targetSelector.addGoal(2, new OwnerHurtTargetGoal(this));
+		this.goalSelector.addGoal(3, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Monster.class, false, false));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override
@@ -332,6 +269,19 @@ public class LightningBladeEntity extends TamableAnimal implements GeoEntity {
 	}
 
 	@Override
+	public boolean isPushable() {
+		return false;
+	}
+
+	@Override
+	protected void doPush(Entity entityIn) {
+	}
+
+	@Override
+	protected void pushEntities() {
+	}
+
+	@Override
 	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
 	}
 
@@ -355,7 +305,7 @@ public class LightningBladeEntity extends TamableAnimal implements GeoEntity {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;

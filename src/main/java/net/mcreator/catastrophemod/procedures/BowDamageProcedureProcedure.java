@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -14,19 +15,26 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModParticleTypes;
@@ -67,7 +75,146 @@ public class BowDamageProcedureProcedure {
 			damage = amount + 1;
 			event2.setAmount((float) damage);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
+				_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 60, 0));
+			if ((sourceentity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).storm_bow_ready == true) {
+				{
+					boolean _setval = false;
+					sourceentity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.storm_bow_load = _setval;
+						capability.syncPlayerVariables(sourceentity);
+					});
+				}
+				{
+					boolean _setval = false;
+					sourceentity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.storm_bow_ready = _setval;
+						capability.syncPlayerVariables(sourceentity);
+					});
+				}
+				{
+					double _setval = 0;
+					sourceentity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.storm_bow_charge = _setval;
+						capability.syncPlayerVariables(sourceentity);
+					});
+				}
+				entity.getPersistentData().putDouble("storm_bow_x", (entity.getX() + Mth.nextInt(RandomSource.create(), -3, 3)));
+				entity.getPersistentData().putDouble("storm_bow_z", (entity.getZ() + Mth.nextInt(RandomSource.create(), -3, 3)));
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands()
+							.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z"))), Vec2.ZERO, _level,
+									4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/photon fx photon:electrified_lightning_telegraph block ~ ~0.5 ~");
+				CatastropheModMod.queueServerWork(25, () -> {
+					{
+						final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z")));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (entityiterator instanceof LivingEntity) {
+								if (!(entityiterator == sourceentity)) {
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))),
+											sourceentity), 5);
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 60, 0));
+								}
+							}
+						}
+					}
+					{
+						final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z")));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(30 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							{
+								double _setval = (entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).intensity_timer + 2;
+								entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.intensity_timer = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+							{
+								double _setval = (entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).screenshake_time + 40;
+								entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.screenshake_time = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(entity.getPersistentData().getDouble("storm_bow_x"), entity.getY(), entity.getPersistentData().getDouble("storm_bow_z")),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.PLAYERS, 1, 1);
+						} else {
+							_level.playLocalSound((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z")),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.PLAYERS, 1, 1, false);
+						}
+					}
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = CatastropheModModEntities.ELECTRIFIED_LIGHTNING.get().spawn(_level,
+								BlockPos.containing(entity.getPersistentData().getDouble("storm_bow_x"), entity.getY(), entity.getPersistentData().getDouble("storm_bow_z")), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+						}
+					}
+				});
+				CatastropheModMod.queueServerWork(26, () -> {
+					entity.getPersistentData().putDouble("storm_bow_x", (entity.getX() + Mth.nextInt(RandomSource.create(), -3, 3)));
+					entity.getPersistentData().putDouble("storm_bow_z", (entity.getZ() + Mth.nextInt(RandomSource.create(), -3, 3)));
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands()
+								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z"))), Vec2.ZERO,
+										_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/photon fx photon:electrified_lightning_telegraph block ~ ~0.5 ~");
+				});
+				CatastropheModMod.queueServerWork(51, () -> {
+					{
+						final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z")));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (entityiterator instanceof LivingEntity) {
+								if (!(entityiterator == sourceentity)) {
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))),
+											sourceentity), 5);
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 60, 0));
+								}
+							}
+						}
+					}
+					{
+						final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z")));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(30 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							{
+								double _setval = (entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).intensity_timer + 2;
+								entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.intensity_timer = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+							{
+								double _setval = (entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).screenshake_time + 40;
+								entityiterator.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.screenshake_time = _setval;
+									capability.syncPlayerVariables(entityiterator);
+								});
+							}
+						}
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(entity.getPersistentData().getDouble("storm_bow_x"), entity.getY(), entity.getPersistentData().getDouble("storm_bow_z")),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.PLAYERS, 1, 1);
+						} else {
+							_level.playLocalSound((entity.getPersistentData().getDouble("storm_bow_x")), (entity.getY()), (entity.getPersistentData().getDouble("storm_bow_z")),
+									ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_lightning_strikes")), SoundSource.PLAYERS, 1, 1, false);
+						}
+					}
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = CatastropheModModEntities.ELECTRIFIED_LIGHTNING.get().spawn(_level,
+								BlockPos.containing(entity.getPersistentData().getDouble("storm_bow_x"), entity.getY(), entity.getPersistentData().getDouble("storm_bow_z")), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+						}
+					}
+				});
+			}
 		} else if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.THORN_BOW.get()
 				|| (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == CatastropheModModItems.THORN_BOW.get()) {
 			LivingHurtEvent event2 = (LivingHurtEvent) event;

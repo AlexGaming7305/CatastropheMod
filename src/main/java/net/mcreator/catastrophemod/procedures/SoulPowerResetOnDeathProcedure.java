@@ -30,7 +30,7 @@ public class SoulPowerResetOnDeathProcedure {
 		{
 			double _setval = 0;
 			entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.SoulPower = _setval;
+				capability.Taken_Minion_Slots = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Lepidopterist",
-    "achievementDescription": "Pet every single type of silk moth there is",
+    "achievementDescription": "Pet every single type of Silk Moth",
     "achievementIcon": {
       "value": "Blocks.LANTERN"
     },

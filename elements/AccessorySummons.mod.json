@@ -6,11 +6,7 @@
     "items": [],
     "blocks": [],
     "functions": [],
-    "entities": [
-      {
-        "value": "CUSTOM:AcidTarantulaMinion"
-      }
-    ],
+    "entities": [],
     "biomes": [],
     "damageTypes": [],
     "name": "accessory_summons",

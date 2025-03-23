@@ -63,10 +63,10 @@ public class ArcStrikerOnEntityTickUpdateProcedure {
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL,
 										new Vec3((entity.getPersistentData().getDouble("arcstrikerx")), (entity.getPersistentData().getDouble("arcstrikery")), (entity.getPersistentData().getDouble("arcstrikerz"))), Vec2.ZERO, _level, 4, "",
-										Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/photon fx photon:lightning_telegraph block ~ ~0.5 ~");
+										Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/photon fx photon:electrified_lightning_telegraph block ~ ~0.5 ~");
 					entity.getPersistentData().putBoolean("lightningcooldown", true);
 				});
-				CatastropheModMod.queueServerWork(35, () -> {
+				CatastropheModMod.queueServerWork(40, () -> {
 					if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 						if (entity.isAlive()) {
 							for (int index0 = 0; index0 < 10; index0++) {

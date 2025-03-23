@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "catastrophe_mod:item/rusty_scissors_1"
+  }
+}

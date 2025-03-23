@@ -3,9 +3,9 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Double Edged",
-    "achievementDescription": "Obtain your first melee weapon",
+    "achievementDescription": "Obtain your first Melee Weapon",
     "achievementIcon": {
-      "value": "Items.WOODEN_SWORD"
+      "value": "CUSTOM:WoodenKatana"
     },
     "background": "Default",
     "disableDisplay": false,

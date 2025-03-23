@@ -5,10 +5,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.catastrophemod.entity.VoltbladeEntity;
+import net.mcreator.catastrophemod.entity.TideSlashProjectileEntity;
 import net.mcreator.catastrophemod.entity.ThornTentacleEntity;
 import net.mcreator.catastrophemod.entity.ThornInfestedArmorEntity;
 import net.mcreator.catastrophemod.entity.SwordspinEntity;
 import net.mcreator.catastrophemod.entity.SurgeBreakerEntity;
+import net.mcreator.catastrophemod.entity.StormsmithEntity;
 import net.mcreator.catastrophemod.entity.StarlitLacewingMinionEntity;
 import net.mcreator.catastrophemod.entity.StarlitLacewingEntity;
 import net.mcreator.catastrophemod.entity.SporeZombieEntity;
@@ -18,39 +20,29 @@ import net.mcreator.catastrophemod.entity.ShadeEntity;
 import net.mcreator.catastrophemod.entity.SepulcherEntity;
 import net.mcreator.catastrophemod.entity.SeaCrystalRiptideProjectileEntity;
 import net.mcreator.catastrophemod.entity.RipsawSawbladeEntity;
-import net.mcreator.catastrophemod.entity.PileOfMossEntity;
 import net.mcreator.catastrophemod.entity.OceanicSplashEntity;
 import net.mcreator.catastrophemod.entity.NightfallsDemiseProjectileEntity;
 import net.mcreator.catastrophemod.entity.NightReaperEntity;
-import net.mcreator.catastrophemod.entity.NettleMinionEntity;
 import net.mcreator.catastrophemod.entity.NettleEntity;
-import net.mcreator.catastrophemod.entity.NatureBlessedSpiritEntity;
 import net.mcreator.catastrophemod.entity.MineralWraithEntity;
 import net.mcreator.catastrophemod.entity.LightningBladeEntity;
-import net.mcreator.catastrophemod.entity.HermitCrabMinionEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabEntity;
 import net.mcreator.catastrophemod.entity.HauntedMirrorEntityEntity;
 import net.mcreator.catastrophemod.entity.GiantIsopodEntity;
-import net.mcreator.catastrophemod.entity.FuriousWindEntity;
 import net.mcreator.catastrophemod.entity.FriendlySwordOrbitEntity;
-import net.mcreator.catastrophemod.entity.FreezingCoreEntity;
 import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedSwordProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
-import net.mcreator.catastrophemod.entity.EarthboundFistEntity;
 import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
 import net.mcreator.catastrophemod.entity.DiamondDetonationBombEntity;
-import net.mcreator.catastrophemod.entity.DescendingMiseryEntity;
 import net.mcreator.catastrophemod.entity.CrystalSpearStabEntity;
 import net.mcreator.catastrophemod.entity.CharredSkeletonGuardEntity;
 import net.mcreator.catastrophemod.entity.CharredMantisEntity;
 import net.mcreator.catastrophemod.entity.CalicoStagBeetleEntity;
 import net.mcreator.catastrophemod.entity.BlazingPhoenixEntity;
-import net.mcreator.catastrophemod.entity.BabyCalicoStagBeetleEntity;
 import net.mcreator.catastrophemod.entity.AtlanticSeaNettleEntity;
 import net.mcreator.catastrophemod.entity.ArcStrikerEntity;
 import net.mcreator.catastrophemod.entity.AnglerfishEntity;
-import net.mcreator.catastrophemod.entity.AcidTarantulaMinionEntity;
 import net.mcreator.catastrophemod.entity.AccursedWitchEntity;
 
 @Mod.EventBusSubscriber
@@ -72,35 +64,7 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof FuriousWindEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof PileOfMossEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
 			if (event.getEntity() instanceof SwordspinEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof FreezingCoreEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof AcidTarantulaMinionEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -142,28 +106,7 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof BabyCalicoStagBeetleEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
 			if (event.getEntity() instanceof ShadeEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof HermitCrabMinionEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof NatureBlessedSpiritEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -184,13 +127,6 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof DescendingMiseryEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
 			if (event.getEntity() instanceof CharredSkeletonGuardEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
@@ -205,21 +141,7 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof NettleMinionEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
 			if (event.getEntity() instanceof BlazingPhoenixEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof EarthboundFistEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -388,6 +310,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof StarlitLacewingMinionEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof StormsmithEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TideSlashProjectileEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

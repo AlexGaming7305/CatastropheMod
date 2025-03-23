@@ -7,7 +7,7 @@
     "name": "§bRipsaw",
     "idle": "0",
     "rarity": "COMMON",
-    "displaySettings": "ripsaw.item.json",
+    "displaySettings": "ripsaw.json",
     "leftArm": "",
     "rightArm": "",
     "perspective": "All Perspectives",

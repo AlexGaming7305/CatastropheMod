@@ -5,7 +5,7 @@
     "name": "Music Disc",
     "rarity": "RARE",
     "texture": "music_disc_strike_you_down",
-    "description": "Freddy Frostbear - Strike You Down!",
+    "description": "arkimedeez - Strike You Down!",
     "creativeTab": {
       "value": "MISC"
     },
@@ -18,7 +18,7 @@
     "music": {
       "value": "CUSTOM:strike_you_down"
     },
-    "lengthInTicks": 100,
+    "lengthInTicks": 6720,
     "analogOutput": 0
   }
 }

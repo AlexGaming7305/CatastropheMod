@@ -125,15 +125,6 @@
       }
     ]
   },
-  "strike_you_down": {
-    "subtitle": "subtitles.strike_you_down",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:strike_you_down",
-        "stream": true
-      }
-    ]
-  },
   "something_is_indicated": {
     "subtitle": "subtitles.something_is_indicated",
     "sounds": [
@@ -409,15 +400,6 @@
     "sounds": [
       {
         "name": "catastrophe_mod:axe_throw",
-        "stream": false
-      }
-    ]
-  },
-  "ripsaw_shoot": {
-    "subtitle": "subtitles.ripsaw_shoot",
-    "sounds": [
-      {
-        "name": "catastrophe_mod:ripsaw_shoot",
         "stream": false
       }
     ]
@@ -914,6 +896,123 @@
       {
         "name": "catastrophe_mod:wiresaw_stop",
         "stream": false
+      }
+    ]
+  },
+  "ripsaw_shoots": {
+    "subtitle": "subtitles.ripsaw_shoots",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:ripsaw_shoots",
+        "stream": false
+      }
+    ]
+  },
+  "welding_blow": {
+    "subtitle": "subtitles.welding_blow",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:welding_blow",
+        "stream": false
+      }
+    ]
+  },
+  "stormsmith_hit": {
+    "subtitle": "subtitles.stormsmith_hit",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:stormsmith_hit",
+        "stream": false
+      }
+    ]
+  },
+  "striker_bash": {
+    "subtitle": "subtitles.striker_bash",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:striker_bash",
+        "stream": false
+      }
+    ]
+  },
+  "stormsmith_lunges": {
+    "subtitle": "subtitles.stormsmith_lunges",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:stormsmith_lunges",
+        "stream": false
+      }
+    ]
+  },
+  "stormsmith_jumps": {
+    "subtitle": "subtitles.stormsmith_jumps",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:stormsmith_jumps",
+        "stream": false
+      }
+    ]
+  },
+  "stormsmith_step": {
+    "subtitle": "subtitles.stormsmith_step",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:stormsmith_step",
+        "stream": false
+      }
+    ]
+  },
+  "seismic_slam": {
+    "subtitle": "subtitles.seismic_slam",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:seismic_slam",
+        "stream": false
+      }
+    ]
+  },
+  "stormsmith_swings": {
+    "subtitle": "subtitles.stormsmith_swings",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:stormsmith_swings",
+        "stream": false
+      }
+    ]
+  },
+  "heavy_hitter": {
+    "subtitle": "subtitles.heavy_hitter",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:heavy_hitter",
+        "stream": false
+      }
+    ]
+  },
+  "strike_you_down": {
+    "subtitle": "subtitles.strike_you_down",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:strike_you_down",
+        "stream": true
+      }
+    ]
+  },
+  "failed_incarnations": {
+    "subtitle": "subtitles.failed_incarnations",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:failed_incarnations",
+        "stream": true
+      }
+    ]
+  },
+  "altar_of_the_incarnate": {
+    "subtitle": "subtitles.altar_of_the_incarnate",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:altar_of_the_incarnate",
+        "stream": true
       }
     ]
   }

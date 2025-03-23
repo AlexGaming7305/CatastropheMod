@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.Mod;
 
 import net.minecraft.world.level.levelgen.feature.Feature;
 
-import net.mcreator.catastrophemod.world.features.TidepoolsFeature;
 import net.mcreator.catastrophemod.world.features.ManaRosePlantFeatureFeature;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
@@ -19,5 +18,4 @@ import net.mcreator.catastrophemod.CatastropheModMod;
 public class CatastropheModModFeatures {
 	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, CatastropheModMod.MODID);
 	public static final RegistryObject<Feature<?>> MANA_ROSE_PLANT_FEATURE = REGISTRY.register("mana_rose_plant_feature", ManaRosePlantFeatureFeature::new);
-	public static final RegistryObject<Feature<?>> TIDEPOOLS = REGISTRY.register("tidepools", TidepoolsFeature::new);
 }

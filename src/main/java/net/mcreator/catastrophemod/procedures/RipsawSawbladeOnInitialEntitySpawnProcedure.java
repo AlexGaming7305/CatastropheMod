@@ -42,7 +42,7 @@ public class RipsawSawbladeOnInitialEntitySpawnProcedure {
 								_entity.yHeadRotO = _entity.getYRot();
 							}
 						}
-						entity.setDeltaMovement(new Vec3((entityiterator.getLookAngle().x * 2), (entityiterator.getLookAngle().y), (entityiterator.getLookAngle().z * 2)));
+						entity.setDeltaMovement(new Vec3((entityiterator.getLookAngle().x * 2), (entityiterator.getLookAngle().y * 2), (entityiterator.getLookAngle().z * 2)));
 						entity.getPersistentData().putString("RipsawOwner", (entityiterator.getStringUUID()));
 					}
 				}

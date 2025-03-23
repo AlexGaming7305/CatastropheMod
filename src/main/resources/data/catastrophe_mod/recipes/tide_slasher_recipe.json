@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "catastrophe_mod:sea_crystal_geode"
+    },
+    "b": {
+      "item": "catastrophe_mod:depthstone"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:tide_slasher",
+    "count": 1
+  }
+}

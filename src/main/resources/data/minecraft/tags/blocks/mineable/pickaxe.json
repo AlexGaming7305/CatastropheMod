@@ -37,17 +37,10 @@
     "catastrophe_mod:depthstone_bricks_slab",
     "catastrophe_mod:depthstone_bricks_stairs",
     "catastrophe_mod:electrified_diode",
-    "catastrophe_mod:shale",
-    "catastrophe_mod:shale_bricks",
-    "catastrophe_mod:cracked_shale_bricks",
-    "catastrophe_mod:chiseled_shale_bricks",
-    "catastrophe_mod:shale_slab",
-    "catastrophe_mod:shale_bricks_slab",
-    "catastrophe_mod:shale_stairs",
-    "catastrophe_mod:shale_bricks_stairs",
     "catastrophe_mod:rusty_plating",
     "catastrophe_mod:rusty_plating_slab",
     "catastrophe_mod:rusty_plating_stairs",
-    "catastrophe_mod:electrified_chain"
+    "catastrophe_mod:electrified_chain",
+    "catastrophe_mod:corroded_grate"
   ]
 }

@@ -3,9 +3,9 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Target Acquired",
-    "achievementDescription": "Obtain your first ranged weapon",
+    "achievementDescription": "Obtain your first Ranged Weapon",
     "achievementIcon": {
-      "value": "Items.BOW"
+      "value": "CUSTOM:WoodenBow"
     },
     "background": "Default",
     "disableDisplay": false,

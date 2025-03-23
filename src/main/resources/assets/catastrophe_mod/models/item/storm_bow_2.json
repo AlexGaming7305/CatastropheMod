@@ -2,6 +2,6 @@
     "parent": "item/bow",
     "textures": 
     {
-        "layer0": "catastrophe_mod:item/storming_bow_pulling_2"
+        "layer0": "catastrophe_mod:item/storm_bow_2"
     }
 }

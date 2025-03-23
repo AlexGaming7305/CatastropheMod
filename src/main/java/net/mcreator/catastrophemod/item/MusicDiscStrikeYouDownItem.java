@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MusicDiscStrikeYouDownItem extends RecordItem {
 	public MusicDiscStrikeYouDownItem() {
-		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:strike_you_down")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 100);
+		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:strike_you_down")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 6720);
 	}
 
 	@Override

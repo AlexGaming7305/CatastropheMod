@@ -25,5 +25,6 @@ public class StormBowItem extends BowItem {
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(Component.literal("\u00A77Inflicts \u00A7cElectrified"));
+		list.add(Component.literal("\u00A77Fully charged shots spawn lightning around the target"));
 	}
 }

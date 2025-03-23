@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/corroded_grate",
+    "up": "catastrophe_mod:block/corroded_grate",
+    "north": "catastrophe_mod:block/corroded_grate",
+    "east": "catastrophe_mod:block/corroded_grate",
+    "south": "catastrophe_mod:block/corroded_grate",
+    "west": "catastrophe_mod:block/corroded_grate",
+    "particle": "catastrophe_mod:block/corroded_grate"
+  },
+  "render_type": "cutout"
+}

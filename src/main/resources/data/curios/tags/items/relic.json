@@ -4,6 +4,12 @@
     "minecraft:air",
     "catastrophe_mod:running_boots",
     "catastrophe_mod:burnace",
-    "catastrophe_mod:rotten_heart"
+    "catastrophe_mod:rotten_heart",
+    "catastrophe_mod:storm_catalyst",
+    "catastrophe_mod:spirit_in_a_bottle",
+    "catastrophe_mod:scaffolding_kit",
+    "catastrophe_mod:mana_rose",
+    "catastrophe_mod:forest_totem",
+    "catastrophe_mod:energy_coil"
   ]
 }

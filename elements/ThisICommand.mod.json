@@ -3,9 +3,9 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "This I Command!",
-    "achievementDescription": "Obtain your first summoner weapon",
+    "achievementDescription": "Obtain your first Summoner Weapon",
     "achievementIcon": {
-      "value": "CUSTOM:LivingMoss"
+      "value": "CUSTOM:StarlitLacewingStaff"
     },
     "background": "Default",
     "disableDisplay": false,

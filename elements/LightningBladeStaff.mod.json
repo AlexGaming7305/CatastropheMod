@@ -29,7 +29,8 @@
     "specialInformation": {
       "fixedValue": [
         "§aRight-click: §7Summons a §bLightning Blade §7to fight for you.",
-        "§aSneak + Right-click: §7Despawns the nearest §bLightning Blade"
+        "§aSneak + Right-click: §7Despawns the nearest §bLightning Blade",
+        "§aSneak + Left-click: §7Commands all §bLightning Blades §7to slam down onto their target"
       ]
     },
     "glowCondition": {
@@ -40,6 +41,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "LightningBladeStaffRightclicked"
+    },
+    "onEntitySwing": {
+      "name": "LightningBladeStaffEntitySwingsItem"
     },
     "enableRanged": false,
     "shootConstantly": false,

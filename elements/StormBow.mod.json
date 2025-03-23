@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "storming_bow",
+    "texture": "storm_bow",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
@@ -28,7 +28,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "§7Inflicts §cElectrified"
+        "§7Inflicts §cElectrified",
+        "§7Fully charged shots spawn lightning around the target"
       ]
     },
     "glowCondition": {

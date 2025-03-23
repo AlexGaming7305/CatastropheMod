@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "catastrophe_mod:thunderstrike"
+    },
+    "title": {
+      "translate": "advancements.shazam.title"
+    },
+    "description": {
+      "translate": "advancements.shazam.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shazam": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "catastrophe_mod:arcane"
+}

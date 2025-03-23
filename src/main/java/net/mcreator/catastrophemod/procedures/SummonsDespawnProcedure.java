@@ -32,7 +32,7 @@ public class SummonsDespawnProcedure {
 		if (entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:summons")))) {
 			if (!((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) == null)) {
 				if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new CatastropheModModVariables.PlayerVariables())).SoulPower == 0) {
+						.orElse(new CatastropheModModVariables.PlayerVariables())).Taken_Minion_Slots == 0) {
 					if (!entity.level().isClientSide())
 						entity.discard();
 				}

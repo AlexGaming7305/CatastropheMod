@@ -45,8 +45,12 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 			return;
 		double random = 0;
 		double attack = 0;
-		CatastropheModModVariables.MapVariables.get(world).electrified_storm = true;
-		CatastropheModModVariables.MapVariables.get(world).syncData(world);
+		if (CatastropheModModVariables.MapVariables.get(world).electrified_storm == false) {
+			if (entity.isAlive()) {
+				CatastropheModModVariables.MapVariables.get(world).electrified_storm = true;
+				CatastropheModModVariables.MapVariables.get(world).syncData(world);
+			}
+		}
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
 			entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
 		}

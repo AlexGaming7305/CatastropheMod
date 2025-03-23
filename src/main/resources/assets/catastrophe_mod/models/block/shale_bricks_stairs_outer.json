@@ -1,9 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "catastrophe_mod:block/shale_bricks",
-    "top": "catastrophe_mod:block/shale_bricks",
-    "side": "catastrophe_mod:block/shale_bricks"
-  },
-  "render_type": "solid"
-}
