@@ -21,6 +21,6 @@ public class EnergyCoilItem extends Item implements ICurioItem {
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
 		list.add(Component.literal("\u00A77You absorb \u00A7cElectrified \u00A77from nearby targets inflicted with it, increasing damage the more you absorb"));
-		list.add(Component.literal("\u00A77If you absorb too much you'll discharge the electricity and take damage"));
+		list.add(Component.literal("\u00A77If you absorb too much, you'll discharge the electricity and take damage"));
 	}
 }

@@ -31,7 +31,7 @@
     "specialInformation": {
       "fixedValue": [
         "§7You absorb §cElectrified §7from nearby targets inflicted with it, increasing damage the more you absorb",
-        "§7If you absorb too much you'll discharge the electricity and take damage"
+        "§7If you absorb too much, you'll discharge the electricity and take damage"
       ]
     },
     "hasGlow": false,
