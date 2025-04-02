@@ -1015,5 +1015,23 @@
         "stream": true
       }
     ]
+  },
+  "raging_hunter_reloads": {
+    "subtitle": "subtitles.raging_hunter_reloads",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:raging_hunter_reloads",
+        "stream": false
+      }
+    ]
+  },
+  "raging_hunter_shoots": {
+    "subtitle": "subtitles.raging_hunter_shoots",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:raging_hunter_shoots",
+        "stream": false
+      }
+    ]
   }
 }

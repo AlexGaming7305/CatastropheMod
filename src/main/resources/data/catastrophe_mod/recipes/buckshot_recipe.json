@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    "cda",
+    "ec "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "catastrophe_mod:iron_pellets"
+    },
+    "c": {
+      "item": "minecraft:gold_ingot"
+    },
+    "d": {
+      "item": "minecraft:paper"
+    },
+    "e": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "item": "catastrophe_mod:buckshot",
+    "count": 4
+  }
+}

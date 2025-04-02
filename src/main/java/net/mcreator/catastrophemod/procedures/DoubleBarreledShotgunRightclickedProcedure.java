@@ -5,25 +5,24 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.item.DoubleBarreledShotgunItem;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.VenomousBulletProjectileProjectileEntity;
-import net.mcreator.catastrophemod.entity.ScrapRoundProjectileEntity;
-import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
-import net.mcreator.catastrophemod.entity.CrystalRoundProjectileProjectileEntity;
-import net.mcreator.catastrophemod.entity.CopperRoundProjectileEntity;
+import net.mcreator.catastrophemod.entity.IronPelletEntity;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class DoubleBarreledShotgunRightclickedProcedure {
@@ -86,6 +85,36 @@ public class DoubleBarreledShotgunRightclickedProcedure {
 				}
 			}
 			itemstack.getOrCreateTag().putDouble("ammo", (itemstack.getOrCreateTag().getDouble("ammo") - 1));
+			for (int index0 = 0; index0 < 10; index0++) {
+				{
+					Entity _shootFrom = entity;
+					Level projectileLevel = _shootFrom.level();
+					if (!projectileLevel.isClientSide()) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new IronPelletEntity(CatastropheModModEntities.IRON_PELLET.get(), level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								entityToSpawn.setSilent(true);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, (float) 0.25, 0);
+						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 8);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+				}
+			}
+			for (int index1 = 0; index1 < 40; index1++) {
+				world.addParticle(ParticleTypes.SMOKE, x, (y + 1.1), z,
+						(((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(6)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()
+								+ Mth.nextInt(RandomSource.create(), 0, 2)) - entity.getX()) * Mth.nextDouble(RandomSource.create(), 0.01, 0.05)),
+						(((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(6)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()
+								+ Mth.nextInt(RandomSource.create(), 0, 2)) - entity.getY()) * Mth.nextDouble(RandomSource.create(), 0.01, 0.05)),
+						(((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(6)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()
+								+ Mth.nextInt(RandomSource.create(), 0, 2)) - entity.getZ()) * Mth.nextDouble(RandomSource.create(), 0.01, 0.05)));
+			}
 			if (!world.isClientSide()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -96,118 +125,6 @@ public class DoubleBarreledShotgunRightclickedProcedure {
 				}
 			}
 			entity.setDeltaMovement(new Vec3(((-0.75) * entity.getLookAngle().x), ((-0.375) * entity.getLookAngle().y), ((-0.75) * entity.getLookAngle().z)));
-			if (itemstack.getOrCreateTag().getBoolean("copper_round") == true) {
-				for (int index0 = 0; index0 < 2; index0++) {
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new CopperRoundProjectileEntity(CatastropheModModEntities.COPPER_ROUND_PROJECTILE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 2, 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-				}
-			} else if (itemstack.getOrCreateTag().getBoolean("scrap_round") == true) {
-				for (int index1 = 0; index1 < 2; index1++) {
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new ScrapRoundProjectileEntity(CatastropheModModEntities.SCRAP_ROUND_PROJECTILE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, (float) 2.5, 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-				}
-			} else if (itemstack.getOrCreateTag().getBoolean("crystal_round") == true) {
-				for (int index2 = 0; index2 < 2; index2++) {
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new CrystalRoundProjectileProjectileEntity(CatastropheModModEntities.CRYSTAL_ROUND_PROJECTILE_PROJECTILE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									entityToSpawn.setPierceLevel(piercing);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 2, 0, (byte) 1);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-				}
-			} else if (itemstack.getOrCreateTag().getBoolean("electrified_round") == true) {
-				for (int index3 = 0; index3 < 2; index3++) {
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new ElectrifiedRoundProjectileProjectileEntity(CatastropheModModEntities.ELECTRIFIED_ROUND_PROJECTILE_PROJECTILE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, (float) 2.5, 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-				}
-			} else if (itemstack.getOrCreateTag().getBoolean("venomous_round") == true) {
-				for (int index4 = 0; index4 < 2; index4++) {
-					{
-						Entity _shootFrom = entity;
-						Level projectileLevel = _shootFrom.level();
-						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new VenomousBulletProjectileProjectileEntity(CatastropheModModEntities.VENOMOUS_BULLET_PROJECTILE_PROJECTILE.get(), level);
-									entityToSpawn.setOwner(shooter);
-									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setSilent(true);
-									return entityToSpawn;
-								}
-							}.getArrow(projectileLevel, entity, 3, 0);
-							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 8);
-							projectileLevel.addFreshEntity(_entityToSpawn);
-						}
-					}
-				}
-			}
 		}
 	}
 }

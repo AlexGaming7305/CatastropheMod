@@ -60,6 +60,7 @@ import net.mcreator.catastrophemod.client.renderer.MineralWraithRenderer;
 import net.mcreator.catastrophemod.client.renderer.LightningBladeRenderer;
 import net.mcreator.catastrophemod.client.renderer.LifedrainArrowProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.KnifeOfProficiencyProjectileProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.IronPelletRenderer;
 import net.mcreator.catastrophemod.client.renderer.IceShardProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.HuntsmanKnifeProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.HermitCrabRenderer;
@@ -76,6 +77,7 @@ import net.mcreator.catastrophemod.client.renderer.FlameProjectileProjectileRend
 import net.mcreator.catastrophemod.client.renderer.FirebrandSlashRenderer;
 import net.mcreator.catastrophemod.client.renderer.FierySlashProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.FieryRoundProjectileRenderer;
+import net.mcreator.catastrophemod.client.renderer.FederalMagnumProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.ElectrifiedSwordProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.ElectrifiedRoundProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.ElectrifiedLightningRenderer;
@@ -204,5 +206,7 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.STARLIT_LACEWING_MINION.get(), StarlitLacewingMinionRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.STORMSMITH.get(), StormsmithRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.TIDE_SLASH_PROJECTILE.get(), TideSlashProjectileRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.IRON_PELLET.get(), IronPelletRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.FEDERAL_MAGNUM_PROJECTILE.get(), FederalMagnumProjectileRenderer::new);
 	}
 }

@@ -133,4 +133,6 @@ public class CatastropheModModSounds {
 	public static final RegistryObject<SoundEvent> STRIKE_YOU_DOWN = REGISTRY.register("strike_you_down", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "strike_you_down")));
 	public static final RegistryObject<SoundEvent> FAILED_INCARNATIONS = REGISTRY.register("failed_incarnations", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "failed_incarnations")));
 	public static final RegistryObject<SoundEvent> ALTAR_OF_THE_INCARNATE = REGISTRY.register("altar_of_the_incarnate", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "altar_of_the_incarnate")));
+	public static final RegistryObject<SoundEvent> RAGING_HUNTER_RELOADS = REGISTRY.register("raging_hunter_reloads", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "raging_hunter_reloads")));
+	public static final RegistryObject<SoundEvent> RAGING_HUNTER_SHOOTS = REGISTRY.register("raging_hunter_shoots", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("catastrophe_mod", "raging_hunter_shoots")));
 }

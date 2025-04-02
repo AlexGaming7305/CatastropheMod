@@ -13,6 +13,7 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.catastrophemod.item.SawedOffShotgunItem;
 import net.mcreator.catastrophemod.item.RustgunItem;
 import net.mcreator.catastrophemod.item.RipsawItem;
+import net.mcreator.catastrophemod.item.RagingHunterItem;
 import net.mcreator.catastrophemod.item.NailgunItem;
 import net.mcreator.catastrophemod.item.FlamestrikeItem;
 import net.mcreator.catastrophemod.item.DoubleBarreledShotgunItem;
@@ -155,6 +156,26 @@ public class ItemAnimationFactory {
 					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
 					if (event.player.level().isClientSide()) {
 						((SawedOffShotgunItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("left");
+					}
+				}
+			}
+			if (mainhandItem.getItem() instanceof RagingHunterItem animatable) {
+				animation = mainhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getMainHandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((RagingHunterItem) event.player.getMainHandItem().getItem()).animationprocedure = animation;
+						disableUseAnim("right");
+					}
+				}
+			}
+			if (offhandItem.getItem() instanceof RagingHunterItem animatable) {
+				animation = offhandItem.getOrCreateTag().getString("geckoAnim");
+				if (!animation.isEmpty()) {
+					event.player.getOffhandItem().getOrCreateTag().putString("geckoAnim", "");
+					if (event.player.level().isClientSide()) {
+						((RagingHunterItem) event.player.getOffhandItem().getItem()).animationprocedure = animation;
 						disableUseAnim("left");
 					}
 				}

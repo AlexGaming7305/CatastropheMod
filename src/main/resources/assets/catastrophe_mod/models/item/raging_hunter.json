@@ -1,0 +1,6 @@
+{
+  "parent": "catastrophe_mod:displaysettings/raging_hunter.item",
+  "textures": {
+    "layer0": "catastrophe_mod:item/raging_hunter"
+  }
+}

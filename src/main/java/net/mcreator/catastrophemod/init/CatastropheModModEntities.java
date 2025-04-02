@@ -65,6 +65,7 @@ import net.mcreator.catastrophemod.entity.MineralWraithEntity;
 import net.mcreator.catastrophemod.entity.LightningBladeEntity;
 import net.mcreator.catastrophemod.entity.LifedrainArrowProjectileEntity;
 import net.mcreator.catastrophemod.entity.KnifeOfProficiencyProjectileProjectileEntity;
+import net.mcreator.catastrophemod.entity.IronPelletEntity;
 import net.mcreator.catastrophemod.entity.IceShardProjectileEntity;
 import net.mcreator.catastrophemod.entity.HuntsmanKnifeProjectileEntity;
 import net.mcreator.catastrophemod.entity.HermitCrabEntity;
@@ -83,6 +84,7 @@ import net.mcreator.catastrophemod.entity.FirebrandSlashEntity;
 import net.mcreator.catastrophemod.entity.FierySlashProjectileEntity;
 import net.mcreator.catastrophemod.entity.FieryRoundProjectileEntity;
 import net.mcreator.catastrophemod.entity.FieryBoltEntity;
+import net.mcreator.catastrophemod.entity.FederalMagnumProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedSwordProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedRoundProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.ElectrifiedLightningEntity;
@@ -370,6 +372,11 @@ public class CatastropheModModEntities {
 			.setUpdateInterval(3).setCustomClientFactory(StormsmithEntity::new).fireImmune().sized(2f, 3.5f));
 	public static final RegistryObject<EntityType<TideSlashProjectileEntity>> TIDE_SLASH_PROJECTILE = register("tide_slash_projectile", EntityType.Builder.<TideSlashProjectileEntity>of(TideSlashProjectileEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TideSlashProjectileEntity::new).fireImmune().sized(0.4f, 0.4f));
+	public static final RegistryObject<EntityType<IronPelletEntity>> IRON_PELLET = register("projectile_iron_pellet",
+			EntityType.Builder.<IronPelletEntity>of(IronPelletEntity::new, MobCategory.MISC).setCustomClientFactory(IronPelletEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FederalMagnumProjectileEntity>> FEDERAL_MAGNUM_PROJECTILE = register("projectile_federal_magnum_projectile",
+			EntityType.Builder.<FederalMagnumProjectileEntity>of(FederalMagnumProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FederalMagnumProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

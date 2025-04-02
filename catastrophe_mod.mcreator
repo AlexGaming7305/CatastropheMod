@@ -22388,6 +22388,238 @@
         ]
       },
       "path": "~/Items/Relics"
+    },
+    {
+      "name": "Buckshot",
+      "type": "item",
+      "sortid": 3323,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buckshot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/buckshot.json",
+          "src/main/java/net/mcreator/catastrophemod/item/BuckshotItem.java"
+        ]
+      },
+      "path": "~/Items/Ammunition"
+    },
+    {
+      "name": "IronPelletWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 3324,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_pellet_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/IronPelletWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "IronPellet",
+      "type": "projectile",
+      "sortid": 3325,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_pellet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/IronPelletEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/IronPelletRenderer.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "IronPellets",
+      "type": "item",
+      "sortid": 3326,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_pellets",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/iron_pellets.json",
+          "src/main/java/net/mcreator/catastrophemod/item/IronPelletsItem.java"
+        ]
+      },
+      "path": "~/Items/Ammunition"
+    },
+    {
+      "name": "RagingHunter",
+      "type": "animateditem",
+      "sortid": 3328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raging_hunter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/raging_hunter.json",
+          "src/main/java/net/mcreator/catastrophemod/item/model/RagingHunterItemModel.java",
+          "src/main/java/net/mcreator/catastrophemod/item/renderer/RagingHunterItemRenderer.java",
+          "src/main/java/net/mcreator/catastrophemod/item/RagingHunterItem.java"
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "RagingHunterItemInHandTick",
+      "type": "procedure",
+      "sortid": 3327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raging_hunter_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/RagingHunterItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "RagingHunterRightclicked",
+      "type": "procedure",
+      "sortid": 3329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raging_hunter_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/RagingHunterRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Weapons/Ranged Weapons"
+    },
+    {
+      "name": "FederalMagnum",
+      "type": "item",
+      "sortid": 3330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "federal_magnum",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/catastrophe_mod/models/item/federal_magnum.json",
+          "src/main/java/net/mcreator/catastrophemod/item/FederalMagnumItem.java"
+        ]
+      },
+      "path": "~/Items/Ammunition"
+    },
+    {
+      "name": "FederalMagnumProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 3331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "federal_magnum_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/procedures/FederalMagnumProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "FederalMagnumProjectile",
+      "type": "projectile",
+      "sortid": 3332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "federal_magnum_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/catastrophemod/entity/FederalMagnumProjectileEntity.java",
+          "src/main/java/net/mcreator/catastrophemod/client/renderer/FederalMagnumProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "BuckshotRecipe",
+      "type": "recipe",
+      "sortid": 3333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buckshot_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/recipes/buckshot_recipe.json"
+        ]
+      },
+      "path": "~/Items/Ammunition"
+    },
+    {
+      "name": "FederalMagnumRecipe",
+      "type": "recipe",
+      "sortid": 3334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "federal_magnum_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/catastrophe_mod/recipes/federal_magnum_recipe.json"
+        ]
+      },
+      "path": "~/Items/Ammunition"
     }
   ],
   "variable_elements": [
@@ -24310,6 +24542,22 @@
       ],
       "category": "record",
       "subtitle": "Altar of the Incarnate"
+    },
+    {
+      "name": "raging_hunter_reloads",
+      "files": [
+        "raging_hunter_reloads"
+      ],
+      "category": "player",
+      "subtitle": "Raging Hunter reloads"
+    },
+    {
+      "name": "raging_hunter_shoots",
+      "files": [
+        "raging_hunter_shoots"
+      ],
+      "category": "player",
+      "subtitle": "Raging Hunter shoots"
     }
   ],
   "language_map": {
@@ -24511,6 +24759,7 @@
       "block.alexs_mod.calico_mushroom": "Calico Mushroom Block",
       "key.alexs_mod.aijex_missile_launch": "Bartosa Armor Missile Launch",
       "item.alexs_mod.music_disc_enlightened_starlight": "Music Disc",
+      "subtitles.raging_hunter_reload": "Raging Hunter reload",
       "entity.catastrophe_mod.blazing_phoenix": "Blazing Phoenix",
       "item.minecraft.potion.effect.impedance_potion": "Potion of Impedance",
       "item.alexs_mod.cactus_cutter": "§2Cactus Cutter",
@@ -24695,6 +24944,7 @@
       "entity.catastrophe_mod.sword_spin_dash": "Sword Spin Dash",
       "item.alexs_mod.blazing_armor_chestplate": "§cBlazing Chestplate",
       "item.catastrophe_mod.cursed_armor_helmet": "§5Cursed Hood",
+      "item.catastrophe_mod.buckshot": "Buckshot",
       "gui.alexs_mod.aegex_4_gui.label_armed_with_my_missing_arsenal": "armed with my missing arsenal.",
       "block.catastrophe_mod.depthstone": "Depthstone",
       "subtitles.deathray": "Deathray",
@@ -24879,6 +25129,7 @@
       "effect.catastrophe_mod.marked_for_death": "Marked For Death",
       "advancements.im_not_gonna_sugarcoat_it.title": "I\u0027m Not Gonna Sugarcoat It",
       "item.catastrophe_mod.mana_rose": "§bMana Rose",
+      "item.catastrophe_mod.raging_hunter": "Raging Hunter",
       "item.minecraft.potion.effect.bullseye_potion_long": "Potion of Bullseye",
       "item.catastrophe_mod.thorn_infested_armor_loot_bundle": "Thorn Infested Armor Loot Bundle",
       "effect.catastrophe_mod.brass_speed": "Brass Speed",
@@ -24892,6 +25143,7 @@
       "item.catastrophe_mod.charred_mantis_spawn_egg": "Charred Mantis Spawn Egg",
       "item.alexs_mod.tungsten_shield": "Tungsten Shield",
       "block.alexs_mod.shield_scythe_placed": "Shield_Scythe.Placed",
+      "subtitles.raging_hunter_shoot": "Raging Hunter shoot",
       "item.alexs_mod.bartosa_tools_pickaxe": "Bartosa Pickaxe",
       "biome.alexs_mod.the_void": "The Void",
       "item.alexs_mod.excalibur": "§e§lExcalibur",
@@ -24904,6 +25156,7 @@
       "item.alexs_mod.wuflar_blunderbuss": "§9Wuflar Blunderbuss",
       "gui.alexs_mod.quest_book_gui.label_portal": "Portal.",
       "gui.alexs_mod.aegex_2_gui.label_i_think_its_a_good_idea": "I think it\u0027s a good idea ",
+      "subtitles.raging_hunter_shoots": "Raging Hunter shoots",
       "attribute.catastrophe_mod.ranged_damage": "Ranged Damage",
       "gui.alexs_mod.hellion_note_sheet_page.label_boss_attributes": "Boss Attributes:",
       "key.catastrophe_mod.dash": "Dash",
@@ -25090,6 +25343,7 @@
       "enchantment.catastrophe_mod.magnetism": "Magnetism",
       "block.alexs_mod.overgrown_button": "Overgrown Button",
       "attribute.catastrophe_mod.mana_usage_reduction": "Mana Usage Reduction",
+      "subtitles.raging_hunter_reloads": "Raging Hunter reloads",
       "item.alexs_mod.fried_eggs": "Fried Eggs",
       "item.catastrophe_mod.lightning_blade_staff": "§bLightning Blade Staff",
       "subtitles.nethers_fury": "Nether\u0027s Fury",
@@ -25291,6 +25545,7 @@
       "item.catastrophe_mod.electrified_armor_helmet": "§bElectrified Helmet",
       "item.catastrophe_mod.absorption_aegis": "§6Absorption Aegis",
       "block.alexs_mod.laboratory_slab": "Laboratory Slab",
+      "item.catastrophe_mod.iron_pellets": "Iron Pellets",
       "subtitles.something_is_sliced": "Something is sliced",
       "item.alexs_mod.music_disc_overgrown_grove.desc": "Freddy Frostbear - Overgrown Grove",
       "key.alexs_mod.arm_cannon": "Arm Cannon",
@@ -25410,6 +25665,7 @@
       "entity.catastrophe_mod.night_reaper": "Night Reaper",
       "subtitles.strong_metal_hit": "Strong metal hit",
       "item.alexs_mod.diamond_detonation": "Diamond Detonation",
+      "item.catastrophe_mod.federal_magnum": "Federal Magnum",
       "item.alexs_mod.bartosa_ingot": "Bartosa Ingot",
       "effect.alexs_mod.dash_damage": "Dash Damage",
       "gui.alexs_mod.space_entry.button_close": "Close",

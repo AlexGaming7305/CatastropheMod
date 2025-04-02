@@ -150,21 +150,11 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.COPPER_ROUND.get());
 				tabData.accept(CatastropheModModItems.DOUBLE_BARRELED_SHOTGUN.get());
 				tabData.accept(CatastropheModModItems.SAWED_OFF_SHOTGUN.get());
+				tabData.accept(CatastropheModModItems.BUCKSHOT.get());
+				tabData.accept(CatastropheModModItems.IRON_PELLETS.get());
+				tabData.accept(CatastropheModModItems.RAGING_HUNTER.get());
+				tabData.accept(CatastropheModModItems.FEDERAL_MAGNUM.get());
 			}).withSearchBar().build());
-	public static final RegistryObject<CreativeModeTab> RELICS = REGISTRY.register("relics",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.relics")).icon(() -> new ItemStack(CatastropheModModItems.RUNNING_BOOTS.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(CatastropheModModItems.RUNNING_BOOTS.get());
-				tabData.accept(CatastropheModModItems.BURNACE.get());
-				tabData.accept(CatastropheModModItems.ROTTEN_HEART.get());
-				tabData.accept(CatastropheModModItems.STORM_CATALYST.get());
-				tabData.accept(CatastropheModModItems.SPIRIT_IN_A_BOTTLE.get());
-				tabData.accept(CatastropheModModItems.SCAFFOLDING_KIT.get());
-				tabData.accept(CatastropheModModItems.MANA_ROSE.get());
-				tabData.accept(CatastropheModModItems.FOREST_TOTEM.get());
-				tabData.accept(CatastropheModModItems.ENERGY_COIL.get());
-			})
-
-					.build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
