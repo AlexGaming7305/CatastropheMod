@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/corroded_reinforced_concrete",
+    "up": "catastrophe_mod:block/corroded_reinforced_concrete",
+    "north": "catastrophe_mod:block/corroded_reinforced_concrete",
+    "east": "catastrophe_mod:block/corroded_reinforced_concrete",
+    "south": "catastrophe_mod:block/corroded_reinforced_concrete",
+    "west": "catastrophe_mod:block/corroded_reinforced_concrete",
+    "particle": "catastrophe_mod:block/corroded_reinforced_concrete"
+  },
+  "render_type": "solid"
+}

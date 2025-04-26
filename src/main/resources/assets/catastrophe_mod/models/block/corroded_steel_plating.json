@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/corroded_steel_plating",
+    "up": "catastrophe_mod:block/corroded_steel_plating",
+    "north": "catastrophe_mod:block/corroded_steel_plating",
+    "east": "catastrophe_mod:block/corroded_steel_plating",
+    "south": "catastrophe_mod:block/corroded_steel_plating",
+    "west": "catastrophe_mod:block/corroded_steel_plating",
+    "particle": "catastrophe_mod:block/corroded_steel_plating"
+  },
+  "render_type": "solid"
+}

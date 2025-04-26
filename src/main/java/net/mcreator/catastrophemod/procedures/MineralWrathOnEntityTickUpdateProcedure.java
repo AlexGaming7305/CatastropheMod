@@ -30,10 +30,7 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
 import net.mcreator.catastrophemod.init.CatastropheModModMobEffects;
 import net.mcreator.catastrophemod.init.CatastropheModModEntities;
-import net.mcreator.catastrophemod.entity.VoltbladeEntity;
-import net.mcreator.catastrophemod.entity.SurgeBreakerEntity;
 import net.mcreator.catastrophemod.entity.MineralWraithEntity;
-import net.mcreator.catastrophemod.entity.ArcStrikerEntity;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 import java.util.List;
@@ -45,6 +42,8 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 			return;
 		double random = 0;
 		double attack = 0;
+		double speech = 0;
+		double attack_far = 0;
 		if (CatastropheModModVariables.MapVariables.get(world).electrified_storm == false) {
 			if (entity.isAlive()) {
 				CatastropheModModVariables.MapVariables.get(world).electrified_storm = true;
@@ -52,7 +51,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 			}
 		}
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null) {
-			entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
+			entity.getPersistentData().putDouble("mineral_wraith_ai", 60);
 		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 150) {
 			entity.getPersistentData().putBoolean("Phase2", true);
@@ -126,7 +125,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(35, () -> {
+						CatastropheModMod.queueServerWork(27, () -> {
 							if (entity.isAlive()) {
 								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 									entity.getPersistentData().putBoolean("thunderclap", false);
@@ -149,7 +148,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 									}
 									{
 										final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
-										List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+										List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(7 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 												.toList();
 										for (Entity entityiterator : _entfound) {
 											if (!(entityiterator == entity)) {
@@ -157,7 +156,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 													entityiterator.hurt(new DamageSource(
 															world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 7);
 													if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-														_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+														_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
 												}
 											}
 										}
@@ -167,7 +166,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 						});
 					}
 					if (attack == 1) {
-						entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 45);
 						if (entity instanceof MineralWraithEntity) {
 							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.phasing_thunder");
 						}
@@ -180,9 +179,9 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 										false);
 							}
 						}
-						entity.setDeltaMovement(new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().x * 1), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().y),
-								((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().z * 1)));
-						CatastropheModMod.queueServerWork(18, () -> {
+						entity.setDeltaMovement(new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().x * 2), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().y),
+								((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getLookAngle().z * 2)));
+						CatastropheModMod.queueServerWork(12, () -> {
 							if (entity.isAlive()) {
 								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 									entity.getPersistentData().putBoolean("dash", true);
@@ -209,7 +208,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(35, () -> {
+						CatastropheModMod.queueServerWork(30, () -> {
 							if (entity.isAlive()) {
 								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 									entity.getPersistentData().putBoolean("dash", false);
@@ -243,7 +242,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(36, () -> {
+						CatastropheModMod.queueServerWork(31, () -> {
 							if (entity.isAlive()) {
 								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 									{
@@ -259,7 +258,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 						});
 					}
 					if (attack == 2) {
-						entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 55);
 						if (entity instanceof MineralWraithEntity) {
 							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.lightning_slam");
 						}
@@ -299,7 +298,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(27, () -> {
+						CatastropheModMod.queueServerWork(18, () -> {
 							{
 								Entity _ent = entity;
 								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -318,12 +317,20 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(35, () -> {
+						CatastropheModMod.queueServerWork(23, () -> {
+							entity.getPersistentData().putBoolean("mwgrounded", true);
 							{
 								Entity _ent = entity;
 								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
-											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_cracks block ~ ~-1 ~");
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_cracks block ~ ~ ~");
+								}
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_flow block ~ ~ ~");
 								}
 							}
 							if (world instanceof ServerLevel _level) {
@@ -342,13 +349,28 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 							}
 							{
 								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
-								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(
-												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 8);
-										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
+												10);
+									}
+								}
+							}
+							{
+								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										if (entityiterator instanceof LivingEntity) {
+											if (entityiterator.getY() == entity.getY()) {
+												entityiterator.hurt(new DamageSource(
+														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 7);
+												if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+													_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
+											}
+										}
 									}
 								}
 							}
@@ -382,9 +404,12 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
+						CatastropheModMod.queueServerWork(40, () -> {
+							entity.getPersistentData().putBoolean("mwgrounded", false);
+						});
 					}
 					if (attack == 3) {
-						entity.getPersistentData().putDouble("mineral_wraith_ai", 170);
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 150);
 						if (entity instanceof MineralWraithEntity) {
 							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.blade_combo");
 						}
@@ -425,7 +450,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(10, () -> {
+						CatastropheModMod.queueServerWork(12, () -> {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_charges")), SoundSource.HOSTILE,
@@ -475,7 +500,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(30, () -> {
+						CatastropheModMod.queueServerWork(28, () -> {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
@@ -486,12 +511,12 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(35, () -> {
+						CatastropheModMod.queueServerWork(33, () -> {
 							entity.getPersistentData().putBoolean("bladecombo", true);
 						});
-						CatastropheModMod.queueServerWork(63, () -> {
+						CatastropheModMod.queueServerWork(56, () -> {
 						});
-						CatastropheModMod.queueServerWork(65, () -> {
+						CatastropheModMod.queueServerWork(57, () -> {
 							if (entity.isAlive()) {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
@@ -510,7 +535,54 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 													.getY()),
 											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 													.getZ()));
-									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+											.toList();
+									for (Entity entityiterator : _entfound) {
+										if (!(entityiterator == entity)) {
+											if (entityiterator instanceof LivingEntity) {
+												entityiterator.hurt(new DamageSource(
+														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), entity), 5);
+											}
+										}
+									}
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(60, () -> {
+							if (entity instanceof MineralWraithEntity animatable)
+								animatable.setTexture("mineral_wraith_texture_charge_1");
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
+											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(66, () -> {
+						});
+						CatastropheModMod.queueServerWork(67, () -> {
+							if (entity.isAlive()) {
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+									} else {
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+									}
+								}
+								{
+									final Vec3 _center = new Vec3(
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getX()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getY()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getZ()));
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 											.toList();
 									for (Entity entityiterator : _entfound) {
 										if (!(entityiterator == entity)) {
@@ -525,53 +597,6 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 						});
 						CatastropheModMod.queueServerWork(70, () -> {
 							if (entity instanceof MineralWraithEntity animatable)
-								animatable.setTexture("mineral_wraith_texture_charge_1");
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
-											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
-								} else {
-									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:electrified_sword_hit")), SoundSource.HOSTILE, 1,
-											(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
-								}
-							}
-						});
-						CatastropheModMod.queueServerWork(83, () -> {
-						});
-						CatastropheModMod.queueServerWork(85, () -> {
-							if (entity.isAlive()) {
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
-												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
-									} else {
-										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:blade_swing")), SoundSource.HOSTILE, 1,
-												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
-									}
-								}
-								{
-									final Vec3 _center = new Vec3(
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-													.getX()),
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-													.getY()),
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-													.getZ()));
-									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-											.toList();
-									for (Entity entityiterator : _entfound) {
-										if (!(entityiterator == entity)) {
-											if (entityiterator instanceof LivingEntity) {
-												entityiterator.hurt(new DamageSource(
-														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:sliced"))), entity), 5);
-											}
-										}
-									}
-								}
-							}
-						});
-						CatastropheModMod.queueServerWork(90, () -> {
-							if (entity instanceof MineralWraithEntity animatable)
 								animatable.setTexture("mineral_wraith_texture_charge_2");
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
@@ -583,9 +608,9 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(116, () -> {
+						CatastropheModMod.queueServerWork(90, () -> {
 						});
-						CatastropheModMod.queueServerWork(118, () -> {
+						CatastropheModMod.queueServerWork(91, () -> {
 							if (entity.isAlive()) {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
@@ -604,7 +629,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 													.getY()),
 											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 													.getZ()));
-									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 											.toList();
 									for (Entity entityiterator : _entfound) {
 										if (!(entityiterator == entity)) {
@@ -612,16 +637,16 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 												entityiterator.hurt(new DamageSource(
 														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 5);
 												if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-													_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+													_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
 											}
 										}
 									}
 								}
 							}
 						});
-						CatastropheModMod.queueServerWork(149, () -> {
+						CatastropheModMod.queueServerWork(112, () -> {
 						});
-						CatastropheModMod.queueServerWork(151, () -> {
+						CatastropheModMod.queueServerWork(113, () -> {
 							if (entity.isAlive()) {
 								entity.getPersistentData().putBoolean("bladecombo", false);
 								if (world instanceof ServerLevel _level) {
@@ -649,20 +674,20 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 			}
 		} else if (entity.getPersistentData().getBoolean("Phase2") == true) {
 			if (entity.getPersistentData().getDouble("mineral_wraith_ai") == 0) {
-				entity.getPersistentData().putDouble("mineral_wraith_ai", 50);
 				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 					attack = Math.round(Math.random() * 2);
 					if (attack == 0) {
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 55);
 						if (entity instanceof MineralWraithEntity) {
 							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.lightning_slam");
 						}
 						{
 							Entity _ent = entity;
-							_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
-									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()));
+							_ent.teleportTo(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + 0.5), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
+									((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + 0.5));
 							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
-										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ()), _ent.getYRot(), _ent.getXRot());
+								_serverPlayer.connection.teleport(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX() + 0.5), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + 7),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ() + 0.5), _ent.getYRot(), _ent.getXRot());
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
@@ -671,15 +696,60 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
 							}
 						}
-						CatastropheModMod.queueServerWork(27, () -> {
-							entity.setDeltaMovement(new Vec3(0, (-2), 0));
+						{
+							Entity _ent = entity;
+							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_teleport entity @s 0 1.5 0");
+							}
+						}
+						CatastropheModMod.queueServerWork(1, () -> {
+							if (entity.isAlive()) {
+								if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+									{
+										Entity _ent = entity;
+										if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+											_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+													_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+													"/photon fx photon:mineral_wraith_teleport block ~0.5 ~1.5 ~0.5");
+										}
+									}
+								}
+							}
 						});
-						CatastropheModMod.queueServerWork(35, () -> {
+						CatastropheModMod.queueServerWork(18, () -> {
 							{
 								Entity _ent = entity;
 								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
-											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_cracks block ~ ~-1 ~");
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_dash_lightning entity @s 0 1.5 0");
+								}
+							}
+							entity.setDeltaMovement(new Vec3(0, (-2), 0));
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY() + 1.5, entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:thorn_infested_armor_dashes")),
+											SoundSource.HOSTILE, 2, 1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY() + 1.5), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:thorn_infested_armor_dashes")), SoundSource.HOSTILE, 2, 1,
+											false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(23, () -> {
+							entity.getPersistentData().putBoolean("mwgrounded", true);
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_cracks block ~ ~ ~");
+								}
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_flow block ~ ~ ~");
 								}
 							}
 							if (world instanceof ServerLevel _level) {
@@ -698,13 +768,28 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 							}
 							{
 								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
-								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(
-												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 8);
-										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity),
+												10);
+									}
+								}
+							}
+							{
+								final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										if (entityiterator instanceof LivingEntity) {
+											if (entityiterator.getY() == entity.getY()) {
+												entityiterator.hurt(new DamageSource(
+														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 7);
+												if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+													_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 40, 0));
+											}
+										}
 									}
 								}
 							}
@@ -738,22 +823,148 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 								}
 							}
 						});
+						CatastropheModMod.queueServerWork(40, () -> {
+							entity.getPersistentData().putBoolean("mwgrounded", false);
+						});
 					}
 					if (attack == 1) {
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 100);
 						if (entity instanceof MineralWraithEntity) {
 							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.raging_thunder");
 						}
 						CatastropheModMod.queueServerWork(10, () -> {
 							entity.getPersistentData().putBoolean("ragingthunder", true);
 						});
-						CatastropheModMod.queueServerWork(70, () -> {
+						CatastropheModMod.queueServerWork(85, () -> {
 							entity.getPersistentData().putBoolean("ragingthunder", false);
 						});
 					}
 					if (attack == 2) {
+						entity.getPersistentData().putDouble("mineral_wraith_ai", 80);
 						if (entity instanceof MineralWraithEntity) {
 							((MineralWraithEntity) entity).setAnimation("animation.mineral_wraith.tempest_strike");
 						}
+						CatastropheModMod.queueServerWork(10, () -> {
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:electrified_charging entity @s");
+								}
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_charges")), SoundSource.HOSTILE,
+											1, 1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:mineral_wraith_charges")), SoundSource.HOSTILE, 1, 1, false);
+								}
+							}
+						});
+						CatastropheModMod.queueServerWork(40, () -> {
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/photon fx photon:mineral_wraith_teleport entity @s 0 1.5 0");
+								}
+							}
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1);
+								} else {
+									_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.HOSTILE, 1, 1, false);
+								}
+							}
+							{
+								Entity _ent = entity;
+								_ent.teleportTo(
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).level()
+												.clip(new ClipContext((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f),
+														(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f).add((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getViewVector(1f).scale(2)),
+														ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)))
+												.getBlockPos().getX()),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).level()
+												.clip(new ClipContext((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f),
+														(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f).add((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getViewVector(1f).scale(2)),
+														ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)))
+												.getBlockPos().getY() - 1),
+										((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).level()
+												.clip(new ClipContext((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f),
+														(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f).add((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getViewVector(1f).scale(2)),
+														ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)))
+												.getBlockPos().getZ()));
+								if (_ent instanceof ServerPlayer _serverPlayer)
+									_serverPlayer.connection.teleport(
+											((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).level()
+													.clip(new ClipContext((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f),
+															(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f)
+																	.add((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getViewVector(1f).scale(2)),
+															ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)))
+													.getBlockPos().getX()),
+											((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).level()
+													.clip(new ClipContext((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f),
+															(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f)
+																	.add((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getViewVector(1f).scale(2)),
+															ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)))
+													.getBlockPos().getY() - 1),
+											((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).level()
+													.clip(new ClipContext((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f),
+															(entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getEyePosition(1f)
+																	.add((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getViewVector(1f).scale(2)),
+															ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)))
+													.getBlockPos().getZ()),
+											_ent.getYRot(), _ent.getXRot());
+							}
+							CatastropheModMod.queueServerWork(1, () -> {
+								if (entity.isAlive()) {
+									if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
+										{
+											Entity _ent = entity;
+											if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+												_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(),
+														_ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+														"/photon fx photon:mineral_wraith_teleport block ~0.5 ~1.5 ~0.5");
+											}
+										}
+									}
+								}
+							});
+						});
+						CatastropheModMod.queueServerWork(49, () -> {
+						});
+						CatastropheModMod.queueServerWork(50, () -> {
+							if (entity.isAlive()) {
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:something_punches")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
+									} else {
+										_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:something_punches")), SoundSource.HOSTILE, 1,
+												(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
+									}
+								}
+								{
+									final Vec3 _center = new Vec3(
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getX()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getY()),
+											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+													.getZ()));
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+											.toList();
+									for (Entity entityiterator : _entfound) {
+										if (!(entityiterator == entity)) {
+											if (entityiterator instanceof LivingEntity) {
+												entityiterator.hurt(new DamageSource(
+														world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:crushed"))), entity), 10);
+											}
+										}
+									}
+								}
+							}
+						});
 					}
 				}
 			} else {
@@ -763,6 +974,11 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 		if (entity.getPersistentData().getBoolean("thunderclap") == true) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				entity.setDeltaMovement(new Vec3(0, 0, 0));
+			}
+		}
+		if (entity.getPersistentData().getBoolean("mwgrounded") == true) {
+			if (entity.isAlive()) {
+				entity.setDeltaMovement(new Vec3(0, (-5), 0));
 			}
 		}
 		if (entity.getPersistentData().getBoolean("bladecombo") == true) {
@@ -775,25 +991,24 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 			entity.getPersistentData().putDouble("lightningstrikes", 19);
 		}
 		if (entity.getPersistentData().getDouble("lightningstrikes") == 0) {
-			entity.getPersistentData().putDouble("lightningstrikes", 19);
+			entity.getPersistentData().putDouble("lightningstrikes", 25);
 			if (entity.getPersistentData().getBoolean("ragingthunder") == true) {
 				if (entity.isAlive()) {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands()
 								.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entity.getPersistentData().getDouble("mwx")), (entity.getPersistentData().getDouble("mwy")), (entity.getPersistentData().getDouble("mwz"))),
-										Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/photon fx photon:lightning_telegraph block ~ ~0.5 ~");
-					CatastropheModMod.queueServerWork(19, () -> {
+										Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/photon fx photon:electrified_lightning_telegraph block ~ ~0.5 ~");
+					CatastropheModMod.queueServerWork(25, () -> {
 						{
 							final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("mwx")), (entity.getPersistentData().getDouble("mwy")), (entity.getPersistentData().getDouble("mwz")));
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									if (!(entityiterator instanceof SurgeBreakerEntity || entityiterator instanceof ArcStrikerEntity || entityiterator instanceof VoltbladeEntity)) {
-										entityiterator.hurt(new DamageSource(
-												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity), 8);
-										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
-									}
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:electricity"))), entity),
+											8);
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(CatastropheModModMobEffects.ELECTRIFIED.get(), 100, 0));
 								}
 							}
 						}
@@ -843,7 +1058,7 @@ public class MineralWrathOnEntityTickUpdateProcedure {
 						}
 					});
 					entity.getPersistentData().putBoolean("lightningcooldown", true);
-					CatastropheModMod.queueServerWork(20, () -> {
+					CatastropheModMod.queueServerWork(25, () -> {
 						entity.getPersistentData().putBoolean("lightningcooldown", false);
 					});
 				}

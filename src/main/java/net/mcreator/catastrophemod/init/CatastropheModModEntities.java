@@ -126,7 +126,7 @@ public class CatastropheModModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MineralWraithEntity>> MINERAL_WRAITH = register("mineral_wraith", EntityType.Builder.<MineralWraithEntity>of(MineralWraithEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MineralWraithEntity::new).fireImmune().sized(1.5f, 3f));
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MineralWraithEntity::new).fireImmune().sized(1.1f, 2.4f));
 	public static final RegistryObject<EntityType<SwordspinEntity>> SWORDSPIN = register("swordspin",
 			EntityType.Builder.<SwordspinEntity>of(SwordspinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SwordspinEntity::new).fireImmune().sized(3f, 0.1f));
 	public static final RegistryObject<EntityType<WraithDashEntity>> WRAITH_DASH = register("wraith_dash", EntityType.Builder.<WraithDashEntity>of(WraithDashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)

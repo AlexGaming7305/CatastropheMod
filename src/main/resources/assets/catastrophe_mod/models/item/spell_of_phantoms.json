@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "catastrophe_mod:item/spell_of_phantoms"
+    "layer0": "catastrophe_mod:item/phantasmal_grimoire"
   }
 }
