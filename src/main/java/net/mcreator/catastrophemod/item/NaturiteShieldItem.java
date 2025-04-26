@@ -26,6 +26,6 @@ public class NaturiteShieldItem extends ShieldItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Grants \u00A79Regeneration \u00A77after a successful \u00A7eParry"));
+		list.add(Component.literal("\u00A77Grants \u00A79Regeneration \u00A77after a successful Melee \u00A7eParry"));
 	}
 }

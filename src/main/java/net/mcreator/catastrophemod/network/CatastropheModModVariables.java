@@ -237,6 +237,7 @@ public class CatastropheModModVariables {
 				clone.tide_slasher_cooldown = original.tide_slasher_cooldown;
 				clone.forest_totem_equipped = original.forest_totem_equipped;
 				clone.electricity_absorbed = original.electricity_absorbed;
+				clone.ancientClaymoreDamage = original.ancientClaymoreDamage;
 			}
 		}
 
@@ -583,6 +584,7 @@ public class CatastropheModModVariables {
 		public boolean tide_slasher_cooldown = false;
 		public boolean forest_totem_equipped = false;
 		public double electricity_absorbed = 0;
+		public boolean ancientClaymoreDamage = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -754,6 +756,7 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("tide_slasher_cooldown", tide_slasher_cooldown);
 			nbt.putBoolean("forest_totem_equipped", forest_totem_equipped);
 			nbt.putDouble("electricity_absorbed", electricity_absorbed);
+			nbt.putBoolean("ancientClaymoreDamage", ancientClaymoreDamage);
 			return nbt;
 		}
 
@@ -922,6 +925,7 @@ public class CatastropheModModVariables {
 			tide_slasher_cooldown = nbt.getBoolean("tide_slasher_cooldown");
 			forest_totem_equipped = nbt.getBoolean("forest_totem_equipped");
 			electricity_absorbed = nbt.getDouble("electricity_absorbed");
+			ancientClaymoreDamage = nbt.getBoolean("ancientClaymoreDamage");
 		}
 	}
 
@@ -1109,6 +1113,7 @@ public class CatastropheModModVariables {
 					variables.tide_slasher_cooldown = message.data.tide_slasher_cooldown;
 					variables.forest_totem_equipped = message.data.forest_totem_equipped;
 					variables.electricity_absorbed = message.data.electricity_absorbed;
+					variables.ancientClaymoreDamage = message.data.ancientClaymoreDamage;
 				}
 			});
 			context.setPacketHandled(true);

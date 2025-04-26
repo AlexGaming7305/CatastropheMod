@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:shield",
-    "catastrophe_mod:naturite_shield"
+    "catastrophe_mod:naturite_shield",
+    "catastrophe_mod:ancient_claymore"
   ]
 }

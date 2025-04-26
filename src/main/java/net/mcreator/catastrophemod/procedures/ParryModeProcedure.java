@@ -62,6 +62,11 @@ public class ParryModeProcedure {
 			return;
 		ItemStack shield_held = ItemStack.EMPTY;
 		Entity parried_projectile = null;
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
+			shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
+			shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+		}
 		if (!((immediatesourceentity instanceof Projectile _projEnt ? _projEnt.getDeltaMovement().length() : 0) > 0)) {
 			if (!damagesource.is(TagKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("catastrophe_mod:unparriable_damage")))) {
 				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).parry_mode != 0) {
@@ -71,11 +76,6 @@ public class ParryModeProcedure {
 							capability.parry_mode = _setval;
 							capability.syncPlayerVariables(entity);
 						});
-					}
-					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
-						shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-					} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
-						shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
 					}
 					if (event != null && event.isCancelable()) {
 						event.setCanceled(true);
@@ -176,182 +176,179 @@ public class ParryModeProcedure {
 				}
 			}
 		} else {
-			if (!immediatesourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:unparriable_projectiles")))) {
-				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).parry_mode != 0) {
-					{
-						double _setval = 0;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.parry_mode = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
-						shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-					} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("catastrophe_mod:shields")))) {
-						shield_held = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-					}
-					parried_projectile = immediatesourceentity;
-					if (event != null && event.isCancelable()) {
-						event.setCanceled(true);
-					}
-					entity.invulnerableTime = 25;
-					if (!parried_projectile.level().isClientSide())
-						parried_projectile.discard();
-					if (parried_projectile.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:guard_break_projectiles")))) {
-						if (((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue() != 0) {
-							{
-								Entity _shootFrom = entity;
-								Level projectileLevel = _shootFrom.level();
-								if (!projectileLevel.isClientSide()) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity,
-											(float) (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage * 1.5) / 2
-													+ ((((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage * 1.5) / 2)
-															* ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue()) / 100),
-											0);
-									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-									projectileLevel.addFreshEntity(_entityToSpawn);
+			if (!(shield_held.getItem() == CatastropheModModItems.ANCIENT_CLAYMORE.get())) {
+				if (!immediatesourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:unparriable_projectiles")))) {
+					if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).parry_mode != 0) {
+						{
+							double _setval = 0;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.parry_mode = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						parried_projectile = immediatesourceentity;
+						if (event != null && event.isCancelable()) {
+							event.setCanceled(true);
+						}
+						entity.invulnerableTime = 25;
+						if (!parried_projectile.level().isClientSide())
+							parried_projectile.discard();
+						if (parried_projectile.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:guard_break_projectiles")))) {
+							if (((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue() != 0) {
+								{
+									Entity _shootFrom = entity;
+									Level projectileLevel = _shootFrom.level();
+									if (!projectileLevel.isClientSide()) {
+										Projectile _entityToSpawn = new Object() {
+											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+												AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+												entityToSpawn.setOwner(shooter);
+												entityToSpawn.setBaseDamage(damage);
+												entityToSpawn.setKnockback(knockback);
+												return entityToSpawn;
+											}
+										}.getArrow(projectileLevel, entity,
+												(float) (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage * 1.5) / 2
+														+ ((((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage * 1.5) / 2)
+																* ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue()) / 100),
+												0);
+										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
+										projectileLevel.addFreshEntity(_entityToSpawn);
+									}
+								}
+							} else {
+								{
+									Entity _shootFrom = entity;
+									Level projectileLevel = _shootFrom.level();
+									if (!projectileLevel.isClientSide()) {
+										Projectile _entityToSpawn = new Object() {
+											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+												AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+												entityToSpawn.setOwner(shooter);
+												entityToSpawn.setBaseDamage(damage);
+												entityToSpawn.setKnockback(knockback);
+												return entityToSpawn;
+											}
+										}.getArrow(projectileLevel, entity,
+												(float) (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage * 1.5) / 2), 0);
+										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
+										projectileLevel.addFreshEntity(_entityToSpawn);
+									}
+								}
+							}
+							if (entity instanceof Player _player)
+								_player.getCooldowns().addCooldown(shield_held.getItem(), 100);
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						} else {
-							{
-								Entity _shootFrom = entity;
-								Level projectileLevel = _shootFrom.level();
-								if (!projectileLevel.isClientSide()) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity,
-											(float) (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage * 1.5) / 2), 0);
-									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-									projectileLevel.addFreshEntity(_entityToSpawn);
+							if (((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue() != 0) {
+								{
+									Entity _shootFrom = entity;
+									Level projectileLevel = _shootFrom.level();
+									if (!projectileLevel.isClientSide()) {
+										Projectile _entityToSpawn = new Object() {
+											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+												AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+												entityToSpawn.setOwner(shooter);
+												entityToSpawn.setBaseDamage(damage);
+												entityToSpawn.setKnockback(knockback);
+												return entityToSpawn;
+											}
+										}.getArrow(projectileLevel, entity,
+												(float) ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage / 2
+														+ (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage / 2)
+																* ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue()) / 100),
+												0);
+										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
+										projectileLevel.addFreshEntity(_entityToSpawn);
+									}
+								}
+							} else {
+								{
+									Entity _shootFrom = entity;
+									Level projectileLevel = _shootFrom.level();
+									if (!projectileLevel.isClientSide()) {
+										Projectile _entityToSpawn = new Object() {
+											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+												AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+												entityToSpawn.setOwner(shooter);
+												entityToSpawn.setBaseDamage(damage);
+												entityToSpawn.setKnockback(knockback);
+												return entityToSpawn;
+											}
+										}.getArrow(projectileLevel, entity,
+												(float) ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage / 2), 0);
+										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
+										projectileLevel.addFreshEntity(_entityToSpawn);
+									}
 								}
 							}
 						}
-						if (entity instanceof Player _player)
-							_player.getCooldowns().addCooldown(shield_held.getItem(), 100);
+						{
+							ItemStack _ist = shield_held;
+							if (_ist.hurt((int) amount, RandomSource.create(), null)) {
+								_ist.shrink(1);
+								_ist.setDamageValue(0);
+							}
+						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1,
+										(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.shield.break")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
 							}
 						}
-					} else {
-						if (((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue() != 0) {
-							{
-								Entity _shootFrom = entity;
-								Level projectileLevel = _shootFrom.level();
-								if (!projectileLevel.isClientSide()) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity,
-											(float) ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage / 2
-													+ (((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage / 2)
-															* ((LivingEntity) entity).getAttribute(CatastropheModModAttributes.PARRYDAMAGE.get()).getBaseValue()) / 100),
-											0);
-									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-									projectileLevel.addFreshEntity(_entityToSpawn);
-								}
-							}
-						} else {
-							{
-								Entity _shootFrom = entity;
-								Level projectileLevel = _shootFrom.level();
-								if (!projectileLevel.isClientSide()) {
-									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
-											entityToSpawn.setOwner(shooter);
-											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
-											return entityToSpawn;
-										}
-									}.getArrow(projectileLevel, entity, (float) ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage / 2),
-											0);
-									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 2, 0);
-									projectileLevel.addFreshEntity(_entityToSpawn);
-								}
-							}
-						}
-					}
-					{
-						ItemStack _ist = shield_held;
-						if (_ist.hurt((int) amount, RandomSource.create(), null)) {
-							_ist.shrink(1);
-							_ist.setDamageValue(0);
-						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1,
-									(float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1));
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("catastrophe_mod:parry_projectile")), SoundSource.PLAYERS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.9, 1.1), false);
-						}
-					}
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.PARRY.get()), (entity.getX() + entity.getLookAngle().x), (entity.getY() + 1.5), (entity.getZ() + entity.getLookAngle().z), 1, 0, 0, 0, 0);
-					{
-						double _setval = 2;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.intensity_timer = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					{
-						boolean _setval = true;
-						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.screenshake = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
-					CatastropheModMod.queueServerWork(10, () -> {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles((SimpleParticleType) (CatastropheModModParticleTypes.PARRY.get()), (entity.getX() + entity.getLookAngle().x), (entity.getY() + 1.5), (entity.getZ() + entity.getLookAngle().z), 1, 0, 0, 0, 0);
 						{
-							boolean _setval = false;
+							double _setval = 2;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.intensity_timer = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
 							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.screenshake = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
-					});
-					if (immediatesourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:guard_break_projectiles")))) {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal("\u00A7cGuard Broken!"), true);
-					} else {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
-					}
-					if (!(entity instanceof ServerPlayer _plr76 && _plr76.level() instanceof ServerLevel
-							&& _plr76.getAdvancements().getOrStartProgress(_plr76.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
-						if (entity instanceof ServerPlayer _player) {
-							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
-							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-							if (!_ap.isDone()) {
-								for (String criteria : _ap.getRemainingCriteria())
-									_player.getAdvancements().award(_adv, criteria);
+						CatastropheModMod.queueServerWork(10, () -> {
+							{
+								boolean _setval = false;
+								entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.screenshake = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						});
+						if (immediatesourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("catastrophe_mod:guard_break_projectiles")))) {
+							if (entity instanceof Player _player && !_player.level().isClientSide())
+								_player.displayClientMessage(Component.literal("\u00A7cGuard Broken!"), true);
+						} else {
+							if (entity instanceof Player _player && !_player.level().isClientSide())
+								_player.displayClientMessage(Component.literal("\u00A7eParry!"), true);
+						}
+						if (!(entity instanceof ServerPlayer _plr71 && _plr71.level() instanceof ServerLevel
+								&& _plr71.getAdvancements().getOrStartProgress(_plr71.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"))).isDone())) {
+							if (entity instanceof ServerPlayer _player) {
+								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("catastrophe_mod:im_not_gonna_sugarcoat_it"));
+								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+								if (!_ap.isDone()) {
+									for (String criteria : _ap.getRemainingCriteria())
+										_player.getAdvancements().award(_adv, criteria);
+								}
 							}
 						}
 					}

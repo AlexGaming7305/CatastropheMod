@@ -1,5 +1,11 @@
 package net.mcreator.catastrophemod.item.model;
 
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.mcreator.catastrophemod.item.RagingHunterItem;
+
 public class RagingHunterItemModel extends GeoModel<RagingHunterItem> {
 	@Override
 	public ResourceLocation getAnimationResource(RagingHunterItem animatable) {

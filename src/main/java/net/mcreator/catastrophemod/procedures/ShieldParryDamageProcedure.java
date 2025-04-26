@@ -106,6 +106,37 @@ public class ShieldParryDamageProcedure {
 								Component.literal(((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage + " parry damage")), false);
 				}
 			}
+			if (shield_held.getItem() == CatastropheModModItems.ANCIENT_CLAYMORE.get()) {
+				if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).ancientClaymoreDamage == false) {
+					{
+						boolean _setval = true;
+						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.ancientClaymoreDamage = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), shield_held) != 0) {
+						{
+							double _setval = 12 + 0.5 * shield_held.getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.shield_parry_damage = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else {
+						{
+							double _setval = 12;
+							entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.shield_parry_damage = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(
+								Component.literal(((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).shield_parry_damage + " parry damage")), false);
+				}
+			}
 		}
 	}
 }

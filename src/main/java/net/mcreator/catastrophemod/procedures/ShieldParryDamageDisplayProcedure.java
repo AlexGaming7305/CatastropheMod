@@ -36,6 +36,7 @@ public class ShieldParryDamageDisplayProcedure {
 			return;
 		double shield_parry_damage = 0;
 		double naturite_shield_parry_damage = 0;
+		double ancient_claymore_parry_damage = 0;
 		if (itemstack.getItem() == Items.SHIELD) {
 			if (EnchantmentHelper.getItemEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get(), itemstack) != 0) {
 				shield_parry_damage = 8 + 0.5 * itemstack.getEnchantmentLevel(CatastropheModModEnchantments.COUNTERATTACK.get()) + 0.5;

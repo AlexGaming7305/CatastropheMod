@@ -44,6 +44,6 @@ public class AncientClaymoreItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Allows you to Parry Melee Attacks"));
+		list.add(Component.literal("\u00A77Allows you to \u00A7eParry \u00A77Melee Attacks"));
 	}
 }

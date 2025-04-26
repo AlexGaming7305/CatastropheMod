@@ -1,9 +1,28 @@
 
 package net.mcreator.catastrophemod.entity;
 
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
+
+import net.mcreator.catastrophemod.procedures.IronPelletWhileProjectileFlyingTickProcedure;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
+import net.mcreator.catastrophemod.init.CatastropheModModEntities;
+
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class IronPelletEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(CatastropheModModItems.DELETED_MOD_ELEMENT.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(CatastropheModModItems.IRON_PELLETS.get());
 
 	public IronPelletEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(CatastropheModModEntities.IRON_PELLET.get(), world);
@@ -46,7 +65,7 @@ public class IronPelletEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void tick() {
 		super.tick();
-		IronPelletWhileProjectileFlyingTickProcedure.execute();
+		IronPelletWhileProjectileFlyingTickProcedure.execute(this.level(), this);
 		if (this.inGround)
 			this.discard();
 	}
