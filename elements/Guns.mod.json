@@ -6,6 +6,15 @@
     "items": [
       {
         "value": "CUSTOM:Flamestrike"
+      },
+      {
+        "value": "CUSTOM:DoubleBarreledShotgun"
+      },
+      {
+        "value": "CUSTOM:SawedOffShotgun"
+      },
+      {
+        "value": "CUSTOM:RagingHunter"
       }
     ],
     "blocks": [],

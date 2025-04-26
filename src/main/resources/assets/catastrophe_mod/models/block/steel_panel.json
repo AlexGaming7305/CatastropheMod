@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "catastrophe_mod:block/steel_panel",
+    "up": "catastrophe_mod:block/steel_panel",
+    "north": "catastrophe_mod:block/steel_panel",
+    "east": "catastrophe_mod:block/steel_panel",
+    "south": "catastrophe_mod:block/steel_panel",
+    "west": "catastrophe_mod:block/steel_panel",
+    "particle": "catastrophe_mod:block/steel_panel"
+  },
+  "render_type": "solid"
+}

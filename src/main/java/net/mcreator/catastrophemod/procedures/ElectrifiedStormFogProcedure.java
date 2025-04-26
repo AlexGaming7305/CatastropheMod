@@ -55,8 +55,8 @@ public class ElectrifiedStormFogProcedure {
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
 		if (CatastropheModModVariables.MapVariables.get(world).electrified_storm == true) {
-			setDistance(125, 145);
-			setShape(FogShape.SPHERE);
+			setDistance(1, 300);
+			setShape(FogShape.CYLINDER);
 		}
 	}
 }

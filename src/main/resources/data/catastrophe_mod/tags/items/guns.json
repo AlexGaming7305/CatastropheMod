@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "catastrophe_mod:flamestrike"
+    "catastrophe_mod:flamestrike",
+    "catastrophe_mod:double_barreled_shotgun",
+    "catastrophe_mod:sawed_off_shotgun",
+    "catastrophe_mod:raging_hunter"
   ]
 }

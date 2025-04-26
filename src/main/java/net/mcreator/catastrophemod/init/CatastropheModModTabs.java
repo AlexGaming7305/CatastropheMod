@@ -93,6 +93,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.WIRESAW.get());
 				tabData.accept(CatastropheModModItems.RUSTY_SCISSORS.get());
 				tabData.accept(CatastropheModModItems.TIDE_SLASHER.get());
+				tabData.accept(CatastropheModModItems.ANCIENT_CLAYMORE.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.STARLIT_LACEWING_STAFF.get())).displayItems((parameters, tabData) -> {
@@ -150,6 +151,10 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.COPPER_ROUND.get());
 				tabData.accept(CatastropheModModItems.DOUBLE_BARRELED_SHOTGUN.get());
 				tabData.accept(CatastropheModModItems.SAWED_OFF_SHOTGUN.get());
+				tabData.accept(CatastropheModModItems.BUCKSHOT.get());
+				tabData.accept(CatastropheModModItems.IRON_PELLETS.get());
+				tabData.accept(CatastropheModModItems.RAGING_HUNTER.get());
+				tabData.accept(CatastropheModModItems.FEDERAL_MAGNUM.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> RELICS = REGISTRY.register("relics",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.relics")).icon(() -> new ItemStack(CatastropheModModItems.RUNNING_BOOTS.get())).displayItems((parameters, tabData) -> {
@@ -206,11 +211,14 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_SLAB.get().asItem());
 			tabData.accept(CatastropheModModBlocks.DEPTHSTONE_BRICKS_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.ELECTRIFIED_DIODE.get().asItem());
-			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING.get().asItem());
-			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING_SLAB.get().asItem());
-			tabData.accept(CatastropheModModBlocks.RUSTY_PLATING_STAIRS.get().asItem());
 			tabData.accept(CatastropheModModBlocks.ELECTRIFIED_CHAIN.get().asItem());
 			tabData.accept(CatastropheModModBlocks.CORRODED_GRATE.get().asItem());
+			tabData.accept(CatastropheModModBlocks.STEEL_PLATING.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CORRODED_STEEL_PLATING.get().asItem());
+			tabData.accept(CatastropheModModBlocks.STEEL_PANEL.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CORRODED_STEEL_PANEL.get().asItem());
+			tabData.accept(CatastropheModModBlocks.REINFORCED_CONCRETE.get().asItem());
+			tabData.accept(CatastropheModModBlocks.CORRODED_REINFORCED_CONCRETE.get().asItem());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {

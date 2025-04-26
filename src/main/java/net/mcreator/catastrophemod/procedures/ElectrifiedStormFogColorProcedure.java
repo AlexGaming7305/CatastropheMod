@@ -43,7 +43,7 @@ public class ElectrifiedStormFogColorProcedure {
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
 		if (CatastropheModModVariables.MapVariables.get(world).electrified_storm == true) {
-			setColor((int) (255 << 24 | 60 << 16 | 60 << 8 | 70));
+			setColor((int) (255 << 24 | 68 << 16 | 68 << 8 | 68));
 		}
 	}
 }

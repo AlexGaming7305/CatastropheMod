@@ -45,16 +45,8 @@ public class GunAmmoTooltipsProcedure {
 			}
 		}
 		if (itemstack.getItem() == CatastropheModModItems.DOUBLE_BARRELED_SHOTGUN.get()) {
-			if (itemstack.getOrCreateTag().getBoolean("copper_round") == true) {
-				tooltip.add(Component.literal(("Projectile: [Copper Round] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 2)));
-			} else if (itemstack.getOrCreateTag().getBoolean("scrap_round") == true) {
-				tooltip.add(Component.literal(("Projectile: [Scrap Round] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 2)));
-			} else if (itemstack.getOrCreateTag().getBoolean("crystal_round") == true) {
-				tooltip.add(Component.literal(("Projectile: [\u00A7dCrystal Round\u00A7f] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 2)));
-			} else if (itemstack.getOrCreateTag().getBoolean("electrified_round") == true) {
-				tooltip.add(Component.literal(("Projectile: [\u00A7bElectrified Round\u00A7f] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 2)));
-			} else if (itemstack.getOrCreateTag().getBoolean("venomous_round") == true) {
-				tooltip.add(Component.literal(("Projectile: [\u00A72Venomous Round\u00A7f] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 2)));
+			if (itemstack.getOrCreateTag().getDouble("ammo") > 0) {
+				tooltip.add(Component.literal(("Projectile: [Buckshot] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 2)));
 			}
 		}
 		if (itemstack.getItem() == CatastropheModModItems.SAWED_OFF_SHOTGUN.get()) {
@@ -68,6 +60,11 @@ public class GunAmmoTooltipsProcedure {
 				tooltip.add(Component.literal(("Projectile: [\u00A7bElectrified Round\u00A7f] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 1)));
 			} else if (itemstack.getOrCreateTag().getBoolean("venomous_round") == true) {
 				tooltip.add(Component.literal(("Projectile: [\u00A72Venomous Round\u00A7f] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 1)));
+			}
+		}
+		if (itemstack.getItem() == CatastropheModModItems.RAGING_HUNTER.get()) {
+			if (itemstack.getOrCreateTag().getDouble("ammo") > 0) {
+				tooltip.add(Component.literal(("Projectile: [Federal Magnum] " + new java.text.DecimalFormat("##.##").format(itemstack.getOrCreateTag().getDouble("ammo")) + "/" + 6)));
 			}
 		}
 	}

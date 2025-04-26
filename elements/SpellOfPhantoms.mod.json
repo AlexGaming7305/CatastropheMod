@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "spell_of_phantoms",
+    "texture": "phantasmal_grimoire",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
