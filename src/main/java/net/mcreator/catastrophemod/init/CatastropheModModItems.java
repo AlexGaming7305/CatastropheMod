@@ -145,6 +145,7 @@ import net.mcreator.catastrophemod.item.HuntsmanKnifeItem;
 import net.mcreator.catastrophemod.item.HunterItem;
 import net.mcreator.catastrophemod.item.HellbaneItem;
 import net.mcreator.catastrophemod.item.HeartOfThornsItem;
+import net.mcreator.catastrophemod.item.HeartLocketItem;
 import net.mcreator.catastrophemod.item.HauntedMirrorItem;
 import net.mcreator.catastrophemod.item.GraveDiggerItem;
 import net.mcreator.catastrophemod.item.GoldenSpearItem;
@@ -167,16 +168,18 @@ import net.mcreator.catastrophemod.item.EarthboundStaffItem;
 import net.mcreator.catastrophemod.item.EarthboundCoreItem;
 import net.mcreator.catastrophemod.item.EarthShattererItem;
 import net.mcreator.catastrophemod.item.EarthBreakerItem;
+import net.mcreator.catastrophemod.item.DynamiteItem;
 import net.mcreator.catastrophemod.item.DoubleBarreledShotgunItem;
 import net.mcreator.catastrophemod.item.DiamondSpearItem;
 import net.mcreator.catastrophemod.item.DiamondDetonationItem;
 import net.mcreator.catastrophemod.item.CursedClothItem;
 import net.mcreator.catastrophemod.item.CursedArmorItem;
 import net.mcreator.catastrophemod.item.CrystallineEdgeItem;
-import net.mcreator.catastrophemod.item.CrystalSpearItem;
 import net.mcreator.catastrophemod.item.CrystalRoundItem;
+import net.mcreator.catastrophemod.item.CrystalPiercerItem;
 import net.mcreator.catastrophemod.item.CrystalBowItem;
 import net.mcreator.catastrophemod.item.CrimstoneGemItem;
+import net.mcreator.catastrophemod.item.CrimsonSaberItem;
 import net.mcreator.catastrophemod.item.CrimsonRayItem;
 import net.mcreator.catastrophemod.item.CopperTokenItem;
 import net.mcreator.catastrophemod.item.CopperShardItem;
@@ -193,6 +196,7 @@ import net.mcreator.catastrophemod.item.BlizzardItem;
 import net.mcreator.catastrophemod.item.BackPackItem;
 import net.mcreator.catastrophemod.item.AtlanticSeaNettleItemItem;
 import net.mcreator.catastrophemod.item.AncientClaymoreItem;
+import net.mcreator.catastrophemod.item.AgilityScarfItem;
 import net.mcreator.catastrophemod.item.AccursedTomeItem;
 import net.mcreator.catastrophemod.item.AccursedArrowItem;
 import net.mcreator.catastrophemod.CatastropheModMod;
@@ -339,7 +343,6 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> SHROOM_BOW = REGISTRY.register("shroom_bow", () -> new ShroomBowItem());
 	public static final RegistryObject<Item> CHARRED_SKELETON_GUARD_SPAWN_EGG = REGISTRY.register("charred_skeleton_guard_spawn_egg",
 			() -> new ForgeSpawnEggItem(CatastropheModModEntities.CHARRED_SKELETON_GUARD, -14606047, -367075, new Item.Properties()));
-	public static final RegistryObject<Item> CRYSTAL_SPEAR = REGISTRY.register("crystal_spear", () -> new CrystalSpearItem());
 	public static final RegistryObject<Item> STAFFOF_VITALITY = REGISTRY.register("staffof_vitality", () -> new StaffofVitalityItem());
 	public static final RegistryObject<Item> SEPULCHER_LOOT_BUNDLE = REGISTRY.register("sepulcher_loot_bundle", () -> new SepulcherLootBundleItem());
 	public static final RegistryObject<Item> HEART_OF_THORNS = REGISTRY.register("heart_of_thorns", () -> new HeartOfThornsItem());
@@ -463,6 +466,11 @@ public class CatastropheModModItems {
 	public static final RegistryObject<Item> REINFORCED_CONCRETE = block(CatastropheModModBlocks.REINFORCED_CONCRETE);
 	public static final RegistryObject<Item> CORRODED_REINFORCED_CONCRETE = block(CatastropheModModBlocks.CORRODED_REINFORCED_CONCRETE);
 	public static final RegistryObject<Item> ANCIENT_CLAYMORE = REGISTRY.register("ancient_claymore", () -> new AncientClaymoreItem());
+	public static final RegistryObject<Item> CRYSTAL_PIERCER = REGISTRY.register("crystal_piercer", () -> new CrystalPiercerItem());
+	public static final RegistryObject<Item> AGILITY_SCARF = REGISTRY.register("agility_scarf", () -> new AgilityScarfItem());
+	public static final RegistryObject<Item> DYNAMITE = REGISTRY.register("dynamite", () -> new DynamiteItem());
+	public static final RegistryObject<Item> CRIMSON_SABER = REGISTRY.register("crimson_saber", () -> new CrimsonSaberItem());
+	public static final RegistryObject<Item> HEART_LOCKET = REGISTRY.register("heart_locket", () -> new HeartLocketItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

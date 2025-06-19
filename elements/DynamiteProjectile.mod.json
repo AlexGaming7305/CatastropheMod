@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:Dynamite"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "onHitsBlock": {
+      "name": "DynamiteProjectileProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "DynamiteProjectileProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "DynamiteProjectileWhileProjectileFlyingTick"
+    }
+  }
+}

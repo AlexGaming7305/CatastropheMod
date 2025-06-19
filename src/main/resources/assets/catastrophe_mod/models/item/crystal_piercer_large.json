@@ -1,0 +1,38 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "catastrophe_mod:item/crystal_piercer_large"
+  },
+    "display": {
+        "ground": {
+            "rotation": [ 0, -90, 55 ],
+            "translation": [ 0, 5, 0.5],
+            "scale":[ 0.5, 0.5, 0.5 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.5, 0.5, 0.5 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 0, 270, 60],
+            "translation": [ 0, 4, 0 ],
+            "scale": [ 1.6, 1.6, 1 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 0, -270, -60 ],
+            "translation": [ 0, 4, 0 ],
+            "scale": [ 1.6, 1.6, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 270, 25 ],
+            "translation": [ 0, 3.5, 2 ],
+            "scale": [ 0.9, 0.9, 0.7 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, -270, -25 ],
+            "translation": [ 0, 3.5, 2 ],
+            "scale": [ 0.9, 0.9, 0.7 ]
+        }
+    }
+}

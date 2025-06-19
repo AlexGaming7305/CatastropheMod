@@ -33,4 +33,5 @@ public class CatastropheModModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> RUSTY_SPARK = REGISTRY.register("rusty_spark", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> PARRY = REGISTRY.register("parry", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> OIL_DROP = REGISTRY.register("oil_drop", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> CRIMSON_SPARKLE = REGISTRY.register("crimson_sparkle", () -> new SimpleParticleType(true));
 }

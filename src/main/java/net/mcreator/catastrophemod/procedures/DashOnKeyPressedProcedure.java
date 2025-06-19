@@ -1,5 +1,7 @@
 package net.mcreator.catastrophemod.procedures;
 
+import top.theillusivec4.curios.api.CuriosApi;
+
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.phys.Vec3;
@@ -7,6 +9,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
@@ -16,6 +19,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.catastrophemod.network.CatastropheModModVariables;
+import net.mcreator.catastrophemod.init.CatastropheModModItems;
 import net.mcreator.catastrophemod.CatastropheModMod;
 
 public class DashOnKeyPressedProcedure {
@@ -74,6 +78,27 @@ public class DashOnKeyPressedProcedure {
 						}
 					});
 				}
+			}
+		}
+		if (entity instanceof LivingEntity lv ? CuriosApi.getCuriosHelper().findEquippedCurio(CatastropheModModItems.AGILITY_SCARF.get(), lv).isPresent() : false) {
+			if ((entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CatastropheModModVariables.PlayerVariables())).dash_cooldown == false) {
+				entity.setDeltaMovement(new Vec3((entity.getLookAngle().x * 1), (entity.getLookAngle().y), (entity.getLookAngle().z * 1)));
+				{
+					boolean _setval = true;
+					entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.dash_cooldown = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				CatastropheModMod.queueServerWork(30, () -> {
+					{
+						boolean _setval = false;
+						entity.getCapability(CatastropheModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.dash_cooldown = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				});
 			}
 		}
 	}

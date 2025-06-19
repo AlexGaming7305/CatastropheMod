@@ -238,6 +238,9 @@ public class CatastropheModModVariables {
 				clone.forest_totem_equipped = original.forest_totem_equipped;
 				clone.electricity_absorbed = original.electricity_absorbed;
 				clone.ancientClaymoreDamage = original.ancientClaymoreDamage;
+				clone.dash_equipped = original.dash_equipped;
+				clone.dash_cooldown = original.dash_cooldown;
+				clone.heart_locket_equipped = original.heart_locket_equipped;
 			}
 		}
 
@@ -585,6 +588,9 @@ public class CatastropheModModVariables {
 		public boolean forest_totem_equipped = false;
 		public double electricity_absorbed = 0;
 		public boolean ancientClaymoreDamage = false;
+		public boolean dash_equipped = false;
+		public boolean dash_cooldown = false;
+		public boolean heart_locket_equipped = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -757,6 +763,9 @@ public class CatastropheModModVariables {
 			nbt.putBoolean("forest_totem_equipped", forest_totem_equipped);
 			nbt.putDouble("electricity_absorbed", electricity_absorbed);
 			nbt.putBoolean("ancientClaymoreDamage", ancientClaymoreDamage);
+			nbt.putBoolean("dash_equipped", dash_equipped);
+			nbt.putBoolean("dash_cooldown", dash_cooldown);
+			nbt.putBoolean("heart_locket_equipped", heart_locket_equipped);
 			return nbt;
 		}
 
@@ -926,6 +935,9 @@ public class CatastropheModModVariables {
 			forest_totem_equipped = nbt.getBoolean("forest_totem_equipped");
 			electricity_absorbed = nbt.getDouble("electricity_absorbed");
 			ancientClaymoreDamage = nbt.getBoolean("ancientClaymoreDamage");
+			dash_equipped = nbt.getBoolean("dash_equipped");
+			dash_cooldown = nbt.getBoolean("dash_cooldown");
+			heart_locket_equipped = nbt.getBoolean("heart_locket_equipped");
 		}
 	}
 
@@ -1114,6 +1126,9 @@ public class CatastropheModModVariables {
 					variables.forest_totem_equipped = message.data.forest_totem_equipped;
 					variables.electricity_absorbed = message.data.electricity_absorbed;
 					variables.ancientClaymoreDamage = message.data.ancientClaymoreDamage;
+					variables.dash_equipped = message.data.dash_equipped;
+					variables.dash_cooldown = message.data.dash_cooldown;
+					variables.heart_locket_equipped = message.data.heart_locket_equipped;
 				}
 			});
 			context.setPacketHandled(true);

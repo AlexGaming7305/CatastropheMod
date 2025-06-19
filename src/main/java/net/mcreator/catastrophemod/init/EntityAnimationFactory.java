@@ -35,7 +35,6 @@ import net.mcreator.catastrophemod.entity.ElectrifiedSwordProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundWraithEntity;
 import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
 import net.mcreator.catastrophemod.entity.DiamondDetonationBombEntity;
-import net.mcreator.catastrophemod.entity.CrystalSpearStabEntity;
 import net.mcreator.catastrophemod.entity.CharredSkeletonGuardEntity;
 import net.mcreator.catastrophemod.entity.CharredMantisEntity;
 import net.mcreator.catastrophemod.entity.CalicoStagBeetleEntity;
@@ -170,13 +169,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof NightfallsDemiseProjectileEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof CrystalSpearStabEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

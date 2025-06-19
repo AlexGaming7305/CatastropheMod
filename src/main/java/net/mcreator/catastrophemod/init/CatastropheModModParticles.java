@@ -23,6 +23,7 @@ import net.mcreator.catastrophemod.client.particle.ElectrifiedSparkParticle;
 import net.mcreator.catastrophemod.client.particle.DashIndicatorParticle;
 import net.mcreator.catastrophemod.client.particle.CrystalSparkParticle;
 import net.mcreator.catastrophemod.client.particle.CrystalBlastParticle;
+import net.mcreator.catastrophemod.client.particle.CrimsonSparkleParticle;
 import net.mcreator.catastrophemod.client.particle.BloodDropParticle;
 import net.mcreator.catastrophemod.client.particle.BlizzardWindParticle;
 import net.mcreator.catastrophemod.client.particle.AmatoxinGasParticle;
@@ -50,5 +51,6 @@ public class CatastropheModModParticles {
 		event.registerSpriteSet(CatastropheModModParticleTypes.RUSTY_SPARK.get(), RustySparkParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.PARRY.get(), ParryParticle::provider);
 		event.registerSpriteSet(CatastropheModModParticleTypes.OIL_DROP.get(), OilDropParticle::provider);
+		event.registerSpriteSet(CatastropheModModParticleTypes.CRIMSON_SPARKLE.get(), CrimsonSparkleParticle::provider);
 	}
 }

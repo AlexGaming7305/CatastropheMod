@@ -94,8 +94,8 @@ import net.mcreator.catastrophemod.entity.EarthboundRockShardProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthboundRockProjectileEntity;
 import net.mcreator.catastrophemod.entity.EarthShockwaveEntity;
 import net.mcreator.catastrophemod.entity.EarthShattererProjectileProjectileEntity;
+import net.mcreator.catastrophemod.entity.DynamiteProjectileEntity;
 import net.mcreator.catastrophemod.entity.DiamondDetonationBombEntity;
-import net.mcreator.catastrophemod.entity.CrystalSpearStabEntity;
 import net.mcreator.catastrophemod.entity.CrystalShardProjectileEntity;
 import net.mcreator.catastrophemod.entity.CrystalRoundProjectileProjectileEntity;
 import net.mcreator.catastrophemod.entity.CopperRoundProjectileEntity;
@@ -176,8 +176,6 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<NightfallsDemiseProjectileEntity>> NIGHTFALLS_DEMISE_PROJECTILE = register("nightfalls_demise_projectile",
 			EntityType.Builder.<NightfallsDemiseProjectileEntity>of(NightfallsDemiseProjectileEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(NightfallsDemiseProjectileEntity::new).fireImmune().sized(0.3f, 0.3f));
-	public static final RegistryObject<EntityType<CrystalSpearStabEntity>> CRYSTAL_SPEAR_STAB = register("crystal_spear_stab", EntityType.Builder.<CrystalSpearStabEntity>of(CrystalSpearStabEntity::new, MobCategory.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CrystalSpearStabEntity::new).fireImmune().sized(0.1f, 0.1f));
 	public static final RegistryObject<EntityType<OceanicSplashEntity>> OCEANIC_SPLASH = register("oceanic_splash", EntityType.Builder.<OceanicSplashEntity>of(OceanicSplashEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OceanicSplashEntity::new).fireImmune().sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<RipsawSawbladeEntity>> RIPSAW_SAWBLADE = register("ripsaw_sawblade", EntityType.Builder.<RipsawSawbladeEntity>of(RipsawSawbladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
@@ -377,6 +375,8 @@ public class CatastropheModModEntities {
 	public static final RegistryObject<EntityType<FederalMagnumProjectileEntity>> FEDERAL_MAGNUM_PROJECTILE = register("projectile_federal_magnum_projectile",
 			EntityType.Builder.<FederalMagnumProjectileEntity>of(FederalMagnumProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FederalMagnumProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DynamiteProjectileEntity>> DYNAMITE_PROJECTILE = register("projectile_dynamite_projectile", EntityType.Builder.<DynamiteProjectileEntity>of(DynamiteProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(DynamiteProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -407,7 +407,6 @@ public class CatastropheModModEntities {
 			EarthShockwaveEntity.init();
 			CharredMantisEntity.init();
 			NightfallsDemiseProjectileEntity.init();
-			CrystalSpearStabEntity.init();
 			OceanicSplashEntity.init();
 			RipsawSawbladeEntity.init();
 			FirebrandSlashEntity.init();
@@ -457,7 +456,6 @@ public class CatastropheModModEntities {
 		event.put(EARTH_SHOCKWAVE.get(), EarthShockwaveEntity.createAttributes().build());
 		event.put(CHARRED_MANTIS.get(), CharredMantisEntity.createAttributes().build());
 		event.put(NIGHTFALLS_DEMISE_PROJECTILE.get(), NightfallsDemiseProjectileEntity.createAttributes().build());
-		event.put(CRYSTAL_SPEAR_STAB.get(), CrystalSpearStabEntity.createAttributes().build());
 		event.put(OCEANIC_SPLASH.get(), OceanicSplashEntity.createAttributes().build());
 		event.put(RIPSAW_SAWBLADE.get(), RipsawSawbladeEntity.createAttributes().build());
 		event.put(FIREBRAND_SLASH.get(), FirebrandSlashEntity.createAttributes().build());

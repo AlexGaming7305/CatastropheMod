@@ -87,7 +87,6 @@ import net.mcreator.catastrophemod.client.renderer.EarthboundRockProjectileRende
 import net.mcreator.catastrophemod.client.renderer.EarthShockwaveRenderer;
 import net.mcreator.catastrophemod.client.renderer.EarthShattererProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.DiamondDetonationBombRenderer;
-import net.mcreator.catastrophemod.client.renderer.CrystalSpearStabRenderer;
 import net.mcreator.catastrophemod.client.renderer.CrystalShardProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.CrystalRoundProjectileProjectileRenderer;
 import net.mcreator.catastrophemod.client.renderer.CopperRoundProjectileRenderer;
@@ -132,7 +131,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.EARTH_SHOCKWAVE.get(), EarthShockwaveRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.CHARRED_MANTIS.get(), CharredMantisRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.NIGHTFALLS_DEMISE_PROJECTILE.get(), NightfallsDemiseProjectileRenderer::new);
-		event.registerEntityRenderer(CatastropheModModEntities.CRYSTAL_SPEAR_STAB.get(), CrystalSpearStabRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.OCEANIC_SPLASH.get(), OceanicSplashRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.RIPSAW_SAWBLADE.get(), RipsawSawbladeRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.FIREBRAND_SLASH.get(), FirebrandSlashRenderer::new);
@@ -208,5 +206,6 @@ public class CatastropheModModEntityRenderers {
 		event.registerEntityRenderer(CatastropheModModEntities.TIDE_SLASH_PROJECTILE.get(), TideSlashProjectileRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.IRON_PELLET.get(), IronPelletRenderer::new);
 		event.registerEntityRenderer(CatastropheModModEntities.FEDERAL_MAGNUM_PROJECTILE.get(), FederalMagnumProjectileRenderer::new);
+		event.registerEntityRenderer(CatastropheModModEntities.DYNAMITE_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

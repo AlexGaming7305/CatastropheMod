@@ -35,6 +35,7 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.NAUTILUS_LEGGINGS.get());
 				tabData.accept(CatastropheModModItems.NAUTILUS_BOOTS.get());
 				tabData.accept(CatastropheModModItems.RIPTIDE.get());
+				tabData.accept(CatastropheModModItems.CRIMSON_RAY.get());
 				tabData.accept(CatastropheModModItems.SPORE_STAFF.get());
 				tabData.accept(CatastropheModModItems.SHADOWFLAME_SCEPTER.get());
 				tabData.accept(CatastropheModModItems.BLOSSOM_FLORA.get());
@@ -76,7 +77,6 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.SPORESPLOSION.get());
 				tabData.accept(CatastropheModModItems.SHADOWFLAME_BURSTER.get());
 				tabData.accept(CatastropheModModItems.ICE_SPEAR.get());
-				tabData.accept(CatastropheModModItems.CRYSTAL_SPEAR.get());
 				tabData.accept(CatastropheModModItems.HELLBANE.get());
 				tabData.accept(CatastropheModModItems.EARTH_BREAKER.get());
 				tabData.accept(CatastropheModModItems.NIGHTFALLS_DEMISE.get());
@@ -94,6 +94,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.RUSTY_SCISSORS.get());
 				tabData.accept(CatastropheModModItems.TIDE_SLASHER.get());
 				tabData.accept(CatastropheModModItems.ANCIENT_CLAYMORE.get());
+				tabData.accept(CatastropheModModItems.CRYSTAL_PIERCER.get());
+				tabData.accept(CatastropheModModItems.CRIMSON_SABER.get());
 			}).withSearchBar().build());
 	public static final RegistryObject<CreativeModeTab> DARK_MAGIC = REGISTRY.register("dark_magic",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.catastrophe_mod.dark_magic")).icon(() -> new ItemStack(CatastropheModModItems.STARLIT_LACEWING_STAFF.get())).displayItems((parameters, tabData) -> {
@@ -167,6 +169,8 @@ public class CatastropheModModTabs {
 				tabData.accept(CatastropheModModItems.MANA_ROSE.get());
 				tabData.accept(CatastropheModModItems.FOREST_TOTEM.get());
 				tabData.accept(CatastropheModModItems.ENERGY_COIL.get());
+				tabData.accept(CatastropheModModItems.AGILITY_SCARF.get());
+				tabData.accept(CatastropheModModItems.HEART_LOCKET.get());
 			})
 
 					.build());
@@ -250,7 +254,6 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.TEAR_OF_THE_SEA.get());
 			tabData.accept(CatastropheModModItems.SPORE_ZOMBIE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.CALICO_STAG_BEETLE_SPAWN_EGG.get());
-			tabData.accept(CatastropheModModItems.ROD_OF_TELEPORTATION.get());
 			tabData.accept(CatastropheModModItems.SHADE_SPAWN_EGG.get());
 			tabData.accept(CatastropheModModItems.MUSIC_DISC_VINES_OF_VENOM.get());
 			tabData.accept(CatastropheModModItems.CHARRED_SKELETON_GUARD_SPAWN_EGG.get());
@@ -299,6 +302,8 @@ public class CatastropheModModTabs {
 			tabData.accept(CatastropheModModItems.SEA_AXE.get());
 			tabData.accept(CatastropheModModItems.SEA_SHOVEL.get());
 			tabData.accept(CatastropheModModItems.SEA_HOE.get());
+			tabData.accept(CatastropheModModItems.ROD_OF_TELEPORTATION.get());
+			tabData.accept(CatastropheModModItems.DYNAMITE.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {

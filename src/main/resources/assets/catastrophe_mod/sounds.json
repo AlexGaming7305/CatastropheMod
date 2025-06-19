@@ -1033,5 +1033,32 @@
         "stream": false
       }
     ]
+  },
+  "force_missiles_cast": {
+    "subtitle": "subtitles.force_missiles_cast",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:force_missiles_cast",
+        "stream": false
+      }
+    ]
+  },
+  "bloody_slash": {
+    "subtitle": "subtitles.bloody_slash",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:bloody_slash",
+        "stream": false
+      }
+    ]
+  },
+  "crimson_ray_casts": {
+    "subtitle": "subtitles.crimson_ray_casts",
+    "sounds": [
+      {
+        "name": "catastrophe_mod:crimson_ray_casts",
+        "stream": false
+      }
+    ]
   }
 }

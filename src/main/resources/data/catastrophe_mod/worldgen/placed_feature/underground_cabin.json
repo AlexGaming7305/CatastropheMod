@@ -1,0 +1,33 @@
+{
+  "feature": "catastrophe_mod:underground_cabin",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 100
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "above_bottom": 30
+        },
+        "max_inclusive": {
+          "absolute": 25
+        }
+      }
+    },
+    {
+      "type": "minecraft:surface_relative_threshold_filter",
+      "heightmap": "WORLD_SURFACE_WG",
+      "min_inclusive": -192,
+      "max_inclusive": -8
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

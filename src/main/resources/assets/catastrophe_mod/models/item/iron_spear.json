@@ -1,6 +1,18 @@
 {
   "parent": "item/handheld",
-  "textures": {
-    "layer0": "catastrophe_mod:item/iron_spear"
-  }
+  "loader": "forge:separate_transforms",
+  "base": {
+      "parent": "catastrophe_mod:item/iron_spear_large"
+  },
+  "perspectives": {
+           "gui": {
+               "parent": "catastrophe_mod:item/iron_spear_small"
+           },
+           "ground":{
+               "parent": "catastrophe_mod:item/iron_spear_small"
+           },
+           "fixed": {
+               "parent": "catastrophe_mod:item/iron_spear_small"
+           }
+     }
 }

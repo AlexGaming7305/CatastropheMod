@@ -33,7 +33,7 @@ public class ForceMissileWhileProjectileFlyingTickProcedure {
 		yvel = immediatesourceentity.getDeltaMovement().y();
 		zvel = immediatesourceentity.getDeltaMovement().z();
 		flag = true;
-		turn = 0.6;
+		turn = 1;
 		speed = 3;
 		radius = 20;
 		lifetime = 100;

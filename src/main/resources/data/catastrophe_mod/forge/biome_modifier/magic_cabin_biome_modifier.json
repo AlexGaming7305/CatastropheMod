@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_overworld",
+  "features": "catastrophe_mod:magic_cabin",
+  "step": "underground_structures"
+}

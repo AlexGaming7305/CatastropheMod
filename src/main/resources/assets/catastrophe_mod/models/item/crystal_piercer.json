@@ -1,0 +1,18 @@
+{
+  "parent": "item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+      "parent": "catastrophe_mod:item/crystal_piercer_large"
+  },
+  "perspectives": {
+           "gui": {
+               "parent": "catastrophe_mod:item/crystal_piercer_small"
+           },
+           "ground":{
+               "parent": "catastrophe_mod:item/crystal_piercer_small"
+           },
+           "fixed": {
+               "parent": "catastrophe_mod:item/crystal_piercer_small"
+           }
+     }
+}
